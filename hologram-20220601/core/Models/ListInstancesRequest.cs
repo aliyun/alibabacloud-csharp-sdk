@@ -9,33 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListInstancesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>standard</para>
+        /// </summary>
         [NameInMap("cmsInstanceType")]
         [Validation(Required=false)]
         public string CmsInstanceType { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmvscak73zmby</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags to add to the resource.
+        /// <para>The tags to add to the resource.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public List<ListInstancesRequestTag> Tag { get; set; }
         public class ListInstancesRequestTag : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mytag</para>
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

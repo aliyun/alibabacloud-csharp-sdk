@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 更改资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -77,14 +87,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更改资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -117,12 +137,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更改资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -130,12 +156,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return ChangeResourceGroupWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 更改资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -143,14 +175,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await ChangeResourceGroupWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 创建计算组
-         *
-         * @param request CreateHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHoloWarehouseResponse
+        /// </returns>
         public CreateHoloWarehouseResponse CreateHoloWarehouseWithOptions(string instanceId, CreateHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -183,14 +225,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<CreateHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建计算组
-         *
-         * @param request CreateHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHoloWarehouseResponse
+        /// </returns>
         public async Task<CreateHoloWarehouseResponse> CreateHoloWarehouseWithOptionsAsync(string instanceId, CreateHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -223,12 +275,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<CreateHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建计算组
-         *
-         * @param request CreateHoloWarehouseRequest
-         * @return CreateHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHoloWarehouseResponse
+        /// </returns>
         public CreateHoloWarehouseResponse CreateHoloWarehouse(string instanceId, CreateHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -236,12 +294,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return CreateHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建计算组
-         *
-         * @param request CreateHoloWarehouseRequest
-         * @return CreateHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHoloWarehouseResponse
+        /// </returns>
         public async Task<CreateHoloWarehouseResponse> CreateHoloWarehouseAsync(string instanceId, CreateHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -249,34 +313,50 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await CreateHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
-         * *   When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:
-         * <!---->
-         *     cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-         *        cn-shanghai: cn-shanghai-e, cn-shanghai-f
-         *        cn-beijing: cn-beijing-i, cn-beijing-g
-         *        cn-zhangjiakou: cn-zhangjiakou-b
-         *        cn-shenzhen: cn-shenzhen-e
-         *        cn-hongkong: cn-hongkong-b
-         *        cn-shanghai-finance-1: cn-shanghai-finance-1z
-         *        ap-northeast-1: ap-northeast-1a
-         *        ap-southeast-1: ap-southeast-1c
-         *        ap-southeast-3: ap-southeast-3b
-         *        ap-southeast-5: ap-southeast-5b
-         *        ap-south-1: ap-south-1b
-         *        eu-central-1: eu-central-1a
-         *        us-east-1: us-east-1a
-         *        us-west-1: us-west-1b
-         *
-         * @param request CreateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
+        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
+        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
+        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
+        ///    cn-beijing: cn-beijing-i, cn-beijing-g
+        ///    cn-zhangjiakou: cn-zhangjiakou-b
+        ///    cn-shenzhen: cn-shenzhen-e
+        ///    cn-hongkong: cn-hongkong-b
+        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
+        ///    ap-northeast-1: ap-northeast-1a
+        ///    ap-southeast-1: ap-southeast-1c
+        ///    ap-southeast-3: ap-southeast-3b
+        ///    ap-southeast-5: ap-southeast-5b
+        ///    ap-south-1: ap-south-1b
+        ///    eu-central-1: eu-central-1a
+        ///    us-east-1: us-east-1a
+        ///    us-west-1: us-west-1b</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -377,34 +457,50 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
-         * *   When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:
-         * <!---->
-         *     cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-         *        cn-shanghai: cn-shanghai-e, cn-shanghai-f
-         *        cn-beijing: cn-beijing-i, cn-beijing-g
-         *        cn-zhangjiakou: cn-zhangjiakou-b
-         *        cn-shenzhen: cn-shenzhen-e
-         *        cn-hongkong: cn-hongkong-b
-         *        cn-shanghai-finance-1: cn-shanghai-finance-1z
-         *        ap-northeast-1: ap-northeast-1a
-         *        ap-southeast-1: ap-southeast-1c
-         *        ap-southeast-3: ap-southeast-3b
-         *        ap-southeast-5: ap-southeast-5b
-         *        ap-south-1: ap-south-1b
-         *        eu-central-1: eu-central-1a
-         *        us-east-1: us-east-1a
-         *        us-west-1: us-west-1b
-         *
-         * @param request CreateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
+        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
+        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
+        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
+        ///    cn-beijing: cn-beijing-i, cn-beijing-g
+        ///    cn-zhangjiakou: cn-zhangjiakou-b
+        ///    cn-shenzhen: cn-shenzhen-e
+        ///    cn-hongkong: cn-hongkong-b
+        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
+        ///    ap-northeast-1: ap-northeast-1a
+        ///    ap-southeast-1: ap-southeast-1c
+        ///    ap-southeast-3: ap-southeast-3b
+        ///    ap-southeast-5: ap-southeast-5b
+        ///    ap-south-1: ap-south-1b
+        ///    eu-central-1: eu-central-1a
+        ///    us-east-1: us-east-1a
+        ///    us-west-1: us-west-1b</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -505,32 +601,44 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
-         * *   When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:
-         * <!---->
-         *     cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-         *        cn-shanghai: cn-shanghai-e, cn-shanghai-f
-         *        cn-beijing: cn-beijing-i, cn-beijing-g
-         *        cn-zhangjiakou: cn-zhangjiakou-b
-         *        cn-shenzhen: cn-shenzhen-e
-         *        cn-hongkong: cn-hongkong-b
-         *        cn-shanghai-finance-1: cn-shanghai-finance-1z
-         *        ap-northeast-1: ap-northeast-1a
-         *        ap-southeast-1: ap-southeast-1c
-         *        ap-southeast-3: ap-southeast-3b
-         *        ap-southeast-5: ap-southeast-5b
-         *        ap-south-1: ap-south-1b
-         *        eu-central-1: eu-central-1a
-         *        us-east-1: us-east-1a
-         *        us-west-1: us-west-1b
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
+        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
+        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
+        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
+        ///    cn-beijing: cn-beijing-i, cn-beijing-g
+        ///    cn-zhangjiakou: cn-zhangjiakou-b
+        ///    cn-shenzhen: cn-shenzhen-e
+        ///    cn-hongkong: cn-hongkong-b
+        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
+        ///    ap-northeast-1: ap-northeast-1a
+        ///    ap-southeast-1: ap-southeast-1c
+        ///    ap-southeast-3: ap-southeast-3b
+        ///    ap-southeast-5: ap-southeast-5b
+        ///    ap-south-1: ap-south-1b
+        ///    eu-central-1: eu-central-1a
+        ///    us-east-1: us-east-1a
+        ///    us-west-1: us-west-1b</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -538,32 +646,44 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return CreateInstanceWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
-         * *   When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:
-         * <!---->
-         *     cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-         *        cn-shanghai: cn-shanghai-e, cn-shanghai-f
-         *        cn-beijing: cn-beijing-i, cn-beijing-g
-         *        cn-zhangjiakou: cn-zhangjiakou-b
-         *        cn-shenzhen: cn-shenzhen-e
-         *        cn-hongkong: cn-hongkong-b
-         *        cn-shanghai-finance-1: cn-shanghai-finance-1z
-         *        ap-northeast-1: ap-northeast-1a
-         *        ap-southeast-1: ap-southeast-1c
-         *        ap-southeast-3: ap-southeast-3b
-         *        ap-southeast-5: ap-southeast-5b
-         *        ap-south-1: ap-south-1b
-         *        eu-central-1: eu-central-1a
-         *        us-east-1: us-east-1a
-         *        us-west-1: us-west-1b
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
+        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
+        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
+        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
+        ///    cn-beijing: cn-beijing-i, cn-beijing-g
+        ///    cn-zhangjiakou: cn-zhangjiakou-b
+        ///    cn-shenzhen: cn-shenzhen-e
+        ///    cn-hongkong: cn-hongkong-b
+        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
+        ///    ap-northeast-1: ap-northeast-1a
+        ///    ap-southeast-1: ap-southeast-1c
+        ///    ap-southeast-3: ap-southeast-3b
+        ///    ap-southeast-5: ap-southeast-5b
+        ///    ap-south-1: ap-south-1b
+        ///    eu-central-1: eu-central-1a
+        ///    us-east-1: us-east-1a
+        ///    us-west-1: us-west-1b</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -571,14 +691,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await CreateInstanceWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 删除计算组
-         *
-         * @param request DeleteHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHoloWarehouseResponse
+        /// </returns>
         public DeleteHoloWarehouseResponse DeleteHoloWarehouseWithOptions(string instanceId, DeleteHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -607,14 +737,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<DeleteHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除计算组
-         *
-         * @param request DeleteHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHoloWarehouseResponse
+        /// </returns>
         public async Task<DeleteHoloWarehouseResponse> DeleteHoloWarehouseWithOptionsAsync(string instanceId, DeleteHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -643,12 +783,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<DeleteHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除计算组
-         *
-         * @param request DeleteHoloWarehouseRequest
-         * @return DeleteHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHoloWarehouseResponse
+        /// </returns>
         public DeleteHoloWarehouseResponse DeleteHoloWarehouse(string instanceId, DeleteHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -656,12 +802,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return DeleteHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除计算组
-         *
-         * @param request DeleteHoloWarehouseRequest
-         * @return DeleteHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHoloWarehouseResponse
+        /// </returns>
         public async Task<DeleteHoloWarehouseResponse> DeleteHoloWarehouseAsync(string instanceId, DeleteHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -669,19 +821,36 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await DeleteHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a Hologres instance.
-         *
-         * @description > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
-         * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
-         * *   You can delete only pay-as-you-go instances.
-         * *   If you want to unsubscribe from a subscription instance, submit a ticket.[](https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858)
-         *
-         * @param request DeleteInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</description></item>
+        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstanceWithOptions(string instanceId, DeleteInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -710,19 +879,36 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a Hologres instance.
-         *
-         * @description > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
-         * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
-         * *   You can delete only pay-as-you-go instances.
-         * *   If you want to unsubscribe from a subscription instance, submit a ticket.[](https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858)
-         *
-         * @param request DeleteInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</description></item>
+        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(string instanceId, DeleteInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -751,17 +937,30 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a Hologres instance.
-         *
-         * @description > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
-         * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
-         * *   You can delete only pay-as-you-go instances.
-         * *   If you want to unsubscribe from a subscription instance, submit a ticket.[](https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858)
-         *
-         * @param request DeleteInstanceRequest
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</description></item>
+        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstance(string instanceId, DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -769,17 +968,30 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return DeleteInstanceWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a Hologres instance.
-         *
-         * @description > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
-         * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
-         * *   You can delete only pay-as-you-go instances.
-         * *   If you want to unsubscribe from a subscription instance, submit a ticket.[](https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858)
-         *
-         * @param request DeleteInstanceRequest
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0">Billing overview</a>.</description></item>
+        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>If you want to unsubscribe from a subscription instance, submit a ticket.<a href="https://help.aliyun.com/document_detail/150284.html#section-ogc-9vc-858"></a></description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(string instanceId, DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -787,14 +999,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await DeleteInstanceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 关闭数据湖加速
-         *
-         * @param request DisableHiveAccessRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableHiveAccessRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableHiveAccessResponse
+        /// </returns>
         public DisableHiveAccessResponse DisableHiveAccessWithOptions(string instanceId, DisableHiveAccessRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -823,14 +1045,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<DisableHiveAccessResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 关闭数据湖加速
-         *
-         * @param request DisableHiveAccessRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableHiveAccessRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableHiveAccessResponse
+        /// </returns>
         public async Task<DisableHiveAccessResponse> DisableHiveAccessWithOptionsAsync(string instanceId, DisableHiveAccessRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -859,12 +1091,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<DisableHiveAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 关闭数据湖加速
-         *
-         * @param request DisableHiveAccessRequest
-         * @return DisableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableHiveAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableHiveAccessResponse
+        /// </returns>
         public DisableHiveAccessResponse DisableHiveAccess(string instanceId, DisableHiveAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -872,12 +1110,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return DisableHiveAccessWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 关闭数据湖加速
-         *
-         * @param request DisableHiveAccessRequest
-         * @return DisableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableHiveAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableHiveAccessResponse
+        /// </returns>
         public async Task<DisableHiveAccessResponse> DisableHiveAccessAsync(string instanceId, DisableHiveAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -885,14 +1129,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await DisableHiveAccessWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 打开数据湖加速
-         *
-         * @param request EnableHiveAccessRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableHiveAccessRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableHiveAccessResponse
+        /// </returns>
         public EnableHiveAccessResponse EnableHiveAccessWithOptions(string instanceId, EnableHiveAccessRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -921,14 +1175,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<EnableHiveAccessResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 打开数据湖加速
-         *
-         * @param request EnableHiveAccessRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableHiveAccessRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableHiveAccessResponse
+        /// </returns>
         public async Task<EnableHiveAccessResponse> EnableHiveAccessWithOptionsAsync(string instanceId, EnableHiveAccessRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -957,12 +1221,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<EnableHiveAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 打开数据湖加速
-         *
-         * @param request EnableHiveAccessRequest
-         * @return EnableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableHiveAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableHiveAccessResponse
+        /// </returns>
         public EnableHiveAccessResponse EnableHiveAccess(string instanceId, EnableHiveAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -970,12 +1240,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return EnableHiveAccessWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 打开数据湖加速
-         *
-         * @param request EnableHiveAccessRequest
-         * @return EnableHiveAccessResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables data lake acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableHiveAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableHiveAccessResponse
+        /// </returns>
         public async Task<EnableHiveAccessResponse> EnableHiveAccessAsync(string instanceId, EnableHiveAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -983,13 +1259,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await EnableHiveAccessWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the details of an instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public GetInstanceResponse GetInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1011,13 +1295,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<GetInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the details of an instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public async Task<GetInstanceResponse> GetInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1039,11 +1331,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<GetInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the details of an instance.
-         *
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of an instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public GetInstanceResponse GetInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1051,11 +1346,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return GetInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the details of an instance.
-         *
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the details of an instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public async Task<GetInstanceResponse> GetInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1063,13 +1361,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await GetInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries details of a virtual warehouse instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetWarehouseDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWarehouseDetailResponse
+        /// </returns>
         public GetWarehouseDetailResponse GetWarehouseDetailWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1091,13 +1397,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<GetWarehouseDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries details of a virtual warehouse instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetWarehouseDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWarehouseDetailResponse
+        /// </returns>
         public async Task<GetWarehouseDetailResponse> GetWarehouseDetailWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1119,11 +1433,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<GetWarehouseDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries details of a virtual warehouse instance.
-         *
-         * @return GetWarehouseDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetWarehouseDetailResponse
+        /// </returns>
         public GetWarehouseDetailResponse GetWarehouseDetail(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1131,11 +1448,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return GetWarehouseDetailWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries details of a virtual warehouse instance.
-         *
-         * @return GetWarehouseDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetWarehouseDetailResponse
+        /// </returns>
         public async Task<GetWarehouseDetailResponse> GetWarehouseDetailAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1143,14 +1463,162 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await GetWarehouseDetailWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @param request ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取备份列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBackupDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBackupDataResponse
+        /// </returns>
+        public ListBackupDataResponse ListBackupDataWithOptions(ListBackupDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
+            {
+                query["backupType"] = request.BackupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBackupData",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/backups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBackupDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取备份列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBackupDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBackupDataResponse
+        /// </returns>
+        public async Task<ListBackupDataResponse> ListBackupDataWithOptionsAsync(ListBackupDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupType))
+            {
+                query["backupType"] = request.BackupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBackupData",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/backups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBackupDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取备份列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBackupDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBackupDataResponse
+        /// </returns>
+        public ListBackupDataResponse ListBackupData(ListBackupDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListBackupDataWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取备份列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBackupDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBackupDataResponse
+        /// </returns>
+        public async Task<ListBackupDataResponse> ListBackupDataAsync(ListBackupDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListBackupDataWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1187,14 +1655,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @param request ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1231,12 +1709,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstances(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1244,12 +1728,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return ListInstancesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesAsync(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1257,13 +1747,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await ListInstancesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the list of virtual warehouse instances.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWarehousesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWarehousesResponse
+        /// </returns>
         public ListWarehousesResponse ListWarehousesWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1285,13 +1783,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ListWarehousesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of virtual warehouse instances.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListWarehousesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWarehousesResponse
+        /// </returns>
         public async Task<ListWarehousesResponse> ListWarehousesWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1313,11 +1819,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ListWarehousesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the list of virtual warehouse instances.
-         *
-         * @return ListWarehousesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListWarehousesResponse
+        /// </returns>
         public ListWarehousesResponse ListWarehouses(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1325,11 +1834,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return ListWarehousesWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the list of virtual warehouse instances.
-         *
-         * @return ListWarehousesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListWarehousesResponse
+        /// </returns>
         public async Task<ListWarehousesResponse> ListWarehousesAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1337,14 +1849,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await ListWarehousesWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RebalanceHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RebalanceHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebalanceHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebalanceHoloWarehouseResponse
+        /// </returns>
         public RebalanceHoloWarehouseResponse RebalanceHoloWarehouseWithOptions(string instanceId, RebalanceHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1373,14 +1895,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RebalanceHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RebalanceHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RebalanceHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebalanceHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebalanceHoloWarehouseResponse
+        /// </returns>
         public async Task<RebalanceHoloWarehouseResponse> RebalanceHoloWarehouseWithOptionsAsync(string instanceId, RebalanceHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1409,12 +1941,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RebalanceHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RebalanceHoloWarehouseRequest
-         * @return RebalanceHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebalanceHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebalanceHoloWarehouseResponse
+        /// </returns>
         public RebalanceHoloWarehouseResponse RebalanceHoloWarehouse(string instanceId, RebalanceHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1422,12 +1960,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return RebalanceHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RebalanceHoloWarehouseRequest
-         * @return RebalanceHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebalanceHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebalanceHoloWarehouseResponse
+        /// </returns>
         public async Task<RebalanceHoloWarehouseResponse> RebalanceHoloWarehouseAsync(string instanceId, RebalanceHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1435,14 +1979,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await RebalanceHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RenameHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenameHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenameHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameHoloWarehouseResponse
+        /// </returns>
         public RenameHoloWarehouseResponse RenameHoloWarehouseWithOptions(string instanceId, RenameHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1475,14 +2029,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RenameHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RenameHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenameHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenameHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameHoloWarehouseResponse
+        /// </returns>
         public async Task<RenameHoloWarehouseResponse> RenameHoloWarehouseWithOptionsAsync(string instanceId, RenameHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1515,12 +2079,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RenameHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RenameHoloWarehouseRequest
-         * @return RenameHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenameHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameHoloWarehouseResponse
+        /// </returns>
         public RenameHoloWarehouseResponse RenameHoloWarehouse(string instanceId, RenameHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1528,12 +2098,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return RenameHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RenameHoloWarehouseRequest
-         * @return RenameHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenameHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameHoloWarehouseResponse
+        /// </returns>
         public async Task<RenameHoloWarehouseResponse> RenameHoloWarehouseAsync(string instanceId, RenameHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1541,19 +2117,36 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await RenameHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
-         * *   For more information about how to renew a Hologres instance, see [Manage renewals](https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi).
-         * *   You can renew only subscription instances.
-         *
-         * @param request RenewInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenewInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</description></item>
+        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</description></item>
+        /// <item><description>You can renew only subscription instances.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public RenewInstanceResponse RenewInstanceWithOptions(string instanceId, RenewInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1586,19 +2179,36 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
-         * *   For more information about how to renew a Hologres instance, see [Manage renewals](https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi).
-         * *   You can renew only subscription instances.
-         *
-         * @param request RenewInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenewInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</description></item>
+        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</description></item>
+        /// <item><description>You can renew only subscription instances.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(string instanceId, RenewInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1631,17 +2241,30 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
-         * *   For more information about how to renew a Hologres instance, see [Manage renewals](https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi).
-         * *   You can renew only subscription instances.
-         *
-         * @param request RenewInstanceRequest
-         * @return RenewInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</description></item>
+        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</description></item>
+        /// <item><description>You can renew only subscription instances.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public RenewInstanceResponse RenewInstance(string instanceId, RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1649,17 +2272,30 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return RenewInstanceWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
-         * *   For more information about how to renew a Hologres instance, see [Manage renewals](https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi).
-         * *   You can renew only subscription instances.
-         *
-         * @param request RenewInstanceRequest
-         * @return RenewInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Pricing</a>.</description></item>
+        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.73f27c8d1Q0FUi">Manage renewals</a>.</description></item>
+        /// <item><description>You can renew only subscription instances.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public async Task<RenewInstanceResponse> RenewInstanceAsync(string instanceId, RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1667,14 +2303,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await RenewInstanceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RestartHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartHoloWarehouseResponse
+        /// </returns>
         public RestartHoloWarehouseResponse RestartHoloWarehouseWithOptions(string instanceId, RestartHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1703,14 +2349,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RestartHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RestartHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartHoloWarehouseResponse
+        /// </returns>
         public async Task<RestartHoloWarehouseResponse> RestartHoloWarehouseWithOptionsAsync(string instanceId, RestartHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1739,12 +2395,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RestartHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RestartHoloWarehouseRequest
-         * @return RestartHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartHoloWarehouseResponse
+        /// </returns>
         public RestartHoloWarehouseResponse RestartHoloWarehouse(string instanceId, RestartHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1752,12 +2414,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return RestartHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request RestartHoloWarehouseRequest
-         * @return RestartHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartHoloWarehouseResponse
+        /// </returns>
         public async Task<RestartHoloWarehouseResponse> RestartHoloWarehouseAsync(string instanceId, RestartHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1765,13 +2433,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await RestartHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 重启实例
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启实例</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public RestartInstanceResponse RestartInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1793,13 +2469,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RestartInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 重启实例
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启实例</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public async Task<RestartInstanceResponse> RestartInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1821,11 +2505,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<RestartInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 重启实例
-         *
-         * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启实例</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public RestartInstanceResponse RestartInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1833,11 +2520,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return RestartInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 重启实例
-         *
-         * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启实例</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public async Task<RestartInstanceResponse> RestartInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1845,14 +2535,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await RestartInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ResumeHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeHoloWarehouseResponse
+        /// </returns>
         public ResumeHoloWarehouseResponse ResumeHoloWarehouseWithOptions(string instanceId, ResumeHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1881,14 +2581,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ResumeHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ResumeHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeHoloWarehouseResponse
+        /// </returns>
         public async Task<ResumeHoloWarehouseResponse> ResumeHoloWarehouseWithOptionsAsync(string instanceId, ResumeHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1917,12 +2627,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ResumeHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ResumeHoloWarehouseRequest
-         * @return ResumeHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeHoloWarehouseResponse
+        /// </returns>
         public ResumeHoloWarehouseResponse ResumeHoloWarehouse(string instanceId, ResumeHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1930,12 +2646,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return ResumeHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ResumeHoloWarehouseRequest
-         * @return ResumeHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeHoloWarehouseResponse
+        /// </returns>
         public async Task<ResumeHoloWarehouseResponse> ResumeHoloWarehouseAsync(string instanceId, ResumeHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1943,13 +2665,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await ResumeHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Resumes a suspended instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a suspended instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeInstanceResponse
+        /// </returns>
         public ResumeInstanceResponse ResumeInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1971,13 +2701,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ResumeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Resumes a suspended instance.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a suspended instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeInstanceResponse
+        /// </returns>
         public async Task<ResumeInstanceResponse> ResumeInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1999,11 +2737,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ResumeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Resumes a suspended instance.
-         *
-         * @return ResumeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a suspended instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ResumeInstanceResponse
+        /// </returns>
         public ResumeInstanceResponse ResumeInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2011,11 +2752,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return ResumeInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Resumes a suspended instance.
-         *
-         * @return ResumeInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a suspended instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ResumeInstanceResponse
+        /// </returns>
         public async Task<ResumeInstanceResponse> ResumeInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2023,14 +2767,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await ResumeInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ScaleHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ScaleHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in or out a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleHoloWarehouseResponse
+        /// </returns>
         public ScaleHoloWarehouseResponse ScaleHoloWarehouseWithOptions(string instanceId, ScaleHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2063,14 +2817,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ScaleHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ScaleHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ScaleHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in or out a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleHoloWarehouseResponse
+        /// </returns>
         public async Task<ScaleHoloWarehouseResponse> ScaleHoloWarehouseWithOptionsAsync(string instanceId, ScaleHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2103,12 +2867,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ScaleHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ScaleHoloWarehouseRequest
-         * @return ScaleHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in or out a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleHoloWarehouseResponse
+        /// </returns>
         public ScaleHoloWarehouseResponse ScaleHoloWarehouse(string instanceId, ScaleHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2116,12 +2886,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return ScaleHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request ScaleHoloWarehouseRequest
-         * @return ScaleHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in or out a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleHoloWarehouseResponse
+        /// </returns>
         public async Task<ScaleHoloWarehouseResponse> ScaleHoloWarehouseAsync(string instanceId, ScaleHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2129,18 +2905,35 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await ScaleHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Changes the specifications and storage space of a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing of Hologres, see [Billing overview](https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview).
-         * *   During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see [Upgrade or downgrade instance specifications](https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications).
-         *
-         * @param request ScaleInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ScaleInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage space of a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInstanceResponse
+        /// </returns>
         public ScaleInstanceResponse ScaleInstanceWithOptions(string instanceId, ScaleInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2189,18 +2982,35 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ScaleInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the specifications and storage space of a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing of Hologres, see [Billing overview](https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview).
-         * *   During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see [Upgrade or downgrade instance specifications](https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications).
-         *
-         * @param request ScaleInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ScaleInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage space of a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInstanceResponse
+        /// </returns>
         public async Task<ScaleInstanceResponse> ScaleInstanceWithOptionsAsync(string instanceId, ScaleInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2249,16 +3059,29 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<ScaleInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the specifications and storage space of a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing of Hologres, see [Billing overview](https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview).
-         * *   During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see [Upgrade or downgrade instance specifications](https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications).
-         *
-         * @param request ScaleInstanceRequest
-         * @return ScaleInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage space of a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInstanceResponse
+        /// </returns>
         public ScaleInstanceResponse ScaleInstance(string instanceId, ScaleInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2266,16 +3089,29 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return ScaleInstanceWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Changes the specifications and storage space of a Hologres instance.
-         *
-         * @description > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
-         * *   For more information about the billing of Hologres, see [Billing overview](https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview).
-         * *   During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see [Upgrade or downgrade instance specifications](https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications).
-         *
-         * @param request ScaleInstanceRequest
-         * @return ScaleInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications and storage space of a Hologres instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInstanceResponse
+        /// </returns>
         public async Task<ScaleInstanceResponse> ScaleInstanceAsync(string instanceId, ScaleInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2283,13 +3119,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await ScaleInstanceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 暂停实例
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停实例</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public StopInstanceResponse StopInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2311,13 +3155,21 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<StopInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 暂停实例
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停实例</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public async Task<StopInstanceResponse> StopInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2339,11 +3191,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<StopInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 暂停实例
-         *
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停实例</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public StopInstanceResponse StopInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2351,11 +3206,14 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return StopInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 暂停实例
-         *
-         * @return StopInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停实例</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopInstanceResponse
+        /// </returns>
         public async Task<StopInstanceResponse> StopInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2363,14 +3221,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await StopInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request SuspendHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SuspendHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendHoloWarehouseResponse
+        /// </returns>
         public SuspendHoloWarehouseResponse SuspendHoloWarehouseWithOptions(string instanceId, SuspendHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2399,14 +3267,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<SuspendHoloWarehouseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request SuspendHoloWarehouseRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SuspendHoloWarehouseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendHoloWarehouseResponse
+        /// </returns>
         public async Task<SuspendHoloWarehouseResponse> SuspendHoloWarehouseWithOptionsAsync(string instanceId, SuspendHoloWarehouseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2435,12 +3313,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<SuspendHoloWarehouseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request SuspendHoloWarehouseRequest
-         * @return SuspendHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SuspendHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendHoloWarehouseResponse
+        /// </returns>
         public SuspendHoloWarehouseResponse SuspendHoloWarehouse(string instanceId, SuspendHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2448,12 +3332,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return SuspendHoloWarehouseWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 停止计算组
-         *
-         * @param request SuspendHoloWarehouseRequest
-         * @return SuspendHoloWarehouseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a virtual warehouse.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SuspendHoloWarehouseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendHoloWarehouseResponse
+        /// </returns>
         public async Task<SuspendHoloWarehouseResponse> SuspendHoloWarehouseAsync(string instanceId, SuspendHoloWarehouseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2461,14 +3351,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await SuspendHoloWarehouseWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Changes the name of an instance.
-         *
-         * @param request UpdateInstanceNameRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public UpdateInstanceNameResponse UpdateInstanceNameWithOptions(string instanceId, UpdateInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2497,14 +3397,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<UpdateInstanceNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the name of an instance.
-         *
-         * @param request UpdateInstanceNameRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public async Task<UpdateInstanceNameResponse> UpdateInstanceNameWithOptionsAsync(string instanceId, UpdateInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2533,12 +3443,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<UpdateInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Changes the name of an instance.
-         *
-         * @param request UpdateInstanceNameRequest
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public UpdateInstanceNameResponse UpdateInstanceName(string instanceId, UpdateInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2546,12 +3462,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return UpdateInstanceNameWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Changes the name of an instance.
-         *
-         * @param request UpdateInstanceNameRequest
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public async Task<UpdateInstanceNameResponse> UpdateInstanceNameAsync(string instanceId, UpdateInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2559,14 +3481,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return await UpdateInstanceNameWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the network configuration of an instance.
-         *
-         * @param request UpdateInstanceNetworkTypeRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the network configuration of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNetworkTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNetworkTypeResponse
+        /// </returns>
         public UpdateInstanceNetworkTypeResponse UpdateInstanceNetworkTypeWithOptions(string instanceId, UpdateInstanceNetworkTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2615,14 +3547,24 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<UpdateInstanceNetworkTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the network configuration of an instance.
-         *
-         * @param request UpdateInstanceNetworkTypeRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the network configuration of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNetworkTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNetworkTypeResponse
+        /// </returns>
         public async Task<UpdateInstanceNetworkTypeResponse> UpdateInstanceNetworkTypeWithOptionsAsync(string instanceId, UpdateInstanceNetworkTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2671,12 +3613,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return TeaModel.ToObject<UpdateInstanceNetworkTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the network configuration of an instance.
-         *
-         * @param request UpdateInstanceNetworkTypeRequest
-         * @return UpdateInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the network configuration of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNetworkTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNetworkTypeResponse
+        /// </returns>
         public UpdateInstanceNetworkTypeResponse UpdateInstanceNetworkType(string instanceId, UpdateInstanceNetworkTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2684,12 +3632,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
             return UpdateInstanceNetworkTypeWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the network configuration of an instance.
-         *
-         * @param request UpdateInstanceNetworkTypeRequest
-         * @return UpdateInstanceNetworkTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the network configuration of an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNetworkTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNetworkTypeResponse
+        /// </returns>
         public async Task<UpdateInstanceNetworkTypeResponse> UpdateInstanceNetworkTypeAsync(string instanceId, UpdateInstanceNetworkTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

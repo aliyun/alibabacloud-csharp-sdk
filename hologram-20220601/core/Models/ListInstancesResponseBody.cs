@@ -10,188 +10,210 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned if the request failed.
+        /// <para>The error code returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>404</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message returned if the request failed.
+        /// <para>The error message returned if the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Internal server error.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// The list of queried instances.
+        /// <para>The list of queried instances.</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyInstanceList> InstanceList { get; set; }
         public class ListInstancesResponseBodyInstanceList : TeaModel {
             /// <summary>
-            /// The commodity code, which is the same as that on the Billing Management page.
+            /// <para>The commodity code, which is the same as that on the Billing Management page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hologram_postpay_public_cn</para>
             /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The time when the cluster was created.
+            /// <para>The time when the cluster was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-12-16T02:24:05Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// Indicates whether lakehouse acceleration is enabled.
+            /// <para>Indicates whether lakehouse acceleration is enabled.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   true
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   false
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EnableHiveAccess")]
             [Validation(Required=false)]
             public string EnableHiveAccess { get; set; }
 
             /// <summary>
-            /// The list of endpoints.
+            /// <para>The list of endpoints.</para>
             /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstanceListEndpoints> Endpoints { get; set; }
             public class ListInstancesResponseBodyInstanceListEndpoints : TeaModel {
                 /// <summary>
-                /// Indicates whether the endpoint is enabled.
+                /// <para>Indicates whether the endpoint is enabled.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>true</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <!-- -->
                 /// 
-                /// *   true
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- --></description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                /// *   false
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// The endpoint.
+                /// <para>The endpoint.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hgpostcn-cn-aaab9ad2d8fb-cn-hangzhou-internal.hologres.aliyuncs.com:80</para>
                 /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// The network type.
+                /// <para>The network type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>VPCSingleTunnel</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <para>:</para>
+                /// <!-- -->
                 /// 
-                /// *   VPCSingleTunnel
+                /// <para>virtual private cloud (VPC)</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <para>.</para>
+                /// </description></item>
+                /// <item><description><para>Intranet</para>
+                /// <!-- -->
                 /// 
-                ///     :
+                /// <para>:</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <para>internal network</para>
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>VPCAnyTunnel</para>
+                /// <!-- -->
                 /// 
-                ///     virtual private cloud (VPC)
+                /// <para>: This value is not supported by new instances</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     .
+                /// <para>.</para>
+                /// </description></item>
+                /// <item><description><para>Internet</para>
+                /// <!-- -->
                 /// 
-                /// *   Intranet
+                /// <para>:</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <para>Internet</para>
+                /// <!-- -->
                 /// 
-                ///     :
+                /// <para>.</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                ///     internal network
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   VPCAnyTunnel
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     : This value is not supported by new instances
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     .
-                /// 
-                /// *   Internet
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     :
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     Internet
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     .
+                /// <b>Example:</b>
+                /// <para>Internet</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID.
+                /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-wz9oap28raidjevhuszg4</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The VPC ID.
+                /// <para>The VPC ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-uf6mrahzyu7uorlqqpz5f</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC to which the instance belongs.
+                /// <para>The ID of the VPC to which the instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hgpostcn-cn-wwo3665tx004-frontend-st</para>
                 /// </summary>
                 [NameInMap("VpcInstanceId")]
                 [Validation(Required=false)]
@@ -200,182 +222,205 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// The time when the cluster expires.
+            /// <para>The time when the cluster expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-05-04T16:00:00.000Z</para>
             /// </summary>
             [NameInMap("ExpirationTime")]
             [Validation(Required=false)]
             public string ExpirationTime { get; set; }
 
             /// <summary>
-            /// The billing method of the instance. Valid values:
+            /// <para>The billing method of the instance. Valid values:</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>PostPaid</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            /// *   PostPaid
+            /// <para>pay-as-you-go</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>.</para>
+            /// </description></item>
+            /// <item><description><para>PrePaid</para>
+            /// <!-- -->
             /// 
-            ///     :
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>subscription</para>
+            /// <!-- -->
             /// 
-            ///     pay-as-you-go
+            /// <para>.</para>
+            /// </description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   PrePaid
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     subscription
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
+            /// <b>Example:</b>
+            /// <para>PrePaid</para>
             /// </summary>
             [NameInMap("InstanceChargeType")]
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
 
             /// <summary>
-            /// The instance ID.
+            /// <para>The instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hgpostcn-cn-aaab9ad2d8fb</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// <para>The name of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_instance</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The status of the instance.
+            /// <para>The status of the instance.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Creating</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   Creating
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Running</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Suspended</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   Running
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>Allocating</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            /// *   Suspended
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   Allocating
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("InstanceStatus")]
             [Validation(Required=false)]
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// The type of the instance.
+            /// <para>The type of the instance.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Follower</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            /// *   Follower
+            /// <para>read-only secondary instance</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>.</para>
+            /// </description></item>
+            /// <item><description><para>Standard</para>
+            /// <!-- -->
             /// 
-            ///     :
+            /// <para>:</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <para>normal instance</para>
+            /// <!-- -->
             /// 
-            ///     read-only secondary instance
+            /// <para>.</para>
+            /// </description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     .
-            /// 
-            /// *   Standard
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     :
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     normal instance
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     .
+            /// <b>Example:</b>
+            /// <para>Standard</para>
             /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// The ID of the primary instance.
+            /// <para>The ID of the primary instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hgprecn-cn-2r42sqvxm006</para>
             /// </summary>
             [NameInMap("LeaderInstanceId")]
             [Validation(Required=false)]
             public string LeaderInstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmvscak73zmby</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The reason for the suspension.
+            /// <para>The reason for the suspension.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Manual</para>
             /// </summary>
             [NameInMap("SuspendReason")]
             [Validation(Required=false)]
             public string SuspendReason { get; set; }
 
             /// <summary>
-            /// The tags that are added to the resource.
+            /// <para>The tags that are added to the resource.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstanceListTags> Tags { get; set; }
             public class ListInstancesResponseBodyInstanceListTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tag</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -384,12 +429,19 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// The version of the cluster.
+            /// <para>The version of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.3.37</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-h</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -397,14 +449,20 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D1303CD4-AA70-5998-8025-F55B22C50840</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

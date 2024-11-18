@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateInstanceNameRequest : TeaModel {
         /// <summary>
-        /// The new name of the instance.
+        /// <para>The new name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>new_name</para>
         /// </summary>
         [NameInMap("instanceName")]
         [Validation(Required=false)]

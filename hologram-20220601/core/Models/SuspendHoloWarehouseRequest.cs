@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class SuspendHoloWarehouseRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The name of the virtual warehouse.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my_warehouse</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

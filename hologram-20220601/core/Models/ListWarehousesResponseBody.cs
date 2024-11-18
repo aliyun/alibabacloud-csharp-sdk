@@ -10,91 +10,104 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListWarehousesResponseBody : TeaModel {
         /// <summary>
-        /// The list of virtual warehouse instances.
+        /// <para>The list of virtual warehouse instances.</para>
         /// </summary>
         [NameInMap("WarehouseList")]
         [Validation(Required=false)]
         public List<ListWarehousesResponseBodyWarehouseList> WarehouseList { get; set; }
         public class ListWarehousesResponseBodyWarehouseList : TeaModel {
             /// <summary>
-            /// The number of CPU cores.
+            /// <para>The number of CPU cores.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>32</para>
             /// </summary>
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// The ID.
+            /// <para>The ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// The memory capacity.
+            /// <para>The memory capacity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>128</para>
             /// </summary>
             [NameInMap("Mem")]
             [Validation(Required=false)]
             public long? Mem { get; set; }
 
             /// <summary>
-            /// The name of the virtual warehouse instance.
+            /// <para>The name of the virtual warehouse instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MyWarehouse</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The number of compute nodes.
+            /// <para>The number of compute nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("NodeCount")]
             [Validation(Required=false)]
             public long? NodeCount { get; set; }
 
             /// <summary>
-            /// The status.
+            /// <para>The status.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>kRunning</para>
+            /// <!-- -->
             /// 
-            /// Valid values:
+            /// <!-- -->
             /// 
-            /// *   kRunning
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>kSuspended</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>kInit</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   kSuspended
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>kFailed</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
+            /// </description></item>
+            /// <item><description><para>kAllocating</para>
+            /// <!-- -->
             /// 
-            ///     <!-- -->
+            /// <!-- -->
             /// 
-            /// *   kInit
+            /// <!-- --></description></item>
+            /// </list>
             /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   kFailed
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            /// *   kAllocating
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
-            /// 
-            ///     <!-- -->
+            /// <b>Example:</b>
+            /// <para>kRunning</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -103,7 +116,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

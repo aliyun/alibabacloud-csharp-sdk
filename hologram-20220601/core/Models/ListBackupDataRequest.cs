@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
-    public class ChangeResourceGroupRequest : TeaModel {
+    public class ListBackupDataRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>hgprecn-cn-zvp25ysv3006</para>
+        /// <para>redundant</para>
+        /// </summary>
+        [NameInMap("backupType")]
+        [Validation(Required=false)]
+        public string BackupType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>hgprecn-cn-wwoxxxxx</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>rg-acfmxwerqwerasfd</para>
-        /// </summary>
-        [NameInMap("newResourceGroupId")]
-        [Validation(Required=false)]
-        public string NewResourceGroupId { get; set; }
 
     }
 

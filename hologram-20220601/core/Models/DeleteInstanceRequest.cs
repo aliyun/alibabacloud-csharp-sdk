@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the region in which the Hologres instance resides.
+        /// <para>The ID of the region in which the Hologres instance resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

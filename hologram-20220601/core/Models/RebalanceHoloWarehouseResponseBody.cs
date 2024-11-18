@@ -9,12 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RebalanceHoloWarehouseResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C0EA5844-AB00-5653-8711-CD9FD1798412</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
