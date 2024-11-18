@@ -56,6 +56,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                [NameInMap("DeleteWithInstance")]
+                [Validation(Required=false)]
+                public bool? DeleteWithInstance { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
                 /// <summary>
                 /// <para>The billing method of the cloud disk or local disk. Valid values:</para>
                 /// <list type="bullet">

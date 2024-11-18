@@ -1,3 +1,9 @@
+2024-11-18 Version: 6.3.0
+- Support API CreateNetworkInterface.
+- Support API DeleteNetworkInterfaces.
+- Update API DescribeDisks: update response param.
+
+
 2024-11-15 Version: 6.2.0
 - Support API CreateHaVip.
 - Support API DeleteHaVips.
