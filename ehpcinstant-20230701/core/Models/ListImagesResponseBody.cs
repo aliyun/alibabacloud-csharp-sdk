@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("OsTag")]
+            [Validation(Required=false)]
+            public string OsTag { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>v1.0</para>
