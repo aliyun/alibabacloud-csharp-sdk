@@ -10,66 +10,92 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListResourceShareAssociationsRequest : TeaModel {
         /// <summary>
-        /// The association status. Valid values:
+        /// <para>The association status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Associating: The entity is being associated.</description></item>
+        /// <item><description>Associated: The entity is associated.</description></item>
+        /// <item><description>Failed: The entity fails to be associated.</description></item>
+        /// <item><description>Disassociating: The entity is being disassociated.</description></item>
+        /// <item><description>Disassociated: The entity is disassociated.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The system deletes the records of entities in the <c>Failed</c> or <c>Disassociated</c> state within 48 hours to 96 hours.</para>
+        /// </remarks>
         /// 
-        /// *   Associating: The entity is being associated.
-        /// *   Associated: The entity is associated.
-        /// *   Failed: The entity fails to be associated.
-        /// *   Disassociating: The entity is being disassociated.
-        /// *   Disassociated: The entity is disassociated.
-        /// 
-        /// >  The system deletes the records of entities in the `Failed` or `Disassociated` state within 48 hours to 96 hours.
+        /// <b>Example:</b>
+        /// <para>Associated</para>
         /// </summary>
         [NameInMap("AssociationStatus")]
         [Validation(Required=false)]
         public string AssociationStatus { get; set; }
 
         /// <summary>
-        /// The association type. Valid values:
+        /// <para>The association type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Resource</description></item>
+        /// <item><description>Target</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Resource
-        /// *   Target
+        /// <b>Example:</b>
+        /// <para>Resource</para>
         /// </summary>
         [NameInMap("AssociationType")]
         [Validation(Required=false)]
         public string AssociationType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return for a single request.
+        /// <para>The maximum number of entries to return for a single request.</para>
+        /// <para>Valid values: 1 to 100. Default value: 20.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 20.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+        /// <para>The <c>token</c> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TGlzdFJlc291cm****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the resource.
+        /// <para>The ID of the resource.</para>
+        /// <remarks>
+        /// <para> This parameter is unavailable if you set the <c>AssociationType</c> parameter to <c>Target</c>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is unavailable if you set the `AssociationType` parameter to `Target`.
+        /// <b>Example:</b>
+        /// <para>vsw-bp183p93qs667muql****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The IDs of the resource shares.
+        /// <para>The IDs of the resource shares.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rs-6GRmdD3X****</para>
         /// </summary>
         [NameInMap("ResourceShareIds")]
         [Validation(Required=false)]
         public List<string> ResourceShareIds { get; set; }
 
         /// <summary>
-        /// The ID of the principal.
+        /// <para>The ID of the principal.</para>
+        /// <remarks>
+        /// <para> This parameter is unavailable if you set the <c>AssociationType</c> parameter to <c>Resource</c>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is unavailable if you set the `AssociationType` parameter to `Resource`.
+        /// <b>Example:</b>
+        /// <para>172050525300****</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]

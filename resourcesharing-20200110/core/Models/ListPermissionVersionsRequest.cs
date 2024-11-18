@@ -10,23 +10,32 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListPermissionVersionsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of entries to return for a single request.
+        /// <para>The maximum number of entries to return for a single request.</para>
+        /// <para>Valid values: 1 to 100. Default value: 20.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 20.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+        /// <para>The <c>token</c> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TGlzdFJlc291cm****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The name of the permission.
+        /// <para>The name of the permission.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AliyunRSDefaultPermissionVSwitch</para>
         /// </summary>
         [NameInMap("PermissionName")]
         [Validation(Required=false)]

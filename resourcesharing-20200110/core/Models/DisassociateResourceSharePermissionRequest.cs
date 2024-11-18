@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class DisassociateResourceSharePermissionRequest : TeaModel {
         /// <summary>
-        /// The name of the permission. For more information, see [Permission library](~~465474~~).
+        /// <para>The name of the permission. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AliyunRSDefaultPermissionVSwitch</para>
         /// </summary>
         [NameInMap("PermissionName")]
         [Validation(Required=false)]
         public string PermissionName { get; set; }
 
         /// <summary>
-        /// The ID of the resource share.
+        /// <para>The ID of the resource share.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rs-6GRmdD3X****</para>
         /// </summary>
         [NameInMap("ResourceShareId")]
         [Validation(Required=false)]

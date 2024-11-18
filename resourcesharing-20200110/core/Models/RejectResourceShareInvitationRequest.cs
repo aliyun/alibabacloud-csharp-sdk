@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class RejectResourceShareInvitationRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource sharing invitation.
+        /// <para>The ID of the resource sharing invitation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/450564.html">ListResourceShareInvitations</a> operation to obtain the ID of a resource sharing invitation.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListResourceShareInvitations](~~450564~~) operation to obtain the ID of a resource sharing invitation.
+        /// <b>Example:</b>
+        /// <para>i-yyTWbkjHArYh****</para>
         /// </summary>
         [NameInMap("ResourceShareInvitationId")]
         [Validation(Required=false)]

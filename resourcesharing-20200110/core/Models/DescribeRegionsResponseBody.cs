@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The information of the regions.
+        /// <para>The information of the regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// The name of the region.
+            /// <para>The name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The endpoint of the Resource Sharing service in the region.
+            /// <para>The endpoint of the Resource Sharing service in the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>resourcesharing.cn-hangzhou.aliyuncs.com</para>
             /// </summary>
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// The ID of the region.
+            /// <para>The ID of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -40,7 +49,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0D64A198-5842-4570-8E26-5E540CDC84CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
