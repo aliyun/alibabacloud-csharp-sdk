@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string ExtIdInfo { get; set; }
 
+            [NameInMap("ExtInfo")]
+            [Validation(Required=false)]
+            public string ExtInfo { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>**</para>

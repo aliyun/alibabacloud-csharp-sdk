@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Ocr { get; set; }
 
+        [NameInMap("ProcedurePriority")]
+        [Validation(Required=false)]
+        public string ProcedurePriority { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>eKYC</para>
