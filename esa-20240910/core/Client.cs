@@ -2967,7 +2967,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的版本</para>
+        /// <para>Creates a version for a containerized application. You can iterate the application based on the version.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3027,7 +3027,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的版本</para>
+        /// <para>Creates a version for a containerized application. You can iterate the application based on the version.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3087,7 +3087,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的版本</para>
+        /// <para>Creates a version for a containerized application. You can iterate the application based on the version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3105,7 +3105,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的版本</para>
+        /// <para>Creates a version for a containerized application. You can iterate the application based on the version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9599,100 +9599,6 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速服务节点IP段列表</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeIPRangeListRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeIPRangeListResponse
-        /// </returns>
-        public DescribeIPRangeListResponse DescribeIPRangeListWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeIPRangeList",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeIPRangeListResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询加速服务节点IP段列表</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeIPRangeListRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeIPRangeListResponse
-        /// </returns>
-        public async Task<DescribeIPRangeListResponse> DescribeIPRangeListWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeIPRangeList",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeIPRangeListResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询加速服务节点IP段列表</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// DescribeIPRangeListResponse
-        /// </returns>
-        public DescribeIPRangeListResponse DescribeIPRangeList()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeIPRangeListWithOptions(runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询加速服务节点IP段列表</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// DescribeIPRangeListResponse
-        /// </returns>
-        public async Task<DescribeIPRangeListResponse> DescribeIPRangeListAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeIPRangeListWithOptionsAsync(runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>查询账户的KV状态信</para>
         /// </summary>
         /// 
@@ -14717,7 +14623,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下客户端证书列表</para>
+        /// <para>Queries client certificates configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14755,7 +14661,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下客户端证书列表</para>
+        /// <para>Queries client certificates configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14793,7 +14699,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下客户端证书列表</para>
+        /// <para>Queries client certificates configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14811,7 +14717,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下客户端证书列表</para>
+        /// <para>Queries client certificates configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">

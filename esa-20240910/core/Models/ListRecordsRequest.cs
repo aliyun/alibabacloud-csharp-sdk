@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// </summary>
         [NameInMap("Proxied")]
         [Validation(Required=false)]
-        public string Proxied { get; set; }
+        public bool? Proxied { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
