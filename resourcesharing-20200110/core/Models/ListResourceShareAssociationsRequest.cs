@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The <c>token</c> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</para>
+        /// <para>The <c>token</c> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -80,6 +80,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 
         /// <summary>
         /// <para>The IDs of the resource shares.</para>
+        /// <para>Valid values of N: 1 to 5. This indicates that a maximum of five resource shares can be specified at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rs-6GRmdD3X****</para>

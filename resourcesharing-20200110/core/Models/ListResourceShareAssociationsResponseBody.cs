@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListResourceShareAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The <c>token</c> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</para>
+        /// <para>The <c>token</c> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11BA57B5-7301-4E2F-BBA5-2AE4C2F4FCDB</para>
@@ -36,38 +36,108 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public List<ListResourceShareAssociationsResponseBodyResourceShareAssociations> ResourceShareAssociations { get; set; }
         public class ListResourceShareAssociationsResponseBodyResourceShareAssociations : TeaModel {
+            /// <summary>
+            /// <para>The information about the failure.</para>
+            /// </summary>
             [NameInMap("AssociationFailedDetails")]
             [Validation(Required=false)]
             public List<ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails> AssociationFailedDetails { get; set; }
             public class ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails : TeaModel {
+                /// <summary>
+                /// <para>This parameter is deprecated. The OperationType parameter is used instead.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("AssociateType")]
                 [Validation(Required=false)]
                 public string AssociateType { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</para>
+                /// <list type="bullet">
+                /// <item><description>If the value of AssociationType is Resource, the value of this parameter is the ID of the principal.</description></item>
+                /// <item><description>If the value of AssociationType is Target, the value of this parameter is the ID of the resource.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172050525300****</para>
+                /// </summary>
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
 
+                /// <summary>
+                /// <para>The type of the entity. The value of this parameter depends on the value of the AssociationType parameter:</para>
+                /// <list type="bullet">
+                /// <item><description>If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For information about the types of resources that can be shared, see Services that work with Resource Sharing.</description></item>
+                /// <item><description>If the value of AssociationType is Target, the value of this parameter is <c>ResourceDirectory</c>, <c>Folder</c>, <c>Account</c>, or <c>Service</c>.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Account</para>
+                /// </summary>
                 [NameInMap("EntityType")]
                 [Validation(Required=false)]
                 public string EntityType { get; set; }
 
+                /// <summary>
+                /// <para>The failure description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>You cannot access the specified resource at this time.</para>
+                /// </summary>
                 [NameInMap("FailureDescription")]
                 [Validation(Required=false)]
                 public string FailureDescription { get; set; }
 
+                /// <summary>
+                /// <para>The failure cause. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Unavailable: The resource does not exist.</description></item>
+                /// <item><description>LimitExceeded: The number of principals for the resource exceeds the upper limit.</description></item>
+                /// <item><description>ZonalResourceInaccessible: The resource is unavailable in this region.</description></item>
+                /// <item><description>InternalError: An internal error occurred.</description></item>
+                /// <item><description>UnsupportedOperation: You cannot perform this operation.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Unavailable</para>
+                /// </summary>
                 [NameInMap("FailureReason")]
                 [Validation(Required=false)]
                 public string FailureReason { get; set; }
 
+                /// <summary>
+                /// <para>The operation type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Associate</description></item>
+                /// <item><description>Disassociate</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Associate</para>
+                /// </summary>
                 [NameInMap("OperationType")]
                 [Validation(Required=false)]
                 public string OperationType { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is deprecated. The FailureReason parameter is used instead.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is deprecated. The FailureDescription parameter is used instead.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("StatusMessage")]
                 [Validation(Required=false)]
                 public string StatusMessage { get; set; }
@@ -135,7 +205,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// <summary>
             /// <para>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</para>
             /// <list type="bullet">
-            /// <item><description>If the value of <c>AssociationType</c> is <c>Resource</c>, the value of this parameter is the ID of the shared resource.</description></item>
+            /// <item><description>If the value of <c>AssociationType</c> is <c>Resource</c>, the value of this parameter is the ID of the resource.</description></item>
             /// <item><description>If the value of <c>AssociationType</c> is <c>Target</c>, the value of this parameter is the ID of the principal.</description></item>
             /// </list>
             /// 
@@ -149,7 +219,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// <summary>
             /// <para>The type of the entity. The value of this parameter depends on the value of the AssociationType parameter:</para>
             /// <list type="bullet">
-            /// <item><description>If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For more information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</description></item>
+            /// <item><description>If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For information about the types of resources that can be shared, see <a href="https://help.aliyun.com/document_detail/450526.html">Services that work with Resource Sharing</a>.</description></item>
             /// <item><description>If the value of AssociationType is Target, the value of this parameter is <c>Account</c>.</description></item>
             /// </list>
             /// 
@@ -163,8 +233,8 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// <summary>
             /// <para>Indicates whether the principal is outside the resource directory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The principal is outside the resource directory.</description></item>
-            /// <item><description>false: The principal is in the resource directory.</description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,6 +264,26 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [Validation(Required=false)]
             public string ResourceShareName { get; set; }
 
+            /// <summary>
+            /// <para>The properties of the principal, such as the time range within which the resource is shared. Valid values of <c>timeRangeType</c>:</para>
+            /// <list type="bullet">
+            /// <item><description>timeRange: a specific time range</description></item>
+            /// <item><description>day: all day</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is returned only if the principal is an Alibaba Cloud service.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///     &quot;timeRange&quot;:{
+            ///         &quot;timeRangeType&quot;:&quot;timeRange&quot;,
+            ///         &quot;beginAtTime&quot;:&quot;00:00&quot;,
+            ///         &quot;timezone&quot;:&quot;UTC+8&quot;,
+            ///         &quot;endAtTime&quot;:&quot;19:59&quot;
+            ///     }
+            /// }</para>
+            /// </summary>
             [NameInMap("TargetProperty")]
             [Validation(Required=false)]
             public string TargetProperty { get; set; }

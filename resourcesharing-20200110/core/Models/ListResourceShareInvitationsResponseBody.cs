@@ -54,11 +54,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             public List<ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails> InvitationFailedDetails { get; set; }
             public class ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails : TeaModel {
                 /// <summary>
-                /// <para>The type of the sharing operation. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Associate</description></item>
-                /// <item><description>Disassociate</description></item>
-                /// </list>
+                /// <para>This parameter is deprecated. The OperationType parameter is used instead.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Associate</para>
@@ -67,14 +63,43 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
                 [Validation(Required=false)]
                 public string AssociateType { get; set; }
 
+                /// <summary>
+                /// <para>The failure description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>You cannot access the specified resource at this time.</para>
+                /// </summary>
                 [NameInMap("FailureDescription")]
                 [Validation(Required=false)]
                 public string FailureDescription { get; set; }
 
+                /// <summary>
+                /// <para>The failure cause. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Unavailable: The resource cannot be shared.</description></item>
+                /// <item><description>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</description></item>
+                /// <item><description>ZonalResourceInaccessible: The resource is unavailable in this region.</description></item>
+                /// <item><description>InternalError: An internal error occurred during the check.</description></item>
+                /// <item><description>UnsupportedOperation: You cannot perform this operation.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Unavailable</para>
+                /// </summary>
                 [NameInMap("FailureReason")]
                 [Validation(Required=false)]
                 public string FailureReason { get; set; }
 
+                /// <summary>
+                /// <para>The operation type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Associate</description></item>
+                /// <item><description>Disassociate</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Associate</para>
+                /// </summary>
                 [NameInMap("OperationType")]
                 [Validation(Required=false)]
                 public string OperationType { get; set; }
@@ -101,14 +126,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The failure status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Unavailable: The resource cannot be shared.</description></item>
-                /// <item><description>LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</description></item>
-                /// <item><description>ZonalResourceInaccessible: The resource is unavailable in this region.</description></item>
-                /// <item><description>UnsupportedOperation: The operation is not allowed because another association exists.</description></item>
-                /// <item><description>InternalError: An internal error occurred during the check.</description></item>
-                /// </list>
+                /// <para>This parameter is deprecated. The FailureReason parameter is used instead.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Unavailable</para>
@@ -118,7 +136,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The failure cause.</para>
+                /// <para>This parameter is deprecated. The FailureDescription parameter is used instead.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>You cannot access the specified resource at this time.</para>
