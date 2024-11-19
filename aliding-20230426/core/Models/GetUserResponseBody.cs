@@ -323,6 +323,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        [NameInMap("unionid")]
+        [Validation(Required=false)]
+        public string Unionid { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>zhangsan</para>

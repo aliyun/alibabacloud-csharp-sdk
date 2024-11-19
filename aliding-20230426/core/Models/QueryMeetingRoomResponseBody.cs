@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public int? RoomStatus { get; set; }
 
+            [NameInMap("RoomUnionId")]
+            [Validation(Required=false)]
+            public string RoomUnionId { get; set; }
+
         }
 
         /// <summary>
