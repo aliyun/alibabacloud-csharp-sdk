@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeUserCdnStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whetherAlibaba Cloud CDN is activated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether your account has overdue payments.</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public bool? InDebt { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the grace period for your overdue payments expired.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public bool? InDebtOverdue { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the service is available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public bool? OnService { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39B1DC7F-9D25-5D54-8F02-6EE26A7F48CA</para>
         /// </summary>

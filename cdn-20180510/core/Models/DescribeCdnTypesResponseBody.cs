@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnTypesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The types of the domain names.</para>
+        /// </summary>
         [NameInMap("CdnTypes")]
         [Validation(Required=false)]
         public DescribeCdnTypesResponseBodyCdnTypes CdnTypes { get; set; }
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeCdnTypesResponseBodyCdnTypesCdnType> CdnType { get; set; }
             public class DescribeCdnTypesResponseBodyCdnTypesCdnType : TeaModel {
                 /// <summary>
+                /// <para>The description of the domain name type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Download Acceleration</para>
                 /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string Desc { get; set; }
 
                 /// <summary>
+                /// <para>The type of the domain name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>download</para>
                 /// </summary>
@@ -38,6 +45,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BDA62CE4-3477-439A-B52E-D2D7C829D7C1</para>
         /// </summary>

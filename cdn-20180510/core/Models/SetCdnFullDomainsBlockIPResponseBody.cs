@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetCdnFullDomainsBlockIPResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. The status code 0 indicates that the call is successful. If another status code is returned, the call fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The additional information returned. If the request was successful, OK is returned. If the request failed, an error message is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23ACE7E2-2302-42E3-98F8-E5E697FD86C3</para>
         /// </summary>

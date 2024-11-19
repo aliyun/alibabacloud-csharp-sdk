@@ -7311,8 +7311,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取海量封禁全量配置</para>
+        /// <para>You can call the DescribeCdnFullDomainsBlockIPConfig operation to query the configurations of full blocking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</description></item>
+        /// <item><description>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</description></item>
+        /// <item><description>You can share OSS URLs with others. The shared URLs are valid for three days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPConfigRequest
@@ -7353,8 +7365,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取海量封禁全量配置</para>
+        /// <para>You can call the DescribeCdnFullDomainsBlockIPConfig operation to query the configurations of full blocking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</description></item>
+        /// <item><description>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</description></item>
+        /// <item><description>You can share OSS URLs with others. The shared URLs are valid for three days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPConfigRequest
@@ -7395,8 +7419,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取海量封禁全量配置</para>
+        /// <para>You can call the DescribeCdnFullDomainsBlockIPConfig operation to query the configurations of full blocking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</description></item>
+        /// <item><description>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</description></item>
+        /// <item><description>You can share OSS URLs with others. The shared URLs are valid for three days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPConfigRequest
@@ -7413,8 +7449,20 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取海量封禁全量配置</para>
+        /// <para>You can call the DescribeCdnFullDomainsBlockIPConfig operation to query the configurations of full blocking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation,<a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.</description></item>
+        /// <item><description>The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of IP address-Corresponding expiration time. The expiration time is in the YYYY-MM-DD hh:mm:ss format.</description></item>
+        /// <item><description>You can share OSS URLs with others. The shared URLs are valid for three days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPConfigRequest
@@ -7431,8 +7479,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户海量封禁历史</para>
+        /// <para>Queries the blocking history.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</description></item>
+        /// <item><description>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</description></item>
+        /// <item><description>The maximum time range to query is 90 days.</description></item>
+        /// <item><description>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPHistoryRequest
@@ -7481,8 +7542,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户海量封禁历史</para>
+        /// <para>Queries the blocking history.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</description></item>
+        /// <item><description>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</description></item>
+        /// <item><description>The maximum time range to query is 90 days.</description></item>
+        /// <item><description>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPHistoryRequest
@@ -7531,8 +7605,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户海量封禁历史</para>
+        /// <para>Queries the blocking history.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</description></item>
+        /// <item><description>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</description></item>
+        /// <item><description>The maximum time range to query is 90 days.</description></item>
+        /// <item><description>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPHistoryRequest
@@ -7549,8 +7636,21 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户海量封禁历史</para>
+        /// <para>Queries the blocking history.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.</description></item>
+        /// <item><description>If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.</description></item>
+        /// <item><description>The maximum time range to query is 90 days.</description></item>
+        /// <item><description>If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdnFullDomainsBlockIPHistoryRequest
@@ -9419,6 +9519,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeCdnSubListWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnTypesRequest
         /// </param>
@@ -9464,6 +9569,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnTypesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnTypesRequest
         /// </param>
@@ -9509,6 +9619,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeCdnTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnTypesRequest
         /// </param>
@@ -9522,6 +9637,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return DescribeCdnTypesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the types of domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnTypesRequest
         /// </param>
@@ -10993,6 +11113,118 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCertificateInfoByIDWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A客户定制查询域名采样率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomDomainSampleRateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomDomainSampleRateResponse
+        /// </returns>
+        public DescribeCustomDomainSampleRateResponse DescribeCustomDomainSampleRateWithOptions(DescribeCustomDomainSampleRateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomDomainSampleRate",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomDomainSampleRateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A客户定制查询域名采样率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomDomainSampleRateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomDomainSampleRateResponse
+        /// </returns>
+        public async Task<DescribeCustomDomainSampleRateResponse> DescribeCustomDomainSampleRateWithOptionsAsync(DescribeCustomDomainSampleRateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCustomDomainSampleRate",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCustomDomainSampleRateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A客户定制查询域名采样率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomDomainSampleRateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomDomainSampleRateResponse
+        /// </returns>
+        public DescribeCustomDomainSampleRateResponse DescribeCustomDomainSampleRate(DescribeCustomDomainSampleRateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCustomDomainSampleRateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A客户定制查询域名采样率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCustomDomainSampleRateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCustomDomainSampleRateResponse
+        /// </returns>
+        public async Task<DescribeCustomDomainSampleRateResponse> DescribeCustomDomainSampleRateAsync(DescribeCustomDomainSampleRateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCustomDomainSampleRateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24393,6 +24625,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return await DescribeTopDomainsByFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserCdnStatusRequest
         /// </param>
@@ -24434,6 +24671,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeUserCdnStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserCdnStatusRequest
         /// </param>
@@ -24475,6 +24717,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return TeaModel.ToObject<DescribeUserCdnStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserCdnStatusRequest
         /// </param>
@@ -24488,6 +24735,11 @@ namespace AlibabaCloud.SDK.Cdn20180510
             return DescribeUserCdnStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserCdnStatusRequest
         /// </param>
@@ -26307,6 +26559,120 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\<em>\</em> \<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRealtimeLogDeliveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRealtimeLogDeliveryResponse
+        /// </returns>
+        public ListRealtimeLogDeliveryResponse ListRealtimeLogDeliveryWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRealtimeLogDelivery",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRealtimeLogDeliveryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\<em>\</em> \<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRealtimeLogDeliveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRealtimeLogDeliveryResponse
+        /// </returns>
+        public async Task<ListRealtimeLogDeliveryResponse> ListRealtimeLogDeliveryWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRealtimeLogDelivery",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRealtimeLogDeliveryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\<em>\</em> \<em>\</em></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListRealtimeLogDeliveryResponse
+        /// </returns>
+        public ListRealtimeLogDeliveryResponse ListRealtimeLogDelivery()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRealtimeLogDeliveryWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\<em>\</em> \<em>\</em></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListRealtimeLogDeliveryResponse
+        /// </returns>
+        public async Task<ListRealtimeLogDeliveryResponse> ListRealtimeLogDeliveryAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRealtimeLogDeliveryWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries all domain names that are associated with a specific real-time log delivery configuration record.</para>
         /// </summary>
         /// 
@@ -27511,6 +27877,150 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>A客户定制修改域名采样率接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCustomDomainSampleRateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCustomDomainSampleRateResponse
+        /// </returns>
+        public ModifyCustomDomainSampleRateResponse ModifyCustomDomainSampleRateWithOptions(ModifyCustomDomainSampleRateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseConfigID))
+            {
+                body["BaseConfigID"] = request.BaseConfigID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                body["SampleRate"] = request.SampleRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SinkID))
+            {
+                body["SinkID"] = request.SinkID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCustomDomainSampleRate",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCustomDomainSampleRateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A客户定制修改域名采样率接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCustomDomainSampleRateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCustomDomainSampleRateResponse
+        /// </returns>
+        public async Task<ModifyCustomDomainSampleRateResponse> ModifyCustomDomainSampleRateWithOptionsAsync(ModifyCustomDomainSampleRateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseConfigID))
+            {
+                body["BaseConfigID"] = request.BaseConfigID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                body["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                body["SampleRate"] = request.SampleRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SinkID))
+            {
+                body["SinkID"] = request.SinkID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCustomDomainSampleRate",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCustomDomainSampleRateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A客户定制修改域名采样率接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCustomDomainSampleRateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCustomDomainSampleRateResponse
+        /// </returns>
+        public ModifyCustomDomainSampleRateResponse ModifyCustomDomainSampleRate(ModifyCustomDomainSampleRateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyCustomDomainSampleRateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A客户定制修改域名采样率接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCustomDomainSampleRateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCustomDomainSampleRateResponse
+        /// </returns>
+        public async Task<ModifyCustomDomainSampleRateResponse> ModifyCustomDomainSampleRateAsync(ModifyCustomDomainSampleRateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyCustomDomainSampleRateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.</para>
         /// </summary>
         /// 
@@ -28211,7 +28721,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定缓存tag刷新节点上的文件内容</para>
+        /// <para>Refreshes the cache based on cache tags that you configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28261,7 +28771,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定缓存tag刷新节点上的文件内容</para>
+        /// <para>Refreshes the cache based on cache tags that you configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28311,7 +28821,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定缓存tag刷新节点上的文件内容</para>
+        /// <para>Refreshes the cache based on cache tags that you configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28329,7 +28839,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定缓存tag刷新节点上的文件内容</para>
+        /// <para>Refreshes the cache based on cache tags that you configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28387,18 +28897,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
-            {
-                query["Force"] = request.Force;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
-            {
-                query["ObjectPath"] = request.ObjectPath;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
-            {
-                query["ObjectType"] = request.ObjectType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -28407,9 +28905,23 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
+            {
+                body["ObjectPath"] = request.ObjectPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["ObjectType"] = request.ObjectType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -28468,18 +28980,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
-            {
-                query["Force"] = request.Force;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
-            {
-                query["ObjectPath"] = request.ObjectPath;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
-            {
-                query["ObjectType"] = request.ObjectType;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -28488,9 +28988,23 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectPath))
+            {
+                body["ObjectPath"] = request.ObjectPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["ObjectType"] = request.ObjectType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -29463,8 +29977,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置CDN上的海量封禁功能</para>
+        /// <para>Blocks or unblocks IP addresses from accessing domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetCdnFullDomainsBlockIPRequest
@@ -29517,8 +30041,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置CDN上的海量封禁功能</para>
+        /// <para>Blocks or unblocks IP addresses from accessing domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetCdnFullDomainsBlockIPRequest
@@ -29571,8 +30105,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置CDN上的海量封禁功能</para>
+        /// <para>Blocks or unblocks IP addresses from accessing domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetCdnFullDomainsBlockIPRequest
@@ -29589,8 +30133,18 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置CDN上的海量封禁功能</para>
+        /// <para>Blocks or unblocks IP addresses from accessing domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>This operation is suitable for blocking or unblocking a maximum of 1,000 IP addresses or CIDR blocks at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetCdnFullDomainsBlockIPRequest

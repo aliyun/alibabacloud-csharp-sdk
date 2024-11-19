@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnFullDomainsBlockIPHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The end time must be later than the start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The IP address or CIDR blocks to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string IPList { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
