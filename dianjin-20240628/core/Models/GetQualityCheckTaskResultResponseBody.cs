@@ -173,6 +173,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public List<GetQualityCheckTaskResultResponseBodyDataQualityCheckList> QualityCheckList { get; set; }
             public class GetQualityCheckTaskResultResponseBodyDataQualityCheckList : TeaModel {
+                [NameInMap("bizType")]
+                [Validation(Required=false)]
+                public string BizType { get; set; }
+
                 [NameInMap("checkExplanation")]
                 [Validation(Required=false)]
                 public string CheckExplanation { get; set; }
@@ -322,6 +326,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [NameInMap("ruleId")]
                 [Validation(Required=false)]
                 public string RuleId { get; set; }
+
+                [NameInMap("ruleType")]
+                [Validation(Required=false)]
+                public string RuleType { get; set; }
 
             }
 
