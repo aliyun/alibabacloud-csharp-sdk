@@ -39,13 +39,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public DescribeFaceGuardRiskResponseBodyResultObject ResultObject { get; set; }
         public class DescribeFaceGuardRiskResponseBodyResultObject : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ROOT,VPN,HOOK</para>
-            /// </summary>
-            [NameInMap("RiakTags")]
+            [NameInMap("CertifyId")]
             [Validation(Required=false)]
-            public string RiakTags { get; set; }
+            public string CertifyId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -63,6 +59,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("RiskExtends")]
             [Validation(Required=false)]
             public string RiskExtends { get; set; }
+
+            [NameInMap("RiskTags")]
+            [Validation(Required=false)]
+            public string RiskTags { get; set; }
 
         }
 
