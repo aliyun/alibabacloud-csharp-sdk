@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public long? Bps { get; set; }
 
+            [NameInMap("Coverage")]
+            [Validation(Required=false)]
+            public string Coverage { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>50</para>
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("EventId")]
             [Validation(Required=false)]
             public string EventId { get; set; }
+
+            [NameInMap("EventResult")]
+            [Validation(Required=false)]
+            public string EventResult { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

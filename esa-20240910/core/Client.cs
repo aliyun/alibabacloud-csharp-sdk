@@ -5455,7 +5455,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5567,7 +5567,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5679,7 +5679,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5697,7 +5697,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
