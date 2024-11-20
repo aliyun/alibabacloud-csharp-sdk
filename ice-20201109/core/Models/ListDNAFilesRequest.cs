@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListDNAFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media fingerprint library.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string DBId { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ae0fd49c0840e14daf0d66a75b83****</para>
         /// </summary>
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

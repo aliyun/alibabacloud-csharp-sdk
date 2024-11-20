@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeMeterImsMpsAiUsageRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query. The value is a 10-digit timestamp. The maximum query range is 31 days. The duration between StartTs and EndTs cannot exceed 31 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? EndTs { get; set; }
 
         /// <summary>
+        /// <para>The time granularity of the query. Valid values: 3600 (hour) and 86400 (day).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? Interval { get; set; }
 
         /// <summary>
+        /// <para>This parameter does not take effect. By default, the usage data of all regions is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. The value is a 10-digit timestamp. You can query data within the last 90 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

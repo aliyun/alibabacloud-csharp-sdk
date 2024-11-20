@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteDNAFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media fingerprint library from which you want to delete files.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The primary key values of the files that you want to delete. Separate multiple values with commas (,). You can delete up to 50 files at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

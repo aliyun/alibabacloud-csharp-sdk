@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListDNADBRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the media fingerprint libraries. We recommend that you query at most 10 libraries at a time. Separate multiple library IDs with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2288c6ca184c0e47098a5b665e2a12****,78dc866518b843259669df58ed30****</para>
         /// </summary>

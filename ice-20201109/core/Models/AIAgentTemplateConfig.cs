@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("MaxIdleTime")]
+            [Validation(Required=false)]
+            public int? MaxIdleTime { get; set; }
+
             [NameInMap("UseVoiceprint")]
             [Validation(Required=false)]
             public bool? UseVoiceprint { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Volume")]
             [Validation(Required=false)]
             public long? Volume { get; set; }
+
+            [NameInMap("WorkflowOverrideParams")]
+            [Validation(Required=false)]
+            public string WorkflowOverrideParams { get; set; }
 
         }
 
@@ -99,6 +107,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("MaxIdleTime")]
+            [Validation(Required=false)]
+            public int? MaxIdleTime { get; set; }
+
             [NameInMap("UseVoiceprint")]
             [Validation(Required=false)]
             public bool? UseVoiceprint { get; set; }
@@ -123,6 +135,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public long? Volume { get; set; }
 
+            [NameInMap("WorkflowOverrideParams")]
+            [Validation(Required=false)]
+            public string WorkflowOverrideParams { get; set; }
+
         }
 
         [NameInMap("VoiceChat")]
@@ -132,6 +148,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("AsrMaxSilence")]
             [Validation(Required=false)]
             public int? AsrMaxSilence { get; set; }
+
+            [NameInMap("AvatarUrl")]
+            [Validation(Required=false)]
+            public string AvatarUrl { get; set; }
+
+            [NameInMap("AvatarUrlType")]
+            [Validation(Required=false)]
+            public string AvatarUrlType { get; set; }
 
             [NameInMap("BailianAppParams")]
             [Validation(Required=false)]
@@ -153,6 +177,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("MaxIdleTime")]
+            [Validation(Required=false)]
+            public int? MaxIdleTime { get; set; }
+
             [NameInMap("UseVoiceprint")]
             [Validation(Required=false)]
             public bool? UseVoiceprint { get; set; }
@@ -176,6 +204,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Volume")]
             [Validation(Required=false)]
             public long? Volume { get; set; }
+
+            [NameInMap("WorkflowOverrideParams")]
+            [Validation(Required=false)]
+            public string WorkflowOverrideParams { get; set; }
 
         }
 

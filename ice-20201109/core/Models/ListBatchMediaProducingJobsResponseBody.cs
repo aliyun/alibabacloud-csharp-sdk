@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListBatchMediaProducingJobsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The queried quick video production jobs.</para>
+        /// </summary>
         [NameInMap("EditingBatchJobList")]
         [Validation(Required=false)]
         public List<ListBatchMediaProducingJobsResponseBodyEditingBatchJobList> EditingBatchJobList { get; set; }
         public class ListBatchMediaProducingJobsResponseBodyEditingBatchJobList : TeaModel {
             /// <summary>
+            /// <para>The time when the job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-06-09T06:38:09Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CompleteTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-06-09T06:36:48Z</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The editing configurations. For more information, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;MediaConfig&quot;: {
@@ -47,15 +56,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string EditingConfig { get; set; }
 
+            /// <summary>
+            /// <para>The extended information of the job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("Extend")]
             [Validation(Required=false)]
             public string Extend { get; set; }
 
+            /// <summary>
+            /// <para>The input configurations.</para>
+            /// </summary>
             [NameInMap("InputConfig")]
             [Validation(Required=false)]
             public string InputConfig { get; set; }
 
             /// <summary>
+            /// <para>The ID of the quick video production job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><b><b><b>7ecbee4c6d9b8474498e</b></b></b></para>
             /// </summary>
@@ -64,6 +84,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>The job type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Script: script-based editing job that mixes media assets.</description></item>
+            /// <item><description>Smart_Mix: intelligent editing job that mixes media assets.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Script</para>
             /// </summary>
@@ -72,6 +99,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobType { get; set; }
 
             /// <summary>
+            /// <para>The time when the job was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-06-09T06:37:58Z</para>
             /// </summary>
@@ -80,6 +109,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
+            /// <para>The output configurations. For more information, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
@@ -95,6 +126,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string OutputConfig { get; set; }
 
             /// <summary>
+            /// <para>The job state.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Finished</description></item>
+            /// <item><description>Init</description></item>
+            /// <item><description>Failed</description></item>
+            /// <item><description>Processing</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Finished</para>
             /// </summary>
@@ -102,6 +142,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/zh/ims/use-cases/to-configure-a-callback-when-a-clip-completes">Configure a callback upon editing completion</a>.</para>
+            /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
@@ -109,6 +152,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -117,6 +163,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8EqYpQbZ6Eh7+Zz8DxVYoQ==</para>
         /// </summary>
@@ -125,7 +173,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>

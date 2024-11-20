@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryDNAJobListRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the media fingerprint analysis jobs that you want to query. We recommend that you query at most 10 jobs at a time. Separate multiple job IDs with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>88c6ca184c0e47098a5b665e2a12****</para>
         /// </summary>

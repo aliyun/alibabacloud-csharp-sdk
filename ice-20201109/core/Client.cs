@@ -631,8 +631,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddTemplate</para>
+        /// <para>Creates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddTemplateRequest
@@ -703,8 +712,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddTemplate</para>
+        /// <para>Creates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddTemplateRequest
@@ -775,8 +793,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddTemplate</para>
+        /// <para>Creates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddTemplateRequest
@@ -793,8 +820,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddTemplate</para>
+        /// <para>Creates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddTemplateRequest
@@ -1083,8 +1119,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DNA作业</para>
+        /// <para>Cancels a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you call the <b>UpdatePipeline</b> operation to set the status of the ApsaraVideo Media Processing (MPS) queue to Paused before you cancel a job. This suspends job scheduling in the MPS queue. After the job is canceled, you must set the status of the MPS queue back to Active so that the other jobs in the MPS queue can be scheduled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelDNAJobRequest
@@ -1141,8 +1185,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DNA作业</para>
+        /// <para>Cancels a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you call the <b>UpdatePipeline</b> operation to set the status of the ApsaraVideo Media Processing (MPS) queue to Paused before you cancel a job. This suspends job scheduling in the MPS queue. After the job is canceled, you must set the status of the MPS queue back to Active so that the other jobs in the MPS queue can be scheduled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelDNAJobRequest
@@ -1199,8 +1251,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DNA作业</para>
+        /// <para>Cancels a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you call the <b>UpdatePipeline</b> operation to set the status of the ApsaraVideo Media Processing (MPS) queue to Paused before you cancel a job. This suspends job scheduling in the MPS queue. After the job is canceled, you must set the status of the MPS queue back to Active so that the other jobs in the MPS queue can be scheduled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelDNAJobRequest
@@ -1217,8 +1277,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DNA作业</para>
+        /// <para>Cancels a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can cancel a media fingerprint analysis job only if the job is in the Queuing state.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you call the <b>UpdatePipeline</b> operation to set the status of the ApsaraVideo Media Processing (MPS) queue to Paused before you cancel a job. This suspends job scheduling in the MPS queue. After the job is canceled, you must set the status of the MPS queue back to Active so that the other jobs in the MPS queue can be scheduled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelDNAJobRequest
@@ -1355,7 +1423,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人工审核</para>
+        /// <para>Submits manual review results for media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1397,7 +1465,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人工审核</para>
+        /// <para>Submits manual review results for media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1439,7 +1507,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人工审核</para>
+        /// <para>Submits manual review results for media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1457,7 +1525,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人工审核</para>
+        /// <para>Submits manual review results for media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1475,7 +1543,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人训练任务</para>
+        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1541,7 +1609,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人训练任务</para>
+        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1607,7 +1675,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人训练任务</para>
+        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1625,7 +1693,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人训练任务</para>
+        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1643,7 +1711,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体处理自定义模板</para>
+        /// <para>Creates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1697,7 +1765,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体处理自定义模板</para>
+        /// <para>Creates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1751,7 +1819,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体处理自定义模板</para>
+        /// <para>Creates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1769,7 +1837,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体处理自定义模板</para>
+        /// <para>Creates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1787,7 +1855,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建人声克隆任务</para>
+        /// <para>Creates a human voice cloning job. You can configure the basic information of the human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1845,7 +1913,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建人声克隆任务</para>
+        /// <para>Creates a human voice cloning job. You can configure the basic information of the human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1903,7 +1971,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建人声克隆任务</para>
+        /// <para>Creates a human voice cloning job. You can configure the basic information of the human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1921,7 +1989,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建人声克隆任务</para>
+        /// <para>Creates a human voice cloning job. You can configure the basic information of the human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1939,8 +2007,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指纹库</para>
+        /// <para>Creates media fingerprint libraries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create up to five media fingerprint libraries within an account. To increase the quota, submit a ticket. You can call the DeleteDNADB operation to delete the fingerprint libraries that you no longer need.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDNADBRequest
@@ -2005,8 +2078,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指纹库</para>
+        /// <para>Creates media fingerprint libraries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create up to five media fingerprint libraries within an account. To increase the quota, submit a ticket. You can call the DeleteDNADB operation to delete the fingerprint libraries that you no longer need.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDNADBRequest
@@ -2071,8 +2149,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指纹库</para>
+        /// <para>Creates media fingerprint libraries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create up to five media fingerprint libraries within an account. To increase the quota, submit a ticket. You can call the DeleteDNADB operation to delete the fingerprint libraries that you no longer need.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDNADBRequest
@@ -2089,8 +2172,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指纹库</para>
+        /// <para>Creates media fingerprint libraries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can create up to five media fingerprint libraries within an account. To increase the quota, submit a ticket. You can call the DeleteDNADB operation to delete the fingerprint libraries that you no longer need.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDNADBRequest
@@ -2735,7 +2823,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户管道配置</para>
+        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2785,7 +2873,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户管道配置</para>
+        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2835,7 +2923,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户管道配置</para>
+        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2853,7 +2941,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户管道配置</para>
+        /// <para>Creates an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3563,7 +3651,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解密KMS密钥DataKey</para>
+        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3605,7 +3693,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解密KMS密钥DataKey</para>
+        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3647,7 +3735,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解密KMS密钥DataKey</para>
+        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3665,7 +3753,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解密KMS密钥DataKey</para>
+        /// <para>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3683,7 +3771,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3725,7 +3813,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3767,7 +3855,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3785,7 +3873,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Deletes a digital human training job that is in the Init or Fail state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3943,7 +4031,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒体处理自定义模板</para>
+        /// <para>Deletes a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3985,7 +4073,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒体处理自定义模板</para>
+        /// <para>Deletes a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4027,7 +4115,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒体处理自定义模板</para>
+        /// <para>Deletes a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4045,7 +4133,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒体处理自定义模板</para>
+        /// <para>Deletes a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4063,7 +4151,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的专属人声任务</para>
+        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4105,7 +4193,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的专属人声任务</para>
+        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4147,7 +4235,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的专属人声任务</para>
+        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4165,7 +4253,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的专属人声任务</para>
+        /// <para>Deletes a human voice cloning job that is not in the Training or Success state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4183,7 +4271,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA库</para>
+        /// <para>Deletes a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4241,7 +4329,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA库</para>
+        /// <para>Deletes a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4299,7 +4387,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA库</para>
+        /// <para>Deletes a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4317,7 +4405,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA库</para>
+        /// <para>Deletes a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4335,7 +4423,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA文件</para>
+        /// <para>Deletes files from a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4397,7 +4485,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA文件</para>
+        /// <para>Deletes files from a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4459,7 +4547,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA文件</para>
+        /// <para>Deletes files from a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4477,7 +4565,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DNA文件</para>
+        /// <para>Deletes files from a media fingerprint library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5907,7 +5995,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管道配置</para>
+        /// <para>Deletes an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5949,7 +6037,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管道配置</para>
+        /// <para>Deletes an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5991,7 +6079,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管道配置</para>
+        /// <para>Deletes an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6009,7 +6097,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管道配置</para>
+        /// <para>Deletes an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6183,7 +6271,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSmartJob</para>
+        /// <para>Deletes intelligent jobs based on job IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6225,7 +6313,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSmartJob</para>
+        /// <para>Deletes intelligent jobs based on job IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6267,7 +6355,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSmartJob</para>
+        /// <para>Deletes intelligent jobs based on job IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6285,7 +6373,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSmartJob</para>
+        /// <para>Deletes intelligent jobs based on job IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6303,8 +6391,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteTemplate</para>
+        /// <para>Deletes templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTemplateRequest
@@ -6341,8 +6438,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteTemplate</para>
+        /// <para>Deletes templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTemplateRequest
@@ -6379,8 +6485,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteTemplate</para>
+        /// <para>Deletes templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTemplateRequest
@@ -6397,8 +6512,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteTemplate</para>
+        /// <para>Deletes templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTemplateRequest
@@ -6533,6 +6657,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await DescribeAIAgentInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) editing. The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsEditUsageRequest
         /// </param>
@@ -6582,6 +6711,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsEditUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) editing. The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsEditUsageRequest
         /// </param>
@@ -6631,6 +6765,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsEditUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) editing. The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsEditUsageRequest
         /// </param>
@@ -6644,6 +6783,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return DescribeMeterImsEditUsageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) editing. The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsEditUsageRequest
         /// </param>
@@ -6657,6 +6801,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await DescribeMeterImsEditUsageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on ultra high definition (UHD) transcoding of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMediaConvertUHDUsageRequest
         /// </param>
@@ -6706,6 +6855,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsMediaConvertUHDUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on ultra high definition (UHD) transcoding of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMediaConvertUHDUsageRequest
         /// </param>
@@ -6755,6 +6909,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsMediaConvertUHDUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on ultra high definition (UHD) transcoding of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMediaConvertUHDUsageRequest
         /// </param>
@@ -6768,6 +6927,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return DescribeMeterImsMediaConvertUHDUsageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on ultra high definition (UHD) transcoding of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMediaConvertUHDUsageRequest
         /// </param>
@@ -6783,7 +6947,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能媒体服务点播转码用量</para>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) transcoding. The maximum query range is 31 days. You can query data within the last 90 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6837,7 +7001,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能媒体服务点播转码用量</para>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) transcoding. The maximum query range is 31 days. You can query data within the last 90 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6891,7 +7055,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能媒体服务点播转码用量</para>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) transcoding. The maximum query range is 31 days. You can query data within the last 90 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6909,7 +7073,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能媒体服务点播转码用量</para>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on video-on-demand (VOD) transcoding. The maximum query range is 31 days. You can query data within the last 90 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6925,6 +7089,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await DescribeMeterImsMediaConvertUsageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on AI processing of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMpsAiUsageRequest
         /// </param>
@@ -6974,6 +7143,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsMpsAiUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on AI processing of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMpsAiUsageRequest
         /// </param>
@@ -7023,6 +7197,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsMpsAiUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on AI processing of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMpsAiUsageRequest
         /// </param>
@@ -7036,6 +7215,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return DescribeMeterImsMpsAiUsageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS) on AI processing of ApsaraVideo Media Processing (MPS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsMpsAiUsageRequest
         /// </param>
@@ -7049,6 +7233,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await DescribeMeterImsMpsAiUsageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsSummaryRequest
         /// </param>
@@ -7094,6 +7283,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsSummaryRequest
         /// </param>
@@ -7139,6 +7333,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribeMeterImsSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsSummaryRequest
         /// </param>
@@ -7152,6 +7351,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return DescribeMeterImsSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage statistics of Intelligent Media Services (IMS). The maximum query range is 31 days. You can query data within the last 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMeterImsSummaryRequest
         /// </param>
@@ -7571,7 +7775,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等</para>
+        /// <para>Checks whether the reading of users has issues, such as noticeable pronunciation errors or background noise. After the audio is checked on the cloud, the qualified audio is temporarily stored on the cloud for subsequent training. Do not skip this step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7621,7 +7825,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等</para>
+        /// <para>Checks whether the reading of users has issues, such as noticeable pronunciation errors or background noise. After the audio is checked on the cloud, the qualified audio is temporarily stored on the cloud for subsequent training. Do not skip this step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7671,7 +7875,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等</para>
+        /// <para>Checks whether the reading of users has issues, such as noticeable pronunciation errors or background noise. After the audio is checked on the cloud, the qualified audio is temporarily stored on the cloud for subsequent training. Do not skip this step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7689,7 +7893,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等</para>
+        /// <para>Checks whether the reading of users has issues, such as noticeable pronunciation errors or background noise. After the audio is checked on the cloud, the qualified audio is temporarily stored on the cloud for subsequent training. Do not skip this step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7990,6 +8194,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["TemplateConfig"] = request.TemplateConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -8049,6 +8257,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateConfigShrink))
             {
                 query["TemplateConfig"] = request.TemplateConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -8111,7 +8323,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成KMS密钥DataKey</para>
+        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8144,7 +8356,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成KMS密钥DataKey</para>
+        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8177,7 +8389,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成KMS密钥DataKey</para>
+        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8191,7 +8403,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成KMS密钥DataKey</para>
+        /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8205,7 +8417,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人</para>
+        /// <para>Queries the information about a trained digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8247,7 +8459,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人</para>
+        /// <para>Queries the information about a trained digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8289,7 +8501,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人</para>
+        /// <para>Queries the information about a trained digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8307,7 +8519,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人</para>
+        /// <para>Queries the information about a trained digital human.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8325,7 +8537,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人训练任务</para>
+        /// <para>Queries the information about a digital human training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8367,7 +8579,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人训练任务</para>
+        /// <para>Queries the information about a digital human training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8409,7 +8621,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人训练任务</para>
+        /// <para>Queries the information about a digital human training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8427,7 +8639,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个数字人训练任务</para>
+        /// <para>Queries the information about a digital human training job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8445,7 +8657,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键成片-批量获取剪辑任务</para>
+        /// <para>Queries the information about a quick video production job, including the input parameters, job state, and the IDs and URLs of the output media assets. You can call this operation to query only quick video production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8487,7 +8699,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键成片-批量获取剪辑任务</para>
+        /// <para>Queries the information about a quick video production job, including the input parameters, job state, and the IDs and URLs of the output media assets. You can call this operation to query only quick video production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8529,7 +8741,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键成片-批量获取剪辑任务</para>
+        /// <para>Queries the information about a quick video production job, including the input parameters, job state, and the IDs and URLs of the output media assets. You can call this operation to query only quick video production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8547,7 +8759,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>一键成片-批量获取剪辑任务</para>
+        /// <para>Queries the information about a quick video production job, including the input parameters, job state, and the IDs and URLs of the output media assets. You can call this operation to query only quick video production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8831,8 +9043,42 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理自定义模板</para>
+        /// <para>Queries the information about a custom template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a template with the ID specified by the TemplateId parameter. You can also query the information about the default template. If TemplateId is specified, other parameters are ignored and the template whose ID is specified is queried. If TemplateId is not specified, the default template is queried based on other parameters. In this case, Type is required.
+        /// Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCustomTemplateRequest
@@ -8881,8 +9127,42 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理自定义模板</para>
+        /// <para>Queries the information about a custom template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a template with the ID specified by the TemplateId parameter. You can also query the information about the default template. If TemplateId is specified, other parameters are ignored and the template whose ID is specified is queried. If TemplateId is not specified, the default template is queried based on other parameters. In this case, Type is required.
+        /// Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCustomTemplateRequest
@@ -8931,8 +9211,42 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理自定义模板</para>
+        /// <para>Queries the information about a custom template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a template with the ID specified by the TemplateId parameter. You can also query the information about the default template. If TemplateId is specified, other parameters are ignored and the template whose ID is specified is queried. If TemplateId is not specified, the default template is queried based on other parameters. In this case, Type is required.
+        /// Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCustomTemplateRequest
@@ -8949,8 +9263,42 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理自定义模板</para>
+        /// <para>Queries the information about a custom template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the information about a template with the ID specified by the TemplateId parameter. You can also query the information about the default template. If TemplateId is specified, other parameters are ignored and the template whose ID is specified is queried. If TemplateId is not specified, the default template is queried based on other parameters. In this case, Type is required.
+        /// Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCustomTemplateRequest
@@ -8967,7 +9315,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声</para>
+        /// <para>Queries the information about a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9009,7 +9357,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声</para>
+        /// <para>Queries the information about a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9051,7 +9399,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声</para>
+        /// <para>Queries the information about a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9069,7 +9417,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声</para>
+        /// <para>Queries the information about a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9087,7 +9435,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个人声克隆训练任务</para>
+        /// <para>Queries the information about a human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9129,7 +9477,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个人声克隆训练任务</para>
+        /// <para>Queries the information about a human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9171,7 +9519,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个人声克隆训练任务</para>
+        /// <para>Queries the information about a human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9189,7 +9537,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个人声克隆训练任务</para>
+        /// <para>Queries the information about a human voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9301,7 +9649,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过本接口来获取需要给用户朗读的文本及示例音频</para>
+        /// <para>Queries the text to be read and sample audio for training a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9343,7 +9691,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过本接口来获取需要给用户朗读的文本及示例音频</para>
+        /// <para>Queries the text to be read and sample audio for training a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9385,7 +9733,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过本接口来获取需要给用户朗读的文本及示例音频</para>
+        /// <para>Queries the text to be read and sample audio for training a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9403,7 +9751,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过本接口来获取需要给用户朗读的文本及示例音频</para>
+        /// <para>Queries the text to be read and sample audio for training a personalized human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9421,7 +9769,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询动图任务详情接口</para>
+        /// <para>Queries the information about an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9463,7 +9811,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询动图任务详情接口</para>
+        /// <para>Queries the information about an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9505,7 +9853,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询动图任务详情接口</para>
+        /// <para>Queries the information about an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9523,7 +9871,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询动图任务详情接口</para>
+        /// <para>Queries the information about an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10027,7 +10375,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑任务</para>
+        /// <para>Queries the information about a live editing job. The requested information includes the state, timeline, and template of the job, the ID and URL of the output file, and the configurations of the job. You can call this operation to query only live editing jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10069,7 +10417,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑任务</para>
+        /// <para>Queries the information about a live editing job. The requested information includes the state, timeline, and template of the job, the ID and URL of the output file, and the configurations of the job. You can call this operation to query only live editing jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10111,7 +10459,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑任务</para>
+        /// <para>Queries the information about a live editing job. The requested information includes the state, timeline, and template of the job, the ID and URL of the output file, and the configurations of the job. You can call this operation to query only live editing jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10129,7 +10477,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播剪辑任务</para>
+        /// <para>Queries the information about a live editing job. The requested information includes the state, timeline, and template of the job, the ID and URL of the output file, and the configurations of the job. You can call this operation to query only live editing jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10997,6 +11345,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await GetMediaInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a media information analysis job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMediaInfoJobRequest
         /// </param>
@@ -11034,6 +11387,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<GetMediaInfoJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a media information analysis job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMediaInfoJobRequest
         /// </param>
@@ -11071,6 +11429,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<GetMediaInfoJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a media information analysis job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMediaInfoJobRequest
         /// </param>
@@ -11084,6 +11447,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return GetMediaInfoJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a media information analysis job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMediaInfoJobRequest
         /// </param>
@@ -11227,7 +11595,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMediaProducingJob</para>
+        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11265,7 +11633,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMediaProducingJob</para>
+        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11303,7 +11671,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMediaProducingJob</para>
+        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11321,7 +11689,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMediaProducingJob</para>
+        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11339,7 +11707,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个打包任务信息</para>
+        /// <para>Queries the information about a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11381,7 +11749,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个打包任务信息</para>
+        /// <para>Queries the information about a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11423,7 +11791,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个打包任务信息</para>
+        /// <para>Queries the information about a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11441,7 +11809,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个打包任务信息</para>
+        /// <para>Queries the information about a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11459,7 +11827,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个管道配置</para>
+        /// <para>Queries the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11501,7 +11869,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个管道配置</para>
+        /// <para>Queries the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11543,7 +11911,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个管道配置</para>
+        /// <para>Queries the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11561,7 +11929,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个管道配置</para>
+        /// <para>Queries the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11847,7 +12215,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSmartHandleJob</para>
+        /// <para>Queries the information about an intelligent job and the execution results of the job based the job ID. You can call this operation to query only intelligent jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11889,7 +12257,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSmartHandleJob</para>
+        /// <para>Queries the information about an intelligent job and the execution results of the job based the job ID. You can call this operation to query only intelligent jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11931,7 +12299,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSmartHandleJob</para>
+        /// <para>Queries the information about an intelligent job and the execution results of the job based the job ID. You can call this operation to query only intelligent jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11949,7 +12317,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSmartHandleJob</para>
+        /// <para>Queries the information about an intelligent job and the execution results of the job based the job ID. You can call this operation to query only intelligent jobs created within the past year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11967,7 +12335,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个截图任务</para>
+        /// <para>Queries the information about a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12009,7 +12377,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个截图任务</para>
+        /// <para>Queries the information about a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12051,7 +12419,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个截图任务</para>
+        /// <para>Queries the information about a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12069,7 +12437,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个截图任务</para>
+        /// <para>Queries the information about a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12087,7 +12455,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取截图文件URL</para>
+        /// <para>Queries the accessible URLs of the output images of a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12145,7 +12513,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取截图文件URL</para>
+        /// <para>Queries the accessible URLs of the output images of a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12203,7 +12571,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取截图文件URL</para>
+        /// <para>Queries the accessible URLs of the output images of a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12221,7 +12589,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取截图文件URL</para>
+        /// <para>Queries the accessible URLs of the output images of a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12375,7 +12743,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理系统模板</para>
+        /// <para>Queries the information about a system template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12417,7 +12785,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理系统模板</para>
+        /// <para>Queries the information about a system template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12459,7 +12827,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理系统模板</para>
+        /// <para>Queries the information about a system template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12477,7 +12845,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个媒体处理系统模板</para>
+        /// <para>Queries the information about a system template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12495,8 +12863,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemplate</para>
+        /// <para>Queries the information about a template based on the template ID. You can call this operation to query the information about an advanced template if the template is in the Available state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTemplateRequest
@@ -12541,8 +12918,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemplate</para>
+        /// <para>Queries the information about a template based on the template ID. You can call this operation to query the information about an advanced template if the template is in the Available state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTemplateRequest
@@ -12587,8 +12973,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemplate</para>
+        /// <para>Queries the information about a template based on the template ID. You can call this operation to query the information about an advanced template if the template is in the Available state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTemplateRequest
@@ -12605,8 +13000,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemplate</para>
+        /// <para>Queries the information about a template based on the template ID. You can call this operation to query the information about an advanced template if the template is in the Available state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTemplateRequest
@@ -12623,7 +13027,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板关联素材信息</para>
+        /// <para>Queries the URLs of materials associated with an advanced template for use by the advanced template editor. The URLs expire in 30 minutes. FileList is an array of materials that you want to query. If you do not specify this parameter, the URLs of all materials are returned. A maximum of 400 URLs can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12669,7 +13073,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板关联素材信息</para>
+        /// <para>Queries the URLs of materials associated with an advanced template for use by the advanced template editor. The URLs expire in 30 minutes. FileList is an array of materials that you want to query. If you do not specify this parameter, the URLs of all materials are returned. A maximum of 400 URLs can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12715,7 +13119,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板关联素材信息</para>
+        /// <para>Queries the URLs of materials associated with an advanced template for use by the advanced template editor. The URLs expire in 30 minutes. FileList is an array of materials that you want to query. If you do not specify this parameter, the URLs of all materials are returned. A maximum of 400 URLs can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12733,7 +13137,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板关联素材信息</para>
+        /// <para>Queries the URLs of materials associated with an advanced template for use by the advanced template editor. The URLs expire in 30 minutes. FileList is an array of materials that you want to query. If you do not specify this parameter, the URLs of all materials are returned. A maximum of 400 URLs can be returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12751,7 +13155,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板参数信息</para>
+        /// <para>Queries the parameters for replaceable materials in a template, including the parameter names, default values, and material thumbnails. Only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12789,7 +13193,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板参数信息</para>
+        /// <para>Queries the parameters for replaceable materials in a template, including the parameter names, default values, and material thumbnails. Only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12827,7 +13231,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板参数信息</para>
+        /// <para>Queries the parameters for replaceable materials in a template, including the parameter names, default values, and material thumbnails. Only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12845,7 +13249,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板参数信息</para>
+        /// <para>Queries the parameters for replaceable materials in a template, including the parameter names, default values, and material thumbnails. Only advanced templates are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12861,6 +13265,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await GetTemplateParamsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeJobRequest
         /// </param>
@@ -12898,6 +13307,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<GetTranscodeJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeJobRequest
         /// </param>
@@ -12935,6 +13349,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<GetTranscodeJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeJobRequest
         /// </param>
@@ -12948,6 +13367,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return GetTranscodeJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeJobRequest
         /// </param>
@@ -13303,7 +13727,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流任务</para>
+        /// <para>Queries the information about a workflow task by task ID, including the workflow ID and the status and result of the task. You can query only the workflow task data of the last year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13345,7 +13769,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流任务</para>
+        /// <para>Queries the information about a workflow task by task ID, including the workflow ID and the status and result of the task. You can query only the workflow task data of the last year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13387,7 +13811,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流任务</para>
+        /// <para>Queries the information about a workflow task by task ID, including the workflow ID and the status and result of the task. You can query only the workflow task data of the last year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13405,7 +13829,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流任务</para>
+        /// <para>Queries the information about a workflow task by task ID, including the workflow ID and the status and result of the task. You can query only the workflow task data of the last year.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13855,7 +14279,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人训练任务列表，列出当前用户的所有数字人训练任务</para>
+        /// <para>Queries a list of digital human training jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13905,7 +14329,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人训练任务列表，列出当前用户的所有数字人训练任务</para>
+        /// <para>Queries a list of digital human training jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13955,7 +14379,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人训练任务列表，列出当前用户的所有数字人训练任务</para>
+        /// <para>Queries a list of digital human training jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13973,7 +14397,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人训练任务列表，列出当前用户的所有数字人训练任务</para>
+        /// <para>Queries a list of digital human training jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13991,7 +14415,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人列表，列出当前用户的所有数字人</para>
+        /// <para>Queries a list of trained digital humans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14041,7 +14465,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人列表，列出当前用户的所有数字人</para>
+        /// <para>Queries a list of trained digital humans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14091,7 +14515,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人列表，列出当前用户的所有数字人</para>
+        /// <para>Queries a list of trained digital humans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14109,7 +14533,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字人列表，列出当前用户的所有数字人</para>
+        /// <para>Queries a list of trained digital humans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14127,7 +14551,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键成片任务列表</para>
+        /// <para>Queries a list of quick video production jobs based on conditions such as the job type and state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14197,7 +14621,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键成片任务列表</para>
+        /// <para>Queries a list of quick video production jobs based on conditions such as the job type and state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14267,7 +14691,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键成片任务列表</para>
+        /// <para>Queries a list of quick video production jobs based on conditions such as the job type and state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14285,7 +14709,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一键成片任务列表</para>
+        /// <para>Queries a list of quick video production jobs based on conditions such as the job type and state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14303,7 +14727,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理自定义模板列表</para>
+        /// <para>Queries a list of custom templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14369,7 +14793,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理自定义模板列表</para>
+        /// <para>Queries a list of custom templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14435,7 +14859,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理自定义模板列表</para>
+        /// <para>Queries a list of custom templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14453,7 +14877,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理自定义模板列表</para>
+        /// <para>Queries a list of custom templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14471,7 +14895,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务</para>
+        /// <para>Queries a list of human voice cloning jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14521,7 +14945,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务</para>
+        /// <para>Queries a list of human voice cloning jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14571,7 +14995,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务</para>
+        /// <para>Queries a list of human voice cloning jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14589,7 +15013,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务</para>
+        /// <para>Queries a list of human voice cloning jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14607,7 +15031,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声列表</para>
+        /// <para>Queries a list of personalized human voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14657,7 +15081,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声列表</para>
+        /// <para>Queries a list of personalized human voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14707,7 +15131,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声列表</para>
+        /// <para>Queries a list of personalized human voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14725,7 +15149,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的专属人声列表</para>
+        /// <para>Queries a list of personalized human voices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14743,7 +15167,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA库</para>
+        /// <para>Queries a list of media fingerprint libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14801,7 +15225,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA库</para>
+        /// <para>Queries a list of media fingerprint libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14859,7 +15283,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA库</para>
+        /// <para>Queries a list of media fingerprint libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14877,7 +15301,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA库</para>
+        /// <para>Queries a list of media fingerprint libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14895,8 +15319,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA文件</para>
+        /// <para>Queries a list of files in a media fingerprint library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query files in a media fingerprint library based on the library ID. The queried results can be paginated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDNAFilesRequest
@@ -14961,8 +15390,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA文件</para>
+        /// <para>Queries a list of files in a media fingerprint library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query files in a media fingerprint library based on the library ID. The queried results can be paginated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDNAFilesRequest
@@ -15027,8 +15461,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA文件</para>
+        /// <para>Queries a list of files in a media fingerprint library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query files in a media fingerprint library based on the library ID. The queried results can be paginated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDNAFilesRequest
@@ -15045,8 +15484,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA文件</para>
+        /// <para>Queries a list of files in a media fingerprint library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query files in a media fingerprint library based on the library ID. The queried results can be paginated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDNAFilesRequest
@@ -15063,7 +15507,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of image animation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15129,7 +15573,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of image animation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15195,7 +15639,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of image animation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15213,7 +15657,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of image animation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16649,6 +17093,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await ListMediaBasicInfosWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of media information analysis jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMediaInfoJobsRequest
         /// </param>
@@ -16710,6 +17159,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<ListMediaInfoJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of media information analysis jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMediaInfoJobsRequest
         /// </param>
@@ -16771,6 +17225,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<ListMediaInfoJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of media information analysis jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMediaInfoJobsRequest
         /// </param>
@@ -16784,6 +17243,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return ListMediaInfoJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of media information analysis jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMediaInfoJobsRequest
         /// </param>
@@ -16927,7 +17391,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出合成任务列表</para>
+        /// <para>Queries a list of media editing and production jobs that meet the specified conditions. You can query the jobs based on the job state and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17005,7 +17469,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出合成任务列表</para>
+        /// <para>Queries a list of media editing and production jobs that meet the specified conditions. You can query the jobs based on the job state and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17083,7 +17547,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出合成任务列表</para>
+        /// <para>Queries a list of media editing and production jobs that meet the specified conditions. You can query the jobs based on the job state and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17101,7 +17565,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出合成任务列表</para>
+        /// <para>Queries a list of media editing and production jobs that meet the specified conditions. You can query the jobs based on the job state and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17119,7 +17583,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取打包任务列表</para>
+        /// <para>Queries a list of packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17185,7 +17649,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取打包任务列表</para>
+        /// <para>Queries a list of packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17251,7 +17715,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取打包任务列表</para>
+        /// <para>Queries a list of packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17269,7 +17733,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取打包任务列表</para>
+        /// <para>Queries a list of packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17287,7 +17751,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取管道配置列表</para>
+        /// <para>Queries a list of ApsaraVideo Media Processing (MPS) queues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17329,7 +17793,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取管道配置列表</para>
+        /// <para>Queries a list of ApsaraVideo Media Processing (MPS) queues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17371,7 +17835,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取管道配置列表</para>
+        /// <para>Queries a list of ApsaraVideo Media Processing (MPS) queues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17389,7 +17853,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取管道配置列表</para>
+        /// <para>Queries a list of ApsaraVideo Media Processing (MPS) queues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17703,7 +18167,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSmartJobs</para>
+        /// <para>Queries a list of intelligent jobs based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17741,7 +18205,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSmartJobs</para>
+        /// <para>Queries a list of intelligent jobs based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17779,7 +18243,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSmartJobs</para>
+        /// <para>Queries a list of intelligent jobs based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17797,7 +18261,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSmartJobs</para>
+        /// <para>Queries a list of intelligent jobs based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17815,7 +18279,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出虚拟人官方模特配置</para>
+        /// <para>Queries a list of system digital humans. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17865,7 +18329,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出虚拟人官方模特配置</para>
+        /// <para>Queries a list of system digital humans. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17915,7 +18379,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出虚拟人官方模特配置</para>
+        /// <para>Queries a list of system digital humans. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17933,7 +18397,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出虚拟人官方模特配置</para>
+        /// <para>Queries a list of system digital humans. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17951,7 +18415,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能语音发音人信息</para>
+        /// <para>Queries a list of speaker groups, including the name, gender, and sample audio of each speaker. The list is grouped by scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17984,7 +18448,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能语音发音人信息</para>
+        /// <para>Queries a list of speaker groups, including the name, gender, and sample audio of each speaker. The list is grouped by scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18017,7 +18481,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能语音发音人信息</para>
+        /// <para>Queries a list of speaker groups, including the name, gender, and sample audio of each speaker. The list is grouped by scenario.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -18031,7 +18495,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能语音发音人信息</para>
+        /// <para>Queries a list of speaker groups, including the name, gender, and sample audio of each speaker. The list is grouped by scenario.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -18045,7 +18509,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18111,7 +18575,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18177,7 +18641,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18195,7 +18659,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询截图任务列表接口</para>
+        /// <para>Queries a list of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18213,8 +18677,41 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理系统模板列表</para>
+        /// <para>Queries a list of system templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSystemTemplatesRequest
@@ -18279,8 +18776,41 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理系统模板列表</para>
+        /// <para>Queries a list of system templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSystemTemplatesRequest
@@ -18345,8 +18875,41 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理系统模板列表</para>
+        /// <para>Queries a list of system templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSystemTemplatesRequest
@@ -18363,8 +18926,41 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取媒体处理系统模板列表</para>
+        /// <para>Queries a list of system templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Template types:</para>
+        /// <ol>
+        /// <item><description>1: transcoding template.</description></item>
+        /// <item><description>2: snapshot template.</description></item>
+        /// <item><description>3: animated image template.</description></item>
+        /// <item><description>4\. image watermark template.</description></item>
+        /// <item><description>5: text watermark template.</description></item>
+        /// <item><description>6: subtitle template.</description></item>
+        /// <item><description>7: AI-assisted content moderation template.</description></item>
+        /// <item><description>8: AI-assisted intelligent thumbnail template.</description></item>
+        /// <item><description>9: AI-assisted intelligent erasure template.
+        /// Subtypes of transcoding templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (AudioTranscode): audio transcoding template.</description></item>
+        /// <item><description>3 (Remux): container format conversion template.</description></item>
+        /// <item><description>4 (NarrowBandV1): Narrowband HD 1.0 template.</description></item>
+        /// <item><description>5 (NarrowBandV2): Narrowband HD 2.0 template.
+        /// Subtypes of snapshot templates:</description></item>
+        /// <item><description>1 (Normal): regular template.</description></item>
+        /// <item><description>2 (Sprite): sprite template.</description></item>
+        /// <item><description>3 (WebVtt): WebVTT template.
+        /// Subtypes of AI-assisted content moderation templates:</description></item>
+        /// <item><description>1 (Video): video moderation template.</description></item>
+        /// <item><description>2 (Audio): audio moderation template.</description></item>
+        /// <item><description>3 (Image): image moderation template.
+        /// Subtypes of AI-assisted intelligent erasure templates:</description></item>
+        /// <item><description>1 (VideoDelogo): logo erasure template.</description></item>
+        /// <item><description>2 (VideoDetext): subtitle erasure template.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSystemTemplatesRequest
@@ -18381,8 +18977,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTemplates</para>
+        /// <para>Queries a list of templates that meet the specified conditions. You can query templates based on information such as the template status and creation source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTemplatesRequest
@@ -18447,8 +19052,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTemplates</para>
+        /// <para>Queries a list of templates that meet the specified conditions. You can query templates based on information such as the template status and creation source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTemplatesRequest
@@ -18513,8 +19127,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTemplates</para>
+        /// <para>Queries a list of templates that meet the specified conditions. You can query templates based on information such as the template status and creation source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTemplatesRequest
@@ -18531,8 +19154,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTemplates</para>
+        /// <para>Queries a list of templates that meet the specified conditions. You can query templates based on information such as the template status and creation source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTemplatesRequest
@@ -18547,6 +19179,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await ListTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of transcoding jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTranscodeJobsRequest
         /// </param>
@@ -18608,6 +19245,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<ListTranscodeJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of transcoding jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTranscodeJobsRequest
         /// </param>
@@ -18669,6 +19311,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<ListTranscodeJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of transcoding jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTranscodeJobsRequest
         /// </param>
@@ -18682,6 +19329,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return ListTranscodeJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of transcoding jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTranscodeJobsRequest
         /// </param>
@@ -18697,7 +19349,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA作业</para>
+        /// <para>Queries a list of media fingerprint analysis jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18755,7 +19407,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA作业</para>
+        /// <para>Queries a list of media fingerprint analysis jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18813,7 +19465,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA作业</para>
+        /// <para>Queries a list of media fingerprint analysis jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18831,7 +19483,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DNA作业</para>
+        /// <para>Queries a list of media fingerprint analysis jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18849,7 +19501,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能生产作业</para>
+        /// <para>Queries the status and result of an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18895,7 +19547,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能生产作业</para>
+        /// <para>Queries the status and result of an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18941,7 +19593,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能生产作业</para>
+        /// <para>Queries the status and result of an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18959,7 +19611,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能生产作业</para>
+        /// <para>Queries the status and result of an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18975,6 +19627,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await QueryIProductionJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In the content moderation results, the moderation results of the video are sorted in ascending order by time into a timeline. If the video is long, the content moderation results are paginated, and the first page is returned. You can call this operation again to query the remaining moderation results of the video.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobDetailRequest
         /// </param>
@@ -19036,6 +19698,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<QueryMediaCensorJobDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In the content moderation results, the moderation results of the video are sorted in ascending order by time into a timeline. If the video is long, the content moderation results are paginated, and the first page is returned. You can call this operation again to query the remaining moderation results of the video.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobDetailRequest
         /// </param>
@@ -19097,6 +19769,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<QueryMediaCensorJobDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In the content moderation results, the moderation results of the video are sorted in ascending order by time into a timeline. If the video is long, the content moderation results are paginated, and the first page is returned. You can call this operation again to query the remaining moderation results of the video.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobDetailRequest
         /// </param>
@@ -19110,6 +19792,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return QueryMediaCensorJobDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In the content moderation results, the moderation results of the video are sorted in ascending order by time into a timeline. If the video is long, the content moderation results are paginated, and the first page is returned. You can call this operation again to query the remaining moderation results of the video.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobDetailRequest
         /// </param>
@@ -19123,6 +19815,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await QueryMediaCensorJobDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of content moderation jobs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the content moderation jobs within the most recent three months.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobListRequest
         /// </param>
@@ -19200,6 +19902,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<QueryMediaCensorJobListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of content moderation jobs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the content moderation jobs within the most recent three months.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobListRequest
         /// </param>
@@ -19277,6 +19989,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<QueryMediaCensorJobListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of content moderation jobs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the content moderation jobs within the most recent three months.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobListRequest
         /// </param>
@@ -19290,6 +20012,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return QueryMediaCensorJobListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of content moderation jobs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the content moderation jobs within the most recent three months.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryMediaCensorJobListRequest
         /// </param>
@@ -19679,6 +20411,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await QuerySearchLibWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySmarttagJobRequest
         /// </param>
@@ -19720,6 +20457,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<QuerySmarttagJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySmarttagJobRequest
         /// </param>
@@ -19761,6 +20503,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<QuerySmarttagJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySmarttagJobRequest
         /// </param>
@@ -19774,6 +20521,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return QuerySmarttagJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySmarttagJobRequest
         /// </param>
@@ -22461,7 +23213,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认媒体处理模板</para>
+        /// <para>Sets a custom template as the default template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22503,7 +23255,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认媒体处理模板</para>
+        /// <para>Sets a custom template as the default template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22545,7 +23297,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认媒体处理模板</para>
+        /// <para>Sets a custom template as the default template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22563,7 +23315,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置默认媒体处理模板</para>
+        /// <para>Sets a custom template as the default template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23365,8 +24117,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流</para>
+        /// <para>Submits a workflow task. You can submit a workflow task to implement automated media processing based on a workflow template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only media assets from Intelligent Media Services (IMS) or ApsaraVideo VOD can be used as the input of a workflow.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a workflow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> or use a preset workflow template.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartWorkflowRequest
@@ -23415,8 +24175,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流</para>
+        /// <para>Submits a workflow task. You can submit a workflow task to implement automated media processing based on a workflow template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only media assets from Intelligent Media Services (IMS) or ApsaraVideo VOD can be used as the input of a workflow.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a workflow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> or use a preset workflow template.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartWorkflowRequest
@@ -23465,8 +24233,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流</para>
+        /// <para>Submits a workflow task. You can submit a workflow task to implement automated media processing based on a workflow template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only media assets from Intelligent Media Services (IMS) or ApsaraVideo VOD can be used as the input of a workflow.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a workflow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> or use a preset workflow template.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartWorkflowRequest
@@ -23483,8 +24259,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流</para>
+        /// <para>Submits a workflow task. You can submit a workflow task to implement automated media processing based on a workflow template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only media assets from Intelligent Media Services (IMS) or ApsaraVideo VOD can be used as the input of a workflow.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a workflow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> or use a preset workflow template.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartWorkflowRequest
@@ -23741,7 +24525,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitASRJob</para>
+        /// <para>Submits an automatic speech recognition (ASR) job to extract the start and end time and the corresponding text information of a speech in a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23803,7 +24587,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitASRJob</para>
+        /// <para>Submits an automatic speech recognition (ASR) job to extract the start and end time and the corresponding text information of a speech in a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23865,7 +24649,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitASRJob</para>
+        /// <para>Submits an automatic speech recognition (ASR) job to extract the start and end time and the corresponding text information of a speech in a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23883,7 +24667,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitASRJob</para>
+        /// <para>Submits an automatic speech recognition (ASR) job to extract the start and end time and the corresponding text information of a speech in a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23901,7 +24685,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitAudioProduceJob</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23967,7 +24751,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitAudioProduceJob</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24033,7 +24817,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitAudioProduceJob</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24051,7 +24835,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitAudioProduceJob</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24069,7 +24853,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交数字人训练任务</para>
+        /// <para>Submits a digital human training job. You can call this operation to submit a job the first time or submit a job again with updated parameters if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24111,7 +24895,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交数字人训练任务</para>
+        /// <para>Submits a digital human training job. You can call this operation to submit a job the first time or submit a job again with updated parameters if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24153,7 +24937,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交数字人训练任务</para>
+        /// <para>Submits a digital human training job. You can call this operation to submit a job the first time or submit a job again with updated parameters if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24171,7 +24955,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交数字人训练任务</para>
+        /// <para>Submits a digital human training job. You can call this operation to submit a job the first time or submit a job again with updated parameters if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24349,7 +25133,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitBatchMediaProducingJob</para>
+        /// <para>Submits a quick video production job that intelligently edits multiple video, audio, and image assets to generate multiple videos at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24409,7 +25193,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitBatchMediaProducingJob</para>
+        /// <para>Submits a quick video production job that intelligently edits multiple video, audio, and image assets to generate multiple videos at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24469,7 +25253,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitBatchMediaProducingJob</para>
+        /// <para>Submits a quick video production job that intelligently edits multiple video, audio, and image assets to generate multiple videos at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24487,7 +25271,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitBatchMediaProducingJob</para>
+        /// <para>Submits a quick video production job that intelligently edits multiple video, audio, and image assets to generate multiple videos at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24505,7 +25289,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人声克隆训练任务</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24551,7 +25335,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人声克隆训练任务</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24597,7 +25381,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人声克隆训练任务</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24615,7 +25399,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交人声克隆训练任务</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24633,8 +25417,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交DNA作业</para>
+        /// <para>Submits a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  SubmitDNAJob is an asynchronous operation. After a request is sent, the system returns a request ID and a job ID and runs the task in the background.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</description></item>
+        /// <item><description>You can submit a text fingerprint analysis job only in the China (Shanghai) region.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitDNAJobRequest
@@ -24721,8 +25514,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交DNA作业</para>
+        /// <para>Submits a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  SubmitDNAJob is an asynchronous operation. After a request is sent, the system returns a request ID and a job ID and runs the task in the background.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</description></item>
+        /// <item><description>You can submit a text fingerprint analysis job only in the China (Shanghai) region.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitDNAJobRequest
@@ -24809,8 +25611,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交DNA作业</para>
+        /// <para>Submits a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  SubmitDNAJob is an asynchronous operation. After a request is sent, the system returns a request ID and a job ID and runs the task in the background.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</description></item>
+        /// <item><description>You can submit a text fingerprint analysis job only in the China (Shanghai) region.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitDNAJobRequest
@@ -24827,8 +25638,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交DNA作业</para>
+        /// <para>Submits a media fingerprint analysis job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  SubmitDNAJob is an asynchronous operation. After a request is sent, the system returns a request ID and a job ID and runs the task in the background.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</description></item>
+        /// <item><description>You can submit a text fingerprint analysis job only in the China (Shanghai) region.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitDNAJobRequest
@@ -25061,7 +25881,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步动图任务接口</para>
+        /// <para>Submits an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25141,7 +25961,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步动图任务接口</para>
+        /// <para>Submits an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25221,7 +26041,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步动图任务接口</para>
+        /// <para>Submits an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25239,7 +26059,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步动图任务接口</para>
+        /// <para>Submits an image animation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25257,7 +26077,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能生产作业</para>
+        /// <para>Submits an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25345,7 +26165,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能生产作业</para>
+        /// <para>Submits an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25433,7 +26253,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能生产作业</para>
+        /// <para>Submits an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25451,7 +26271,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交智能生产作业</para>
+        /// <para>Submits an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25469,8 +26289,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交直播剪辑任务</para>
+        /// <para>Submits a live editing job to merge one or more live stream clips into one video. After a live editing job is submitted, the job is queued in the background for asynchronous processing. You can call the GeLiveEditingJob operation to query the state of the job based on the job ID. You can also call the GetMediaInfo operation to query the information about the generated media asset based on the media asset ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Live editing is supported for live streams that are recorded and stored in Object Storage Service (OSS) and ApsaraVideo VOD. If multiple live streams are involved in a single job, only those recorded within the same application are supported for mixed editing. The streams must all be recorded either in OSS or ApsaraVideo VOD.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveEditingJobRequest
@@ -25535,8 +26360,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交直播剪辑任务</para>
+        /// <para>Submits a live editing job to merge one or more live stream clips into one video. After a live editing job is submitted, the job is queued in the background for asynchronous processing. You can call the GeLiveEditingJob operation to query the state of the job based on the job ID. You can also call the GetMediaInfo operation to query the information about the generated media asset based on the media asset ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Live editing is supported for live streams that are recorded and stored in Object Storage Service (OSS) and ApsaraVideo VOD. If multiple live streams are involved in a single job, only those recorded within the same application are supported for mixed editing. The streams must all be recorded either in OSS or ApsaraVideo VOD.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveEditingJobRequest
@@ -25601,8 +26431,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交直播剪辑任务</para>
+        /// <para>Submits a live editing job to merge one or more live stream clips into one video. After a live editing job is submitted, the job is queued in the background for asynchronous processing. You can call the GeLiveEditingJob operation to query the state of the job based on the job ID. You can also call the GetMediaInfo operation to query the information about the generated media asset based on the media asset ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Live editing is supported for live streams that are recorded and stored in Object Storage Service (OSS) and ApsaraVideo VOD. If multiple live streams are involved in a single job, only those recorded within the same application are supported for mixed editing. The streams must all be recorded either in OSS or ApsaraVideo VOD.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveEditingJobRequest
@@ -25619,8 +26454,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交直播剪辑任务</para>
+        /// <para>Submits a live editing job to merge one or more live stream clips into one video. After a live editing job is submitted, the job is queued in the background for asynchronous processing. You can call the GeLiveEditingJob operation to query the state of the job based on the job ID. You can also call the GetMediaInfo operation to query the information about the generated media asset based on the media asset ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Live editing is supported for live streams that are recorded and stored in Object Storage Service (OSS) and ApsaraVideo VOD. If multiple live streams are involved in a single job, only those recorded within the same application are supported for mixed editing. The streams must all be recorded either in OSS or ApsaraVideo VOD.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveEditingJobRequest
@@ -26295,6 +27135,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await SubmitMediaAiAnalysisJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The job that you submit by calling this operation is run in asynchronous mode. The job is added to an ApsaraVideo Media Processing (MPS) queue to be scheduled and run. You can call the <a href="https://help.aliyun.com/document_detail/444847.html">QueryMediaCensorJobDetail</a> operation or configure an asynchronous notification to obtain the job results.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitMediaCensorJobRequest
         /// </param>
@@ -26378,6 +27228,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitMediaCensorJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The job that you submit by calling this operation is run in asynchronous mode. The job is added to an ApsaraVideo Media Processing (MPS) queue to be scheduled and run. You can call the <a href="https://help.aliyun.com/document_detail/444847.html">QueryMediaCensorJobDetail</a> operation or configure an asynchronous notification to obtain the job results.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitMediaCensorJobRequest
         /// </param>
@@ -26461,6 +27321,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitMediaCensorJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The job that you submit by calling this operation is run in asynchronous mode. The job is added to an ApsaraVideo Media Processing (MPS) queue to be scheduled and run. You can call the <a href="https://help.aliyun.com/document_detail/444847.html">QueryMediaCensorJobDetail</a> operation or configure an asynchronous notification to obtain the job results.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitMediaCensorJobRequest
         /// </param>
@@ -26474,6 +27344,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return SubmitMediaCensorJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a content moderation job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The job that you submit by calling this operation is run in asynchronous mode. The job is added to an ApsaraVideo Media Processing (MPS) queue to be scheduled and run. You can call the <a href="https://help.aliyun.com/document_detail/444847.html">QueryMediaCensorJobDetail</a> operation or configure an asynchronous notification to obtain the job results.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitMediaCensorJobRequest
         /// </param>
@@ -26487,6 +27367,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await SubmitMediaCensorJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media information analysis job in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file by using a callback mechanism or initiating subsequent queries. This operation is suitable for scenarios in which real-time performance is less critical and high concurrency is expected.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitMediaInfoJobRequest
         /// </param>
@@ -26546,6 +27436,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitMediaInfoJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media information analysis job in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file by using a callback mechanism or initiating subsequent queries. This operation is suitable for scenarios in which real-time performance is less critical and high concurrency is expected.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitMediaInfoJobRequest
         /// </param>
@@ -26605,6 +27505,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitMediaInfoJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media information analysis job in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file by using a callback mechanism or initiating subsequent queries. This operation is suitable for scenarios in which real-time performance is less critical and high concurrency is expected.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitMediaInfoJobRequest
         /// </param>
@@ -26618,6 +27528,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return SubmitMediaInfoJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media information analysis job in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file by using a callback mechanism or initiating subsequent queries. This operation is suitable for scenarios in which real-time performance is less critical and high concurrency is expected.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitMediaInfoJobRequest
         /// </param>
@@ -26633,8 +27553,32 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitMediaProducingJob</para>
+        /// <para>Submits a media editing and production job. If you need to perform any form of post-production such as editing and production on video or audio materials, you can call this operation to automate the process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation returns only the submission result of a media editing and production job. When the submission result is returned, the job may still be in progress. After a media editing and production job is submitted, the job is queued in the background for asynchronous processing.</para>
+        /// <list type="bullet">
+        /// <item><description>The materials referenced in the timeline of an online editing project can be media assets in the media asset library or Object Storage Service (OSS) objects. External URLs or Alibaba Cloud Content Delivery Network (CDN) URLs are not supported. To use an OSS object as a material, you must set MediaUrl to an OSS URL, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.</description></item>
+        /// <item><description>After the production is complete, the output file is automatically registered as a media asset. The media asset first needs to be analyzed. After the media asset is analyzed, you can query the duration and resolution information based on the media asset ID.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Limits</h2>
+        /// <list type="bullet">
+        /// <item><description>The throttling threshold of this operation is 30 queries per second (QPS).
+        /// **
+        /// <b>Note</b> If the threshold is exceeded, a &quot;Throttling.User&quot; error is returned when you submit an editing job. For more information about how to resolve this issue, see the <a href="https://help.aliyun.com/document_detail/453484.html">FAQ</a>.</description></item>
+        /// <item><description>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</description></item>
+        /// <item><description>The total size of material files cannot exceed 1 TB.</description></item>
+        /// <item><description>The OSS buckets in which the materials reside and where the output media assets are stored must be in the same region as the region in which Intelligent Media Services (IMS) is activated.</description></item>
+        /// <item><description>An output video must meet the following requirements:<list type="bullet">
+        /// <item><description>Both the width and height must be at least 128 pixels.</description></item>
+        /// <item><description>Both the width and height cannot exceed 4,096 pixels.</description></item>
+        /// <item><description>The shorter side of the video cannot exceed 2,160 pixels.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitMediaProducingJobRequest
@@ -26721,8 +27665,32 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitMediaProducingJob</para>
+        /// <para>Submits a media editing and production job. If you need to perform any form of post-production such as editing and production on video or audio materials, you can call this operation to automate the process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation returns only the submission result of a media editing and production job. When the submission result is returned, the job may still be in progress. After a media editing and production job is submitted, the job is queued in the background for asynchronous processing.</para>
+        /// <list type="bullet">
+        /// <item><description>The materials referenced in the timeline of an online editing project can be media assets in the media asset library or Object Storage Service (OSS) objects. External URLs or Alibaba Cloud Content Delivery Network (CDN) URLs are not supported. To use an OSS object as a material, you must set MediaUrl to an OSS URL, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.</description></item>
+        /// <item><description>After the production is complete, the output file is automatically registered as a media asset. The media asset first needs to be analyzed. After the media asset is analyzed, you can query the duration and resolution information based on the media asset ID.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Limits</h2>
+        /// <list type="bullet">
+        /// <item><description>The throttling threshold of this operation is 30 queries per second (QPS).
+        /// **
+        /// <b>Note</b> If the threshold is exceeded, a &quot;Throttling.User&quot; error is returned when you submit an editing job. For more information about how to resolve this issue, see the <a href="https://help.aliyun.com/document_detail/453484.html">FAQ</a>.</description></item>
+        /// <item><description>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</description></item>
+        /// <item><description>The total size of material files cannot exceed 1 TB.</description></item>
+        /// <item><description>The OSS buckets in which the materials reside and where the output media assets are stored must be in the same region as the region in which Intelligent Media Services (IMS) is activated.</description></item>
+        /// <item><description>An output video must meet the following requirements:<list type="bullet">
+        /// <item><description>Both the width and height must be at least 128 pixels.</description></item>
+        /// <item><description>Both the width and height cannot exceed 4,096 pixels.</description></item>
+        /// <item><description>The shorter side of the video cannot exceed 2,160 pixels.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitMediaProducingJobRequest
@@ -26809,8 +27777,32 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitMediaProducingJob</para>
+        /// <para>Submits a media editing and production job. If you need to perform any form of post-production such as editing and production on video or audio materials, you can call this operation to automate the process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation returns only the submission result of a media editing and production job. When the submission result is returned, the job may still be in progress. After a media editing and production job is submitted, the job is queued in the background for asynchronous processing.</para>
+        /// <list type="bullet">
+        /// <item><description>The materials referenced in the timeline of an online editing project can be media assets in the media asset library or Object Storage Service (OSS) objects. External URLs or Alibaba Cloud Content Delivery Network (CDN) URLs are not supported. To use an OSS object as a material, you must set MediaUrl to an OSS URL, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.</description></item>
+        /// <item><description>After the production is complete, the output file is automatically registered as a media asset. The media asset first needs to be analyzed. After the media asset is analyzed, you can query the duration and resolution information based on the media asset ID.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Limits</h2>
+        /// <list type="bullet">
+        /// <item><description>The throttling threshold of this operation is 30 queries per second (QPS).
+        /// **
+        /// <b>Note</b> If the threshold is exceeded, a &quot;Throttling.User&quot; error is returned when you submit an editing job. For more information about how to resolve this issue, see the <a href="https://help.aliyun.com/document_detail/453484.html">FAQ</a>.</description></item>
+        /// <item><description>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</description></item>
+        /// <item><description>The total size of material files cannot exceed 1 TB.</description></item>
+        /// <item><description>The OSS buckets in which the materials reside and where the output media assets are stored must be in the same region as the region in which Intelligent Media Services (IMS) is activated.</description></item>
+        /// <item><description>An output video must meet the following requirements:<list type="bullet">
+        /// <item><description>Both the width and height must be at least 128 pixels.</description></item>
+        /// <item><description>Both the width and height cannot exceed 4,096 pixels.</description></item>
+        /// <item><description>The shorter side of the video cannot exceed 2,160 pixels.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitMediaProducingJobRequest
@@ -26827,8 +27819,32 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SubmitMediaProducingJob</para>
+        /// <para>Submits a media editing and production job. If you need to perform any form of post-production such as editing and production on video or audio materials, you can call this operation to automate the process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation returns only the submission result of a media editing and production job. When the submission result is returned, the job may still be in progress. After a media editing and production job is submitted, the job is queued in the background for asynchronous processing.</para>
+        /// <list type="bullet">
+        /// <item><description>The materials referenced in the timeline of an online editing project can be media assets in the media asset library or Object Storage Service (OSS) objects. External URLs or Alibaba Cloud Content Delivery Network (CDN) URLs are not supported. To use an OSS object as a material, you must set MediaUrl to an OSS URL, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.</description></item>
+        /// <item><description>After the production is complete, the output file is automatically registered as a media asset. The media asset first needs to be analyzed. After the media asset is analyzed, you can query the duration and resolution information based on the media asset ID.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Limits</h2>
+        /// <list type="bullet">
+        /// <item><description>The throttling threshold of this operation is 30 queries per second (QPS).
+        /// **
+        /// <b>Note</b> If the threshold is exceeded, a &quot;Throttling.User&quot; error is returned when you submit an editing job. For more information about how to resolve this issue, see the <a href="https://help.aliyun.com/document_detail/453484.html">FAQ</a>.</description></item>
+        /// <item><description>You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.</description></item>
+        /// <item><description>The total size of material files cannot exceed 1 TB.</description></item>
+        /// <item><description>The OSS buckets in which the materials reside and where the output media assets are stored must be in the same region as the region in which Intelligent Media Services (IMS) is activated.</description></item>
+        /// <item><description>An output video must meet the following requirements:<list type="bullet">
+        /// <item><description>Both the width and height must be at least 128 pixels.</description></item>
+        /// <item><description>Both the width and height cannot exceed 4,096 pixels.</description></item>
+        /// <item><description>The shorter side of the video cannot exceed 2,160 pixels.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitMediaProducingJobRequest
@@ -26845,7 +27861,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交打包任务</para>
+        /// <para>Submits a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26917,7 +27933,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交打包任务</para>
+        /// <para>Submits a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26989,7 +28005,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交打包任务</para>
+        /// <para>Submits a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27007,7 +28023,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交打包任务</para>
+        /// <para>Submits a packaging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27023,6 +28039,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await SubmitPackageJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -27106,6 +28132,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitSmarttagJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -27189,6 +28225,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitSmarttagJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -27202,6 +28248,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return SubmitSmarttagJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -27217,7 +28273,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步截图任务</para>
+        /// <para>Submits a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27297,7 +28353,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步截图任务</para>
+        /// <para>Submits a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27377,7 +28433,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步截图任务</para>
+        /// <para>Submits a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27395,7 +28451,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交异步截图任务</para>
+        /// <para>Submits a snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27413,7 +28469,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起体育集锦任务</para>
+        /// <para>Submits a sports highlights job to generate a highlights video of an event based on event materials that contain commentary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27469,7 +28525,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起体育集锦任务</para>
+        /// <para>Submits a sports highlights job to generate a highlights video of an event based on event materials that contain commentary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27525,7 +28581,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起体育集锦任务</para>
+        /// <para>Submits a sports highlights job to generate a highlights video of an event based on event materials that contain commentary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27543,7 +28599,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起体育集锦任务</para>
+        /// <para>Submits a sports highlights job to generate a highlights video of an event based on event materials that contain commentary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27561,7 +28617,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交标准版人声克隆训练任务</para>
+        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27619,7 +28675,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交标准版人声克隆训练任务</para>
+        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27677,7 +28733,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交标准版人声克隆训练任务</para>
+        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27695,7 +28751,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交标准版人声克隆训练任务</para>
+        /// <para>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27711,6 +28767,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await SubmitStandardCustomizedVoiceJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media file in synchronous mode for media information analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file in synchronous mode. This operation is suitable for scenarios that require high real-time performance and low concurrency. If it takes an extended period of time to obtain the media information about the input media file, the request may time out or the obtained information may be inaccurate. We recommend that you call the <a href="https://help.aliyun.com/document_detail/441222.html">SubmitMediaInfoJob</a> operation to obtain media information.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitSyncMediaInfoJobRequest
         /// </param>
@@ -27770,6 +28836,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitSyncMediaInfoJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media file in synchronous mode for media information analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file in synchronous mode. This operation is suitable for scenarios that require high real-time performance and low concurrency. If it takes an extended period of time to obtain the media information about the input media file, the request may time out or the obtained information may be inaccurate. We recommend that you call the <a href="https://help.aliyun.com/document_detail/441222.html">SubmitMediaInfoJob</a> operation to obtain media information.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SubmitSyncMediaInfoJobRequest
         /// </param>
@@ -27829,6 +28905,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitSyncMediaInfoJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media file in synchronous mode for media information analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file in synchronous mode. This operation is suitable for scenarios that require high real-time performance and low concurrency. If it takes an extended period of time to obtain the media information about the input media file, the request may time out or the obtained information may be inaccurate. We recommend that you call the <a href="https://help.aliyun.com/document_detail/441222.html">SubmitMediaInfoJob</a> operation to obtain media information.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitSyncMediaInfoJobRequest
         /// </param>
@@ -27842,6 +28928,16 @@ namespace AlibabaCloud.SDK.ICE20201109
             return SubmitSyncMediaInfoJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a media file in synchronous mode for media information analysis.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to analyze an input media file in synchronous mode. This operation is suitable for scenarios that require high real-time performance and low concurrency. If it takes an extended period of time to obtain the media information about the input media file, the request may time out or the obtained information may be inaccurate. We recommend that you call the <a href="https://help.aliyun.com/document_detail/441222.html">SubmitMediaInfoJob</a> operation to obtain media information.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitSyncMediaInfoJobRequest
         /// </param>
@@ -27857,7 +28953,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文本生成任务</para>
+        /// <para>Submits a text generation job to generate marketing copies based on keywords and the requirements for the word count and number of output copies. The word count of the output copies may differ from the specified word count. After the job is submitted, you can call the GetSmartHandleJob operation to obtain the job state and result based on the job ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27915,7 +29011,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文本生成任务</para>
+        /// <para>Submits a text generation job to generate marketing copies based on keywords and the requirements for the word count and number of output copies. The word count of the output copies may differ from the specified word count. After the job is submitted, you can call the GetSmartHandleJob operation to obtain the job state and result based on the job ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27973,7 +29069,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文本生成任务</para>
+        /// <para>Submits a text generation job to generate marketing copies based on keywords and the requirements for the word count and number of output copies. The word count of the output copies may differ from the specified word count. After the job is submitted, you can call the GetSmartHandleJob operation to obtain the job state and result based on the job ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27991,7 +29087,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交文本生成任务</para>
+        /// <para>Submits a text generation job to generate marketing copies based on keywords and the requirements for the word count and number of output copies. The word count of the output copies may differ from the specified word count. After the job is submitted, you can call the GetSmartHandleJob operation to obtain the job state and result based on the job ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28007,6 +29103,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await SubmitTextGenerateJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// SubmitTranscodeJobRequest
         /// </param>
@@ -28078,6 +29179,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitTranscodeJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// SubmitTranscodeJobRequest
         /// </param>
@@ -28149,6 +29255,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<SubmitTranscodeJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitTranscodeJobRequest
         /// </param>
@@ -28162,6 +29273,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return SubmitTranscodeJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a transcoding job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitTranscodeJobRequest
         /// </param>
@@ -28177,7 +29293,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28248,7 +29364,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28319,7 +29435,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28342,7 +29458,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate the subtitle that appears in a video into the specified language. In the future, this operation will support voice translation and lip synchronization for spoken content.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28513,7 +29629,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Modifies a digital human training job. You can modify the basic information or update parameters such as Video and Transparent for retraining if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28579,7 +29695,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Modifies a digital human training job. You can modify the basic information or update parameters such as Video and Transparent for retraining if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28645,7 +29761,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Modifies a digital human training job. You can modify the basic information or update parameters such as Video and Transparent for retraining if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28663,7 +29779,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字人训练任务信息</para>
+        /// <para>Modifies a digital human training job. You can modify the basic information or update parameters such as Video and Transparent for retraining if the training failed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28829,7 +29945,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体处理自定义模板</para>
+        /// <para>Updates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28879,7 +29995,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体处理自定义模板</para>
+        /// <para>Updates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28929,7 +30045,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体处理自定义模板</para>
+        /// <para>Updates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28947,7 +30063,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体处理自定义模板</para>
+        /// <para>Updates a custom template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28965,7 +30081,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户的专属人声</para>
+        /// <para>Updates a personalized human voice. Only the media asset ID of the sample audio file can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29011,7 +30127,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户的专属人声</para>
+        /// <para>Updates a personalized human voice. Only the media asset ID of the sample audio file can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29057,7 +30173,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户的专属人声</para>
+        /// <para>Updates a personalized human voice. Only the media asset ID of the sample audio file can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29075,7 +30191,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户的专属人声</para>
+        /// <para>Updates a personalized human voice. Only the media asset ID of the sample audio file can be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30393,7 +31509,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新管道配置</para>
+        /// <para>Updates the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30447,7 +31563,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新管道配置</para>
+        /// <para>Updates the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30501,7 +31617,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新管道配置</para>
+        /// <para>Updates the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30519,7 +31635,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新管道配置</para>
+        /// <para>Updates the information about an ApsaraVideo Media Processing (MPS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30677,8 +31793,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateTemplate</para>
+        /// <para>Modifies an online editing template. You can modify the template title and template configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTemplateRequest
@@ -30749,8 +31873,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateTemplate</para>
+        /// <para>Modifies an online editing template. You can modify the template title and template configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTemplateRequest
@@ -30821,8 +31953,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateTemplate</para>
+        /// <para>Modifies an online editing template. You can modify the template title and template configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTemplateRequest
@@ -30839,8 +31979,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateTemplate</para>
+        /// <para>Modifies an online editing template. You can modify the template title and template configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTemplateRequest

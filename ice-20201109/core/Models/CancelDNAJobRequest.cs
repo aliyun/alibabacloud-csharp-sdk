@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CancelDNAJobRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media fingerprint analysis job that you want to cancel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetWorkflowTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the workflow task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>4215e042b3966ca5441e</b></b></b></para>
         /// </summary>

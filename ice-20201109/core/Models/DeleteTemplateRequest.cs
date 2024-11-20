@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the templates that you want to delete. Separate multiple IDs with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b>,<b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>

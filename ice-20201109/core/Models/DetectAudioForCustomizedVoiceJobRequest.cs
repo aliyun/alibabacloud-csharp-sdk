@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DetectAudioForCustomizedVoiceJobRequest : TeaModel {
         /// <summary>
+        /// <para>The sequence number of the recording file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? AudioRecordId { get; set; }
 
         /// <summary>
+        /// <para>The URL of the recording file.</para>
+        /// <remarks>
+        /// <para>: The URL must be an Object Storage Service (OSS) URL within your Alibaba Cloud account. The OSS bucket must be in the same region in which IMS is activated.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>: The audio file must be in the WAV or PCM format and must be a 16-bit mono audio file at 48000 Hz.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RecordUrl { get; set; }
 
         /// <summary>
+        /// <para>The voice ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

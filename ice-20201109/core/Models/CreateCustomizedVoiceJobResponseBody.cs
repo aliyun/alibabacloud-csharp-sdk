@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateCustomizedVoiceJobResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateCustomizedVoiceJobResponseBodyData Data { get; set; }
         public class CreateCustomizedVoiceJobResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the human voice cloning job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><b><b>29faef8144638ba42eb8e037</b></b></para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>The voice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xiaozhuan</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values: true false</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListMediaInfoJobsRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range during which the jobs to be queried were created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-15T00:00:00Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EndOfCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7b38a5d86f1e47838927b6e7ccb11cbe</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ab4802364a2e49208c99efab82dfa8e8</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
+        /// <para>The order that you use to sort the query results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CreateTimeDesc: sorts the query results by creation time in descending order.</description></item>
+        /// <item><description>CreateTimeAsc: sorts the query results by creation time in ascending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>CreateTimeDesc</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range during which the jobs to be queried were created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01T00:00:00Z</para>
         /// </summary>
@@ -58,6 +74,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string StartOfCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The state of the job. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Init: The job is submitted.</description></item>
+        /// <item><description>Success: The job is successful.</description></item>
+        /// <item><description>Fail: The job failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>

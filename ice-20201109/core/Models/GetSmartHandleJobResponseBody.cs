@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetSmartHandleJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>
@@ -17,22 +19,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <para>The job results.</para>
+        /// </summary>
         [NameInMap("JobResult")]
         [Validation(Required=false)]
         public GetSmartHandleJobResponseBodyJobResult JobResult { get; set; }
         public class GetSmartHandleJobResponseBodyJobResult : TeaModel {
             /// <summary>
-            /// <para>智能分析结果</para>
+            /// <para>The AI analysis result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>拆条或智能标签信息</para>
+            /// <para>Intelligent segmentation or tagging information</para>
             /// </summary>
             [NameInMap("AiResult")]
             [Validation(Required=false)]
             public string AiResult { get; set; }
 
             /// <summary>
-            /// <para>媒资Id</para>
+            /// <para>The ID of the media asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -41,6 +46,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string MediaId { get; set; }
 
+            /// <summary>
+            /// <para>The token usage. This parameter is returned only for keyword-based text generation jobs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;total_tokens&quot;:100}</para>
+            /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public string Usage { get; set; }
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The job results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Output { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>
@@ -63,11 +78,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The information about the intelligent job.</para>
+        /// </summary>
         [NameInMap("SmartJobInfo")]
         [Validation(Required=false)]
         public GetSmartHandleJobResponseBodySmartJobInfo SmartJobInfo { get; set; }
         public class GetSmartHandleJobResponseBodySmartJobInfo : TeaModel {
             /// <summary>
+            /// <para>The time when the job was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-12-26T04:11:10Z</para>
             /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The job description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试描述</para>
             /// </summary>
@@ -83,11 +105,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The input configurations.</para>
+            /// </summary>
             [NameInMap("InputConfig")]
             [Validation(Required=false)]
             public GetSmartHandleJobResponseBodySmartJobInfoInputConfig InputConfig { get; set; }
             public class GetSmartHandleJobResponseBodySmartJobInfoInputConfig : TeaModel {
                 /// <summary>
+                /// <para>The OSS URL or the ID of the material in the media asset library.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
                 /// </summary>
@@ -98,6 +125,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <para>The job type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ASR</para>
             /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string JobType { get; set; }
 
             /// <summary>
+            /// <para>The time when the job was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-12-26T04:11:10Z</para>
             /// </summary>
@@ -113,12 +144,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
+            /// <summary>
+            /// <para>The output configurations.</para>
+            /// </summary>
             [NameInMap("OutputConfig")]
             [Validation(Required=false)]
             public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig OutputConfig { get; set; }
             public class GetSmartHandleJobResponseBodySmartJobInfoOutputConfig : TeaModel {
                 /// <summary>
-                /// <para>OSS Bucket</para>
+                /// <para>The OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-bucket</para>
@@ -128,7 +162,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// <para>OSS Object</para>
+                /// <para>The OSS object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-object</para>
@@ -140,6 +174,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <para>The job title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试标题</para>
             /// </summary>
@@ -148,7 +184,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>userid。</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1974526429******</para>
@@ -160,6 +196,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The job state.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Finished</description></item>
+        /// <item><description>Failed</description></item>
+        /// <item><description>Executing</description></item>
+        /// <item><description>Created</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Finished</para>
         /// </summary>
@@ -168,6 +213,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string State { get; set; }
 
         /// <summary>
+        /// <para>The user-defined data in the JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;user&quot;:&quot;data&quot;}</para>
         /// </summary>

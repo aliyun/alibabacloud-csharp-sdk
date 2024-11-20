@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetTemplateMaterialsRequest : TeaModel {
         /// <summary>
+        /// <para>The materials that you want to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;music.mp3&quot;,&quot;config.json&quot;,&quot;assets/1.jpg&quot;]</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FileList { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

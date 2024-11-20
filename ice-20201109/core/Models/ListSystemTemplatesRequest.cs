@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSystemTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The template name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SampleTemplate</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20 Valid values: 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The template state. Valid values: Normal, Invisible, and All.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The subtype ID of the template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Subtype { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>96e8864746a0b6f3</b></b></para>
         /// </summary>
@@ -58,6 +70,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
+        /// <para>The template type. Separate multiple types with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListPipelinesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The queried MPS queues.</para>
+        /// </summary>
         [NameInMap("PipelineList")]
         [Validation(Required=false)]
         public List<ListPipelinesResponseBodyPipelineList> PipelineList { get; set; }
         public class ListPipelinesResponseBodyPipelineList : TeaModel {
             /// <summary>
+            /// <para>The time when the template was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-07-12T16:17:54Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the template was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-07-12T16:17:54Z</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the MPS queue.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-pipeline</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the MPS queue.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PipelineId { get; set; }
 
             /// <summary>
+            /// <para>The priority of the MPS queue.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Priority { get; set; }
 
             /// <summary>
+            /// <para>The type of the MPS queue.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
             /// </summary>
@@ -62,6 +77,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Speed { get; set; }
 
             /// <summary>
+            /// <para>The state of the MPS queue.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Active</description></item>
+            /// <item><description>Paused</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Active</para>
             /// </summary>
@@ -72,6 +94,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>

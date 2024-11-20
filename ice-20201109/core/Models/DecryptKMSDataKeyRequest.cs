@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DecryptKMSDataKeyRequest : TeaModel {
         /// <summary>
+        /// <para>The ciphertext that you want to decrypt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string VoiceprintId { get; set; }
 
+            [NameInMap("Volume")]
+            [Validation(Required=false)]
+            public long? Volume { get; set; }
+
         }
 
         /// <summary>

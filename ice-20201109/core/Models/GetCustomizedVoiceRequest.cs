@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetCustomizedVoiceRequest : TeaModel {
         /// <summary>
+        /// <para>The voice ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xiaozhuan</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPipelineRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the MPS queue.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

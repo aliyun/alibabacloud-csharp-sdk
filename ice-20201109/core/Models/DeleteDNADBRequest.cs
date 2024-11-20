@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteDNADBRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media fingerprint library that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

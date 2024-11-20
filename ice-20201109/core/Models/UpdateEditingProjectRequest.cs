@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</para>
+        /// <para>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified.</para>
         /// </summary>
         [NameInMap("ClipsParam")]
         [Validation(Required=false)]

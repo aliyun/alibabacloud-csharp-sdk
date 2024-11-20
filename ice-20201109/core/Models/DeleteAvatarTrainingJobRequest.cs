@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteAvatarTrainingJobRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the digital human training job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

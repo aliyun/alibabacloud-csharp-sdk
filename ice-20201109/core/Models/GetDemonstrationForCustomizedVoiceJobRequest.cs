@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetDemonstrationForCustomizedVoiceJobRequest : TeaModel {
         /// <summary>
+        /// <para>The demonstration scenario.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>story</b></description></item>
+        /// <item><description><b>interaction</b></description></item>
+        /// <item><description><b>navigation</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

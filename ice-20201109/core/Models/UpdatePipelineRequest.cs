@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdatePipelineRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the MPS queue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-pipeline</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the MPS queue.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PipelineId { get; set; }
 
         /// <summary>
+        /// <para>The priority of the MPS queue. Valid values: 1 to 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -36,6 +41,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? Priority { get; set; }
 
         /// <summary>
+        /// <para>The state of the MPS queue.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Active</description></item>
+        /// <item><description>Paused</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Paused</para>
         /// </summary>

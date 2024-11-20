@@ -78,8 +78,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The user data.</description></item>
+        /// <item><description>The user-defined data.</description></item>
+        /// <item><description>The data must be in the JSON format, and can be up to 512 characters in length.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

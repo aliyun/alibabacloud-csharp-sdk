@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentTemplateConfig TemplateConfig { get; set; }
 
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>877ae632caae49b1afc81c2e8194ffb4</para>

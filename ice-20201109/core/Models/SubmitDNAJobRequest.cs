@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitDNAJobRequest : TeaModel {
         /// <summary>
+        /// <para>The configurations of the media fingerprint analysis job. The value is a JSON object. If you specify this parameter, the template parameters are overwritten.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The ID of the media fingerprint library. If you do not specify this parameter, the default media fingerprint library is used. For more information about how to create a media fingerprint library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string DBId { get; set; }
 
         /// <summary>
+        /// <para>The input file for media fingerprint analysis.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -35,6 +39,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitDNAJobRequestInput Input { get; set; }
         public class SubmitDNAJobRequestInput : TeaModel {
             /// <summary>
+            /// <para>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</para>
+            /// <para>1\. oss://bucket/object</para>
+            /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</para>
+            /// <para>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +53,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
+            /// <para>The type of the input file. Valid values:</para>
+            /// <ol>
+            /// <item><description>OSS: Object Storage Service (OSS) object.</description></item>
+            /// <item><description>Media: media asset.</description></item>
+            /// </ol>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,6 +78,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ApsaraVideo Media Processing (MPS) queue to which the media fingerprint analysis job is submitted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5246b8d12a62433ab77845074039****</para>
         /// </summary>
@@ -73,6 +88,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PipelineId { get; set; }
 
         /// <summary>
+        /// <para>The primary key of the video. You must make sure that each primary key is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,6 +107,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>S00000101-100060</para>
         /// </summary>
@@ -99,6 +117,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
+        /// <para>The user-defined data. The data can be up to 128 bytes in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>userData</para>
         /// </summary>

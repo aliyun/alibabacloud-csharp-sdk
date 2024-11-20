@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeMeterImsSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query. The value is a 10-digit timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? EndTs { get; set; }
 
         /// <summary>
+        /// <para>This parameter does not take effect. By default, the usage data of all regions is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. The value is a 10-digit timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

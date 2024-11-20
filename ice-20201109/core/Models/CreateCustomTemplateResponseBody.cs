@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateCustomTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The template information.</para>
+        /// </summary>
         [NameInMap("CustomTemplate")]
         [Validation(Required=false)]
         public CreateCustomTemplateResponseBodyCustomTemplate CustomTemplate { get; set; }
         public class CreateCustomTemplateResponseBodyCustomTemplate : TeaModel {
             /// <summary>
+            /// <para>The time when the template was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-04-19T02:04:31Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the template is the default template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
+            /// <para>The time when the template was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-04-19T02:04:31Z</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
+            /// <para>The template state.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The subtype name of the template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Remux</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Subtype { get; set; }
 
             /// <summary>
+            /// <para>The template configurations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateConfig { get; set; }
 
             /// <summary>
+            /// <para>The template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateId { get; set; }
 
             /// <summary>
+            /// <para>The template name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-template</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateName { get; set; }
 
             /// <summary>
+            /// <para>The type ID of the template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Type { get; set; }
 
             /// <summary>
+            /// <para>The type name of the template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TranscodeTemplate</para>
             /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>

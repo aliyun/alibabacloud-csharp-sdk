@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAvatarsRequest : TeaModel {
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>The type of the digital human.</description></item>
+        /// <item><description>2DAvatar</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2DAvatar</para>
         /// </summary>
@@ -18,6 +23,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AvatarType { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>The page number.</description></item>
+        /// <item><description>Default value: 1.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +36,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>The number of entries per page.</description></item>
+        /// <item><description>Default value: 10.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

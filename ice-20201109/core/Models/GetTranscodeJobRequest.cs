@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetTranscodeJobRequest : TeaModel {
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ab4802364a2e49208c99efab82dfa8e8</para>
         /// </summary>

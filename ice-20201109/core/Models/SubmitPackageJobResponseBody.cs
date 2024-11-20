@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitPackageJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2d705f385b704ee5b*******a36d93e0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31E30781-9495-5E2D-A84D-759B0A01E262</para>
         /// </summary>

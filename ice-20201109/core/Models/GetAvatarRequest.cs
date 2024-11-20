@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetAvatarRequest : TeaModel {
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>The ID of the digital human.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

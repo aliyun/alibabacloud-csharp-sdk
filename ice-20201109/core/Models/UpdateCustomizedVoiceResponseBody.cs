@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateCustomizedVoiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4E84BE44-58A7-<b><b>-</b></b>-FBEBEA16EF94</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPackageJobRequest : TeaModel {
         /// <summary>
+        /// <para>The job ID. You can obtain the job ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/461964.html">SubmitPackageJob</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
