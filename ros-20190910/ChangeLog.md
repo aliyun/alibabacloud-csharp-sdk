@@ -1,3 +1,6 @@
+2024-11-20 Version: 2.5.1
+- Generated csharp 2019-09-10 for ROS.
+
 2024-09-24 Version: 2.5.0
 - Support API ImportStacksToStackGroup.
 - Update API CreateStackGroup: add param StackArn.
