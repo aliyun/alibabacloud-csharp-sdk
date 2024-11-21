@@ -3217,6 +3217,142 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>身份二要素标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaStandardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaStandardVerifyResponse
+        /// </returns>
+        public Id2MetaStandardVerifyResponse Id2MetaStandardVerifyWithOptions(Id2MetaStandardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id2MetaStandardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id2MetaStandardVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份二要素标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaStandardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaStandardVerifyResponse
+        /// </returns>
+        public async Task<Id2MetaStandardVerifyResponse> Id2MetaStandardVerifyWithOptionsAsync(Id2MetaStandardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id2MetaStandardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id2MetaStandardVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份二要素标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaStandardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaStandardVerifyResponse
+        /// </returns>
+        public Id2MetaStandardVerifyResponse Id2MetaStandardVerify(Id2MetaStandardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Id2MetaStandardVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份二要素标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaStandardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaStandardVerifyResponse
+        /// </returns>
+        public async Task<Id2MetaStandardVerifyResponse> Id2MetaStandardVerifyAsync(Id2MetaStandardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Id2MetaStandardVerifyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>身份二要素接口</para>
         /// </summary>
         /// 
