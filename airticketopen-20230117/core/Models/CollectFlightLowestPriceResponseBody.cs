@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public Dictionary<string, object> Data { get; set; }

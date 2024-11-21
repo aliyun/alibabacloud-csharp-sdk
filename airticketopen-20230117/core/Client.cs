@@ -1892,14 +1892,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CollectFlightLowestPriceShrinkRequest request = new CollectFlightLowestPriceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LowestPriceFlightList))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LowestPriceFlightInfoList))
             {
-                request.LowestPriceFlightListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LowestPriceFlightList, "lowestPriceFlightList", "json");
+                request.LowestPriceFlightInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LowestPriceFlightInfoList, "lowest_price_flight_info_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowestPriceFlightListShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowestPriceFlightInfoListShrink))
             {
-                body["lowestPriceFlightList"] = request.LowestPriceFlightListShrink;
+                body["lowest_price_flight_info_list"] = request.LowestPriceFlightInfoListShrink;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -1957,14 +1957,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CollectFlightLowestPriceShrinkRequest request = new CollectFlightLowestPriceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LowestPriceFlightList))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LowestPriceFlightInfoList))
             {
-                request.LowestPriceFlightListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LowestPriceFlightList, "lowestPriceFlightList", "json");
+                request.LowestPriceFlightInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LowestPriceFlightInfoList, "lowest_price_flight_info_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowestPriceFlightListShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowestPriceFlightInfoListShrink))
             {
-                body["lowestPriceFlightList"] = request.LowestPriceFlightListShrink;
+                body["lowest_price_flight_info_list"] = request.LowestPriceFlightInfoListShrink;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))

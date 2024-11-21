@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("lowestPriceFlightList")]
+        [NameInMap("lowest_price_flight_info_list")]
         [Validation(Required=false)]
-        public string LowestPriceFlightListShrink { get; set; }
+        public string LowestPriceFlightInfoListShrink { get; set; }
 
     }
 

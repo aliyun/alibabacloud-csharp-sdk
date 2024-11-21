@@ -1,3 +1,8 @@
+2024-11-21 Version: 2.0.0
+- Update API CollectFlightLowestPrice: add param lowest_price_flight_info_list.
+- Update API CollectFlightLowestPrice: delete param lowestPriceFlightList.
+
+
 2024-11-14 Version: 1.1.0
 - Support API CollectFlightLowestPrice.
 

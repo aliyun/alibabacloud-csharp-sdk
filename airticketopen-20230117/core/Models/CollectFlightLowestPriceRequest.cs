@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("lowestPriceFlightList")]
+        [NameInMap("lowest_price_flight_info_list")]
         [Validation(Required=false)]
-        public List<CollectFlightLowestPriceRequestLowestPriceFlightList> LowestPriceFlightList { get; set; }
-        public class CollectFlightLowestPriceRequestLowestPriceFlightList : TeaModel {
+        public List<CollectFlightLowestPriceRequestLowestPriceFlightInfoList> LowestPriceFlightInfoList { get; set; }
+        public class CollectFlightLowestPriceRequestLowestPriceFlightInfoList : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
             /// 
@@ -48,30 +48,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CA123,CA456</para>
             /// </summary>
-            [NameInMap("flight_number_info")]
+            [NameInMap("departure_flight_number")]
             [Validation(Required=false)]
-            public CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo FlightNumberInfo { get; set; }
-            public class CollectFlightLowestPriceRequestLowestPriceFlightListFlightNumberInfo : TeaModel {
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CA123,CA456</para>
-                /// </summary>
-                [NameInMap("departure_flight_number")]
-                [Validation(Required=false)]
-                public string DepartureFlightNumber { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>CA123,CA456</para>
-                /// </summary>
-                [NameInMap("return_flight_number")]
-                [Validation(Required=false)]
-                public string ReturnFlightNumber { get; set; }
-
-            }
+            public string DepartureFlightNumber { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
@@ -98,6 +81,24 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [NameInMap("return_date")]
             [Validation(Required=false)]
             public string ReturnDate { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>CA123,CA456</para>
+            /// </summary>
+            [NameInMap("return_flight_number")]
+            [Validation(Required=false)]
+            public string ReturnFlightNumber { get; set; }
+
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</para>
+            /// </summary>
+            [NameInMap("solution_id")]
+            [Validation(Required=false)]
+            public string SolutionId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
