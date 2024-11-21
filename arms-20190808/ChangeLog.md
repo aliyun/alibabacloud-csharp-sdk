@@ -1,3 +1,10 @@
+2024-11-21 Version: 7.3.0
+- Support API ListEnvironmentAddons.
+- Support API ListEnvironmentAlertRules.
+- Support API ListEnvironmentKubeResources.
+- Support API ListEnvironmentMetricTargets.
+
+
 2024-11-05 Version: 7.2.0
 - Support API DescribeAddonMetrics.
 - Update API GetRumExceptionStack: update response param.
