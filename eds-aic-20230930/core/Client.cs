@@ -333,6 +333,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAppList))
+            {
+                query["SourceAppList"] = request.SourceAppList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFilePathList))
             {
                 query["SourceFilePathList"] = request.SourceFilePathList;
@@ -394,6 +398,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAppList))
+            {
+                query["SourceAppList"] = request.SourceAppList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFilePathList))
             {
@@ -2688,6 +2696,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2764,6 +2776,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3237,9 +3253,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
-        public DescribeRegionsResponse DescribeRegionsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeRegions",
@@ -3270,9 +3295,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
-        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeRegions",
@@ -3293,13 +3327,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>查询地域</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
-        public DescribeRegionsResponse DescribeRegions()
+        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeRegionsWithOptions(runtime);
+            return DescribeRegionsWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3307,13 +3345,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>查询地域</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
-        public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeRegionsWithOptionsAsync(runtime);
+            return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4186,106 +4228,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FetchFileWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetAdbSecureRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetAdbSecureResponse
-        /// </returns>
-        public GetAdbSecureResponse GetAdbSecureWithOptions(GetAdbSecureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
-            {
-                query["InstanceIds"] = request.InstanceIds;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetAdbSecure",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetAdbSecureResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetAdbSecureRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetAdbSecureResponse
-        /// </returns>
-        public async Task<GetAdbSecureResponse> GetAdbSecureWithOptionsAsync(GetAdbSecureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
-            {
-                query["InstanceIds"] = request.InstanceIds;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetAdbSecure",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetAdbSecureResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetAdbSecureRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetAdbSecureResponse
-        /// </returns>
-        public GetAdbSecureResponse GetAdbSecure(GetAdbSecureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetAdbSecureWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetAdbSecureRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetAdbSecureResponse
-        /// </returns>
-        public async Task<GetAdbSecureResponse> GetAdbSecureAsync(GetAdbSecureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetAdbSecureWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -6254,114 +6196,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendFileWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// SetAdbSecureRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetAdbSecureResponse
-        /// </returns>
-        public SetAdbSecureResponse SetAdbSecureWithOptions(SetAdbSecureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
-            {
-                query["InstanceIds"] = request.InstanceIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SetAdbSecure",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SetAdbSecureResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// SetAdbSecureRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetAdbSecureResponse
-        /// </returns>
-        public async Task<SetAdbSecureResponse> SetAdbSecureWithOptionsAsync(SetAdbSecureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
-            {
-                query["InstanceIds"] = request.InstanceIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SetAdbSecure",
-                Version = "2023-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SetAdbSecureResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// SetAdbSecureRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetAdbSecureResponse
-        /// </returns>
-        public SetAdbSecureResponse SetAdbSecure(SetAdbSecureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SetAdbSecureWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// SetAdbSecureRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetAdbSecureResponse
-        /// </returns>
-        public async Task<SetAdbSecureResponse> SetAdbSecureAsync(SetAdbSecureRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SetAdbSecureWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

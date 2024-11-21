@@ -49,9 +49,33 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public ModifyPolicyGroupRequestNetRedirectPolicy NetRedirectPolicy { get; set; }
         public class ModifyPolicyGroupRequestNetRedirectPolicy : TeaModel {
+            [NameInMap("CustomProxy")]
+            [Validation(Required=false)]
+            public string CustomProxy { get; set; }
+
+            [NameInMap("HostAddr")]
+            [Validation(Required=false)]
+            public string HostAddr { get; set; }
+
             [NameInMap("NetRedirect")]
             [Validation(Required=false)]
             public string NetRedirect { get; set; }
+
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public string Port { get; set; }
+
+            [NameInMap("ProxyPassword")]
+            [Validation(Required=false)]
+            public string ProxyPassword { get; set; }
+
+            [NameInMap("ProxyType")]
+            [Validation(Required=false)]
+            public string ProxyType { get; set; }
+
+            [NameInMap("ProxyUserName")]
+            [Validation(Required=false)]
+            public string ProxyUserName { get; set; }
 
         }
 

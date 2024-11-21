@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class GetAdbSecureRequest : TeaModel {
-        [NameInMap("InstanceIds")]
+    public class DescribeRegionsRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string AcceptLanguage { get; set; }
 
     }
 

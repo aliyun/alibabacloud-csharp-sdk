@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string InstanceGroupId { get; set; }
 
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("SourceAppInfoList")]
+            [Validation(Required=false)]
+            public List<string> SourceAppInfoList { get; set; }
+
             [NameInMap("SourceFilePathList")]
             [Validation(Required=false)]
             public List<string> SourceFilePathList { get; set; }
@@ -104,6 +112,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

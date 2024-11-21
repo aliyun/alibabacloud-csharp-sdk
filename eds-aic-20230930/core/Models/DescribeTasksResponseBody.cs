@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<DescribeTasksResponseBodyData> Data { get; set; }
         public class DescribeTasksResponseBodyData : TeaModel {
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
+            [NameInMap("ErrorMsg")]
+            [Validation(Required=false)]
+            public string ErrorMsg { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-10-11T08:53:32Z</para>

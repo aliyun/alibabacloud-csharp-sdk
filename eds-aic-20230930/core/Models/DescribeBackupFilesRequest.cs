@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("StatusList")]
+        [Validation(Required=false)]
+        public List<string> StatusList { get; set; }
+
     }
 
 }

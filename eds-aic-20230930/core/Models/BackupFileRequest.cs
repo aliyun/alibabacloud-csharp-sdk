@@ -27,9 +27,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("SourceAppList")]
+        [Validation(Required=false)]
+        public List<string> SourceAppList { get; set; }
+
         [NameInMap("SourceFilePathList")]
         [Validation(Required=false)]
         public List<string> SourceFilePathList { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateAppRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
