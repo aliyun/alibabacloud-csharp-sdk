@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string TokenKey { get; set; }
 
+                [NameInMap("WithRematchRoute")]
+                [Validation(Required=false)]
+                public bool? WithRematchRoute { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>true</para>

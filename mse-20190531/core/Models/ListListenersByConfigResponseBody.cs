@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
 
+            [NameInMap("MatchRuleName")]
+            [Validation(Required=false)]
+            public string MatchRuleName { get; set; }
+
+            [NameInMap("MatchRuleType")]
+            [Validation(Required=false)]
+            public string MatchRuleType { get; set; }
+
             /// <summary>
             /// <para>The verification string.</para>
             /// 

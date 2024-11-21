@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string GrayRule { get; set; }
 
+        [NameInMap("GrayRuleName")]
+        [Validation(Required=false)]
+        public string GrayRuleName { get; set; }
+
+        [NameInMap("GrayRulePriority")]
+        [Validation(Required=false)]
+        public int? GrayRulePriority { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,6 +94,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
+
+        [NameInMap("OpType")]
+        [Validation(Required=false)]
+        public string OpType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

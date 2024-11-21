@@ -76,6 +76,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string EncryptedDataKey { get; set; }
 
+            [NameInMap("GrayVersions")]
+            [Validation(Required=false)]
+            public List<GetNacosConfigResponseBodyConfigurationGrayVersions> GrayVersions { get; set; }
+            public class GetNacosConfigResponseBodyConfigurationGrayVersions : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Priority")]
+                [Validation(Required=false)]
+                public int? Priority { get; set; }
+
+                [NameInMap("Rule")]
+                [Validation(Required=false)]
+                public string Rule { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The name of the configuration group.</para>
             /// 

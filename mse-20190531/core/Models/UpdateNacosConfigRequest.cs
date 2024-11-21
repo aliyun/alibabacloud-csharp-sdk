@@ -43,12 +43,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string BetaIps { get; set; }
 
-        /// <summary>
-        /// <para>The content of the configuration.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>attribute1=1221111\r\nattribute2=Chinese\r\nattribute3=abc11\r\nattribute4=1.00111</para>
-        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }

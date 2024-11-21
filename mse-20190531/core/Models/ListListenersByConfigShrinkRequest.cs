@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class CreateNacosConfigRequest : TeaModel {
+    public class ListListenersByConfigShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
@@ -24,56 +24,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>saledatacenter-task</para>
-        /// </summary>
-        [NameInMap("AppName")]
-        [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        /// <summary>
-        /// <para>The list of IP addresses where the beta release of the configuration is performed.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100.117.XX.XX,100.117.XX.XX</para>
-        /// </summary>
-        [NameInMap("BetaIps")]
-        [Validation(Required=false)]
-        public string BetaIps { get; set; }
-
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
-
-        /// <summary>
         /// <para>The ID of the data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>common.yaml</para>
+        /// <para>zeekr-clueboss.yml</para>
         /// </summary>
         [NameInMap("DataId")]
         [Validation(Required=false)]
         public string DataId { get; set; }
 
-        /// <summary>
-        /// <para>The description of the configuration.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Basic module configuration.</para>
-        /// </summary>
-        [NameInMap("Desc")]
+        [NameInMap("ExtGrayRules")]
         [Validation(Required=false)]
-        public string Desc { get; set; }
+        public string ExtGrayRulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the group.</para>
+        /// <para>The name of the group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alime-bridge-aliyun</para>
+        /// <para>prod</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
@@ -84,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mse_prepaid_public_cn-tl32****</para>
+        /// <para>mse-cn-m7r1yurp00e</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -94,31 +64,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The ID of the namespace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>547fd2a0-d0d6-****-80db2a1afb82</para>
+        /// <para>aaeb4d28-c9eb-4fa2-85f5-d03ce7ee8df1</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the configuration.</para>
+        /// <para>The extended request parameters in the JSON format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Basic configurations</para>
+        /// <para>{\\&quot;appGroup\\&quot;:\\&quot;emas-zfive_prehost\\&quot;,\\&quot;appName\\&quot;:\\&quot;emas-zfive\\&quot;,\\&quot;appStage\\&quot;:\\&quot;PRE_PUBLISH\\&quot;,\\&quot;appUnit\\&quot;:\\&quot;\\&quot;,\\&quot;bucId\\&quot;:\\&quot;225902\\&quot;,\\&quot;bucName\\&quot;:\\&quot;Wireless\\&quot;,\\&quot;provider\\&quot;:\\&quot;aliyun\\&quot;}</para>
         /// </summary>
-        [NameInMap("Tags")]
+        [NameInMap("RequestPars")]
         [Validation(Required=false)]
-        public string Tags { get; set; }
-
-        /// <summary>
-        /// <para>The format of the configuration. Supported formats include TEXT, JSON, and XML.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>text</para>
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public string RequestPars { get; set; }
 
     }
 

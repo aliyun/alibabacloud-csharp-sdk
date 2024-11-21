@@ -1,3 +1,21 @@
+2024-11-21 Version: 6.14.0
+- Support API InitializeServiceLinkRole.
+- Support API UpdateGatewayService.
+- Update API AddGatewayAuth: update param ExternalAuthZJSON.
+- Update API CreateNacosConfig: update param Content.
+- Update API GetGatewayAuthDetail: update response param.
+- Update API GetNacosConfig: update response param.
+- Update API ListListenersByConfig: add param ExtGrayRules.
+- Update API ListListenersByConfig: update response param.
+- Update API ListNacosConfigs: update param RequestPars.
+- Update API UpdateCluster: update param ClusterAliasName.
+- Update API UpdateNacosConfig: update param Content.
+- Update API UpdateNacosGrayConfig: add param GrayRuleName.
+- Update API UpdateNacosGrayConfig: add param GrayRulePriority.
+- Update API UpdateNacosGrayConfig: add param OpType.
+- Update API UpdateNacosGrayConfig: update param RequestPars.
+
+
 2024-09-25 Version: 6.12.3
 - Update API GetServiceListPage: update response param.
 
