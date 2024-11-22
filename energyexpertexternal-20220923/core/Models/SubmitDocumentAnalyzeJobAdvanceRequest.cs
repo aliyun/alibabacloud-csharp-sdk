@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class SubmitDocumentAnalyzeJobAdvanceRequest : TeaModel {
-        [NameInMap("dataType")]
+        [NameInMap("analysisType")]
         [Validation(Required=false)]
-        public string DataType { get; set; }
+        public string AnalysisType { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

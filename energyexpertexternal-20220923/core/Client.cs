@@ -5821,9 +5821,9 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisType))
             {
-                query["dataType"] = request.DataType;
+                query["analysisType"] = request.AnalysisType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
@@ -5883,9 +5883,9 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisType))
             {
-                query["dataType"] = request.DataType;
+                query["analysisType"] = request.AnalysisType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
