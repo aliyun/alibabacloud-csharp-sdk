@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DescribeCloudResourceStatusRequest : TeaModel {
         /// <summary>
-        /// The AccessKey secret used to access cloud resources.
+        /// <para>The AccessKey secret used to access cloud resources.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2712219.html">ListCloudAccess</a> operation to obtain the ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListCloudAccess](https://help.aliyun.com/document_detail/2712219.html) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>AKID9*******XX</para>
         /// </summary>
         [NameInMap("SecretId")]
         [Validation(Required=false)]

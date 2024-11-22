@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetCertWarehouseQuotaResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total quota for certificate repositories, including the free quota and purchased quota.
+        /// <para>The total quota for certificate repositories, including the free quota and purchased quota.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5000</para>
         /// </summary>
         [NameInMap("TotalQuota")]
         [Validation(Required=false)]
         public long? TotalQuota { get; set; }
 
         /// <summary>
-        /// The used quota.
+        /// <para>The used quota.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("UseCount")]
         [Validation(Required=false)]

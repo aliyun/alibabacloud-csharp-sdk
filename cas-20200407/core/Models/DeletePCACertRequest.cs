@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DeletePCACertRequest : TeaModel {
         /// <summary>
-        /// The unique identifier of the certificate. You can call the [ListCert](https://help.aliyun.com/document_detail/452331.html) operation to query the unique identifiers of certificates.
+        /// <para>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/452331.html">ListCert</a> operation to query the unique identifiers of certificates.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ccaf0c629c2be1e2ab</para>
         /// </summary>
         [NameInMap("Identifier")]
         [Validation(Required=false)]

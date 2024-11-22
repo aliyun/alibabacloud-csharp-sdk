@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,11 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CancelCertificateForPackageRequestRequest : TeaModel {
         /// <summary>
-        /// The order ID.
+        /// <para>The order ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListUserCertificateOrder](https://help.aliyun.com/document_detail/455804.html) operation to obtain the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123451222</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

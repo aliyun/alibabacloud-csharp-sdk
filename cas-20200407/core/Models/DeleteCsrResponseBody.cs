@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DeleteCsrResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D3F1FA43-1C26-50A2-8F0F-7A03851DBB46</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadCsrRequest : TeaModel {
         /// <summary>
-        /// The content of the CSR.
+        /// <para>The content of the CSR.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</para>
         /// </summary>
         [NameInMap("Csr")]
         [Validation(Required=false)]
         public string Csr { get; set; }
 
         /// <summary>
-        /// The private key content of the certificate in the PEM format.
+        /// <para>The private key content of the certificate in the PEM format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// The name of the CSR.
+        /// <para>The name of the CSR.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

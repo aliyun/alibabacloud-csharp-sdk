@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListDeploymentJobRequest : TeaModel {
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The type of the deployment task.
+        /// <para>The type of the deployment task.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cloud: multi-cloud deployment task.</description></item>
+        /// <item><description>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   cloud: multi-cloud deployment task.
-        /// *   user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
 
         /// <summary>
-        /// The number of certificates per page. Default value: **50**.
+        /// <para>The number of certificates per page. Default value: <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]
         public int? ShowSize { get; set; }
 
         /// <summary>
-        /// The status of the deployment task.
+        /// <para>The status of the deployment task.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>success</description></item>
+        /// <item><description>pending</description></item>
+        /// <item><description>scheduling</description></item>
+        /// <item><description>processing</description></item>
+        /// <item><description>error</description></item>
+        /// <item><description>editing</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   success
-        /// *   pending
-        /// *   scheduling
-        /// *   processing
-        /// *   error
-        /// *   editing
+        /// <b>Example:</b>
+        /// <para>pending</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

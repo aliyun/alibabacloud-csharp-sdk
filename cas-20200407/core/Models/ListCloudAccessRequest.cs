@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCloudAccessRequest : TeaModel {
         /// <summary>
-        /// The cloud service provider.
+        /// <para>The cloud service provider.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Tencent</para>
         /// </summary>
         [NameInMap("CloudName")]
         [Validation(Required=false)]
         public string CloudName { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The AccessKey secret used to access the cloud service.
+        /// <para>The AccessKey secret used to access the cloud service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>276</para>
         /// </summary>
         [NameInMap("SecretId")]
         [Validation(Required=false)]
         public string SecretId { get; set; }
 
         /// <summary>
-        /// The number of certificates per page. Default value: **20**.
+        /// <para>The number of certificates per page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]

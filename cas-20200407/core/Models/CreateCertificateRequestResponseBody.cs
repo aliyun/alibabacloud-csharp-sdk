@@ -10,16 +10,23 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CreateCertificateRequestResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the certificate application order.
+        /// <para>The ID of the certificate application order.</para>
+        /// <remarks>
+        /// <para> You can use the ID to query the status of the certificate application. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</para>
+        /// </remarks>
         /// 
-        /// >  You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html).
+        /// <b>Example:</b>
+        /// <para>98987582437920968</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

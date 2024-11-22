@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DeleteUserCertificateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3E50D480-9765-5CFD-9650-9BACCECA5135</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

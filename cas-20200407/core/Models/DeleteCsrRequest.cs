@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DeleteCsrRequest : TeaModel {
         /// <summary>
-        /// The ID of the CSR.
+        /// <para>The ID of the CSR.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3013</para>
         /// </summary>
         [NameInMap("CsrId")]
         [Validation(Required=false)]

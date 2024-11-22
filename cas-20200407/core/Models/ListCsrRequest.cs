@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCsrRequest : TeaModel {
         /// <summary>
-        /// The algorithm. Valid values: RSA, ECC, and SM2.
+        /// <para>The algorithm. Valid values: RSA, ECC, and SM2.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RSA</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// The keyword.
+        /// <para>The keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_name</para>
         /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 50.
+        /// <para>The number of entries per page. Default value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]

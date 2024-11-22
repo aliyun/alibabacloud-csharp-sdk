@@ -10,44 +10,56 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DecryptRequest : TeaModel {
         /// <summary>
-        /// The encryption algorithm. Valid values:
+        /// <para>The encryption algorithm. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>RSAES_OAEP_SHA_1</b></description></item>
+        /// <item><description><b>RSAES_OAEP_SHA_256</b></description></item>
+        /// <item><description><b>SM2PKE</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **RSAES_OAEP_SHA_1**
-        /// *   **RSAES_OAEP_SHA_256**
-        /// *   **SM2PKE**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>RSAESOAEPSHA_1</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// The unique identifier of the certificate. You can call the [ListCert](https://help.aliyun.com/document_detail/455806.html) operation to query the identifier.
+        /// <para>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation to query the identifier.</para>
+        /// <list type="bullet">
+        /// <item><description>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</description></item>
+        /// <item><description>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.
-        /// *   If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>12345678-1234-1234-1234-12345678****</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// The data that you want to decrypt. The value is encoded in Base64.
+        /// <para>The data that you want to decrypt. The value is encoded in Base64.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</para>
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
         /// <summary>
-        /// The value type of the Message parameter. Valid values:
+        /// <para>The value type of the Message parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RAW: The returned result is raw data encoded in UTF-8.</description></item>
+        /// <item><description>Base64: The returned result is Base64-encoded data. This is the default value.</description></item>
+        /// </list>
         /// 
-        /// *   RAW: The returned result is raw data encoded in UTF-8.
-        /// *   Base64: The returned result is Base64-encoded data. This is the default value.
+        /// <b>Example:</b>
+        /// <para>Base64</para>
         /// </summary>
         [NameInMap("MessageType")]
         [Validation(Required=false)]

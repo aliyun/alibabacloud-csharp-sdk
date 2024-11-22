@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class VerifyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1ed33293-2e48-6b14-861e-538e28e408eb</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the signature is valid. Valid values:
+        /// <para>Indicates whether the signature is valid. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SignatureValid")]
         [Validation(Required=false)]

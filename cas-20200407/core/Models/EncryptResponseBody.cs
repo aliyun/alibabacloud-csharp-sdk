@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class EncryptResponseBody : TeaModel {
         /// <summary>
-        /// The unique identifier of the certificate.
+        /// <para>The unique identifier of the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345678-1234-1234-1234-12345678****</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// The data after encryption. The value is encoded in Base64.
+        /// <para>The data after encryption. The value is encoded in Base64.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</para>
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5979d897-d69f-4fc9-87dd-f3bb73c40b80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

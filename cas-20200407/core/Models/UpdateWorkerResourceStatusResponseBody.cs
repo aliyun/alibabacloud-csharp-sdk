@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UpdateWorkerResourceStatusResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public object Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345678-1234-1234-1234-123456789ABC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

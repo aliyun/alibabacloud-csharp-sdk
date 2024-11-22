@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetUserCertificateDetailRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to filter return results. Valid values: true and false. Default value: false. **true** specifies that the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey parameters are not returned. **false** specifies that the parameters are returned.
+        /// <para>Specifies whether to filter return results. Valid values: true and false. Default value: false. <b>true</b> specifies that the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey parameters are not returned. <b>false</b> specifies that the parameters are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("CertFilter")]
         [Validation(Required=false)]
         public bool? CertFilter { get; set; }
 
         /// <summary>
-        /// The ID of the certificate.
+        /// <para>The ID of the certificate.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to query the ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [ListUserCertificateOrder](https://help.aliyun.com/document_detail/455804.html) operation to query the ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6055048</para>
         /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]

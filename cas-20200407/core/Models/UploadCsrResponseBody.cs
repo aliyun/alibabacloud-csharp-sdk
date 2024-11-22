@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadCsrResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the CSR.
+        /// <para>The ID of the CSR.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2271</para>
         /// </summary>
         [NameInMap("CsrId")]
         [Validation(Required=false)]
         public long? CsrId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
