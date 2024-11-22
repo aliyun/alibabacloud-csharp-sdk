@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetHttpDDoSAttackProtectionRequest : TeaModel {
         /// <summary>
+        /// <para>The level of HTTP DDoS attack protection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>very weak</b>: very loose.</description></item>
+        /// <item><description><b>weak</b>: loose.</description></item>
+        /// <item><description><b>default</b>: normal.</description></item>
+        /// <item><description><b>hard</b>: strict.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string GlobalMode { get; set; }
 
         /// <summary>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

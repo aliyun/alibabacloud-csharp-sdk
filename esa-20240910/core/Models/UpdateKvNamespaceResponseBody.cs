@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateKvNamespaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The description of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a test ns.</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The updated name of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>new_ns1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The ID of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>643355322374688768</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>
         /// </summary>
@@ -42,6 +50,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the namespace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>online</b>: normal.</description></item>
+        /// <item><description><b>delete</b>: pending deletion.</description></item>
+        /// <item><description><b>deleting</b>: being deleted.</description></item>
+        /// <item><description><b>deleted</b>: deleted.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>online</para>
         /// </summary>

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserDeliveryTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The log category. Valid values:</para>
+        /// <ol>
+        /// <item><description>dcdn_log_access_l1 (default): access logs.</description></item>
+        /// <item><description>dcdn_log_er: Edge Routine logs.</description></item>
+        /// <item><description>dcdn_log_waf: firewall logs.</description></item>
+        /// <item><description>dcdn_log_ipa: TCP/UDP proxy logs.</description></item>
+        /// </ol>
+        /// 
         /// <b>Example:</b>
         /// <para>dcdn_log_access_l1</para>
         /// </summary>
@@ -18,6 +26,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BusinessType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +36,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

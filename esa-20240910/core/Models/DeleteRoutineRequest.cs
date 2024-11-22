@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteRoutineRequest : TeaModel {
         /// <summary>
+        /// <para>The routine name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-routine1</para>
         /// </summary>

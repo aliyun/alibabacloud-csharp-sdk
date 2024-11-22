@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListLoadBalancerRegionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1024</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The regions.</para>
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<ListLoadBalancerRegionsResponseBodyRegions> Regions { get; set; }
         public class ListLoadBalancerRegionsResponseBodyRegions : TeaModel {
+            /// <summary>
+            /// <para>The Chinese name of the region.</para>
+            /// </summary>
             [NameInMap("RegionCnName")]
             [Validation(Required=false)]
             public string RegionCnName { get; set; }
 
             /// <summary>
+            /// <para>The code of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SEAS</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RegionCode { get; set; }
 
             /// <summary>
+            /// <para>The English name of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>South East Asia</para>
             /// </summary>
@@ -49,15 +63,23 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string RegionEnName { get; set; }
 
+            /// <summary>
+            /// <para>The subregions of the region.</para>
+            /// </summary>
             [NameInMap("SubRegions")]
             [Validation(Required=false)]
             public List<ListLoadBalancerRegionsResponseBodyRegionsSubRegions> SubRegions { get; set; }
             public class ListLoadBalancerRegionsResponseBodyRegionsSubRegions : TeaModel {
+                /// <summary>
+                /// <para>The Chinese name of the region.</para>
+                /// </summary>
                 [NameInMap("SubRegionCnName")]
                 [Validation(Required=false)]
                 public string SubRegionCnName { get; set; }
 
                 /// <summary>
+                /// <para>The code of the subregion.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ID</para>
                 /// </summary>
@@ -66,6 +88,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SubRegionCode { get; set; }
 
                 /// <summary>
+                /// <para>The English name of the subregion.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Indonesia</para>
                 /// </summary>
@@ -78,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81A5E222-24BF-17EF-9E80-A68D9B8F363D</para>
@@ -88,6 +112,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12</para>
         /// </summary>
@@ -96,6 +122,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

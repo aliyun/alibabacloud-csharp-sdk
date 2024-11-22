@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCustomScenePolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The time when the policy expires.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +33,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
         /// </summary>
@@ -38,6 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Objects { get; set; }
 
         /// <summary>
+        /// <para>The policy ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PolicyId { get; set; }
 
         /// <summary>
+        /// <para>The time when the policy takes effect.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +66,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the policy template. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>promotion</b>: major events.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

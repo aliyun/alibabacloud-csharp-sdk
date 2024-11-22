@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateListRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the list that you want to create.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a custom list</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The items in the list that you want to create.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a custom list</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> Items { get; set; }
 
         /// <summary>
+        /// <para>The type of the list that you want to create.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ip</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Kind { get; set; }
 
         /// <summary>
+        /// <para>The name of the list that you want to create.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateListShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The new description of the list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a custom list</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the custom list, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The items in the updated list. The value is a JSON array.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a custom list</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ItemsShrink { get; set; }
 
         /// <summary>
+        /// <para>The new name of the list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example</para>
         /// </summary>

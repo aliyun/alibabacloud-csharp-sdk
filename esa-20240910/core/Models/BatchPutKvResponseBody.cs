@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchPutKvResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The keys that failed to be written.</para>
+        /// </summary>
         [NameInMap("FailKeys")]
         [Validation(Required=false)]
         public List<string> FailKeys { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
@@ -23,6 +26,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The keys that were written.</para>
+        /// </summary>
         [NameInMap("SuccessKeys")]
         [Validation(Required=false)]
         public List<string> SuccessKeys { get; set; }

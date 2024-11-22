@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteCustomScenePolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The policy ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5CC228B4-7A67-4016-9C9F-4A4133494A91</para>

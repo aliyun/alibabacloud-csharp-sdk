@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活客户端证书</para>
+        /// <para>Activates a client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活客户端证书</para>
+        /// <para>Activates a client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活客户端证书</para>
+        /// <para>Activates a client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>激活客户端证书</para>
+        /// <para>Activates a client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -151,8 +151,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Adds DNS records of different record types at a time..</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
+        /// Successful and failed records along with error messages are listed in the response.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BatchCreateRecordsRequest
@@ -203,8 +209,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Adds DNS records of different record types at a time..</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
+        /// Successful and failed records along with error messages are listed in the response.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BatchCreateRecordsRequest
@@ -255,8 +267,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Adds DNS records of different record types at a time..</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
+        /// Successful and failed records along with error messages are listed in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchCreateRecordsRequest
@@ -273,8 +291,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Adds DNS records of different record types at a time..</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
+        /// Successful and failed records along with error messages are listed in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchCreateRecordsRequest
@@ -291,7 +315,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建WAF规则</para>
+        /// <para>Creates multiple rules of a specific Web Application Firewall (WAF) rule category at a time. You can also configure shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -361,7 +385,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建WAF规则</para>
+        /// <para>Creates multiple rules of a specific Web Application Firewall (WAF) rule category at a time. You can also configure shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -431,7 +455,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建WAF规则</para>
+        /// <para>Creates multiple rules of a specific Web Application Firewall (WAF) rule category at a time. You can also configure shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -449,7 +473,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建WAF规则</para>
+        /// <para>Creates multiple rules of a specific Web Application Firewall (WAF) rule category at a time. You can also configure shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -467,7 +491,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace的key-value对</para>
+        /// <para>Deletes key-value pairs from a namespace at a time based on keys.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -521,7 +545,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace的key-value对</para>
+        /// <para>Deletes key-value pairs from a namespace at a time based on keys.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -575,7 +599,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace的key-value对</para>
+        /// <para>Deletes key-value pairs from a namespace at a time based on keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -593,7 +617,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace的key-value对</para>
+        /// <para>Deletes key-value pairs from a namespace at a time based on keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -611,8 +635,47 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace下的KV队，支持大body的上传，上限100M</para>
+        /// <para>Deletes multiple key-value pairs from a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchDeleteKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchDeleteWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for deleting key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         rawReq := BatchDeleteKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///         }
+        ///         for i := 0; i &lt; 10000; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             rawReq.Keys = append(rawReq.Keys, &amp;key)
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchDeleteKvWithHighCapacity operation for deletion.
+        ///         reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchDeleteKvWithHighCapacityRequest
@@ -657,8 +720,47 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace下的KV队，支持大body的上传，上限100M</para>
+        /// <para>Deletes multiple key-value pairs from a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchDeleteKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchDeleteWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for deleting key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         rawReq := BatchDeleteKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///         }
+        ///         for i := 0; i &lt; 10000; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             rawReq.Keys = append(rawReq.Keys, &amp;key)
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchDeleteKvWithHighCapacity operation for deletion.
+        ///         reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchDeleteKvWithHighCapacityRequest
@@ -703,8 +805,47 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace下的KV队，支持大body的上传，上限100M</para>
+        /// <para>Deletes multiple key-value pairs from a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchDeleteKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchDeleteWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for deleting key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         rawReq := BatchDeleteKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///         }
+        ///         for i := 0; i &lt; 10000; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             rawReq.Keys = append(rawReq.Keys, &amp;key)
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchDeleteKvWithHighCapacity operation for deletion.
+        ///         reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchDeleteKvWithHighCapacityRequest
@@ -721,8 +862,47 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除Namespace下的KV队，支持大body的上传，上限100M</para>
+        /// <para>Deletes multiple key-value pairs from a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchDeleteKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchDeleteWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for deleting key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         rawReq := BatchDeleteKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///         }
+        ///         for i := 0; i &lt; 10000; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             rawReq.Keys = append(rawReq.Keys, &amp;key)
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchDeleteKvWithHighCapacity operation for deletion.
+        ///         reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchDeleteKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchDeleteKvWithHighCapacityRequest
@@ -903,7 +1083,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取表达式的匹配项</para>
+        /// <para>Batch queries the objects that match specific expressions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -961,7 +1141,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取表达式的匹配项</para>
+        /// <para>Batch queries the objects that match specific expressions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1019,7 +1199,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取表达式的匹配项</para>
+        /// <para>Batch queries the objects that match specific expressions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1037,7 +1217,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取表达式的匹配项</para>
+        /// <para>Batch queries the objects that match specific expressions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1055,7 +1235,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1109,7 +1289,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1163,7 +1343,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1361,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1199,8 +1379,55 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对，支持最大100M的请求体</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchPutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchPutKvWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         numKv := 10000
+        ///         kvList := make([]<em>BatchPutKvRequestKvList, numKv)
+        ///         test_value := strings.Repeat(&quot;a&quot;, 10</em>1024)
+        ///         for i := 0; i &lt; numKv; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             value := test_value
+        ///             kvList[i] = &amp;BatchPutKvRequestKvList{
+        ///                 Key:   &amp;key,
+        ///                 Value: &amp;value,
+        ///             }
+        ///         }
+        ///         rawReq := BatchPutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             KvList:    kvList,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchPutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchPutKvWithHighCapacityRequest
@@ -1245,8 +1472,55 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对，支持最大100M的请求体</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchPutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchPutKvWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         numKv := 10000
+        ///         kvList := make([]<em>BatchPutKvRequestKvList, numKv)
+        ///         test_value := strings.Repeat(&quot;a&quot;, 10</em>1024)
+        ///         for i := 0; i &lt; numKv; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             value := test_value
+        ///             kvList[i] = &amp;BatchPutKvRequestKvList{
+        ///                 Key:   &amp;key,
+        ///                 Value: &amp;value,
+        ///             }
+        ///         }
+        ///         rawReq := BatchPutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             KvList:    kvList,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchPutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchPutKvWithHighCapacityRequest
@@ -1291,8 +1565,55 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对，支持最大100M的请求体</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchPutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchPutKvWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         numKv := 10000
+        ///         kvList := make([]<em>BatchPutKvRequestKvList, numKv)
+        ///         test_value := strings.Repeat(&quot;a&quot;, 10</em>1024)
+        ///         for i := 0; i &lt; numKv; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             value := test_value
+        ///             kvList[i] = &amp;BatchPutKvRequestKvList{
+        ///                 Key:   &amp;key,
+        ///                 Value: &amp;value,
+        ///             }
+        ///         }
+        ///         rawReq := BatchPutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             KvList:    kvList,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchPutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchPutKvWithHighCapacityRequest
@@ -1309,8 +1630,55 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置Namespace的key-value对，支持最大100M的请求体</para>
+        /// <para>Configures key-value pairs for a namespace at a time based on specified keys. The request body can be up to 100 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>. For small request bodies, we recommend that you use <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and BatchPutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestBatchPutKvWithHighCapacity() error {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs at a time.
+        ///         namespace := &quot;test_batch_put&quot;
+        ///         numKv := 10000
+        ///         kvList := make([]<em>BatchPutKvRequestKvList, numKv)
+        ///         test_value := strings.Repeat(&quot;a&quot;, 10</em>1024)
+        ///         for i := 0; i &lt; numKv; i++ {
+        ///             key := fmt.Sprintf(&quot;test_key_%d&quot;, i)
+        ///             value := test_value
+        ///             kvList[i] = &amp;BatchPutKvRequestKvList{
+        ///                 Key:   &amp;key,
+        ///                 Value: &amp;value,
+        ///             }
+        ///         }
+        ///         rawReq := BatchPutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             KvList:    kvList,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the BatchPutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             UrlObject: bytes.NewReader(payload),
+        ///         }
+        ///         resp, err := cli.BatchPutKvWithHighCapacityAdvance(&amp;reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchPutKvWithHighCapacityRequest
@@ -1491,7 +1859,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改WAF规则</para>
+        /// <para>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1565,7 +1933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改WAF规则</para>
+        /// <para>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1639,7 +2007,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改WAF规则</para>
+        /// <para>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1657,7 +2025,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改WAF规则</para>
+        /// <para>Modifies multiple rules in a specific Web Application Firewall (WAF) ruleset at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1675,7 +2043,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL封禁</para>
+        /// <para>Blocks URLs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1739,7 +2107,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL封禁</para>
+        /// <para>Blocks URLs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1803,7 +2171,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL封禁</para>
+        /// <para>Blocks URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1821,7 +2189,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>URL封禁</para>
+        /// <para>Blocks URLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1839,7 +2207,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点的企业资源组</para>
+        /// <para>Moves a website from one resource group to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1893,7 +2261,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点的企业资源组</para>
+        /// <para>Moves a website from one resource group to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1947,7 +2315,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点的企业资源组</para>
+        /// <para>Moves a website from one resource group to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1965,7 +2333,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点的企业资源组</para>
+        /// <para>Moves a website from one resource group to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1983,7 +2351,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点名称是否可用</para>
+        /// <para>Checks whether a specified website name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2025,7 +2393,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点名称是否可用</para>
+        /// <para>Checks whether a specified website name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2067,7 +2435,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点名称是否可用</para>
+        /// <para>Checks whether a specified website name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2085,7 +2453,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点名称是否可用</para>
+        /// <para>Checks whether a specified website name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2103,7 +2471,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2141,7 +2509,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2179,7 +2547,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2197,7 +2565,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2215,7 +2583,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志用户任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task by account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2253,7 +2621,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志用户任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task by account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2291,7 +2659,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志用户任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task by account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2309,7 +2677,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时日志用户任务投递名检查</para>
+        /// <para>Checks the name of a real-time log delivery task by account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2327,7 +2695,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交Routine测试版本代码</para>
+        /// <para>Commits the unstable code in the staging environment to generate an official code version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2373,7 +2741,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交Routine测试版本代码</para>
+        /// <para>Commits the unstable code in the staging environment to generate an official code version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2419,7 +2787,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交Routine测试版本代码</para>
+        /// <para>Commits the unstable code in the staging environment to generate an official code version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2805,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交Routine测试版本代码</para>
+        /// <para>Commits the unstable code in the staging environment to generate an official code version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2455,7 +2823,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定制场景策略</para>
+        /// <para>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2513,7 +2881,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定制场景策略</para>
+        /// <para>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2571,7 +2939,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定制场景策略</para>
+        /// <para>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2589,7 +2957,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定制场景策略</para>
+        /// <para>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2607,7 +2975,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器的应用</para>
+        /// <para>Creates a containerized application. You can deploy and release a version of the application across points of presence (POPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2701,7 +3069,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器的应用</para>
+        /// <para>Creates a containerized application. You can deploy and release a version of the application across points of presence (POPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2795,7 +3163,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器的应用</para>
+        /// <para>Creates a containerized application. You can deploy and release a version of the application across points of presence (POPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2813,7 +3181,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器的应用</para>
+        /// <para>Creates a containerized application. You can deploy and release a version of the application across points of presence (POPs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2831,7 +3199,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个边缘容器应用的域名记录</para>
+        /// <para>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2881,7 +3249,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个边缘容器应用的域名记录</para>
+        /// <para>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2931,7 +3299,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个边缘容器应用的域名记录</para>
+        /// <para>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2949,7 +3317,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个边缘容器应用的域名记录</para>
+        /// <para>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3123,7 +3491,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Namespace</para>
+        /// <para>Create a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3169,7 +3537,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Namespace</para>
+        /// <para>Create a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3215,7 +3583,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Namespace</para>
+        /// <para>Create a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3233,7 +3601,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Namespace</para>
+        /// <para>Create a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3251,7 +3619,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义列表</para>
+        /// <para>Creates a list. Lists are used for the referencing of values in the rules engine to implement complex logic and control in security policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3311,7 +3679,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义列表</para>
+        /// <para>Creates a list. Lists are used for the referencing of values in the rules engine to implement complex logic and control in security policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3371,7 +3739,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义列表</para>
+        /// <para>Creates a list. Lists are used for the referencing of values in the rules engine to implement complex logic and control in security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3389,7 +3757,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义列表</para>
+        /// <para>Creates a list. Lists are used for the referencing of values in the rules engine to implement complex logic and control in security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3407,7 +3775,127 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreatePage创建自定义响应页面</para>
+        /// <para>开启源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOriginProtectionResponse
+        /// </returns>
+        public CreateOriginProtectionResponse CreateOriginProtectionWithOptions(CreateOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOriginProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOriginProtectionResponse
+        /// </returns>
+        public async Task<CreateOriginProtectionResponse> CreateOriginProtectionWithOptionsAsync(CreateOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOriginProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOriginProtectionResponse
+        /// </returns>
+        public CreateOriginProtectionResponse CreateOriginProtection(CreateOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOriginProtectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOriginProtectionResponse
+        /// </returns>
+        public async Task<CreateOriginProtectionResponse> CreateOriginProtectionAsync(CreateOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOriginProtectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom error page, which is displayed when a request is blocked by Web Application Firewall (WAF). You can configure the HTML content, page type, and description, and submit the Base64-encoded page content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3461,7 +3949,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreatePage创建自定义响应页面</para>
+        /// <para>Creates a custom error page, which is displayed when a request is blocked by Web Application Firewall (WAF). You can configure the HTML content, page type, and description, and submit the Base64-encoded page content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3515,7 +4003,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreatePage创建自定义响应页面</para>
+        /// <para>Creates a custom error page, which is displayed when a request is blocked by Web Application Firewall (WAF). You can configure the HTML content, page type, and description, and submit the Base64-encoded page content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3533,7 +4021,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreatePage创建自定义响应页面</para>
+        /// <para>Creates a custom error page, which is displayed when a request is blocked by Web Application Firewall (WAF). You can configure the HTML content, page type, and description, and submit the Base64-encoded page content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,7 +4039,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Creates a DNS record for a specific website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3643,7 +4131,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Creates a DNS record for a specific website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3735,7 +4223,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Creates a DNS record for a specific website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3753,7 +4241,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记录</para>
+        /// <para>Creates a DNS record for a specific website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3771,7 +4259,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建routine</para>
+        /// <para>Creates a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3821,7 +4309,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建routine</para>
+        /// <para>Creates a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3871,7 +4359,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建routine</para>
+        /// <para>Creates a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3889,7 +4377,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建routine</para>
+        /// <para>Creates a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3907,7 +4395,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联域名</para>
+        /// <para>Adds a record to map a domain that is associated with a routine. This record is used to trigger the associated routine code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3957,7 +4445,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联域名</para>
+        /// <para>Adds a record to map a domain that is associated with a routine. This record is used to trigger the associated routine code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4007,7 +4495,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联域名</para>
+        /// <para>Adds a record to map a domain that is associated with a routine. This record is used to trigger the associated routine code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4025,7 +4513,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联域名</para>
+        /// <para>Adds a record to map a domain that is associated with a routine. This record is used to trigger the associated routine code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4043,7 +4531,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联路由</para>
+        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4093,7 +4581,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联路由</para>
+        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4143,7 +4631,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联路由</para>
+        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4161,7 +4649,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加Routine关联路由</para>
+        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4179,7 +4667,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增定时预热任务的计划</para>
+        /// <para>Creates scheduled prefetch plans.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4233,7 +4721,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增定时预热任务的计划</para>
+        /// <para>Creates scheduled prefetch plans.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4287,7 +4775,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增定时预热任务的计划</para>
+        /// <para>Creates scheduled prefetch plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4305,7 +4793,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增定时预热任务的计划</para>
+        /// <para>Creates scheduled prefetch plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4323,7 +4811,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增定时预热任务</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4381,7 +4869,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增定时预热任务</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4439,7 +4927,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增定时预热任务</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4457,7 +4945,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增定时预热任务</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4475,8 +4963,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建站点</para>
+        /// <para>Adds a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you have an available plan before you add a website.</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your website domain name has an ICP filing if the location you want to specify covers the Chinese mainland.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSiteRequest
@@ -4533,8 +5029,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建站点</para>
+        /// <para>Adds a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you have an available plan before you add a website.</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your website domain name has an ICP filing if the location you want to specify covers the Chinese mainland.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSiteRequest
@@ -4591,8 +5095,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建站点</para>
+        /// <para>Adds a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you have an available plan before you add a website.</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your website domain name has an ICP filing if the location you want to specify covers the Chinese mainland.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSiteRequest
@@ -4609,8 +5121,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建站点</para>
+        /// <para>Adds a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Make sure that you have an available plan before you add a website.</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that your website domain name has an ICP filing if the location you want to specify covers the Chinese mainland.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSiteRequest
@@ -4627,8 +5147,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建自定义字段</para>
+        /// <para>Adds the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Custom field limits</b>: The key name of a custom field can contain only letters, digits, underscores (_), and spaces. The key name cannot contain other characters. Otherwise, errors may occur.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Parameter passing</b>: Submit <c>SiteId</c>, <c>RequestHeaders</c>, <c>ResponseHeaders</c>, and <c>Cookies</c> by using <c>formData</c>. Each array element matches a custom field name.</description></item>
+        /// <item><description><b>(Required) SiteId</b>: Although <c>SiteId</c> is not marked as required in the Required column, you must specify a website ID by using this parameter when you can call this API operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateSiteCustomLogRequest
@@ -4695,8 +5224,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建自定义字段</para>
+        /// <para>Adds the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Custom field limits</b>: The key name of a custom field can contain only letters, digits, underscores (_), and spaces. The key name cannot contain other characters. Otherwise, errors may occur.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Parameter passing</b>: Submit <c>SiteId</c>, <c>RequestHeaders</c>, <c>ResponseHeaders</c>, and <c>Cookies</c> by using <c>formData</c>. Each array element matches a custom field name.</description></item>
+        /// <item><description><b>(Required) SiteId</b>: Although <c>SiteId</c> is not marked as required in the Required column, you must specify a website ID by using this parameter when you can call this API operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateSiteCustomLogRequest
@@ -4763,8 +5301,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建自定义字段</para>
+        /// <para>Adds the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Custom field limits</b>: The key name of a custom field can contain only letters, digits, underscores (_), and spaces. The key name cannot contain other characters. Otherwise, errors may occur.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Parameter passing</b>: Submit <c>SiteId</c>, <c>RequestHeaders</c>, <c>ResponseHeaders</c>, and <c>Cookies</c> by using <c>formData</c>. Each array element matches a custom field name.</description></item>
+        /// <item><description><b>(Required) SiteId</b>: Although <c>SiteId</c> is not marked as required in the Required column, you must specify a website ID by using this parameter when you can call this API operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSiteCustomLogRequest
@@ -4781,8 +5328,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建自定义字段</para>
+        /// <para>Adds the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Custom field limits</b>: The key name of a custom field can contain only letters, digits, underscores (_), and spaces. The key name cannot contain other characters. Otherwise, errors may occur.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Parameter passing</b>: Submit <c>SiteId</c>, <c>RequestHeaders</c>, <c>ResponseHeaders</c>, and <c>Cookies</c> by using <c>formData</c>. Each array element matches a custom field name.</description></item>
+        /// <item><description><b>(Required) SiteId</b>: Although <c>SiteId</c> is not marked as required in the Required column, you must specify a website ID by using this parameter when you can call this API operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSiteCustomLogRequest
@@ -4799,7 +5355,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个任务投递</para>
+        /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4907,7 +5463,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个任务投递</para>
+        /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5015,7 +5571,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个任务投递</para>
+        /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5033,7 +5589,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个任务投递</para>
+        /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5051,8 +5607,525 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个用户粒度任务投递</para>
+        /// <para>新增站点功能配置</para>
         /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSiteFunctionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSiteFunctionResponse
+        /// </returns>
+        public CreateSiteFunctionResponse CreateSiteFunctionWithOptions(CreateSiteFunctionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSiteFunctionShrinkRequest request = new CreateSiteFunctionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheReserve))
+            {
+                request.CacheReserveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheReserve, "CacheReserve", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheRules))
+            {
+                request.CacheRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheRules, "CacheRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheTags))
+            {
+                request.CacheTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheTags, "CacheTags", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CnameFlattening))
+            {
+                request.CnameFlatteningShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CnameFlattening, "CnameFlattening", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CompressionRules))
+            {
+                request.CompressionRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CompressionRules, "CompressionRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CrossBorderOptimization))
+            {
+                request.CrossBorderOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CrossBorderOptimization, "CrossBorderOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DevelopmentMode))
+            {
+                request.DevelopmentModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DevelopmentMode, "DevelopmentMode", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpRequestHeaderModificationRules))
+            {
+                request.HttpRequestHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpRequestHeaderModificationRules, "HttpRequestHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpResponseHeaderModificationRules))
+            {
+                request.HttpResponseHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpResponseHeaderModificationRules, "HttpResponseHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsApplicationConfiguration))
+            {
+                request.HttpsApplicationConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsApplicationConfiguration, "HttpsApplicationConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsBasicConfiguration))
+            {
+                request.HttpsBasicConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsBasicConfiguration, "HttpsBasicConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageTransform))
+            {
+                request.ImageTransformShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageTransform, "ImageTransform", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6))
+            {
+                request.Ipv6Shrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6, "Ipv6", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagedTransforms))
+            {
+                request.ManagedTransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagedTransforms, "ManagedTransforms", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkOptimization))
+            {
+                request.NetworkOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkOptimization, "NetworkOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OriginProtection))
+            {
+                request.OriginProtectionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OriginProtection, "OriginProtection", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OriginRules))
+            {
+                request.OriginRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OriginRules, "OriginRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectRules))
+            {
+                request.RedirectRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectRules, "RedirectRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RewriteUrlRules))
+            {
+                request.RewriteUrlRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RewriteUrlRules, "RewriteUrlRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SeoBypass))
+            {
+                request.SeoBypassShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SeoBypass, "SeoBypass", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SiteNameExclusive))
+            {
+                request.SiteNameExclusiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SiteNameExclusive, "SiteNameExclusive", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SitePause))
+            {
+                request.SitePauseShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SitePause, "SitePause", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TieredCache))
+            {
+                request.TieredCacheShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TieredCache, "TieredCache", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheReserveShrink))
+            {
+                query["CacheReserve"] = request.CacheReserveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheRulesShrink))
+            {
+                query["CacheRules"] = request.CacheRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheTagsShrink))
+            {
+                query["CacheTags"] = request.CacheTagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnameFlatteningShrink))
+            {
+                query["CnameFlattening"] = request.CnameFlatteningShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionRulesShrink))
+            {
+                query["CompressionRules"] = request.CompressionRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimizationShrink))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevelopmentModeShrink))
+            {
+                query["DevelopmentMode"] = request.DevelopmentModeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpRequestHeaderModificationRulesShrink))
+            {
+                query["HttpRequestHeaderModificationRules"] = request.HttpRequestHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpResponseHeaderModificationRulesShrink))
+            {
+                query["HttpResponseHeaderModificationRules"] = request.HttpResponseHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsApplicationConfigurationShrink))
+            {
+                query["HttpsApplicationConfiguration"] = request.HttpsApplicationConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsBasicConfigurationShrink))
+            {
+                query["HttpsBasicConfiguration"] = request.HttpsBasicConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageTransformShrink))
+            {
+                query["ImageTransform"] = request.ImageTransformShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Shrink))
+            {
+                query["Ipv6"] = request.Ipv6Shrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedTransformsShrink))
+            {
+                query["ManagedTransforms"] = request.ManagedTransformsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkOptimizationShrink))
+            {
+                query["NetworkOptimization"] = request.NetworkOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginProtectionShrink))
+            {
+                query["OriginProtection"] = request.OriginProtectionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginRulesShrink))
+            {
+                query["OriginRules"] = request.OriginRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectRulesShrink))
+            {
+                query["RedirectRules"] = request.RedirectRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RewriteUrlRulesShrink))
+            {
+                query["RewriteUrlRules"] = request.RewriteUrlRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeoBypassShrink))
+            {
+                query["SeoBypass"] = request.SeoBypassShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteNameExclusiveShrink))
+            {
+                query["SiteNameExclusive"] = request.SiteNameExclusiveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SitePauseShrink))
+            {
+                query["SitePause"] = request.SitePauseShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TieredCacheShrink))
+            {
+                query["TieredCache"] = request.TieredCacheShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSiteFunction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSiteFunctionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增站点功能配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSiteFunctionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSiteFunctionResponse
+        /// </returns>
+        public async Task<CreateSiteFunctionResponse> CreateSiteFunctionWithOptionsAsync(CreateSiteFunctionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSiteFunctionShrinkRequest request = new CreateSiteFunctionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheReserve))
+            {
+                request.CacheReserveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheReserve, "CacheReserve", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheRules))
+            {
+                request.CacheRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheRules, "CacheRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheTags))
+            {
+                request.CacheTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheTags, "CacheTags", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CnameFlattening))
+            {
+                request.CnameFlatteningShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CnameFlattening, "CnameFlattening", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CompressionRules))
+            {
+                request.CompressionRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CompressionRules, "CompressionRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CrossBorderOptimization))
+            {
+                request.CrossBorderOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CrossBorderOptimization, "CrossBorderOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DevelopmentMode))
+            {
+                request.DevelopmentModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DevelopmentMode, "DevelopmentMode", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpRequestHeaderModificationRules))
+            {
+                request.HttpRequestHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpRequestHeaderModificationRules, "HttpRequestHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpResponseHeaderModificationRules))
+            {
+                request.HttpResponseHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpResponseHeaderModificationRules, "HttpResponseHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsApplicationConfiguration))
+            {
+                request.HttpsApplicationConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsApplicationConfiguration, "HttpsApplicationConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsBasicConfiguration))
+            {
+                request.HttpsBasicConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsBasicConfiguration, "HttpsBasicConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageTransform))
+            {
+                request.ImageTransformShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageTransform, "ImageTransform", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6))
+            {
+                request.Ipv6Shrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6, "Ipv6", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagedTransforms))
+            {
+                request.ManagedTransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagedTransforms, "ManagedTransforms", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkOptimization))
+            {
+                request.NetworkOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkOptimization, "NetworkOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OriginProtection))
+            {
+                request.OriginProtectionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OriginProtection, "OriginProtection", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OriginRules))
+            {
+                request.OriginRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OriginRules, "OriginRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectRules))
+            {
+                request.RedirectRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectRules, "RedirectRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RewriteUrlRules))
+            {
+                request.RewriteUrlRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RewriteUrlRules, "RewriteUrlRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SeoBypass))
+            {
+                request.SeoBypassShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SeoBypass, "SeoBypass", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SiteNameExclusive))
+            {
+                request.SiteNameExclusiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SiteNameExclusive, "SiteNameExclusive", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SitePause))
+            {
+                request.SitePauseShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SitePause, "SitePause", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TieredCache))
+            {
+                request.TieredCacheShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TieredCache, "TieredCache", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheReserveShrink))
+            {
+                query["CacheReserve"] = request.CacheReserveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheRulesShrink))
+            {
+                query["CacheRules"] = request.CacheRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheTagsShrink))
+            {
+                query["CacheTags"] = request.CacheTagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnameFlatteningShrink))
+            {
+                query["CnameFlattening"] = request.CnameFlatteningShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionRulesShrink))
+            {
+                query["CompressionRules"] = request.CompressionRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimizationShrink))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevelopmentModeShrink))
+            {
+                query["DevelopmentMode"] = request.DevelopmentModeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpRequestHeaderModificationRulesShrink))
+            {
+                query["HttpRequestHeaderModificationRules"] = request.HttpRequestHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpResponseHeaderModificationRulesShrink))
+            {
+                query["HttpResponseHeaderModificationRules"] = request.HttpResponseHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsApplicationConfigurationShrink))
+            {
+                query["HttpsApplicationConfiguration"] = request.HttpsApplicationConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsBasicConfigurationShrink))
+            {
+                query["HttpsBasicConfiguration"] = request.HttpsBasicConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageTransformShrink))
+            {
+                query["ImageTransform"] = request.ImageTransformShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Shrink))
+            {
+                query["Ipv6"] = request.Ipv6Shrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedTransformsShrink))
+            {
+                query["ManagedTransforms"] = request.ManagedTransformsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkOptimizationShrink))
+            {
+                query["NetworkOptimization"] = request.NetworkOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginProtectionShrink))
+            {
+                query["OriginProtection"] = request.OriginProtectionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginRulesShrink))
+            {
+                query["OriginRules"] = request.OriginRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectRulesShrink))
+            {
+                query["RedirectRules"] = request.RedirectRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RewriteUrlRulesShrink))
+            {
+                query["RewriteUrlRules"] = request.RewriteUrlRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeoBypassShrink))
+            {
+                query["SeoBypass"] = request.SeoBypassShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteNameExclusiveShrink))
+            {
+                query["SiteNameExclusive"] = request.SiteNameExclusiveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SitePauseShrink))
+            {
+                query["SitePause"] = request.SitePauseShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TieredCacheShrink))
+            {
+                query["TieredCache"] = request.TieredCacheShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSiteFunction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSiteFunctionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增站点功能配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSiteFunctionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSiteFunctionResponse
+        /// </returns>
+        public CreateSiteFunctionResponse CreateSiteFunction(CreateSiteFunctionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSiteFunctionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增站点功能配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSiteFunctionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSiteFunctionResponse
+        /// </returns>
+        public async Task<CreateSiteFunctionResponse> CreateSiteFunctionAsync(CreateSiteFunctionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSiteFunctionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a log delivery task to ship logs to the specified destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Field filtering</b>: Use the <c>FieldName</c> parameter to specify log fields to deliver.</description></item>
+        /// <item><description><b>Filtering rules</b>: Use the <c>FilterRules</c> parameter to pre-process and filter log data.</description></item>
+        /// <item><description><b>Diverse delivery destinations</b>: Logs can be delivered to different destinations. Configuration parameters vary with delivery destinations.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Precautions</h2>
+        /// <list type="bullet">
+        /// <item><description>Make sure that you have sufficient permissions to perform delivery tasks.</description></item>
+        /// <item><description>If you enable encryption or authentication, properly configure corresponding parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to make sure that filtering logic works as expected.</description></item>
+        /// <item><description>Specify advanced settings such as the number of retries and timeout period based on your needs to have optimal delivery efficiency and stability.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateUserDeliveryTaskRequest
@@ -5155,8 +6228,25 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个用户粒度任务投递</para>
+        /// <para>Creates a log delivery task to ship logs to the specified destination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Field filtering</b>: Use the <c>FieldName</c> parameter to specify log fields to deliver.</description></item>
+        /// <item><description><b>Filtering rules</b>: Use the <c>FilterRules</c> parameter to pre-process and filter log data.</description></item>
+        /// <item><description><b>Diverse delivery destinations</b>: Logs can be delivered to different destinations. Configuration parameters vary with delivery destinations.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Precautions</h2>
+        /// <list type="bullet">
+        /// <item><description>Make sure that you have sufficient permissions to perform delivery tasks.</description></item>
+        /// <item><description>If you enable encryption or authentication, properly configure corresponding parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to make sure that filtering logic works as expected.</description></item>
+        /// <item><description>Specify advanced settings such as the number of retries and timeout period based on your needs to have optimal delivery efficiency and stability.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateUserDeliveryTaskRequest
@@ -5259,8 +6349,25 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个用户粒度任务投递</para>
+        /// <para>Creates a log delivery task to ship logs to the specified destination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Field filtering</b>: Use the <c>FieldName</c> parameter to specify log fields to deliver.</description></item>
+        /// <item><description><b>Filtering rules</b>: Use the <c>FilterRules</c> parameter to pre-process and filter log data.</description></item>
+        /// <item><description><b>Diverse delivery destinations</b>: Logs can be delivered to different destinations. Configuration parameters vary with delivery destinations.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Precautions</h2>
+        /// <list type="bullet">
+        /// <item><description>Make sure that you have sufficient permissions to perform delivery tasks.</description></item>
+        /// <item><description>If you enable encryption or authentication, properly configure corresponding parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to make sure that filtering logic works as expected.</description></item>
+        /// <item><description>Specify advanced settings such as the number of retries and timeout period based on your needs to have optimal delivery efficiency and stability.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserDeliveryTaskRequest
@@ -5277,8 +6384,25 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建一个用户粒度任务投递</para>
+        /// <para>Creates a log delivery task to ship logs to the specified destination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Field filtering</b>: Use the <c>FieldName</c> parameter to specify log fields to deliver.</description></item>
+        /// <item><description><b>Filtering rules</b>: Use the <c>FilterRules</c> parameter to pre-process and filter log data.</description></item>
+        /// <item><description><b>Diverse delivery destinations</b>: Logs can be delivered to different destinations. Configuration parameters vary with delivery destinations.</description></item>
+        /// </list>
+        /// <h2><a href="#"></a>Precautions</h2>
+        /// <list type="bullet">
+        /// <item><description>Make sure that you have sufficient permissions to perform delivery tasks.</description></item>
+        /// <item><description>If you enable encryption or authentication, properly configure corresponding parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to make sure that filtering logic works as expected.</description></item>
+        /// <item><description>Specify advanced settings such as the number of retries and timeout period based on your needs to have optimal delivery efficiency and stability.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserDeliveryTaskRequest
@@ -5295,7 +6419,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WAF规则</para>
+        /// <para>Creates a Web Application Firewall (WAF) rule. This allows you to configure fine-grained WAF settings to improve the security of your website or application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5357,7 +6481,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WAF规则</para>
+        /// <para>Creates a Web Application Firewall (WAF) rule. This allows you to configure fine-grained WAF settings to improve the security of your website or application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5419,7 +6543,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WAF规则</para>
+        /// <para>Creates a Web Application Firewall (WAF) rule. This allows you to configure fine-grained WAF settings to improve the security of your website or application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5437,7 +6561,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WAF规则</para>
+        /// <para>Creates a Web Application Firewall (WAF) rule. This allows you to configure fine-grained WAF settings to improve the security of your website or application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5715,7 +6839,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室事件</para>
+        /// <para>Creates a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5833,7 +6957,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室事件</para>
+        /// <para>Creates a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5951,7 +7075,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室事件</para>
+        /// <para>Creates a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5969,7 +7093,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室事件</para>
+        /// <para>Creates a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5987,7 +7111,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室规则</para>
+        /// <para>Creates a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6045,7 +7169,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室规则</para>
+        /// <para>Creates a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6103,7 +7227,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室规则</para>
+        /// <para>Creates a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6121,7 +7245,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建等候室规则</para>
+        /// <para>Creates a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6139,7 +7263,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定制场景策略</para>
+        /// <para>Deletes a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6181,7 +7305,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定制场景策略</para>
+        /// <para>Deletes a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6223,7 +7347,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定制场景策略</para>
+        /// <para>Deletes a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6241,7 +7365,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定制场景策略</para>
+        /// <para>Deletes a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6259,7 +7383,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器的应用</para>
+        /// <para>Deletes a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6301,7 +7425,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器的应用</para>
+        /// <para>Deletes a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6343,7 +7467,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器的应用</para>
+        /// <para>Deletes a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6361,7 +7485,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器的应用</para>
+        /// <para>Deletes a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6379,7 +7503,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个边缘容器应用的域名记录</para>
+        /// <para>Disassociates a domain name from a containerized application. After the dissociation, you can no longer use the domain name to access the containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6429,7 +7553,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个边缘容器应用的域名记录</para>
+        /// <para>Disassociates a domain name from a containerized application. After the dissociation, you can no longer use the domain name to access the containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6479,7 +7603,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个边缘容器应用的域名记录</para>
+        /// <para>Disassociates a domain name from a containerized application. After the dissociation, you can no longer use the domain name to access the containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6497,7 +7621,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个边缘容器应用的域名记录</para>
+        /// <para>Disassociates a domain name from a containerized application. After the dissociation, you can no longer use the domain name to access the containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6515,7 +7639,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的版本</para>
+        /// <para>Deletes a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6561,7 +7685,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的版本</para>
+        /// <para>Deletes a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6607,7 +7731,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的版本</para>
+        /// <para>Deletes a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6625,7 +7749,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的版本</para>
+        /// <para>Deletes a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6643,7 +7767,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace的Key-Value对</para>
+        /// <para>Deletes a key-value pair from a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6681,7 +7805,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace的Key-Value对</para>
+        /// <para>Deletes a key-value pair from a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6719,7 +7843,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace的Key-Value对</para>
+        /// <para>Deletes a key-value pair from a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6737,7 +7861,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace的Key-Value对</para>
+        /// <para>Deletes a key-value pair from a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6755,7 +7879,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace</para>
+        /// <para>Deletes a namespace from an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6797,7 +7921,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace</para>
+        /// <para>Deletes a namespace from an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6839,7 +7963,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace</para>
+        /// <para>Deletes a namespace from an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6857,7 +7981,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Namespace</para>
+        /// <para>Deletes a namespace from an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6875,7 +7999,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义列表</para>
+        /// <para>Deletes a custom list that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6917,7 +8041,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义列表</para>
+        /// <para>Deletes a custom list that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6959,7 +8083,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义列表</para>
+        /// <para>Deletes a custom list that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6977,7 +8101,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义列表</para>
+        /// <para>Deletes a custom list that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6995,7 +8119,127 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义响应页面</para>
+        /// <para>关闭源站防护功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOriginProtectionResponse
+        /// </returns>
+        public DeleteOriginProtectionResponse DeleteOriginProtectionWithOptions(DeleteOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOriginProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭源站防护功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOriginProtectionResponse
+        /// </returns>
+        public async Task<DeleteOriginProtectionResponse> DeleteOriginProtectionWithOptionsAsync(DeleteOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOriginProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭源站防护功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOriginProtectionResponse
+        /// </returns>
+        public DeleteOriginProtectionResponse DeleteOriginProtection(DeleteOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOriginProtectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭源站防护功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOriginProtectionResponse
+        /// </returns>
+        public async Task<DeleteOriginProtectionResponse> DeleteOriginProtectionAsync(DeleteOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOriginProtectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom error page that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7037,7 +8281,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义响应页面</para>
+        /// <para>Deletes a custom error page that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7079,7 +8323,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义响应页面</para>
+        /// <para>Deletes a custom error page that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7097,7 +8341,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义响应页面</para>
+        /// <para>Deletes a custom error page that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7115,7 +8359,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记录</para>
+        /// <para>Deletes a DNS record of a website based on the specified RecordId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7157,7 +8401,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记录</para>
+        /// <para>Deletes a DNS record of a website based on the specified RecordId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7199,7 +8443,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记录</para>
+        /// <para>Deletes a DNS record of a website based on the specified RecordId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7217,7 +8461,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记录</para>
+        /// <para>Deletes a DNS record of a website based on the specified RecordId.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7235,7 +8479,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine</para>
+        /// <para>Deletes a routine in Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7277,7 +8521,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine</para>
+        /// <para>Deletes a routine in Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7319,7 +8563,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine</para>
+        /// <para>Deletes a routine in Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7337,7 +8581,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine</para>
+        /// <para>Deletes a routine in Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7355,7 +8599,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine某版本代码</para>
+        /// <para>Deletes a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7401,7 +8645,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine某版本代码</para>
+        /// <para>Deletes a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7447,7 +8691,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine某版本代码</para>
+        /// <para>Deletes a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7465,7 +8709,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine某版本代码</para>
+        /// <para>Deletes a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7483,7 +8727,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联域名</para>
+        /// <para>Deletes a record that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7539,7 +8783,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联域名</para>
+        /// <para>Deletes a record that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7595,7 +8839,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联域名</para>
+        /// <para>Deletes a record that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7613,7 +8857,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联域名</para>
+        /// <para>Deletes a record that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7631,7 +8875,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联路由</para>
+        /// <para>Deletes a route that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7685,7 +8929,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联路由</para>
+        /// <para>Deletes a route that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7739,7 +8983,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联路由</para>
+        /// <para>Deletes a route that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7757,7 +9001,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Routine关联路由</para>
+        /// <para>Deletes a route that is associated with a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7775,7 +9019,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个定时预热计划</para>
+        /// <para>Deletes a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7817,7 +9061,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个定时预热计划</para>
+        /// <para>Deletes a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7859,7 +9103,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个定时预热计划</para>
+        /// <para>Deletes a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7877,7 +9121,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个定时预热计划</para>
+        /// <para>Deletes a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7895,7 +9139,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定定时预热任务</para>
+        /// <para>Deletes a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7937,7 +9181,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定定时预热任务</para>
+        /// <para>Deletes a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7979,7 +9223,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定定时预热任务</para>
+        /// <para>Deletes a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7997,7 +9241,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定定时预热任务</para>
+        /// <para>Deletes a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8015,7 +9259,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点</para>
+        /// <para>Deletes a website based on the specified website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8065,7 +9309,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点</para>
+        /// <para>Deletes a website based on the specified website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8115,7 +9359,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点</para>
+        /// <para>Deletes a website based on the specified website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8133,7 +9377,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点</para>
+        /// <para>Deletes a website based on the specified website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8151,7 +9395,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个任务投递</para>
+        /// <para>Deletes a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8197,7 +9441,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个任务投递</para>
+        /// <para>Deletes a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8243,7 +9487,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个任务投递</para>
+        /// <para>Deletes a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8261,7 +9505,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个任务投递</para>
+        /// <para>Deletes a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8279,8 +9523,146 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个用户任务投递</para>
+        /// <para>删除站点配置</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSiteFunctionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSiteFunctionResponse
+        /// </returns>
+        public DeleteSiteFunctionResponse DeleteSiteFunctionWithOptions(DeleteSiteFunctionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigIds))
+            {
+                query["ConfigIds"] = request.ConfigIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSiteFunction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSiteFunctionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSiteFunctionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSiteFunctionResponse
+        /// </returns>
+        public async Task<DeleteSiteFunctionResponse> DeleteSiteFunctionWithOptionsAsync(DeleteSiteFunctionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigIds))
+            {
+                query["ConfigIds"] = request.ConfigIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSiteFunction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSiteFunctionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSiteFunctionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSiteFunctionResponse
+        /// </returns>
+        public DeleteSiteFunctionResponse DeleteSiteFunction(DeleteSiteFunctionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSiteFunctionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSiteFunctionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSiteFunctionResponse
+        /// </returns>
+        public async Task<DeleteSiteFunctionResponse> DeleteSiteFunctionAsync(DeleteSiteFunctionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSiteFunctionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a log delivery task from your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*****&gt; </para>
+        /// <list type="bullet">
+        /// <item><description>Deleted tasks cannot be restored. Proceed with caution.</description></item>
+        /// <item><description>To call this operation, you must have an account that has the required permissions.</description></item>
+        /// <item><description>The returned <c>RequestId</c> value can be used to track the request processing progress and troubleshoot issues.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserDeliveryTaskRequest
@@ -8321,8 +9703,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个用户任务投递</para>
+        /// <para>Deletes a log delivery task from your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*****&gt; </para>
+        /// <list type="bullet">
+        /// <item><description>Deleted tasks cannot be restored. Proceed with caution.</description></item>
+        /// <item><description>To call this operation, you must have an account that has the required permissions.</description></item>
+        /// <item><description>The returned <c>RequestId</c> value can be used to track the request processing progress and troubleshoot issues.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserDeliveryTaskRequest
@@ -8363,8 +9755,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个用户任务投递</para>
+        /// <para>Deletes a log delivery task from your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*****&gt; </para>
+        /// <list type="bullet">
+        /// <item><description>Deleted tasks cannot be restored. Proceed with caution.</description></item>
+        /// <item><description>To call this operation, you must have an account that has the required permissions.</description></item>
+        /// <item><description>The returned <c>RequestId</c> value can be used to track the request processing progress and troubleshoot issues.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserDeliveryTaskRequest
@@ -8381,8 +9783,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个用户任务投递</para>
+        /// <para>Deletes a log delivery task from your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*****&gt; </para>
+        /// <list type="bullet">
+        /// <item><description>Deleted tasks cannot be restored. Proceed with caution.</description></item>
+        /// <item><description>To call this operation, you must have an account that has the required permissions.</description></item>
+        /// <item><description>The returned <c>RequestId</c> value can be used to track the request processing progress and troubleshoot issues.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserDeliveryTaskRequest
@@ -8399,7 +9811,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则</para>
+        /// <para>Deletes a Web Application Firewall (WAF) rule, including its configurations and match conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8451,7 +9863,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则</para>
+        /// <para>Deletes a Web Application Firewall (WAF) rule, including its configurations and match conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8503,7 +9915,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则</para>
+        /// <para>Deletes a Web Application Firewall (WAF) rule, including its configurations and match conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8521,7 +9933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则</para>
+        /// <para>Deletes a Web Application Firewall (WAF) rule, including its configurations and match conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8539,7 +9951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则集</para>
+        /// <para>Deletes a Web Application Firewall (WAF) ruleset that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8591,7 +10003,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则集</para>
+        /// <para>Deletes a Web Application Firewall (WAF) ruleset that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8643,7 +10055,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则集</para>
+        /// <para>Deletes a Web Application Firewall (WAF) ruleset that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8661,7 +10073,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WAF规则集</para>
+        /// <para>Deletes a Web Application Firewall (WAF) ruleset that is no longer needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8679,7 +10091,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室</para>
+        /// <para>Deletes a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8725,7 +10137,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室</para>
+        /// <para>Deletes a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8771,7 +10183,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室</para>
+        /// <para>Deletes a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8789,7 +10201,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室</para>
+        /// <para>Deletes a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8807,7 +10219,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室事件</para>
+        /// <para>Deletes a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8853,7 +10265,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室事件</para>
+        /// <para>Deletes a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8899,7 +10311,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室事件</para>
+        /// <para>Deletes a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8917,7 +10329,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室事件</para>
+        /// <para>Deletes a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8935,7 +10347,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室规则</para>
+        /// <para>Deletes a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8981,7 +10393,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室规则</para>
+        /// <para>Deletes a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9027,7 +10439,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室规则</para>
+        /// <para>Deletes a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9045,7 +10457,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除等候室规则</para>
+        /// <para>Deletes a waiting room bypass rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9063,7 +10475,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定制场景策略配置</para>
+        /// <para>Queries the configurations of a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9113,7 +10525,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定制场景策略配置</para>
+        /// <para>Queries the configurations of a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9163,7 +10575,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定制场景策略配置</para>
+        /// <para>Queries the configurations of a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9181,7 +10593,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定制场景策略配置</para>
+        /// <para>Queries the configurations of a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9199,7 +10611,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>攻击分析-查询攻击事件列表</para>
+        /// <para>Queries DDoS attack events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9261,7 +10673,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>攻击分析-查询攻击事件列表</para>
+        /// <para>Queries DDoS attack events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9323,7 +10735,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>攻击分析-查询攻击事件列表</para>
+        /// <para>Queries DDoS attack events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9341,7 +10753,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>攻击分析-查询攻击事件列表</para>
+        /// <para>Queries DDoS attack events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9359,7 +10771,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS智能防护配置信息</para>
+        /// <para>Queries the configuration of smart HTTP DDoS protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9401,7 +10813,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS智能防护配置信息</para>
+        /// <para>Queries the configuration of smart HTTP DDoS protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9443,7 +10855,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS智能防护配置信息</para>
+        /// <para>Queries the configuration of smart HTTP DDoS protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9461,7 +10873,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS智能防护配置信息</para>
+        /// <para>Queries the configuration of smart HTTP DDoS protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9479,7 +10891,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS攻击防护配置信息</para>
+        /// <para>Queries the configurations of HTTP DDoS attack protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9521,7 +10933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS攻击防护配置信息</para>
+        /// <para>Queries the configurations of HTTP DDoS attack protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9563,7 +10975,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS攻击防护配置信息</para>
+        /// <para>Queries the configurations of HTTP DDoS attack protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9581,7 +10993,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP DDoS攻击防护配置信息</para>
+        /// <para>Queries the configurations of HTTP DDoS attack protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9599,7 +11011,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户的KV状态信</para>
+        /// <para>Queries whether Edge KV is activated in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9632,7 +11044,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户的KV状态信</para>
+        /// <para>Queries whether Edge KV is activated in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9665,7 +11077,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户的KV状态信</para>
+        /// <para>Queries whether Edge KV is activated in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9679,7 +11091,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户的KV状态信</para>
+        /// <para>Queries whether Edge KV is activated in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9693,7 +11105,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预热任务查询接口</para>
+        /// <para>Queries the details of prefetch tasks by time, task status, or prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9731,7 +11143,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预热任务查询接口</para>
+        /// <para>Queries the details of prefetch tasks by time, task status, or prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9769,7 +11181,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预热任务查询接口</para>
+        /// <para>Queries the details of prefetch tasks by time, task status, or prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9787,7 +11199,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预热任务查询接口</para>
+        /// <para>Queries the details of prefetch tasks by time, task status, or prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9805,7 +11217,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新任务查询接口</para>
+        /// <para>Queries the details of purge tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9843,7 +11255,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新任务查询接口</para>
+        /// <para>Queries the details of purge tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9881,7 +11293,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新任务查询接口</para>
+        /// <para>Queries the details of purge tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9899,7 +11311,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新任务查询接口</para>
+        /// <para>Queries the details of purge tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9917,7 +11329,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用定制场景策略</para>
+        /// <para>Disables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9959,7 +11371,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用定制场景策略</para>
+        /// <para>Disables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10001,7 +11413,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用定制场景策略</para>
+        /// <para>Disables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10019,7 +11431,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用定制场景策略</para>
+        /// <para>Disables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10037,7 +11449,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑站点WAF配置</para>
+        /// <para>Modifies the Web Application Firewall (WAF) configuration of a website, such as the client IP address that is identified by WAF.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10095,7 +11507,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑站点WAF配置</para>
+        /// <para>Modifies the Web Application Firewall (WAF) configuration of a website, such as the client IP address that is identified by WAF.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10153,7 +11565,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑站点WAF配置</para>
+        /// <para>Modifies the Web Application Firewall (WAF) configuration of a website, such as the client IP address that is identified by WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10171,7 +11583,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑站点WAF配置</para>
+        /// <para>Modifies the Web Application Firewall (WAF) configuration of a website, such as the client IP address that is identified by WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10189,7 +11601,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动定制场景策略</para>
+        /// <para>Enables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10231,7 +11643,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动定制场景策略</para>
+        /// <para>Enables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10273,7 +11685,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动定制场景策略</para>
+        /// <para>Enables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10291,7 +11703,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动定制场景策略</para>
+        /// <para>Enables a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +11721,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出记录</para>
+        /// <para>Exports all DNS records of a website domain as a TXT file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10347,7 +11759,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出记录</para>
+        /// <para>Exports all DNS records of a website domain as a TXT file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10385,7 +11797,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出记录</para>
+        /// <para>Exports all DNS records of a website domain as a TXT file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10403,7 +11815,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出记录</para>
+        /// <para>Exports all DNS records of a website domain as a TXT file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10421,7 +11833,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例规格</para>
+        /// <para>Queries the available specifications of cache reserve instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10454,7 +11866,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例规格</para>
+        /// <para>Queries the available specifications of cache reserve instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10487,7 +11899,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例规格</para>
+        /// <para>Queries the available specifications of cache reserve instances.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10501,7 +11913,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例规格</para>
+        /// <para>Queries the available specifications of cache reserve instances.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10515,7 +11927,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用信息</para>
+        /// <para>Queries the information about a containerized application, including basic application configurations and health check configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10557,7 +11969,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用信息</para>
+        /// <para>Queries the information about a containerized application, including basic application configurations and health check configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10599,7 +12011,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用信息</para>
+        /// <para>Queries the information about a containerized application, including basic application configurations and health check configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10617,7 +12029,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用信息</para>
+        /// <para>Queries the information about a containerized application, including basic application configurations and health check configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10635,7 +12047,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的状态信息</para>
+        /// <para>Queries the status information about a containerized application, including the deployment, release, and rollback of the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10681,7 +12093,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的状态信息</para>
+        /// <para>Queries the status information about a containerized application, including the deployment, release, and rollback of the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10727,7 +12139,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的状态信息</para>
+        /// <para>Queries the status information about a containerized application, including the deployment, release, and rollback of the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10745,7 +12157,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的状态信息</para>
+        /// <para>Queries the status information about a containerized application, including the deployment, release, and rollback of the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10763,7 +12175,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的某个版本信息</para>
+        /// <para>Queries the information about a version of a containerized application. You can select an application version to release based on the version information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10801,7 +12213,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的某个版本信息</para>
+        /// <para>Queries the information about a version of a containerized application. You can select an application version to release based on the version information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10839,7 +12251,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的某个版本信息</para>
+        /// <para>Queries the information about a version of a containerized application. You can select an application version to release based on the version information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10857,7 +12269,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的某个版本信息</para>
+        /// <para>Queries the information about a version of a containerized application. You can select an application version to release based on the version information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10875,7 +12287,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用部署区域</para>
+        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10913,7 +12325,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用部署区域</para>
+        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10951,7 +12363,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用部署区域</para>
+        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10969,7 +12381,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用部署区域</para>
+        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10987,7 +12399,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器日志信息</para>
+        /// <para>Queries Edge Container logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11025,7 +12437,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器日志信息</para>
+        /// <para>Queries Edge Container logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11063,7 +12475,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器日志信息</para>
+        /// <para>Queries Edge Container logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11081,7 +12493,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器日志信息</para>
+        /// <para>Queries Edge Container logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11099,7 +12511,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用测试环境部署状态</para>
+        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11137,7 +12549,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用测试环境部署状态</para>
+        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11175,7 +12587,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用测试环境部署状态</para>
+        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11193,7 +12605,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用测试环境部署状态</para>
+        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11211,7 +12623,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用终端信息</para>
+        /// <para>Queries the terminal information of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11253,7 +12665,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用终端信息</para>
+        /// <para>Queries the terminal information of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11295,7 +12707,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用终端信息</para>
+        /// <para>Queries the terminal information of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11313,7 +12725,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用终端信息</para>
+        /// <para>Queries the terminal information of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11331,7 +12743,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetErService</para>
+        /// <para>Checks the status of Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11369,7 +12781,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetErService</para>
+        /// <para>Checks the status of Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11407,7 +12819,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetErService</para>
+        /// <para>Checks the status of Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11425,7 +12837,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetErService</para>
+        /// <para>Checks the status of Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11443,7 +12855,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key值</para>
+        /// <para>Queries the value of a key in a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11481,7 +12893,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key值</para>
+        /// <para>Queries the value of a key in a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11519,7 +12931,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key值</para>
+        /// <para>Queries the value of a key in a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11537,7 +12949,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key值</para>
+        /// <para>Queries the value of a key in a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11555,7 +12967,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出账号下的NS</para>
+        /// <para>Queries the Edge KV usage in your Alibaba Cloud account, including the information about all namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11588,7 +13000,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出账号下的NS</para>
+        /// <para>Queries the Edge KV usage in your Alibaba Cloud account, including the information about all namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11621,7 +13033,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出账号下的NS</para>
+        /// <para>Queries the Edge KV usage in your Alibaba Cloud account, including the information about all namespaces.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11635,7 +13047,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出账号下的NS</para>
+        /// <para>Queries the Edge KV usage in your Alibaba Cloud account, including the information about all namespaces.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11649,7 +13061,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Namespace信息</para>
+        /// <para>Queries the information about a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11687,7 +13099,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Namespace信息</para>
+        /// <para>Queries the information about a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11725,7 +13137,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Namespace信息</para>
+        /// <para>Queries the information about a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11743,7 +13155,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Namespace信息</para>
+        /// <para>Queries the information about a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11761,7 +13173,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义列表</para>
+        /// <para>Queries the details of a custom list, such as the name, description, type, and content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11803,7 +13215,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义列表</para>
+        /// <para>Queries the details of a custom list, such as the name, description, type, and content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11845,7 +13257,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义列表</para>
+        /// <para>Queries the details of a custom list, such as the name, description, type, and content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11863,7 +13275,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义列表</para>
+        /// <para>Queries the details of a custom list, such as the name, description, type, and content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11881,7 +13293,119 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义响应页面详情</para>
+        /// <para>查询站点源站防护相关配置，查看回源IP白名单信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOriginProtectionResponse
+        /// </returns>
+        public GetOriginProtectionResponse GetOriginProtectionWithOptions(GetOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOriginProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点源站防护相关配置，查看回源IP白名单信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOriginProtectionResponse
+        /// </returns>
+        public async Task<GetOriginProtectionResponse> GetOriginProtectionWithOptionsAsync(GetOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOriginProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点源站防护相关配置，查看回源IP白名单信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOriginProtectionResponse
+        /// </returns>
+        public GetOriginProtectionResponse GetOriginProtection(GetOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetOriginProtectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点源站防护相关配置，查看回源IP白名单信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOriginProtectionResponse
+        /// </returns>
+        public async Task<GetOriginProtectionResponse> GetOriginProtectionAsync(GetOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetOriginProtectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a custom error page based on the error page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11923,7 +13447,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义响应页面详情</para>
+        /// <para>Queries the details of a custom error page based on the error page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11965,7 +13489,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义响应页面详情</para>
+        /// <para>Queries the details of a custom error page based on the error page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11983,7 +13507,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个自定义响应页面详情</para>
+        /// <para>Queries the details of a custom error page based on the error page ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12001,7 +13525,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取刷新Quota</para>
+        /// <para>Queries the quotas and quota usage for different cache purge options.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12039,7 +13563,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取刷新Quota</para>
+        /// <para>Queries the quotas and quota usage for different cache purge options.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12077,7 +13601,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取刷新Quota</para>
+        /// <para>Queries the quotas and quota usage for different cache purge options.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12095,7 +13619,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取刷新Quota</para>
+        /// <para>Queries the quotas and quota usage for different cache purge options.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12113,7 +13637,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ub日志字段列表接口</para>
+        /// <para>Queries the fields in real-time logs based on the log category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12151,7 +13675,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ub日志字段列表接口</para>
+        /// <para>Queries the fields in real-time logs based on the log category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12189,7 +13713,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ub日志字段列表接口</para>
+        /// <para>Queries the fields in real-time logs based on the log category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12207,7 +13731,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ub日志字段列表接口</para>
+        /// <para>Queries the fields in real-time logs based on the log category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12337,7 +13861,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine配置信息</para>
+        /// <para>Queries the configurations of a routine, including the code versions and the configurations of the environments, associated domain names, and associated routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12379,7 +13903,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine配置信息</para>
+        /// <para>Queries the configurations of a routine, including the code versions and the configurations of the environments, associated domain names, and associated routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12421,7 +13945,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine配置信息</para>
+        /// <para>Queries the configurations of a routine, including the code versions and the configurations of the environments, associated domain names, and associated routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12439,7 +13963,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine配置信息</para>
+        /// <para>Queries the configurations of a routine, including the code versions and the configurations of the environments, associated domain names, and associated routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12457,8 +13981,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传Routine的测试版本代码, 返回上传代码到OSS的参数</para>
+        /// <para>Obtains the release information about the routine code that is released to the staging environment. This information can be used to upload the test code to Object Storage Service (OSS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</para>
+        /// <list type="bullet">
+        /// <item><description>A routine can retain a maximum of 10 code versions. If the number of versions reaches the limit, you must call the DeleteRoutineCodeRevision operation to delete unwanted versions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoutineStagingCodeUploadInfoRequest
@@ -12503,8 +14035,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传Routine的测试版本代码, 返回上传代码到OSS的参数</para>
+        /// <para>Obtains the release information about the routine code that is released to the staging environment. This information can be used to upload the test code to Object Storage Service (OSS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</para>
+        /// <list type="bullet">
+        /// <item><description>A routine can retain a maximum of 10 code versions. If the number of versions reaches the limit, you must call the DeleteRoutineCodeRevision operation to delete unwanted versions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoutineStagingCodeUploadInfoRequest
@@ -12549,8 +14089,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传Routine的测试版本代码, 返回上传代码到OSS的参数</para>
+        /// <para>Obtains the release information about the routine code that is released to the staging environment. This information can be used to upload the test code to Object Storage Service (OSS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</para>
+        /// <list type="bullet">
+        /// <item><description>A routine can retain a maximum of 10 code versions. If the number of versions reaches the limit, you must call the DeleteRoutineCodeRevision operation to delete unwanted versions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoutineStagingCodeUploadInfoRequest
@@ -12567,8 +14115,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传Routine的测试版本代码, 返回上传代码到OSS的参数</para>
+        /// <para>Obtains the release information about the routine code that is released to the staging environment. This information can be used to upload the test code to Object Storage Service (OSS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</para>
+        /// <list type="bullet">
+        /// <item><description>A routine can retain a maximum of 10 code versions. If the number of versions reaches the limit, you must call the DeleteRoutineCodeRevision operation to delete unwanted versions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoutineStagingCodeUploadInfoRequest
@@ -12585,7 +14141,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数测试环境IP</para>
+        /// <para>Queries the IP addresses of staging environments for Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12618,7 +14174,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数测试环境IP</para>
+        /// <para>Queries the IP addresses of staging environments for Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12651,7 +14207,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数测试环境IP</para>
+        /// <para>Queries the IP addresses of staging environments for Edge Routine.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12665,7 +14221,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数测试环境IP</para>
+        /// <para>Queries the IP addresses of staging environments for Edge Routine.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12679,7 +14235,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the Edge Routine information in your Alibaba Cloud account, including the associated subdomain and created routines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12712,7 +14268,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the Edge Routine information in your Alibaba Cloud account, including the associated subdomain and created routines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12745,7 +14301,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the Edge Routine information in your Alibaba Cloud account, including the associated subdomain and created routines.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12759,7 +14315,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the Edge Routine information in your Alibaba Cloud account, including the associated subdomain and created routines.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12773,7 +14329,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个定时预热任务</para>
+        /// <para>Queries a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12811,7 +14367,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个定时预热任务</para>
+        /// <para>Queries a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12849,7 +14405,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个定时预热任务</para>
+        /// <para>Queries a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12867,7 +14423,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个定时预热任务</para>
+        /// <para>Queries a specified scheduled prefetch task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12885,7 +14441,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个站点信息</para>
+        /// <para>Queries information about a website based on the website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12923,7 +14479,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个站点信息</para>
+        /// <para>Queries information about a website based on the website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12961,7 +14517,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个站点信息</para>
+        /// <para>Queries information about a website based on the website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12979,7 +14535,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个站点信息</para>
+        /// <para>Queries information about a website based on the website ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12997,7 +14553,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前NS列表</para>
+        /// <para>Queries the nameservers configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13035,7 +14591,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前NS列表</para>
+        /// <para>Queries the nameservers configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13073,7 +14629,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前NS列表</para>
+        /// <para>Queries the nameservers configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13091,7 +14647,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前NS列表</para>
+        /// <para>Queries the nameservers configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13109,8 +14665,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义字段</para>
+        /// <para>Queries the configuration of custom log fields for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Description</b>: You can call this operation to query the configuration of custom log fields for a website, including custom fields in request headers, response headers, and cookies.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Scenarios</b>: You can call this operation in scenarios where you need to obtain specific HTTP headers or cookie information for log analysis.</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteCustomLogRequest
@@ -13147,8 +14712,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义字段</para>
+        /// <para>Queries the configuration of custom log fields for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Description</b>: You can call this operation to query the configuration of custom log fields for a website, including custom fields in request headers, response headers, and cookies.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Scenarios</b>: You can call this operation in scenarios where you need to obtain specific HTTP headers or cookie information for log analysis.</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteCustomLogRequest
@@ -13185,8 +14759,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义字段</para>
+        /// <para>Queries the configuration of custom log fields for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Description</b>: You can call this operation to query the configuration of custom log fields for a website, including custom fields in request headers, response headers, and cookies.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Scenarios</b>: You can call this operation in scenarios where you need to obtain specific HTTP headers or cookie information for log analysis.</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteCustomLogRequest
@@ -13203,8 +14786,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义字段</para>
+        /// <para>Queries the configuration of custom log fields for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Description</b>: You can call this operation to query the configuration of custom log fields for a website, including custom fields in request headers, response headers, and cookies.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Scenarios</b>: You can call this operation in scenarios where you need to obtain specific HTTP headers or cookie information for log analysis.</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteCustomLogRequest
@@ -13221,7 +14813,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个实时日志任务投递</para>
+        /// <para>Queries a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13259,7 +14851,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个实时日志任务投递</para>
+        /// <para>Queries a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13297,7 +14889,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个实时日志任务投递</para>
+        /// <para>Queries a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13315,7 +14907,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个实时日志任务投递</para>
+        /// <para>Queries a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13333,8 +14925,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务quota数</para>
+        /// <para>Queries the remaining quota for delivering a specific category of real-time logs in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
+        /// <b>Take note of the following parameters:</b></para>
+        /// <list type="bullet">
+        /// <item><description>``</description></item>
+        /// <item><description><c>BusinessType</c> is required. You must specify a log category to obtain the corresponding quota information.</description></item>
+        /// <item><description><c>SiteId</c> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
+        /// <b>Response:</b></description></item>
+        /// <item><description>If a request is successful, the system returns the remaining log delivery quota (<c>FreeQuota</c>), request ID (<c>RequestId</c>), website ID (<c>SiteId</c>), and log category (<c>BusinessType</c>). You can confirm and record the returned data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteLogDeliveryQuotaRequest
@@ -13371,8 +14976,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务quota数</para>
+        /// <para>Queries the remaining quota for delivering a specific category of real-time logs in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
+        /// <b>Take note of the following parameters:</b></para>
+        /// <list type="bullet">
+        /// <item><description>``</description></item>
+        /// <item><description><c>BusinessType</c> is required. You must specify a log category to obtain the corresponding quota information.</description></item>
+        /// <item><description><c>SiteId</c> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
+        /// <b>Response:</b></description></item>
+        /// <item><description>If a request is successful, the system returns the remaining log delivery quota (<c>FreeQuota</c>), request ID (<c>RequestId</c>), website ID (<c>SiteId</c>), and log category (<c>BusinessType</c>). You can confirm and record the returned data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteLogDeliveryQuotaRequest
@@ -13409,8 +15027,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务quota数</para>
+        /// <para>Queries the remaining quota for delivering a specific category of real-time logs in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
+        /// <b>Take note of the following parameters:</b></para>
+        /// <list type="bullet">
+        /// <item><description>``</description></item>
+        /// <item><description><c>BusinessType</c> is required. You must specify a log category to obtain the corresponding quota information.</description></item>
+        /// <item><description><c>SiteId</c> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
+        /// <b>Response:</b></description></item>
+        /// <item><description>If a request is successful, the system returns the remaining log delivery quota (<c>FreeQuota</c>), request ID (<c>RequestId</c>), website ID (<c>SiteId</c>), and log category (<c>BusinessType</c>). You can confirm and record the returned data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteLogDeliveryQuotaRequest
@@ -13427,8 +15058,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务quota数</para>
+        /// <para>Queries the remaining quota for delivering a specific category of real-time logs in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
+        /// <b>Take note of the following parameters:</b></para>
+        /// <list type="bullet">
+        /// <item><description>``</description></item>
+        /// <item><description><c>BusinessType</c> is required. You must specify a log category to obtain the corresponding quota information.</description></item>
+        /// <item><description><c>SiteId</c> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
+        /// <b>Response:</b></description></item>
+        /// <item><description>If a request is successful, the system returns the remaining log delivery quota (<c>FreeQuota</c>), request ID (<c>RequestId</c>), website ID (<c>SiteId</c>), and log category (<c>BusinessType</c>). You can confirm and record the returned data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSiteLogDeliveryQuotaRequest
@@ -13445,7 +15089,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取站点WAF配置</para>
+        /// <para>Queries the Web Application Firewall (WAF) configurations of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13491,7 +15135,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取站点WAF配置</para>
+        /// <para>Queries the Web Application Firewall (WAF) configurations of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13537,7 +15181,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取站点WAF配置</para>
+        /// <para>Queries the Web Application Firewall (WAF) configurations of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13555,7 +15199,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取站点WAF配置</para>
+        /// <para>Queries the Web Application Firewall (WAF) configurations of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13573,7 +15217,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传任务查询接口</para>
+        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13611,7 +15255,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传任务查询接口</para>
+        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13649,7 +15293,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传任务查询接口</para>
+        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13667,7 +15311,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传任务查询接口</para>
+        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13685,8 +15329,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个用户粒度任务投递</para>
+        /// <para>Queries the information about a log delivery task by account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API operation queries the details of a delivery task, including the task name, discard rate, region, log category, status, delivery destination, configuration, and filtering rules.****</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query detailed information about a log delivery task to analyze log processing efficiency or troubleshoot delivery problems.****</description></item>
+        /// <item><description>****````</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserDeliveryTaskRequest
@@ -13723,8 +15376,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个用户粒度任务投递</para>
+        /// <para>Queries the information about a log delivery task by account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API operation queries the details of a delivery task, including the task name, discard rate, region, log category, status, delivery destination, configuration, and filtering rules.****</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query detailed information about a log delivery task to analyze log processing efficiency or troubleshoot delivery problems.****</description></item>
+        /// <item><description>****````</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserDeliveryTaskRequest
@@ -13761,8 +15423,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个用户粒度任务投递</para>
+        /// <para>Queries the information about a log delivery task by account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API operation queries the details of a delivery task, including the task name, discard rate, region, log category, status, delivery destination, configuration, and filtering rules.****</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query detailed information about a log delivery task to analyze log processing efficiency or troubleshoot delivery problems.****</description></item>
+        /// <item><description>****````</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserDeliveryTaskRequest
@@ -13779,8 +15450,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个用户粒度任务投递</para>
+        /// <para>Queries the information about a log delivery task by account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API operation queries the details of a delivery task, including the task name, discard rate, region, log category, status, delivery destination, configuration, and filtering rules.****</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query detailed information about a log delivery task to analyze log processing efficiency or troubleshoot delivery problems.****</description></item>
+        /// <item><description>****````</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserDeliveryTaskRequest
@@ -13797,8 +15477,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务用户quota数</para>
+        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserLogDeliveryQuotaRequest
@@ -13835,8 +15520,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务用户quota数</para>
+        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserLogDeliveryQuotaRequest
@@ -13873,8 +15563,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务用户quota数</para>
+        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserLogDeliveryQuotaRequest
@@ -13891,8 +15586,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志投递任务用户quota数</para>
+        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserLogDeliveryQuotaRequest
@@ -13907,6 +15607,11 @@ namespace AlibabaCloud.SDK.ESA20240910
             return await GetUserLogDeliveryQuotaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the application key (AppKey) that is used for authentication and data exchange in bot behavior detection in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetWafBotAppKeyRequest
         /// </param>
@@ -13935,6 +15640,11 @@ namespace AlibabaCloud.SDK.ESA20240910
             return TeaModel.ToObject<GetWafBotAppKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the application key (AppKey) that is used for authentication and data exchange in bot behavior detection in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetWafBotAppKeyRequest
         /// </param>
@@ -13963,6 +15673,11 @@ namespace AlibabaCloud.SDK.ESA20240910
             return TeaModel.ToObject<GetWafBotAppKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the application key (AppKey) that is used for authentication and data exchange in bot behavior detection in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetWafBotAppKeyResponse
         /// </returns>
@@ -13972,6 +15687,11 @@ namespace AlibabaCloud.SDK.ESA20240910
             return GetWafBotAppKeyWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the application key (AppKey) that is used for authentication and data exchange in bot behavior detection in Web Application Firewall (WAF).</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetWafBotAppKeyResponse
         /// </returns>
@@ -13983,7 +15703,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将匹配项转换为表达式</para>
+        /// <para>Queries the conditions for matching incoming requests that are configured in a WAF rule category for a website. These conditions define how WAF detects and processes different types of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14037,7 +15757,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将匹配项转换为表达式</para>
+        /// <para>Queries the conditions for matching incoming requests that are configured in a WAF rule category for a website. These conditions define how WAF detects and processes different types of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14091,7 +15811,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将匹配项转换为表达式</para>
+        /// <para>Queries the conditions for matching incoming requests that are configured in a WAF rule category for a website. These conditions define how WAF detects and processes different types of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14109,7 +15829,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将匹配项转换为表达式</para>
+        /// <para>Queries the conditions for matching incoming requests that are configured in a WAF rule category for a website. These conditions define how WAF detects and processes different types of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14127,7 +15847,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF配额详情</para>
+        /// <para>Queries the quotas of Web Application Firewall (WAF) resources, such as managed rule groups, custom lists, custom error pages, and scenario-specific policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14169,7 +15889,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF配额详情</para>
+        /// <para>Queries the quotas of Web Application Firewall (WAF) resources, such as managed rule groups, custom lists, custom error pages, and scenario-specific policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14211,7 +15931,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF配额详情</para>
+        /// <para>Queries the quotas of Web Application Firewall (WAF) resources, such as managed rule groups, custom lists, custom error pages, and scenario-specific policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14229,7 +15949,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF配额详情</para>
+        /// <para>Queries the quotas of Web Application Firewall (WAF) resources, such as managed rule groups, custom lists, custom error pages, and scenario-specific policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14247,7 +15967,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个WAF规则详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) rule, such as its configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14293,7 +16013,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个WAF规则详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) rule, such as its configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14339,7 +16059,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个WAF规则详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) rule, such as its configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14357,7 +16077,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个WAF规则详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) rule, such as its configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14375,7 +16095,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF规则集详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) ruleset, such as the configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14425,7 +16145,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF规则集详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) ruleset, such as the configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14475,7 +16195,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF规则集详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) ruleset, such as the configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14493,7 +16213,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取WAF规则集详情</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) ruleset, such as the configuration and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14511,7 +16231,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例列表</para>
+        /// <para>Queries the cache reserve instances in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14549,7 +16269,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例列表</para>
+        /// <para>Queries the cache reserve instances in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14587,7 +16307,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例列表</para>
+        /// <para>Queries the cache reserve instances in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14605,7 +16325,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询缓存保持实例列表</para>
+        /// <para>Queries the cache reserve instances in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14735,7 +16455,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个边缘容器应用的全部域名记录</para>
+        /// <para>Lists domain names that are associated with a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14773,7 +16493,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个边缘容器应用的全部域名记录</para>
+        /// <para>Lists domain names that are associated with a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14811,7 +16531,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个边缘容器应用的全部域名记录</para>
+        /// <para>Lists domain names that are associated with a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14829,7 +16549,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个边缘容器应用的全部域名记录</para>
+        /// <para>Lists domain names that are associated with a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14847,7 +16567,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的全部版本信息</para>
+        /// <para>Lists versions of all containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14885,7 +16605,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的全部版本信息</para>
+        /// <para>Lists versions of all containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14923,7 +16643,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的全部版本信息</para>
+        /// <para>Lists versions of all containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14941,7 +16661,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的全部版本信息</para>
+        /// <para>Lists versions of all containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14959,7 +16679,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户全部边缘容器应用</para>
+        /// <para>Queries all containerized applications in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15021,7 +16741,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户全部边缘容器应用</para>
+        /// <para>Queries all containerized applications in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15083,7 +16803,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户全部边缘容器应用</para>
+        /// <para>Queries all containerized applications in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15101,7 +16821,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户全部边缘容器应用</para>
+        /// <para>Queries all containerized applications in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15119,7 +16839,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘容器记录</para>
+        /// <para>Queries the records that are associated with Edge Container for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15157,7 +16877,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘容器记录</para>
+        /// <para>Queries the records that are associated with Edge Container for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15195,7 +16915,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘容器记录</para>
+        /// <para>Queries the records that are associated with Edge Container for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15213,7 +16933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘容器记录</para>
+        /// <para>Queries the records that are associated with Edge Container for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15231,7 +16951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可购买的边缘函数的套餐</para>
+        /// <para>Queries Edge Routine plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15264,7 +16984,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可购买的边缘函数的套餐</para>
+        /// <para>Queries Edge Routine plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15297,7 +17017,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可购买的边缘函数的套餐</para>
+        /// <para>Queries Edge Routine plans.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -15311,7 +17031,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可购买的边缘函数的套餐</para>
+        /// <para>Queries Edge Routine plans.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -15325,8 +17045,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘路由记录</para>
+        /// <para>Queries the records that are associated with Edge Routine routes for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation 100 times per second.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEdgeRoutineRecordsRequest
@@ -15363,8 +17090,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘路由记录</para>
+        /// <para>Queries the records that are associated with Edge Routine routes for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation 100 times per second.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEdgeRoutineRecordsRequest
@@ -15401,8 +17135,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘路由记录</para>
+        /// <para>Queries the records that are associated with Edge Routine routes for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation 100 times per second.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEdgeRoutineRecordsRequest
@@ -15419,8 +17160,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的边缘路由记录</para>
+        /// <para>Queries the records that are associated with Edge Routine routes for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation 100 times per second.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEdgeRoutineRecordsRequest
@@ -15437,7 +17185,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例或者站点的quota值</para>
+        /// <para>Queries the quota details in a subscription plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15475,7 +17223,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例或者站点的quota值</para>
+        /// <para>Queries the quota details in a subscription plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15513,7 +17261,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例或者站点的quota值</para>
+        /// <para>Queries the quota details in a subscription plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15531,7 +17279,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例或者站点的quota值</para>
+        /// <para>Queries the quota details in a subscription plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15549,7 +17297,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询功能quota和用量</para>
+        /// <para>Queries quotas and the actual usage in a plan based on the website or plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15587,7 +17335,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询功能quota和用量</para>
+        /// <para>Queries quotas and the actual usage in a plan based on the website or plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15625,7 +17373,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询功能quota和用量</para>
+        /// <para>Queries quotas and the actual usage in a plan based on the website or plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15643,7 +17391,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询功能quota和用量</para>
+        /// <para>Queries quotas and the actual usage in a plan based on the website or plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15661,7 +17409,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历Namespace的Key值</para>
+        /// <para>Lists all key-value pairs in a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15699,7 +17447,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历Namespace的Key值</para>
+        /// <para>Lists all key-value pairs in a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15737,7 +17485,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历Namespace的Key值</para>
+        /// <para>Lists all key-value pairs in a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15755,7 +17503,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>遍历Namespace的Key值</para>
+        /// <para>Lists all key-value pairs in a namespace in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15773,7 +17521,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义列表</para>
+        /// <para>Queries all custom lists and their details in an Alibaba Cloud account. You can specify query arguments to filter the results and display the returned lists by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15829,7 +17577,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义列表</para>
+        /// <para>Queries all custom lists and their details in an Alibaba Cloud account. You can specify query arguments to filter the results and display the returned lists by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15885,7 +17633,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义列表</para>
+        /// <para>Queries all custom lists and their details in an Alibaba Cloud account. You can specify query arguments to filter the results and display the returned lists by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15903,7 +17651,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义列表</para>
+        /// <para>Queries all custom lists and their details in an Alibaba Cloud account. You can specify query arguments to filter the results and display the returned lists by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15921,8 +17669,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡区域列表</para>
+        /// <para>Queries the information that can be used to configure a traffic steering policy based on the originating country or region for a load balancer, such as the code and code descriptions of the regions and subregions of the load balancer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call an operation to create a traffic steering policy based on the originating country or region for a load balancer, you can use the code of a region or subregion to specify traffic that is sent from the region or subregion.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLoadBalancerRegionsRequest
@@ -15959,8 +17712,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡区域列表</para>
+        /// <para>Queries the information that can be used to configure a traffic steering policy based on the originating country or region for a load balancer, such as the code and code descriptions of the regions and subregions of the load balancer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call an operation to create a traffic steering policy based on the originating country or region for a load balancer, you can use the code of a region or subregion to specify traffic that is sent from the region or subregion.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLoadBalancerRegionsRequest
@@ -15997,8 +17755,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡区域列表</para>
+        /// <para>Queries the information that can be used to configure a traffic steering policy based on the originating country or region for a load balancer, such as the code and code descriptions of the regions and subregions of the load balancer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call an operation to create a traffic steering policy based on the originating country or region for a load balancer, you can use the code of a region or subregion to specify traffic that is sent from the region or subregion.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLoadBalancerRegionsRequest
@@ -16015,8 +17778,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡区域列表</para>
+        /// <para>Queries the information that can be used to configure a traffic steering policy based on the originating country or region for a load balancer, such as the code and code descriptions of the regions and subregions of the load balancer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call an operation to create a traffic steering policy based on the originating country or region for a load balancer, you can use the code of a region or subregion to specify traffic that is sent from the region or subregion.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLoadBalancerRegionsRequest
@@ -16033,7 +17801,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义托管规则组</para>
+        /// <para>Queries all WAF managed rule groups in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16079,7 +17847,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义托管规则组</para>
+        /// <para>Queries all WAF managed rule groups in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16125,7 +17893,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义托管规则组</para>
+        /// <para>Queries all WAF managed rule groups in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16143,7 +17911,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义托管规则组</para>
+        /// <para>Queries all WAF managed rule groups in your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16161,7 +17929,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义响应页面</para>
+        /// <para>Lists all custom error pages that you created. You can define the page number and the number of entries per page to display the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16207,7 +17975,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义响应页面</para>
+        /// <para>Lists all custom error pages that you created. You can define the page number and the number of entries per page to display the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16253,7 +18021,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义响应页面</para>
+        /// <para>Lists all custom error pages that you created. You can define the page number and the number of entries per page to display the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16271,7 +18039,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举自定义响应页面</para>
+        /// <para>Lists all custom error pages that you created. You can define the page number and the number of entries per page to display the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16289,8 +18057,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下的记录列表</para>
+        /// <para>Queries a list of Domain Name System (DNS) records of a website, including the record value, priority, and authentication configurations. Supports filtering by specifying parameters such as RecordName and RecordMatchType.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecordsRequest
@@ -16327,8 +18100,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下的记录列表</para>
+        /// <para>Queries a list of Domain Name System (DNS) records of a website, including the record value, priority, and authentication configurations. Supports filtering by specifying parameters such as RecordName and RecordMatchType.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecordsRequest
@@ -16365,8 +18143,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下的记录列表</para>
+        /// <para>Queries a list of Domain Name System (DNS) records of a website, including the record value, priority, and authentication configurations. Supports filtering by specifying parameters such as RecordName and RecordMatchType.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecordsRequest
@@ -16383,8 +18166,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点下的记录列表</para>
+        /// <para>Queries a list of Domain Name System (DNS) records of a website, including the record value, priority, and authentication configurations. Supports filtering by specifying parameters such as RecordName and RecordMatchType.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecordsRequest
@@ -16401,7 +18189,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine灰度环境列表</para>
+        /// <para>Lists the regions to which Edge Routine code can be released for canary deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16434,7 +18222,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine灰度环境列表</para>
+        /// <para>Lists the regions to which Edge Routine code can be released for canary deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16467,7 +18255,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine灰度环境列表</para>
+        /// <para>Lists the regions to which Edge Routine code can be released for canary deployment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16481,7 +18269,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine灰度环境列表</para>
+        /// <para>Lists the regions to which Edge Routine code can be released for canary deployment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16495,8 +18283,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine可选择规格列表</para>
+        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineOptionalSpecsRequest
@@ -16528,8 +18321,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine可选择规格列表</para>
+        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineOptionalSpecsRequest
@@ -16561,8 +18359,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine可选择规格列表</para>
+        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
+        /// </description>
         /// 
         /// <returns>
         /// ListRoutineOptionalSpecsResponse
@@ -16575,8 +18378,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine可选择规格列表</para>
+        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
+        /// </description>
         /// 
         /// <returns>
         /// ListRoutineOptionalSpecsResponse
@@ -16589,7 +18397,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定任务下的执行计划</para>
+        /// <para>Lists the plans in a scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16627,7 +18435,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定任务下的执行计划</para>
+        /// <para>Lists the plans in a scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16665,7 +18473,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定任务下的执行计划</para>
+        /// <para>Lists the plans in a scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16683,7 +18491,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定任务下的执行计划</para>
+        /// <para>Lists the plans in a scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16701,7 +18509,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出定时预热任务列表</para>
+        /// <para>Queries the scheduled prefetch tasks for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16739,7 +18547,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出定时预热任务列表</para>
+        /// <para>Queries the scheduled prefetch tasks for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16777,7 +18585,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出定时预热任务列表</para>
+        /// <para>Queries the scheduled prefetch tasks for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16795,7 +18603,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出定时预热任务列表</para>
+        /// <para>Queries the scheduled prefetch tasks for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16813,7 +18621,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出全部任务投递</para>
+        /// <para>Lists all log delivery tasks that are in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16851,7 +18659,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出全部任务投递</para>
+        /// <para>Lists all log delivery tasks that are in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16889,7 +18697,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出全部任务投递</para>
+        /// <para>Lists all log delivery tasks that are in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16907,7 +18715,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出全部任务投递</para>
+        /// <para>Lists all log delivery tasks that are in progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16925,7 +18733,119 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点列表</para>
+        /// <para>查询站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteFunctionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteFunctionsResponse
+        /// </returns>
+        public ListSiteFunctionsResponse ListSiteFunctionsWithOptions(ListSiteFunctionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSiteFunctions",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSiteFunctionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteFunctionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteFunctionsResponse
+        /// </returns>
+        public async Task<ListSiteFunctionsResponse> ListSiteFunctionsWithOptionsAsync(ListSiteFunctionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSiteFunctions",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSiteFunctionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteFunctionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteFunctionsResponse
+        /// </returns>
+        public ListSiteFunctionsResponse ListSiteFunctions(ListSiteFunctionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSiteFunctionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteFunctionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteFunctionsResponse
+        /// </returns>
+        public async Task<ListSiteFunctionsResponse> ListSiteFunctionsAsync(ListSiteFunctionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSiteFunctionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16969,7 +18889,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点列表</para>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17013,7 +18933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点列表</para>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17031,7 +18951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点列表</para>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17049,7 +18969,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源已经绑定的标签列表</para>
+        /// <para>Queries tags based on the region ID and resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17119,7 +19039,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源已经绑定的标签列表</para>
+        /// <para>Queries tags based on the region ID and resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17189,7 +19109,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源已经绑定的标签列表</para>
+        /// <para>Queries tags based on the region ID and resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17207,7 +19127,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源已经绑定的标签列表</para>
+        /// <para>Queries tags based on the region ID and resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17225,7 +19145,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传任务</para>
+        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17263,7 +19183,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传任务</para>
+        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17301,7 +19221,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传任务</para>
+        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17319,7 +19239,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传任务</para>
+        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17337,7 +19257,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户全部任务投递</para>
+        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17375,7 +19295,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户全部任务投递</para>
+        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17413,7 +19333,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户全部任务投递</para>
+        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17431,7 +19351,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户全部任务投递</para>
+        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17449,7 +19369,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该用户下可用的已购套餐实例</para>
+        /// <para>Queries the plans that you purchased and the details of the plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17487,7 +19407,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该用户下可用的已购套餐实例</para>
+        /// <para>Queries the plans that you purchased and the details of the plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17525,7 +19445,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该用户下可用的已购套餐实例</para>
+        /// <para>Queries the plans that you purchased and the details of the plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17543,7 +19463,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询该用户下可用的已购套餐实例</para>
+        /// <para>Queries the plans that you purchased and the details of the plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17561,7 +19481,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF托管规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17637,7 +19557,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF托管规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17713,7 +19633,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF托管规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17731,7 +19651,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF托管规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17749,7 +19669,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF阶段</para>
+        /// <para>Queries the WAF rule categories that are applied to a website and related rulesets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17795,7 +19715,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF阶段</para>
+        /// <para>Queries the WAF rule categories that are applied to a website and related rulesets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17841,7 +19761,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF阶段</para>
+        /// <para>Queries the WAF rule categories that are applied to a website and related rulesets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17859,7 +19779,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF阶段</para>
+        /// <para>Queries the WAF rule categories that are applied to a website and related rulesets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17877,7 +19797,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17945,7 +19865,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18013,7 +19933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18031,7 +19951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or some of them based on specific conditions. You can call this operation to query the details of WAF rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18049,7 +19969,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则集</para>
+        /// <para>Lists the rulesets in a Web Application Firewall (WAF) rule category. You can call this operation to query the basic information about and status of rulesets by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18117,7 +20037,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则集</para>
+        /// <para>Lists the rulesets in a Web Application Firewall (WAF) rule category. You can call this operation to query the basic information about and status of rulesets by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18185,7 +20105,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则集</para>
+        /// <para>Lists the rulesets in a Web Application Firewall (WAF) rule category. You can call this operation to query the basic information about and status of rulesets by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18203,7 +20123,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则集</para>
+        /// <para>Lists the rulesets in a Web Application Firewall (WAF) rule category. You can call this operation to query the basic information about and status of rulesets by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18221,7 +20141,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF模板规则</para>
+        /// <para>Queries template rules in Web Application Firewall (WAF). In most cases, these rules are pre-defined rulesets that are used to quickly enable protection against common types of attacks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18277,7 +20197,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF模板规则</para>
+        /// <para>Queries template rules in Web Application Firewall (WAF). In most cases, these rules are pre-defined rulesets that are used to quickly enable protection against common types of attacks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18333,7 +20253,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF模板规则</para>
+        /// <para>Queries template rules in Web Application Firewall (WAF). In most cases, these rules are pre-defined rulesets that are used to quickly enable protection against common types of attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18351,7 +20271,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF模板规则</para>
+        /// <para>Queries template rules in Web Application Firewall (WAF). In most cases, these rules are pre-defined rulesets that are used to quickly enable protection against common types of attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18369,7 +20289,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则使用情况</para>
+        /// <para>Queries the usage details of WAF rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18415,7 +20335,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则使用情况</para>
+        /// <para>Queries the usage details of WAF rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18461,7 +20381,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则使用情况</para>
+        /// <para>Queries the usage details of WAF rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18479,7 +20399,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举WAF规则使用情况</para>
+        /// <para>Queries the usage details of WAF rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18497,8 +20417,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室事件</para>
+        /// <para>Queries the information about waiting room events for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomEventsRequest
@@ -18535,8 +20460,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室事件</para>
+        /// <para>Queries the information about waiting room events for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomEventsRequest
@@ -18573,8 +20503,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室事件</para>
+        /// <para>Queries the information about waiting room events for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomEventsRequest
@@ -18591,8 +20526,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室事件</para>
+        /// <para>Queries the information about waiting room events for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomEventsRequest
@@ -18609,8 +20549,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室绕过规则</para>
+        /// <para>Queries the waiting room bypass rules configured for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the waiting room bypass rules that are associated with a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomRulesRequest
@@ -18647,8 +20592,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室绕过规则</para>
+        /// <para>Queries the waiting room bypass rules configured for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the waiting room bypass rules that are associated with a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomRulesRequest
@@ -18685,8 +20635,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室绕过规则</para>
+        /// <para>Queries the waiting room bypass rules configured for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the waiting room bypass rules that are associated with a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomRulesRequest
@@ -18703,8 +20658,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室绕过规则</para>
+        /// <para>Queries the waiting room bypass rules configured for a waiting room.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the waiting room bypass rules that are associated with a website.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomRulesRequest
@@ -18721,8 +20681,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室</para>
+        /// <para>Queries the information about all waiting rooms in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomsRequest
@@ -18759,8 +20724,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室</para>
+        /// <para>Queries the information about all waiting rooms in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomsRequest
@@ -18797,8 +20767,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室</para>
+        /// <para>Queries the information about all waiting rooms in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomsRequest
@@ -18815,8 +20790,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询等候室</para>
+        /// <para>Queries the information about all waiting rooms in a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWaitingRoomsRequest
@@ -18833,7 +20813,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存预热</para>
+        /// <para>Prefetches cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18893,7 +20873,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存预热</para>
+        /// <para>Prefetches cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18953,7 +20933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存预热</para>
+        /// <para>Prefetches cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18971,7 +20951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存预热</para>
+        /// <para>Prefetches cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18989,7 +20969,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布边缘容器应用的某个版本</para>
+        /// <para>Releases a specific version of a containerized application. You can call this operation to iterate an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19071,7 +21051,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布边缘容器应用的某个版本</para>
+        /// <para>Releases a specific version of a containerized application. You can call this operation to iterate an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19153,7 +21133,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布边缘容器应用的某个版本</para>
+        /// <para>Releases a specific version of a containerized application. You can call this operation to iterate an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19171,7 +21151,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布边缘容器应用的某个版本</para>
+        /// <para>Releases a specific version of a containerized application. You can call this operation to iterate an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19189,7 +21169,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19253,7 +21233,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19317,7 +21297,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19335,7 +21315,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19353,7 +21333,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新</para>
+        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19417,7 +21397,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新</para>
+        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19481,7 +21461,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新</para>
+        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19499,7 +21479,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新</para>
+        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19517,7 +21497,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对</para>
+        /// <para>Configures a key-value pair for a namespace. The request body can be up to 2 MB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19581,7 +21561,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对</para>
+        /// <para>Configures a key-value pair for a namespace. The request body can be up to 2 MB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19645,7 +21625,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对</para>
+        /// <para>Configures a key-value pair for a namespace. The request body can be up to 2 MB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19663,7 +21643,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对</para>
+        /// <para>Configures a key-value pair for a namespace. The request body can be up to 2 MB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19681,8 +21661,48 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对，支持最大25M的Body</para>
+        /// <para>Configures a large key-value pair for a namespace. The request body can be up to 25 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="~~PutKv~~">PutKv</a>. For small request bodies, we recommend that you use <a href="~~PutKv~~">PutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and PutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestPutKvWithHighCapacity() {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs.
+        ///         namespace := &quot;test-put-kv&quot;
+        ///         key := &quot;test_PutKvWithHighCapacity_0&quot;
+        ///         value := strings.Repeat(&quot;t&quot;, 10<em>1024</em>1024)
+        ///         rawReq := &amp;PutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             Value:     &amp;value,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the PutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             UrlObject: bytes.NewReader([]byte(payload)),
+        ///         }
+        ///         resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutKvWithHighCapacityRequest
@@ -19731,8 +21751,48 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对，支持最大25M的Body</para>
+        /// <para>Configures a large key-value pair for a namespace. The request body can be up to 25 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="~~PutKv~~">PutKv</a>. For small request bodies, we recommend that you use <a href="~~PutKv~~">PutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and PutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestPutKvWithHighCapacity() {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs.
+        ///         namespace := &quot;test-put-kv&quot;
+        ///         key := &quot;test_PutKvWithHighCapacity_0&quot;
+        ///         value := strings.Repeat(&quot;t&quot;, 10<em>1024</em>1024)
+        ///         rawReq := &amp;PutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             Value:     &amp;value,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the PutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             UrlObject: bytes.NewReader([]byte(payload)),
+        ///         }
+        ///         resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutKvWithHighCapacityRequest
@@ -19781,8 +21841,48 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对，支持最大25M的Body</para>
+        /// <para>Configures a large key-value pair for a namespace. The request body can be up to 25 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="~~PutKv~~">PutKv</a>. For small request bodies, we recommend that you use <a href="~~PutKv~~">PutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and PutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestPutKvWithHighCapacity() {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs.
+        ///         namespace := &quot;test-put-kv&quot;
+        ///         key := &quot;test_PutKvWithHighCapacity_0&quot;
+        ///         value := strings.Repeat(&quot;t&quot;, 10<em>1024</em>1024)
+        ///         rawReq := &amp;PutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             Value:     &amp;value,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the PutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             UrlObject: bytes.NewReader([]byte(payload)),
+        ///         }
+        ///         resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutKvWithHighCapacityRequest
@@ -19799,8 +21899,48 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置Namespace的Key-Value对，支持最大25M的Body</para>
+        /// <para>Configures a large key-value pair for a namespace. The request body can be up to 25 MB.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to upload a larger request body than by using <a href="~~PutKv~~">PutKv</a>. For small request bodies, we recommend that you use <a href="~~PutKv~~">PutKv</a> to minimize the server processing time. This operation must be called by using SDKs. The following sample code uses the Golang SDK and PutKvWithHighCapacityAdvance to call the operation.
+        ///     func TestPutKvWithHighCapacity() {
+        ///         // Initialize the configurations.
+        ///         cfg := new(openapi.Config)
+        ///         cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
+        ///         cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
+        ///         cli, err := NewClient(cfg)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         runtime := &amp;util.RuntimeOptions{}
+        ///         // Construct a request for uploading key-value pairs.
+        ///         namespace := &quot;test-put-kv&quot;
+        ///         key := &quot;test_PutKvWithHighCapacity_0&quot;
+        ///         value := strings.Repeat(&quot;t&quot;, 10<em>1024</em>1024)
+        ///         rawReq := &amp;PutKvRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             Value:     &amp;value,
+        ///         }
+        ///         payload, err := json.Marshal(rawReq)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         // If the payload is greater than 2 MB, call the PutKvWithHighCapacity operation for upload.
+        ///         reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
+        ///             Namespace: &amp;namespace,
+        ///             Key:       &amp;key,
+        ///             UrlObject: bytes.NewReader([]byte(payload)),
+        ///         }
+        ///         resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
+        ///         if err != nil {
+        ///             return err
+        ///         }
+        ///         return nil
+        ///     }</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutKvWithHighCapacityRequest
@@ -19981,7 +22121,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重建边缘容器应用的测试环境</para>
+        /// <para>Rebuilds the staging environment for containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20023,7 +22163,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重建边缘容器应用的测试环境</para>
+        /// <para>Rebuilds the staging environment for containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20065,7 +22205,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重建边缘容器应用的测试环境</para>
+        /// <para>Rebuilds the staging environment for containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20083,7 +22223,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重建边缘容器应用的测试环境</para>
+        /// <para>Rebuilds the staging environment for containerized applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20101,7 +22241,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置定时预热任务的进度，从头开始预热</para>
+        /// <para>Resets the progress of a scheduled prefetch task and starts the prefetch from the beginning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20143,7 +22283,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置定时预热任务的进度，从头开始预热</para>
+        /// <para>Resets the progress of a scheduled prefetch task and starts the prefetch from the beginning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20185,7 +22325,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置定时预热任务的进度，从头开始预热</para>
+        /// <para>Resets the progress of a scheduled prefetch task and starts the prefetch from the beginning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20203,7 +22343,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置定时预热任务的进度，从头开始预热</para>
+        /// <para>Resets the progress of a scheduled prefetch task and starts the prefetch from the beginning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20221,7 +22361,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚边缘容器应用的某个版本</para>
+        /// <para>Rolls back a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20273,7 +22413,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚边缘容器应用的某个版本</para>
+        /// <para>Rolls back a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20325,7 +22465,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚边缘容器应用的某个版本</para>
+        /// <para>Rolls back a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20343,7 +22483,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚边缘容器应用的某个版本</para>
+        /// <para>Rolls back a version of a containerized application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20361,7 +22501,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置证书</para>
+        /// <para>Configures whether to enable certificates and update certificate information for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20445,7 +22585,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置证书</para>
+        /// <para>Configures whether to enable certificates and update certificate information for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20529,7 +22669,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置证书</para>
+        /// <para>Configures whether to enable certificates and update certificate information for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20547,7 +22687,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置证书</para>
+        /// <para>Configures whether to enable certificates and update certificate information for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20565,7 +22705,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS智能防护配置信息</para>
+        /// <para>Configures smart HTTP DDoS protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20615,7 +22755,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS智能防护配置信息</para>
+        /// <para>Configures smart HTTP DDoS protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20665,7 +22805,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS智能防护配置信息</para>
+        /// <para>Configures smart HTTP DDoS protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20683,7 +22823,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS智能防护配置信息</para>
+        /// <para>Configures smart HTTP DDoS protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20701,7 +22841,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护配置信息</para>
+        /// <para>Configures HTTP DDoS attack protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20747,7 +22887,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护配置信息</para>
+        /// <para>Configures HTTP DDoS attack protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20793,7 +22933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护配置信息</para>
+        /// <para>Configures HTTP DDoS attack protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20811,7 +22951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护配置信息</para>
+        /// <para>Configures HTTP DDoS attack protection for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20829,7 +22969,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始单个定时预热计划</para>
+        /// <para>Starts a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20871,7 +23011,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始单个定时预热计划</para>
+        /// <para>Starts a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20913,7 +23053,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始单个定时预热计划</para>
+        /// <para>Starts a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20931,7 +23071,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始单个定时预热计划</para>
+        /// <para>Starts a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20949,7 +23089,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止单个定时预热计划</para>
+        /// <para>Stops a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20991,7 +23131,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止单个定时预热计划</para>
+        /// <para>Stops a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21033,7 +23173,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止单个定时预热计划</para>
+        /// <para>Stops a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21051,7 +23191,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止单个定时预热计划</para>
+        /// <para>Stops a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21069,7 +23209,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源列表统一解绑标签</para>
+        /// <para>Deletes a resource tag based on a specified resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21135,7 +23275,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源列表统一解绑标签</para>
+        /// <para>Deletes a resource tag based on a specified resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21201,7 +23341,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源列表统一解绑标签</para>
+        /// <para>Deletes a resource tag based on a specified resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21219,7 +23359,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源列表统一解绑标签</para>
+        /// <para>Deletes a resource tag based on a specified resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21237,7 +23377,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定制场景策略</para>
+        /// <para>Modifies the configurations of a custom scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21299,7 +23439,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定制场景策略</para>
+        /// <para>Modifies the configurations of a custom scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21361,7 +23501,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定制场景策略</para>
+        /// <para>Modifies the configurations of a custom scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21379,7 +23519,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定制场景策略</para>
+        /// <para>Modifies the configurations of a custom scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21397,7 +23537,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名账号下的Namespace</para>
+        /// <para>Updates the name of a namespace in Edge KV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21443,7 +23583,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名账号下的Namespace</para>
+        /// <para>Updates the name of a namespace in Edge KV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21489,7 +23629,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名账号下的Namespace</para>
+        /// <para>Updates the name of a namespace in Edge KV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21507,7 +23647,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名账号下的Namespace</para>
+        /// <para>Updates the name of a namespace in Edge KV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21525,7 +23665,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义列表</para>
+        /// <para>Updates a custom list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21585,7 +23725,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义列表</para>
+        /// <para>Updates a custom list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21645,7 +23785,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义列表</para>
+        /// <para>Updates a custom list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21663,7 +23803,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义列表</para>
+        /// <para>Updates a custom list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21681,7 +23821,255 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义响应页面</para>
+        /// <para>修改源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionResponse
+        /// </returns>
+        public UpdateOriginProtectionResponse UpdateOriginProtectionWithOptions(UpdateOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginConverge))
+            {
+                query["OriginConverge"] = request.OriginConverge;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOriginProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionResponse
+        /// </returns>
+        public async Task<UpdateOriginProtectionResponse> UpdateOriginProtectionWithOptionsAsync(UpdateOriginProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginConverge))
+            {
+                query["OriginConverge"] = request.OriginConverge;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOriginProtection",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOriginProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionResponse
+        /// </returns>
+        public UpdateOriginProtectionResponse UpdateOriginProtection(UpdateOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateOriginProtectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改源站防护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionResponse
+        /// </returns>
+        public async Task<UpdateOriginProtectionResponse> UpdateOriginProtectionAsync(UpdateOriginProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateOriginProtectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认更新站点回源IP白名单到最新版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionIpWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionIpWhiteListResponse
+        /// </returns>
+        public UpdateOriginProtectionIpWhiteListResponse UpdateOriginProtectionIpWhiteListWithOptions(UpdateOriginProtectionIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOriginProtectionIpWhiteList",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOriginProtectionIpWhiteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认更新站点回源IP白名单到最新版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionIpWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionIpWhiteListResponse
+        /// </returns>
+        public async Task<UpdateOriginProtectionIpWhiteListResponse> UpdateOriginProtectionIpWhiteListWithOptionsAsync(UpdateOriginProtectionIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOriginProtectionIpWhiteList",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOriginProtectionIpWhiteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认更新站点回源IP白名单到最新版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionIpWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionIpWhiteListResponse
+        /// </returns>
+        public UpdateOriginProtectionIpWhiteListResponse UpdateOriginProtectionIpWhiteList(UpdateOriginProtectionIpWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateOriginProtectionIpWhiteListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认更新站点回源IP白名单到最新版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOriginProtectionIpWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOriginProtectionIpWhiteListResponse
+        /// </returns>
+        public async Task<UpdateOriginProtectionIpWhiteListResponse> UpdateOriginProtectionIpWhiteListAsync(UpdateOriginProtectionIpWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateOriginProtectionIpWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a custom error page, such as the name, description, content type, and content of the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21739,7 +24127,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义响应页面</para>
+        /// <para>Modifies the configurations of a custom error page, such as the name, description, content type, and content of the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21797,7 +24185,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义响应页面</para>
+        /// <para>Modifies the configurations of a custom error page, such as the name, description, content type, and content of the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21815,7 +24203,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义响应页面</para>
+        /// <para>Modifies the configurations of a custom error page, such as the name, description, content type, and content of the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21833,8 +24221,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新记录</para>
+        /// <para>Updates multiple types of DNS records and origin authentication configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to update multiple types of DNS records, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. You can modify the record content by providing the necessary fields such as Value, Priority, and Flag. For origins added in CNAME records such as OSS and S3, the API enables you to configure authentication details to ensure secure access.</para>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The record value (Value) must match the record type. For example, the CNAME record should correspond to the target domain name.</description></item>
+        /// <item><description>You must specify a priority (Priority) for some record types, such as MX and SRV.</description></item>
+        /// <item><description>You must specify specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When you update security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>If your origin type is OSS or S3, configure the authentication details in AuthConf based on the permissions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateRecordRequest
@@ -21917,8 +24318,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新记录</para>
+        /// <para>Updates multiple types of DNS records and origin authentication configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to update multiple types of DNS records, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. You can modify the record content by providing the necessary fields such as Value, Priority, and Flag. For origins added in CNAME records such as OSS and S3, the API enables you to configure authentication details to ensure secure access.</para>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The record value (Value) must match the record type. For example, the CNAME record should correspond to the target domain name.</description></item>
+        /// <item><description>You must specify a priority (Priority) for some record types, such as MX and SRV.</description></item>
+        /// <item><description>You must specify specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When you update security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>If your origin type is OSS or S3, configure the authentication details in AuthConf based on the permissions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateRecordRequest
@@ -22001,8 +24415,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新记录</para>
+        /// <para>Updates multiple types of DNS records and origin authentication configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to update multiple types of DNS records, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. You can modify the record content by providing the necessary fields such as Value, Priority, and Flag. For origins added in CNAME records such as OSS and S3, the API enables you to configure authentication details to ensure secure access.</para>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The record value (Value) must match the record type. For example, the CNAME record should correspond to the target domain name.</description></item>
+        /// <item><description>You must specify a priority (Priority) for some record types, such as MX and SRV.</description></item>
+        /// <item><description>You must specify specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When you update security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>If your origin type is OSS or S3, configure the authentication details in AuthConf based on the permissions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRecordRequest
@@ -22019,8 +24446,21 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新记录</para>
+        /// <para>Updates multiple types of DNS records and origin authentication configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows you to update multiple types of DNS records, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. You can modify the record content by providing the necessary fields such as Value, Priority, and Flag. For origins added in CNAME records such as OSS and S3, the API enables you to configure authentication details to ensure secure access.</para>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>The record value (Value) must match the record type. For example, the CNAME record should correspond to the target domain name.</description></item>
+        /// <item><description>You must specify a priority (Priority) for some record types, such as MX and SRV.</description></item>
+        /// <item><description>You must specify specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When you update security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>If your origin type is OSS or S3, configure the authentication details in AuthConf based on the permissions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRecordRequest
@@ -22037,7 +24477,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个定时预热计划</para>
+        /// <para>Updates a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22097,7 +24537,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个定时预热计划</para>
+        /// <para>Updates a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22157,7 +24597,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个定时预热计划</para>
+        /// <para>Updates a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22175,7 +24615,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个定时预热计划</para>
+        /// <para>Updates a scheduled prefetch plan based on the plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22193,8 +24633,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点接入方式</para>
+        /// <para>Converts the DNS setup option of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you change the DNS setup of a website from NS to CNAME, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the website has only proxied A/AAAA and CNAME records.</description></item>
+        /// <item><description>Make sure that ESA proxy is not disabled for the website and custom nameservers are not configured.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSiteAccessTypeRequest
@@ -22239,8 +24688,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点接入方式</para>
+        /// <para>Converts the DNS setup option of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you change the DNS setup of a website from NS to CNAME, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the website has only proxied A/AAAA and CNAME records.</description></item>
+        /// <item><description>Make sure that ESA proxy is not disabled for the website and custom nameservers are not configured.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSiteAccessTypeRequest
@@ -22285,8 +24743,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点接入方式</para>
+        /// <para>Converts the DNS setup option of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you change the DNS setup of a website from NS to CNAME, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the website has only proxied A/AAAA and CNAME records.</description></item>
+        /// <item><description>Make sure that ESA proxy is not disabled for the website and custom nameservers are not configured.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSiteAccessTypeRequest
@@ -22303,8 +24770,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点接入方式</para>
+        /// <para>Converts the DNS setup option of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you change the DNS setup of a website from NS to CNAME, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the website has only proxied A/AAAA and CNAME records.</description></item>
+        /// <item><description>Make sure that ESA proxy is not disabled for the website and custom nameservers are not configured.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSiteAccessTypeRequest
@@ -22321,7 +24797,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新站点加速区域</para>
+        /// <para>Modifies the service location for a single website. This updates the acceleration configuration of the website to adapt to changes in traffic distribution, and improve user experience in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22367,7 +24843,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新站点加速区域</para>
+        /// <para>Modifies the service location for a single website. This updates the acceleration configuration of the website to adapt to changes in traffic distribution, and improve user experience in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22413,7 +24889,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新站点加速区域</para>
+        /// <para>Modifies the service location for a single website. This updates the acceleration configuration of the website to adapt to changes in traffic distribution, and improve user experience in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22431,7 +24907,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新站点加速区域</para>
+        /// <para>Modifies the service location for a single website. This updates the acceleration configuration of the website to adapt to changes in traffic distribution, and improve user experience in specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22449,7 +24925,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义字段</para>
+        /// <para>Modifies the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22517,7 +24993,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义字段</para>
+        /// <para>Modifies the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22585,7 +25061,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义字段</para>
+        /// <para>Modifies the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22603,7 +25079,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义字段</para>
+        /// <para>Modifies the configuration of custom request header, response header, and cookie fields that are used to capture logs of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22621,7 +25097,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个任务投递</para>
+        /// <para>Modifies a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22679,7 +25155,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个任务投递</para>
+        /// <para>Modifies a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22737,7 +25213,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个任务投递</para>
+        /// <para>Modifies a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22755,7 +25231,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个任务投递</para>
+        /// <para>Modifies a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22773,7 +25249,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个任务投递</para>
+        /// <para>Changes the status of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22811,7 +25287,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个任务投递</para>
+        /// <para>Changes the status of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22849,7 +25325,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个任务投递</para>
+        /// <para>Changes the status of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22867,7 +25343,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个任务投递</para>
+        /// <para>Changes the status of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22885,7 +25361,483 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点自定义NS</para>
+        /// <para>修改站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSiteFunctionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSiteFunctionResponse
+        /// </returns>
+        public UpdateSiteFunctionResponse UpdateSiteFunctionWithOptions(UpdateSiteFunctionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSiteFunctionShrinkRequest request = new UpdateSiteFunctionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheReserve))
+            {
+                request.CacheReserveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheReserve, "CacheReserve", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheRules))
+            {
+                request.CacheRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheRules, "CacheRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheTags))
+            {
+                request.CacheTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheTags, "CacheTags", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CnameFlattening))
+            {
+                request.CnameFlatteningShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CnameFlattening, "CnameFlattening", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CompressionRules))
+            {
+                request.CompressionRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CompressionRules, "CompressionRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CrossBorderOptimization))
+            {
+                request.CrossBorderOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CrossBorderOptimization, "CrossBorderOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DevelopmentMode))
+            {
+                request.DevelopmentModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DevelopmentMode, "DevelopmentMode", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpRequestHeaderModificationRules))
+            {
+                request.HttpRequestHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpRequestHeaderModificationRules, "HttpRequestHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpResponseHeaderModificationRules))
+            {
+                request.HttpResponseHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpResponseHeaderModificationRules, "HttpResponseHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsApplicationConfiguration))
+            {
+                request.HttpsApplicationConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsApplicationConfiguration, "HttpsApplicationConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsBasicConfiguration))
+            {
+                request.HttpsBasicConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsBasicConfiguration, "HttpsBasicConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageTransform))
+            {
+                request.ImageTransformShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageTransform, "ImageTransform", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6))
+            {
+                request.Ipv6Shrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6, "Ipv6", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagedTransforms))
+            {
+                request.ManagedTransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagedTransforms, "ManagedTransforms", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkOptimization))
+            {
+                request.NetworkOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkOptimization, "NetworkOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OriginRules))
+            {
+                request.OriginRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OriginRules, "OriginRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectRules))
+            {
+                request.RedirectRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectRules, "RedirectRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RewriteUrlRules))
+            {
+                request.RewriteUrlRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RewriteUrlRules, "RewriteUrlRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SeoBypass))
+            {
+                request.SeoBypassShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SeoBypass, "SeoBypass", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SiteNameExclusive))
+            {
+                request.SiteNameExclusiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SiteNameExclusive, "SiteNameExclusive", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SitePause))
+            {
+                request.SitePauseShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SitePause, "SitePause", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TieredCache))
+            {
+                request.TieredCacheShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TieredCache, "TieredCache", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheReserveShrink))
+            {
+                query["CacheReserve"] = request.CacheReserveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheRulesShrink))
+            {
+                query["CacheRules"] = request.CacheRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheTagsShrink))
+            {
+                query["CacheTags"] = request.CacheTagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnameFlatteningShrink))
+            {
+                query["CnameFlattening"] = request.CnameFlatteningShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionRulesShrink))
+            {
+                query["CompressionRules"] = request.CompressionRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimizationShrink))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevelopmentModeShrink))
+            {
+                query["DevelopmentMode"] = request.DevelopmentModeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpRequestHeaderModificationRulesShrink))
+            {
+                query["HttpRequestHeaderModificationRules"] = request.HttpRequestHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpResponseHeaderModificationRulesShrink))
+            {
+                query["HttpResponseHeaderModificationRules"] = request.HttpResponseHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsApplicationConfigurationShrink))
+            {
+                query["HttpsApplicationConfiguration"] = request.HttpsApplicationConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsBasicConfigurationShrink))
+            {
+                query["HttpsBasicConfiguration"] = request.HttpsBasicConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageTransformShrink))
+            {
+                query["ImageTransform"] = request.ImageTransformShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Shrink))
+            {
+                query["Ipv6"] = request.Ipv6Shrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedTransformsShrink))
+            {
+                query["ManagedTransforms"] = request.ManagedTransformsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkOptimizationShrink))
+            {
+                query["NetworkOptimization"] = request.NetworkOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginRulesShrink))
+            {
+                query["OriginRules"] = request.OriginRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectRulesShrink))
+            {
+                query["RedirectRules"] = request.RedirectRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RewriteUrlRulesShrink))
+            {
+                query["RewriteUrlRules"] = request.RewriteUrlRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeoBypassShrink))
+            {
+                query["SeoBypass"] = request.SeoBypassShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteNameExclusiveShrink))
+            {
+                query["SiteNameExclusive"] = request.SiteNameExclusiveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SitePauseShrink))
+            {
+                query["SitePause"] = request.SitePauseShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TieredCacheShrink))
+            {
+                query["TieredCache"] = request.TieredCacheShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSiteFunction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSiteFunctionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSiteFunctionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSiteFunctionResponse
+        /// </returns>
+        public async Task<UpdateSiteFunctionResponse> UpdateSiteFunctionWithOptionsAsync(UpdateSiteFunctionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSiteFunctionShrinkRequest request = new UpdateSiteFunctionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheReserve))
+            {
+                request.CacheReserveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheReserve, "CacheReserve", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheRules))
+            {
+                request.CacheRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheRules, "CacheRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CacheTags))
+            {
+                request.CacheTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CacheTags, "CacheTags", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CnameFlattening))
+            {
+                request.CnameFlatteningShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CnameFlattening, "CnameFlattening", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CompressionRules))
+            {
+                request.CompressionRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CompressionRules, "CompressionRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CrossBorderOptimization))
+            {
+                request.CrossBorderOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CrossBorderOptimization, "CrossBorderOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DevelopmentMode))
+            {
+                request.DevelopmentModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DevelopmentMode, "DevelopmentMode", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpRequestHeaderModificationRules))
+            {
+                request.HttpRequestHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpRequestHeaderModificationRules, "HttpRequestHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpResponseHeaderModificationRules))
+            {
+                request.HttpResponseHeaderModificationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpResponseHeaderModificationRules, "HttpResponseHeaderModificationRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsApplicationConfiguration))
+            {
+                request.HttpsApplicationConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsApplicationConfiguration, "HttpsApplicationConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HttpsBasicConfiguration))
+            {
+                request.HttpsBasicConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HttpsBasicConfiguration, "HttpsBasicConfiguration", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageTransform))
+            {
+                request.ImageTransformShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageTransform, "ImageTransform", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6))
+            {
+                request.Ipv6Shrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6, "Ipv6", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagedTransforms))
+            {
+                request.ManagedTransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagedTransforms, "ManagedTransforms", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NetworkOptimization))
+            {
+                request.NetworkOptimizationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetworkOptimization, "NetworkOptimization", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OriginRules))
+            {
+                request.OriginRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OriginRules, "OriginRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectRules))
+            {
+                request.RedirectRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectRules, "RedirectRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RewriteUrlRules))
+            {
+                request.RewriteUrlRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RewriteUrlRules, "RewriteUrlRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SeoBypass))
+            {
+                request.SeoBypassShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SeoBypass, "SeoBypass", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SiteNameExclusive))
+            {
+                request.SiteNameExclusiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SiteNameExclusive, "SiteNameExclusive", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SitePause))
+            {
+                request.SitePauseShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SitePause, "SitePause", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TieredCache))
+            {
+                request.TieredCacheShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TieredCache, "TieredCache", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheReserveShrink))
+            {
+                query["CacheReserve"] = request.CacheReserveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheRulesShrink))
+            {
+                query["CacheRules"] = request.CacheRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheTagsShrink))
+            {
+                query["CacheTags"] = request.CacheTagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnameFlatteningShrink))
+            {
+                query["CnameFlattening"] = request.CnameFlatteningShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionRulesShrink))
+            {
+                query["CompressionRules"] = request.CompressionRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimizationShrink))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevelopmentModeShrink))
+            {
+                query["DevelopmentMode"] = request.DevelopmentModeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpRequestHeaderModificationRulesShrink))
+            {
+                query["HttpRequestHeaderModificationRules"] = request.HttpRequestHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpResponseHeaderModificationRulesShrink))
+            {
+                query["HttpResponseHeaderModificationRules"] = request.HttpResponseHeaderModificationRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsApplicationConfigurationShrink))
+            {
+                query["HttpsApplicationConfiguration"] = request.HttpsApplicationConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsBasicConfigurationShrink))
+            {
+                query["HttpsBasicConfiguration"] = request.HttpsBasicConfigurationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageTransformShrink))
+            {
+                query["ImageTransform"] = request.ImageTransformShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Shrink))
+            {
+                query["Ipv6"] = request.Ipv6Shrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedTransformsShrink))
+            {
+                query["ManagedTransforms"] = request.ManagedTransformsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkOptimizationShrink))
+            {
+                query["NetworkOptimization"] = request.NetworkOptimizationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginRulesShrink))
+            {
+                query["OriginRules"] = request.OriginRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectRulesShrink))
+            {
+                query["RedirectRules"] = request.RedirectRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RewriteUrlRulesShrink))
+            {
+                query["RewriteUrlRules"] = request.RewriteUrlRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeoBypassShrink))
+            {
+                query["SeoBypass"] = request.SeoBypassShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteNameExclusiveShrink))
+            {
+                query["SiteNameExclusive"] = request.SiteNameExclusiveShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SitePauseShrink))
+            {
+                query["SitePause"] = request.SitePauseShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TieredCacheShrink))
+            {
+                query["TieredCache"] = request.TieredCacheShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSiteFunction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSiteFunctionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSiteFunctionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSiteFunctionResponse
+        /// </returns>
+        public UpdateSiteFunctionResponse UpdateSiteFunction(UpdateSiteFunctionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateSiteFunctionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSiteFunctionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSiteFunctionResponse
+        /// </returns>
+        public async Task<UpdateSiteFunctionResponse> UpdateSiteFunctionAsync(UpdateSiteFunctionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateSiteFunctionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the custom nameserver names for a single website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22931,7 +25883,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点自定义NS</para>
+        /// <para>Updates the custom nameserver names for a single website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22977,7 +25929,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点自定义NS</para>
+        /// <para>Updates the custom nameserver names for a single website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22995,7 +25947,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点自定义NS</para>
+        /// <para>Updates the custom nameserver names for a single website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23013,7 +25965,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个用户粒度任务投递</para>
+        /// <para>Modifies the configurations of a delivery task, including the task name, log field, log category, and discard rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23067,7 +26019,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个用户粒度任务投递</para>
+        /// <para>Modifies the configurations of a delivery task, including the task name, log field, log category, and discard rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23121,7 +26073,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个用户粒度任务投递</para>
+        /// <para>Modifies the configurations of a delivery task, including the task name, log field, log category, and discard rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23139,7 +26091,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改一个用户粒度任务投递</para>
+        /// <para>Modifies the configurations of a delivery task, including the task name, log field, log category, and discard rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23157,8 +26109,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个用户任务投递</para>
+        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskStatusRequest
@@ -23195,8 +26153,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个用户任务投递</para>
+        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskStatusRequest
@@ -23233,8 +26197,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个用户任务投递</para>
+        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskStatusRequest
@@ -23251,8 +26221,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下线一个用户任务投递</para>
+        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskStatusRequest
@@ -23269,7 +26245,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则页面</para>
+        /// <para>Modifies the configuration or status of a Web Application Firewall (WAF) rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23339,7 +26315,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则页面</para>
+        /// <para>Modifies the configuration or status of a Web Application Firewall (WAF) rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23409,7 +26385,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则页面</para>
+        /// <para>Modifies the configuration or status of a Web Application Firewall (WAF) rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23427,7 +26403,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则页面</para>
+        /// <para>Modifies the configuration or status of a Web Application Firewall (WAF) rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23445,7 +26421,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则集</para>
+        /// <para>Updates a WAF ruleset based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23501,7 +26477,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则集</para>
+        /// <para>Updates a WAF ruleset based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23557,7 +26533,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则集</para>
+        /// <para>Updates a WAF ruleset based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23575,7 +26551,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新WAF规则集</para>
+        /// <para>Updates a WAF ruleset based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23593,7 +26569,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室</para>
+        /// <para>Modifies the configurations of a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23709,7 +26685,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室</para>
+        /// <para>Modifies the configurations of a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23825,7 +26801,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室</para>
+        /// <para>Modifies the configurations of a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23843,7 +26819,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室</para>
+        /// <para>Modifies the configurations of a waiting room.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23861,7 +26837,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室事件</para>
+        /// <para>Modifies the configurations of a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23979,7 +26955,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室事件</para>
+        /// <para>Modifies the configurations of a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24097,7 +27073,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室事件</para>
+        /// <para>Modifies the configurations of a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24115,7 +27091,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室事件</para>
+        /// <para>Modifies the configurations of a waiting room event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24133,8 +27109,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室规则</para>
+        /// <para>Updates the configurations of a waiting room bypass rule for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the configurations of a waiting room bypass rule for your website, including the rule name, status, and rule content.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateWaitingRoomRuleRequest
@@ -24191,8 +27172,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室规则</para>
+        /// <para>Updates the configurations of a waiting room bypass rule for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the configurations of a waiting room bypass rule for your website, including the rule name, status, and rule content.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateWaitingRoomRuleRequest
@@ -24249,8 +27235,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室规则</para>
+        /// <para>Updates the configurations of a waiting room bypass rule for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the configurations of a waiting room bypass rule for your website, including the rule name, status, and rule content.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateWaitingRoomRuleRequest
@@ -24267,8 +27258,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改等候室规则</para>
+        /// <para>Updates the configurations of a waiting room bypass rule for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the configurations of a waiting room bypass rule for your website, including the rule name, status, and rule content.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateWaitingRoomRuleRequest
@@ -24285,8 +27281,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新文件上传</para>
+        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>After the file is uploaded, you can call <a href="~~SubmitUploadTask~~">SubmitUploadTask</a> to submit the purge or prefetch task.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadFileRequest
@@ -24339,8 +27345,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新文件上传</para>
+        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>After the file is uploaded, you can call <a href="~~SubmitUploadTask~~">SubmitUploadTask</a> to submit the purge or prefetch task.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadFileRequest
@@ -24393,8 +27409,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新文件上传</para>
+        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>After the file is uploaded, you can call <a href="~~SubmitUploadTask~~">SubmitUploadTask</a> to submit the purge or prefetch task.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadFileRequest
@@ -24411,8 +27437,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存刷新文件上传</para>
+        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>After the file is uploaded, you can call <a href="~~SubmitUploadTask~~">SubmitUploadTask</a> to submit the purge or prefetch task.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadFileRequest
@@ -24593,8 +27629,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点的归属</para>
+        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VerifySiteRequest
@@ -24635,8 +27679,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点的归属</para>
+        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VerifySiteRequest
@@ -24677,8 +27729,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点的归属</para>
+        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VerifySiteRequest
@@ -24695,8 +27755,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验站点的归属</para>
+        /// <para>Verifies the ownership of a website domain. Websites that pass the verification are automatically activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</description></item>
+        /// <item><description>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VerifySiteRequest

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRealtimeDeliveryFieldRequest : TeaModel {
         /// <summary>
+        /// <para>The log category. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>dcdn_log_access_l1</b> (default): access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: Edge Routine logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: firewall logs.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: TCP/UDP proxy logs.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

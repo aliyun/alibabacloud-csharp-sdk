@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeletePageRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

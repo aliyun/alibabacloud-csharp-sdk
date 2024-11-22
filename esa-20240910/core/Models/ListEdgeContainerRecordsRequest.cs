@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListEdgeContainerRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: <b>500</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The match mode to filter the record names:</para>
+        /// <list type="bullet">
+        /// <item><description><b>fuzzy</b></description></item>
+        /// <item><description><b>prefix</b></description></item>
+        /// <item><description><b>suffix</b></description></item>
+        /// <item><description><b>exact</b> (default)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>fuzzy</para>
         /// </summary>
@@ -34,6 +46,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordMatchType { get; set; }
 
         /// <summary>
+        /// <para>The record name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a.example.com</para>
         /// </summary>
@@ -42,6 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
+        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

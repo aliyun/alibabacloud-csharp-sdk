@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PutKvWithHighCapacityRequest : TeaModel {
         /// <summary>
+        /// <para>The key name. The name can be up to 512 characters in length and cannot contain spaces or backslashes (\\).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The download URL of the key-value pair that you want to upload. This parameter is automatically filled in when you use the SDK to call the operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

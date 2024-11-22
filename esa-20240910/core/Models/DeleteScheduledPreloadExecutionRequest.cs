@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteScheduledPreloadExecutionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the prefetch plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

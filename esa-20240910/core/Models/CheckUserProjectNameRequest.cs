@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CheckUserProjectNameRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the real-time log delivery task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

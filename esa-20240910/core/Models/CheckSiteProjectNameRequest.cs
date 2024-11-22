@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CheckSiteProjectNameRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the real-time log delivery task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12312312213212</para>
         /// </summary>

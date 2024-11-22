@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetListResponseBody : TeaModel {
         /// <summary>
-        /// <para>自定义响应页面描述</para>
+        /// <para>The description of the custom list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a custom list</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>自定义响应页面ID</para>
+        /// <para>The ID of the custom list.<a href="~~2850217~~"></a></para>
         /// 
         /// <b>Example:</b>
         /// <para>40000001</para>
@@ -29,11 +29,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>The items in the custom list, which are displayed as an array.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<string> Items { get; set; }
 
         /// <summary>
+        /// <para>The type of the custom list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ip</para>
         /// </summary>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>自定义响应页面名称</para>
+        /// <para>The name of the custom list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -63,6 +68,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The time when the custom list was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>

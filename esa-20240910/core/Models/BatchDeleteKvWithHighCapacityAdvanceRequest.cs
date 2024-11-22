@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchDeleteKvWithHighCapacityAdvanceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The download URL of the key-value pairs that you want to delete. This parameter is automatically filled in when you use the SDK to call the operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWafRulesetResponseBody : TeaModel {
         /// <summary>
-        /// <para>自定义响应页面ID</para>
+        /// <para>The ruleset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>自定义响应页面名称</para>
+        /// <para>The ruleset name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>自定义响应页面内容类型</para>
+        /// <para>The WAF rule category of the ruleset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -51,15 +51,23 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The rule configurations in the ruleset.</para>
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<WafRuleConfig> Rules { get; set; }
 
+        /// <summary>
+        /// <para>The configurations shared by the rules in the ruleset.</para>
+        /// </summary>
         [NameInMap("Shared")]
         [Validation(Required=false)]
         public WafBatchRuleShared Shared { get; set; }
 
         /// <summary>
+        /// <para>The ruleset status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -68,6 +76,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The time when the ruleset was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>

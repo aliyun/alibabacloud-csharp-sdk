@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateWafRuleShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The configuration of the rule.</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string ConfigShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The order of the rule in the ruleset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -32,6 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Position { get; set; }
 
         /// <summary>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,11 +48,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? SiteId { get; set; }
 
+        /// <summary>
+        /// <para>The version of the website.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("SiteVersion")]
         [Validation(Required=false)]
         public int? SiteVersion { get; set; }
 
         /// <summary>
+        /// <para>The status of the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>

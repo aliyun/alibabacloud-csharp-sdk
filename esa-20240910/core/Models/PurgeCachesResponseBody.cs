@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PurgeCachesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ET5BF670-09D5-4D0B-BEBY-D96A2A528000</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID, which is generated after you create a task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15940956620</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class RollbackEdgeContainerAppVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test rollback app</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Remarks { get; set; }
 
         /// <summary>
+        /// <para>The ID of version that you want to roll back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

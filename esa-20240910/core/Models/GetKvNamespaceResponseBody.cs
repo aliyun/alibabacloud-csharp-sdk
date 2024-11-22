@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetKvNamespaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The available capacity of the namespace. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1073741824</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Capacity { get; set; }
 
         /// <summary>
+        /// <para>The available capacity of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1 GB</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CapacityString { get; set; }
 
         /// <summary>
+        /// <para>The used capacity of the namespace. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10048576</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? CapacityUsed { get; set; }
 
         /// <summary>
+        /// <para>The used capacity of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100 MB</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CapacityUsedString { get; set; }
 
         /// <summary>
+        /// <para>The description of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a test namespace.</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The name of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_namespace</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The ID of the namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>643355322374688768</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
         /// </summary>
@@ -74,6 +90,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the namespace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>online</b>: working as expected.</description></item>
+        /// <item><description><b>delete</b>: pending deletion.</description></item>
+        /// <item><description><b>deleting</b>: being deleted.</description></item>
+        /// <item><description><b>deleted</b>: deleted.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>online</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The query arguments in the JSON format, which contain filter conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ListLists</para>
         /// </summary>
@@ -33,11 +39,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public ListListsRequestQueryArgs QueryArgs { get; set; }
         public class ListListsRequestQueryArgs : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether to sort the returned data in descending order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
             public bool? Desc { get; set; }
 
             /// <summary>
+            /// <para>The list description for fuzzy search.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>a custom list</para>
             /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DescriptionLike { get; set; }
 
             /// <summary>
+            /// <para>The list ID for fuzzy search.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>40000001</para>
             /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string IdLike { get; set; }
 
             /// <summary>
+            /// <para>The list content for fuzzy search.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
             /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
+            /// <para>The list name and content for fuzzy search.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
             /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameItemLike { get; set; }
 
             /// <summary>
+            /// <para>The list name for fuzzy search.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example</para>
             /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameLike { get; set; }
 
             /// <summary>
+            /// <para>The column by which you want to sort the returned data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>id</para>
             /// </summary>

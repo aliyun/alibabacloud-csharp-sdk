@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to which you want to move the website.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
         /// </summary>

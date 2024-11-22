@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafTemplateRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -19,15 +19,23 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The returned template rules.</para>
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListWafTemplateRulesResponseBodyRules> Rules { get; set; }
         public class ListWafTemplateRulesResponseBodyRules : TeaModel {
+            /// <summary>
+            /// <para>The configuration of the rule.</para>
+            /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public WafRuleConfig Config { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HTTP Directory Traversal Rule [Template]</para>
             /// </summary>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The WAF rule category.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>http_anti_scan</para>
             /// </summary>
@@ -44,6 +54,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Phase { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the rule is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The rule type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>http_directory_traversal</para>
             /// </summary>

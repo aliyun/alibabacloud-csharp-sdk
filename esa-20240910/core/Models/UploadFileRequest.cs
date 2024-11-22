@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UploadFileRequest : TeaModel {
         /// <summary>
+        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>The type of the purge or prefetch task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>file</b> (default): purges the cache by file.</description></item>
+        /// <item><description><b>preload</b>: prefetches the file.</description></item>
+        /// <item><description><b>directory</b>: purges the cache by directory.</description></item>
+        /// <item><description><b>ignoreParams</b>: purges the cache by URL with specified parameters ignored.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The name of the upload task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string UploadTaskName { get; set; }
 
         /// <summary>
+        /// <para>The OSS URL of the file that contains resources to be purged or prefetched.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

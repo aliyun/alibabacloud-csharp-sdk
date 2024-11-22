@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CheckSiteNameRequest : TeaModel {
         /// <summary>
+        /// <para>The website name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

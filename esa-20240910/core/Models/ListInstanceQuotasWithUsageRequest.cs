@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListInstanceQuotasWithUsageRequest : TeaModel {
         /// <summary>
+        /// <para>The plan ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sp-xcdn-96wblslz****</para>
         /// </summary>
@@ -18,6 +20,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The quota names in the plan. Separate the quota names with commas (,). You can query up to 10 quota names at a time. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>customHttpCert</b>: the custom certificates.</description></item>
+        /// <item><description><b>transition_rule</b>: the transform rules.</description></item>
+        /// <item><description><b>waiting_room</b>: the waiting rooms.</description></item>
+        /// <item><description><b>https|rule_quota</b>: the SSL/TLS rules.</description></item>
+        /// <item><description><b>cache_rules|rule_quota</b>: the cache rules.</description></item>
+        /// <item><description><b>configuration_rules|rule_quota</b>: the configuration rules.</description></item>
+        /// <item><description><b>redirect_rules|rule_quota</b>: the redirect rules.</description></item>
+        /// <item><description><b>compression_rules|rule_quota</b>: the compression rules.</description></item>
+        /// <item><description><b>origin_rules|rule_quota</b>: the origin rules.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +42,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QuotaNames { get; set; }
 
         /// <summary>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1232223****</para>
         /// 

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetUserLogDeliveryQuotaRequest : TeaModel {
         /// <summary>
+        /// <para>The log category. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>dcdn_log_access_l1 (default): access logs.</description></item>
+        /// <item><description>dcdn_log_er: Edge Routine logs.</description></item>
+        /// <item><description>dcdn_log_waf: firewall logs.</description></item>
+        /// <item><description>dcdn_log_ipa: TCP/UDP proxy logs.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

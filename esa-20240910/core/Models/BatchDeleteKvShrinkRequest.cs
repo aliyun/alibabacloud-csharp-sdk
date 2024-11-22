@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchDeleteKvShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The keys that you want to delete. You can delete a maximum of 10,000 key-value pairs at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Keys")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string KeysShrink { get; set; }
 
         /// <summary>
+        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

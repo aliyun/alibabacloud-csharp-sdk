@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>是否全部删除，只针对TagKey.N为空时有效</para>
+        /// <para>Specifies whether to remove all tags. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <para>Default value: <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +29,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>要创建并绑定标签的资源所在的地域ID。</para>
+        /// <para>The ID of the region where the resources reside. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>资源ID,最多 50个子项</para>
+        /// <para>The ID of resource N. Valid values of N: <b>1</b> to <b>50</b>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -43,6 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +62,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>The key of tag N to remove from the resource. Valid values of N: <b>1</b> to <b>20</b>.</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafRulesetsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The WAF rule category of rulesets to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
+        /// <para>The query arguments in the JSON format, which contain filter conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public ListWafRulesetsRequestQueryArgs QueryArgs { get; set; }
         public class ListWafRulesetsRequestQueryArgs : TeaModel {
             /// <summary>
+            /// <para>The ruleset ID, ruleset name, rule ID, or rule name for fuzzy search.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example</para>
             /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string AnyLike { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to sort the returned data in descending order.</para>
+            /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
             public bool? Desc { get; set; }
 
             /// <summary>
+            /// <para>The ruleset name for fuzzy search.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameLike { get; set; }
 
             /// <summary>
+            /// <para>The column by which you want to sort the returned data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>id</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>The version of the website.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
