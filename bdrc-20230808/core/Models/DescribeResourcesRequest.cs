@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
     public class DescribeResourcesRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>LRS</para>
+        /// </summary>
+        [NameInMap("DataRedundancyType")]
+        [Validation(Required=false)]
+        public string DataRedundancyType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>rule-000c***yc9</para>
         /// </summary>
         [NameInMap("FailedRuleTemplate")]
@@ -64,6 +72,14 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ARCHIVE</para>
+        /// </summary>
+        [NameInMap("StorageClass")]
+        [Validation(Required=false)]
+        public string StorageClass { get; set; }
 
     }
 

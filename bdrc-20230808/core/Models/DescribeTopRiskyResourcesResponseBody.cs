@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
+                [NameInMap("DataRedundancyType")]
+                [Validation(Required=false)]
+                public string DataRedundancyType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -152,6 +156,10 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("StorageClass")]
+                [Validation(Required=false)]
+                public string StorageClass { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

@@ -470,6 +470,10 @@ namespace AlibabaCloud.SDK.BDRC20230808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRedundancyType))
+            {
+                query["DataRedundancyType"] = request.DataRedundancyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailedRuleTemplate))
             {
                 query["FailedRuleTemplate"] = request.FailedRuleTemplate;
@@ -497,6 +501,10 @@ namespace AlibabaCloud.SDK.BDRC20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageClass))
+            {
+                query["StorageClass"] = request.StorageClass;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -535,6 +543,10 @@ namespace AlibabaCloud.SDK.BDRC20230808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRedundancyType))
+            {
+                query["DataRedundancyType"] = request.DataRedundancyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailedRuleTemplate))
             {
                 query["FailedRuleTemplate"] = request.FailedRuleTemplate;
@@ -562,6 +574,10 @@ namespace AlibabaCloud.SDK.BDRC20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageClass))
+            {
+                query["StorageClass"] = request.StorageClass;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
