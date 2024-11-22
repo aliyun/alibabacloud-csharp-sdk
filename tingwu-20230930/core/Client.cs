@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 创建听悟任务
-         *
-         * @param request CreateTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建听悟任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
         public CreateTaskResponse CreateTaskWithOptions(CreateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -91,14 +101,24 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<CreateTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建听悟任务
-         *
-         * @param request CreateTaskRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建听悟任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
         public async Task<CreateTaskResponse> CreateTaskWithOptionsAsync(CreateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -145,12 +165,18 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<CreateTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建听悟任务
-         *
-         * @param request CreateTaskRequest
-         * @return CreateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建听悟任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
         public CreateTaskResponse CreateTask(CreateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -158,12 +184,18 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return CreateTaskWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 创建听悟任务
-         *
-         * @param request CreateTaskRequest
-         * @return CreateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建听悟任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskResponse
+        /// </returns>
         public async Task<CreateTaskResponse> CreateTaskAsync(CreateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -171,14 +203,24 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return await CreateTaskWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 创建热词词表
-         *
-         * @param request CreateTranscriptionPhrasesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTranscriptionPhrasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTranscriptionPhrasesResponse
+        /// </returns>
         public CreateTranscriptionPhrasesResponse CreateTranscriptionPhrasesWithOptions(CreateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -215,14 +257,24 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<CreateTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建热词词表
-         *
-         * @param request CreateTranscriptionPhrasesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTranscriptionPhrasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<CreateTranscriptionPhrasesResponse> CreateTranscriptionPhrasesWithOptionsAsync(CreateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -259,12 +311,18 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<CreateTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建热词词表
-         *
-         * @param request CreateTranscriptionPhrasesRequest
-         * @return CreateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTranscriptionPhrasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTranscriptionPhrasesResponse
+        /// </returns>
         public CreateTranscriptionPhrasesResponse CreateTranscriptionPhrases(CreateTranscriptionPhrasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -272,12 +330,18 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return CreateTranscriptionPhrasesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 创建热词词表
-         *
-         * @param request CreateTranscriptionPhrasesRequest
-         * @return CreateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTranscriptionPhrasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<CreateTranscriptionPhrasesResponse> CreateTranscriptionPhrasesAsync(CreateTranscriptionPhrasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -285,13 +349,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return await CreateTranscriptionPhrasesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 删除词表
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除词表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTranscriptionPhrasesResponse
+        /// </returns>
         public DeleteTranscriptionPhrasesResponse DeleteTranscriptionPhrasesWithOptions(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -313,13 +385,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<DeleteTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除词表
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除词表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<DeleteTranscriptionPhrasesResponse> DeleteTranscriptionPhrasesWithOptionsAsync(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -341,11 +421,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<DeleteTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除词表
-         *
-         * @return DeleteTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除词表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteTranscriptionPhrasesResponse
+        /// </returns>
         public DeleteTranscriptionPhrasesResponse DeleteTranscriptionPhrases(string PhraseId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -353,11 +436,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return DeleteTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
         }
 
-        /**
-         * @summary 删除词表
-         *
-         * @return DeleteTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除词表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<DeleteTranscriptionPhrasesResponse> DeleteTranscriptionPhrasesAsync(string PhraseId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -365,13 +451,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return await DeleteTranscriptionPhrasesWithOptionsAsync(PhraseId, headers, runtime);
         }
 
-        /**
-         * @summary 查询听悟任务信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询听悟任务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInfoResponse
+        /// </returns>
         public GetTaskInfoResponse GetTaskInfoWithOptions(string TaskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -393,13 +487,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<GetTaskInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询听悟任务信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询听悟任务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInfoResponse
+        /// </returns>
         public async Task<GetTaskInfoResponse> GetTaskInfoWithOptionsAsync(string TaskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -421,11 +523,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<GetTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询听悟任务信息
-         *
-         * @return GetTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询听悟任务信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTaskInfoResponse
+        /// </returns>
         public GetTaskInfoResponse GetTaskInfo(string TaskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -433,11 +538,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return GetTaskInfoWithOptions(TaskId, headers, runtime);
         }
 
-        /**
-         * @summary 查询听悟任务信息
-         *
-         * @return GetTaskInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询听悟任务信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTaskInfoResponse
+        /// </returns>
         public async Task<GetTaskInfoResponse> GetTaskInfoAsync(string TaskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -445,13 +553,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return await GetTaskInfoWithOptionsAsync(TaskId, headers, runtime);
         }
 
-        /**
-         * @summary 查询热词词表信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranscriptionPhrasesResponse
+        /// </returns>
         public GetTranscriptionPhrasesResponse GetTranscriptionPhrasesWithOptions(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -473,13 +589,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<GetTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询热词词表信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<GetTranscriptionPhrasesResponse> GetTranscriptionPhrasesWithOptionsAsync(string PhraseId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -501,11 +625,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<GetTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询热词词表信息
-         *
-         * @return GetTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTranscriptionPhrasesResponse
+        /// </returns>
         public GetTranscriptionPhrasesResponse GetTranscriptionPhrases(string PhraseId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -513,11 +640,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return GetTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
         }
 
-        /**
-         * @summary 查询热词词表信息
-         *
-         * @return GetTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<GetTranscriptionPhrasesResponse> GetTranscriptionPhrasesAsync(string PhraseId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -525,13 +655,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return await GetTranscriptionPhrasesWithOptionsAsync(PhraseId, headers, runtime);
         }
 
-        /**
-         * @summary 列举用户所有热词词表信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户所有热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTranscriptionPhrasesResponse
+        /// </returns>
         public ListTranscriptionPhrasesResponse ListTranscriptionPhrasesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -553,13 +691,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<ListTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举用户所有热词词表信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户所有热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<ListTranscriptionPhrasesResponse> ListTranscriptionPhrasesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -581,11 +727,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<ListTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举用户所有热词词表信息
-         *
-         * @return ListTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户所有热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListTranscriptionPhrasesResponse
+        /// </returns>
         public ListTranscriptionPhrasesResponse ListTranscriptionPhrases()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -593,11 +742,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return ListTranscriptionPhrasesWithOptions(headers, runtime);
         }
 
-        /**
-         * @summary 列举用户所有热词词表信息
-         *
-         * @return ListTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户所有热词词表信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<ListTranscriptionPhrasesResponse> ListTranscriptionPhrasesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -605,14 +757,24 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return await ListTranscriptionPhrasesWithOptionsAsync(headers, runtime);
         }
 
-        /**
-         * @summary 更新热词词表
-         *
-         * @param request UpdateTranscriptionPhrasesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTranscriptionPhrasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTranscriptionPhrasesResponse
+        /// </returns>
         public UpdateTranscriptionPhrasesResponse UpdateTranscriptionPhrasesWithOptions(string PhraseId, UpdateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -649,14 +811,24 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<UpdateTranscriptionPhrasesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新热词词表
-         *
-         * @param request UpdateTranscriptionPhrasesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTranscriptionPhrasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<UpdateTranscriptionPhrasesResponse> UpdateTranscriptionPhrasesWithOptionsAsync(string PhraseId, UpdateTranscriptionPhrasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -693,12 +865,18 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return TeaModel.ToObject<UpdateTranscriptionPhrasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新热词词表
-         *
-         * @param request UpdateTranscriptionPhrasesRequest
-         * @return UpdateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTranscriptionPhrasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTranscriptionPhrasesResponse
+        /// </returns>
         public UpdateTranscriptionPhrasesResponse UpdateTranscriptionPhrases(string PhraseId, UpdateTranscriptionPhrasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -706,12 +884,18 @@ namespace AlibabaCloud.SDK.Tingwu20230930
             return UpdateTranscriptionPhrasesWithOptions(PhraseId, request, headers, runtime);
         }
 
-        /**
-         * @summary 更新热词词表
-         *
-         * @param request UpdateTranscriptionPhrasesRequest
-         * @return UpdateTranscriptionPhrasesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热词词表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTranscriptionPhrasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTranscriptionPhrasesResponse
+        /// </returns>
         public async Task<UpdateTranscriptionPhrasesResponse> UpdateTranscriptionPhrasesAsync(string PhraseId, UpdateTranscriptionPhrasesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

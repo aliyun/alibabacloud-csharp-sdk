@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Tingwu20230930.Models
 {
     public class CreateTaskRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>JV1sRTisRMi****</para>
+        /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
@@ -20,10 +21,22 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public CreateTaskRequestInput Input { get; set; }
         public class CreateTaskRequestInput : TeaModel {
+            [NameInMap("AudioChannelMode")]
+            [Validation(Required=false)]
+            public string AudioChannelMode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://xxx.com/zzz/1.wav">http://xxx.com/zzz/1.wav</a></para>
+            /// </summary>
             [NameInMap("FileUrl")]
             [Validation(Required=false)]
             public string FileUrl { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pcm</para>
+            /// </summary>
             [NameInMap("Format")]
             [Validation(Required=false)]
             public string Format { get; set; }
@@ -44,12 +57,19 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public bool? ProgressiveCallbacksEnabled { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>16000</para>
+            /// </summary>
             [NameInMap("SampleRate")]
             [Validation(Required=false)]
             public int? SampleRate { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn</para>
             /// </summary>
             [NameInMap("SourceLanguage")]
             [Validation(Required=false)]
@@ -59,6 +79,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>task_tingwu_123</para>
+            /// </summary>
             [NameInMap("TaskKey")]
             [Validation(Required=false)]
             public string TaskKey { get; set; }
@@ -69,6 +93,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public CreateTaskRequestParameters Parameters { get; set; }
         public class CreateTaskRequestParameters : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AutoChaptersEnabled")]
             [Validation(Required=false)]
             public bool? AutoChaptersEnabled { get; set; }
@@ -86,14 +114,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                     public string Model { get; set; }
 
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// This parameter is required.
+                    /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("Prompt")]
                     [Validation(Required=false)]
@@ -147,6 +175,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("MeetingAssistanceEnabled")]
             [Validation(Required=false)]
             public bool? MeetingAssistanceEnabled { get; set; }
@@ -195,12 +227,20 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public CreateTaskRequestParametersSummarization Summarization { get; set; }
             public class CreateTaskRequestParametersSummarization : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Paragraph</para>
+                /// </summary>
                 [NameInMap("Types")]
                 [Validation(Required=false)]
                 public List<string> Types { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("SummarizationEnabled")]
             [Validation(Required=false)]
             public bool? SummarizationEnabled { get; set; }
@@ -213,18 +253,34 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public CreateTaskRequestParametersTranscoding Transcoding { get; set; }
             public class CreateTaskRequestParametersTranscoding : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("SpectrumEnabled")]
                 [Validation(Required=false)]
                 public bool? SpectrumEnabled { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mp3</para>
+                /// </summary>
                 [NameInMap("TargetAudioFormat")]
                 [Validation(Required=false)]
                 public string TargetAudioFormat { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mp4</para>
+                /// </summary>
                 [NameInMap("TargetVideoFormat")]
                 [Validation(Required=false)]
                 public string TargetVideoFormat { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("VideoThumbnailEnabled")]
                 [Validation(Required=false)]
                 public bool? VideoThumbnailEnabled { get; set; }
@@ -239,6 +295,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public int? AdditionalStreamOutputLevel { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("AudioEventDetectionEnabled")]
                 [Validation(Required=false)]
                 public bool? AudioEventDetectionEnabled { get; set; }
@@ -247,12 +307,20 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public CreateTaskRequestParametersTranscriptionDiarization Diarization { get; set; }
                 public class CreateTaskRequestParametersTranscriptionDiarization : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
                     [NameInMap("SpeakerCount")]
                     [Validation(Required=false)]
                     public int? SpeakerCount { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("DiarizationEnabled")]
                 [Validation(Required=false)]
                 public bool? DiarizationEnabled { get; set; }
@@ -289,18 +357,29 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("TranslationEnabled")]
             [Validation(Required=false)]
             public bool? TranslationEnabled { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>stop</para>
+        /// </summary>
         [NameInMap("operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>offline</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
