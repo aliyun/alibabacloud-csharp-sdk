@@ -95,6 +95,20 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<GetConnectionTicketRequestTag> Tag { get; set; }
+        public class GetConnectionTicketRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2afbad19-778a-4fc5-9674-1f19c638****</para>
