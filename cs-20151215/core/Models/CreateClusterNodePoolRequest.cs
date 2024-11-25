@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public long? Count { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("host_network")]
         [Validation(Required=false)]
         public bool? HostNetwork { get; set; }
@@ -231,6 +235,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string InterconnectMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("intranet")]
         [Validation(Required=false)]
         public bool? Intranet { get; set; }
@@ -331,7 +339,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RuntimeVersion { get; set; }
 
             /// <summary>
-            /// <para>The taints.</para>
+            /// <para>The configuration of the taint.</para>
             /// </summary>
             [NameInMap("taints")]
             [Validation(Required=false)]
@@ -702,7 +710,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal duration of nodes in the node pool. This parameter is available and required only if you set instance_charge_type to PrePaid and auto_renew to true. If <c>PeriodUnit=Month</c> is configured, the valid values are 1, 2, 3, 6, and 12.</para>
+            /// <para>The auto-renewal period. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values when PeriodUnit is set to Week: 1, 2, and 3</description></item>
+            /// <item><description>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</description></item>
+            /// </list>
             /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>

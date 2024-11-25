@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEventsForRegionRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cf62854ac2130470897be7a27ed1f****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>

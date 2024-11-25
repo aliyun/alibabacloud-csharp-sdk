@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyNodePoolNodeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters of the kubelet.</para>
+        /// <para>The kubelet configuration.</para>
         /// </summary>
         [NameInMap("kubelet_config")]
         [Validation(Required=false)]
         public KubeletConfig KubeletConfig { get; set; }
 
         /// <summary>
-        /// <para>Operating system parameter configuration.</para>
+        /// <para>The OS configuration.</para>
         /// </summary>
         [NameInMap("os_config")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
         public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
             /// <summary>
-            /// <para>sysctl parameter configuration</para>
+            /// <para>The sysctl configuration.</para>
             /// </summary>
             [NameInMap("sysctl")]
             [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The rotation configurations.</para>
+        /// <para>The rotation configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]

@@ -67,6 +67,104 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ContainerCidr { get; set; }
 
+        [NameInMap("control_plane_config")]
+        [Validation(Required=false)]
+        public DescribeClusterDetailResponseBodyControlPlaneConfig ControlPlaneConfig { get; set; }
+        public class DescribeClusterDetailResponseBodyControlPlaneConfig : TeaModel {
+            [NameInMap("auto_renew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("auto_renew_period")]
+            [Validation(Required=false)]
+            public long? AutoRenewPeriod { get; set; }
+
+            [NameInMap("charge_type")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("cloud_monitor_flags")]
+            [Validation(Required=false)]
+            public bool? CloudMonitorFlags { get; set; }
+
+            [NameInMap("cpu_policy")]
+            [Validation(Required=false)]
+            public string CpuPolicy { get; set; }
+
+            [NameInMap("deploymentset_id")]
+            [Validation(Required=false)]
+            public string DeploymentsetId { get; set; }
+
+            [NameInMap("image_id")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+
+            [NameInMap("image_type")]
+            [Validation(Required=false)]
+            public string ImageType { get; set; }
+
+            [NameInMap("instance_types")]
+            [Validation(Required=false)]
+            public List<string> InstanceTypes { get; set; }
+
+            [NameInMap("key_pair")]
+            [Validation(Required=false)]
+            public string KeyPair { get; set; }
+
+            [NameInMap("node_port_range")]
+            [Validation(Required=false)]
+            public string NodePortRange { get; set; }
+
+            [NameInMap("period")]
+            [Validation(Required=false)]
+            public long? Period { get; set; }
+
+            [NameInMap("period_unit")]
+            [Validation(Required=false)]
+            public string PeriodUnit { get; set; }
+
+            [NameInMap("runtime")]
+            [Validation(Required=false)]
+            public string Runtime { get; set; }
+
+            [NameInMap("security_hardening_os")]
+            [Validation(Required=false)]
+            public bool? SecurityHardeningOs { get; set; }
+
+            [NameInMap("size")]
+            [Validation(Required=false)]
+            public long? Size { get; set; }
+
+            [NameInMap("soc_enabled")]
+            [Validation(Required=false)]
+            public bool? SocEnabled { get; set; }
+
+            [NameInMap("system_disk_bursting_enabled")]
+            [Validation(Required=false)]
+            public bool? SystemDiskBurstingEnabled { get; set; }
+
+            [NameInMap("system_disk_category")]
+            [Validation(Required=false)]
+            public string SystemDiskCategory { get; set; }
+
+            [NameInMap("system_disk_performance_level")]
+            [Validation(Required=false)]
+            public string SystemDiskPerformanceLevel { get; set; }
+
+            [NameInMap("system_disk_provisioned_iops")]
+            [Validation(Required=false)]
+            public long? SystemDiskProvisionedIops { get; set; }
+
+            [NameInMap("system_disk_size")]
+            [Validation(Required=false)]
+            public long? SystemDiskSize { get; set; }
+
+            [NameInMap("system_disk_snapshot_policy_id")]
+            [Validation(Required=false)]
+            public string SystemDiskSnapshotPolicyId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The time when the cluster was created.</para>
         /// 

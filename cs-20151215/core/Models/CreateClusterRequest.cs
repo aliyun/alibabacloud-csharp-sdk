@@ -111,6 +111,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public bool? CisEnabled { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to install the CloudMonitor agent. Valid values:</para>
         /// <list type="bullet">
@@ -124,6 +126,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("cloud_monitor_flags")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? CloudMonitorFlags { get; set; }
 
         /// <summary>
@@ -180,6 +183,108 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ContainerCidr { get; set; }
 
+        [NameInMap("control_plane_config")]
+        [Validation(Required=false)]
+        public CreateClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
+        public class CreateClusterRequestControlPlaneConfig : TeaModel {
+            [NameInMap("auto_renew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("auto_renew_period")]
+            [Validation(Required=false)]
+            public long? AutoRenewPeriod { get; set; }
+
+            [NameInMap("charge_type")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("cloud_monitor_flags")]
+            [Validation(Required=false)]
+            public bool? CloudMonitorFlags { get; set; }
+
+            [NameInMap("cpu_policy")]
+            [Validation(Required=false)]
+            public string CpuPolicy { get; set; }
+
+            [NameInMap("deploymentset_id")]
+            [Validation(Required=false)]
+            public string DeploymentsetId { get; set; }
+
+            [NameInMap("image_id")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+
+            [NameInMap("image_type")]
+            [Validation(Required=false)]
+            public string ImageType { get; set; }
+
+            [NameInMap("instance_types")]
+            [Validation(Required=false)]
+            public List<string> InstanceTypes { get; set; }
+
+            [NameInMap("key_pair")]
+            [Validation(Required=false)]
+            public string KeyPair { get; set; }
+
+            [NameInMap("login_password")]
+            [Validation(Required=false)]
+            public string LoginPassword { get; set; }
+
+            [NameInMap("node_port_range")]
+            [Validation(Required=false)]
+            public string NodePortRange { get; set; }
+
+            [NameInMap("period")]
+            [Validation(Required=false)]
+            public long? Period { get; set; }
+
+            [NameInMap("period_unit")]
+            [Validation(Required=false)]
+            public string PeriodUnit { get; set; }
+
+            [NameInMap("runtime")]
+            [Validation(Required=false)]
+            public string Runtime { get; set; }
+
+            [NameInMap("security_hardening_os")]
+            [Validation(Required=false)]
+            public bool? SecurityHardeningOs { get; set; }
+
+            [NameInMap("size")]
+            [Validation(Required=false)]
+            public long? Size { get; set; }
+
+            [NameInMap("soc_enabled")]
+            [Validation(Required=false)]
+            public bool? SocEnabled { get; set; }
+
+            [NameInMap("system_disk_bursting_enabled")]
+            [Validation(Required=false)]
+            public bool? SystemDiskBurstingEnabled { get; set; }
+
+            [NameInMap("system_disk_category")]
+            [Validation(Required=false)]
+            public string SystemDiskCategory { get; set; }
+
+            [NameInMap("system_disk_performance_level")]
+            [Validation(Required=false)]
+            public string SystemDiskPerformanceLevel { get; set; }
+
+            [NameInMap("system_disk_provisioned_iops")]
+            [Validation(Required=false)]
+            public long? SystemDiskProvisionedIops { get; set; }
+
+            [NameInMap("system_disk_size")]
+            [Validation(Required=false)]
+            public long? SystemDiskSize { get; set; }
+
+            [NameInMap("system_disk_snapshot_policy_id")]
+            [Validation(Required=false)]
+            public string SystemDiskSnapshotPolicyId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The control plane component for which you want to enable log collection.</para>
         /// <para>By default, the log of kube-apiserver, kube-controller-manager, and kube-scheduler is collected.</para>
@@ -208,6 +313,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ControlplaneLogTtl { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</para>
         /// <list type="bullet">
@@ -221,6 +328,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("cpu_policy")]
         [Validation(Required=false)]
+        [Obsolete]
         public string CpuPolicy { get; set; }
 
         /// <summary>
@@ -304,6 +412,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? EndpointPublicAccess { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:</para>
         /// <list type="bullet">
@@ -322,8 +432,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("format_disk")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? FormatDisk { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The custom image. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Use a custom image to create an ACK cluster</a>.</para>
         /// 
@@ -332,8 +445,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("image_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ImageId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</para>
         /// <list type="bullet">
@@ -354,8 +470,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("image_type")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ImageType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.</para>
         /// <remarks>
@@ -364,6 +483,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> Instances { get; set; }
 
         /// <summary>
@@ -395,6 +515,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? IsEnterpriseSecurityGroup { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:</para>
         /// <list type="bullet">
@@ -408,8 +530,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("keep_instance_name")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? KeepInstanceName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The name of the key pair. You must configure this parameter or the <c>login_password</c> parameter.</para>
         /// 
@@ -418,6 +543,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("key_pair")]
         [Validation(Required=false)]
+        [Obsolete]
         public string KeyPair { get; set; }
 
         /// <summary>
@@ -441,6 +567,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The specification of the Server Load Balancer (SLB) instance. Valid values:</para>
         /// <list type="bullet">
@@ -458,6 +586,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("load_balancer_spec")]
         [Validation(Required=false)]
+        [Obsolete]
         public string LoadBalancerSpec { get; set; }
 
         /// <summary>
@@ -470,6 +599,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string LoggingType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The password for SSH logon. You must set this parameter or <c>key_pair</c>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
         /// 
@@ -478,6 +609,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("login_password")]
         [Validation(Required=false)]
+        [Obsolete]
         public string LoginPassword { get; set; }
 
         /// <summary>
@@ -487,6 +619,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public MaintenanceWindow MaintenanceWindow { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
@@ -500,8 +634,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_auto_renew")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? MasterAutoRenew { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</para>
         /// <para>Valid values: 1, 2, 3, 6, and 12.</para>
@@ -512,8 +649,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_auto_renew_period")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? MasterAutoRenewPeriod { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The number of master nodes. Valid values: <c>3</c> and <c>5</c>.</para>
         /// <para>Default value: <c>3</c>.</para>
@@ -523,8 +663,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_count")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? MasterCount { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The billing method of master nodes. Valid values:</para>
         /// <list type="bullet">
@@ -538,15 +681,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_instance_charge_type")]
         [Validation(Required=false)]
+        [Obsolete]
         public string MasterInstanceChargeType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
         /// </summary>
         [NameInMap("master_instance_types")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> MasterInstanceTypes { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The subscription duration of master nodes. This parameter takes effect and is required only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
@@ -557,8 +706,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_period")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? MasterPeriod { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to <c>PrePaid</c>.</para>
         /// <para>Valid value: <c>Month</c>, which indicates that master nodes are billed only on a monthly basis.</para>
@@ -568,8 +720,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_period_unit")]
         [Validation(Required=false)]
+        [Obsolete]
         public string MasterPeriodUnit { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The system disk type of master nodes. Valid values:</para>
         /// <list type="bullet">
@@ -584,8 +739,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_system_disk_category")]
         [Validation(Required=false)]
+        [Obsolete]
         public string MasterSystemDiskCategory { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
         /// 
@@ -594,8 +752,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_system_disk_performance_level")]
         [Validation(Required=false)]
+        [Obsolete]
         public string MasterSystemDiskPerformanceLevel { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.</para>
         /// <para>Default value: <c>120</c>.</para>
@@ -605,8 +766,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_system_disk_size")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? MasterSystemDiskSize { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the automatic snapshot policy that is used by the system disk specified for master nodes.</para>
         /// 
@@ -615,14 +779,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_system_disk_snapshot_policy_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string MasterSystemDiskSnapshotPolicyId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</para>
         /// <para>The number of vSwitches must be the same as that specified in <c>master_count</c> and the same as those specified in <c>master_vswitch_ids</c>.</para>
         /// </summary>
         [NameInMap("master_vswitch_ids")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> MasterVswitchIds { get; set; }
 
         /// <summary>
@@ -658,6 +826,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NodeCidrMask { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The custom node name.</para>
         /// <para>A custom node name consists of a prefix, a node IP address, and a suffix.</para>
@@ -672,6 +842,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("node_name_mode")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NodeNameMode { get; set; }
 
         /// <summary>
@@ -748,6 +919,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The type of OS. Valid values:</para>
         /// <list type="bullet">
@@ -761,6 +934,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("os_type")]
         [Validation(Required=false)]
+        [Obsolete]
         public string OsType { get; set; }
 
         /// <summary>
@@ -788,6 +962,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The operating system distribution. Valid values:</para>
         /// <list type="bullet">
@@ -805,6 +981,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("platform")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Platform { get; set; }
 
         /// <summary>
@@ -848,11 +1025,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ProxyMode { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ApsaraDB RDS instances. Select the ApsaraDB RDS instances that you want to add to the whitelist. We recommend that you add the pod CIDR block and node CIDR block to the ApsaraDB RDS instances in the ApsaraDB RDS console. When you configure the ApsaraDB RDS instances, you cannot scale out the number of nodes because the instances are not in the Running state.</para>
         /// </summary>
         [NameInMap("rds_instances")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> RdsInstances { get; set; }
 
         /// <summary>
@@ -894,6 +1074,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</para>
         /// <list type="bullet">
@@ -907,6 +1089,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("security_hardening_os")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? SecurityHardeningOs { get; set; }
 
         /// <summary>
@@ -962,6 +1145,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? SnatEntry { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</para>
         /// <para>Valid values:</para>
@@ -976,6 +1161,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("soc_enabled")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? SocEnabled { get; set; }
 
         /// <summary>
@@ -1004,13 +1190,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<Tag> Tags { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
         /// </summary>
         [NameInMap("taints")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<Taint> Taints { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies the timeout period of cluster creation. Unit: minutes.</para>
         /// <para>Default value: <c>60</c>.</para>
@@ -1020,6 +1211,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("timeout_mins")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? TimeoutMins { get; set; }
 
         /// <summary>

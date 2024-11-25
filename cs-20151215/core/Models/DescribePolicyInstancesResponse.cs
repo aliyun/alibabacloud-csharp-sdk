@@ -130,30 +130,65 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyAction { get; set; }
 
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>Creation time (deprecated, do not use).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-10-29T18:09:12+08:00</para>
+            /// </summary>
             [NameInMap("Created")]
             [Validation(Required=false)]
             [Obsolete]
             public string Created { get; set; }
 
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>Update time (deprecated, do not use).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-10-29T18:09:12+08:00</para>
+            /// </summary>
             [NameInMap("Updated")]
             [Validation(Required=false)]
             [Obsolete]
             public string Updated { get; set; }
 
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>Resource ID (deprecated, do not use).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456***</para>
+            /// </summary>
             [NameInMap("resource_id")]
             [Validation(Required=false)]
             [Obsolete]
             public string ResourceId { get; set; }
 
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>Violation count processing in the cluster (deprecated, do not use).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("total_violations")]
             [Validation(Required=false)]
             [Obsolete]
             public long? TotalViolations { get; set; }
 
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>Deletion status (deprecated, do not use).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("is_deleted")]
             [Validation(Required=false)]
             [Obsolete]

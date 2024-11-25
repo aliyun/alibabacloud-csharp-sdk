@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>true</c>: retains the instance name.</description></item>
         /// <item><description><c>false</c>: does not retain the instance name.</description></item>
         /// </list>
-        /// <para>Default value: <c>true</c></para>
+        /// <para>Default value: <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node pool to which you want to add an existing node. This parameter allows you to add an existing node to a specified node pool.</para>
+        /// <para>The ID of the node pool to which you want to add an existing node.</para>
         /// <remarks>
-        /// <para> If you do not specify a node pool ID, the node is added to the default node pool.</para>
+        /// <para> If you do not specify a node pool ID, the node is added to a default node pool.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.</para>
+        /// <para>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</para>
         /// </summary>
         [NameInMap("rds_instances")]
         [Validation(Required=false)]
