@@ -822,6 +822,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public int? MaxIOPS { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether auto scaling is being performed on the instance. If the value <b>true</b> is returned, auto scaling is being performed on the instance. If no value is returned, auto scaling is not being performed on the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("MultipleTempUpgrade")]
                 [Validation(Required=false)]
                 public bool? MultipleTempUpgrade { get; set; }

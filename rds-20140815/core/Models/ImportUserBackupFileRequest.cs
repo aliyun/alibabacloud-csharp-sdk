@@ -48,6 +48,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5****</para>
+        /// </summary>
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        /// <summary>
         /// <para>The version of the database engine that is run on the self-managed MySQL database and ApsaraDB RDS for MySQL instance. Set the value to <b>5.7</b>.</para>
         /// 
         /// <b>Example:</b>

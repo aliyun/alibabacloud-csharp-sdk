@@ -64,12 +64,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following fields:</para>
+        /// <para>The configuration of the proxy terminal. The value of this parameter is a JSON string that consists of the following parameters:</para>
         /// <list type="bullet">
         /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: the status of the transaction splitting feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
-        /// <item><description><b>ConnectionPersist</b>: the status of the connection pooling feature. Valid values: <b>0</b>, <b>1</b>, and <b>2</b>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session connection pooling feature is enabled. The value 2 indicates that the transaction connection pooling feature is enabled.</description></item>
+        /// <item><description><b>ConnectionPersist</b>: the status of the connection pooling feature. Valid values: <b>0</b>, <b>1</b>, and <b>2</b>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session-level connection pooling feature is enabled. The value 2 indicates that the transaction-level connection pooling feature is enabled.</description></item>
         /// <item><description><b>ReadWriteSpliting</b>: the status of the read/write splitting feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
-        /// <item><description><b>PinPreparedStmt</b>: an internal field that is available only for ApsaraDB RDS for PostgreSQL instances.</description></item>
+        /// <item><description><b>AZProximityAccess</b>: the status of the nearest access feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
+        /// <item><description><b>PinPreparedStmt</b>: an internal parameter that is available only for ApsaraDB RDS for PostgrSQL instances.</description></item>
         /// </list>
         /// <remarks>
         /// <para> If the instance runs PostgreSQL, you can change only the value of the <b>ReadWriteSpliting</b> field. The <b>TransactionReadSqlRouteOptimizeStatus</b> and <b>PinPreparedStmt</b> fields are set to their default values 1.</para>
@@ -82,6 +83,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyFeatures { get; set; }
 
+        /// <summary>
+        /// <para>The proxy nodes that are associated with the proxy terminal.</para>
+        /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
         public DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes { get; set; }
@@ -90,14 +94,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes { get; set; }
             public class DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes : TeaModel {
+                /// <summary>
+                /// <para>The number of CPU cores of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("cpuCores")]
                 [Validation(Required=false)]
                 public string CpuCores { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the node in the zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pn-xxxxxxx01</para>
+                /// </summary>
                 [NameInMap("nodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
+                /// <summary>
+                /// <para>The zone ID of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-c</para>
+                /// </summary>
                 [NameInMap("zoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -130,10 +152,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbProxyEndpointReadWriteMode { get; set; }
 
+        /// <summary>
+        /// <para>The vSwitch ID of the proxy terminal.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-****</para>
+        /// </summary>
         [NameInMap("DbProxyEndpointVswitchId")]
         [Validation(Required=false)]
         public string DbProxyEndpointVswitchId { get; set; }
 
+        /// <summary>
+        /// <para>The zone ID of the proxy terminal.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-c</para>
+        /// </summary>
         [NameInMap("DbProxyEndpointZoneId")]
         [Validation(Required=false)]
         public string DbProxyEndpointZoneId { get; set; }

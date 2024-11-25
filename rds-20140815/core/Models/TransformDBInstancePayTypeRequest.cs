@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         /// <summary>
         /// <para>The additional business information about the instance.</para>
         /// 
@@ -99,6 +103,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
+
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                [NameInMap("Service")]
+                [Validation(Required=false)]
+                public string Service { get; set; }
+
                 /// <summary>
                 /// <para>The format in which the value of the performance metric is returned.</para>
                 /// 

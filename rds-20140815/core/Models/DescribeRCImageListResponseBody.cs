@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public bool? IsPublic { get; set; }
 
+            [NameInMap("IsSupportRdsCustom")]
+            [Validation(Required=false)]
+            public bool? IsSupportRdsCustom { get; set; }
+
             /// <summary>
             /// <para>The display name of the operating system in Chinese.</para>
             /// </summary>

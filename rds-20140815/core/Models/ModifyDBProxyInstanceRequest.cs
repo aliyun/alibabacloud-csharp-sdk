@@ -59,11 +59,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>List of proxy nodes.</para>
+        /// <remarks>
+        /// <para>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
         public List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes { get; set; }
         public class ModifyDBProxyInstanceRequestDBProxyNodes : TeaModel {
             /// <summary>
+            /// <para>The number of cpu cores for the node, valid values: <b>1</b> to <b>16</b>.</para>
+            /// <remarks>
+            /// <para>This parameter is required when selecting <b>DBProxyNodes</b>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -72,6 +83,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuCores { get; set; }
 
             /// <summary>
+            /// <para>The number of proxy nodes in the availability zone, valid values: <b>1</b> to <b>16</b>.</para>
+            /// <remarks>
+            /// <para>This parameter is required when selecting <b>DBProxyNodes</b>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -80,6 +96,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string NodeCounts { get; set; }
 
             /// <summary>
+            /// <para>The id of the availability zone where the node is located.</para>
+            /// <remarks>
+            /// <para>This parameter is required when selecting <b>DBProxyNodes</b>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hagnzhou-c</para>
             /// </summary>
@@ -118,14 +139,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of available zones for migration agents.</para>
+        /// <remarks>
+        /// <para>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("MigrateAZ")]
         [Validation(Required=false)]
         public List<ModifyDBProxyInstanceRequestMigrateAZ> MigrateAZ { get; set; }
         public class ModifyDBProxyInstanceRequestMigrateAZ : TeaModel {
+            /// <summary>
+            /// <para>The proxy connection address ID. You can obtain it through the DescribeDBProxyEndpoint interface.</para>
+            /// <remarks>
+            /// <para>This parameter is required when MigrateAZ is selected.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>yhw429********</para>
+            /// </summary>
             [NameInMap("dbProxyEndpointId")]
             [Validation(Required=false)]
             public string DbProxyEndpointId { get; set; }
 
+            /// <summary>
+            /// <para>The target VSwitchId corresponding to the proxy instance migration.</para>
+            /// <remarks>
+            /// <para>This parameter is required when MigrateAZ is selected.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-sw0qq49d1m****</para>
+            /// </summary>
             [NameInMap("destVSwitchId")]
             [Validation(Required=false)]
             public string DestVSwitchId { get; set; }

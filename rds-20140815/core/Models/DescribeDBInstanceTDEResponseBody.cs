@@ -52,6 +52,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
+        /// <para>The ID of the custom key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>749c1df7-<b><b>-</b></b>-<b><b>-</b></b></para>
+        /// </summary>
+        [NameInMap("EncryptionKey")]
+        [Validation(Required=false)]
+        public string EncryptionKey { get; set; }
+
+        /// <summary>
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>

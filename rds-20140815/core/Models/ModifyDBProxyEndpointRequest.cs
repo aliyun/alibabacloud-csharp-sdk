@@ -125,10 +125,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbEndpointType { get; set; }
 
+        /// <summary>
+        /// <para>The specified time takes effect. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</para>
+        /// <remarks>
+        /// <para>This parameter must be passed when EffectiveTime is SpecificTime.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-05-06T07:08:09Z</para>
+        /// </summary>
         [NameInMap("EffectiveSpecificTime")]
         [Validation(Required=false)]
         public string EffectiveSpecificTime { get; set; }
 
+        /// <summary>
+        /// <para>Effective time, value:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Immediate</b>: effective immediately.</para>
+        /// </description></item>
+        /// <item><description><para><b>MaintainTime</b>: effective during the operational and maintainable time period, see ModifyDBInstanceMaintainTime.</para>
+        /// </description></item>
+        /// <item><description><para><b>SpecificTime</b>: effective at a specified time.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: MaintainTime.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MaintainTime</para>
+        /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
@@ -207,6 +231,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Specifies the switch ID corresponding to the availability zone of the proxy connection address. By default, it is the switch ID corresponding to the default terminal of the proxy instance. You can query the created switch by calling the DescribeVSwitches interface.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6adz52c2p****</para>
         /// </summary>

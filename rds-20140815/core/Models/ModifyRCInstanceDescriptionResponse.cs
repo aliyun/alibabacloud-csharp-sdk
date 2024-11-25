@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CreateDiagnosticReportResponse : TeaModel {
+    public class ModifyRCInstanceDescriptionResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateDiagnosticReportResponseBody Body { get; set; }
+        public ModifyRCInstanceDescriptionResponseBody Body { get; set; }
 
     }
 

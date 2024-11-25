@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("ImageName")]
+        [Validation(Required=false)]
+        public string ImageName { get; set; }
+
         /// <summary>
         /// <para>The page number.</para>
         /// 

@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Strategy { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
+
     }
 
 }

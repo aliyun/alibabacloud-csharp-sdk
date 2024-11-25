@@ -259,6 +259,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
+
+        /// <summary>
+        /// <para>Target specifications for read-only instances when changing a MySQL high-availability local disk instance to a cloud disk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysqlro.n2.large.c</para>
+        /// </summary>
         [NameInMap("ReadOnlyDBInstanceClass")]
         [Validation(Required=false)]
         public string ReadOnlyDBInstanceClass { get; set; }

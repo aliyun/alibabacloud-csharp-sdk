@@ -99,6 +99,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StartTime { get; set; }
 
             /// <summary>
+            /// <para>The end time of the switching from the original instance to the new instance.</para>
+            /// <para>Expressed in Unix timestamp. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1714237539000</para>
+            /// </summary>
+            [NameInMap("SwitchEndTime")]
+            [Validation(Required=false)]
+            public string SwitchEndTime { get; set; }
+
+            /// <summary>
             /// <para>The time at which your workloads are switched over from the original instance to the new instance.</para>
             /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</para>
             /// 

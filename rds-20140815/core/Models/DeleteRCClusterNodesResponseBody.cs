@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CreateDiagnosticReportResponseBody : TeaModel {
+    public class DeleteRCClusterNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the diagnostic report.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10166270</para>
-        /// </summary>
-        [NameInMap("ReportId")]
-        [Validation(Required=false)]
-        public string ReportId { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>8DA8956A-53DA-423E-9540-387428ED37FF-5711</para>
+        /// <para>7E0970A1-0434-5C83-B560-613EBA11B525</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>238028563</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

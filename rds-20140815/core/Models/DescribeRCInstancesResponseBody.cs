@@ -144,6 +144,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("TagResources")]
+            [Validation(Required=false)]
+            public List<DescribeRCInstancesResponseBodyRCInstancesTagResources> TagResources { get; set; }
+            public class DescribeRCInstancesResponseBodyRCInstancesTagResources : TeaModel {
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The VPC ID.</para>
             /// 
@@ -153,6 +175,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
 
         }
 

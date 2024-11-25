@@ -12,8 +12,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable or disable the database proxy feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Startup</b>: enables the database proxy feature.</description></item>
-        /// <item><description><b>Shutdown</b>: disables the database proxy feature.</description></item>
+        /// <item><description><b>Startup</b>: enables the feature.</description></item>
+        /// <item><description><b>Shutdown</b>: disables the feature.</description></item>
+        /// <item><description><b>Modify</b>: modifies the configuration of the feature.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -59,7 +60,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceNum { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved. You do not need to specify this parameter.</para>
+        /// <para>The database proxy type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>common</b>: general-purpose database proxy</description></item>
+        /// <item><description><b>exclusive</b> (default): dedicated database proxy</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>common</para>
@@ -68,6 +73,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>The proxy nodes.</para>
+        /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
         public string DBProxyNodesShrink { get; set; }
@@ -90,17 +98,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable connection keep. Valid values:</para>
+        /// <para>Specifies whether to enable persistent connections. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: enables connection keeping</description></item>
-        /// <item><description>Disabled: disables connection hold</description></item>
+        /// <item><description><b>Enabled</b></description></item>
+        /// <item><description><b>Disabled</b></description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is supported only for an ApsaraDB RDS for MySQL.</description></item>
-        /// <item><description>When you modify the connection persistence state, the value of <b>ConfigDBProxyService</b> is modify.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is available only for instances that run MySQL.</para>
+        /// </description></item>
+        /// <item><description><para>If you want to modify persistent connections, you must set the <b>ConfigDBProxyService</b> parameter to <b>Modify</b>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>

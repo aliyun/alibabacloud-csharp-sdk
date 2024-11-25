@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>List of proxy nodes.</para>
+        /// <remarks>
+        /// <para>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
         public string DBProxyNodesShrink { get; set; }
@@ -92,6 +98,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of available zones for migration agents.</para>
+        /// <remarks>
+        /// <para>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("MigrateAZ")]
         [Validation(Required=false)]
         public string MigrateAZShrink { get; set; }

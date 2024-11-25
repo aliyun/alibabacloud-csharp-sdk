@@ -215,13 +215,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the database proxy that is enabled on the instance.</para>
+        /// <para>The type of the database proxy that is enabled on the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: shared proxy</description></item>
-        /// <item><description>2: dedicated proxy</description></item>
+        /// <item><description>1: shared database proxy</description></item>
+        /// <item><description>2: dedicated database proxy</description></item>
+        /// <item><description>3: general-purpose database proxy</description></item>
         /// </list>
         /// <remarks>
-        /// <para> ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</para>
+        /// <para> ApsaraDB RDS for PostgreSQL does not support shared database proxies.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -231,10 +232,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>Internal parameters, no need to pay attention.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18</para>
+        /// </summary>
         [NameInMap("DBProxyKindCode")]
         [Validation(Required=false)]
         public string DBProxyKindCode { get; set; }
 
+        /// <summary>
+        /// <para>The proxy node list.</para>
+        /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
         public DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes { get; set; }
@@ -243,11 +253,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes { get; set; }
             public class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes : TeaModel {
+                /// <summary>
+                /// <para>The number of cpu cores for the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("cpuCores")]
                 [Validation(Required=false)]
                 public string CpuCores { get; set; }
 
                 /// <summary>
+                /// <para>The proxy node id.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pn-xxxxxxx01</para>
                 /// </summary>
@@ -255,6 +273,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
+                /// <summary>
+                /// <para>The id of the availability zone where the node is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-c</para>
+                /// </summary>
                 [NameInMap("zoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -264,12 +288,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Connection Persistence State. </para>
-        /// <para>Valid values:</para>
+        /// <para>The status of persistence connections. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: Enabled</description></item>
-        /// <item><description>Disabled: Disabled</description></item>
-        /// <item><description>Unsupported: The instance does not support connection persistence</description></item>
+        /// <item><description><b>Enabled</b></description></item>
+        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><b>Unsupported</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to automatically create database proxies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the feature. By default, general-purpose database proxies are created.</description></item>
-        /// <item><description><b>false</b>: disables the feature. No database proxies are created.</description></item>
+        /// <item><description><b>true</b>: automatically creates database proxies. By default, general-purpose database proxies are created.</description></item>
+        /// <item><description><b>false</b>: does not automatically create database proxies.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoCreateProxy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic payment feature. Valid values:</para>
+        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
         /// <ol>
-        /// <item><description><b>true</b>: enables the feature. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// <item><description><b>true</b>: automatically completes the payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated.</description></item>
         /// </ol>
         /// <remarks>
-        /// <para> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
+
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
         /// <para>A reserved parameter. You do not need to specify this parameter.</para>
@@ -238,7 +242,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// <para>Default value: VPC. If you set this parameter to VPC, you must also specify the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
         /// <remarks>
-        /// <para>The network type of the read-only instance can be different from the network type of the primary instance.</para>
+        /// <para> The network type of the read-only instance can be different from the network type of the primary instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -325,6 +329,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
+
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         /// <summary>
         /// <para>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.</para>
@@ -430,6 +438,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The zone ID. You can call the DescribeRegions operation to query the zone ID.</para>
+        /// <list type="bullet">
+        /// <item><description>If you use the single-zone deployment method, set this parameter to the ID of one zone. Example: <c>cn-hangzhou-b</c>.</description></item>
+        /// <item><description>If you use the multi-zone deployment method, set this parameter to the IDs of multiple zones and separate the IDs with colons (:). Example: <c>cn-hangzhou-b:cn-hangzhou-c</c>.</description></item>
+        /// <item><description>The number of zone IDs that you specify must be less than or equal to the number of nodes created for the read-only instance. If you create a read-only instance that runs RDS Basic Edition, only one node is provisioned. If you create a read-only instance that runs RDS High-availability Edition, one primary node and one secondary node are provisioned.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

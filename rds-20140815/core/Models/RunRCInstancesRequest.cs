@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
-            public string Size { get; set; }
+            public int? Size { get; set; }
 
         }
 

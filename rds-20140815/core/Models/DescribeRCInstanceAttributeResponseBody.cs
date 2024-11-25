@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        [NameInMap("DbType")]
+        [Validation(Required=false)]
+        public string DbType { get; set; }
+
         /// <summary>
         /// <para>The attributes of the dedicated hosts.</para>
         /// 

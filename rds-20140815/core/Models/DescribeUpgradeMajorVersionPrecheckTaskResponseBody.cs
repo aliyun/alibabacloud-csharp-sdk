@@ -49,6 +49,46 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
+            /// <para>The minimum recommended disk capacity for upgrading. Unit: GB.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only for RDS PostgreSQL instances.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("RecommendDiskSize")]
+            [Validation(Required=false)]
+            public int? RecommendDiskSize { get; set; }
+
+            /// <summary>
+            /// <para>The minimum recommended memory for upgrading. Unit: GB.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only for RDS PostgreSQL instances.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8</para>
+            /// </summary>
+            [NameInMap("RecommendLeastMemSize")]
+            [Validation(Required=false)]
+            public int? RecommendLeastMemSize { get; set; }
+
+            /// <summary>
+            /// <para>Recommended memory when upgrading. Unit: GB.</para>
+            /// <para>When the memory of the instance is greater than or equal to the recommended memory, it will be upgraded at the fastest speed to minimize the read-only time of the instance.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only for RDS PostgreSQL instances.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>32</para>
+            /// </summary>
+            [NameInMap("RecommendMemSize")]
+            [Validation(Required=false)]
+            public int? RecommendMemSize { get; set; }
+
+            /// <summary>
             /// <para>The result of the upgrade check.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">

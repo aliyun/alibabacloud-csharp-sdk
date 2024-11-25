@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("DiskId")]
+        [Validation(Required=false)]
+        public string DiskId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">

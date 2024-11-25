@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable the automatic payment feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the feature. You must make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>true</b>: enables the feature. Make sure that your account balance is sufficient.</description></item>
         /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
         /// </list>
         /// <remarks>
@@ -77,6 +77,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: uses a coupon.</description></item>
+        /// <item><description><b>false</b> (default): does not use a coupon.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
         /// <para>The configuration of the Babelfish feature for the instance that runs PostgreSQL.</para>
@@ -154,10 +168,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
         /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</description></item>
         /// </list>
-        /// <para>**</para>
-        /// <para><b>Note</b> This parameter is required when you create a serverless instance.</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is required when you create a serverless instance.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>HighAvailability</para>
@@ -472,17 +487,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>ApsaraDB RDS for MariaDB does not support serverless instances.</para>
-        /// </description></item>
-        /// <item><description><para>RDS instances that run SQL Server: <c>_ent</c> specifies SQL Server EE (Always On), <c>_ent_ha</c> specifies SQL Server EE, <c>_std_ha</c> specifies SQL Server SE, and <c>_web</c> specifies SQL Server Web.</para>
-        /// </description></item>
-        /// <item><description><para>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</para>
-        /// </description></item>
-        /// <item><description><para>Babelfish is supported only for RDS instances that run PostgreSQL 15.</para>
-        /// </description></item>
+        /// <item><description>ApsaraDB RDS for MariaDB does not support serverless instances.</description></item>
+        /// <item><description>RDS instances that run SQL Server: <c>_ent</c> specifies SQL Server EE (Always On), <c>_ent_ha</c> specifies SQL Server EE, <c>_std_ha</c> specifies SQL Server SE, and <c>_web</c> specifies SQL Server Web.</description></item>
+        /// <item><description>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</description></item>
+        /// <item><description>Babelfish is supported only for RDS instances that run PostgreSQL 15.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -495,7 +506,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>VPC</b>: a virtual private cloud (VPC)</description></item>
         /// <item><description><b>Classic</b>: the classic network</description></item>
         /// </list>
         /// <remarks>
@@ -592,6 +603,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
+
+        /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliwood-1688-mobile-promotion</para>
+        /// </summary>
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         /// <summary>
         /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
@@ -693,7 +714,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description>Serverless ApsaraDB RDS for MySQL instances: <b>0.5 to 32</b>.</description></item>
             /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 8</b>. Only integers are supported.</description></item>
-            /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>0.5 to 14</b>.</description></item>
+            /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>0.5 to 14</b></description></item>
             /// </list>
             /// <remarks>
             /// <para> The value of this parameter must be less than or equal to the value of the <b>MaxCapacity</b> parameter.</para>
@@ -957,10 +978,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by <b>ZoneId</b>.</para>
+        /// <para>The vSwitch ID. The vSwitch must belong to the zone that is specified by <b>ZoneId</b>.</para>
         /// <list type="bullet">
         /// <item><description>If you set <b>InstanceNetworkType</b> to <b>VPC</b>, you must also specify this parameter.</description></item>
-        /// <item><description>If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</description></item>
+        /// <item><description>If you set the <b>ZoneSlaveId1</b> parameter to a value that is not <b>Auto</b>, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,). The ZoneSlaveId1 parameter specifies the zone ID of the secondary node.</description></item>
+        /// <item><description>The value cannot contain <c>spaces</c>, exclamation points <c>(!)</c>, or special characters such as number signs <c>(#)</c>, dollar signs <c>($)</c>, ampersands <c>(&amp;)</c>, and percent signs <c>(%)</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1012,7 +1034,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>The zone ID of the other secondary node. When you create an ApsaraDB RDS for MySQL cluster, you can create one to two secondary nodes for the cluster. This parameter applies if you create a cluster that contains two secondary nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-d</para>

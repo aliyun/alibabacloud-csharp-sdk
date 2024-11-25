@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        [NameInMap("Dimension")]
+        [Validation(Required=false)]
+        public string Dimension { get; set; }
+
         /// <summary>
         /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
