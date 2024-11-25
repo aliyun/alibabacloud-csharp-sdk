@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public bool? AutoCreateTopicEnable { get; set; }
 
+                [NameInMap("BackupZoneId")]
+                [Validation(Required=false)]
+                public string BackupZoneId { get; set; }
+
                 /// <summary>
                 /// <para>The parameters that are returned for the ApsaraMQ for Confluent instance.</para>
                 /// </summary>
