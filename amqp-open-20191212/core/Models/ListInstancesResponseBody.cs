@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string ClassicEndpoint { get; set; }
 
+                [NameInMap("EncryptedInstance")]
+                [Validation(Required=false)]
+                public bool? EncryptedInstance { get; set; }
+
                 /// <summary>
                 /// <para>The timestamp that indicates when the instance expires. Unit: milliseconds.</para>
                 /// 
@@ -87,6 +91,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                [NameInMap("KmsKeyId")]
+                [Validation(Required=false)]
+                public string KmsKeyId { get; set; }
 
                 /// <summary>
                 /// <para>The maximum number of Internet-based transactions per second (TPS) for the instance.</para>

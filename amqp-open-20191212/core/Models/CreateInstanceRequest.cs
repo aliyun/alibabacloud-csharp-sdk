@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("EncryptedInstance")]
+        [Validation(Required=false)]
+        public bool? EncryptedInstance { get; set; }
+
         /// <summary>
         /// <para>The instance name. We recommend that you specify a name that does not exceed 64 characters in length.</para>
         /// 
@@ -70,6 +74,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>key-xxx</para>
+        /// </summary>
+        [NameInMap("KmsKeyId")]
+        [Validation(Required=false)]
+        public string KmsKeyId { get; set; }
 
         /// <summary>
         /// <para>The maximum number of connections that can be established to the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>

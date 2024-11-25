@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("EncryptedInstance")]
+        [Validation(Required=false)]
+        public bool? EncryptedInstance { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,6 +38,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>key-xxx</para>
+        /// </summary>
+        [NameInMap("KmsKeyId")]
+        [Validation(Required=false)]
+        public string KmsKeyId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

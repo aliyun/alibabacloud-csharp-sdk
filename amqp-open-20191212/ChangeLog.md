@@ -1,3 +1,15 @@
+2024-11-25 Version: 1.4.0
+- Support API GetInstance.
+- Update API CreateBinding: update param Argument.
+- Update API CreateBinding: update param BindingKey.
+- Update API CreateInstance: add param EncryptedInstance.
+- Update API CreateInstance: add param KmsKeyId.
+- Update API DeleteBinding: update param BindingKey.
+- Update API ListInstances: update response param.
+- Update API UpdateInstance: add param EncryptedInstance.
+- Update API UpdateInstance: add param KmsKeyId.
+
+
 2024-11-12 Version: 1.3.4
 - Update API CreateBinding: update param BindingKey.
 - Update API CreateInstance: add param ResourceGroupId.
