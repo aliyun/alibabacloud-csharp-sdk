@@ -124,8 +124,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// <para>The name cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
+        /// <para>The retention period of the snapshot. Unit: days. Valid values: 1 to 65536. After the retention period ends, the snapshot is automatically released.</para>
+        /// <para>This parameter is left empty by default, which indicates that the snapshot is not automatically released.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -135,8 +135,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-        /// <para>The name cannot start with <c>auto</c> because snapshots whose names start with auto are recognized as automatic snapshots.</para>
+        /// <para>The name of the snapshot. The name must be 2 to 128 characters in length and start with a letter. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <remarks>
+        /// <para> The name cannot start with http:// or https://. The name cannot start with <c>auto</c> because the names of automatic snapshots start with auto.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>testSnapshotName</para>

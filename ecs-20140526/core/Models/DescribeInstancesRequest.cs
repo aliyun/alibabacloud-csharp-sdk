@@ -38,10 +38,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The additional attributes. Valid values of N: 1 to 20. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>META_OPTIONS: instance metadata</description></item>
-        /// <item><description>DDH_CLUSTER: dedicated host cluster</description></item>
-        /// <item><description>NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI</description></item>
-        /// <item><description>CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance</description></item>
+        /// <item><description>META_OPTIONS: instance metadata.</description></item>
+        /// <item><description>DDH_CLUSTER: dedicated host cluster.</description></item>
+        /// <item><description>NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI.</description></item>
+        /// <item><description>CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance.</description></item>
+        /// <item><description>CURRENT_OS_NVME_SUPPORTED: specifies whether the operating system supports access to disks over the Non-Volatile Memory Express (NVMe) protocol.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

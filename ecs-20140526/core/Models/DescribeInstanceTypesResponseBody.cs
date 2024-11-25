@@ -54,10 +54,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? CpuCoreCount { get; set; }
 
+                /// <summary>
+                /// <para>The CPU options.</para>
+                /// </summary>
                 [NameInMap("CpuOptions")]
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions CpuOptions { get; set; }
                 public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions : TeaModel {
+                    [NameInMap("Core")]
+                    [Validation(Required=false)]
+                    public int? Core { get; set; }
+
+                    [NameInMap("CoreFactor")]
+                    [Validation(Required=false)]
+                    public int? CoreFactor { get; set; }
+
+                    [NameInMap("HyperThreadingAdjustable")]
+                    [Validation(Required=false)]
+                    public bool? HyperThreadingAdjustable { get; set; }
+
+                    /// <summary>
+                    /// <para>The CPU topology types of the instance type.</para>
+                    /// </summary>
                     [NameInMap("SupportedTopologyTypes")]
                     [Validation(Required=false)]
                     public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes SupportedTopologyTypes { get; set; }
@@ -67,6 +85,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<string> SupportedTopologyType { get; set; }
 
                     }
+
+                    [NameInMap("ThreadsPerCore")]
+                    [Validation(Required=false)]
+                    public int? ThreadsPerCore { get; set; }
 
                 }
 
@@ -346,6 +368,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("InstanceTypeId")]
                 [Validation(Required=false)]
                 public string InstanceTypeId { get; set; }
+
+                [NameInMap("JumboFrameSupport")]
+                [Validation(Required=false)]
+                public bool? JumboFrameSupport { get; set; }
 
                 /// <summary>
                 /// <para>The number of local disks per instance.</para>

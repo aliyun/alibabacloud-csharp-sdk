@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>Basic disk (cloud): 20 to 500.</para>
         /// </description></item>
-        /// <item><description><para>ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.</para>
+        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.</para>
         /// <list type="bullet">
         /// <item><description>PL0 ESSD: 1 to 2048.</description></item>
         /// <item><description>PL1 ESSD: 20 to 2048.</description></item>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>Standard SSD (cloud_ssd): 20 to 32768.</para>
         /// </description></item>
-        /// <item><description><para>ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <c>PerformanceLevel</c> value in the response.</para>
+        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <c>PerformanceLevel</c> value in the response.</para>
         /// <list type="bullet">
-        /// <item><description>PL0 ESSD: 1 to 32768.</description></item>
-        /// <item><description>PL1 ESSD: 20 to 32768.</description></item>
-        /// <item><description>PL2 ESSD: 461 to 32768.</description></item>
-        /// <item><description>PL3 ESSD: 1261 to 32768.</description></item>
+        /// <item><description>PL0 ESSD: 1 to 65536.</description></item>
+        /// <item><description>PL1 ESSD: 20 to 65536.</description></item>
+        /// <item><description>PL2 ESSD: 461 to 65536.</description></item>
+        /// <item><description>PL3 ESSD: 1261 to 65536.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Basic disk (cloud): 5 to 2000.</para>
         /// </description></item>
-        /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 32768.</para>
+        /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 65536.</para>
         /// </description></item>
         /// <item><description><para>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</para>
         /// </description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The new disk capacity must be larger than the original disk capacity.</para>
+        /// <para> The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The method that you want to use to resize the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>offline (default): resizes the disk offline. After you resize a disk offline, you must restart the associated instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the resizing operation to take effect. For information about how to restart an ECS instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>.</description></item>
-        /// <item><description>online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the associated instance. You can resize ultra disks, standard SSDs, Enterprise SSDs (ESSDs), and elastic ephemeral disks online.</description></item>
+        /// <item><description>offline (default): resizes the disk offline. After you resize a disk offline, you must restart the ECS instance to which the disk is attached in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to allow the resizing operation to take effect. For information about how to restart an ECS instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an ECS instance</a>.</description></item>
+        /// <item><description>online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the ECS instance to which the disk is attached. You can resize ultra disks, standard SSDs, Enterprise SSDs (ESSDs), and elastic ephemeral disks online.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

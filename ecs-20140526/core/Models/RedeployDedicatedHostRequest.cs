@@ -20,6 +20,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string DedicatedHostId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Reboot</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("MigrationType")]
+        [Validation(Required=false)]
+        public string MigrationType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DetectionStrategy { get; set; }
 
         /// <summary>
-        /// <para>The information about the custom image.</para>
+        /// <para>The information of disks from which the custom images are created.</para>
         /// </summary>
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
@@ -91,11 +91,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>The size of disk N in the custom image. Unit: GiB</para>
+            /// <para>The size of disk N in the custom image. Unit: GiB.</para>
             /// <para>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</description></item>
-            /// <item><description>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</description></item>
+            /// <item><description>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</description></item>
+            /// <item><description>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</description></item>
             /// </list>
             /// <para>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</para>
             /// <remarks>
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The size of disk N in the custom image after the image is imported.</para>
             /// <para>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</description></item>
-            /// <item><description>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</description></item>
+            /// <item><description>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</description></item>
+            /// <item><description>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 1 to 2048.</description></item>
             /// </list>
             /// <para>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</para>
             /// 
@@ -166,14 +166,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>The attributes of the custom image.</para>
+        /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
         public ImportImageRequestFeatures Features { get; set; }
         public class ImportImageRequestFeatures : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
+            /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>supported</para>
+            /// </summary>
             [NameInMap("NvmeSupport")]
             [Validation(Required=false)]
             public string NvmeSupport { get; set; }

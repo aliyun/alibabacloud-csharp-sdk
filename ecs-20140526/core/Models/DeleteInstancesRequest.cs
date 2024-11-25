@@ -20,11 +20,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run without performing the actual request. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DRYRUN.SUCCESS error code is returned.</description></item>
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DRYRUN.SUCCESS error code is returned.</description></item>
         /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -36,9 +37,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to forcefully release the ECS instance in the <b>Running</b> (<c>Running</c>) state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully releases the ECS instance in the <b>Running</b> (<c>Running</c>) state. When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</description></item>
-        /// <item><description>false (default): normally releases the ECS instance. This value is valid only for instances that are in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
+        /// <item><description>true: forcefully releases the ECS instance in the <b>Running</b> (<c>Running</c>) state.</description></item>
+        /// <item><description>false: normally releases the ECS instance. This value is valid only if the instance is in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// </list>
+        /// <para>Default value: false.</para>
+        /// <para>**</para>
+        /// <para><b>Warning</b> When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances. You can specify up to 100 instance IDs in a single request.</para>
+        /// <para>The IDs of ECS instances. You can specify 1 to 100 ECS instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +90,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the expired subscription instance.</para>
+        /// <para>Specifies whether to release the expired subscription instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>

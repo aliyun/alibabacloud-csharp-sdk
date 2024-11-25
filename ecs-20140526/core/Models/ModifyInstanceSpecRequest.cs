@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</para>
+        /// <para>Specifies whether to allow cross-cluster instance type upgrade.</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>

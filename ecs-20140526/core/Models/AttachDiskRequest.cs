@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachDiskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to attach the disk as a system disk.</para>
+        /// <para>Specifies whether to attach the disk as the system disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: attaches the disk as the system disk.</description></item>
+        /// <item><description>false: does not attach the disk as the system disk.</description></item>
+        /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
         /// <para> You can set <c>Bootable</c> to true only if the instance does not have a system disk.</para>
@@ -24,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Bootable { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the disk when the instance is released.</para>
+        /// <para>Specifies whether to release the disk when the instance is released. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: releases the disk when the instance is released.</description></item>
         /// <item><description>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</description></item>
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description>If <c>OperationLocks</c> in the DescribeInstances response contains <c>&quot;LockReason&quot; : &quot;security&quot;</c> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <c>DeleteWithInstance</c> to <c>false</c>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</description></item>
         /// <item><description>If you want to attach an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</description></item>
-        /// <item><description>This parameter is unavailable for disks for which the multi-attach feature is enabled.</description></item>
+        /// <item><description>You cannot specify DeleteWithInstance for disks for which the multi-attach feature is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,12 +76,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully attach the disk to the instance.</para>
+        /// <para>Specifies whether to force attach the disk to the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: force attaches the disk to the instance.</description></item>
+        /// <item><description>false: does not force attach the disk to the instance.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
+        /// <remarks>
+        /// <para> You can set this parameter to true only for Regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -464,6 +464,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeInstancesResponseBodyInstancesInstanceImageOptions ImageOptions { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceImageOptions : TeaModel {
                     /// <summary>
+                    /// <para>Indicates whether the operating system supports access to disks over the NVMe protocol. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// <remarks>
+                    /// <para> This parameter is returned only if you specify CURRENT_OS_NVME_SUPPORTED in AdditionalAttributes in the request.</para>
+                    /// </remarks>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>

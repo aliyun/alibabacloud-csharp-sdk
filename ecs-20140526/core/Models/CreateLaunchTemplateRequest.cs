@@ -484,6 +484,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HostName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// <para>Default value: enabled.</para>
+        /// <remarks>
+        /// <para> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
         /// </summary>
@@ -492,6 +502,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HttpEndpoint { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -500,6 +514,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? HttpPutResponseHopLimit { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>optional: does not forcefully use the security hardening mode (IMDSv2).</description></item>
+        /// <item><description>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</description></item>
+        /// </list>
+        /// <para>Default value: optional.</para>
+        /// <remarks>
+        /// <para> For information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain information about an ECS instance, such as instance attributes inside ECS instances from instance metadata service</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>optional</para>
         /// </summary>

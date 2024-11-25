@@ -35,15 +35,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The payment is automatically completed.</para>
-        /// <para>**</para>
-        /// <para><b>Note</b> Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
-        /// </description></item>
-        /// <item><description><para>false: An order is generated but no payment is made.</para>
-        /// </description></item>
+        /// <item><description>true: The payment is automatically completed.</description></item>
+        /// <item><description>false: An order is generated but no payment is made.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
-        /// <para>When <c>OperatorType</c> is set to <c>downgrade</c>, <c>AutoPay</c> is ignored.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</para>
+        /// </description></item>
+        /// <item><description><para>If your account balance is insufficient, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>OperatorType</c> to <c>downgrade</c>, <c>AutoPay</c> is ignored.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -154,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</description></item>
         /// <item><description>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</description></item>
         /// </list>
-        /// <para>Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
+        /// <para>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -221,12 +226,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: restart the instance immediately after the instance type is changed.</description></item>
-        /// <item><description>false: does not restart the instance immediately after the instance type is changed.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> If the instance is in the <b>Stopping</b> state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the <c>RebootWhenFinished</c> parameter to true.</para>
+        /// <para> If the instance is in the <b>Stopped</b> state, the instance remains in the Stopped state and no operations are performed, regardless of whether <c>RebootWhenFinished</c> is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
