@@ -10,21 +10,35 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class CheckZoneNameRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The IP address of the client.
+        /// <para>The IP address of the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.XX.XX</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// The name of the zone. This parameter is required.
+        /// <para>The name of the zone. This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("ZoneName")]
         [Validation(Required=false)]

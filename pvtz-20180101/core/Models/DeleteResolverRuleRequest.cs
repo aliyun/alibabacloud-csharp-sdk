@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteResolverRuleRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The forwarding rule ID.
+        /// <para>The forwarding rule ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hr****</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

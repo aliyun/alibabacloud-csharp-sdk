@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class ChangeZoneDnsGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The global ID of the zone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e0cff188756b1d4579b25e54b66cb830</para>
+        /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }

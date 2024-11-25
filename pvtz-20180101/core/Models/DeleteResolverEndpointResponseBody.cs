@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteResolverEndpointResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>35134B4A-CEC0-43C8-AAD4-BA54AE3268B5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

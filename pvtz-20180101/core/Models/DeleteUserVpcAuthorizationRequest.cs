@@ -10,19 +10,26 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteUserVpcAuthorizationRequest : TeaModel {
         /// <summary>
-        /// The authorization scope. Valid values:
+        /// <para>The authorization scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NORMAL: general authorization</description></item>
+        /// <item><description>NORMAL: cloud service-related authorization</description></item>
+        /// </list>
+        /// <para>Default value: NORMAL.</para>
         /// 
-        /// *   NORMAL: general authorization
-        /// *   NORMAL: cloud service-related authorization
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account.
+        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>141339776561****</para>
         /// </summary>
         [NameInMap("AuthorizedUserId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class BindResolverRuleVpcResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12FE6E98-3885-423E-B18B-88CC17052A31</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

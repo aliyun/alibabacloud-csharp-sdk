@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneRecordRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the DNS record.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5808</para>
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteUserVpcAuthorizationResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

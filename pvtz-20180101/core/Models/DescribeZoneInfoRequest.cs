@@ -10,16 +10,26 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneInfoRequest : TeaModel {
         /// <summary>
-        /// The language.
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// <para>Default value: <b>en</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// The global ID of the zone.
+        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>df2d03865266bd9842306db586d3****</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

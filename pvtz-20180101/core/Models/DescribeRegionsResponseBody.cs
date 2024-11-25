@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The regions.
+        /// <para>The regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,28 +21,40 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The display name of the region, which varies based on the current language.
+                /// <para>The display name of the region, which varies based on the current language.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Beijing)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The endpoint of the service in the region.
+                /// <para>The endpoint of the service in the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pvtz.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The name of the region.
+                /// <para>The region name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Beijing)</para>
                 /// </summary>
                 [NameInMap("RegionName")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

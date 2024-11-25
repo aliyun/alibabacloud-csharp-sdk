@@ -10,16 +10,26 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeResolverEndpointRequest : TeaModel {
         /// <summary>
-        /// The endpoint ID.
+        /// <para>The endpoint ID. This ID uniquely identifies the endpoint.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hr****</para>
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The language.
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
