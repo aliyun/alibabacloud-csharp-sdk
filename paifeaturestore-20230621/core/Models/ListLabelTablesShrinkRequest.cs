@@ -54,8 +54,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>project1</para>
         /// </summary>
