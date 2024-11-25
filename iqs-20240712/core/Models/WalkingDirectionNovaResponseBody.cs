@@ -223,6 +223,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
