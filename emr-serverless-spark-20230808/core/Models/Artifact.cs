@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("catagoryBizId")]
+        [Validation(Required=false)]
+        public string CatagoryBizId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -26,6 +30,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("credential")]
         [Validation(Required=false)]
         public Credential Credential { get; set; }
+
+        [NameInMap("fullPath")]
+        [Validation(Required=false)]
+        public List<string> FullPath { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

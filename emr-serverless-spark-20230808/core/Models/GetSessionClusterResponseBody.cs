@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("domainInner")]
+            [Validation(Required=false)]
+            public string DomainInner { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>TSK-xxxxxxxx</para>
@@ -128,6 +132,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("fusion")]
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
+
+            [NameInMap("gmtCreate")]
+            [Validation(Required=false)]
+            public long? GmtCreate { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -172,6 +180,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("sessionClusterId")]
             [Validation(Required=false)]
             public string SessionClusterId { get; set; }
+
+            [NameInMap("startTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
 
             /// <summary>
             /// <para>作业状态。</para>

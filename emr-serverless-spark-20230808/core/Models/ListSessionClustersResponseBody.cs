@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigFileName { get; set; }
 
                 /// <summary>
-                /// <para>The key of the configuration item.</para>
+                /// <para>The key of the configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark.app.name</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigItemKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the configuration item.</para>
+                /// <para>The configuration value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_application</para>
@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("domainInner")]
+            [Validation(Required=false)]
+            public string DomainInner { get; set; }
+
             /// <summary>
             /// <para>The ID of the job that is associated with the session.</para>
             /// 
@@ -163,6 +167,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("fusion")]
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
+
+            [NameInMap("gmtCreate")]
+            [Validation(Required=false)]
+            public long? GmtCreate { get; set; }
 
             /// <summary>
             /// <para>The session type.</para>
@@ -220,6 +228,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string SessionClusterId { get; set; }
 
+            [NameInMap("startTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
             /// <summary>
             /// <para>The status of the session.</para>
             /// 
@@ -270,7 +282,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the user.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_user</para>

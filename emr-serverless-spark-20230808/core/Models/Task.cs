@@ -39,6 +39,44 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public long? Creator { get; set; }
 
+        [NameInMap("credential")]
+        [Validation(Required=false)]
+        public TaskCredential Credential { get; set; }
+        public class TaskCredential : TeaModel {
+            [NameInMap("accessId")]
+            [Validation(Required=false)]
+            public string AccessId { get; set; }
+
+            [NameInMap("accessUrl")]
+            [Validation(Required=false)]
+            public string AccessUrl { get; set; }
+
+            [NameInMap("expire")]
+            [Validation(Required=false)]
+            public long? Expire { get; set; }
+
+            [NameInMap("host")]
+            [Validation(Required=false)]
+            public string Host { get; set; }
+
+            [NameInMap("path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+            [NameInMap("policy")]
+            [Validation(Required=false)]
+            public string Policy { get; set; }
+
+            [NameInMap("securityToken")]
+            [Validation(Required=false)]
+            public string SecurityToken { get; set; }
+
+            [NameInMap("signature")]
+            [Validation(Required=false)]
+            public string Signature { get; set; }
+
+        }
+
         [NameInMap("defaultCatalogId")]
         [Validation(Required=false)]
         public string DefaultCatalogId { get; set; }
@@ -58,6 +96,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("deploymentId")]
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
+
+        [NameInMap("environmentId")]
+        [Validation(Required=false)]
+        public string EnvironmentId { get; set; }
 
         [NameInMap("extraArtifactIds")]
         [Validation(Required=false)]

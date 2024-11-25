@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            [NameInMap("environmentId")]
+            [Validation(Required=false)]
+            public string EnvironmentId { get; set; }
+
             /// <summary>
             /// <para>The timeout period of the job.</para>
             /// 

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The SQL compute ID. You can create an SQL compute in the workspace created in EMR Serverless Spark.</para>
+        /// <para>The SQL session ID. You can create an SQL session in the workspace created in EMR Serverless Spark.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sc-dfahdfjafhajd****</para>

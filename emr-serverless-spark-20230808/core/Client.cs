@@ -1287,7 +1287,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志内容</para>
+        /// <para>Obtains the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1345,7 +1345,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志内容</para>
+        /// <para>Obtains the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1403,7 +1403,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志内容</para>
+        /// <para>Obtains the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1422,7 +1422,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日志内容</para>
+        /// <para>Obtains the log content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1603,7 +1603,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1669,7 +1669,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1735,7 +1735,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1754,7 +1754,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the list of sessions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1773,7 +1773,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间队列列表</para>
+        /// <para>Queries the list of queues in a Spark workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1823,7 +1823,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间队列列表</para>
+        /// <para>Queries the list of queues in a Spark workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1873,7 +1873,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间队列列表</para>
+        /// <para>Queries the list of queues in a Spark workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1892,7 +1892,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间队列列表</para>
+        /// <para>Queries the list of queues in a Spark workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
