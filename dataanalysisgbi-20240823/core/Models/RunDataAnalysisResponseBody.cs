@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
 {
     public class RunDataAnalysisResponseBody : TeaModel {
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("data")]
         [Validation(Required=false)]
         public RunDataAnalysisResponseBodyData Data { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
             [NameInMap("evidence")]
             [Validation(Required=false)]
             public string Evidence { get; set; }
+
+            [NameInMap("httpStatusCode")]
+            [Validation(Required=false)]
+            public long? HttpStatusCode { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -120,6 +128,14 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
             }
 
         }
+
+        [NameInMap("httpStatusCode")]
+        [Validation(Required=false)]
+        public long? HttpStatusCode { get; set; }
+
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
     }
 
