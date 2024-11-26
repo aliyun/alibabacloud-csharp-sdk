@@ -1135,6 +1135,126 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceForIsvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceForIsvResponse
+        /// </returns>
+        public DescribeInstanceForIsvResponse DescribeInstanceForIsvWithOptions(DescribeInstanceForIsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceForIsv",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceForIsvResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceForIsvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceForIsvResponse
+        /// </returns>
+        public async Task<DescribeInstanceForIsvResponse> DescribeInstanceForIsvWithOptionsAsync(DescribeInstanceForIsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceForIsv",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceForIsvResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceForIsvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceForIsvResponse
+        /// </returns>
+        public DescribeInstanceForIsvResponse DescribeInstanceForIsv(DescribeInstanceForIsvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceForIsvWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceForIsvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceForIsvResponse
+        /// </returns>
+        public async Task<DescribeInstanceForIsvResponse> DescribeInstanceForIsvAsync(DescribeInstanceForIsvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceForIsvWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -1485,6 +1605,126 @@ namespace AlibabaCloud.SDK.Market20151101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询订单详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOrderForIsvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrderForIsvResponse
+        /// </returns>
+        public DescribeOrderForIsvResponse DescribeOrderForIsvWithOptions(DescribeOrderForIsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOrderForIsv",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOrderForIsvResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询订单详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOrderForIsvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrderForIsvResponse
+        /// </returns>
+        public async Task<DescribeOrderForIsvResponse> DescribeOrderForIsvWithOptionsAsync(DescribeOrderForIsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOrderForIsv",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOrderForIsvResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询订单详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOrderForIsvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrderForIsvResponse
+        /// </returns>
+        public DescribeOrderForIsvResponse DescribeOrderForIsv(DescribeOrderForIsvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeOrderForIsvWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询订单详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOrderForIsvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOrderForIsvResponse
+        /// </returns>
+        public async Task<DescribeOrderForIsvResponse> DescribeOrderForIsvAsync(DescribeOrderForIsvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeOrderForIsvWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
