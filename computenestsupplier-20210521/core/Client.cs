@@ -5507,6 +5507,142 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>回滚服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackServiceInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackServiceInstanceResponse
+        /// </returns>
+        public RollbackServiceInstanceResponse RollbackServiceInstanceWithOptions(RollbackServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RollbackServiceInstance",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RollbackServiceInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>回滚服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackServiceInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackServiceInstanceResponse
+        /// </returns>
+        public async Task<RollbackServiceInstanceResponse> RollbackServiceInstanceWithOptionsAsync(RollbackServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RollbackServiceInstance",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RollbackServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>回滚服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackServiceInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackServiceInstanceResponse
+        /// </returns>
+        public RollbackServiceInstanceResponse RollbackServiceInstance(RollbackServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RollbackServiceInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>回滚服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackServiceInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackServiceInstanceResponse
+        /// </returns>
+        public async Task<RollbackServiceInstanceResponse> RollbackServiceInstanceAsync(RollbackServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RollbackServiceInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.</para>
         /// </summary>
         /// 

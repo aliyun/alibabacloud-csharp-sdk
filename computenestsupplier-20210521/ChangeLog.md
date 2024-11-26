@@ -1,3 +1,7 @@
+2024-11-26 Version: 3.1.0
+- Support API RollbackServiceInstance.
+
+
 2024-11-12 Version: 3.0.2
 - Generated csharp 2021-05-21 for ComputeNestSupplier.
 
