@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiMockContract : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("responseCode")]
         [Validation(Required=false)]
         public int? ResponseCode { get; set; }

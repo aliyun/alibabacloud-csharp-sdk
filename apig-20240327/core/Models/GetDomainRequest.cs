@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class GatewayRouteDomainConfig : TeaModel {
-        [NameInMap("domainIds")]
+    public class GetDomainRequest : TeaModel {
+        [NameInMap("withStatistics")]
         [Validation(Required=false)]
-        public List<string> DomainIds { get; set; }
+        public bool? WithStatistics { get; set; }
 
     }
 

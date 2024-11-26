@@ -8,29 +8,39 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class ListDomainsRequest : TeaModel {
+    public class ListGatewaysShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Gateway Id.</para>
+        /// <para>Query exactly by gateway ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gw-xxx</para>
+        /// <para>gw-cpv4sqdl****</para>
         /// </summary>
         [NameInMap("gatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Domain name, fuzzy search.</para>
+        /// <para>Keyword, search with full match, case-insensitive.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>dev</para>
         /// </summary>
-        [NameInMap("nameLike")]
+        [NameInMap("keyword")]
         [Validation(Required=false)]
-        public string NameLike { get; set; }
+        public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1.</para>
+        /// <para>Query exactly by gateway name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>itemcenter-gateway</para>
+        /// </summary>
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// <para>Page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, default is 10.</para>
+        /// <para>Page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,6 +62,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public string TagsShrink { get; set; }
 
     }
 

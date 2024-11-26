@@ -8,18 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class HttpApiBackendMatchConditions : TeaModel {
-        [NameInMap("conditions")]
+    public class GetEnvironmentRequest : TeaModel {
+        [NameInMap("withStatistics")]
         [Validation(Required=false)]
-        public List<HttpApiBackendMatchCondition> Conditions { get; set; }
+        public bool? WithStatistics { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>Option for vpc info.</para>
         /// </summary>
-        [NameInMap("default")]
+        [NameInMap("withVpcInfo")]
         [Validation(Required=false)]
-        public bool? Default { get; set; }
+        public bool? WithVpcInfo { get; set; }
 
     }
 

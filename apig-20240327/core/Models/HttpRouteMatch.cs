@@ -13,20 +13,36 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<HttpRouteMatchHeaders> Headers { get; set; }
         public class HttpRouteMatchHeaders : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>dev</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Exact</para>
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ignoreUriCase")]
         [Validation(Required=false)]
         public bool? IgnoreUriCase { get; set; }
@@ -39,10 +55,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public HttpRouteMatchPath Path { get; set; }
         public class HttpRouteMatchPath : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Prefix</para>
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>/user</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -53,14 +77,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<HttpRouteMatchQueryParams> QueryParams { get; set; }
         public class HttpRouteMatchQueryParams : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>age</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Exact</para>
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>17</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }

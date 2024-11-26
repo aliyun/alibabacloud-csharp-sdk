@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public HttpApiRequestContractBody Body { get; set; }
         public class HttpApiRequestContractBody : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>application/json</para>
+            /// </summary>
             [NameInMap("contentType")]
             [Validation(Required=false)]
             public string ContentType { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
+            /// </summary>
             [NameInMap("example")]
             [Validation(Required=false)]
             public string Example { get; set; }

@@ -9,10 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiInfoByName : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test-api</para>
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Http</para>
+        /// </summary>
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("versionEnabled")]
         [Validation(Required=false)]
         public bool? VersionEnabled { get; set; }

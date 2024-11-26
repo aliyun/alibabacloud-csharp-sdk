@@ -29,10 +29,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string DubboMothedName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ALL_GET</para>
+            /// </summary>
             [NameInMap("httpMothed")]
             [Validation(Required=false)]
             public string HttpMothed { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>/mytestzbk/sayhello</para>
+            /// </summary>
             [NameInMap("mothedpath")]
             [Validation(Required=false)]
             public string Mothedpath { get; set; }
@@ -41,20 +49,36 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<HttpDubboTranscoderMothedMapListParamMapsList> ParamMapsList { get; set; }
             public class HttpDubboTranscoderMothedMapListParamMapsList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>name</para>
+                /// </summary>
                 [NameInMap("extractKey")]
                 [Validation(Required=false)]
                 public string ExtractKey { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ALL_QUERY_PARAMETER</para>
+                /// </summary>
                 [NameInMap("extractKeySpec")]
                 [Validation(Required=false)]
                 public string ExtractKeySpec { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>java.lang.String</para>
+                /// </summary>
                 [NameInMap("mappingType")]
                 [Validation(Required=false)]
                 public string MappingType { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PASS_NOT</para>
+            /// </summary>
             [NameInMap("passThroughAllHeaders")]
             [Validation(Required=false)]
             public string PassThroughAllHeaders { get; set; }

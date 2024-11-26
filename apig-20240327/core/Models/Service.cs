@@ -8,18 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class GatewayService : TeaModel {
+    public class Service : TeaModel {
         [NameInMap("addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
+
+        [NameInMap("aiServiceConfig")]
+        [Validation(Required=false)]
+        public AiServiceConfig AiServiceConfig { get; set; }
 
         [NameInMap("createTimestamp")]
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }
 
-        [NameInMap("gatewayServiceId")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gw-xxxx</para>
+        /// </summary>
+        [NameInMap("gatewayId")]
         [Validation(Required=false)]
-        public string GatewayServiceId { get; set; }
+        public string GatewayId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>publich</para>
+        /// </summary>
+        [NameInMap("groupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
 
         [NameInMap("healthCheck")]
         [Validation(Required=false)]
@@ -39,8 +55,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         [NameInMap("ports")]
         [Validation(Required=false)]
-        public List<GatewayServicePorts> Ports { get; set; }
-        public class GatewayServicePorts : TeaModel {
+        public List<ServicePorts> Ports { get; set; }
+        public class ServicePorts : TeaModel {
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -55,9 +71,33 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>HTTP</para>
+        /// </summary>
+        [NameInMap("protocol")]
+        [Validation(Required=false)]
+        public string Protocol { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>LATEST</para>
+        /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]
         public string Qualifier { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-xxx</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("serviceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
 
         [NameInMap("sourceType")]
         [Validation(Required=false)]

@@ -22,18 +22,25 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExampleValue { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("required")]
         [Validation(Required=false)]
         public bool? Required { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>string</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

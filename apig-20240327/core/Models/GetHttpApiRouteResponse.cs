@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class UpdateServiceSourceResponse : TeaModel {
+    public class GetHttpApiRouteResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateServiceSourceResponseBody Body { get; set; }
+        public GetHttpApiRouteResponseBody Body { get; set; }
 
     }
 

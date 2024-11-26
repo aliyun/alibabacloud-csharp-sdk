@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class RouteRulesConflictInfo : TeaModel {
+    public class ApiRouteConflictInfo : TeaModel {
         [NameInMap("conflicts")]
         [Validation(Required=false)]
-        public List<RouteRulesConflictInfoConflicts> Conflicts { get; set; }
-        public class RouteRulesConflictInfoConflicts : TeaModel {
+        public List<ApiRouteConflictInfoConflicts> Conflicts { get; set; }
+        public class ApiRouteConflictInfoConflicts : TeaModel {
             [NameInMap("details")]
             [Validation(Required=false)]
-            public List<RouteRulesConflictInfoConflictsDetails> Details { get; set; }
-            public class RouteRulesConflictInfoConflictsDetails : TeaModel {
+            public List<ApiRouteConflictInfoConflictsDetails> Details { get; set; }
+            public class ApiRouteConflictInfoConflictsDetails : TeaModel {
                 [NameInMap("conflictingMatch")]
                 [Validation(Required=false)]
-                public RouteRulesConflictInfoConflictsDetailsConflictingMatch ConflictingMatch { get; set; }
-                public class RouteRulesConflictInfoConflictsDetailsConflictingMatch : TeaModel {
+                public ApiRouteConflictInfoConflictsDetailsConflictingMatch ConflictingMatch { get; set; }
+                public class ApiRouteConflictInfoConflictsDetailsConflictingMatch : TeaModel {
                     [NameInMap("match")]
                     [Validation(Required=false)]
                     public HttpRouteMatch Match { get; set; }
 
                     [NameInMap("operationInfo")]
                     [Validation(Required=false)]
-                    public RouteRulesConflictInfoConflictsDetailsConflictingMatchOperationInfo OperationInfo { get; set; }
-                    public class RouteRulesConflictInfoConflictsDetailsConflictingMatchOperationInfo : TeaModel {
+                    public ApiRouteConflictInfoConflictsDetailsConflictingMatchOperationInfo OperationInfo { get; set; }
+                    public class ApiRouteConflictInfoConflictsDetailsConflictingMatchOperationInfo : TeaModel {
                         [NameInMap("name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
@@ -43,16 +43,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 [NameInMap("detectedMatch")]
                 [Validation(Required=false)]
-                public RouteRulesConflictInfoConflictsDetailsDetectedMatch DetectedMatch { get; set; }
-                public class RouteRulesConflictInfoConflictsDetailsDetectedMatch : TeaModel {
+                public ApiRouteConflictInfoConflictsDetailsDetectedMatch DetectedMatch { get; set; }
+                public class ApiRouteConflictInfoConflictsDetailsDetectedMatch : TeaModel {
                     [NameInMap("match")]
                     [Validation(Required=false)]
                     public HttpRouteMatch Match { get; set; }
 
                     [NameInMap("operationInfo")]
                     [Validation(Required=false)]
-                    public RouteRulesConflictInfoConflictsDetailsDetectedMatchOperationInfo OperationInfo { get; set; }
-                    public class RouteRulesConflictInfoConflictsDetailsDetectedMatchOperationInfo : TeaModel {
+                    public ApiRouteConflictInfoConflictsDetailsDetectedMatchOperationInfo OperationInfo { get; set; }
+                    public class ApiRouteConflictInfoConflictsDetailsDetectedMatchOperationInfo : TeaModel {
                         [NameInMap("name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             [NameInMap("environmentInfo")]
             [Validation(Required=false)]
-            public RouteRulesConflictInfoConflictsEnvironmentInfo EnvironmentInfo { get; set; }
-            public class RouteRulesConflictInfoConflictsEnvironmentInfo : TeaModel {
+            public ApiRouteConflictInfoConflictsEnvironmentInfo EnvironmentInfo { get; set; }
+            public class ApiRouteConflictInfoConflictsEnvironmentInfo : TeaModel {
                 [NameInMap("environmentId")]
                 [Validation(Required=false)]
                 public string EnvironmentId { get; set; }
@@ -97,12 +97,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            [NameInMap("routeInfo")]
+            [Validation(Required=false)]
+            public ApiRouteConflictInfoConflictsRouteInfo RouteInfo { get; set; }
+            public class ApiRouteConflictInfoConflictsRouteInfo : TeaModel {
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("routeId")]
+                [Validation(Required=false)]
+                public string RouteId { get; set; }
+
+            }
+
         }
 
         [NameInMap("domainInfo")]
         [Validation(Required=false)]
-        public RouteRulesConflictInfoDomainInfo DomainInfo { get; set; }
-        public class RouteRulesConflictInfoDomainInfo : TeaModel {
+        public ApiRouteConflictInfoDomainInfo DomainInfo { get; set; }
+        public class ApiRouteConflictInfoDomainInfo : TeaModel {
             [NameInMap("domainId")]
             [Validation(Required=false)]
             public string DomainId { get; set; }

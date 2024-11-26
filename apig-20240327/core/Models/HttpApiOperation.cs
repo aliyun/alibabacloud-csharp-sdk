@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiOperation : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>获取用户信息</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GET</para>
         /// </summary>
         [NameInMap("method")]
         [Validation(Required=false)]
@@ -25,14 +32,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiMockContract Mock { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GetUserInfo</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/user</para>
         /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
