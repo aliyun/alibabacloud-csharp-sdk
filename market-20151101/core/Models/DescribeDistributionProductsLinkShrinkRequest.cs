@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeDistributionProductsLinkShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Codes")]
         [Validation(Required=false)]

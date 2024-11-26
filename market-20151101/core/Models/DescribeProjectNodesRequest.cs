@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProjectNodesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4****89</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

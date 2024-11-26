@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeOrderRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>202*********415</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class ResumeProjectRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4****89</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1922</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

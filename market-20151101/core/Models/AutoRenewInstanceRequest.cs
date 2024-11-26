@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public int? AutoRenewDuration { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrderBizId")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

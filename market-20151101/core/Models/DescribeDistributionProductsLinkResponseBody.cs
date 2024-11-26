@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeDistributionProductsLinkResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5BD09171-BF4D-18D8-890E-C70C067527BE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -34,10 +37,18 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>50</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
