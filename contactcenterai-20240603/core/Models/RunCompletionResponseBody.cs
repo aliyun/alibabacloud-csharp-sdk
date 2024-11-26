@@ -25,6 +25,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string Text { get; set; }
 
+        [NameInMap("inputTokens")]
+        [Validation(Required=false)]
+        public string InputTokens { get; set; }
+
+        [NameInMap("outputTokens")]
+        [Validation(Required=false)]
+        public string OutputTokens { get; set; }
+
+        [NameInMap("totalTokens")]
+        [Validation(Required=false)]
+        public string TotalTokens { get; set; }
+
     }
 
 }

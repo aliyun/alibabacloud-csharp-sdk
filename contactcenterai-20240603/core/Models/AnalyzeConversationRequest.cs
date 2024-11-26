@@ -226,6 +226,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public bool? Stream { get; set; }
 
+        [NameInMap("timeConstraintList")]
+        [Validation(Required=false)]
+        public List<string> TimeConstraintList { get; set; }
+
         [NameInMap("userProfiles")]
         [Validation(Required=false)]
         public List<AnalyzeConversationRequestUserProfiles> UserProfiles { get; set; }

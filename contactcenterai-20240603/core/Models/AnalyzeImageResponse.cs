@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
-    public class CreateConversationAnalysisTaskResponse : TeaModel {
+    public class AnalyzeImageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateConversationAnalysisTaskResponseBody Body { get; set; }
+        public AnalyzeImageResponseBody Body { get; set; }
 
     }
 

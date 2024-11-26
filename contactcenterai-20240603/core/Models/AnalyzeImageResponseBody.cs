@@ -8,19 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
-    public class AnalyzeConversationResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>InvalidUser.NotFound</para>
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("errorInfo")]
-        [Validation(Required=false)]
-        public string ErrorInfo { get; set; }
-
+    public class AnalyzeImageResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>stop</para>
@@ -29,17 +17,25 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string FinishReason { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("inputTokens")]
         [Validation(Required=false)]
         public string InputTokens { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2000</para>
+        /// </summary>
         [NameInMap("outputTokens")]
         [Validation(Required=false)]
         public string OutputTokens { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>968A8634-FA2C-5381-9B3E-C552DED7E8BF</para>
+        /// <para>9*****-AE0D-5EE3-B1AF-48632CB0831C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -57,6 +53,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string Text { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3000</para>
+        /// </summary>
         [NameInMap("totalTokens")]
         [Validation(Required=false)]
         public string TotalTokens { get; set; }
