@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.Qianzhou20211111.Models
         [Validation(Required=false)]
         public string Msg { get; set; }
 
+        [NameInMap("reference")]
+        [Validation(Required=false)]
+        public List<AICreateSessionMessageResponseBodyReference> Reference { get; set; }
+        public class AICreateSessionMessageResponseBodyReference : TeaModel {
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
+
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
