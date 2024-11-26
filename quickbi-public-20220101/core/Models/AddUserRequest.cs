@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        [NameInMap("AccountId")]
+        [Validation(Required=false)]
+        [Obsolete]
+        public string AccountId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

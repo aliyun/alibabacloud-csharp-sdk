@@ -528,6 +528,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
                 query["AccountName"] = request.AccountName;
@@ -592,6 +596,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
                 query["AccountName"] = request.AccountName;
@@ -12825,6 +12833,142 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDataLevelPermissionWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问数能力开放</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SmartqQueryAbilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmartqQueryAbilityResponse
+        /// </returns>
+        public SmartqQueryAbilityResponse SmartqQueryAbilityWithOptions(SmartqQueryAbilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserQuestion))
+            {
+                query["UserQuestion"] = request.UserQuestion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SmartqQueryAbility",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SmartqQueryAbilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问数能力开放</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SmartqQueryAbilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmartqQueryAbilityResponse
+        /// </returns>
+        public async Task<SmartqQueryAbilityResponse> SmartqQueryAbilityWithOptionsAsync(SmartqQueryAbilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserQuestion))
+            {
+                query["UserQuestion"] = request.UserQuestion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SmartqQueryAbility",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SmartqQueryAbilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问数能力开放</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SmartqQueryAbilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmartqQueryAbilityResponse
+        /// </returns>
+        public SmartqQueryAbilityResponse SmartqQueryAbility(SmartqQueryAbilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SmartqQueryAbilityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>问数能力开放</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SmartqQueryAbilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SmartqQueryAbilityResponse
+        /// </returns>
+        public async Task<SmartqQueryAbilityResponse> SmartqQueryAbilityAsync(SmartqQueryAbilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SmartqQueryAbilityWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
