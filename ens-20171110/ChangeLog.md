@@ -1,3 +1,11 @@
+2024-11-27 Version: 6.4.0
+- Support API AttachInstanceSDG.
+- Support API DescribeInstanceSDGStatus.
+- Support API DetachInstanceSDG.
+- Support API MountInstanceSDG.
+- Support API UnmountInstanceSDG.
+
+
 2024-11-27 Version: 6.3.1
 - Update API DescribeSDGDeploymentStatus: update response param.
 - Update API DescribeSnapshots: add param EnsRegionIds.
