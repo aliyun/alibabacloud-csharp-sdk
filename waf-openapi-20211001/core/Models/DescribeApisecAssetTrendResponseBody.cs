@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AssetOffline { get; set; }
 
             /// <summary>
-            /// <para>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time for statistics. Specify a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683600042</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Id of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19****5EB0</para>

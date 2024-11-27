@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DeleteApisecEventsRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <remarks>
+        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>428</para>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>阿里云资源组ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

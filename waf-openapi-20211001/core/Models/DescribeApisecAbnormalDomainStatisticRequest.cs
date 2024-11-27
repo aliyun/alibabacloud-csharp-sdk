@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribeApisecAbnormalDomainStatisticRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <remarks>
+        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>428</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1687313820</para>
@@ -44,10 +47,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order.</para>
+        /// <para>The sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order.</description></item>
-        /// <item><description>desc: descending order.</description></item>
+        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,10 +71,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>5</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1682571600</para>

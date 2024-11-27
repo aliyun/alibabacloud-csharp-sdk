@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
+        /// <para>Language type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn</b> (default): Chinese mainland.</description></item>
-        /// <item><description><b>cn-hongkong</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

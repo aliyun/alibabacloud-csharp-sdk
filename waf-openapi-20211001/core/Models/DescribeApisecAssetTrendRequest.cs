@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</para>
+        /// <para>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683183599</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</para>
+        /// <para>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1668496310</para>

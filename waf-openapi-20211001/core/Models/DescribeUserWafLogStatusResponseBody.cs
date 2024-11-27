@@ -16,7 +16,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <item><description><b>cn-beijing</b>: China (Beijing).</description></item>
         /// <item><description><b>cn-hongkong</b>: China (Hong Kong).</description></item>
         /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
-        /// <item><description><b>ap-southeast-2</b>: Australia (Sydney).</description></item>
         /// <item><description><b>ap-southeast-3</b>: Malaysia (Kuala Lumpur).</description></item>
         /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta).</description></item>
         /// <item><description><b>ap-southeast-6</b>: Philippines (Manila).</description></item>

@@ -98,6 +98,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance that is added to WAF.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-name</para>
         /// </summary>
@@ -129,12 +131,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The cloud service to which the resource belongs. Valid values:</para>
+        /// <para>The cloud service to which the resource belongs. If you do not specify this parameter, the system automatically returns the Application Load Balancer (ALB), Microservices Engine (MSE), Function Compute, and Serverless App Engine (SAE) resources that are added to WAF. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>alb</b>: Application Load Balancer (ALB).</description></item>
-        /// <item><description><b>mse</b>: Microservices Engine (MSE).</description></item>
+        /// <item><description><b>alb</b>: ALB.</description></item>
+        /// <item><description><b>mse</b>: MSE.</description></item>
         /// <item><description><b>fc</b>: Function Compute.</description></item>
-        /// <item><description><b>sae</b>: Serverless App Engine (SAE).</description></item>
+        /// <item><description><b>sae</b>: SAE.</description></item>
+        /// <item><description><b>ecs</b>: Elastic Compute Service (ECS).</description></item>
+        /// <item><description><b>clb4</b>: Layer 4 Classic Load Balancer (CLB).</description></item>
+        /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
+        /// <item><description><b>nlb</b>: Network Load Balancer (NLB).</description></item>
         /// </list>
         /// <remarks>
         /// <para> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</para>

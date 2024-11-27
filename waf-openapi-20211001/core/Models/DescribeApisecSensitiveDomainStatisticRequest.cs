@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order.</para>
+        /// <para>The sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order.</description></item>
-        /// <item><description>desc: descending order.</description></item>
+        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>5</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The sensitive data type.</para>
+        /// <para>The sensitive data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>request: sensitive data in requests.</description></item>
-        /// <item><description>response: sensitive data in responses.</description></item>
+        /// <item><description><b>request</b>: sensitive data in requests.</description></item>
+        /// <item><description><b>response</b>: sensitive data in responses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

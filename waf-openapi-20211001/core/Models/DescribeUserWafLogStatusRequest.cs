@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>阿里云资源组ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

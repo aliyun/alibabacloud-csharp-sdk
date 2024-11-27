@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The business purpose of the API.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the business purpose of the API.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purpose of the API.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The type of the event.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeApisecRules~~">DescribeApisecRules</a> operation to query the supported event types.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

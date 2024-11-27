@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+        /// <remarks>
+        /// <para>Notice: The parameter has been deprecated.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1723435200</para>

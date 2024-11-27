@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string MatchedHost { get; set; }
 
+            [NameInMap("RemoteCountryId")]
+            [Validation(Required=false)]
+            public string RemoteCountryId { get; set; }
+
             /// <summary>
             /// <para>The time when the request was initiated. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 

@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The code of the sensitive data.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +50,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SensitiveCode { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the sensitive data.</para>
+            /// <para>The sensitivity level of the sensitive data.Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>S1</b>: low sensitivity.</description></item>
+            /// <item><description><b>S2</b>: moderate sensitivity.</description></item>
+            /// <item><description><b>S3</b>: high sensitivity.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>L3</para>
@@ -69,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56B40D30-4960-4F19-B7D5-2B1F***6CB70</para>

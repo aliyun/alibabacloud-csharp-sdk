@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApiExportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the data export task was created. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+        /// <para>The returned data export tasks.</para>
         /// </summary>
         [NameInMap("ApiExports")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The format of the exported file.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9532525-E885-54E7-A178-D5554D563AFB</para>

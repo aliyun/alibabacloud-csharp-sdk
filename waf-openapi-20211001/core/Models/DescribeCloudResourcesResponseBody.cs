@@ -17,6 +17,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeCloudResourcesResponseBodyCloudResources> CloudResources { get; set; }
         public class DescribeCloudResourcesResponseBodyCloudResources : TeaModel {
             /// <summary>
+            /// <para>The number of the HTTP ports that are added to WAF.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only if the cloud service is ECS or CLB.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -25,6 +30,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? HttpPortCount { get; set; }
 
             /// <summary>
+            /// <para>The number of the HTTPS ports that are added to WAF.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only if the cloud service is ECS or CLB.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -76,6 +86,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceInstance { get; set; }
 
             /// <summary>
+            /// <para>The ID of the instance that is added to WAF.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lb-uf60ub45fr9b***</para>
             /// </summary>
@@ -84,6 +96,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The IP address of the instance that is added to WAF.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
             /// </summary>
@@ -92,6 +106,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceInstanceIp { get; set; }
 
             /// <summary>
+            /// <para>The name of the instance that is added to WAF.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-name</para>
             /// </summary>
@@ -119,6 +135,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <item><description><b>mse</b>: MSE.</description></item>
             /// <item><description><b>fc</b>: Function Compute.</description></item>
             /// <item><description><b>sae</b>: SAE.</description></item>
+            /// <item><description><b>ecs</b>: ECS.</description></item>
+            /// <item><description><b>clb4</b>: Layer 4 CLB.</description></item>
+            /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

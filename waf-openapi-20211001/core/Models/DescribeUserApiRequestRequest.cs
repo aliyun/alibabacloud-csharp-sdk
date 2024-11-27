@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribeUserApiRequestRequest : TeaModel {
         /// <summary>
         /// <para>The API.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter is deprecated, please use ApiId to query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>/api/v1/know</para>
@@ -45,6 +48,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The domain name or IP address of the API.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter is deprecated, please use ApiId to query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>c.***.com</para>

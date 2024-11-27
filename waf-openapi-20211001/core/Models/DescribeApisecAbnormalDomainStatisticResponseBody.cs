@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Id of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-80A6-3014***B11AE</para>
