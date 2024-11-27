@@ -135,6 +135,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public long? TemplateId { get; set; }
 
             /// <summary>
+            /// <para>Third-party approval flow remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("ThirdpartyWorkflowComment")]
+            [Validation(Required=false)]
+            public string ThirdpartyWorkflowComment { get; set; }
+
+            /// <summary>
+            /// <para>The third-party approval flow link.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://xxx">https://xxx</a></para>
+            /// </summary>
+            [NameInMap("ThirdpartyWorkflowUrl")]
+            [Validation(Required=false)]
+            public string ThirdpartyWorkflowUrl { get; set; }
+
+            /// <summary>
             /// <para>The title of the approval process.</para>
             /// 
             /// <b>Example:</b>
