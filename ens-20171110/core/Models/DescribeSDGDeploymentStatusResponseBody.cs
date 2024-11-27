@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string MountType { get; set; }
 
+            [NameInMap("Phase")]
+            [Validation(Required=false)]
+            public string Phase { get; set; }
+
             /// <summary>
             /// <para>The ID of the edge node.</para>
             /// 

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("EnsRegionIds")]
+        [Validation(Required=false)]
+        public string EnsRegionIds { get; set; }
+
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// 
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
+
+        [NameInMap("SnapshotName")]
+        [Validation(Required=false)]
+        public string SnapshotName { get; set; }
 
     }
 
