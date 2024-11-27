@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsGroupSubDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the consumer group that you want to query.
+        /// <para>The ID of the consumer group that you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GID_test_group_id</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the instance to which the consumer group you want to query belongs.
+        /// <para>The ID of the instance to which the consumer group you want to query belongs.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MQ_INST_111111111111_DOxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

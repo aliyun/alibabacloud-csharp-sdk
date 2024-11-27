@@ -10,40 +10,49 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsGroupSubDetailResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OnsGroupSubDetailResponseBodyData Data { get; set; }
         public class OnsGroupSubDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the consumer group that you want to query.
+            /// <para>The ID of the consumer group that you want to query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>GID_test_group_id</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The consumption mode. Valid values:
+            /// <para>The consumption mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>CLUSTERING</b>: the clustering consumption mode</description></item>
+            /// <item><description><b>BROADCASTING</b>: the broadcasting consumption mode</description></item>
+            /// </list>
+            /// <para>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</para>
             /// 
-            /// *   **CLUSTERING**: the clustering consumption mode
-            /// *   **BROADCASTING**: the broadcasting consumption mode
-            /// 
-            /// For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
+            /// <b>Example:</b>
+            /// <para>CLUSTERING</para>
             /// </summary>
             [NameInMap("MessageModel")]
             [Validation(Required=false)]
             public string MessageModel { get; set; }
 
             /// <summary>
-            /// Indicates whether consumers in the group are online.
+            /// <para>Indicates whether consumers in the group are online.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Online")]
             [Validation(Required=false)]
             public bool? Online { get; set; }
 
             /// <summary>
-            /// The topics to which consumers in the consumer group subscribe. If all consumers in the specified group are offline, no topics are returned.
+            /// <para>The topics to which consumers in the consumer group subscribe. If all consumers in the specified group are offline, no topics are returned.</para>
             /// </summary>
             [NameInMap("SubscriptionDataList")]
             [Validation(Required=false)]
@@ -54,14 +63,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> SubscriptionDataList { get; set; }
                 public class OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList : TeaModel {
                     /// <summary>
-                    /// The expression based on which consumers in the consumer group subscribe to the topic.
+                    /// <para>The expression based on which consumers in the consumer group subscribe to the topic.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <list type="bullet">
+                    /// <item><description></description></item>
+                    /// </list>
                     /// </summary>
                     [NameInMap("SubString")]
                     [Validation(Required=false)]
                     public string SubString { get; set; }
 
                     /// <summary>
-                    /// The name of the topic to which consumers in the consumer group subscribe.
+                    /// <para>The name of the topic to which consumers in the consumer group subscribe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test-mq_topic</para>
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -74,7 +91,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         }
 
         /// <summary>
-        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+        /// <para>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3364E875-013B-442A-BC3C-C1A84DC6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,52 +10,79 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTrendGroupOutputTpsRequest : TeaModel {
         /// <summary>
-        /// The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.
+        /// <para>The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1570852800000</para>
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// The timestamp that indicates the end of the time range to query. Unit: milliseconds.
+        /// <para>The timestamp that indicates the end of the time range to query. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1570868400000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the consumer group that you want to query.
+        /// <para>The ID of the consumer group that you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GID_test</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the instance to which the consumer group you want to query belongs.
+        /// <para>The ID of the instance to which the consumer group you want to query belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MQ_INST_111111111111_DOxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The sampling period. Unit: minutes. Valid values: 1, 5, and 10.
+        /// <para>The sampling period. Unit: minutes. Valid values: 1, 5, and 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public long? Period { get; set; }
 
         /// <summary>
-        /// The name of the topic that you want to query.
+        /// <para>The name of the topic that you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]
         public string Topic { get; set; }
 
         /// <summary>
-        /// The type of information that you want to query. Valid values:
+        /// <para>The type of information that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: the number of messages that are consumed during each sampling period.</description></item>
+        /// <item><description><b>1</b>: the TPS for message consumption during each sampling period.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **0**: the number of messages that are consumed during each sampling period.
-        /// *   **1**: the TPS for message consumption during each sampling period.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

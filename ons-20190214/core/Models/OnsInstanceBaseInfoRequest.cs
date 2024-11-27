@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsInstanceBaseInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance that you want to query.
+        /// <para>The ID of the instance that you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MQ_INST_138015630679****_BAAy1Hac</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

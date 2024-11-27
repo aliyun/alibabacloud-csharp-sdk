@@ -9,32 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsInstanceInServiceListRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether you want the resource information to be returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("NeedResourceInfo")]
         [Validation(Required=false)]
         public bool? NeedResourceInfo { get; set; }
 
         /// <summary>
-        /// The list of tags that are attached to the instance. A maximum of 20 tags can be included in a list.
+        /// <para>The tags that you want to attach to the instance. You can attach up to 20 tags to the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<OnsInstanceInServiceListRequestTag> Tag { get; set; }
         public class OnsInstanceInServiceListRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag that is attached to the instance you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Value** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the instances that use the specified tags. If you do not include these parameters in a request, this operation queries all instances that you can access.
+            /// <para>The tag key. This parameter is not required. If you configure this parameter, you must also configure <b>Value</b>.**** If you configure Key and Value in a request, this operation queries only the instances that use the specified tags. If you do not configure these parameters in a request, this operation queries all instances that you can access.</para>
+            /// <list type="bullet">
+            /// <item><description>The value of this parameter cannot be an empty string.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
             /// 
-            /// *   The value of this parameter cannot be an empty string.
-            /// *   The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>CartService</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag that is attached to the instance you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Value** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the instances that use the specified tags. If you do not include these parameters in a request, this operation queries all instances that you can access.
+            /// <para>The tag value. This parameter is not required. If you configure this parameter, you must also configure <b>Key</b>.**** If you configure Key and Value in a request, this operation queries only the instances that use the specified tags. If you do not configure these parameters in a request, this operation queries all instances that you can access.</para>
+            /// <list type="bullet">
+            /// <item><description>The value of this parameter can be an empty string.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>.</description></item>
+            /// </list>
             /// 
-            /// *   The value of this parameter can be an empty string.
-            /// *   The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>SericeA</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

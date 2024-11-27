@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTopicSubDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance that contains the topic you want to query.
+        /// <para>The ID of the instance that contains the topic you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MQ_INST_111111111111_DOxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the topic that you want to query.
+        /// <para>The name of the topic that you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

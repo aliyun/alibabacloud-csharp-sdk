@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsConsumerAccumulateResponseBody : TeaModel {
         /// <summary>
-        /// The message accumulation information about topics to which the specified consumer subscribes.
+        /// <para>The message accumulation information about topics to which the specified consumer subscribes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OnsConsumerAccumulateResponseBodyData Data { get; set; }
         public class OnsConsumerAccumulateResponseBodyData : TeaModel {
             /// <summary>
-            /// The transactions per second (TPS) for message consumption performed by consumers in the group.
+            /// <para>The transactions per second (TPS) for message consumption performed by consumers in the group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("ConsumeTps")]
             [Validation(Required=false)]
             public float? ConsumeTps { get; set; }
 
             /// <summary>
-            /// The consumption latency.
+            /// <para>The consumption latency.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
             /// </summary>
             [NameInMap("DelayTime")]
             [Validation(Required=false)]
             public long? DelayTime { get; set; }
 
             /// <summary>
-            /// The information about each topic to which the consumer group subscribes. If the **Detail** parameter in the request is set to **false**, the value of this parameter is empty.
+            /// <para>The information about each topic to which the consumer group subscribes. If the <b>Detail</b> parameter in the request is set to <b>false</b>, the value of this parameter is empty.</para>
             /// </summary>
             [NameInMap("DetailInTopicList")]
             [Validation(Required=false)]
@@ -42,28 +48,40 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo> DetailInTopicDo { get; set; }
                 public class OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo : TeaModel {
                     /// <summary>
-                    /// The maximum latency of message consumption in the topic.
+                    /// <para>The maximum latency of message consumption in the topic.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10000</para>
                     /// </summary>
                     [NameInMap("DelayTime")]
                     [Validation(Required=false)]
                     public long? DelayTime { get; set; }
 
                     /// <summary>
-                    /// The point in time when the latest consumed message in the topic was produced.
+                    /// <para>The point in time when the latest consumed message in the topic was produced.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1566231000000</para>
                     /// </summary>
                     [NameInMap("LastTimestamp")]
                     [Validation(Required=false)]
                     public long? LastTimestamp { get; set; }
 
                     /// <summary>
-                    /// The topic name.
+                    /// <para>The topic name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test-mq-topic</para>
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
                     /// <summary>
-                    /// The number of accumulated messages in the topic.
+                    /// <para>The number of accumulated messages in the topic.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
                     /// </summary>
                     [NameInMap("TotalDiff")]
                     [Validation(Required=false)]
@@ -74,24 +92,34 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The point in time when the latest message consumed by a consumer in the consumer group was produced.
+            /// <para>The point in time when the latest message consumed by a consumer in the consumer group was produced.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1566231000000</para>
             /// </summary>
             [NameInMap("LastTimestamp")]
             [Validation(Required=false)]
             public long? LastTimestamp { get; set; }
 
             /// <summary>
-            /// Indicates whether the consumer group is online. The consumer group is online if one of the consumers in the group is online. Valid values:
+            /// <para>Indicates whether the consumer group is online. The consumer group is online if one of the consumers in the group is online. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The consumer group is online.</description></item>
+            /// <item><description><b>false</b>: The consumer group is offline.</description></item>
+            /// </list>
             /// 
-            /// *   **true**: The consumer group is online.
-            /// *   **false**: The consumer group is offline.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Online")]
             [Validation(Required=false)]
             public bool? Online { get; set; }
 
             /// <summary>
-            /// The total number of accumulated messages in all topics to which the consumer group subscribes.
+            /// <para>The total number of accumulated messages in all topics to which the consumer group subscribes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalDiff")]
             [Validation(Required=false)]
@@ -100,7 +128,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         }
 
         /// <summary>
-        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+        /// <para>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CE817BFF-B389-43CD-9419-95011AC9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

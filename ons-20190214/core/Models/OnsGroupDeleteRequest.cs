@@ -10,14 +10,21 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsGroupDeleteRequest : TeaModel {
         /// <summary>
-        /// The ID of the consumer group that you want to delete.
+        /// <para>The ID of the consumer group that you want to delete.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GID_test_groupId</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.
+        /// <para>The ID of the ApsaraMQ for RocketMQ instance to which the specified consumer group belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MQ_INST_111111111111_DOxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

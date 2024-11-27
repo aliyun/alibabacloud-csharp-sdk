@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTopicCreateResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+        /// <para>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B6949B58-223E-4B75-B4FE-7797C15E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsTopicListResponseBody : TeaModel {
         /// <summary>
-        /// The information about the topics.
+        /// <para>The information about the topics.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,87 +21,118 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public List<OnsTopicListResponseBodyDataPublishInfoDo> PublishInfoDo { get; set; }
             public class OnsTopicListResponseBodyDataPublishInfoDo : TeaModel {
                 /// <summary>
-                /// The time when the topic was created.
+                /// <para>The time when the topic was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1570700947000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instance that contains the topic uses a namespace. Valid values:
+                /// <para>Indicates whether the instance that contains the topic uses a namespace. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</description></item>
+                /// <item><description><b>false</b>: The instance does not use a separate namespace. The name of each resource must be globally unique within an instance and across all instances.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-                /// *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within an instance and across all instances.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IndependentNaming")]
                 [Validation(Required=false)]
                 public bool? IndependentNaming { get; set; }
 
                 /// <summary>
-                /// The ID of the instance that contains the topic.
+                /// <para>The ID of the instance that contains the topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MQ_INST_188077086902****_BXSuW61e</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The message type. Valid values:
+                /// <para>The message type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: normal messages</description></item>
+                /// <item><description><b>1</b>: partitionally ordered messages</description></item>
+                /// <item><description><b>2</b>: globally ordered messages</description></item>
+                /// <item><description><b>4</b>: transactional messages</description></item>
+                /// <item><description><b>5</b>: scheduled or delayed messages</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: normal messages
-                /// *   **1**: partitionally ordered messages
-                /// *   **2**: globally ordered messages
-                /// *   **4**: transactional messages
-                /// *   **5**: scheduled or delayed messages
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("MessageType")]
                 [Validation(Required=false)]
                 public int? MessageType { get; set; }
 
                 /// <summary>
-                /// The user ID of the topic owner. The value of this parameter is an Alibaba account ID.
+                /// <para>The user ID of the topic owner. The value of this parameter is an Alibaba account ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>138015630679****</para>
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// Indicates the relationship between the current account and the topic. Valid values:
+                /// <para>Indicates the relationship between the current account and the topic. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: The current account is the owner of the topic.</description></item>
+                /// <item><description><b>2</b>: The current account can publish messages to the topic.</description></item>
+                /// <item><description><b>4</b>: The current account can subscribe to the topic.</description></item>
+                /// <item><description><b>6</b>: The current account can publish messages to and subscribe to the topic.</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: The current account is the owner of the topic.
-                /// *   **2**: The current account can publish messages to the topic.
-                /// *   **4**: The current account can subscribe to the topic.
-                /// *   **6**: The current account can publish messages to and subscribe to the topic.
+                /// <b>Example:</b>
+                /// <para>6</para>
                 /// </summary>
                 [NameInMap("Relation")]
                 [Validation(Required=false)]
                 public int? Relation { get; set; }
 
                 /// <summary>
-                /// The relationship between the current account and the topic. The value of this parameter indicates whether the current account is the owner of the topic, and whether the current account can subscribe or publish messages to the topic. the topic.
+                /// <para>The relationship between the current account and the topic. The value of this parameter indicates whether the current account is the owner of the topic, and whether the current account can subscribe or publish messages to the topic. the topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Publish and subscribe</para>
                 /// </summary>
                 [NameInMap("RelationName")]
                 [Validation(Required=false)]
                 public string RelationName { get; set; }
 
                 /// <summary>
-                /// The description of the topic.
+                /// <para>The description of the topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// The status of the topic that is asynchronously created. Valid values:
+                /// <para>The status of the topic that is asynchronously created. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: The topic is being created.</description></item>
+                /// <item><description><b>1</b>: The topic is being used.</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: The topic is being created.
-                /// *   **1**: The topic is being used.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ServiceStatus")]
                 [Validation(Required=false)]
                 public int? ServiceStatus { get; set; }
 
                 /// <summary>
-                /// The tags that are attached to the topic.
+                /// <para>The tags that are attached to the topic.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -112,14 +143,20 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     public List<OnsTopicListResponseBodyDataPublishInfoDoTagsTag> Tag { get; set; }
                     public class OnsTopicListResponseBodyDataPublishInfoDoTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>CartService</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>SrviceA</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -130,7 +167,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 }
 
                 /// <summary>
-                /// The topic name.
+                /// <para>The topic name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
@@ -141,7 +181,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         }
 
         /// <summary>
-        /// The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+        /// <para>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4A978869-7681-4529-B470-107E1379****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

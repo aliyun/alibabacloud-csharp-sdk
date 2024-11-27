@@ -10,39 +10,57 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags that are attached to the specified resource. This parameter takes effect only if the **TagKey** parameter is empty. Default value: **false**.
+        /// <para>Specifies whether to remove all tags that are attached to the specified resource. This parameter takes effect only if the <b>TagKey</b> parameter is empty. Default value: <b>false</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// This parameter is required when you detach tags from a topic or a group.
+        /// <para>This parameter is required when you detach tags from a topic or a group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MQ_INST_188077086902****_BX4jvZZG</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The resource IDs.
+        /// <para>The resource IDs.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TopicA</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource from which you want to detach tags. Valid values:
+        /// <para>The type of the resource from which you want to detach tags. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INSTANCE</b></description></item>
+        /// <item><description><b>TOPIC</b></description></item>
+        /// <item><description><b>GROUP</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **INSTANCE**
-        /// *   **TOPIC**
-        /// *   **GROUP**
+        /// <b>Example:</b>
+        /// <para>TOPIC</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag keys of the resource.
+        /// <para>The tag keys of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CartService</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

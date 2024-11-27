@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsConsumerStatusResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OnsConsumerStatusResponseBodyData Data { get; set; }
         public class OnsConsumerStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about online consumers in the consumer group.
+            /// <para>The information about online consumers in the consumer group.</para>
             /// </summary>
             [NameInMap("ConnectionSet")]
             [Validation(Required=false)]
@@ -28,35 +28,50 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsConsumerStatusResponseBodyDataConnectionSetConnectionDo> ConnectionDo { get; set; }
                 public class OnsConsumerStatusResponseBodyDataConnectionSetConnectionDo : TeaModel {
                     /// <summary>
-                    /// The IP address and port number of the consumer instance.
+                    /// <para>The IP address and port number of the consumer instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>30.5.121.**</para>
                     /// </summary>
                     [NameInMap("ClientAddr")]
                     [Validation(Required=false)]
                     public string ClientAddr { get; set; }
 
                     /// <summary>
-                    /// The ID of the consumer instance.
+                    /// <para>The ID of the consumer instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>30.5.121.**@25560#-1999745829#-1737591554#458773089270275</para>
                     /// </summary>
                     [NameInMap("ClientId")]
                     [Validation(Required=false)]
                     public string ClientId { get; set; }
 
                     /// <summary>
-                    /// The programming language in which the consumer is developed.
+                    /// <para>The programming language in which the consumer is developed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>JAVA</para>
                     /// </summary>
                     [NameInMap("Language")]
                     [Validation(Required=false)]
                     public string Language { get; set; }
 
                     /// <summary>
-                    /// The private or public IP address of the host.
+                    /// <para>The private or public IP address of the host.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>42.120.74.**</para>
                     /// </summary>
                     [NameInMap("RemoteIP")]
                     [Validation(Required=false)]
                     public string RemoteIP { get; set; }
 
                     /// <summary>
-                    /// The version of the consumer client.
+                    /// <para>The version of the consumer client.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>V4_3_6_SNAPSHOT</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -67,26 +82,32 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The consumption mode. Valid values:
+            /// <para>The consumption mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>CLUSTERING</b>: the clustering consumption mode</description></item>
+            /// <item><description><b>BROADCASTING</b>: the broadcasting consumption mode</description></item>
+            /// </list>
+            /// <para>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</para>
             /// 
-            /// *   **CLUSTERING**: the clustering consumption mode
-            /// *   **BROADCASTING**: the broadcasting consumption mode
-            /// 
-            /// For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
+            /// <b>Example:</b>
+            /// <para>CLUSTERING</para>
             /// </summary>
             [NameInMap("ConsumeModel")]
             [Validation(Required=false)]
             public string ConsumeModel { get; set; }
 
             /// <summary>
-            /// The TPS for message consumption.
+            /// <para>The TPS for message consumption.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ConsumeTps")]
             [Validation(Required=false)]
             public float? ConsumeTps { get; set; }
 
             /// <summary>
-            /// The details of online consumers in the consumer group, including the information about the thread stack traces and the consumption response time (RT). If you want to obtain the details of online consumers in the consumer group, make sure that the **Detail** parameter in the request is set to **true**. If the Detail parameter is not set to true, the value of this parameter is empty.
+            /// <para>The details of online consumers in the consumer group, including the information about the thread stack traces and the consumption response time (RT). If you want to obtain the details of online consumers in the consumer group, make sure that the <b>Detail</b> parameter in the request is set to <b>true</b>. If the Detail parameter is not set to true, the value of this parameter is empty.</para>
             /// </summary>
             [NameInMap("ConsumerConnectionInfoList")]
             [Validation(Required=false)]
@@ -97,43 +118,56 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDo> ConsumerConnectionInfoDo { get; set; }
                 public class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDo : TeaModel {
                     /// <summary>
-                    /// The ID of the consumer instance.
+                    /// <para>The ID of the consumer instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para><c>30.5.**.**</c>@25560#-1999745829#-1737591554#458773089270275</para>
                     /// </summary>
                     [NameInMap("ClientId")]
                     [Validation(Required=false)]
                     public string ClientId { get; set; }
 
                     /// <summary>
-                    /// The connection information.
+                    /// <para>The connection information.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>**</para>
                     /// </summary>
                     [NameInMap("Connection")]
                     [Validation(Required=false)]
                     public string Connection { get; set; }
 
                     /// <summary>
-                    /// The consumption mode. Valid values:
+                    /// <para>The consumption mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>CLUSTERING</b>: the clustering consumption mode</description></item>
+                    /// <item><description><b>BROADCASTING</b>: the broadcasting consumption mode</description></item>
+                    /// </list>
+                    /// <para>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</para>
                     /// 
-                    /// *   **CLUSTERING**: the clustering consumption mode
-                    /// *   **BROADCASTING**: the broadcasting consumption mode
-                    /// 
-                    /// For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
+                    /// <b>Example:</b>
+                    /// <para>CLUSTERING</para>
                     /// </summary>
                     [NameInMap("ConsumeModel")]
                     [Validation(Required=false)]
                     public string ConsumeModel { get; set; }
 
                     /// <summary>
-                    /// The mode in which the consumer consumes messages. Valid values:
+                    /// <para>The mode in which the consumer consumes messages. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>PUSH</b>: The ApsaraMQ for RocketMQ broker pushes messages to the consumer.</description></item>
+                    /// <item><description><b>PULL</b>: The consumer pulls messages from the ApsaraMQ for RocketMQ broker.</description></item>
+                    /// </list>
                     /// 
-                    /// *   **PUSH**: The ApsaraMQ for RocketMQ broker pushes messages to the consumer.
-                    /// *   **PULL**: The consumer pulls messages from the ApsaraMQ for RocketMQ broker.
+                    /// <b>Example:</b>
+                    /// <para>PUSH</para>
                     /// </summary>
                     [NameInMap("ConsumeType")]
                     [Validation(Required=false)]
                     public string ConsumeType { get; set; }
 
                     /// <summary>
-                    /// The information about thread stack traces. If you want to obtain the information about thread stack traces, make sure that the **NeedJstack** parameter in the request is set to **true**. If the NeedJstack parameter is not set to true, the value of this parameter is empty.
+                    /// <para>The information about thread stack traces. If you want to obtain the information about thread stack traces, make sure that the <b>NeedJstack</b> parameter in the request is set to <b>true</b>. If the NeedJstack parameter is not set to true, the value of this parameter is empty.</para>
                     /// </summary>
                     [NameInMap("Jstack")]
                     [Validation(Required=false)]
@@ -144,14 +178,17 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                         public List<OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoJstackThreadTrackDo> ThreadTrackDo { get; set; }
                         public class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoJstackThreadTrackDo : TeaModel {
                             /// <summary>
-                            /// The name of the thread.
+                            /// <para>The name of the thread.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>ConsumeMessageThread_0</para>
                             /// </summary>
                             [NameInMap("Thread")]
                             [Validation(Required=false)]
                             public string Thread { get; set; }
 
                             /// <summary>
-                            /// The details of thread stack traces.
+                            /// <para>The details of thread stack traces.</para>
                             /// </summary>
                             [NameInMap("TrackList")]
                             [Validation(Required=false)]
@@ -168,23 +205,28 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     }
 
                     /// <summary>
-                    /// The programming language that the consumer supports.
+                    /// <para>The programming language that the consumer supports.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>JAVA</para>
                     /// </summary>
                     [NameInMap("Language")]
                     [Validation(Required=false)]
                     public string Language { get; set; }
 
                     /// <summary>
-                    /// The most recent point in time when a message was consumed.
+                    /// <para>The most recent point in time when a message was consumed.</para>
+                    /// <para>The value of this parameter is a UNIX timestamp in milliseconds.</para>
                     /// 
-                    /// The value of this parameter is a UNIX timestamp in milliseconds.
+                    /// <b>Example:</b>
+                    /// <para>1570701368114</para>
                     /// </summary>
                     [NameInMap("LastTimeStamp")]
                     [Validation(Required=false)]
                     public long? LastTimeStamp { get; set; }
 
                     /// <summary>
-                    /// The real-time statistics.
+                    /// <para>The real-time statistics.</para>
                     /// </summary>
                     [NameInMap("RunningDataList")]
                     [Validation(Required=false)]
@@ -195,42 +237,50 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                         public List<OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoRunningDataListConsumerRunningDataDo> ConsumerRunningDataDo { get; set; }
                         public class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoRunningDataListConsumerRunningDataDo : TeaModel {
                             /// <summary>
-                            /// The number of messages that failed to be consumed each hour.
+                            /// <para>The number of messages that failed to be consumed each hour.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("FailedCountPerHour")]
                             [Validation(Required=false)]
                             public long? FailedCountPerHour { get; set; }
 
                             /// <summary>
-                            /// The TPS for failed message consumption.
+                            /// <para>The TPS for failed message consumption.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("FailedTps")]
                             [Validation(Required=false)]
                             public float? FailedTps { get; set; }
 
                             /// <summary>
-                            /// The ID of the consumer group.
-                            /// </summary>
-                            [NameInMap("GroupId")]
-                            [Validation(Required=false)]
-                            public string GroupId { get; set; }
-
-                            /// <summary>
-                            /// The TPS for successful message consumption.
+                            /// <para>The TPS for successful message consumption.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("OkTps")]
                             [Validation(Required=false)]
                             public float? OkTps { get; set; }
 
                             /// <summary>
-                            /// The consumption RT. Unit: milliseconds.
+                            /// <para>The consumption RT. Unit: milliseconds.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("Rt")]
                             [Validation(Required=false)]
                             public float? Rt { get; set; }
 
                             /// <summary>
-                            /// The name of the topic to which the consumer subscribes.
+                            /// <para>The name of the topic to which the consumer subscribes.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>test-mq_topic</para>
                             /// </summary>
                             [NameInMap("Topic")]
                             [Validation(Required=false)]
@@ -241,16 +291,18 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     }
 
                     /// <summary>
-                    /// The earliest point in time when a message was consumed.
+                    /// <para>The earliest point in time when a message was consumed.</para>
+                    /// <para>The value of this parameter is a UNIX timestamp in milliseconds.</para>
                     /// 
-                    /// The value of this parameter is a UNIX timestamp in milliseconds.
+                    /// <b>Example:</b>
+                    /// <para>1570701361528</para>
                     /// </summary>
                     [NameInMap("StartTimeStamp")]
                     [Validation(Required=false)]
                     public long? StartTimeStamp { get; set; }
 
                     /// <summary>
-                    /// The information about subscriptions.
+                    /// <para>The information about subscriptions.</para>
                     /// </summary>
                     [NameInMap("SubscriptionSet")]
                     [Validation(Required=false)]
@@ -261,21 +313,29 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                         public List<OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoSubscriptionSetSubscriptionData> SubscriptionData { get; set; }
                         public class OnsConsumerStatusResponseBodyDataConsumerConnectionInfoListConsumerConnectionInfoDoSubscriptionSetSubscriptionData : TeaModel {
                             /// <summary>
-                            /// The expression that is used to specify the tags of messages in the subscribed topic.
+                            /// <para>The expression that is used to specify the tags of messages in the subscribed topic.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <list type="bullet">
+                            /// <item><description></description></item>
+                            /// </list>
                             /// </summary>
                             [NameInMap("SubString")]
                             [Validation(Required=false)]
                             public string SubString { get; set; }
 
                             /// <summary>
-                            /// The subscription version. The value is of the LONG type and is automatically incremented.
+                            /// <para>The subscription version. The value is of the LONG type and is automatically incremented.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1570701364301</para>
                             /// </summary>
                             [NameInMap("SubVersion")]
                             [Validation(Required=false)]
                             public long? SubVersion { get; set; }
 
                             /// <summary>
-                            /// The information about the tags of the topic to which the consumer subscribes.
+                            /// <para>The information about the tags of the topic to which the consumer subscribes.</para>
                             /// </summary>
                             [NameInMap("TagsSet")]
                             [Validation(Required=false)]
@@ -288,7 +348,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                             }
 
                             /// <summary>
-                            /// The name of the topic to which the consumer subscribes.
+                            /// <para>The name of the topic to which the consumer subscribes.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>test-mq_topic</para>
                             /// </summary>
                             [NameInMap("Topic")]
                             [Validation(Required=false)]
@@ -299,14 +362,20 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     }
 
                     /// <summary>
-                    /// The number of consumer threads.
+                    /// <para>The number of consumer threads.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20</para>
                     /// </summary>
                     [NameInMap("ThreadCount")]
                     [Validation(Required=false)]
                     public int? ThreadCount { get; set; }
 
                     /// <summary>
-                    /// The version of the consumer client.
+                    /// <para>The version of the consumer client.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>V4_3_6</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -317,14 +386,17 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The maximum latency of message consumption in all topics to which the consumer group subscribes. Unit: milliseconds.
+            /// <para>The maximum latency of message consumption in all topics to which the consumer group subscribes. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100857</para>
             /// </summary>
             [NameInMap("DelayTime")]
             [Validation(Required=false)]
             public long? DelayTime { get; set; }
 
             /// <summary>
-            /// The information about message consumption by topic. If you want to obtain the information about the consumption status of each topic, make sure that the **Detail** parameter in the request is set to **true**. If the Detail parameter is not set to true, the value of this parameter is empty.
+            /// <para>The information about message consumption by topic. If you want to obtain the information about the consumption status of each topic, make sure that the <b>Detail</b> parameter in the request is set to <b>true</b>. If the Detail parameter is not set to true, the value of this parameter is empty.</para>
             /// </summary>
             [NameInMap("DetailInTopicList")]
             [Validation(Required=false)]
@@ -335,30 +407,41 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 public List<OnsConsumerStatusResponseBodyDataDetailInTopicListDetailInTopicDo> DetailInTopicDo { get; set; }
                 public class OnsConsumerStatusResponseBodyDataDetailInTopicListDetailInTopicDo : TeaModel {
                     /// <summary>
-                    /// The latency of message consumption in the topic. Unit: milliseconds.
+                    /// <para>The latency of message consumption in the topic. Unit: milliseconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("DelayTime")]
                     [Validation(Required=false)]
                     public long? DelayTime { get; set; }
 
                     /// <summary>
-                    /// The most recent point in time when a message was consumed.
+                    /// <para>The most recent point in time when a message was consumed.</para>
+                    /// <para>The value of this parameter is a UNIX timestamp in milliseconds.</para>
                     /// 
-                    /// The value of this parameter is a UNIX timestamp in milliseconds.
+                    /// <b>Example:</b>
+                    /// <para>1570701259403</para>
                     /// </summary>
                     [NameInMap("LastTimestamp")]
                     [Validation(Required=false)]
                     public long? LastTimestamp { get; set; }
 
                     /// <summary>
-                    /// The topic name.
+                    /// <para>The topic name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test-mq_topic</para>
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
                     /// <summary>
-                    /// The number of accumulated messages in the topic.
+                    /// <para>The number of accumulated messages in the topic.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("TotalDiff")]
                     [Validation(Required=false)]
@@ -369,47 +452,65 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             }
 
             /// <summary>
-            /// The ID of the instance
+            /// <para>The ID of the instance</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MQ_INST_111111111111_DOxxxxxx</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The most recent point in time when a message was consumed.
+            /// <para>The most recent point in time when a message was consumed.</para>
+            /// <para>The value of this parameter is a UNIX timestamp in milliseconds.</para>
             /// 
-            /// The value of this parameter is a UNIX timestamp in milliseconds.
+            /// <b>Example:</b>
+            /// <para>1566883844954</para>
             /// </summary>
             [NameInMap("LastTimestamp")]
             [Validation(Required=false)]
             public long? LastTimestamp { get; set; }
 
             /// <summary>
-            /// Indicates whether the consumer group is online.
+            /// <para>Indicates whether the consumer group is online.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Online")]
             [Validation(Required=false)]
             public bool? Online { get; set; }
 
             /// <summary>
-            /// Indicates whether load balancing is performed as expected. Valid values:
+            /// <para>Indicates whether load balancing is performed as expected. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Load balancing is performed as expected.</description></item>
+            /// <item><description><b>false</b>: Load balancing is not performed as expected.</description></item>
+            /// </list>
             /// 
-            /// *   **true**: Load balancing is performed as expected.
-            /// *   **false**: Load balancing is not performed as expected.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("RebalanceOK")]
             [Validation(Required=false)]
             public bool? RebalanceOK { get; set; }
 
             /// <summary>
-            /// Indicates whether all consumers in the consumer group subscribe to the same topics and tags.
+            /// <para>Indicates whether all consumers in the consumer group subscribe to the same topics and tags.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("SubscriptionSame")]
             [Validation(Required=false)]
             public bool? SubscriptionSame { get; set; }
 
             /// <summary>
-            /// The total number of accumulated messages.
+            /// <para>The total number of accumulated messages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>197</para>
             /// </summary>
             [NameInMap("TotalDiff")]
             [Validation(Required=false)]
@@ -418,7 +519,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         }
 
         /// <summary>
-        /// The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+        /// <para>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10EDC518-10E7-4B34-92FB-171235FA****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
