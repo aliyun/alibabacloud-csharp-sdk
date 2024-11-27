@@ -974,6 +974,134 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>图片批量调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImageBatchModerationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageBatchModerationResponse
+        /// </returns>
+        public ImageBatchModerationResponse ImageBatchModerationWithOptions(ImageBatchModerationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Services))
+            {
+                query["Services"] = request.Services;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageBatchModeration",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageBatchModerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片批量调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImageBatchModerationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageBatchModerationResponse
+        /// </returns>
+        public async Task<ImageBatchModerationResponse> ImageBatchModerationWithOptionsAsync(ImageBatchModerationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Services))
+            {
+                query["Services"] = request.Services;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageBatchModeration",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageBatchModerationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片批量调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImageBatchModerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageBatchModerationResponse
+        /// </returns>
+        public ImageBatchModerationResponse ImageBatchModeration(ImageBatchModerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageBatchModerationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片批量调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImageBatchModerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageBatchModerationResponse
+        /// </returns>
+        public async Task<ImageBatchModerationResponse> ImageBatchModerationAsync(ImageBatchModerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageBatchModerationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Identifies whether an image contains content or elements that violate relevant regulations on network content dissemination, affect the content order of a specific platform, or affect user experience. Image Moderation 2.0 supports over 90 content risk labels and over 100 risk control items. Image Moderation 2.0 of Content Moderation allows you to develop further moderation or governance measures for specific image content based on business scenarios, platform-specific content governance rules, or rich risk labels and scores of confidence levels returned by API calls.</para>
         /// </summary>
         /// 
