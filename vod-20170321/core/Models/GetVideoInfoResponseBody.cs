@@ -282,6 +282,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string Title { get; set; }
 
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
+
             /// <summary>
             /// <para>The ID of the media file.</para>
             /// 

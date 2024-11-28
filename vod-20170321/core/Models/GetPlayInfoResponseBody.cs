@@ -96,6 +96,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public long? Encrypt { get; set; }
 
+                /// <summary>
+                /// <para>The encryption type of the media stream. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>License</b>: decryption on local devices</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> If the encryption type is <b>License</b>, only ApsaraVideo Player SDK can be used to play videos.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>License</para>
+                /// </summary>
                 [NameInMap("EncryptMode")]
                 [Validation(Required=false)]
                 public string EncryptMode { get; set; }

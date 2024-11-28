@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Priority { get; set; }
 
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
+
         /// <summary>
         /// <para>The ID of the transcoding template group that you want to use. To view the template group ID, perform the following operations: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Configuration Management</b> &gt; <b>Media Processing</b> &gt; <b>Transcoding Template Groups</b>.</para>
         /// <para>This parameter is required.</para>
