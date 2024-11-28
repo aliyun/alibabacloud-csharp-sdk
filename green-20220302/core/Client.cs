@@ -991,13 +991,13 @@ namespace AlibabaCloud.SDK.Green20220302
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
             {
                 query["ServiceParameters"] = request.ServiceParameters;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Services))
-            {
-                query["Services"] = request.Services;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1037,13 +1037,13 @@ namespace AlibabaCloud.SDK.Green20220302
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
             {
                 query["ServiceParameters"] = request.ServiceParameters;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Services))
-            {
-                query["Services"] = request.Services;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

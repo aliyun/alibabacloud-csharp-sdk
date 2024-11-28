@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class ImageBatchModerationRequest : TeaModel {
+        [NameInMap("Service")]
+        [Validation(Required=false)]
+        public string Service { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>{
@@ -19,14 +23,6 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
         public string ServiceParameters { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>baselineCheck,tonalityImprove</para>
-        /// </summary>
-        [NameInMap("Services")]
-        [Validation(Required=false)]
-        public string Services { get; set; }
 
     }
 
