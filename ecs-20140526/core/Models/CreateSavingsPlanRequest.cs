@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
 
+        [NameInMap("InstanceTypeFamilyGroup")]
+        [Validation(Required=false)]
+        public string InstanceTypeFamilyGroup { get; set; }
+
         [NameInMap("OfferingType")]
         [Validation(Required=false)]
         public string OfferingType { get; set; }

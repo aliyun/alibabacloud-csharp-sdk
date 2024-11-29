@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSavingsPlanEstimationRequest : TeaModel {
+        [NameInMap("EstimationResource")]
+        [Validation(Required=false)]
+        public string EstimationResource { get; set; }
+
+        [NameInMap("InstanceTypeScope")]
+        [Validation(Required=false)]
+        public string InstanceTypeScope { get; set; }
+
         [NameInMap("OfferingType")]
         [Validation(Required=false)]
         public string OfferingType { get; set; }

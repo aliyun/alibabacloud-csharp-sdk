@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination security group.</para>
+        /// <para>The ID of the security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp1gxw6bznjjvhu3****</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination security group.</para>
+        /// <para>The name of the security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SecurityGroupName Sample</para>

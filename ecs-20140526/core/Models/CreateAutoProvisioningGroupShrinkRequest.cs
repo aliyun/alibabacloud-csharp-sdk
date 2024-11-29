@@ -893,6 +893,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> ExcludedInstanceTypes { get; set; }
 
+            [NameInMap("ImageId")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+
             /// <summary>
             /// <para>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</para>
             /// <list type="bullet">
