@@ -152,6 +152,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            [NameInMap("Invalid")]
+            [Validation(Required=false)]
+            public bool? Invalid { get; set; }
+
             /// <summary>
             /// <para>The name.</para>
             /// 

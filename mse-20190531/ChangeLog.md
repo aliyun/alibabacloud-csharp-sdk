@@ -1,3 +1,7 @@
+2024-11-29 Version: 6.14.1
+- Update API ListServiceSource: update response param.
+
+
 2024-11-21 Version: 6.14.0
 - Support API InitializeServiceLinkRole.
 - Support API UpdateGatewayService.
