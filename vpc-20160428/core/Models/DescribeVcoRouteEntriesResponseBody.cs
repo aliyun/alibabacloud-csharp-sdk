@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string NextHop { get; set; }
 
+            [NameInMap("NextHopTunnelIdList")]
+            [Validation(Required=false)]
+            public List<string> NextHopTunnelIdList { get; set; }
+
             /// <summary>
             /// <para>The destination CIDR block of the route.</para>
             /// 
@@ -172,6 +176,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("Weight")]
             [Validation(Required=false)]
             public int? Weight { get; set; }
+
+        }
+
+        [NameInMap("VpnRouteCounts")]
+        [Validation(Required=false)]
+        public List<DescribeVcoRouteEntriesResponseBodyVpnRouteCounts> VpnRouteCounts { get; set; }
+        public class DescribeVcoRouteEntriesResponseBodyVpnRouteCounts : TeaModel {
+            [NameInMap("RouteCount")]
+            [Validation(Required=false)]
+            public int? RouteCount { get; set; }
+
+            [NameInMap("RouteEntryType")]
+            [Validation(Required=false)]
+            public string RouteEntryType { get; set; }
+
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
 
         }
 

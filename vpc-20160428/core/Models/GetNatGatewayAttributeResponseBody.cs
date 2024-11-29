@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetNatGatewayAttributeResponseBody : TeaModel {
+        [NameInMap("AccessMode")]
+        [Validation(Required=false)]
+        public GetNatGatewayAttributeResponseBodyAccessMode AccessMode { get; set; }
+        public class GetNatGatewayAttributeResponseBodyAccessMode : TeaModel {
+            [NameInMap("ModeValue")]
+            [Validation(Required=false)]
+            public string ModeValue { get; set; }
+
+            [NameInMap("TunnelType")]
+            [Validation(Required=false)]
+            public string TunnelType { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The billing information.</para>
         /// </summary>

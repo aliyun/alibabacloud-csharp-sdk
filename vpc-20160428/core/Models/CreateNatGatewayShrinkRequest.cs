@@ -8,47 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class CreateNatGatewayRequest : TeaModel {
+    public class CreateNatGatewayShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The access mode for reverse access to the VPC NAT gateway.</para>
         /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
-        public CreateNatGatewayRequestAccessMode AccessMode { get; set; }
-        public class CreateNatGatewayRequestAccessMode : TeaModel {
-            /// <summary>
-            /// <para>Access mode. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>route</b>: route mode</para>
-            /// </description></item>
-            /// <item><description><para><b>tunnel</b>: tunnel mode</para>
-            /// </description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>If this parameter is specified, you must set <b>PrivateLinkEnabled</b> to <b>true</b>.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>route</para>
-            /// </summary>
-            [NameInMap("ModeValue")]
-            [Validation(Required=false)]
-            public string ModeValue { get; set; }
-
-            /// <summary>
-            /// <para>Tunnel mode type:</para>
-            /// <list type="bullet">
-            /// <item><description><b>geneve</b>: Geneve type</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>This value takes effect if the access mode is the tunnel mode.</para>
-            /// </remarks>
-            /// </summary>
-            [NameInMap("TunnelType")]
-            [Validation(Required=false)]
-            public string TunnelType { get; set; }
-
-        }
+        public string AccessModeShrink { get; set; }
 
         /// <summary>
         /// <para>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</para>
@@ -265,8 +231,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateNatGatewayRequestTag> Tag { get; set; }
-        public class CreateNatGatewayRequestTag : TeaModel {
+        public List<CreateNatGatewayShrinkRequestTag> Tag { get; set; }
+        public class CreateNatGatewayShrinkRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
             /// 

@@ -20,6 +20,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> NatGateway { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway : TeaModel {
+                [NameInMap("AccessMode")]
+                [Validation(Required=false)]
+                public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode AccessMode { get; set; }
+                public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode : TeaModel {
+                    [NameInMap("ModeValue")]
+                    [Validation(Required=false)]
+                    public string ModeValue { get; set; }
+
+                    [NameInMap("TunnelType")]
+                    [Validation(Required=false)]
+                    public string TunnelType { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>Indicates whether automatic payment is enabled. Valid values:</para>
                 /// <list type="bullet">

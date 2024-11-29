@@ -776,6 +776,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                [NameInMap("TunnelIndex")]
+                [Validation(Required=false)]
+                public int? TunnelIndex { get; set; }
+
                 /// <summary>
                 /// <para>The configurations of Phase 2 negotiations.</para>
                 /// </summary>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The VPN gateways.</para>
+        /// <para>The information about the VPN gateways.</para>
         /// </summary>
         [NameInMap("VpnGateways")]
         [Validation(Required=false)]
@@ -408,7 +408,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</para>
+                /// <para>The tag that is automatically generated for the VPN gateway.</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>VpnEnableBgp</b>: indicates whether the VPN gateway supports BGP. Valid values:</para>
                 /// <list type="bullet">
@@ -430,13 +430,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// </description></item>
                 /// <item><description><para><b>VpnNewImage</b>: indicates whether the VPN gateway is upgraded. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>true</b>: queries only SQL templates that need to be optimized.</description></item>
                 /// <item><description><b>false</b>: does not query only SQL statements that need to be optimized.</description></item>
                 /// </list>
                 /// </description></item>
                 /// <item><description><para><b>description</b>: the description of the VPN gateway. This parameter is only for internal use.</para>
                 /// </description></item>
                 /// <item><description><para><b>VpnVersion</b>: the version of the VPN gateway.</para>
+                /// </description></item>
+                /// <item><description><para><b>IDaaSNewVersion</b>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// </description></item>
                 /// </list>
                 /// 

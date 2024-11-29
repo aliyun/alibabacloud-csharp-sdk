@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public ModifyTunnelAttributeRequestTunnelOptionsSpecification TunnelOptionsSpecification { get; set; }
         public class ModifyTunnelAttributeRequestTunnelOptionsSpecification : TeaModel {
+            [NameInMap("CustomerGatewayId")]
+            [Validation(Required=false)]
+            public string CustomerGatewayId { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable the dead peer detection (DPD) feature. Valid values:</para>
             /// <list type="bullet">

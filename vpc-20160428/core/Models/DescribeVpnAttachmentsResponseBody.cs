@@ -110,6 +110,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags> Tags { get; set; }
+            public class DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the transit router with which the IPsec-VPN connection is associated.</para>
             /// 

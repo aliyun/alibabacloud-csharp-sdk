@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4SetsIPv4Set : TeaModel {
                         /// <summary>
                         /// <b>Example:</b>
-                        /// <para>172.17.**.**</para>
+                        /// <para><c>172.17.**.**</c></para>
                         /// </summary>
                         [NameInMap("IPv4Address")]
                         [Validation(Required=false)]
@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
+
+                [NameInMap("TunnelIndex")]
+                [Validation(Required=false)]
+                public string TunnelIndex { get; set; }
 
             }
 

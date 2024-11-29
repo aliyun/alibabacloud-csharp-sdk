@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The automatically generated tag of the VPN gateway.</para>
+        /// <para>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</para>
         /// <list type="bullet">
         /// <item><description><para><b>VpnEnableBgp</b>: indicates whether the VPN gateway supports BGP. Valid values:</para>
         /// <list type="bullet">
@@ -375,27 +375,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>VisuallySsl</b>: indicates whether the VPN gateway allows you to view information about connected SSL clients.</para>
+        /// <item><description><para><b>VisuallySsl</b>: indicates whether the VPN gateway allows you to view the connection information of SSL clients. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>PbrPriority</b>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes.</para>
+        /// <item><description><para><b>PbrPriority</b>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>VpnNewImage</b>: indicates whether the VPN gateway is upgraded.</para>
+        /// <item><description><para><b>VpnNewImage</b>: indicates whether the VPN gateway is upgraded. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>description</b></para>
+        /// <item><description><para><b>description</b>: the description of the VPN gateway. This parameter is only for internal use.</para>
         /// </description></item>
-        /// <item><description><para><b>VpnVersion</b></para>
+        /// <item><description><para><b>VpnVersion</b>: the version of the VPN gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>IDaaSNewVersion</b>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// </description></item>
         /// </list>
         /// 
@@ -407,7 +413,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The tag value.</para>
+        /// <para>The tags that are added to the VPN gateway.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -472,8 +478,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The type of the VPN gateway.</para>
-        /// <para>Only <b>Normal</b> may be returned, which indicates a standard VPN gateway.</para>
+        /// <para>The type of VPN gateway. Only <b>Normal</b> may be returned, which indicates a standard VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

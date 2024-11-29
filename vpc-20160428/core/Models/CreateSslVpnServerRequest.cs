@@ -111,17 +111,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? Compress { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must configure <c>IDaaSInstanceId</c> and <c>IDaaSRegionId</c>. Valid values:</para>
+        /// <para>Specifies whether to enable two-factor authentication. To enable two-factor authentication, you need to specify <c>IDaaSInstanceId</c>, <c>IDaaSRegionId</c>, and <c>IDaaSApplicationId</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables this feature.</description></item>
-        /// <item><description><b>false</b> (default): disables this feature.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Two-factor authentication supports only earlier versions of IDaaS instances. If you do not have and cannot create earlier versions of IDaaS instances, you cannot enable two-factor authentication.</description></item>
-        /// <item><description>If two-factor authentication is already enabled for existing SSL servers, you can continue to use two-factor authentication.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you use two-factor authentication for the first time, you need to complete <a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22%3A%5B%7B%22Service%22%3A%22VPN%22%2C%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunVpnAccessingIdaasRole%22%2C%22TemplateId%22%3A%22IdaasRole%22%7D%5D%7D%5D%2C%22ReturnUrl%22%3A%22https%3A%2F%2Fvpc.console.aliyun.com%2Fsslvpn%2Fcn-shanghai%2Fvpn-servers%22%7D">authorization</a> before you create an SSL server.</para>
+        /// </description></item>
+        /// <item><description><para>IDaaS EIAM 1.0 instances are no longer available for purchase. If your Alibaba Cloud account has IDaaS EIAM 1.0 instances, IDaaS EIAM 1.0 instances can be associated after two-factor authentication is enabled. If your Alibaba Cloud account does not have IDaaS EIAM 1.0 instances, only IDaaS EIAM 2.0 instances can be associated after two-factor authentication is enabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -130,12 +132,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableMultiFactorAuth { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the IDaaS application.</para>
+        /// <list type="bullet">
+        /// <item><description>If an IDaaS EIAM 2.0 instance is associated, you need to specify an IDaaS application ID.</description></item>
+        /// <item><description>If an IDaaS EIAM 1.0 instance is associated, you do not need to specify an IDaaS application ID.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>app_my6g4qmvnwxzj2f****</para>
+        /// </summary>
         [NameInMap("IDaaSApplicationId")]
         [Validation(Required=false)]
         public string IDaaSApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The Identity as a Service (IDaaS) instance ID.</para>
+        /// <para>The ID of the IDaaS EIAM instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas-cn-hangzhou-p****</para>
@@ -145,7 +157,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IDaaSInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the IDaaS instance is created.</para>
+        /// <para>The region ID of the IDaaS EIAM instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

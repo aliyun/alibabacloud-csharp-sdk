@@ -49,6 +49,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        [NameInMap("VpnRouteCounts")]
+        [Validation(Required=false)]
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteCounts VpnRouteCounts { get; set; }
+        public class DescribeVpnRouteEntriesResponseBodyVpnRouteCounts : TeaModel {
+            [NameInMap("VpnRouteCount")]
+            [Validation(Required=false)]
+            public List<DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount> VpnRouteCount { get; set; }
+            public class DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount : TeaModel {
+                [NameInMap("RouteCount")]
+                [Validation(Required=false)]
+                public int? RouteCount { get; set; }
+
+                [NameInMap("RouteEntryType")]
+                [Validation(Required=false)]
+                public string RouteEntryType { get; set; }
+
+                [NameInMap("Source")]
+                [Validation(Required=false)]
+                public string Source { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The list of route entries.</para>
         /// </summary>

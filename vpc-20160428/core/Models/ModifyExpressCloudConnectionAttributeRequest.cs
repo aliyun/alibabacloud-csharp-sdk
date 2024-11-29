@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The peer IP address when the SAG device is connected to the cloud.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.16.**.**</para>
+        /// <para><c>172.16.**.**</c></para>
         /// </summary>
         [NameInMap("CeIp")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The on-premises IP address when the SAG device is connected to the cloud.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.10.**.**</para>
+        /// <para><c>10.10.**.**</c></para>
         /// </summary>
         [NameInMap("PeIp")]
         [Validation(Required=false)]

@@ -122,6 +122,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableNatTraversal { get; set; }
 
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("EnableTunnelsBgp")]
+        [Validation(Required=false)]
+        public bool? EnableTunnelsBgp { get; set; }
+
+        /// <summary>
         /// <para>The health check configurations:</para>
         /// <list type="bullet">
         /// <item><description><para><b>HealthCheckConfig.enable</b>: specifies whether to enable the health check feature. Valid values:</para>
@@ -296,6 +304,118 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("TunnelOptionsSpecification")]
+        [Validation(Required=false)]
+        public List<ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecification> TunnelOptionsSpecification { get; set; }
+        public class ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecification : TeaModel {
+            [NameInMap("CustomerGatewayId")]
+            [Validation(Required=false)]
+            public string CustomerGatewayId { get; set; }
+
+            [NameInMap("EnableDpd")]
+            [Validation(Required=false)]
+            public bool? EnableDpd { get; set; }
+
+            [NameInMap("EnableNatTraversal")]
+            [Validation(Required=false)]
+            public bool? EnableNatTraversal { get; set; }
+
+            [NameInMap("TunnelBgpConfig")]
+            [Validation(Required=false)]
+            public ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig TunnelBgpConfig { get; set; }
+            public class ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig : TeaModel {
+                [NameInMap("LocalAsn")]
+                [Validation(Required=false)]
+                public long? LocalAsn { get; set; }
+
+                [NameInMap("LocalBgpIp")]
+                [Validation(Required=false)]
+                public string LocalBgpIp { get; set; }
+
+                [NameInMap("TunnelCidr")]
+                [Validation(Required=false)]
+                public string TunnelCidr { get; set; }
+
+            }
+
+            [NameInMap("TunnelId")]
+            [Validation(Required=false)]
+            public string TunnelId { get; set; }
+
+            [NameInMap("TunnelIkeConfig")]
+            [Validation(Required=false)]
+            public ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig TunnelIkeConfig { get; set; }
+            public class ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig : TeaModel {
+                [NameInMap("IkeAuthAlg")]
+                [Validation(Required=false)]
+                public string IkeAuthAlg { get; set; }
+
+                [NameInMap("IkeEncAlg")]
+                [Validation(Required=false)]
+                public string IkeEncAlg { get; set; }
+
+                [NameInMap("IkeLifetime")]
+                [Validation(Required=false)]
+                public long? IkeLifetime { get; set; }
+
+                [NameInMap("IkeMode")]
+                [Validation(Required=false)]
+                public string IkeMode { get; set; }
+
+                [NameInMap("IkePfs")]
+                [Validation(Required=false)]
+                public string IkePfs { get; set; }
+
+                [NameInMap("IkeVersion")]
+                [Validation(Required=false)]
+                public string IkeVersion { get; set; }
+
+                [NameInMap("LocalId")]
+                [Validation(Required=false)]
+                public string LocalId { get; set; }
+
+                [NameInMap("Psk")]
+                [Validation(Required=false)]
+                public string Psk { get; set; }
+
+                [NameInMap("RemoteId")]
+                [Validation(Required=false)]
+                public string RemoteId { get; set; }
+
+            }
+
+            [NameInMap("TunnelIndex")]
+            [Validation(Required=false)]
+            public int? TunnelIndex { get; set; }
+
+            [NameInMap("TunnelIpsecConfig")]
+            [Validation(Required=false)]
+            public ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig TunnelIpsecConfig { get; set; }
+            public class ModifyVpnAttachmentAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig : TeaModel {
+                [NameInMap("IpsecAuthAlg")]
+                [Validation(Required=false)]
+                public string IpsecAuthAlg { get; set; }
+
+                [NameInMap("IpsecEncAlg")]
+                [Validation(Required=false)]
+                public string IpsecEncAlg { get; set; }
+
+                [NameInMap("IpsecLifetime")]
+                [Validation(Required=false)]
+                public int? IpsecLifetime { get; set; }
+
+                [NameInMap("IpsecPfs")]
+                [Validation(Required=false)]
+                public string IpsecPfs { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The ID of the IPsec-VPN connection.</para>

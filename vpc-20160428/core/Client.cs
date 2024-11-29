@@ -14647,10 +14647,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
+        /// <h2>Usage notes</h2>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
         /// <item><description>After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.</description></item>
         /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If a NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.</description></item>
@@ -14658,11 +14658,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// It takes 1 to 3 minutes to create a NAT gateway.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>CreateNatGateway</b> operation within a specific period of time.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateNatGatewayRequest
         /// </param>
         /// <param name="runtime">
@@ -14672,10 +14671,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateNatGatewayResponse
         /// </returns>
-        public CreateNatGatewayResponse CreateNatGatewayWithOptions(CreateNatGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateNatGatewayResponse CreateNatGatewayWithOptions(CreateNatGatewayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateNatGatewayShrinkRequest request = new CreateNatGatewayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccessMode))
+            {
+                request.AccessModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccessMode, "AccessMode", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessModeShrink))
+            {
+                query["AccessMode"] = request.AccessModeShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -14731,6 +14740,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
             {
                 query["PricingCycle"] = request.PricingCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateLinkEnabled))
+            {
+                query["PrivateLinkEnabled"] = request.PrivateLinkEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14790,10 +14803,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
+        /// <h2>Usage notes</h2>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
         /// <item><description>After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.</description></item>
         /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If a NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.</description></item>
@@ -14801,11 +14814,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// It takes 1 to 3 minutes to create a NAT gateway.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>CreateNatGateway</b> operation within a specific period of time.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateNatGatewayRequest
         /// </param>
         /// <param name="runtime">
@@ -14815,10 +14827,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateNatGatewayResponse
         /// </returns>
-        public async Task<CreateNatGatewayResponse> CreateNatGatewayWithOptionsAsync(CreateNatGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateNatGatewayResponse> CreateNatGatewayWithOptionsAsync(CreateNatGatewayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateNatGatewayShrinkRequest request = new CreateNatGatewayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccessMode))
+            {
+                request.AccessModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccessMode, "AccessMode", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessModeShrink))
+            {
+                query["AccessMode"] = request.AccessModeShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -14874,6 +14896,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
             {
                 query["PricingCycle"] = request.PricingCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateLinkEnabled))
+            {
+                query["PrivateLinkEnabled"] = request.PrivateLinkEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14933,10 +14959,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
+        /// <h2>Usage notes</h2>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
         /// <item><description>After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.</description></item>
         /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If a NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.</description></item>
@@ -14944,7 +14970,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// It takes 1 to 3 minutes to create a NAT gateway.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>CreateNatGateway</b> operation within a specific period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14968,10 +14993,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
+        /// <h2>Usage notes</h2>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The first time you create a NAT gateway, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
         /// <item><description>After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.</description></item>
         /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If a NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.</description></item>
@@ -14979,7 +15004,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// It takes 1 to 3 minutes to create a NAT gateway.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>CreateNatGateway</b> operation within a specific period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18419,14 +18443,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the task.
+        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
         ///     *   If the VPN gateway is in the <b>updating</b> state, the SSL server is being created.
         ///     *   If the VPN gateway is in the <b>active</b> state, the SSL server is created.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot call the <b>CreateSslVpnServer</b> operation to create multiple SSL servers at a time for the same VPN gateway.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2526913.html">CreateVpnGateway</a>.</para>
+        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <list type="bullet">
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -18541,14 +18568,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the task.
+        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
         ///     *   If the VPN gateway is in the <b>updating</b> state, the SSL server is being created.
         ///     *   If the VPN gateway is in the <b>active</b> state, the SSL server is created.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot call the <b>CreateSslVpnServer</b> operation to create multiple SSL servers at a time for the same VPN gateway.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2526913.html">CreateVpnGateway</a>.</para>
+        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <list type="bullet">
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -18663,14 +18693,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the task.
+        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
         ///     *   If the VPN gateway is in the <b>updating</b> state, the SSL server is being created.
         ///     *   If the VPN gateway is in the <b>active</b> state, the SSL server is created.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot call the <b>CreateSslVpnServer</b> operation to create multiple SSL servers at a time for the same VPN gateway.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2526913.html">CreateVpnGateway</a>.</para>
+        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <list type="bullet">
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -18693,14 +18726,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the task.
+        /// <para>  <b>CreateSslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.
         ///     *   If the VPN gateway is in the <b>updating</b> state, the SSL server is being created.
         ///     *   If the VPN gateway is in the <b>active</b> state, the SSL server is created.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot call the <b>CreateSslVpnServer</b> operation to create multiple SSL servers at a time for the same VPN gateway.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2526913.html">CreateVpnGateway</a>.</para>
+        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <list type="bullet">
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22199,6 +22235,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EnableNatTraversal"] = request.EnableNatTraversal;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableTunnelsBgp))
+            {
+                query["EnableTunnelsBgp"] = request.EnableTunnelsBgp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
@@ -22255,9 +22295,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Tags"] = request.Tags;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelOptionsSpecification))
+            {
+                bodyFlat["TunnelOptionsSpecification"] = request.TunnelOptionsSpecification;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -22329,6 +22381,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EnableNatTraversal"] = request.EnableNatTraversal;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableTunnelsBgp))
+            {
+                query["EnableTunnelsBgp"] = request.EnableTunnelsBgp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
@@ -22385,9 +22441,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Tags"] = request.Tags;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelOptionsSpecification))
+            {
+                bodyFlat["TunnelOptionsSpecification"] = request.TunnelOptionsSpecification;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -51048,6 +51116,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await DiagnoseVpnGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</para>
@@ -51063,6 +51135,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public DisableNatGatewayEcsMetricResponse DisableNatGatewayEcsMetricWithOptions(DisableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -51102,6 +51176,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<DisableNatGatewayEcsMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</para>
@@ -51117,6 +51195,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public async Task<DisableNatGatewayEcsMetricResponse> DisableNatGatewayEcsMetricWithOptionsAsync(DisableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -51156,6 +51236,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<DisableNatGatewayEcsMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</para>
@@ -51168,12 +51252,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public DisableNatGatewayEcsMetricResponse DisableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableNatGatewayEcsMetricWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Disables traffic monitoring for an Elastic Compute Service (ECS) instance.</para>
@@ -51186,6 +51276,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public async Task<DisableNatGatewayEcsMetricResponse> DisableNatGatewayEcsMetricAsync(DisableNatGatewayEcsMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -52104,6 +52196,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await DownloadVpnConnectionConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables Elastic Compute Service (ECS) traffic monitoring.</para>
@@ -52119,6 +52215,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public EnableNatGatewayEcsMetricResponse EnableNatGatewayEcsMetricWithOptions(EnableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -52158,6 +52256,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<EnableNatGatewayEcsMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables Elastic Compute Service (ECS) traffic monitoring.</para>
@@ -52173,6 +52275,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public async Task<EnableNatGatewayEcsMetricResponse> EnableNatGatewayEcsMetricWithOptionsAsync(EnableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -52212,6 +52316,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<EnableNatGatewayEcsMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables Elastic Compute Service (ECS) traffic monitoring.</para>
@@ -52224,12 +52332,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public EnableNatGatewayEcsMetricResponse EnableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableNatGatewayEcsMetricWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableNatGatewayEcsMetric is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables Elastic Compute Service (ECS) traffic monitoring.</para>
@@ -52242,6 +52356,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        // Deprecated
         public async Task<EnableNatGatewayEcsMetricResponse> EnableNatGatewayEcsMetricAsync(EnableNatGatewayEcsMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -67328,7 +67444,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改路由条目属性</para>
+        /// <para>Modifies the name and description of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -67419,7 +67535,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改路由条目属性</para>
+        /// <para>Modifies the name and description of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -67510,7 +67626,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改路由条目属性</para>
+        /// <para>Modifies the name and description of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -67533,7 +67649,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改路由条目属性</para>
+        /// <para>Modifies the name and description of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -70948,6 +71064,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EnableNatTraversal"] = request.EnableNatTraversal;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableTunnelsBgp))
+            {
+                query["EnableTunnelsBgp"] = request.EnableTunnelsBgp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
@@ -71000,9 +71120,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["VpnConnectionId"] = request.VpnConnectionId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelOptionsSpecification))
+            {
+                bodyFlat["TunnelOptionsSpecification"] = request.TunnelOptionsSpecification;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -71081,6 +71213,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["EnableNatTraversal"] = request.EnableNatTraversal;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableTunnelsBgp))
+            {
+                query["EnableTunnelsBgp"] = request.EnableTunnelsBgp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
@@ -71133,9 +71269,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["VpnConnectionId"] = request.VpnConnectionId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelOptionsSpecification))
+            {
+                bodyFlat["TunnelOptionsSpecification"] = request.TunnelOptionsSpecification;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -81646,6 +81794,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await UpdateIpv4GatewayAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateNatGatewayNatType is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Upgrades a standard NAT gateway to an enhanced NAT gateway.</para>
@@ -81678,6 +81830,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        // Deprecated
         public UpdateNatGatewayNatTypeResponse UpdateNatGatewayNatTypeWithOptions(UpdateNatGatewayNatTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -81745,6 +81899,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<UpdateNatGatewayNatTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateNatGatewayNatType is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Upgrades a standard NAT gateway to an enhanced NAT gateway.</para>
@@ -81777,6 +81935,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        // Deprecated
         public async Task<UpdateNatGatewayNatTypeResponse> UpdateNatGatewayNatTypeWithOptionsAsync(UpdateNatGatewayNatTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -81844,6 +82004,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<UpdateNatGatewayNatTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateNatGatewayNatType is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Upgrades a standard NAT gateway to an enhanced NAT gateway.</para>
@@ -81873,12 +82037,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        // Deprecated
         public UpdateNatGatewayNatTypeResponse UpdateNatGatewayNatType(UpdateNatGatewayNatTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateNatGatewayNatTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateNatGatewayNatType is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Upgrades a standard NAT gateway to an enhanced NAT gateway.</para>
@@ -81908,6 +82078,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        // Deprecated
         public async Task<UpdateNatGatewayNatTypeResponse> UpdateNatGatewayNatTypeAsync(UpdateNatGatewayNatTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

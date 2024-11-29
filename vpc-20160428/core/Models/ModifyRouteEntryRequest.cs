@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The destination CIDR block of the route entry. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/24</para>
+        /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
@@ -93,6 +99,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RouteEntryName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the route table to which the route entry belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vtb-bp1nk7zk65du3pni8z9td</para>
+        /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }

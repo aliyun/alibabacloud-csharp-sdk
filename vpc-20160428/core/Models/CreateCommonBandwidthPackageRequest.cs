@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// </remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-001****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the Internet Shared Bandwidth instance.</para>
-        /// <para>The description must be 2 to 256 characters in length and start with a letter. The description cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> All regions support BGP (Multi-ISP).</description></item>
+        /// <item><description><b>BGP</b> (default) All regions support BGP (Multi-ISP).</description></item>
         /// <item><description><b>BGP_PRO</b> BGP (Multi-ISP) Pro lines are available in the China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</description></item>
         /// </list>
         /// <para>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the Internet Shared Bandwidth instance.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test123</para>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The percentage of the minimum bandwidth commitment. Set the parameter to <b>20</b>.</para>
         /// <remarks>
-        /// </remarks>
         /// <para>This parameter is available only on the Alibaba Cloud China site.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

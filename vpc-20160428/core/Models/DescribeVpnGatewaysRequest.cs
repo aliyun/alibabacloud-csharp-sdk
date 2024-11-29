@@ -114,18 +114,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The value of tag N to add to the resource.</para>
-        /// <para>The value of this parameter can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-        /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</para>
+        /// <para>The tags that are added to the VPN gateway.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVpnGatewaysRequestTag> Tag { get; set; }
         public class DescribeVpnGatewaysRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key cannot be an empty string.</para>
-            /// <para>It can be at most 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify at most 20 tag keys in each call.</para>
+            /// <para>The tag key.</para>
+            /// <para>You can specify at most 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -136,8 +133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
