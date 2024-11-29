@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public object Extra { get; set; }
 
             /// <summary>
-            /// <para>The detailed information.</para>
+            /// <para>The details of the data returned.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The node ID.</para>
                 /// <remarks>
-                /// <para>This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</para>
+                /// <para> This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DAS20200116.Models
 {
-    public class SyncHDMAliyunResourceResponse : TeaModel {
+    public class GetDeadLockHistoryResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SyncHDMAliyunResourceResponseBody Body { get; set; }
+        public GetDeadLockHistoryResponseBody Body { get; set; }
 
     }
 

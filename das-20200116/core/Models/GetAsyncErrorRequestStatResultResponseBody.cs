@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
-            public List<Dictionary<string, DataResultValue>> Result { get; set; }
+            public Dictionary<string, DataResultValue> Result { get; set; }
 
             /// <summary>
             /// <para>The ID of the asynchronous request.</para>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DAS20200116.Models
 {
-    public class StopCloudBenchTaskResponse : TeaModel {
+    public class CreateLatestDeadLockAnalysisResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public StopCloudBenchTaskResponseBody Body { get; set; }
+        public CreateLatestDeadLockAnalysisResponseBody Body { get; set; }
 
     }
 

@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The keyword that is used for the query.</para>
         /// <remarks>
-        /// <para> The keyword must be at least four characters in length. You can specify multiple keywords that are separated by spaces. Fuzzy queries are not supported.</para>
+        /// <para> Fuzzy search is not supported. You can query data by using multiple keywords. Separate keywords with spaces.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -279,9 +279,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: millisecond.</para>
+        /// <para>The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> You can query only the data generated after DAS Enterprise Edition V2 or V3 was enabled. The beginning of the time range to query can be up to seven days earlier than the current time.</para>
+        /// <para> The beginning of the time range to query must be later than the time when DAS Enterprise Edition is enabled, and can be up to seven days earlier than the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

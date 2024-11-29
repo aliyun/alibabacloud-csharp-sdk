@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ClientAppName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the blocking data was collected.</para>
+                /// <para>The time when the blocking data was collected. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1700065800000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? CurrentCollectionTime { get; set; }
 
                 /// <summary>
-                /// <para>The database name.</para>
+                /// <para>The name of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>school</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string SqlText { get; set; }
 
                 /// <summary>
-                /// <para>The time when the execution started.</para>
+                /// <para>The time when the execution started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1608888296000</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The blocking duration. Unit: milliseconds.</para>
+                /// <para>The duration of the blocking. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30000</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? WaitTimeMs { get; set; }
 
                 /// <summary>
-                /// <para>The wait type.</para>
+                /// <para>The wait type. For more information about wait types, see <a href="https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql?view=sql-server-ver15">sys.dm_os_wait_stats (Transact-SQL)</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MISCELLANEOUS</para>
@@ -211,10 +211,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

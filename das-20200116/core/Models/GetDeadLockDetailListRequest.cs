@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDeadLockDetailListRequest : TeaModel {
         /// <summary>
-        /// <para>The database name list.</para>
+        /// <para>The name of the database. When you specify multiple databases, you must separate the database names with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>school1,school2</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the database instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

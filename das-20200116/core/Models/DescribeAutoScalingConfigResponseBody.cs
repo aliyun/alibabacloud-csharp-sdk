@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the auto scaling feature.</para>
+        /// <para>The configurations of the auto scaling feature for instances.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -359,10 +359,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public int? MaxReadOnlyNodes { get; set; }
 
                 /// <summary>
-                /// <para>The maximum specifications to which the database instance can be upgraded. For more information about the specifications of each type of supported database instances, see the following topics:</para>
+                /// <para>The maximum specifications to which the cluster can be scaled up. For more information about the specifications of each type of supported database instances, see the following topics:</para>
                 /// <list type="bullet">
-                /// <item><description>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a>.</description></item>
-                /// <item><description>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs): <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a>.</description></item>
+                /// <item><description>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications of PolarDB for MySQL Enterprise Edition</a></description></item>
+                /// <item><description>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

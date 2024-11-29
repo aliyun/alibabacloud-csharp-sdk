@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetBlockingDetailListRequest : TeaModel {
         /// <summary>
-        /// <para>The database name list.</para>
-        /// <list type="bullet">
-        /// <item><description>Separate multiple database names with commas (,).</description></item>
-        /// </list>
+        /// <para>The name of the database. Separate multiple database names with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>school1,school2</para>
@@ -34,7 +31,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The database instance ID.</para>
+        /// <para>The ID of the database instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The hash value of the SQL statement.</para>
+        /// <para>The hash value of the SQL statement. The hash values of SQL statements of the same type are the same.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC08B955CAD25E7B</para>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string QueryHash { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

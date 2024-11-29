@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DAS20200116.Models
 {
-    public class CreateAdamBenchTaskResponse : TeaModel {
+    public class GetDeadlockHistogramResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateAdamBenchTaskResponseBody Body { get; set; }
+        public GetDeadlockHistogramResponseBody Body { get; set; }
 
     }
 

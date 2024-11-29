@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data that is returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the diagnostics task. You can call the <a href="https://help.aliyun.com/document_detail/341609.html">CreateRequestDiagnosis</a> operation to query the diagnostics task ID.</para>
+        /// <para>The unique ID of the diagnostic task.<a href="~~341609~~"></a></para>
+        /// <remarks>
+        /// <para> If you set MessageId to the task ID of the automatic SQL optimization feature, no result is returned.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
