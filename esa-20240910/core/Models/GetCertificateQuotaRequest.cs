@@ -8,17 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class GetRecordRequest : TeaModel {
+    public class GetCertificateQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The record ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>
         /// </summary>
-        [NameInMap("RecordId")]
+        [NameInMap("SiteId")]
         [Validation(Required=false)]
-        public long? RecordId { get; set; }
+        public long? SiteId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>free</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

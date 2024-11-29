@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file upload task. This field is assigned after you call the <a href="https://help.aliyun.com/document_detail/435925.html">UploadFile</a> operation.</para>
+        /// <para>The ID of the file upload task. This field is assigned after you call the <a href="https://help.aliyun.com/document_detail/2850466.html">UploadFile</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>159253299357****</para>

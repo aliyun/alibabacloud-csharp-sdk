@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RemainingExpireDays")]
+        [Validation(Required=false)]
+        public int? RemainingExpireDays { get; set; }
+
         /// <summary>
         /// <para>The sorting field. By default, the queried plans are sorted by purchase time. Valid values:</para>
         /// <list type="bullet">

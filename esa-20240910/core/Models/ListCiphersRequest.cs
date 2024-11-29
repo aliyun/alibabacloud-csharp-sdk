@@ -8,17 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class GetRecordRequest : TeaModel {
+    public class ListCiphersRequest : TeaModel {
         /// <summary>
-        /// <para>The record ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234567890123</para>
+        /// <para>strict</para>
         /// </summary>
-        [NameInMap("RecordId")]
+        [NameInMap("CiphersGroup")]
         [Validation(Required=false)]
-        public long? RecordId { get; set; }
+        public string CiphersGroup { get; set; }
 
     }
 
