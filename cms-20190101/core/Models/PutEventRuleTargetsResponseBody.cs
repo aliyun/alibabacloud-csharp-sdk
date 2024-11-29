@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>The alert level and the corresponding notification methods. Valid values:</para>
-                /// <para>4: Alert notifications are sent by using DingTalk chatbots and emails.</para>
+                /// <para>The alert notification methods. Valid values:</para>
+                /// <para>4: Alert notifications are sent by using DingTalk and emails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>This parameter is returned if the specified queues in the request failed to be created or modified in MNS.</para>
+        /// <para>This parameter is returned if the specified queues in the request failed to be created or modified in SMQ.</para>
         /// </summary>
         [NameInMap("FailedMnsParameters")]
         [Validation(Required=false)]

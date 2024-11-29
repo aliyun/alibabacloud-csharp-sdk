@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <item><description>UIS: Ultimate Internet Service (UIS)</description></item>
             /// <item><description>nls: Intelligent Speech Interaction</description></item>
             /// <item><description>ots: Tablestore</description></item>
-            /// <item><description>NAS: Apsara File Storage NAS</description></item>
+            /// <item><description>NAS: File Storage NAS</description></item>
             /// <item><description>ECI: Elastic Container Instance (ECI)</description></item>
             /// <item><description>OpenAPI: OpenAPI Explorer</description></item>
             /// <item><description>pvtzpost: Alibaba Cloud DNS PrivateZone</description></item>
@@ -391,6 +391,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string NoEffectiveInterval { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{
+            ///       &quot;NotSendOK&quot;: true
+            /// }</para>
+            /// </summary>
             [NameInMap("Options")]
             [Validation(Required=false)]
             public string Options { get; set; }

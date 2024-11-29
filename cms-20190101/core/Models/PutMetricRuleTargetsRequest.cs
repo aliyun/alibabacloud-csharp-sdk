@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>N/A.</para>
+        /// <para>None.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Targets")]
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<PutMetricRuleTargetsRequestTargets> Targets { get; set; }
         public class PutMetricRuleTargetsRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Message Service (MNS), Auto Scaling, Simple Log Service, and Function Compute are supported.</para>
-            /// <para>The following part describes the ARN of MNS and the parameters provided by the ARN:</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Simple Message Queue (formerly MNS) (SMQ), Auto Scaling, Simple Log Service, and Function Compute are supported.</para>
+            /// <para>The following part describes the ARN of SMQ and the parameters in the ARN:</para>
             /// <para><c>acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>.</para>
             /// <list type="bullet">
-            /// <item><description><para>{regionId}: the region ID of the message queue or topic.</para>
+            /// <item><description><para>{regionId}: the region ID of the SMQ queue or topic.</para>
             /// </description></item>
             /// <item><description><para>{userId}: the ID of the Alibaba Cloud account that owns the resource.</para>
             /// </description></item>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The JSON-formatted parameters of the alert callback.</para>
+            /// <para>The parameters of the alert callback. The parameters are in the JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</para>

@@ -295,13 +295,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The Alibaba Cloud Resource Name (ARN) of the resource.</para>
             /// <para>Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. Fields:</para>
             /// <list type="bullet">
-            /// <item><description><para>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</para>
+            /// <item><description><para>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</para>
             /// </description></item>
             /// <item><description><para>{userId}: the ID of the Alibaba Cloud account.</para>
             /// </description></item>
-            /// <item><description><para>{regionId}: the region ID of the message queue or topic.</para>
+            /// <item><description><para>{regionId}: the region ID of the SMQ queue or topic.</para>
             /// </description></item>
-            /// <item><description><para>{Resource type}: the type of the resource that triggers the alert. Valid values:</para>
+            /// <item><description><para>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>queues</b></description></item>
             /// <item><description><b>topics</b></description></item>

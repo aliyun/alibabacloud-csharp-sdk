@@ -1615,15 +1615,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Logstore group for the metrics of Simple Log Service logs.</para>
+        /// <para>Creates a Logstore group of Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h1>Description</h1>
-        /// <para>In this example, a Logstore group named <c>Logstore_test</c> is created. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
+        /// <h2><a href="#"></a>Description</h2>
+        /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1673,15 +1673,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Logstore group for the metrics of Simple Log Service logs.</para>
+        /// <para>Creates a Logstore group of Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h1>Description</h1>
-        /// <para>In this example, a Logstore group named <c>Logstore_test</c> is created. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
+        /// <h2><a href="#"></a>Description</h2>
+        /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1731,15 +1731,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Logstore group for the metrics of Simple Log Service logs.</para>
+        /// <para>Creates a Logstore group of Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h1>Description</h1>
-        /// <para>In this example, a Logstore group named <c>Logstore_test</c> is created. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
+        /// <h2><a href="#"></a>Description</h2>
+        /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1757,15 +1757,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Logstore group for the metrics of Simple Log Service logs.</para>
+        /// <para>Creates a Logstore group of Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h1>Description</h1>
-        /// <para>In this example, a Logstore group named <c>Logstore_test</c> is created. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
+        /// <h2><a href="#"></a>Description</h2>
+        /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10183,7 +10183,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push channels of an event-triggered alert rule.</para>
+        /// <para>Queries event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10230,7 +10230,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push channels of an event-triggered alert rule.</para>
+        /// <para>Queries event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10277,7 +10277,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push channels of an event-triggered alert rule.</para>
+        /// <para>Queries event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10300,7 +10300,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push channels of an event-triggered alert rule.</para>
+        /// <para>Queries event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24595,6 +24595,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -24720,6 +24723,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -24845,6 +24851,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -24868,6 +24877,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -24891,6 +24903,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -24938,6 +24953,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -24985,6 +25003,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -25008,6 +25029,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to create a threshold-triggered alert rule for the <c>cpu_total</c> metric of an Elastic Compute Service (ECS) instance whose ID is <c>i-uf6j91r34rnwawoo****</c>. The namespace of ECS metrics is <c>acs_ecs_dashboard</c>. The alert contact group of the alert rule is <c>ECS_Group</c>. The name of the alert rule is <c>test123</c>. The ID of the alert rule is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>. The statistical method for Critical-level alerts is <c>Average</c>. The comparison operator for Critical-level alerts is <c>GreaterThanOrEqualToThreshold</c>. The threshold for Critical-level alerts is <c>90</c>. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is <c>3</c>.</para>
+        /// <remarks>
+        /// <para> Statistics verification was added on August 15, 2024. Only the statistical value of the corresponding metric can be set for the Statistics parameter. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Appendix 1: Metrics</a>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">

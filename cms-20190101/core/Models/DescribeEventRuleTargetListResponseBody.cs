@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The information about the recipients in Message Service (MNS).</para>
+        /// <para>The notifications of Simple Message Queue (formerly MNS) (SMQ).</para>
         /// </summary>
         [NameInMap("MnsParameters")]
         [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the MNS queue.</para>
+                /// <para>The name of the SMQ queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testQueue</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Queue { get; set; }
 
                 /// <summary>
-                /// <para>The region where MNS is deployed.</para>
+                /// <para>The region for SMQ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The MNS topic.</para>
+                /// <para>The SMQ topic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>topic_sample</para>

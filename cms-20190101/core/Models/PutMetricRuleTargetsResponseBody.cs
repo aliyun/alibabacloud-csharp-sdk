@@ -41,13 +41,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public List<PutMetricRuleTargetsResponseBodyFailDataTargetsTarget> Target { get; set; }
                 public class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget : TeaModel {
                     /// <summary>
-                    /// <para>The ARN of the resource. Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. MNS, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. The following part describes the ARN of MNS and the parameters in the ARN:</para>
+                    /// <para>The ARN of the resource. Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. SMQ, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. The following part describes the ARN of SMQ and the parameters in the ARN:</para>
                     /// <list type="bullet">
                     /// <item><description><para>{Service name abbreviation}: mns.</para>
                     /// </description></item>
                     /// <item><description><para>{userId}: the ID of the Alibaba Cloud account.</para>
                     /// </description></item>
-                    /// <item><description><para>{regionId}: the region ID of the message queue or topic.</para>
+                    /// <item><description><para>{regionId}: the region ID of the SMQ queue or topic.</para>
                     /// </description></item>
                     /// <item><description><para>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</para>
                     /// <list type="bullet">

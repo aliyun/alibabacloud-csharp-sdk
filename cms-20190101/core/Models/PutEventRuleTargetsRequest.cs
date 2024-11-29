@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The alert level and the corresponding notification methods. Valid values of N: 1 to 5. Valid values:</para>
-            /// <para>4: Alert notifications are sent by using DingTalk chatbots and emails.</para>
+            /// <para>The alert notification methods. Valid values of N: 1 to 5. Valid values:</para>
+            /// <para>4: Alert notifications are sent by using DingTalk and emails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The information about the recipients in Message Service (MNS).</para>
+        /// <para>The notifications of Simple Message Queue (formerly MNS) (SMQ).</para>
         /// </summary>
         [NameInMap("MnsParameters")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the MNS queue. Valid values of N: 1 to 5.</para>
+            /// <para>The name of the SMQ queue. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>queue1</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Queue { get; set; }
 
             /// <summary>
-            /// <para>The region where Message Service (MNS) is deployed. Valid values of N: 1 to 5.</para>
+            /// <para>The region for SMQ. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The MNS topic.</para>
+            /// <para>The SMQ topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>topic_sample</para>

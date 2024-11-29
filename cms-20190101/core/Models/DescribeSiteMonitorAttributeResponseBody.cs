@@ -685,6 +685,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Header { get; set; }
 
+                [NameInMap("host_binding")]
+                [Validation(Required=false)]
+                public string HostBinding { get; set; }
+
+                [NameInMap("host_binding_type")]
+                [Validation(Required=false)]
+                public int? HostBindingType { get; set; }
+
                 /// <summary>
                 /// <para>The HTTP request method. Valid values:</para>
                 /// <list type="bullet">
