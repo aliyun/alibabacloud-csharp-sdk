@@ -98,6 +98,126 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>作废优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCouponRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCouponResponse
+        /// </returns>
+        public CancelCouponResponse CancelCouponWithOptions(CancelCouponRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponId))
+            {
+                query["CouponId"] = request.CouponId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelCoupon",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelCouponResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作废优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCouponRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCouponResponse
+        /// </returns>
+        public async Task<CancelCouponResponse> CancelCouponWithOptionsAsync(CancelCouponRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponId))
+            {
+                query["CouponId"] = request.CouponId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelCoupon",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelCouponResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作废优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCouponRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCouponResponse
+        /// </returns>
+        public CancelCouponResponse CancelCoupon(CancelCouponRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelCouponWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作废优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelCouponRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCouponResponse
+        /// </returns>
+        public async Task<CancelCouponResponse> CancelCouponAsync(CancelCouponRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelCouponWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Cancels the subscription to multi-level bills as an Alibaba Cloud eco-partner.</para>
         /// </summary>
         /// 
@@ -246,6 +366,158 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelSubscriptionBillWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>优惠券审批状态列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CouponApprovalStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CouponApprovalStatusListResponse
+        /// </returns>
+        public CouponApprovalStatusListResponse CouponApprovalStatusListWithOptions(CouponApprovalStatusListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateStatus))
+            {
+                query["TemplateStatus"] = request.TemplateStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CouponApprovalStatusList",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CouponApprovalStatusListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>优惠券审批状态列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CouponApprovalStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CouponApprovalStatusListResponse
+        /// </returns>
+        public async Task<CouponApprovalStatusListResponse> CouponApprovalStatusListWithOptionsAsync(CouponApprovalStatusListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateStatus))
+            {
+                query["TemplateStatus"] = request.TemplateStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CouponApprovalStatusList",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CouponApprovalStatusListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>优惠券审批状态列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CouponApprovalStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CouponApprovalStatusListResponse
+        /// </returns>
+        public CouponApprovalStatusListResponse CouponApprovalStatusList(CouponApprovalStatusListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CouponApprovalStatusListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>优惠券审批状态列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CouponApprovalStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CouponApprovalStatusListResponse
+        /// </returns>
+        public async Task<CouponApprovalStatusListResponse> CouponApprovalStatusListAsync(CouponApprovalStatusListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CouponApprovalStatusListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -898,6 +1170,126 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeductOutstandingBalanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作废优惠券模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCouponTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCouponTemplateResponse
+        /// </returns>
+        public DeleteCouponTemplateResponse DeleteCouponTemplateWithOptions(DeleteCouponTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCouponTemplate",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCouponTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作废优惠券模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCouponTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCouponTemplateResponse
+        /// </returns>
+        public async Task<DeleteCouponTemplateResponse> DeleteCouponTemplateWithOptionsAsync(DeleteCouponTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCouponTemplate",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCouponTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作废优惠券模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCouponTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCouponTemplateResponse
+        /// </returns>
+        public DeleteCouponTemplateResponse DeleteCouponTemplate(DeleteCouponTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCouponTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作废优惠券模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCouponTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCouponTemplateResponse
+        /// </returns>
+        public async Task<DeleteCouponTemplateResponse> DeleteCouponTemplateAsync(DeleteCouponTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCouponTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1622,6 +2014,126 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAccountInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优惠券模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCouponTemplateDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCouponTemplateDetailResponse
+        /// </returns>
+        public GetCouponTemplateDetailResponse GetCouponTemplateDetailWithOptions(GetCouponTemplateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCouponTemplateDetail",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCouponTemplateDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优惠券模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCouponTemplateDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCouponTemplateDetailResponse
+        /// </returns>
+        public async Task<GetCouponTemplateDetailResponse> GetCouponTemplateDetailWithOptionsAsync(GetCouponTemplateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCouponTemplateDetail",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCouponTemplateDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优惠券模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCouponTemplateDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCouponTemplateDetailResponse
+        /// </returns>
+        public GetCouponTemplateDetailResponse GetCouponTemplateDetail(GetCouponTemplateDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCouponTemplateDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优惠券模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCouponTemplateDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCouponTemplateDetailResponse
+        /// </returns>
+        public async Task<GetCouponTemplateDetailResponse> GetCouponTemplateDetailAsync(GetCouponTemplateDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCouponTemplateDetailWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

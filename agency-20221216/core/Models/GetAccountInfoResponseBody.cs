@@ -10,15 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetAccountInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Account Type:</para>
-        /// <list type="bullet">
-        /// <item><description>1 Agency\&quot;s End User</description></item>
-        /// <item><description>2 Reseller\&quot;s End User</description></item>
-        /// <item><description>3 Enterprise</description></item>
-        /// <item><description>4 T2 Agency Partner</description></item>
-        /// <item><description>5 T2 Reseller Partner</description></item>
-        /// <item><description>6 T2 Agency+Reseller Partner</description></item>
-        /// </list>
+        /// <para>List of Account Information</para>
         /// </summary>
         [NameInMap("AccountInfoList")]
         [Validation(Required=false)]
@@ -29,17 +21,21 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public List<GetAccountInfoResponseBodyAccountInfoListAccountInfo> AccountInfo { get; set; }
             public class GetAccountInfoResponseBodyAccountInfoListAccountInfo : TeaModel {
                 /// <summary>
-                /// <para>The E-mail of Distribution Customer.</para>
+                /// <para>The name of Sub Account.</para>
+                /// <list type="bullet">
+                /// <item><description>Enterprise Customer: Name of Company</description></item>
+                /// <item><description>T2 Reseller: Name of Partner</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Description of Distribution Customer.</para>
+                /// <para>XXX Technology LTD.</para>
                 /// </summary>
                 [NameInMap("AccountNickname")]
                 [Validation(Required=false)]
                 public string AccountNickname { get; set; }
 
                 /// <summary>
-                /// <para>Account CID of Distribution Customer.</para>
+                /// <para>Alibaba Cloud Login name of Distribution Customer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:1234@qq.com">1234@qq.com</a></para>
@@ -49,7 +45,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public string AliyunId { get; set; }
 
                 /// <summary>
-                /// <para>XXX Technology LTD.</para>
+                /// <para>The time that Distribution Customer successfully associated with Distributor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-01</para>
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public string AssociationSuccessTime { get; set; }
 
                 /// <summary>
-                /// <para>customer\&quot;s CID</para>
+                /// <para>Account CID of Distribution Customer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>61479572</para>
@@ -68,26 +64,38 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 [Validation(Required=false)]
                 public long? Cid { get; set; }
 
+                /// <summary>
+                /// <para>Type of customer\&quot;s account, 0 Individual, 1 Enterprise</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("CustomerAccountType")]
                 [Validation(Required=false)]
                 public int? CustomerAccountType { get; set; }
 
                 /// <summary>
-                /// <para>customer manager</para>
+                /// <para>Customer\&quot;s Sales Manager</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>abc</para>
+                /// <para>Tommy</para>
                 /// </summary>
                 [NameInMap("CustomerBd")]
                 [Validation(Required=false)]
                 public string CustomerBd { get; set; }
 
+                /// <summary>
+                /// <para>Whether the customer has completed Enterprise Real-name Authentication, 0 No, 1 Yes</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("CustomerEnterpriseCertified")]
                 [Validation(Required=false)]
                 public int? CustomerEnterpriseCertified { get; set; }
 
                 /// <summary>
-                /// <para>The account have Shutdown-delay Privilege, After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</para>
+                /// <para>When Shutdown Policy is delayStop, this number refer to Shutdown-delay Credit (overdraft limit).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600</para>
@@ -97,20 +105,22 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public string DelayAmount { get; set; }
 
                 /// <summary>
-                /// <para>Partner\&quot;s Shutdown Policy Management for Sub Account.
-                /// 1: delayStop. The account have Shutdown-delay Privilege, After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.
-                /// 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\&quot;s life-circle of Sub Account.
-                /// 3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</para>
+                /// <para>There are a value for Shutdown Policy Management towards Sub Account.</para>
+                /// <list type="bullet">
+                /// <item><description>1 immediatelyStop,  immediately shutdown the instance once customer\&quot;s quota is ran out.</description></item>
+                /// <item><description>2 delayStop, delay shutdown the instance until customer\&quot;s Shutdown-delay Credit is ran out. Please refer to DelayAmount.</description></item>
+                /// <item><description>3 noStop, customer\&quot;s instance status is rely on manual control instead of auto setting.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>noStop</para>
+                /// <para>immediatelyStop</para>
                 /// </summary>
                 [NameInMap("DelayStatus")]
                 [Validation(Required=false)]
                 public string DelayStatus { get; set; }
 
                 /// <summary>
-                /// <para>Sub Account</para>
+                /// <para>The E-mail of Distribution Customer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:1234@qq.com">1234@qq.com</a></para>
@@ -120,7 +130,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>Account UID of Distribution Customer.</para>
+                /// <para>The contact number of Distribution Customer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>13641588680</para>
@@ -130,8 +140,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public string Mobile { get; set; }
 
                 /// <summary>
-                /// <para>Purchase Forbidden：Ban the new purchase action
-                /// normal：Normal--End Use can issue Cloud Resource order immediately.</para>
+                /// <para>Purchase Control, Value Range:</para>
+                /// <list type="bullet">
+                /// <item><description>Purchase Forbidden</description></item>
+                /// <item><description>Normal (Purchase is allowed)</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -140,24 +153,36 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 [Validation(Required=false)]
                 public string NewBuyStatus { get; set; }
 
+                /// <summary>
+                /// <para>The Country Code where the customer\&quot;s account is registered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CN</para>
+                /// </summary>
                 [NameInMap("RegisterCountryCode")]
                 [Validation(Required=false)]
                 public string RegisterCountryCode { get; set; }
 
                 /// <summary>
-                /// <para>Valid mobile number of Distribution Customer.</para>
+                /// <para>Description of Distribution Customer.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Alibaba Cloud Login name of Distribution Customer.</para>
+                /// <para>Sub Account</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The name of Sub Account:
-                /// 1.	Use the official name of Company, if Sub Account is an enterprise.
-                /// 2.	Use the official name of Partner, if Sub Account is a T2 reseller.</para>
+                /// <para>Account Type:</para>
+                /// <list type="bullet">
+                /// <item><description>1 Agency\&quot;s End User</description></item>
+                /// <item><description>2 Reseller\&quot;s End User</description></item>
+                /// <item><description>3 Enterprise</description></item>
+                /// <item><description>4 T2 Agency Partner</description></item>
+                /// <item><description>5 T2 Reseller Partner</description></item>
+                /// <item><description>6 T2 Agency+Reseller Partner</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -167,7 +192,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
                 public int? SubAccountType { get; set; }
 
                 /// <summary>
-                /// <para>Request ID, the unique request identifier generated by Alibaba Cloud.</para>
+                /// <para>Account UID of Distribution Customer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1415740779475837</para>
@@ -181,7 +206,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</para>
+        /// <para>Result Code - Error Code. Value Range:</para>
+        /// <list type="bullet">
+        /// <item><description>200 OK</description></item>
+        /// <item><description>1109 System Error</description></item>
+        /// <item><description>3029: Invalid UID</description></item>
+        /// <item><description>3062: UID and UserType are both empty.</description></item>
+        /// <item><description>3063: UserType value out of range.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -194,21 +226,21 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// <para>message</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Pagination Information</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Pagination, page volume in total.</para>
+        /// <para>Pagination Information</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public GetAccountInfoResponseBodyPageInfo PageInfo { get; set; }
         public class GetAccountInfoResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>Account Information</para>
+            /// <para>Pagination, current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -218,7 +250,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>Pagination, current page.</para>
+            /// <para>Pagination, record number on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -228,7 +260,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>List of Account Information</para>
+            /// <para>Pagination, page volume in total.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -240,7 +272,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         }
 
         /// <summary>
-        /// <para>Request id, a unique identifier generated by Alibaba cloud for the request.</para>
+        /// <para>Request id, a unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
@@ -250,7 +282,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Pagination, record number on each page.</para>
+        /// <para>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 {
     public class GetAccountInfoRequest : TeaModel {
         /// <summary>
-        /// <para>Message</para>
+        /// <para>Pagination, current page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Success</para>
+        /// <para>Pagination, record number on each page, maximum 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>10 (Value &lt;= 20)</para>
+        /// <para>Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1215848086704806</para>
@@ -42,13 +42,11 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public long? Uid { get; set; }
 
         /// <summary>
-        /// <para>Result Code - Error Code. Value Range:</para>
+        /// <para>Distribution Customer\&quot;s Account Type:</para>
         /// <list type="bullet">
-        /// <item><description>200 OK</description></item>
-        /// <item><description>1109 System Error</description></item>
-        /// <item><description>3029: Invalid UID</description></item>
-        /// <item><description>3062: UID and UserType are both empty.</description></item>
-        /// <item><description>3063: UserType value out of range.</description></item>
+        /// <item><description>1 End User</description></item>
+        /// <item><description>2 Enterprise</description></item>
+        /// <item><description>3 T2 Partner</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
