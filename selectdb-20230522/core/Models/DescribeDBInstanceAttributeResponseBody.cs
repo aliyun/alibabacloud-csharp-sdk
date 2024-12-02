@@ -142,6 +142,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
             /// <summary>
             /// <para>The instance name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test instance</para>
             /// </summary>
             [NameInMap("DbInstanceName")]
             [Validation(Required=false)]
@@ -158,7 +161,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>修改时间。</para>
+            /// <para>The modified time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-02T16:35:44+08:00</para>
@@ -176,6 +179,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
+            [NameInMap("ScalingRulesEnable")]
+            [Validation(Required=false)]
+            public bool? ScalingRulesEnable { get; set; }
 
             /// <summary>
             /// <para>The time when the cluster started.</para>
@@ -299,6 +306,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The end time of the instance maintenance window.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1970-01-01T05:00Z</para>
         /// </summary>
         [NameInMap("MaintainEndtime")]
         [Validation(Required=false)]
@@ -306,6 +316,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The start time of the instance maintenance window.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1970-01-01T02:00Z</para>
         /// </summary>
         [NameInMap("MaintainStarttime")]
         [Validation(Required=false)]
@@ -322,7 +335,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ObjectStoreSize { get; set; }
 
         /// <summary>
-        /// <para>地域ID。</para>
+        /// <para>The Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -390,7 +403,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The zone ID.</para>
+        /// <para>The subdomain zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-h-aliyun</para>
@@ -399,11 +412,16 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string SubDomain { get; set; }
 
+        /// <summary>
+        /// <para>The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: <c>{&quot;key1&quot;:&quot;value1&quot;}</c>.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceAttributeResponseBodyTags> Tags { get; set; }
         public class DescribeDBInstanceAttributeResponseBodyTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testKey</para>
             /// </summary>
@@ -412,6 +430,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string TagKey { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
             /// </summary>
@@ -422,7 +442,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp175iuvg8nxqraf2****</para>
@@ -432,7 +452,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>实例可用区ID</para>
+        /// <para>The Zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-h</para>
