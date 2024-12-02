@@ -534,6 +534,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             {
                 query["ArtifactBuildProperty"] = request.ArtifactBuildPropertyShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactBuildType))
+            {
+                query["ArtifactBuildType"] = request.ArtifactBuildType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["ArtifactId"] = request.ArtifactId;
@@ -621,6 +625,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactBuildPropertyShrink))
             {
                 query["ArtifactBuildProperty"] = request.ArtifactBuildPropertyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactBuildType))
+            {
+                query["ArtifactBuildType"] = request.ArtifactBuildType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {

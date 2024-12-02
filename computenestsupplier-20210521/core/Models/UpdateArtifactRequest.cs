@@ -16,6 +16,42 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public UpdateArtifactRequestArtifactBuildProperty ArtifactBuildProperty { get; set; }
         public class UpdateArtifactRequestArtifactBuildProperty : TeaModel {
+            [NameInMap("BuildArgs")]
+            [Validation(Required=false)]
+            public List<UpdateArtifactRequestArtifactBuildPropertyBuildArgs> BuildArgs { get; set; }
+            public class UpdateArtifactRequestArtifactBuildPropertyBuildArgs : TeaModel {
+                [NameInMap("ArgumentName")]
+                [Validation(Required=false)]
+                public string ArgumentName { get; set; }
+
+                [NameInMap("ArgumentValue")]
+                [Validation(Required=false)]
+                public string ArgumentValue { get; set; }
+
+            }
+
+            [NameInMap("CodeRepo")]
+            [Validation(Required=false)]
+            public UpdateArtifactRequestArtifactBuildPropertyCodeRepo CodeRepo { get; set; }
+            public class UpdateArtifactRequestArtifactBuildPropertyCodeRepo : TeaModel {
+                [NameInMap("Branch")]
+                [Validation(Required=false)]
+                public string Branch { get; set; }
+
+                [NameInMap("Owner")]
+                [Validation(Required=false)]
+                public string Owner { get; set; }
+
+                [NameInMap("Platform")]
+                [Validation(Required=false)]
+                public string Platform { get; set; }
+
+                [NameInMap("RepoName")]
+                [Validation(Required=false)]
+                public string RepoName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The command content.</para>
             /// <remarks>
@@ -47,6 +83,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string CommandType { get; set; }
 
+            [NameInMap("DockerfilePath")]
+            [Validation(Required=false)]
+            public string DockerfilePath { get; set; }
+
             /// <summary>
             /// <para>The region ID where the source mirror image is located.</para>
             /// <remarks>
@@ -59,6 +99,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("SourceContainerImage")]
+            [Validation(Required=false)]
+            public string SourceContainerImage { get; set; }
 
             /// <summary>
             /// <para>The source image id. Supported Types:</para>

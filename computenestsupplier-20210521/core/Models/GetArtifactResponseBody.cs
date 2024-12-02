@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactBuildProperty { get; set; }
 
+        [NameInMap("ArtifactBuildType")]
+        [Validation(Required=false)]
+        public string ArtifactBuildType { get; set; }
+
         /// <summary>
         /// <para>The ID of the deployment package.</para>
         /// 

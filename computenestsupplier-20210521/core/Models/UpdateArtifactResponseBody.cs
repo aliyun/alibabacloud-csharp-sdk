@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactBuildProperty { get; set; }
 
+        [NameInMap("ArtifactBuildType")]
+        [Validation(Required=false)]
+        public string ArtifactBuildType { get; set; }
+
         /// <summary>
         /// <para>The ID of the deployment package.</para>
         /// 
@@ -106,6 +110,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("StatusDetail")]
+        [Validation(Required=false)]
+        public string StatusDetail { get; set; }
 
         /// <summary>
         /// <para>The ID of the region that supports the deployment package.</para>
