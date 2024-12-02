@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdateInstanceNameRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>milvus-test</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-123xxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

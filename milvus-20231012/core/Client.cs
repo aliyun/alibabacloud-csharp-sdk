@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 获取Milvus公网访问ACL信息
-         *
-         * @param request DescribeAccessControlListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessControlListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessControlListResponse
+        /// </returns>
         public DescribeAccessControlListResponse DescribeAccessControlListWithOptions(DescribeAccessControlListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -73,14 +83,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<DescribeAccessControlListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取Milvus公网访问ACL信息
-         *
-         * @param request DescribeAccessControlListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessControlListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessControlListResponse
+        /// </returns>
         public async Task<DescribeAccessControlListResponse> DescribeAccessControlListWithOptionsAsync(DescribeAccessControlListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -109,12 +129,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<DescribeAccessControlListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取Milvus公网访问ACL信息
-         *
-         * @param request DescribeAccessControlListRequest
-         * @return DescribeAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessControlListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessControlListResponse
+        /// </returns>
         public DescribeAccessControlListResponse DescribeAccessControlList(DescribeAccessControlListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -122,12 +148,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return DescribeAccessControlListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取Milvus公网访问ACL信息
-         *
-         * @param request DescribeAccessControlListRequest
-         * @return DescribeAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessControlListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessControlListResponse
+        /// </returns>
         public async Task<DescribeAccessControlListResponse> DescribeAccessControlListAsync(DescribeAccessControlListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -135,14 +167,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return await DescribeAccessControlListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 查询实例用户配置
-         *
-         * @param request DescribeInstanceConfigsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例用户配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
         public DescribeInstanceConfigsResponse DescribeInstanceConfigsWithOptions(DescribeInstanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -171,14 +213,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<DescribeInstanceConfigsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询实例用户配置
-         *
-         * @param request DescribeInstanceConfigsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeInstanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例用户配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
         public async Task<DescribeInstanceConfigsResponse> DescribeInstanceConfigsWithOptionsAsync(DescribeInstanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -207,12 +259,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<DescribeInstanceConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询实例用户配置
-         *
-         * @param request DescribeInstanceConfigsRequest
-         * @return DescribeInstanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例用户配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
         public DescribeInstanceConfigsResponse DescribeInstanceConfigs(DescribeInstanceConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -220,12 +278,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return DescribeInstanceConfigsWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 查询实例用户配置
-         *
-         * @param request DescribeInstanceConfigsRequest
-         * @return DescribeInstanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例用户配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
         public async Task<DescribeInstanceConfigsResponse> DescribeInstanceConfigsAsync(DescribeInstanceConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -233,14 +297,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return await DescribeInstanceConfigsWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 根据集群ID获取集群的详细信息
-         *
-         * @param request GetInstanceDetailRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID获取集群的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceDetailResponse
+        /// </returns>
         public GetInstanceDetailResponse GetInstanceDetailWithOptions(GetInstanceDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -269,14 +343,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<GetInstanceDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据集群ID获取集群的详细信息
-         *
-         * @param request GetInstanceDetailRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID获取集群的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceDetailResponse
+        /// </returns>
         public async Task<GetInstanceDetailResponse> GetInstanceDetailWithOptionsAsync(GetInstanceDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -305,12 +389,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<GetInstanceDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据集群ID获取集群的详细信息
-         *
-         * @param request GetInstanceDetailRequest
-         * @return GetInstanceDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID获取集群的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceDetailResponse
+        /// </returns>
         public GetInstanceDetailResponse GetInstanceDetail(GetInstanceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -318,12 +408,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return GetInstanceDetailWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 根据集群ID获取集群的详细信息
-         *
-         * @param request GetInstanceDetailRequest
-         * @return GetInstanceDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID获取集群的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInstanceDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceDetailResponse
+        /// </returns>
         public async Task<GetInstanceDetailResponse> GetInstanceDetailAsync(GetInstanceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -331,14 +427,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return await GetInstanceDetailWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 根据集群ID或者名称等信息过滤集群
-         *
-         * @param request ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID或者名称等信息过滤集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -387,14 +493,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据集群ID或者名称等信息过滤集群
-         *
-         * @param request ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID或者名称等信息过滤集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -443,12 +559,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据集群ID或者名称等信息过滤集群
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID或者名称等信息过滤集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstances(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -456,12 +578,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return ListInstancesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 根据集群ID或者名称等信息过滤集群
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据集群ID或者名称等信息过滤集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesAsync(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -469,14 +597,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return await ListInstancesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyInstanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
         public ModifyInstanceConfigResponse ModifyInstanceConfigWithOptions(ModifyInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -513,14 +651,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyInstanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
         public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigWithOptionsAsync(ModifyInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -557,12 +705,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyInstanceConfigRequest
-         * @return ModifyInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
         public ModifyInstanceConfigResponse ModifyInstanceConfig(ModifyInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -570,12 +724,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return ModifyInstanceConfigWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyInstanceConfigRequest
-         * @return ModifyInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
         public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigAsync(ModifyInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -583,14 +743,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return await ModifyInstanceConfigWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 更新Milvus公网访问ACL信息
-         *
-         * @param request UpdateAccessControlListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccessControlListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccessControlListResponse
+        /// </returns>
         public UpdateAccessControlListResponse UpdateAccessControlListWithOptions(UpdateAccessControlListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -627,14 +797,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<UpdateAccessControlListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新Milvus公网访问ACL信息
-         *
-         * @param request UpdateAccessControlListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccessControlListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccessControlListResponse
+        /// </returns>
         public async Task<UpdateAccessControlListResponse> UpdateAccessControlListWithOptionsAsync(UpdateAccessControlListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -671,12 +851,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<UpdateAccessControlListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新Milvus公网访问ACL信息
-         *
-         * @param request UpdateAccessControlListRequest
-         * @return UpdateAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccessControlListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccessControlListResponse
+        /// </returns>
         public UpdateAccessControlListResponse UpdateAccessControlList(UpdateAccessControlListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -684,12 +870,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return UpdateAccessControlListWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 更新Milvus公网访问ACL信息
-         *
-         * @param request UpdateAccessControlListRequest
-         * @return UpdateAccessControlListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Milvus公网访问ACL信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccessControlListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccessControlListResponse
+        /// </returns>
         public async Task<UpdateAccessControlListResponse> UpdateAccessControlListAsync(UpdateAccessControlListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -697,14 +889,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return await UpdateAccessControlListWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 修改集群名称
-         *
-         * @param request UpdateInstanceNameRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public UpdateInstanceNameResponse UpdateInstanceNameWithOptions(UpdateInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -737,14 +939,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<UpdateInstanceNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改集群名称
-         *
-         * @param request UpdateInstanceNameRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public async Task<UpdateInstanceNameResponse> UpdateInstanceNameWithOptionsAsync(UpdateInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -777,12 +989,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<UpdateInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改集群名称
-         *
-         * @param request UpdateInstanceNameRequest
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public UpdateInstanceNameResponse UpdateInstanceName(UpdateInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -790,12 +1008,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return UpdateInstanceNameWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 修改集群名称
-         *
-         * @param request UpdateInstanceNameRequest
-         * @return UpdateInstanceNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceNameResponse
+        /// </returns>
         public async Task<UpdateInstanceNameResponse> UpdateInstanceNameAsync(UpdateInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -803,14 +1027,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return await UpdateInstanceNameWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 该接口用于开通/关闭 Proxy的公网SLB。
-         *
-         * @param request UpdatePublicNetworkStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePublicNetworkStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkStatusResponse
+        /// </returns>
         public UpdatePublicNetworkStatusResponse UpdatePublicNetworkStatusWithOptions(UpdatePublicNetworkStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -851,14 +1085,24 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 该接口用于开通/关闭 Proxy的公网SLB。
-         *
-         * @param request UpdatePublicNetworkStatusRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePublicNetworkStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkStatusResponse
+        /// </returns>
         public async Task<UpdatePublicNetworkStatusResponse> UpdatePublicNetworkStatusWithOptionsAsync(UpdatePublicNetworkStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -899,12 +1143,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 该接口用于开通/关闭 Proxy的公网SLB。
-         *
-         * @param request UpdatePublicNetworkStatusRequest
-         * @return UpdatePublicNetworkStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkStatusResponse
+        /// </returns>
         public UpdatePublicNetworkStatusResponse UpdatePublicNetworkStatus(UpdatePublicNetworkStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -912,12 +1162,18 @@ namespace AlibabaCloud.SDK.Milvus20231012
             return UpdatePublicNetworkStatusWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 该接口用于开通/关闭 Proxy的公网SLB。
-         *
-         * @param request UpdatePublicNetworkStatusRequest
-         * @return UpdatePublicNetworkStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkStatusResponse
+        /// </returns>
         public async Task<UpdatePublicNetworkStatusResponse> UpdatePublicNetworkStatusAsync(UpdatePublicNetworkStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

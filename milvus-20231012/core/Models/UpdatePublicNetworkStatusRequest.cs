@@ -14,21 +14,30 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Cidr { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Proxy</para>
         /// </summary>
         [NameInMap("ComponentType")]
         [Validation(Required=false)]
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-123xxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PublicNetworkEnabled")]
         [Validation(Required=false)]
