@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RunClusterRequest : TeaModel {
         /// <summary>
-        /// <para>应用配置。数组元素个数N的取值范围：1~1000。</para>
+        /// <para>The service configurations. Number of elements in the array: 1 to 1,000.</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
         /// <summary>
-        /// <para>应用列表。数组元素个数N的取值范围：1~100。</para>
+        /// <para>The list of services. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Applications")]
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<Application> Applications { get; set; }
 
         /// <summary>
-        /// <para>引导脚本。数组元素个数N的取值范围：1~10。</para>
+        /// <para>The bootstrap actions. Number of elements in the array: 1 to 10.</para>
         /// </summary>
         [NameInMap("BootstrapScripts")]
         [Validation(Required=false)]
         public List<Script> BootstrapScripts { get; set; }
 
         /// <summary>
-        /// <para>幂等客户端TOKEN。同一个ClientToken多次调用的返回结果一致，同一个ClientToken最多只创建一个集群。</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. The same ClientToken value for multiple calls to the RunCluster operation results in identical responses. Only one cluster can be created by using the same ClientToken value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>集群名称。长度为1~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）</para>
+        /// <para>The cluster name. The name must be 1 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,15 +53,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>创建的EMR集群类型。取值范围：</para>
+        /// <para>The type of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DATALAKE：新版数据湖。</description></item>
-        /// <item><description>OLAP：数据分析。</description></item>
-        /// <item><description>DATAFLOW：实时数据流。</description></item>
-        /// <item><description>DATASERVING：数据服务。</description></item>
-        /// <item><description>CUSTOM：自定义集群。</description></item>
-        /// <item><description>HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。</description></item>
+        /// <item><description>DATALAKE</description></item>
+        /// <item><description>OLAP</description></item>
+        /// <item><description>DATAFLOW</description></item>
+        /// <item><description>DATASERVING</description></item>
+        /// <item><description>CUSTOM</description></item>
+        /// <item><description>HADOOP: We recommend that you set this parameter to DATALAKE rather than HADOOP.</description></item>
         /// </list>
+        /// <para>If the first time you create an EMR cluster is after 17:00 (UTC+8) on December 19, 2022, you cannot create a Hadoop, Data Science, Presto, or ZooKeeper cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,13 +72,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
         /// <summary>
-        /// <para>集群中的应用部署模式。取值范围：</para>
+        /// <para>The deployment mode of master nodes in the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL：非高可用部署。集群1个MASTER节点。</description></item>
-        /// <item><description>HA：高可用部署。高可用部署要求至少3个MASTER节点。</description></item>
+        /// <item><description>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</description></item>
+        /// <item><description>HA: high availability mode. A cluster that contains at least three master nodes is created.</description></item>
         /// </list>
-        /// <para>默认值：NORMAL。</para>
         /// 
         /// <b>Example:</b>
         /// <para>HA</para>
@@ -87,6 +91,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DeployMode { get; set; }
 
         /// <summary>
+        /// <para>The cluster description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Emr cluster for ETL</para>
         /// </summary>
@@ -94,14 +100,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The basic attributes of all ECS instances in the cluster.</para>
+        /// </summary>
         [NameInMap("NodeAttributes")]
         [Validation(Required=false)]
         public NodeAttributes NodeAttributes { get; set; }
 
         /// <summary>
-        /// <para>节点组。数组元素个数N的取值范围：1~100。</para>
-        /// <para>
-        /// 
+        /// <para>The node groups. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
@@ -109,12 +116,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<NodeGroupConfig> NodeGroups { get; set; }
 
         /// <summary>
-        /// <para>集群的付费类型。取值范围：</para>
+        /// <para>The billing method of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayAsYouGo：后付费。</description></item>
-        /// <item><description>Subscription：预付费。</description></item>
+        /// <item><description>PayAsYouGo</description></item>
+        /// <item><description>Subscription</description></item>
         /// </list>
-        /// <para>默认值：PayAsYouGo。</para>
+        /// <para>Default value: PayAsYouGo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>
@@ -124,7 +131,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -135,7 +142,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>EMR发行版。</para>
+        /// <para>The EMR version. You can query available EMR versions in the EMR console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,7 +153,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>集群所在的企业资源组ID。</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -156,12 +163,11 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Kerberos安全模式。取值范围：</para>
+        /// <para>The security mode of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL：普通模式，不开启Kerberos模式。</description></item>
-        /// <item><description>KERBEROS：开启Kerberos模式。</description></item>
+        /// <item><description>NORMAL: regular mode. Kerberos authentication is disabled. This is the default value.</description></item>
+        /// <item><description>KERBEROS: Kerberos mode. Kerberos authentication is enabled.</description></item>
         /// </list>
-        /// <para>默认值：NORMAL</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -170,12 +176,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string SecurityMode { get; set; }
 
+        /// <summary>
+        /// <para>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</para>
+        /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>标签。数组元数个数N的取值范围：0~20。</para>
+        /// <para>The list of tags. Number of elements in the array: 0 to 20.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

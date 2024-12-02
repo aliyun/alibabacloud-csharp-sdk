@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        [NameInMap("PrivatePoolOptions")]
+        [Validation(Required=false)]
+        public PrivatePoolOptions PrivatePoolOptions { get; set; }
+
         /// <summary>
         /// <para>存活节点数量。</para>
         /// 
@@ -192,8 +196,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public NodeGroupStateChangeReason StateChangeReason { get; set; }
 
         /// <summary>
-        /// <para>节点组状态，NodeGroupState别名。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>CREATED</para>
         /// </summary>

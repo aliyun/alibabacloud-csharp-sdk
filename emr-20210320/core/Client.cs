@@ -277,6 +277,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 query["ClusterType"] = request.ClusterType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMode))
             {
                 query["DeployMode"] = request.DeployMode;
@@ -382,6 +386,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 query["ClusterType"] = request.ClusterType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMode))
             {
@@ -801,6 +809,14 @@ namespace AlibabaCloud.SDK.Emr20210320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchInterval))
+            {
+                query["BatchInterval"] = request.BatchInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchSize))
+            {
+                query["BatchSize"] = request.BatchSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -859,6 +875,14 @@ namespace AlibabaCloud.SDK.Emr20210320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchInterval))
+            {
+                query["BatchInterval"] = request.BatchInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchSize))
+            {
+                query["BatchSize"] = request.BatchSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -10034,6 +10058,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await RunApplicationActionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// RunClusterRequest
         /// </param>
@@ -10107,6 +10141,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 body["ClusterType"] = request.ClusterType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                body["DeletionProtection"] = request.DeletionProtection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMode))
             {
                 body["DeployMode"] = request.DeployMode;
@@ -10167,6 +10205,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<RunClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// RunClusterRequest
         /// </param>
@@ -10240,6 +10288,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 body["ClusterType"] = request.ClusterType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                body["DeletionProtection"] = request.DeletionProtection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMode))
             {
                 body["DeployMode"] = request.DeployMode;
@@ -10300,6 +10352,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<RunClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RunClusterRequest
         /// </param>
@@ -10313,6 +10375,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return RunClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RunClusterRequest
         /// </param>

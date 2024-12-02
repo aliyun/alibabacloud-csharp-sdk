@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        [NameInMap("PrivatePoolOptions")]
+        [Validation(Required=false)]
+        public PrivatePoolOptions PrivatePoolOptions { get; set; }
+
         /// <summary>
         /// <para>抢占式Spot实例出价价格。参数SpotStrategy取值为SpotWithPriceLimit时生效。数组元数个数N的取值范围：0~100。</para>
         /// </summary>

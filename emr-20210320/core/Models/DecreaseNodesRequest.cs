@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DecreaseNodesRequest : TeaModel {
+        [NameInMap("BatchInterval")]
+        [Validation(Required=false)]
+        public int? BatchInterval { get; set; }
+
+        [NameInMap("BatchSize")]
+        [Validation(Required=false)]
+        public int? BatchSize { get; set; }
+
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>

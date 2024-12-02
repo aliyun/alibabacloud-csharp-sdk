@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
         /// <summary>
         /// <para>The deployment mode of master nodes in the cluster. Valid values:</para>
         /// <list type="bullet">

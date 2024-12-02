@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
+        /// <summary>
         /// <para>部署模式。</para>
         /// 
         /// <b>Example:</b>

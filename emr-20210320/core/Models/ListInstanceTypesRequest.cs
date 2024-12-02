@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>EMR distribution.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>线上已发布版本EMR-5.8.0</para>
+        /// <para>EMR-5.8.0</para>
         /// </summary>
         [NameInMap("ReleaseVersion")]
         [Validation(Required=false)]

@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
+            [NameInMap("DeletionProtection")]
+            [Validation(Required=false)]
+            public bool? DeletionProtection { get; set; }
+
             /// <summary>
             /// <para>The deployment mode of master nodes in the cluster. Valid values:</para>
             /// <list type="bullet">
@@ -222,6 +226,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     [Validation(Required=false)]
                     public int? MaxCapacity { get; set; }
 
+                    [NameInMap("MaxOnDemandCapacity")]
+                    [Validation(Required=false)]
+                    public int? MaxOnDemandCapacity { get; set; }
+
                     /// <summary>
                     /// <para>The minimum number of nodes in the node group. Default value: 0.</para>
                     /// 
@@ -253,6 +261,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [NameInMap("ScalingPolicyId")]
                 [Validation(Required=false)]
                 public string ScalingPolicyId { get; set; }
+
+                [NameInMap("ScalingPolicyType")]
+                [Validation(Required=false)]
+                public string ScalingPolicyType { get; set; }
 
                 /// <summary>
                 /// <para>The list of auto scaling rules.</para>
