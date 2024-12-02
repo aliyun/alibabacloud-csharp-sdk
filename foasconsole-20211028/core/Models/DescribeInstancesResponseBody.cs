@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string AskClusterId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PRE</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
@@ -131,6 +135,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>RUNNING</para>
+            /// </summary>
             [NameInMap("ClusterStatus")]
             [Validation(Required=false)]
             public string ClusterStatus { get; set; }
@@ -252,21 +260,21 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string HaZoneId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("HostAliases")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesHostAliases> HostAliases { get; set; }
             public class DescribeInstancesResponseBodyInstancesHostAliases : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("HostNames")]
                 [Validation(Required=false)]
                 public List<string> HostNames { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
@@ -274,10 +282,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>f-cn-zvp2q0zik06</para>
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vvp1</para>
+            /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
@@ -286,6 +302,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string MonitorType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>NORMAL</para>
+            /// </summary>
             [NameInMap("OrderState")]
             [Validation(Required=false)]
             public string OrderState { get; set; }
@@ -316,14 +336,26 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
+            /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1629879567394</para>
+            /// </summary>
             [NameInMap("ResourceCreateTime")]
             [Validation(Required=false)]
             public long? ResourceCreateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1637337600000</para>
+            /// </summary>
             [NameInMap("ResourceExpiredTime")]
             [Validation(Required=false)]
             public long? ResourceExpiredTime { get; set; }
@@ -332,6 +364,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>b3690a1655da47</para>
+            /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
@@ -340,10 +376,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesResourceSpec ResourceSpec { get; set; }
             public class DescribeInstancesResponseBodyInstancesResourceSpec : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>40</para>
+                /// </summary>
                 [NameInMap("MemoryGB")]
                 [Validation(Required=false)]
                 public int? MemoryGB { get; set; }
@@ -366,6 +410,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesStorageOss Oss { get; set; }
                 public class DescribeInstancesResponseBodyInstancesStorageOss : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>oss_flink</para>
+                    /// </summary>
                     [NameInMap("Bucket")]
                     [Validation(Required=false)]
                     public string Bucket { get; set; }
@@ -378,16 +426,28 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesTags> Tags { get; set; }
             public class DescribeInstancesResponseBodyInstancesTags : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>flink</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1838996687368452</para>
+            /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
             public string Uid { get; set; }
@@ -434,6 +494,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vpc-2ze9*******nxfmfcdi</para>
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
@@ -468,32 +532,60 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-beijing-g</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>C8DF2A5B-6FBA-5651-A3D4-960F36640E6B</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>15</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TotalPage")]
         [Validation(Required=false)]
         public int? TotalPage { get; set; }

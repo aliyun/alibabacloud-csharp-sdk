@@ -1,3 +1,8 @@
+2024-12-02 Version: 1.0.5
+- Update API QueryModifyInstancePrice: add param PromotionCode.
+- Update API QueryModifyInstancePrice: add param UsePromotionCode.
+
+
 2024-08-05 Version: 1.0.4
 - Update API DescribeInstances: update response param.
 - Update API DescribeSupportedRegions: update response param.
