@@ -9,12 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeElasticStrengthRequest : TeaModel {
+        [NameInMap("DataDiskCategories")]
+        [Validation(Required=false)]
+        public List<string> DataDiskCategories { get; set; }
+
+        [NameInMap("ImageFamily")]
+        [Validation(Required=false)]
+        public string ImageFamily { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("ImageName")]
+        [Validation(Required=false)]
+        public string ImageName { get; set; }
+
         /// <summary>
         /// <para>The instance types. The instance types specified by this parameter overwrite the instance types specified in the scaling configuration.</para>
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
+
+        [NameInMap("Ipv6AddressCount")]
+        [Validation(Required=false)]
+        public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
         /// <para>The preemption policy that you want to apply to pay-as-you-go instances. The preemption policy specified by this parameter overwrites the preemption policy specified in the scaling configuration. Valid values:</para>
@@ -60,6 +80,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> ScalingGroupIds { get; set; }
 
+        [NameInMap("SpotStrategy")]
+        [Validation(Required=false)]
+        public string SpotStrategy { get; set; }
+
         /// <summary>
         /// <para>The categories of the system disks. The categories of the system disks specified by this parameter overwrite the categories of the system disks specified in the scaling configuration. Valid values:</para>
         /// <list type="bullet">
@@ -72,6 +96,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("SystemDiskCategories")]
         [Validation(Required=false)]
         public List<string> SystemDiskCategories { get; set; }
+
+        [NameInMap("VSwitchIds")]
+        [Validation(Required=false)]
+        public List<string> VSwitchIds { get; set; }
 
     }
 
