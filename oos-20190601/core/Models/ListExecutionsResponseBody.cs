@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Mode { get; set; }
 
+            [NameInMap("NextScheduleTime")]
+            [Validation(Required=false)]
+            public string NextScheduleTime { get; set; }
+
             /// <summary>
             /// <para>The output of the execution.</para>
             /// 
