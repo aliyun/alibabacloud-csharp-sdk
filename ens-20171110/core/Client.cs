@@ -8284,6 +8284,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["IdleTimeout"] = request.IdleTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspAffinity))
+            {
+                query["IspAffinity"] = request.IspAffinity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
             {
                 query["NatGatewayId"] = request.NatGatewayId;
@@ -8353,6 +8357,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
             {
                 query["IdleTimeout"] = request.IdleTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspAffinity))
+            {
+                query["IspAffinity"] = request.IspAffinity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
             {
@@ -20550,6 +20558,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeInstancesShrinkRequest request = new DescribeInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServiceStatus))
+            {
+                request.ServiceStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServiceStatus, "ServiceStatus", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -20618,6 +20630,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceStatusShrink))
+            {
+                query["ServiceStatus"] = request.ServiceStatusShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -20679,6 +20695,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeInstancesShrinkRequest request = new DescribeInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServiceStatus))
+            {
+                request.ServiceStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServiceStatus, "ServiceStatus", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -20747,6 +20767,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceStatusShrink))
+            {
+                query["ServiceStatus"] = request.ServiceStatusShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -32357,6 +32381,142 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySnapshotAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改snat规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySnatEntryResponse
+        /// </returns>
+        public ModifySnatEntryResponse ModifySnatEntryWithOptions(ModifySnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspAffinity))
+            {
+                query["IspAffinity"] = request.IspAffinity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryName))
+            {
+                query["SnatEntryName"] = request.SnatEntryName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySnatEntryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改snat规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySnatEntryResponse
+        /// </returns>
+        public async Task<ModifySnatEntryResponse> ModifySnatEntryWithOptionsAsync(ModifySnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspAffinity))
+            {
+                query["IspAffinity"] = request.IspAffinity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryId))
+            {
+                query["SnatEntryId"] = request.SnatEntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnatEntryName))
+            {
+                query["SnatEntryName"] = request.SnatEntryName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySnatEntry",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySnatEntryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改snat规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySnatEntryResponse
+        /// </returns>
+        public ModifySnatEntryResponse ModifySnatEntry(ModifySnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifySnatEntryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改snat规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySnatEntryResponse
+        /// </returns>
+        public async Task<ModifySnatEntryResponse> ModifySnatEntryAsync(ModifySnatEntryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifySnatEntryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public int? IdleTimeout { get; set; }
 
+            [NameInMap("IspAffinity")]
+            [Validation(Required=false)]
+            public bool? IspAffinity { get; set; }
+
             /// <summary>
             /// <para>The ID of the NAT gateway.</para>
             /// 

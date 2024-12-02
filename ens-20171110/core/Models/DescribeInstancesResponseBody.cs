@@ -583,6 +583,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
+                [NameInMap("ServiceStatus")]
+                [Validation(Required=false)]
+                public string ServiceStatus { get; set; }
+
                 /// <summary>
                 /// <para>The instance type.</para>
                 /// 

@@ -178,6 +178,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        [NameInMap("ServiceStatus")]
+        [Validation(Required=false)]
+        public string ServiceStatusShrink { get; set; }
+
         /// <summary>
         /// <para>The status of the instance. Valid values:</para>
         /// <list type="bullet">
