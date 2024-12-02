@@ -606,6 +606,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string HotStandbyCluster { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the automatic IMCI-based query acceleration feature is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ON</c>: enabled</description></item>
+        /// <item><description><c>OFF</c>: disabled</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OFF</para>
+        /// </summary>
         [NameInMap("ImciAutoIndex")]
         [Validation(Required=false)]
         public string ImciAutoIndex { get; set; }
@@ -921,7 +931,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Storage billing type. Valid values are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>：Pay-as-you-go (by capacity). - <b>Prepaid</b>：Subscription (by space).</description></item>
+        /// <item><description><b>Postpaid</b>: Pay-as-you-go (by capacity).</description></item>
+        /// <item><description><b>Prepaid</b>: Subscription (by space).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -993,7 +1004,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SubCategory { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the failover with hot replica feature is supported if the cluster has In-Memory Column Index (IMCI) nodes.</para>
+        /// <para>Indicates whether queries based on In-Memory Column Indexes (IMCIs) are supported during and after a failover with hot replica.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>

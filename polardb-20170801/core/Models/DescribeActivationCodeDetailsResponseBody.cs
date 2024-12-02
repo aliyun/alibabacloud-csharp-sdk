@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActivationCodeDetailsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the activation code takes effect.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ActivateAt { get; set; }
 
         /// <summary>
+        /// <para>The activation code in the base64 format. The activation code is decoded and stored into a file named license.lic. PolarDB can access and read the license.lic file upon startup to validate the license or perform related operations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAEAA******AAA=</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CertContentB64 { get; set; }
 
         /// <summary>
+        /// <para>The description of the activation code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testCode</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The time when the activation code expires.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2054-10-09 16:46:20</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireAt { get; set; }
 
         /// <summary>
+        /// <para>The time when the activation code was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
+        /// <para>The time when the activation code was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>The ID of the activation code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Id { get; set; }
 
         /// <summary>
+        /// <para>The MAC address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12:34:56:78:98:00</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MacAddress { get; set; }
 
         /// <summary>
+        /// <para>The name of the activation code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testName</para>
         /// </summary>
@@ -82,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2A9EFA7-915F-4572-8299-85A307******</para>
@@ -92,6 +110,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The system identifier of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
         /// </summary>

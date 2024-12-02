@@ -247,15 +247,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeClass { get; set; }
 
         /// <summary>
-        /// <para>Number of standard edition nodes. Values are as follows:</para>
+        /// <para>The number of nodes. This parameter is supported for Standard Edition clusters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> (default): Indicates there is only one read-write node.</description></item>
-        /// <item><description><b>2</b>: Indicates there is one read-only node and one read-write node.<remarks>
-        /// <list type="bullet">
-        /// <item><description>Enterprise edition defaults to 2 nodes, while the standard edition defaults to 1 node.</description></item>
-        /// <item><description>Only supported by PolarDB MySQL edition.</description></item>
+        /// <item><description><b>1</b> (default): only one primary node.</description></item>
+        /// <item><description><b>2</b>: one read-only node and one primary node.</description></item>
         /// </list>
+        /// <remarks>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>By default, an Enterprise Edition cluster has two nodes and a Standard Edition cluster has one node.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is supported only for PolarDB for MySQL clusters.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -820,6 +822,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("TargetMinorVersion")]
+        [Validation(Required=false)]
+        public string TargetMinorVersion { get; set; }
 
         /// <summary>
         /// <para>If the payment type is <b>Prepaid</b>, this parameter is required.</para>

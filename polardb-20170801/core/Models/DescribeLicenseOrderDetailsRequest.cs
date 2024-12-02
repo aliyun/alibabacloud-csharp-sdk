@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeLicenseOrderDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The Alibaba Cloud order ID (or virtual order ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -2030,7 +2030,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Database Cluster</para>
+        /// <para>CreateDBCluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2251,6 +2251,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetMinorVersion))
+            {
+                query["TargetMinorVersion"] = request.TargetMinorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -2288,7 +2292,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Database Cluster</para>
+        /// <para>CreateDBCluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2509,6 +2513,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetMinorVersion))
+            {
+                query["TargetMinorVersion"] = request.TargetMinorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -2546,7 +2554,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Database Cluster</para>
+        /// <para>CreateDBCluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2564,7 +2572,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Database Cluster</para>
+        /// <para>CreateDBCluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7374,7 +7382,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码详情</para>
+        /// <para>Queries the details of an activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7436,7 +7444,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码详情</para>
+        /// <para>Queries the details of an activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7498,7 +7506,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码详情</para>
+        /// <para>Queries the details of an activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7516,7 +7524,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询激活码详情</para>
+        /// <para>Queries the details of an activation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14066,7 +14074,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看License订单详情</para>
+        /// <para>Queries the information of a license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14124,7 +14132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看License订单详情</para>
+        /// <para>Queries the information of a license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14182,7 +14190,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看License订单详情</para>
+        /// <para>Queries the information of a license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14200,7 +14208,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看License订单详情</para>
+        /// <para>Queries the information of a license order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23814,7 +23822,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the hot standby node in a cluster.</para>
+        /// <para>Enables or disables the failover with hot replica feature for a node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23880,7 +23888,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the hot standby node in a cluster.</para>
+        /// <para>Enables or disables the failover with hot replica feature for a node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23946,7 +23954,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the hot standby node in a cluster.</para>
+        /// <para>Enables or disables the failover with hot replica feature for a node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23964,7 +23972,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the hot standby node in a cluster.</para>
+        /// <para>Enables or disables the failover with hot replica feature for a node in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

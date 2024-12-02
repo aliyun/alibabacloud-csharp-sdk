@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DescribeAITaskStatusResponseBody : TeaModel {
         /// <summary>
         /// <para>The name of the database account that is used to connect to the AI nodes in the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testacc</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]

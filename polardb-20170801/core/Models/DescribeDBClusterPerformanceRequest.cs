@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The Query Type</para>
+        /// <para>The query type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>orca</para>

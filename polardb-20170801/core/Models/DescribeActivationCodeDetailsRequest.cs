@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActivationCodeDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the activation code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? ActivationCodeId { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud order ID (including the virtual order ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

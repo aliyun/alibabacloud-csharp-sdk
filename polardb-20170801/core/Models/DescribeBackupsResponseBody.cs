@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of backup sets.</para>
+        /// <para>The queried backup sets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -146,10 +146,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The expected expiration time of the backup set.</para>
-                /// <remarks>
-                /// <para>This parameter is supported only for instances that are enabled with sparse backup.</para>
-                /// </remarks>
+                /// <para>The expected expiration time of the backup set (This parameter is supported only for clusters for which sparse backup is enabled).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-24T08:13:23Z</para>
@@ -239,6 +236,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4639948800</para>
+        /// </summary>
         [NameInMap("TotalLevel2BackupSize")]
         [Validation(Required=false)]
         public string TotalLevel2BackupSize { get; set; }
