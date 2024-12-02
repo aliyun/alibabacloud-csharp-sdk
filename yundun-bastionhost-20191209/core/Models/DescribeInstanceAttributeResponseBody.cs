@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyInstanceAttribute InstanceAttribute { get; set; }
         public class DescribeInstanceAttributeResponseBodyInstanceAttribute : TeaModel {
+            [NameInMap("AppOperationModule")]
+            [Validation(Required=false)]
+            public string AppOperationModule { get; set; }
+
             /// <summary>
             /// <para>The IDs of authorized security groups.</para>
             /// </summary>
@@ -80,6 +84,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
+            [NameInMap("HSMModule")]
+            [Validation(Required=false)]
+            public string HSMModule { get; set; }
+
+            [NameInMap("IDaaSModule")]
+            [Validation(Required=false)]
+            public string IDaaSModule { get; set; }
+
             /// <summary>
             /// <para>The ID of the instance.</para>
             /// 
@@ -128,6 +140,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("IntranetEndpoint")]
             [Validation(Required=false)]
             public string IntranetEndpoint { get; set; }
+
+            [NameInMap("KmsSecretModule")]
+            [Validation(Required=false)]
+            public string KmsSecretModule { get; set; }
 
             /// <summary>
             /// <para>The license code.</para>
@@ -249,6 +265,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public List<string> PublicWhiteList { get; set; }
 
+            [NameInMap("RDModule")]
+            [Validation(Required=false)]
+            public string RDModule { get; set; }
+
             /// <summary>
             /// <para>The region ID of the instance.</para>
             /// 
@@ -269,12 +289,24 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("RouterRules")]
+            [Validation(Required=false)]
+            public List<string> RouterRules { get; set; }
+
+            [NameInMap("ScriptDeliverModule")]
+            [Validation(Required=false)]
+            public string ScriptDeliverModule { get; set; }
+
             /// <summary>
             /// <para>The IDs of the security groups to which the instance belongs.</para>
             /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
+
+            [NameInMap("SlaveVswitchId")]
+            [Validation(Required=false)]
+            public string SlaveVswitchId { get; set; }
 
             /// <summary>
             /// <para>The time when the instance started.</para>
@@ -329,6 +361,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("WebTerminalModule")]
             [Validation(Required=false)]
             public string WebTerminalModule { get; set; }
+
+            [NameInMap("WhiteListPolicies")]
+            [Validation(Required=false)]
+            public List<DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies> WhiteListPolicies { get; set; }
+            public class DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("Entry")]
+                [Validation(Required=false)]
+                public string Entry { get; set; }
+
+            }
 
         }
 

@@ -1,3 +1,19 @@
+2024-12-02 Version: 1.3.0
+- Support API CreateExportConfigJob.
+- Support API CreateOperationTicket.
+- Support API GetExportConfigJob.
+- Support API GetInstanceStoreInfo.
+- Update API ConfigInstanceWhiteList: add param WhiteListPolicies.
+- Update API DescribeInstanceAttribute: update response param.
+- Update API DescribeInstances: update response param.
+- Update API ListTagKeys: add param ResourceGroupId.
+- Update API ListTagResources: add param ResourceGroupId.
+- Update API StartInstance: add param ClientSecurityGroupIds.
+- Update API StartInstance: add param EnablePortalPrivateAccess.
+- Update API StartInstance: add param SlaveVswitchId.
+- Update API StartInstance: update param InstanceId.
+
+
 2024-11-05 Version: 1.2.1
 - Update API AcceptOperationTicket: add param Comment.
 - Update API AcceptOperationTicket: update param EffectCount.

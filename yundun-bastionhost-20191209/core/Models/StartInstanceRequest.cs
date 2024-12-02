@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class StartInstanceRequest : TeaModel {
+        [NameInMap("ClientSecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<string> ClientSecurityGroupIds { get; set; }
+
+        [NameInMap("EnablePortalPrivateAccess")]
+        [Validation(Required=false)]
+        public bool? EnablePortalPrivateAccess { get; set; }
+
         /// <summary>
         /// <para>The ID of the bastion host that you want to enable.</para>
         /// <remarks>
@@ -43,6 +51,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
+
+        [NameInMap("SlaveVswitchId")]
+        [Validation(Required=false)]
+        public string SlaveVswitchId { get; set; }
 
         /// <summary>
         /// <para>The ID of the vSwitch to which the bastion host belongs.</para>

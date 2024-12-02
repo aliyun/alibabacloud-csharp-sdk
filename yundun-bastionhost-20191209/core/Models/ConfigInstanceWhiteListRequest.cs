@@ -43,6 +43,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<string> WhiteList { get; set; }
 
+        [NameInMap("WhiteListPolicies")]
+        [Validation(Required=false)]
+        public List<ConfigInstanceWhiteListRequestWhiteListPolicies> WhiteListPolicies { get; set; }
+        public class ConfigInstanceWhiteListRequestWhiteListPolicies : TeaModel {
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("Entry")]
+            [Validation(Required=false)]
+            public string Entry { get; set; }
+
+        }
+
     }
 
 }

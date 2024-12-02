@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
+            [NameInMap("BandWidth")]
+            [Validation(Required=false)]
+            public long? BandWidth { get; set; }
+
             /// <summary>
             /// <para>The remarks of the bastion host.</para>
             /// 
@@ -166,6 +170,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
+            [NameInMap("SlaveVswitchId")]
+            [Validation(Required=false)]
+            public string SlaveVswitchId { get; set; }
 
             /// <summary>
             /// <para>The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.</para>
