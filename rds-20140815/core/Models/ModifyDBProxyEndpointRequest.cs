@@ -10,12 +10,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: <c>Feature 1:Status;Feature 2:Status;...</c>. Do not add a semicolon (;) at the end of the value.</para>
-        /// <para>Valid feature values:</para>
+        /// <para>The capabilities that you want to enable for the proxy endpoint. If you specify more than one capability, separate the capabilities with semicolons (;). Format: <c>Capability 1:Status;Capability 2:Status;...</c>. Do not add a semicolon (;) at the end of the value.</para>
+        /// <para>Valid capability values:</para>
         /// <list type="bullet">
         /// <item><description><b>ReadWriteSpliting</b>: read/write splitting</description></item>
         /// <item><description><b>ConnectionPersist</b>: connection pooling</description></item>
         /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: transaction splitting</description></item>
+        /// <item><description><b>AZProximityAccess</b>: nearest access</description></item>
         /// </list>
         /// <para>Valid status values:</para>
         /// <list type="bullet">
@@ -23,8 +24,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>0</b>: disabled</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by <b>ReadWriteSpliting</b>.</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If the instance runs PostgreSQL, you can enable only read/write splitting, which is specified by <b>ReadWriteSpliting</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Nearest access is supported only by dedicated database proxies for RDS instances that run MySQL.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ReadWriteSpliting:1;ConnectionPersist:0</para>
@@ -80,6 +86,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbEndpointAliases { get; set; }
 
+        [NameInMap("DbEndpointMinSlaveCount")]
+        [Validation(Required=false)]
+        public string DbEndpointMinSlaveCount { get; set; }
+
         /// <summary>
         /// <para>The type of operation that you want to perform. Valid values:</para>
         /// <list type="bullet">
@@ -126,9 +136,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbEndpointType { get; set; }
 
         /// <summary>
-        /// <para>The specified time takes effect. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</para>
+        /// <para>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>This parameter must be passed when EffectiveTime is SpecificTime.</para>
+        /// <para> If <b>EffectiveTime</b> is set to <b>SpecificTime</b>, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,16 +149,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveSpecificTime { get; set; }
 
         /// <summary>
-        /// <para>Effective time, value:</para>
+        /// <para>The effective time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Immediate</b>: effective immediately.</para>
-        /// </description></item>
-        /// <item><description><para><b>MaintainTime</b>: effective during the operational and maintainable time period, see ModifyDBInstanceMaintainTime.</para>
-        /// </description></item>
-        /// <item><description><para><b>SpecificTime</b>: effective at a specified time.</para>
-        /// </description></item>
+        /// <item><description><b>Immediate</b>: The effective time is immediate.</description></item>
+        /// <item><description><b>MaintainTime</b>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>SpecificTime</b>: The effective time is a specified point in time.</description></item>
         /// </list>
-        /// <para>Default value: MaintainTime.</para>
+        /// <para>Default value: <b>MaintainTime</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MaintainTime</para>
@@ -164,11 +171,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The policy that is used to allocate read weights. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</description></item>
-        /// <item><description><b>Custom</b>: You must manually allocate read weights to the instance and its read-only instances.</description></item>
+        /// <item><description><b>Standard</b> (default): The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.</description></item>
+        /// <item><description><b>Custom</b>: You must manually allocate read weights to the primary and read-only instances.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a> and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance</a>.</para>
+        /// <para> You must specify this parameter when read/write splitting is enabled. For more information about the permission allocation policy, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a> and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -231,7 +238,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the switch ID corresponding to the availability zone of the proxy connection address. By default, it is the switch ID corresponding to the default terminal of the proxy instance. You can query the created switch by calling the DescribeVSwitches interface.</para>
+        /// <para>The ID of the vSwitch in the zone in which the proxy endpoint is specified. The default value is the ID of the vSwitch that corresponds to the default terminal of the database proxy. You can call the DescribeVSwitches operation to query existing vSwitches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6adz52c2p****</para>

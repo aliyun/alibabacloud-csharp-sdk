@@ -26972,7 +26972,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancePromoteActivityResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated")]
         // Deprecated
         public DescribeDBInstancePromoteActivityResponse DescribeDBInstancePromoteActivityWithOptions(DescribeDBInstancePromoteActivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27040,7 +27040,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancePromoteActivityResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated")]
         // Deprecated
         public async Task<DescribeDBInstancePromoteActivityResponse> DescribeDBInstancePromoteActivityWithOptionsAsync(DescribeDBInstancePromoteActivityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27105,7 +27105,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancePromoteActivityResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated")]
         // Deprecated
         public DescribeDBInstancePromoteActivityResponse DescribeDBInstancePromoteActivity(DescribeDBInstancePromoteActivityRequest request)
         {
@@ -27129,7 +27129,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancePromoteActivityResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDBInstancePromoteActivity is deprecated")]
         // Deprecated
         public async Task<DescribeDBInstancePromoteActivityResponse> DescribeDBInstancePromoteActivityAsync(DescribeDBInstancePromoteActivityRequest request)
         {
@@ -28363,7 +28363,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesAsCsvResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.\n")]
+        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
         // Deprecated
         public DescribeDBInstancesAsCsvResponse DescribeDBInstancesAsCsvWithOptions(DescribeDBInstancesAsCsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -28446,7 +28446,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesAsCsvResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.\n")]
+        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
         // Deprecated
         public async Task<DescribeDBInstancesAsCsvResponse> DescribeDBInstancesAsCsvWithOptionsAsync(DescribeDBInstancesAsCsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -28526,7 +28526,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesAsCsvResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.\n")]
+        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
         // Deprecated
         public DescribeDBInstancesAsCsvResponse DescribeDBInstancesAsCsv(DescribeDBInstancesAsCsvRequest request)
         {
@@ -28557,7 +28557,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesAsCsvResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.\n")]
+        [Obsolete("OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
         // Deprecated
         public async Task<DescribeDBInstancesAsCsvResponse> DescribeDBInstancesAsCsvAsync(DescribeDBInstancesAsCsvRequest request)
         {
@@ -31487,7 +31487,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDiagnosticReportListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
         // Deprecated
         public DescribeDiagnosticReportListResponse DescribeDiagnosticReportListWithOptions(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -31546,7 +31546,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDiagnosticReportListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
         // Deprecated
         public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListWithOptionsAsync(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -31602,7 +31602,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDiagnosticReportListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
         // Deprecated
         public DescribeDiagnosticReportListResponse DescribeDiagnosticReportList(DescribeDiagnosticReportListRequest request)
         {
@@ -31633,7 +31633,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDiagnosticReportListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
         // Deprecated
         public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListAsync(DescribeDiagnosticReportListRequest request)
         {
@@ -39356,6 +39356,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -39397,6 +39401,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -40516,7 +40524,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeRdsResourceSettingsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated\n")]
+        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated")]
         // Deprecated
         public DescribeRdsResourceSettingsResponse DescribeRdsResourceSettingsWithOptions(DescribeRdsResourceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40576,7 +40584,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeRdsResourceSettingsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated\n")]
+        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated")]
         // Deprecated
         public async Task<DescribeRdsResourceSettingsResponse> DescribeRdsResourceSettingsWithOptionsAsync(DescribeRdsResourceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40633,7 +40641,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeRdsResourceSettingsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated\n")]
+        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated")]
         // Deprecated
         public DescribeRdsResourceSettingsResponse DescribeRdsResourceSettings(DescribeRdsResourceSettingsRequest request)
         {
@@ -40657,7 +40665,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeRdsResourceSettingsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated\n")]
+        [Obsolete("OpenAPI DescribeRdsResourceSettings is deprecated")]
         // Deprecated
         public async Task<DescribeRdsResourceSettingsResponse> DescribeRdsResourceSettingsAsync(DescribeRdsResourceSettingsRequest request)
         {
@@ -57969,6 +57977,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DbEndpointAliases"] = request.DbEndpointAliases;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointMinSlaveCount))
+            {
+                query["DbEndpointMinSlaveCount"] = request.DbEndpointMinSlaveCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointOperator))
             {
                 query["DbEndpointOperator"] = request.DbEndpointOperator;
@@ -58099,6 +58111,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointAliases))
             {
                 query["DbEndpointAliases"] = request.DbEndpointAliases;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointMinSlaveCount))
+            {
+                query["DbEndpointMinSlaveCount"] = request.DbEndpointMinSlaveCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointOperator))
             {
@@ -62391,7 +62407,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改RC实例描述</para>
+        /// <para>Modifies the name of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62441,7 +62457,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改RC实例描述</para>
+        /// <para>Modifies the name of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62491,7 +62507,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改RC实例描述</para>
+        /// <para>Modifies the name of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62509,7 +62525,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改RC实例描述</para>
+        /// <para>Modifies the name of an RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69995,6 +70011,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
+            {
+                query["SpotStrategy"] = request.SpotStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
             {
                 query["SystemDisk"] = request.SystemDiskShrink;
@@ -70167,6 +70187,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
+            {
+                query["SpotStrategy"] = request.SpotStrategy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
             {

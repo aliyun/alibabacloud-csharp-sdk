@@ -264,6 +264,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        [NameInMap("SpotStrategy")]
+        [Validation(Required=false)]
+        public string SpotStrategy { get; set; }
+
         /// <summary>
         /// <para>The specification of the system disk.</para>
         /// </summary>

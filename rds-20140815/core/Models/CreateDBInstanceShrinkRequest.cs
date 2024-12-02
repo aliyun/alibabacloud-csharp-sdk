@@ -510,15 +510,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Classic</b>: the classic network</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <b>VPC</b>.</para>
-        /// </description></item>
+        /// <item><description>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</description></item>
+        /// <item><description>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</description></item>
+        /// <item><description>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <b>VPC</b>.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Classic</para>

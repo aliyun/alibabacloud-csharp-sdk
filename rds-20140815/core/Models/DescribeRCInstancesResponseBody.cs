@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("SpotStrategy")]
+            [Validation(Required=false)]
+            public string SpotStrategy { get; set; }
+
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">

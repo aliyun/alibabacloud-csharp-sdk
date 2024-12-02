@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The zone ID.</para>
+        /// <para>This parameter has been deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AttachRCDiskRequest : TeaModel {
         /// <summary>
+        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

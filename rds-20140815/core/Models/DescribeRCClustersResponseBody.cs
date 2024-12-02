@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public List<DescribeRCClustersResponseBodyClusters> Clusters { get; set; }
         public class DescribeRCClustersResponseBodyClusters : TeaModel {
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
             /// <summary>
             /// <para>The cluster name.</para>
             /// 
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
 
         }
 

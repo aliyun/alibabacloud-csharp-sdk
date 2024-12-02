@@ -54,6 +54,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
+        /// <para>The minimum number of reserved instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("DBProxyEndpointMinSlaveCount")]
+        [Validation(Required=false)]
+        public string DBProxyEndpointMinSlaveCount { get; set; }
+
+        /// <summary>
         /// <para>An internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
