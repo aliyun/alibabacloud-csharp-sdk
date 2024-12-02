@@ -629,6 +629,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string SupplierUrl { get; set; }
 
+            [NameInMap("UpgradableServiceInfos")]
+            [Validation(Required=false)]
+            public List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> UpgradableServiceInfos { get; set; }
+            public class GetServiceInstanceResponseBodyServiceUpgradableServiceInfos : TeaModel {
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
+
+                [NameInMap("VersionName")]
+                [Validation(Required=false)]
+                public string VersionName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The service versions that can be updated.</para>
             /// </summary>

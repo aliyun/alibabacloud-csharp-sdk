@@ -471,16 +471,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
-        /// <summary>
-        /// <para>The commodity code of the service in Alibaba Cloud Marketplace.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cmjj00xxxx</para>
-        /// </summary>
-        [NameInMap("CommodityCode")]
-        [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
         [NameInMap("ComplianceMetadata")]
         [Validation(Required=false)]
         public GetServiceResponseBodyComplianceMetadata ComplianceMetadata { get; set; }
@@ -510,16 +500,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("CrossRegionConnectionStatus")]
         [Validation(Required=false)]
         public string CrossRegionConnectionStatus { get; set; }
-
-        /// <summary>
-        /// <para>The validity period of the default license. Unit: day. Valid values: 1 to 1000.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("DefaultLicenseDays")]
-        [Validation(Required=false)]
-        public long? DefaultLicenseDays { get; set; }
 
         /// <summary>
         /// <para>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</para>
@@ -632,22 +612,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string PayFromType { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the service. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Permanent: Once you purchase the service, you can use it permanently.</description></item>
-        /// <item><description>Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.</description></item>
-        /// <item><description>PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.</description></item>
-        /// <item><description>CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Permanent</para>
-        /// </summary>
-        [NameInMap("PayType")]
-        [Validation(Required=false)]
-        public string PayType { get; set; }
-
-        /// <summary>
         /// <para>The permissions on the service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Deployable: Permissions to deploy the service.</description></item>
@@ -758,16 +722,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ServiceDiscoverable")]
         [Validation(Required=false)]
         public string ServiceDiscoverable { get; set; }
-
-        /// <summary>
-        /// <para>The URL of the service documentation.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><a href="http://example1.com">http://example1.com</a></para>
-        /// </summary>
-        [NameInMap("ServiceDocUrl")]
-        [Validation(Required=false)]
-        public string ServiceDocUrl { get; set; }
 
         [NameInMap("ServiceDocumentInfos")]
         [Validation(Required=false)]
