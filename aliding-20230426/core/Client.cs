@@ -6867,6 +6867,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["ParticipantIds"] = request.ParticipantIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReminderTimeStamp))
+            {
+                body["ReminderTimeStamp"] = request.ReminderTimeStamp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
             {
                 body["Subject"] = request.Subject;
@@ -6969,6 +6973,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParticipantIdsShrink))
             {
                 body["ParticipantIds"] = request.ParticipantIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReminderTimeStamp))
+            {
+                body["ReminderTimeStamp"] = request.ReminderTimeStamp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
             {

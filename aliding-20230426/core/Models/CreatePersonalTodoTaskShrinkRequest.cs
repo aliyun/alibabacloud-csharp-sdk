@@ -48,6 +48,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string ParticipantIdsShrink { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1703750708595</para>
+        /// </summary>
+        [NameInMap("ReminderTimeStamp")]
+        [Validation(Required=false)]
+        public long? ReminderTimeStamp { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
