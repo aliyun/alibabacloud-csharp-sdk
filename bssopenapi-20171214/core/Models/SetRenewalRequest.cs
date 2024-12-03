@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetRenewalRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).
+        /// <para>The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-askjdhaskfjh</para>
         /// </summary>
         [NameInMap("InstanceIDs")]
         [Validation(Required=false)]
@@ -23,66 +25,88 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The code of the service.
+        /// <para>The code of the service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The type of the service.
+        /// <para>The type of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The auto-renewal period. Valid values:
+        /// <para>The auto-renewal period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1</description></item>
+        /// <item><description>2</description></item>
+        /// <item><description>3</description></item>
+        /// <item><description>6</description></item>
+        /// <item><description>12</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</para>
+        /// </remarks>
         /// 
-        /// *   1
-        /// *   2
-        /// *   3
-        /// *   6
-        /// *   12
-        /// 
-        /// >  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RenewalPeriod")]
         [Validation(Required=false)]
         public int? RenewalPeriod { get; set; }
 
         /// <summary>
-        /// The unit of the auto-renewal period. Valid values:
+        /// <para>The unit of the auto-renewal period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>M: months</description></item>
+        /// <item><description>Y: years</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</para>
+        /// </remarks>
         /// 
-        /// *   M: months
-        /// *   Y: years
-        /// 
-        /// >  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.
+        /// <b>Example:</b>
+        /// <para>M</para>
         /// </summary>
         [NameInMap("RenewalPeriodUnit")]
         [Validation(Required=false)]
         public string RenewalPeriodUnit { get; set; }
 
         /// <summary>
-        /// The status of renewal. Valid values:
+        /// <para>The status of renewal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AutoRenewal: The instance is automatically renewed.</description></item>
+        /// <item><description>ManualRenewal: The instance is manually renewed.</description></item>
+        /// <item><description>NotRenewal: The instance is not renewed.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   AutoRenewal: The instance is automatically renewed.
-        /// *   ManualRenewal: The instance is manually renewed.
-        /// *   NotRenewal: The instance is not renewed.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>AutoRenewal</para>
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]
         public string RenewalStatus { get; set; }
 
         /// <summary>
-        /// The billing method. Valid values:
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Subscription: subscription</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// </list>
         /// 
-        /// *   Subscription: subscription
-        /// *   PayAsYouGo: pay-as-you-go
+        /// <b>Example:</b>
+        /// <para>PayAsYouGo</para>
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

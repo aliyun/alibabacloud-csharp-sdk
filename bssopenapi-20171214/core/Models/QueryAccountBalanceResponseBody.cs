@@ -10,60 +10,82 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountBalanceResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryAccountBalanceResponseBodyData Data { get; set; }
         public class QueryAccountBalanceResponseBodyData : TeaModel {
             /// <summary>
-            /// The available balance of the account.
+            /// <para>The available balance of the account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000.00</para>
             /// </summary>
             [NameInMap("AvailableAmount")]
             [Validation(Required=false)]
             public string AvailableAmount { get; set; }
 
             /// <summary>
-            /// The available balance in cash.
+            /// <para>The available balance in cash.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000.00</para>
             /// </summary>
             [NameInMap("AvailableCashAmount")]
             [Validation(Required=false)]
             public string AvailableCashAmount { get; set; }
 
             /// <summary>
-            /// The credit balance of the account.
+            /// <para>The credit balance of the account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.00</para>
             /// </summary>
             [NameInMap("CreditAmount")]
             [Validation(Required=false)]
             public string CreditAmount { get; set; }
 
             /// <summary>
-            /// The type of the currency. Valid values:
+            /// <para>The type of the currency. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CNY: Chinese Yuan</description></item>
+            /// <item><description>USD: US dollar</description></item>
+            /// <item><description>JPY: Japanese Yen</description></item>
+            /// </list>
             /// 
-            /// *   CNY: Chinese Yuan
-            /// *   USD: US dollar
-            /// *   JPY: Japanese Yen
+            /// <b>Example:</b>
+            /// <para>CNY</para>
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
 
             /// <summary>
-            /// The credit line controlled by MYbank.
+            /// <para>The credit line controlled by MYbank.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.00</para>
             /// </summary>
             [NameInMap("MybankCreditAmount")]
             [Validation(Required=false)]
             public string MybankCreditAmount { get; set; }
 
             /// <summary>
-            /// The quota limit for eco customers.
+            /// <para>The quota limit for eco customers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000.00</para>
             /// </summary>
             [NameInMap("QuotaLimit")]
             [Validation(Required=false)]
@@ -72,21 +94,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16176743-6DC7-4CB3-BB25-A13982D8DFAD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

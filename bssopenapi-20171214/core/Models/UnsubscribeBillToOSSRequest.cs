@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class UnsubscribeBillToOSSRequest : TeaModel {
         /// <summary>
-        /// The type of accounts whose bills are to be pushed if multi-tier accounts are involved. Valid values:
+        /// <para>The type of accounts whose bills are to be pushed if multi-tier accounts are involved. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MA: management account.</description></item>
+        /// <item><description>ACP1: member account of a virtual network operator (VNO).</description></item>
+        /// </list>
+        /// <para>Default value: MA.</para>
         /// 
-        /// *   MA: management account.
-        /// *   ACP1: member account of a virtual network operator (VNO).
-        /// 
-        /// Default value: MA.
+        /// <b>Example:</b>
+        /// <para>MA</para>
         /// </summary>
         [NameInMap("MultAccountRelSubscribe")]
         [Validation(Required=false)]
         public string MultAccountRelSubscribe { get; set; }
 
         /// <summary>
-        /// The type of the bill to which you want to subscribe. Valid values:
+        /// <para>The type of the bill to which you want to subscribe. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BillingItemDetailForBillingPeriod: bills of billable items</description></item>
+        /// <item><description>InstanceDetailForBillingPeriod: bills of instances</description></item>
+        /// <item><description>BillingItemDetailMonthly: billable item-based bills summarized by billing cycle</description></item>
+        /// <item><description>InstanceDetailMonthly: instance-based bills summarized by billing cycle</description></item>
+        /// <item><description>SplitItemDetailDaily: split bills summarized by day</description></item>
+        /// <item><description>MonthBill: monthly bills in the PDF format You can subscribe to the monthly PDF bills only of the master account.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   BillingItemDetailForBillingPeriod: bills of billable items
-        /// *   InstanceDetailForBillingPeriod: bills of instances
-        /// *   BillingItemDetailMonthly: billable item-based bills summarized by billing cycle
-        /// *   InstanceDetailMonthly: instance-based bills summarized by billing cycle
-        /// *   SplitItemDetailDaily: split bills summarized by day
-        /// *   MonthBill: monthly bills in the PDF format You can subscribe to the monthly PDF bills only of the master account.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>BillingItemDetailForBillingPeriod</para>
         /// </summary>
         [NameInMap("SubscribeType")]
         [Validation(Required=false)]

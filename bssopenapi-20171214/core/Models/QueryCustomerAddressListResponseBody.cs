@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCustomerAddressListResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryCustomerAddressListResponseBodyData Data { get; set; }
         public class QueryCustomerAddressListResponseBodyData : TeaModel {
             /// <summary>
-            /// The details of addresses to which invoices are mailed.
+            /// <para>The details of addresses to which invoices are mailed.</para>
             /// </summary>
             [NameInMap("CustomerInvoiceAddressList")]
             [Validation(Required=false)]
@@ -35,84 +38,120 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public List<QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress> CustomerInvoiceAddress { get; set; }
                 public class QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress : TeaModel {
                     /// <summary>
-                    /// The addressee.
+                    /// <para>The addressee.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
                     /// </summary>
                     [NameInMap("Addressee")]
                     [Validation(Required=false)]
                     public string Addressee { get; set; }
 
                     /// <summary>
-                    /// The business type.
+                    /// <para>The business type.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
                     /// </summary>
                     [NameInMap("BizType")]
                     [Validation(Required=false)]
                     public string BizType { get; set; }
 
                     /// <summary>
-                    /// The city to which the invoice is mailed.
+                    /// <para>The city to which the invoice is mailed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Hangzhou</para>
                     /// </summary>
                     [NameInMap("City")]
                     [Validation(Required=false)]
                     public string City { get; set; }
 
                     /// <summary>
-                    /// The name of the district to which the invoice is mailed.
+                    /// <para>The name of the district to which the invoice is mailed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Test District</para>
                     /// </summary>
                     [NameInMap("County")]
                     [Validation(Required=false)]
                     public string County { get; set; }
 
                     /// <summary>
-                    /// The detailed address to which the invoice is mailed. This parameter is returned after fields are concatenated.
+                    /// <para>The detailed address to which the invoice is mailed. This parameter is returned after fields are concatenated.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Test Address</para>
                     /// </summary>
                     [NameInMap("DeliveryAddress")]
                     [Validation(Required=false)]
                     public string DeliveryAddress { get; set; }
 
                     /// <summary>
-                    /// The ID.
+                    /// <para>The ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>311601051</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The phone number of the addressee.
+                    /// <para>The phone number of the addressee.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>138xxxxxxxx</para>
                     /// </summary>
                     [NameInMap("Phone")]
                     [Validation(Required=false)]
                     public string Phone { get; set; }
 
                     /// <summary>
-                    /// The postcode.
+                    /// <para>The postcode.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>000000</para>
                     /// </summary>
                     [NameInMap("PostalCode")]
                     [Validation(Required=false)]
                     public string PostalCode { get; set; }
 
                     /// <summary>
-                    /// The province to which the invoice is mailed.
+                    /// <para>The province to which the invoice is mailed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Zhejiang</para>
                     /// </summary>
                     [NameInMap("Province")]
                     [Validation(Required=false)]
                     public string Province { get; set; }
 
                     /// <summary>
-                    /// The name of the street to which the invoice is mailed.
+                    /// <para>The name of the street to which the invoice is mailed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Test Street</para>
                     /// </summary>
                     [NameInMap("Street")]
                     [Validation(Required=false)]
                     public string Street { get; set; }
 
                     /// <summary>
-                    /// The ID of the user.
+                    /// <para>The ID of the user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>4382956342857</para>
                     /// </summary>
                     [NameInMap("UserId")]
                     [Validation(Required=false)]
                     public long? UserId { get; set; }
 
                     /// <summary>
-                    /// The nickname of the user.
+                    /// <para>The nickname of the user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testNick</para>
                     /// </summary>
                     [NameInMap("UserNick")]
                     [Validation(Required=false)]
@@ -125,21 +164,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful!</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BBEF51A3-E933-4F40-A534-C673CBDB9C80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

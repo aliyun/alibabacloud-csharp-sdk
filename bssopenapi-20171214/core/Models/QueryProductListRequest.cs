@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryProductListRequest : TeaModel {
         /// <summary>
-        /// The page number of the page to return.
+        /// <para>The page number of the page to return.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 20.
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the total number of services. Default value: false.
+        /// <para>Specifies whether to return the total number of services. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("QueryTotalCount")]
         [Validation(Required=false)]

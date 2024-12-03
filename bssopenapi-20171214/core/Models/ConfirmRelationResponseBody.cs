@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ConfirmRelationResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ConfirmRelationResponseBodyData Data { get; set; }
         public class ConfirmRelationResponseBodyData : TeaModel {
             /// <summary>
-            /// HostId
+            /// <para>HostId</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HostId</para>
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
@@ -33,21 +39,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Message returned</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The unique ID of the request.
+        /// <para>The unique ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>request_id</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

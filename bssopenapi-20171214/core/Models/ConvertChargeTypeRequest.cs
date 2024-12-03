@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ConvertChargeTypeRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-kasjgfjshgf</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -23,42 +25,55 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration. Unit: months. This parameter is required if you switch the billing method to subscription. Valid values:
+        /// <para>The subscription duration. Unit: months. This parameter is required if you switch the billing method to subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1 to 9</description></item>
+        /// <item><description>12</description></item>
+        /// <item><description>24</description></item>
+        /// <item><description>36</description></item>
+        /// </list>
         /// 
-        /// *   1 to 9
-        /// *   12
-        /// *   24
-        /// *   36
+        /// <b>Example:</b>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
         /// <summary>
-        /// The code of the service to which the instance belongs.
+        /// <para>The code of the service to which the instance belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The type of the service to which the instance belongs.
+        /// <para>The type of the service to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Subscription: subscription</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> After the call is successful, the billing method of the instance is switched.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Subscription: subscription
-        /// *   PayAsYouGo: pay-as-you-go
-        /// 
-        /// >  After the call is successful, the billing method of the instance is switched.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Subscription</para>
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

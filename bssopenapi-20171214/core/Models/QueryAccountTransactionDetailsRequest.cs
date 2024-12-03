@@ -10,63 +10,90 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountTransactionDetailsRequest : TeaModel {
         /// <summary>
-        /// The end of the creation time range to query.
+        /// <para>The end of the creation time range to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-12-20</para>
         /// </summary>
         [NameInMap("CreateTimeEnd")]
         [Validation(Required=false)]
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// The beginning of the creation time range to query.
+        /// <para>The beginning of the creation time range to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-01-20</para>
         /// </summary>
         [NameInMap("CreateTimeStart")]
         [Validation(Required=false)]
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// This parameter is invalid.
+        /// <para>This parameter is invalid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that is used for paging.
+        /// <para>The token that is used for paging.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABEDSDS124DASA</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the order or bill.
+        /// <para>The ID of the order or bill.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022120336190912</para>
         /// </summary>
         [NameInMap("RecordID")]
         [Validation(Required=false)]
         public string RecordID { get; set; }
 
         /// <summary>
-        /// The transaction channel.
+        /// <para>The transaction channel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALIPAY</para>
         /// </summary>
         [NameInMap("TransactionChannel")]
         [Validation(Required=false)]
         public string TransactionChannel { get; set; }
 
         /// <summary>
-        /// The serial number of the transaction channel.
+        /// <para>The serial number of the transaction channel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022112122001470591458665933</para>
         /// </summary>
         [NameInMap("TransactionChannelSN")]
         [Validation(Required=false)]
         public string TransactionChannelSN { get; set; }
 
         /// <summary>
-        /// The number of the transaction.
+        /// <para>The number of the transaction.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>410874027490089</para>
         /// </summary>
         [NameInMap("TransactionNumber")]
         [Validation(Required=false)]
         public string TransactionNumber { get; set; }
 
         /// <summary>
-        /// The type of the transaction.
+        /// <para>The type of the transaction.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CHARGE</para>
         /// </summary>
         [NameInMap("TransactionType")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. The server checks whether a request that uses the same client token has been received. If a request that uses the same client token has been received, the server returns the same request result as the previous request.
+        /// <para>The client token that is used to ensure the idempotence of the request. The server checks whether a request that uses the same client token has been received. If a request that uses the same client token has been received, the server returns the same request result as the previous request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>JASIOFKVNVIXXXXXX</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The logistics address of this order. This parameter is generally valid for physical orders.
+        /// <para>The logistics address of this order. This parameter is generally valid for physical orders.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;cityCode&quot;:&quot;330100&quot;,&quot;cityName&quot;:&quot;Hangzhou&quot;,&quot;contactName&quot;:&quot;Test&quot;,&quot;countryCode&quot;:&quot;&quot;,&quot;districtName&quot;:&quot;Puyan Street&quot;,&quot;email&quot;:&quot;\<em>\</em>@example.com&quot;,&quot;mobilePhone&quot;:&quot;153564848844&quot;,&quot;phone&quot;:&quot;1234567&quot;,&quot;provCode&quot;:&quot;330000&quot;,&quot;provName&quot;:&quot;Zhejiang&quot;,&quot;streetCode&quot;:&quot;33010610&quot;,&quot;streetName&quot;:&quot;Zhuantang&quot;,&quot;zipCode&quot;:&quot;0000&quot;}</para>
         /// </summary>
         [NameInMap("Logistics")]
         [Validation(Required=false)]
@@ -28,25 +34,29 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The details of the modules.
+        /// <para>The details of the modules.</para>
         /// </summary>
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestParameter> Parameter { get; set; }
         public class CreateInstanceRequestParameter : TeaModel {
             /// <summary>
-            /// The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.
+            /// <para>The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>InstanceType</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The value property of the Nth module. Value of N: 1 to 100.
+            /// <para>The value property of the Nth module. Value of N: 1 to 100.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>disk</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -55,58 +65,81 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The subscription duration. Unit: month. The value must be an integral multiple of 12.
+        /// <para>The subscription duration. Unit: month. The value must be an integral multiple of 12.</para>
+        /// <remarks>
+        /// <para> This parameter is required if you create a subscription instance.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required if you create a subscription instance.
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        [NameInMap("PricingCycle")]
+        [Validation(Required=false)]
+        public long? PricingCycle { get; set; }
+
         /// <summary>
-        /// The code of the service to which the instance belongs. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.
+        /// <para>The code of the service to which the instance belongs. You can query the service code by calling the <b>QueryProductList</b> operation or viewing <b>Codes of Alibaba Cloud Services</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The type of the service.
+        /// <para>The type of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The auto-renewal period. Unit: month.
+        /// <para>The auto-renewal period. Unit: month.</para>
+        /// <remarks>
+        /// <para> This parameter is required if the <b>RenewalStatus</b> parameter is set to <b>AutoRenewal</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required if the **RenewalStatus** parameter is set to **AutoRenewal**.
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("RenewPeriod")]
         [Validation(Required=false)]
         public int? RenewPeriod { get; set; }
 
         /// <summary>
-        /// The renewal method. Valid values:
+        /// <para>The renewal method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AutoRenewal: The instance is automatically renewed.</description></item>
+        /// <item><description>ManualRenewal: The instance is manually renewed.</description></item>
+        /// </list>
+        /// <para>Default value: ManualRenewal.</para>
         /// 
-        /// *   AutoRenewal: The instance is automatically renewed.
-        /// *   ManualRenewal: The instance is manually renewed.
-        /// 
-        /// Default value: ManualRenewal.
+        /// <b>Example:</b>
+        /// <para>ManualRenewal</para>
         /// </summary>
         [NameInMap("RenewalStatus")]
         [Validation(Required=false)]
         public string RenewalStatus { get; set; }
 
         /// <summary>
-        /// The billing method. Valid values:
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Subscription: the subscription billing method.</description></item>
+        /// <item><description>PayAsYouGo: the pay-as-you-go billing method.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Subscription: the subscription billing method.
-        /// *   PayAsYouGo: the pay-as-you-go billing method.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Subscription</para>
         /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]

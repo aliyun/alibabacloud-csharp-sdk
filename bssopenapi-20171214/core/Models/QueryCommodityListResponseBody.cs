@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCommodityListResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NotApplicable</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryCommodityListResponseBodyData Data { get; set; }
         public class QueryCommodityListResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about the service.
+            /// <para>The information about the service.</para>
             /// </summary>
             [NameInMap("CommodityList")]
             [Validation(Required=false)]
             public List<QueryCommodityListResponseBodyDataCommodityList> CommodityList { get; set; }
             public class QueryCommodityListResponseBodyDataCommodityList : TeaModel {
                 /// <summary>
-                /// The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).
+                /// <para>The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>POSTPAY</para>
                 /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// The code of the service, which is the same as that on the Billing Management page.
+                /// <para>The code of the service, which is the same as that on the Billing Management page.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs</para>
                 /// </summary>
                 [NameInMap("CommodityCode")]
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// <para>The name of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS (Pay-As-You-Go)</para>
                 /// </summary>
                 [NameInMap("CommodityName")]
                 [Validation(Required=false)]
@@ -56,21 +68,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful!</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CC706AAC-75A6-55B5-9AB7-7D171C6C7655</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the information about the service was queried.
+        /// <para>Indicates whether the information about the service was queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

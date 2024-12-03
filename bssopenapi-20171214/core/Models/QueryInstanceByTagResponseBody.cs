@@ -10,77 +10,104 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryInstanceByTagResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PARAM_ERROR</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>param is null</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.
+        /// <para>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CAESEgoQCg4KCm</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9EC6C0B7-3397-5FAE-9915-8972CDDB1211</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The instances returned.
+        /// <para>The instances returned.</para>
         /// </summary>
         [NameInMap("TagResource")]
         [Validation(Required=false)]
         public List<QueryInstanceByTagResponseBodyTagResource> TagResource { get; set; }
         public class QueryInstanceByTagResponseBodyTagResource : TeaModel {
             /// <summary>
-            /// The ID of the resource.
+            /// <para>The ID of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>spn-xxxxx</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource. The returned resource type indicates a savings plan instance.
+            /// <para>The type of the resource. The returned resource type indicates a savings plan instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>instance</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The tags.
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<QueryInstanceByTagResponseBodyTagResourceTag> Tag { get; set; }
             public class QueryInstanceByTagResponseBodyTagResourceTag : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tag1</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

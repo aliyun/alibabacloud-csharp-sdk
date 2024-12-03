@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DeleteCostUnitRequest : TeaModel {
         /// <summary>
-        /// The user ID of the cost center owner.
+        /// <para>The user ID of the cost center owner.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2135342</para>
         /// </summary>
         [NameInMap("OwnerUid")]
         [Validation(Required=false)]
         public long? OwnerUid { get; set; }
 
         /// <summary>
-        /// The ID of the cost center. A value of -1 indicates the root cost center.
+        /// <para>The ID of the cost center. A value of -1 indicates the root cost center.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>376348</para>
         /// </summary>
         [NameInMap("UnitId")]
         [Validation(Required=false)]

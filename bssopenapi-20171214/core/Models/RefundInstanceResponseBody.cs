@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RefundInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ResourceNotExists</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RefundInstanceResponseBodyData Data { get; set; }
         public class RefundInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// The site of the execution host.
+            /// <para>The site of the execution host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn</para>
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
             /// <summary>
-            /// The ID of the refund order that is returned only if the instance is unsubscribed from.
+            /// <para>The ID of the refund order that is returned only if the instance is unsubscribed from.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2100000000***</para>
             /// </summary>
             [NameInMap("OrderId")]
             [Validation(Required=false)]
@@ -40,21 +49,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The description of the execution result.
+        /// <para>The description of the execution result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UUID</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values: true and false.
+        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASKJHKLASJHAFSLKJH</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the instance
+        /// <para>The ID of the instance</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-skjdhaskjdh</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -30,30 +35,38 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The code of the service to which the instance belongs.
+        /// <para>The code of the service to which the instance belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The type of the service.
+        /// <para>The type of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The duration of the subscription renewal. Unit: months. Valid values:
+        /// <para>The duration of the subscription renewal. Unit: months. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1 to 9</description></item>
+        /// <item><description>12</description></item>
+        /// <item><description>24</description></item>
+        /// <item><description>36</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   1 to 9
-        /// *   12
-        /// *   24
-        /// *   36
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("RenewPeriod")]
         [Validation(Required=false)]

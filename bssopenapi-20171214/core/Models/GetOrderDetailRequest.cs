@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetOrderDetailRequest : TeaModel {
         /// <summary>
-        /// The ID of the order.
+        /// <para>The order ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>32453453</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

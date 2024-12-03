@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryPriceEntityListRequest : TeaModel {
         /// <summary>
-        /// The code of the service.
+        /// <para>The code of the service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]

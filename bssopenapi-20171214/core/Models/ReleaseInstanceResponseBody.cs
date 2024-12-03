@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ReleaseInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid_Product_Code</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// data
+        /// <para>data</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ReleaseInstanceResponseBodyData Data { get; set; }
         public class ReleaseInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// The site of the execution host.
+            /// <para>The site of the execution host.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn</para>
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
 
             /// <summary>
-            /// Indicates whether the instance is released.
+            /// <para>Indicates whether the instance is released.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ReleaseResult")]
             [Validation(Required=false)]
@@ -40,23 +49,31 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The description of the execution result.
+        /// <para>The description of the execution result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request, which can be used for troubleshooting.
+        /// <para>The ID of the request, which can be used for troubleshooting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UUID</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A value of true indicates that the execution is complete.
+        /// <para>A value of true indicates that the execution is complete.</para>
+        /// <para>A value of false indicates that an error occurs during the execution.</para>
         /// 
-        /// A value of false indicates that an error occurs during the execution.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

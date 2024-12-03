@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourcePackageProductResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeResourcePackageProductResponseBodyData Data { get; set; }
         public class DescribeResourcePackageProductResponseBodyData : TeaModel {
             /// <summary>
-            /// The details about the resource plans.
+            /// <para>The details about the resource plans.</para>
             /// </summary>
             [NameInMap("ResourcePackages")]
             [Validation(Required=false)]
@@ -35,14 +38,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage> ResourcePackage { get; set; }
                 public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage : TeaModel {
                     /// <summary>
-                    /// The name of the resource plan.
+                    /// <para>The name of the resource plan.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Object Storage Service (OSS) resource plan (monthly)</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The types of the resource plans.
+                    /// <para>The types of the resource plans.</para>
                     /// </summary>
                     [NameInMap("PackageTypes")]
                     [Validation(Required=false)]
@@ -53,21 +59,27 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageType> PackageType { get; set; }
                         public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageType : TeaModel {
                             /// <summary>
-                            /// The code of the resource plan.
+                            /// <para>The code of the resource plan.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>FPT_ossbag_deadlineAcc_CdnOut_common_sz</para>
                             /// </summary>
                             [NameInMap("Code")]
                             [Validation(Required=false)]
                             public string Code { get; set; }
 
                             /// <summary>
-                            /// The name of the resource plan type.
+                            /// <para>The name of the resource plan type.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Back-to-origin traffic plan - China (Shenzhen)</para>
                             /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// The properties of the resource plan.
+                            /// <para>The properties of the resource plan.</para>
                             /// </summary>
                             [NameInMap("Properties")]
                             [Validation(Required=false)]
@@ -78,14 +90,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                 public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty> Property { get; set; }
                                 public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty : TeaModel {
                                     /// <summary>
-                                    /// The name of the property.
+                                    /// <para>The name of the property.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>region</para>
                                     /// </summary>
                                     [NameInMap("Name")]
                                     [Validation(Required=false)]
                                     public string Name { get; set; }
 
                                     /// <summary>
-                                    /// The value of the property.
+                                    /// <para>The value of the property.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>cn-shenzhen</para>
                                     /// </summary>
                                     [NameInMap("Value")]
                                     [Validation(Required=false)]
@@ -96,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                             }
 
                             /// <summary>
-                            /// The specifications of the resource plan.
+                            /// <para>The specifications of the resource plan.</para>
                             /// </summary>
                             [NameInMap("Specifications")]
                             [Validation(Required=false)]
@@ -107,7 +125,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                 public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification> Specification { get; set; }
                                 public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification : TeaModel {
                                     /// <summary>
-                                    /// The validity periods available for the resource plan.
+                                    /// <para>The validity periods available for the resource plan.</para>
                                     /// </summary>
                                     [NameInMap("AvailableDurations")]
                                     [Validation(Required=false)]
@@ -118,26 +136,35 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                         public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration> AvailableDuration { get; set; }
                                         public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration : TeaModel {
                                             /// <summary>
-                                            /// The name of the validity period.
+                                            /// <para>The name of the validity period.</para>
+                                            /// 
+                                            /// <b>Example:</b>
+                                            /// <para>6 Month</para>
                                             /// </summary>
                                             [NameInMap("Name")]
                                             [Validation(Required=false)]
                                             public string Name { get; set; }
 
                                             /// <summary>
-                                            /// The unit of the validity period for the resource plan. Valid values:
+                                            /// <para>The unit of the validity period for the resource plan. Valid values:</para>
+                                            /// <list type="bullet">
+                                            /// <item><description>Month</description></item>
+                                            /// <item><description>Year</description></item>
+                                            /// </list>
+                                            /// <para>Default value: Month.</para>
                                             /// 
-                                            /// *   Month
-                                            /// *   Year
-                                            /// 
-                                            /// Default value: Month.
+                                            /// <b>Example:</b>
+                                            /// <para>Month</para>
                                             /// </summary>
                                             [NameInMap("Unit")]
                                             [Validation(Required=false)]
                                             public string Unit { get; set; }
 
                                             /// <summary>
-                                            /// The value of the validity period.
+                                            /// <para>The value of the validity period.</para>
+                                            /// 
+                                            /// <b>Example:</b>
+                                            /// <para>6</para>
                                             /// </summary>
                                             [NameInMap("Value")]
                                             [Validation(Required=false)]
@@ -148,14 +175,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                     }
 
                                     /// <summary>
-                                    /// The name of the specification.
+                                    /// <para>The name of the specification.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1TB</para>
                                     /// </summary>
                                     [NameInMap("Name")]
                                     [Validation(Required=false)]
                                     public string Name { get; set; }
 
                                     /// <summary>
-                                    /// The value of the specification.
+                                    /// <para>The value of the specification.</para>
+                                    /// 
+                                    /// <b>Example:</b>
+                                    /// <para>1024</para>
                                     /// </summary>
                                     [NameInMap("Value")]
                                     [Validation(Required=false)]
@@ -170,14 +203,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     }
 
                     /// <summary>
-                    /// The code of the service.
+                    /// <para>The code of the service.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ossbag</para>
                     /// </summary>
                     [NameInMap("ProductCode")]
                     [Validation(Required=false)]
                     public string ProductCode { get; set; }
 
                     /// <summary>
-                    /// The type of the service.
+                    /// <para>The type of the service.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ossbag</para>
                     /// </summary>
                     [NameInMap("ProductType")]
                     [Validation(Required=false)]
@@ -190,28 +229,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful!</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72353765387</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BBEF51A3-E933-4F40-A534-C673CBDB9C80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

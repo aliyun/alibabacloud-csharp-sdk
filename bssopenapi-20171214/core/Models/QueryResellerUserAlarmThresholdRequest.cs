@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryResellerUserAlarmThresholdRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>quota_low_balance</para>
+        /// </summary>
         [NameInMap("AlarmType")]
         [Validation(Required=false)]
         public string AlarmType { get; set; }

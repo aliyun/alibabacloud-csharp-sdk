@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryFinancialAccountInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account.
+        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1990699401005016</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCostUnitResourceRequest : TeaModel {
         /// <summary>
-        /// The user ID of the cost center owner.
+        /// <para>The user ID of the cost center owner.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>23453245</para>
         /// </summary>
         [NameInMap("OwnerUid")]
         [Validation(Required=false)]
         public long? OwnerUid { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the cost center.
+        /// <para>The ID of the cost center.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>235325</para>
         /// </summary>
         [NameInMap("UnitId")]
         [Validation(Required=false)]

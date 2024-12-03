@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CancelOrderRequest : TeaModel {
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>73465432785</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

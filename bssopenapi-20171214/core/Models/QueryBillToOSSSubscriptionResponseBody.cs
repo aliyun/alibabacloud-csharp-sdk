@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryBillToOSSSubscriptionResponseBody : TeaModel {
         /// <summary>
-        /// The status code returned.
+        /// <para>The status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryBillToOSSSubscriptionResponseBodyData Data { get; set; }
         public class QueryBillToOSSSubscriptionResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the account used to perform the query.
+            /// <para>The ID of the account used to perform the query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>185xxxxx03489</para>
             /// </summary>
             [NameInMap("AccountID")]
             [Validation(Required=false)]
             public string AccountID { get; set; }
 
             /// <summary>
-            /// The name of the account used to perform the query.
+            /// <para>The name of the account used to perform the query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></para>
             /// </summary>
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
             /// <summary>
-            /// The details of the subscribed bill.
+            /// <para>The details of the subscribed bill.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -49,57 +58,79 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public List<QueryBillToOSSSubscriptionResponseBodyDataItemsItem> Item { get; set; }
                 public class QueryBillToOSSSubscriptionResponseBodyDataItemsItem : TeaModel {
                     /// <summary>
-                    /// The owner ID of the Object Storage Service (OSS) bucket.
+                    /// <para>The owner ID of the Object Storage Service (OSS) bucket.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1369168081849304</para>
                     /// </summary>
                     [NameInMap("BucketOwnerId")]
                     [Validation(Required=false)]
                     public long? BucketOwnerId { get; set; }
 
                     /// <summary>
-                    /// The path in the OSS bucket.
+                    /// <para>The path in the OSS bucket.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Billing/BillingItemDetailMonthly/</para>
                     /// </summary>
                     [NameInMap("BucketPath")]
                     [Validation(Required=false)]
                     public string BucketPath { get; set; }
 
                     /// <summary>
-                    /// The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.
+                    /// <para>The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>300000</para>
                     /// </summary>
                     [NameInMap("RowLimitPerFile")]
                     [Validation(Required=false)]
                     public int? RowLimitPerFile { get; set; }
 
                     /// <summary>
-                    /// The ID of the OSS bucket that stores the subscribed bill.
+                    /// <para>The ID of the OSS bucket that stores the subscribed bill.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>billingtestbucket</para>
                     /// </summary>
                     [NameInMap("SubscribeBucket")]
                     [Validation(Required=false)]
                     public string SubscribeBucket { get; set; }
 
                     /// <summary>
-                    /// The code of the language.
+                    /// <para>The code of the language.</para>
+                    /// <para>Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>en: English</description></item>
+                    /// <item><description>zh: Chinese</description></item>
+                    /// </list>
                     /// 
-                    /// Valid values:
-                    /// 
-                    /// *   en: English
-                    /// *   zh: Chinese
+                    /// <b>Example:</b>
+                    /// <para>zh</para>
                     /// </summary>
                     [NameInMap("SubscribeLanguage")]
                     [Validation(Required=false)]
                     public string SubscribeLanguage { get; set; }
 
                     /// <summary>
-                    /// The time when the subscribed bill was stored in the OSS bucket. The time is displayed in the YYYY-MM-DD hh:mm:ss format.
+                    /// <para>The time when the subscribed bill was stored in the OSS bucket. The time is displayed in the YYYY-MM-DD hh:mm:ss format.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2019-10-30 15:40:11</para>
                     /// </summary>
                     [NameInMap("SubscribeTime")]
                     [Validation(Required=false)]
                     public string SubscribeTime { get; set; }
 
                     /// <summary>
-                    /// The type of the subscribed bill. Valid values:
+                    /// <para>The type of the subscribed bill. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>BillingItemDetailForBillingPeriod: the bill of a billable item.</description></item>
+                    /// <item><description>InstanceDetailForBillingPeriod: the bill of an instance.</description></item>
+                    /// </list>
                     /// 
-                    /// *   BillingItemDetailForBillingPeriod: the bill of a billable item.
-                    /// *   InstanceDetailForBillingPeriod: the bill of an instance.
+                    /// <b>Example:</b>
+                    /// <para>BillingItemDetailForBillingPeriod</para>
                     /// </summary>
                     [NameInMap("SubscribeType")]
                     [Validation(Required=false)]
@@ -112,21 +143,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful!</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9EEAE43F-1E4D-4734-AE93-5049878AC103</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

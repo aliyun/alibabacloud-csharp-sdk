@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetResourcePackagePriceResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetResourcePackagePriceResponseBodyData Data { get; set; }
         public class GetResourcePackagePriceResponseBodyData : TeaModel {
             /// <summary>
-            /// The type of the currency.
+            /// <para>The type of the currency.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CNY</para>
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
 
             /// <summary>
-            /// The discounted amount. Unit: CNY.
+            /// <para>The discounted amount. Unit: CNY.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>215040</para>
             /// </summary>
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
 
             /// <summary>
-            /// The original price. Unit: CNY.
+            /// <para>The original price. Unit: CNY.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1290240</para>
             /// </summary>
             [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
 
             /// <summary>
-            /// The details of the discount.
+            /// <para>The details of the discount.</para>
             /// </summary>
             [NameInMap("Promotions")]
             [Validation(Required=false)]
@@ -56,14 +68,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public List<GetResourcePackagePriceResponseBodyDataPromotionsPromotion> Promotion { get; set; }
                 public class GetResourcePackagePriceResponseBodyDataPromotionsPromotion : TeaModel {
                     /// <summary>
-                    /// The ID of the promotion.
+                    /// <para>The ID of the promotion.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1000680914</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// The description of the discount.
+                    /// <para>The description of the discount.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>A discount of 17% is offered if you purchase a resource plan for six months.</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -74,7 +92,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// The price at which the transaction is made. Unit: CNY.
+            /// <para>The price at which the transaction is made. Unit: CNY.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1075200</para>
             /// </summary>
             [NameInMap("TradePrice")]
             [Validation(Required=false)]
@@ -83,21 +104,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful!</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BBEF51A3-E933-4F40-A534-C673CBDB9C80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

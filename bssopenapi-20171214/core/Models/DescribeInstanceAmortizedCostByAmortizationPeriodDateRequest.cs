@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-05-10</para>
         /// </summary>
         [NameInMap("AmortizationDateEnd")]
         [Validation(Required=false)]
         public string AmortizationDateEnd { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-05-10</para>
         /// </summary>
         [NameInMap("AmortizationDateStart")]
         [Validation(Required=false)]
@@ -31,10 +37,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public List<string> BillUserIdList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-05</para>
+        /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123#</para>
+        /// </summary>
         [NameInMap("CostUnitCode")]
         [Validation(Required=false)]
         public string CostUnitCode { get; set; }
@@ -43,22 +57,42 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rds</para>
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rds</para>
+        /// </summary>
         [NameInMap("ProductDetail")]
         [Validation(Required=false)]
         public string ProductDetail { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Subscription</para>
+        /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }

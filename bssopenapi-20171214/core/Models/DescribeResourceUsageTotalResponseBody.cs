@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourceUsageTotalResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The queried data.
+        /// <para>The queried data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeResourceUsageTotalResponseBodyData Data { get; set; }
         public class DescribeResourceUsageTotalResponseBodyData : TeaModel {
             /// <summary>
-            /// The usage of resource plans in the specified period.
+            /// <para>The usage of resource plans in the specified period.</para>
             /// </summary>
             [NameInMap("PeriodCoverage")]
             [Validation(Required=false)]
             public List<DescribeResourceUsageTotalResponseBodyDataPeriodCoverage> PeriodCoverage { get; set; }
             public class DescribeResourceUsageTotalResponseBodyDataPeriodCoverage : TeaModel {
                 /// <summary>
-                /// The period.
+                /// <para>The period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021071500</para>
                 /// </summary>
                 [NameInMap("Period")]
                 [Validation(Required=false)]
                 public string Period { get; set; }
 
                 /// <summary>
-                /// The usage of resource plans.
+                /// <para>The usage of resource plans.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.1</para>
                 /// </summary>
                 [NameInMap("UsagePercentage")]
                 [Validation(Required=false)]
@@ -47,42 +56,57 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// The total usage of resource plans.
+            /// <para>The total usage of resource plans.</para>
             /// </summary>
             [NameInMap("TotalUsage")]
             [Validation(Required=false)]
             public DescribeResourceUsageTotalResponseBodyDataTotalUsage TotalUsage { get; set; }
             public class DescribeResourceUsageTotalResponseBodyDataTotalUsage : TeaModel {
                 /// <summary>
-                /// The total costs of pay-as-you-go instances.
+                /// <para>The total costs of pay-as-you-go instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("PostpaidCost")]
                 [Validation(Required=false)]
                 public float? PostpaidCost { get; set; }
 
                 /// <summary>
-                /// The total potential savings.
+                /// <para>The total potential savings.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("PotentialSavedCost")]
                 [Validation(Required=false)]
                 public float? PotentialSavedCost { get; set; }
 
                 /// <summary>
-                /// The fee of purchased resource plans.
+                /// <para>The fee of purchased resource plans.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("ReservationCost")]
                 [Validation(Required=false)]
                 public float? ReservationCost { get; set; }
 
                 /// <summary>
-                /// The total savings.
+                /// <para>The total savings.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("SavedCost")]
                 [Validation(Required=false)]
                 public float? SavedCost { get; set; }
 
                 /// <summary>
-                /// The total usage of resource plans.
+                /// <para>The total usage of resource plans.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("UsagePercentage")]
                 [Validation(Required=false)]
@@ -93,21 +117,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+        /// <para>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful!</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>364C7C81-5E5E-51A0-B738-1969D2671B05</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

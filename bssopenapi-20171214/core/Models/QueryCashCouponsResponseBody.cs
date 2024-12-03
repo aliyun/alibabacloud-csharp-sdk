@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCashCouponsResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,81 +31,115 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<QueryCashCouponsResponseBodyDataCashCoupon> CashCoupon { get; set; }
             public class QueryCashCouponsResponseBodyDataCashCoupon : TeaModel {
                 /// <summary>
-                /// The service to which the voucher is applicable.
+                /// <para>The service to which the voucher is applicable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>All Alibaba Cloud services</para>
                 /// </summary>
                 [NameInMap("ApplicableProducts")]
                 [Validation(Required=false)]
                 public string ApplicableProducts { get; set; }
 
                 /// <summary>
-                /// The scenario to which the voucher is applicable.
+                /// <para>The scenario to which the voucher is applicable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Pay for the pay-as-you-go bills of Alibaba Cloud services or purchase an instance of an Alibaba Cloud service</para>
                 /// </summary>
                 [NameInMap("ApplicableScenarios")]
                 [Validation(Required=false)]
                 public string ApplicableScenarios { get; set; }
 
                 /// <summary>
-                /// The remaining quota of the voucher.
+                /// <para>The remaining quota of the voucher.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100.00</para>
                 /// </summary>
                 [NameInMap("Balance")]
                 [Validation(Required=false)]
                 public string Balance { get; set; }
 
                 /// <summary>
-                /// The ID of the voucher.
+                /// <para>The ID of the voucher.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>34534253254325</para>
                 /// </summary>
                 [NameInMap("CashCouponId")]
                 [Validation(Required=false)]
                 public long? CashCouponId { get; set; }
 
                 /// <summary>
-                /// The code of the voucher.
+                /// <para>The code of the voucher.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Q-b1485def8f04a</para>
                 /// </summary>
                 [NameInMap("CashCouponNo")]
                 [Validation(Required=false)]
                 public string CashCouponNo { get; set; }
 
                 /// <summary>
-                /// The description of the voucher.
+                /// <para>The description of the voucher.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This voucher is used for testing product function</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The time when the voucher took effect.
+                /// <para>The time when the voucher took effect.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-08-02T15:15:50Z</para>
                 /// </summary>
                 [NameInMap("EffectiveTime")]
                 [Validation(Required=false)]
                 public string EffectiveTime { get; set; }
 
                 /// <summary>
-                /// The time when the voucher expired.
+                /// <para>The time when the voucher expired.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-01-29T15:15:50Z</para>
                 /// </summary>
                 [NameInMap("ExpiryTime")]
                 [Validation(Required=false)]
                 public string ExpiryTime { get; set; }
 
                 /// <summary>
-                /// The time when the voucher was released.
+                /// <para>The time when the voucher was released.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2018-08-02T15:15:50Z</para>
                 /// </summary>
                 [NameInMap("GrantedTime")]
                 [Validation(Required=false)]
                 public string GrantedTime { get; set; }
 
                 /// <summary>
-                /// The denomination of the voucher.
+                /// <para>The denomination of the voucher.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100.00</para>
                 /// </summary>
                 [NameInMap("NominalValue")]
                 [Validation(Required=false)]
                 public string NominalValue { get; set; }
 
                 /// <summary>
-                /// The state of the voucher. Valid values:
+                /// <para>The state of the voucher. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Available: The voucher is valid.</description></item>
+                /// <item><description>Expired: The voucher has expired.</description></item>
+                /// <item><description>Cancelled: The voucher is canceled.</description></item>
+                /// </list>
                 /// 
-                /// *   Available: The voucher is valid.
-                /// *   Expired: The voucher has expired.
-                /// *   Cancelled: The voucher is canceled.
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -113,21 +150,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The message returned.
+        /// <para>The message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>147B566E-DB4C-4E43-BDBB-5DB1D9D268DB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

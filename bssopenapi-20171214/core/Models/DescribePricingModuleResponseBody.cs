@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribePricingModuleResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribePricingModuleResponseBodyData Data { get; set; }
         public class DescribePricingModuleResponseBodyData : TeaModel {
             /// <summary>
-            /// The module attributes.
+            /// <para>The module attributes.</para>
             /// </summary>
             [NameInMap("AttributeList")]
             [Validation(Required=false)]
@@ -35,28 +38,37 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public List<DescribePricingModuleResponseBodyDataAttributeListAttribute> Attribute { get; set; }
                 public class DescribePricingModuleResponseBodyDataAttributeListAttribute : TeaModel {
                     /// <summary>
-                    /// The code of the attribute.
+                    /// <para>The code of the attribute.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>DBInstanceStorage</para>
                     /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// The name of the attribute.
+                    /// <para>The name of the attribute.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Capacity</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// The unit of the attribute.
+                    /// <para>The unit of the attribute.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>GB</para>
                     /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]
                     public string Unit { get; set; }
 
                     /// <summary>
-                    /// The attribute values.
+                    /// <para>The attribute values.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
@@ -67,33 +79,47 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         public List<DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue> AttributeValue { get; set; }
                         public class DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue : TeaModel {
                             /// <summary>
-                            /// The attribute value that corresponds to the module code.
+                            /// <para>The attribute value that corresponds to the module code.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2 Cores and 4 GB Memory (Basic Edition)</para>
                             /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// The description of the module values.
+                            /// <para>The description of the module values.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Connections: 4,000 IOPS is related to storage space</para>
                             /// </summary>
                             [NameInMap("Remark")]
                             [Validation(Required=false)]
                             public string Remark { get; set; }
 
                             /// <summary>
-                            /// The type of the attribute value that corresponds to the module code. Valid values:
+                            /// <para>The type of the attribute value that corresponds to the module code. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description>single_float: single value</description></item>
+                            /// <item><description>range_float: range value</description></item>
+                            /// </list>
                             /// 
-                            /// *   single_float: single value
-                            /// *   range_float: range value
+                            /// <b>Example:</b>
+                            /// <para>single_string</para>
                             /// </summary>
                             [NameInMap("Type")]
                             [Validation(Required=false)]
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// The attribute value that corresponds to the module code.
+                            /// <para>The attribute value that corresponds to the module code.</para>
+                            /// <remarks>
+                            /// <para> If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.</para>
+                            /// </remarks>
                             /// 
-                            /// >  If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.
+                            /// <b>Example:</b>
+                            /// <para>mysql.n2.medium.1</para>
                             /// </summary>
                             [NameInMap("Value")]
                             [Validation(Required=false)]
@@ -108,7 +134,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// The pricing information of modules.
+            /// <para>The pricing information of modules.</para>
             /// </summary>
             [NameInMap("ModuleList")]
             [Validation(Required=false)]
@@ -129,35 +155,48 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     }
 
                     /// <summary>
-                    /// The currency. Default value: CNY.
+                    /// <para>The currency. Default value: CNY.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CNY</para>
                     /// </summary>
                     [NameInMap("Currency")]
                     [Validation(Required=false)]
                     public string Currency { get; set; }
 
                     /// <summary>
-                    /// The code of the pricing module.
+                    /// <para>The code of the pricing module.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>InstanceType</para>
                     /// </summary>
                     [NameInMap("ModuleCode")]
                     [Validation(Required=false)]
                     public string ModuleCode { get; set; }
 
                     /// <summary>
-                    /// The name of the pricing module.
+                    /// <para>The name of the pricing module.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Instance</para>
                     /// </summary>
                     [NameInMap("ModuleName")]
                     [Validation(Required=false)]
                     public string ModuleName { get; set; }
 
                     /// <summary>
-                    /// The price type. Valid values:
+                    /// <para>The price type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Usage: usage price</description></item>
+                    /// <item><description>Hour: hourly price</description></item>
+                    /// <item><description>Day: daily price</description></item>
+                    /// <item><description>Week: weekly price</description></item>
+                    /// <item><description>Month: monthly price</description></item>
+                    /// <item><description>Year: annual price</description></item>
+                    /// </list>
                     /// 
-                    /// *   Usage: usage price
-                    /// *   Hour: hourly price
-                    /// *   Day: daily price
-                    /// *   Week: weekly price
-                    /// *   Month: monthly price
-                    /// *   Year: annual price
+                    /// <b>Example:</b>
+                    /// <para>Month</para>
                     /// </summary>
                     [NameInMap("PriceType")]
                     [Validation(Required=false)]
@@ -170,21 +209,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This API is not applicable for caller.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C40A8EE0-8084-49FE-B66E-5E1C3B6AE025</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
