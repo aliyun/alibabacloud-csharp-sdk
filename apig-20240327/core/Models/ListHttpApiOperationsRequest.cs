@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string WithConsumerInfoById { get; set; }
 
+        [NameInMap("withPluginAttachmentByPluginId")]
+        [Validation(Required=false)]
+        public string WithPluginAttachmentByPluginId { get; set; }
+
     }
 
 }

@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string WithAuthPolicyInEnvironmentId { get; set; }
 
+        [NameInMap("withAuthPolicyList")]
+        [Validation(Required=false)]
+        public bool? WithAuthPolicyList { get; set; }
+
         /// <summary>
         /// <para>Each API information in the response carries a list of authorization rules for the specified consumer ID.</para>
         /// 
@@ -102,6 +106,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("withEnvironmentInfo")]
         [Validation(Required=false)]
         public bool? WithEnvironmentInfo { get; set; }
+
+        [NameInMap("withEnvironmentInfoById")]
+        [Validation(Required=false)]
+        public string WithEnvironmentInfoById { get; set; }
+
+        [NameInMap("withPluginAttachmentByPluginId")]
+        [Validation(Required=false)]
+        public string WithPluginAttachmentByPluginId { get; set; }
 
     }
 

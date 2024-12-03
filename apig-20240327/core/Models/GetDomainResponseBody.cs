@@ -208,6 +208,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            [NameInMap("tlsCipherSuitesConfig")]
+            [Validation(Required=false)]
+            public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }
+
             /// <summary>
             /// <para>Maximum TLS protocol version, supports up to TLS 1.3.</para>
             /// 
