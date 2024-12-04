@@ -10,86 +10,114 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateLogStoreRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to record public IP addresses. Default value: false.
+        /// <para>Specifies whether to record the <b>public IP address</b> and <b>log receiving time</b>. Default value: false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true********</description></item>
+        /// <item><description>false********</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("appendMeta")]
         [Validation(Required=false)]
         public bool? AppendMeta { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable automatic sharding.
+        /// <para>Specifies whether to enable automatic sharding. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("autoSplit")]
         [Validation(Required=false)]
         public bool? AutoSplit { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the web tracking feature. Default value: false.
+        /// <para>Specifies whether to enable the web tracking feature. Default value: false. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("enable_tracking")]
         [Validation(Required=false)]
         public bool? EnableTracking { get; set; }
 
         /// <summary>
-        /// The data structure of the encryption configuration. The following parameters are included: `enable`, `encrypt_type`, and `user_cmk_info`. For more information, see [EncryptConf](https://help.aliyun.com/document_detail/409461.html).
+        /// <para>The data structure of the encryption configuration. The following parameters are included: <c>enable</c>, <c>encrypt_type</c>, and <c>user_cmk_info</c>. For more information, see <a href="https://help.aliyun.com/document_detail/409461.html">EncryptConf</a>.</para>
         /// </summary>
         [NameInMap("encrypt_conf")]
         [Validation(Required=false)]
         public EncryptConf EncryptConf { get; set; }
 
         /// <summary>
-        /// The retention period of data in the hot storage tier of the Logstore. Valid values: 7 to 3000. Unit: days.
+        /// <para>The retention period of data in the hot storage tier of the Logstore. Valid values: 7 to 3000. Unit: days.</para>
+        /// <para>After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</para>
         /// 
-        /// After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see [Enable hot and cold-tiered storage for a Logstore](https://help.aliyun.com/document_detail/308645.html).
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("hot_ttl")]
         [Validation(Required=false)]
         public int? HotTtl { get; set; }
 
         /// <summary>
-        /// The retention period of data in the IA storage tier of the Logstore. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.
+        /// <para>The retention period of data in the IA storage tier of the Logstore. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("infrequentAccessTTL")]
         [Validation(Required=false)]
         public int? InfrequentAccessTTL { get; set; }
 
         /// <summary>
-        /// The name of the Logstore. The name must meet the following requirements:
+        /// <para>The name of the Logstore. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be unique in a project.</description></item>
+        /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The name must be 3 to 63 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The name must be unique in a project.
-        /// *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).
-        /// *   The name must start and end with a lowercase letter or a digit.
-        /// *   The name must be 3 to 63 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>my-logstore</para>
         /// </summary>
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
         public string LogstoreName { get; set; }
 
         /// <summary>
-        /// The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 256.
+        /// <para>The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 256.</para>
+        /// <remarks>
+        /// <para> If you set autoSplit to true, you must specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If you set autoSplit to true, you must specify maxSplitShard.
+        /// <b>Example:</b>
+        /// <para>64</para>
         /// </summary>
         [NameInMap("maxSplitShard")]
         [Validation(Required=false)]
         public int? MaxSplitShard { get; set; }
 
         /// <summary>
-        /// The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:
+        /// <para>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>standard</b>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</description></item>
+        /// <item><description><b>query</b>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.</description></item>
+        /// </list>
         /// 
-        /// *   **standard**: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.
-        /// *   **query**: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]
@@ -100,30 +128,39 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProcessorId { get; set; }
 
         /// <summary>
-        /// The number of shards.
+        /// <para>The number of shards.</para>
+        /// <remarks>
+        /// <para> You cannot call the CreateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You cannot call the CreateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("shardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// The type of the observable data. Valid values:
+        /// <para>The type of the observable data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>None</b> (default): log data</description></item>
+        /// <item><description><b>Metrics</b>: metric data</description></item>
+        /// </list>
         /// 
-        /// *   **None** (default): log data
-        /// *   **Metrics**: metric data
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("telemetryType")]
         [Validation(Required=false)]
         public string TelemetryType { get; set; }
 
         /// <summary>
-        /// The retention period of data. Unit: days. Valid values: 1 to 3000. If you set this parameter to 3650, logs are permanently stored.
+        /// <para>The retention period of data. Unit: days. Valid values: 1 to 3000. If you set this parameter to 3650, data is permanently stored.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ttl")]
         [Validation(Required=false)]

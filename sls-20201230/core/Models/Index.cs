@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public IndexLine Line { get; set; }
         public class IndexLine : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("caseSensitive")]
             [Validation(Required=false)]
             public bool? CaseSensitive { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("chn")]
             [Validation(Required=false)]
             public bool? Chn { get; set; }
@@ -34,7 +42,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public List<string> IncludeKeys { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("token")]
             [Validation(Required=false)]
@@ -42,6 +50,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("log_reduce")]
         [Validation(Required=false)]
         public bool? LogReduce { get; set; }
@@ -54,6 +66,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<string> LogReduceWhiteList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("max_text_len")]
         [Validation(Required=false)]
         public int? MaxTextLen { get; set; }

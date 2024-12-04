@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListSavedSearchResponseBody : TeaModel {
         /// <summary>
-        /// The number of saved searches returned on the current page.
+        /// <para>The number of saved searches returned on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The saved searches.
+        /// <para>The saved searches.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[ &quot;test-1&quot;, &quot;test-2&quot; ]</para>
         /// </summary>
         [NameInMap("savedsearchItems")]
         [Validation(Required=false)]
         public List<SavedSearch> SavedsearchItems { get; set; }
 
         /// <summary>
-        /// The total number of saved searches that meet the query conditions.
+        /// <para>The total number of saved searches that meet the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

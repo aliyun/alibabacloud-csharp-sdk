@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetAppliedConfigsResponseBody : TeaModel {
         /// <summary>
-        /// The names of the Logtail configurations.
+        /// <para>The names of the Logtail configurations.</para>
         /// </summary>
         [NameInMap("configs")]
         [Validation(Required=false)]
         public List<string> Configs { get; set; }
 
         /// <summary>
-        /// The number of Logtail configurations.
+        /// <para>The number of Logtail configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]

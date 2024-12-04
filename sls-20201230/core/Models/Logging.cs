@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class Logging : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("loggingDetails")]
         [Validation(Required=false)]
         public List<LoggingLoggingDetails> LoggingDetails { get; set; }
         public class LoggingLoggingDetails : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>my-logstore</para>
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public string Logstore { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumergroup_log</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-project</para>
         /// </summary>
         [NameInMap("loggingProject")]
         [Validation(Required=false)]

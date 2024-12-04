@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class MLDataParamAnnotationsValue : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
+        /// </summary>
         [NameInMap("annotatedBy")]
         [Validation(Required=false)]
         public string AnnotatedBy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1694761550</para>
+        /// </summary>
         [NameInMap("updateTime")]
         [Validation(Required=false)]
         public long? UpdateTime { get; set; }

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListDashboardResponseBody : TeaModel {
         /// <summary>
-        /// The details of the dashboard.
+        /// <para>The details of the dashboard.</para>
         /// </summary>
         [NameInMap("dashboardItems")]
         [Validation(Required=false)]
         public List<ListDashboardResponseBodyDashboardItems> DashboardItems { get; set; }
         public class ListDashboardResponseBodyDashboardItems : TeaModel {
             /// <summary>
-            /// The dashboard ID. The ID must be unique in a project. Fuzzy search is supported. For example, if you enter da, all dashboards whose IDs start with da are queried.
+            /// <para>The dashboard ID. The ID must be unique in a project. Fuzzy search is supported. For example, if you enter da, all dashboards whose IDs start with da are queried.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dashboard-1609294922657-434834</para>
             /// </summary>
             [NameInMap("dashboardName")]
             [Validation(Required=false)]
             public string DashboardName { get; set; }
 
             /// <summary>
-            /// The display name of the dashboard.
+            /// <para>The display name of the dashboard.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>data-ingest</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -33,7 +39,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// The queried dashboards. Each dashboard in the array is specified by dashboardName.
+        /// <para>The queried dashboards. Each dashboard in the array is specified by dashboardName.</para>
         /// </summary>
         [NameInMap("dashboards")]
         [Validation(Required=false)]

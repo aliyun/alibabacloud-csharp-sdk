@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateConfigRequest : TeaModel {
         /// <summary>
-        /// The body of the request.
+        /// <para>The body of the request.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

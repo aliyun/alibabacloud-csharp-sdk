@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]

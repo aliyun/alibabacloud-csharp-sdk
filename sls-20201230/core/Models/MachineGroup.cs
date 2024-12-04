@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public MachineGroupGroupAttribute GroupAttribute { get; set; }
         public class MachineGroupGroupAttribute : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test-group</para>
+            /// </summary>
             [NameInMap("externalName")]
             [Validation(Required=false)]
             public string ExternalName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test-topic</para>
+            /// </summary>
             [NameInMap("groupTopic")]
             [Validation(Required=false)]
             public string GroupTopic { get; set; }
@@ -24,7 +32,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-group</para>
         /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]
@@ -35,14 +46,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ip</para>
         /// </summary>
         [NameInMap("machineIdentifyType")]
         [Validation(Required=false)]
         public string MachineIdentifyType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("machineList")]
         [Validation(Required=false)]

@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetStoreViewIndexResponseBody : TeaModel {
         /// <summary>
-        /// The index configurations.
+        /// <para>The index configurations.</para>
         /// </summary>
         [NameInMap("indexes")]
         [Validation(Required=false)]
         public List<GetStoreViewIndexResponseBodyIndexes> Indexes { get; set; }
         public class GetStoreViewIndexResponseBodyIndexes : TeaModel {
             /// <summary>
-            /// The index configurations of the Logstore.
+            /// <para>The index configurations of the Logstore.</para>
             /// </summary>
             [NameInMap("index")]
             [Validation(Required=false)]
             public Index Index { get; set; }
 
             /// <summary>
-            /// The name of the Logstore.
+            /// <para>The name of the Logstore.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>my-logstore</para>
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public string Logstore { get; set; }
 
             /// <summary>
-            /// The name of the project to which the Logstore belongs.
+            /// <para>The name of the project to which the Logstore belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example-project</para>
             /// </summary>
             [NameInMap("project")]
             [Validation(Required=false)]

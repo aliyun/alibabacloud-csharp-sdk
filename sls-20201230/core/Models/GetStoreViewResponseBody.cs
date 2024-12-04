@@ -10,32 +10,33 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetStoreViewResponseBody : TeaModel {
         /// <summary>
-        /// The type of the dataset.
+        /// <para>The type of the dataset.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>metricstore</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   metricstore
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>logstore</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   logstore
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>logstore</para>
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]
         public string StoreType { get; set; }
 
         /// <summary>
-        /// The Logstores or Metricstores.
+        /// <para>The Logstores or Metricstores.</para>
         /// </summary>
         [NameInMap("stores")]
         [Validation(Required=false)]

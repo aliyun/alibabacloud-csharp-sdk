@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class LogTag : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>key-test</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>value-test</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

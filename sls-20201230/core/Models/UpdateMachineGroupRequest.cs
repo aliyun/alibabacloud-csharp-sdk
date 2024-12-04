@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateMachineGroupRequest : TeaModel {
         /// <summary>
-        /// The attribute of the machine group. This parameter is empty by default.
+        /// <para>The attribute of the machine group. This parameter is empty by default.</para>
         /// </summary>
         [NameInMap("groupAttribute")]
         [Validation(Required=false)]
         public UpdateMachineGroupRequestGroupAttribute GroupAttribute { get; set; }
         public class UpdateMachineGroupRequestGroupAttribute : TeaModel {
             /// <summary>
-            /// The identifier of the external management system on which the machine group depends. This parameter is empty by default.
+            /// <para>The identifier of the external management system on which the machine group depends. This parameter is empty by default.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testgroup2</para>
             /// </summary>
             [NameInMap("externalName")]
             [Validation(Required=false)]
             public string ExternalName { get; set; }
 
             /// <summary>
-            /// The topic of the machine group. This parameter is empty by default.
+            /// <para>The topic of the machine group. This parameter is empty by default.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testtopic2</para>
             /// </summary>
             [NameInMap("groupTopic")]
             [Validation(Required=false)]
@@ -33,40 +39,51 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// The name of the machine group.
+        /// <para>The name of the machine group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-machine-group</para>
         /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The type of the machine group. Set the value to an empty string.
+        /// <para>The type of the machine group. Set the value to an empty string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("groupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
         /// <summary>
-        /// The identifier type of the machine group. Valid values:
+        /// <para>The identifier type of the machine group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ip: The machine group uses IP addresses as identifiers.</description></item>
+        /// <item><description>userdefined: The machine group uses custom identifiers.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   ip: The machine group uses IP addresses as identifiers.
-        /// *   userdefined: The machine group uses custom identifiers.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>userdefined</para>
         /// </summary>
         [NameInMap("machineIdentifyType")]
         [Validation(Required=false)]
         public string MachineIdentifyType { get; set; }
 
         /// <summary>
-        /// The identifiers of the machines in the machine group.
+        /// <para>The identifiers of the machines in the machine group.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set machineIdentifyType to ip, enter the IP addresses of the machines.</description></item>
+        /// <item><description>If you set machineIdentifyType to userdefined, enter a custom identifier.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If you set machineIdentifyType to ip, enter the IP addresses of the machines.
-        /// *   If you set machineIdentifyType to userdefined, enter a custom identifier.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[uu_id_1，uu_id_2]</para>
         /// </summary>
         [NameInMap("machineList")]
         [Validation(Required=false)]

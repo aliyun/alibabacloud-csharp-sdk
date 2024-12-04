@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListLogStoresResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// <para>The number of entries returned on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The Logstores that meet the query conditions.
+        /// <para>The Logstores that meet the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;test-1&quot;,&quot;test-2&quot;]</para>
         /// </summary>
         [NameInMap("logstores")]
         [Validation(Required=false)]
         public List<string> Logstores { get; set; }
 
         /// <summary>
-        /// The number of the Logstores that meet the query conditions.
+        /// <para>The number of the Logstores that meet the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

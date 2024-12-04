@@ -10,41 +10,47 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateDashboardRequest : TeaModel {
         /// <summary>
-        /// The attributes of the dashboard.
+        /// <para>The attribute values of the dashboard.</para>
         /// </summary>
         [NameInMap("attribute")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attribute { get; set; }
 
         /// <summary>
-        /// The charts on the dashboard.
-        /// 
-        /// This parameter is required.
+        /// <para>The charts on the dashboard.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("charts")]
         [Validation(Required=false)]
         public List<Chart> Charts { get; set; }
 
         /// <summary>
-        /// The name of the dashboard.
+        /// <para>The name of the dashboard.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dashboard-1609294922657-434834</para>
         /// </summary>
         [NameInMap("dashboardName")]
         [Validation(Required=false)]
         public string DashboardName { get; set; }
 
         /// <summary>
-        /// The description of the dashboard.
+        /// <para>The description of the dashboard.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test dashboard.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The display name of the dashboard.
+        /// <para>The display name of the dashboard.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Method pv</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]

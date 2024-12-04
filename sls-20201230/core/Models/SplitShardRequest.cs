@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class SplitShardRequest : TeaModel {
         /// <summary>
-        /// The position where the shard is split.
+        /// <para>The position where the shard is split.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ef000000000000000000000000000000</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// The number of new shards that are generated after splitting.
+        /// <para>The number of new shards that are generated after splitting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("shardCount")]
         [Validation(Required=false)]

@@ -9,11 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ETLConfigurationSink : TeaModel {
+        /// <term><b>Obsolete</b></term>
         [NameInMap("accessKeyId")]
         [Validation(Required=false)]
         [Obsolete]
         public string AccessKeyId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("accessKeySecret")]
         [Validation(Required=false)]
         [Obsolete]
@@ -28,28 +30,40 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-logstore</para>
         /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-etljob</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("project")]
         [Validation(Required=false)]
         public string Project { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::13234:role/logtarget</para>
         /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]

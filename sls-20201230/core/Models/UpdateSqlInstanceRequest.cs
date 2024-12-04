@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateSqlInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("cu")]
         [Validation(Required=false)]
         public int? Cu { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("useAsDefault")]
         [Validation(Required=false)]

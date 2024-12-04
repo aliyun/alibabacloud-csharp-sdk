@@ -10,55 +10,58 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateLogtailPipelineConfigRequest : TeaModel {
         /// <summary>
-        /// The aggregation plug-ins.
+        /// <para>The aggregation plug-ins.</para>
         /// </summary>
         [NameInMap("aggregators")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Aggregators { get; set; }
 
         /// <summary>
-        /// The name of the configuration.
+        /// <para>The name of the configuration.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-config</para>
         /// </summary>
         [NameInMap("configName")]
         [Validation(Required=false)]
         public string ConfigName { get; set; }
 
         /// <summary>
-        /// The data output plug-ins.
-        /// 
-        /// This parameter is required.
+        /// <para>The data output plug-ins.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("flushers")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Flushers { get; set; }
 
         /// <summary>
-        /// The global configuration.
+        /// <para>The global configuration.</para>
         /// </summary>
         [NameInMap("global")]
         [Validation(Required=false)]
         public Dictionary<string, object> Global { get; set; }
 
         /// <summary>
-        /// The data source plug-ins.
-        /// 
-        /// This parameter is required.
+        /// <para>The data source plug-ins.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("inputs")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Inputs { get; set; }
 
         /// <summary>
-        /// The sample log.
+        /// <para>The sample log.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-06-14 11:13:29.796 | DEBUG    | <b>main</b>:<module>:1 - hello world</para>
         /// </summary>
         [NameInMap("logSample")]
         [Validation(Required=false)]
         public string LogSample { get; set; }
 
         /// <summary>
-        /// The processing plug-ins.
+        /// <para>The processing plug-ins.</para>
         /// </summary>
         [NameInMap("processors")]
         [Validation(Required=false)]

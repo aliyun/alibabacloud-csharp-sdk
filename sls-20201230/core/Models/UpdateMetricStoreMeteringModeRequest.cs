@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateMetricStoreMeteringModeRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ChargeByFunction</para>
         /// </summary>
         [NameInMap("meteringMode")]
         [Validation(Required=false)]

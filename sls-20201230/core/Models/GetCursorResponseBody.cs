@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetCursorResponseBody : TeaModel {
         /// <summary>
-        /// The value of the cursor.
+        /// <para>The value of the cursor.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MTQ0NzI5OTYwNjg5NjYzMjM1Ng==</para>
         /// </summary>
         [NameInMap("cursor")]
         [Validation(Required=false)]

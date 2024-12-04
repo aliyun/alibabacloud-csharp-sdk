@@ -13,12 +13,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>LRS</para>
+        /// </summary>
         [NameInMap("dataRedundancyType")]
         [Validation(Required=false)]
         public string DataRedundancyType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("projectName")]
         [Validation(Required=false)]

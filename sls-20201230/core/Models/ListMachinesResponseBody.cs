@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListMachinesResponseBody : TeaModel {
         /// <summary>
-        /// The number of machines that are returned on the current page.
+        /// <para>The number of machines that are returned on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The machines that are returned.
+        /// <para>The machines that are returned.</para>
         /// </summary>
         [NameInMap("machines")]
         [Validation(Required=false)]
         public List<Machine> Machines { get; set; }
 
         /// <summary>
-        /// The total number of machines.
+        /// <para>The total number of machines.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

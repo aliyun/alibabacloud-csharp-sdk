@@ -10,72 +10,82 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateOssExternalStoreRequest : TeaModel {
         /// <summary>
-        /// The name of the external store.
+        /// <para>The name of the external store.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_oss_store</para>
         /// </summary>
         [NameInMap("externalStoreName")]
         [Validation(Required=false)]
         public string ExternalStoreName { get; set; }
 
         /// <summary>
-        /// The parameters of the external store.
-        /// 
-        /// This parameter is required.
+        /// <para>The parameters of the external store.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("parameter")]
         [Validation(Required=false)]
         public CreateOssExternalStoreRequestParameter Parameter { get; set; }
         public class CreateOssExternalStoreRequestParameter : TeaModel {
             /// <summary>
-            /// The AccessKey ID.
+            /// <para>The AccessKey ID.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>LTAI5tFsHGGeYry*****1Sz</para>
             /// </summary>
             [NameInMap("accessid")]
             [Validation(Required=false)]
             public string Accessid { get; set; }
 
             /// <summary>
-            /// The AccessKey secret.
+            /// <para>The AccessKey secret.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>GyviCLDVHkHrOztdkxuE6******Rp6</para>
             /// </summary>
             [NameInMap("accesskey")]
             [Validation(Required=false)]
             public string Accesskey { get; set; }
 
             /// <summary>
-            /// The name of the OSS bucket.
+            /// <para>The name of the OSS bucket.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>my-bucket</para>
             /// </summary>
             [NameInMap("bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
 
             /// <summary>
-            /// The associated fields.
-            /// 
-            /// This parameter is required.
+            /// <para>The associated fields.</para>
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
             public List<CreateOssExternalStoreRequestParameterColumns> Columns { get; set; }
             public class CreateOssExternalStoreRequestParameterColumns : TeaModel {
                 /// <summary>
-                /// The name of the field.
+                /// <para>The name of the field.</para>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>auto-test</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The data type of the field.
+                /// <para>The data type of the field.</para>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>sls</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
@@ -84,18 +94,19 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// The OSS endpoint. For more information, see [Regions and endpoints](https://help.aliyun.com/document_detail/31837.html).
+            /// <para>The OSS endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">Regions and endpoints</a>.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>oss-cn-hangzhou.aliyuncs.com</para>
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// The associated OSS objects. Valid values of n: 1 to 100.
-            /// 
-            /// This parameter is required.
+            /// <para>The associated OSS objects. Valid values of n: 1 to 100.</para>
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("objects")]
             [Validation(Required=false)]
@@ -104,9 +115,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// The type of the external store. Set the value to oss.
+        /// <para>The type of the external store. Set the value to oss.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>oss</para>
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]

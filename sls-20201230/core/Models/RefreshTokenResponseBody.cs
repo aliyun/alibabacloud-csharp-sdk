@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class RefreshTokenResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eyJ***************.eyJ******************.KUT****************</para>
+        /// </summary>
         [NameInMap("accessToken")]
         [Validation(Required=false)]
         public string AccessToken { get; set; }

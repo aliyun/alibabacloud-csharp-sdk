@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListDomainsResponseBody : TeaModel {
         /// <summary>
-        /// The number of domain names that are returned on the current page.
+        /// <para>The number of domain names that are returned on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public long? Count { get; set; }
 
         /// <summary>
-        /// The domain names.
+        /// <para>The domain names.</para>
         /// </summary>
         [NameInMap("domains")]
         [Validation(Required=false)]
         public List<string> Domains { get; set; }
 
         /// <summary>
-        /// The total number of domain names that are returned.
+        /// <para>The total number of domain names that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

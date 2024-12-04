@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class Logstore : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("appendMeta")]
         [Validation(Required=false)]
         public bool? AppendMeta { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("autoSplit")]
         [Validation(Required=false)]
         public bool? AutoSplit { get; set; }
@@ -21,6 +29,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? CreateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("enable_tracking")]
         [Validation(Required=false)]
         public bool? EnableTracking { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? HotTtl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("infrequentAccessTTL")]
         [Validation(Required=false)]
         public int? InfrequentAccessTTL { get; set; }
@@ -42,16 +58,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? LastModifyTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-logstore</para>
         /// </summary>
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
         public string LogstoreName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("maxSplitShard")]
         [Validation(Required=false)]
         public int? MaxSplitShard { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>standard</para>
+        /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
@@ -65,7 +92,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("shardCount")]
         [Validation(Required=false)]
@@ -76,7 +106,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TelemetryType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("ttl")]
         [Validation(Required=false)]

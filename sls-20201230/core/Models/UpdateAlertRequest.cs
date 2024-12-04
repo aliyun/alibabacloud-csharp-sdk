@@ -10,34 +10,37 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateAlertRequest : TeaModel {
         /// <summary>
-        /// The detailed configurations of the alert rule.
-        /// 
-        /// This parameter is required.
+        /// <para>The detailed configurations of the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public AlertConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// The description of the alert rule.
+        /// <para>The description of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The display name of the alert rule.
+        /// <para>The display name of the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>this is alert</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// The scheduling settings of the alert rule.
-        /// 
-        /// This parameter is required.
+        /// <para>The scheduling settings of the alert rule.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]

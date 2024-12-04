@@ -22,28 +22,40 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<GetCheckPointResponseBody> Body { get; set; }
         public class GetCheckPointResponseBody : TeaModel {
             /// <summary>
-            /// The shard ID.
+            /// <para>The shard ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("shard")]
             [Validation(Required=false)]
             public int? Shard { get; set; }
 
             /// <summary>
-            /// The value of the checkpoint.
+            /// <para>The value of the checkpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MTUyNDE1NTM3OTM3MzkwODQ5Ng==</para>
             /// </summary>
             [NameInMap("checkpoint")]
             [Validation(Required=false)]
             public string Checkpoint { get; set; }
 
             /// <summary>
-            /// The time when the checkpoint was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+            /// <para>The time when the checkpoint was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1524224984800922</para>
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// The consumer at the checkpoint.
+            /// <para>The consumer at the checkpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumer_1</para>
             /// </summary>
             [NameInMap("consumer")]
             [Validation(Required=false)]

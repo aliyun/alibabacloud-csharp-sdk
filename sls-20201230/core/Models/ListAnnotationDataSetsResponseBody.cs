@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListAnnotationDataSetsResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<MLDataSetParam> Data { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

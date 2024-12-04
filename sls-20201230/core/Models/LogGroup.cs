@@ -10,25 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class LogGroup : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
+        [NameInMap("LogItems")]
+        [Validation(Required=false)]
+        public List<LogItem> LogItems { get; set; }
+
         [NameInMap("LogTags")]
         [Validation(Required=false)]
         public List<LogTag> LogTags { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.1.1.1</para>
         /// </summary>
-        [NameInMap("Logs")]
-        [Validation(Required=false)]
-        public List<LogItem> Logs { get; set; }
-
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>topic-test</para>
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

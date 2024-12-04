@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class PutAnnotationDataRequest : TeaModel {
         /// <summary>
-        /// The unique identifier of the data.
+        /// <para>The unique identifier of the data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2156d560fc7c01420542df92cd6365ds</para>
         /// </summary>
         [NameInMap("annotationdataId")]
         [Validation(Required=false)]
         public string AnnotationdataId { get; set; }
 
         /// <summary>
-        /// The data structure of the request.
+        /// <para>The data structure of the request.</para>
         /// </summary>
         [NameInMap("mlDataParam")]
         [Validation(Required=false)]
         public MLDataParam MlDataParam { get; set; }
 
         /// <summary>
-        /// The raw log data.
+        /// <para>The raw log data.</para>
         /// </summary>
         [NameInMap("rawLog")]
         [Validation(Required=false)]

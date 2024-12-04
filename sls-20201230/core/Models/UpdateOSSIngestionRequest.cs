@@ -10,32 +10,30 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateOSSIngestionRequest : TeaModel {
         /// <summary>
-        /// The configurations of the OSS data import job.
-        /// 
-        /// This parameter is required.
+        /// <para>The configurations of the OSS data import job.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public OSSIngestionConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// The description of the OSS data import job.
+        /// <para>The description of the OSS data import job.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The display name of the OSS data import job.
-        /// 
-        /// This parameter is required.
+        /// <para>The display name of the OSS data import job.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// The scheduling type. By default, you do not need to specify this parameter. If you want to import data at regular intervals, such as importing data every Monday at 08: 00., you can specify a cron expression.
+        /// <para>The scheduling type. By default, you do not need to specify this parameter. If you want to import data at regular intervals, such as importing data every Monday at 08: 00., you can specify a cron expression.</para>
         /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]

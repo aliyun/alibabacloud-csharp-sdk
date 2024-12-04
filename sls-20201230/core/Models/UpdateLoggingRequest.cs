@@ -10,36 +10,40 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateLoggingRequest : TeaModel {
         /// <summary>
-        /// The configurations of service logs.
-        /// 
-        /// This parameter is required.
+        /// <para>The configurations of service logs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("loggingDetails")]
         [Validation(Required=false)]
         public List<UpdateLoggingRequestLoggingDetails> LoggingDetails { get; set; }
         public class UpdateLoggingRequestLoggingDetails : TeaModel {
             /// <summary>
-            /// The name of the Logstore to which you want to save service logs.
+            /// <para>The name of the Logstore to which you want to save service logs.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>my-logstore</para>
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public string Logstore { get; set; }
 
             /// <summary>
-            /// The type of service logs. Valid values:
+            /// <para>The type of service logs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>consumergroup_log: the consumption delay logs of consumer groups.</description></item>
+            /// <item><description>logtail_alarm: the alert logs of Logtail.</description></item>
+            /// <item><description>operation_log: the operation logs.</description></item>
+            /// <item><description>logtail_profile: the collection logs of Logtail.</description></item>
+            /// <item><description>metering: the metering logs.</description></item>
+            /// <item><description>logtail_status: the status logs of Logtail.</description></item>
+            /// <item><description>scheduledsqlalert: the operational logs of Scheduled SQL jobs.</description></item>
+            /// <item><description>etl_alert: the operational logs of data transformation jobs.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   consumergroup_log: the consumption delay logs of consumer groups.
-            /// *   logtail_alarm: the alert logs of Logtail.
-            /// *   operation_log: the operation logs.
-            /// *   logtail_profile: the collection logs of Logtail.
-            /// *   metering: the metering logs.
-            /// *   logtail_status: the status logs of Logtail.
-            /// *   scheduledsqlalert: the operational logs of Scheduled SQL jobs.
-            /// *   etl_alert: the operational logs of data transformation jobs.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>consumergroup_log</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -48,9 +52,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// The name of the project to which you want to save service logs.
+        /// <para>The name of the project to which you want to save service logs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>my-project</para>
         /// </summary>
         [NameInMap("loggingProject")]
         [Validation(Required=false)]

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public ConditionConfiguration EvalCondition { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>8</para>
+        /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public int? Severity { get; set; }

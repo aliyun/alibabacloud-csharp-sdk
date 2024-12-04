@@ -10,93 +10,115 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateRdsExternalStoreRequest : TeaModel {
         /// <summary>
-        /// The name of the external store. The name must be unique in a project and must be different from Logstore names.
+        /// <para>The name of the external store. The name must be unique in a project and must be different from Logstore names.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds_store</para>
         /// </summary>
         [NameInMap("externalStoreName")]
         [Validation(Required=false)]
         public string ExternalStoreName { get; set; }
 
         /// <summary>
-        /// The parameter struct.
-        /// 
-        /// This parameter is required.
+        /// <para>The parameter struct.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("parameter")]
         [Validation(Required=false)]
         public CreateRdsExternalStoreRequestParameter Parameter { get; set; }
         public class CreateRdsExternalStoreRequestParameter : TeaModel {
             /// <summary>
-            /// The name of the database in the ApsaraDB RDS for MySQL instance.
+            /// <para>The name of the database in the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>meta</para>
             /// </summary>
             [NameInMap("db")]
             [Validation(Required=false)]
             public string Db { get; set; }
 
             /// <summary>
-            /// The internal or public endpoint of the ApsaraDB RDS for MySQL instance.
+            /// <para>The internal or public endpoint of the ApsaraDB RDS for MySQL instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("host")]
             [Validation(Required=false)]
             public string Host { get; set; }
 
             /// <summary>
-            /// The ID of the ApsaraDB RDS for MySQL instance.
+            /// <para>The ID of the ApsaraDB RDS for MySQL instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1b6c719dfa08exf****</para>
             /// </summary>
             [NameInMap("instance-id")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The password that is used to log on to the ApsaraDB RDS for MySQL instance.
+            /// <para>The password that is used to log on to the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>sfdsfldsfksfls****</para>
             /// </summary>
             [NameInMap("password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// The internal or public port of the ApsaraDB RDS for MySQL instance.
+            /// <para>The internal or public port of the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>3306</para>
             /// </summary>
             [NameInMap("port")]
             [Validation(Required=false)]
             public string Port { get; set; }
 
             /// <summary>
-            /// The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.
+            /// <para>The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>cn-qingdao</para>
             /// </summary>
             [NameInMap("region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The name of the database table in the ApsaraDB RDS for MySQL instance.
+            /// <para>The name of the database table in the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>join_meta</para>
             /// </summary>
             [NameInMap("table")]
             [Validation(Required=false)]
             public string Table { get; set; }
 
             /// <summary>
-            /// The username that is used to log on to the ApsaraDB RDS for MySQL instance.
+            /// <para>The username that is used to log on to the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>root</para>
             /// </summary>
             [NameInMap("username")]
             [Validation(Required=false)]
             public string Username { get; set; }
 
             /// <summary>
-            /// The ID of the VPC to which the ApsaraDB RDS for MySQL instance belongs.
+            /// <para>The ID of the VPC to which the ApsaraDB RDS for MySQL instance belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-bp1aevy8sofi8mh1q****</para>
             /// </summary>
             [NameInMap("vpc-id")]
             [Validation(Required=false)]
@@ -105,9 +127,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).
+        /// <para>The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rds-vpc</para>
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]

@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateETLRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public ETLConfiguration Configuration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>this is description</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is update</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]

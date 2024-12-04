@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ConsumeProcessorConfiguration : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description>| project content</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("spl")]
         [Validation(Required=false)]

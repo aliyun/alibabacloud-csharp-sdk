@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<string> Fields { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>custom</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

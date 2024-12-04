@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The returned tags.
+        /// <para>The returned tags.</para>
         /// </summary>
         [NameInMap("tagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// The ID of the resource.
+            /// <para>The ID of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ali-test-project</para>
             /// </summary>
             [NameInMap("resourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// <para>The type of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
             /// </summary>
             [NameInMap("resourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key1</para>
             /// </summary>
             [NameInMap("tagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value1</para>
             /// </summary>
             [NameInMap("tagValue")]
             [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class OSSIngestionConfiguration : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>myLogstore</para>
         /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]

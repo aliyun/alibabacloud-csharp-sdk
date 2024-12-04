@@ -10,31 +10,35 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateStoreViewRequest : TeaModel {
         /// <summary>
-        /// The name of the dataset.
+        /// <para>The name of the dataset.</para>
+        /// <list type="bullet">
+        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>The name must start with a lowercase letter.</description></item>
+        /// <item><description>The name must be 3 to 62 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The name can contain lowercase letters, digits, and underscores (_).
-        /// *   The name must start with a lowercase letter.
-        /// *   The name must be 3 to 62 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>my_storeview</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The type of the dataset. Valid values: metricstore and logstore.
+        /// <para>The type of the dataset. Valid values: metricstore and logstore.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>logstore</para>
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]
         public string StoreType { get; set; }
 
         /// <summary>
-        /// The Logstores or Metricstores.
-        /// 
-        /// This parameter is required.
+        /// <para>The Logstores or Metricstores.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("stores")]
         [Validation(Required=false)]

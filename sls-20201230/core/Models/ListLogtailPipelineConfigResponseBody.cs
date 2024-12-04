@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListLogtailPipelineConfigResponseBody : TeaModel {
         /// <summary>
-        /// The Logtail pipeline configurations that are returned on the current page.
+        /// <para>The Logtail pipeline configurations that are returned on the current page.</para>
         /// </summary>
         [NameInMap("configs")]
         [Validation(Required=false)]
         public List<string> Configs { get; set; }
 
         /// <summary>
-        /// The number of Logtail pipeline configurations that are returned on the current page.
+        /// <para>The number of Logtail pipeline configurations that are returned on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The total number of Logtail pipeline configurations in the current project.
+        /// <para>The total number of Logtail pipeline configurations in the current project.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

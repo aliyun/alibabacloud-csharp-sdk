@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class EncryptConf : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("encrypt_type")]
         [Validation(Required=false)]
         public string EncryptType { get; set; }

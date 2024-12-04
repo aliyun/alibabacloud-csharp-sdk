@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ExternalStore : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds_store</para>
         /// </summary>
         [NameInMap("externalStoreName")]
         [Validation(Required=false)]
         public string ExternalStoreName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("parameter")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameter { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds-vpc</para>
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]

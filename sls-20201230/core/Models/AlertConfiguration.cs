@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<AlertTag> Annotations { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("autoAnnotation")]
         [Validation(Required=false)]
@@ -24,12 +27,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public ConditionConfiguration ConditionConfiguration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dasnboardExample</para>
+        /// </summary>
         [NameInMap("dashboard")]
         [Validation(Required=false)]
         public string Dashboard { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("groupConfiguration")]
         [Validation(Required=false)]
@@ -43,17 +50,28 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<AlertTag> Labels { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1698907508</para>
+        /// </summary>
         [NameInMap("muteUntil")]
         [Validation(Required=false)]
         public long? MuteUntil { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("noDataFire")]
         [Validation(Required=false)]
         public bool? NoDataFire { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6</para>
+        /// </summary>
         [NameInMap("noDataSeverity")]
         [Validation(Required=false)]
         public int? NoDataSeverity { get; set; }
@@ -63,21 +81,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public PolicyConfiguration PolicyConfiguration { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("queryList")]
         [Validation(Required=false)]
         public List<AlertQuery> QueryList { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("sendResolved")]
         [Validation(Required=false)]
         public bool? SendResolved { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("severityConfigurations")]
         [Validation(Required=false)]
@@ -104,18 +125,28 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public TemplateConfiguration TemplateConfiguration { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("threshold")]
         [Validation(Required=false)]
         public int? Threshold { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2.0</para>
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

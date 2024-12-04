@@ -10,58 +10,65 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The resource IDs. You can specify only one resource and add tags to the resource.
-        /// 
-        /// This parameter is required.
+        /// <para>The resource IDs. You can specify only one resource and add tags to the resource.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>logstore</description></item>
+        /// <item><description>dashboard</description></item>
+        /// <item><description>machinegroup</description></item>
+        /// <item><description>logtailconfig</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   project
-        /// *   logstore
-        /// *   dashboard
-        /// *   machinegroup
-        /// *   logtailconfig
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>project</para>
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags that you want to add to the resource. You can specify up to 20 tags in each call. Each tag is a key-value pair.
-        /// 
-        /// This parameter is required.
+        /// <para>The tags that you want to add to the resource. You can specify up to 20 tags in each call. Each tag is a key-value pair.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTags> Tags { get; set; }
         public class TagResourcesRequestTags : TeaModel {
             /// <summary>
-            /// The key of the tag. The key must meet the following requirements:
+            /// <para>The key of the tag. The key must meet the following requirements:</para>
+            /// <list type="bullet">
+            /// <item><description>The key must be <c>1 to 128</c> characters in length.</description></item>
+            /// <item><description>The key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>The key cannot start with <c>acs:</c> or <c>aliyun</c>.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   The key must be `1 to 128` characters in length.
-            /// *   The key cannot contain `http://` or `https://`.
-            /// *   The key cannot start with `acs:` or `aliyun`.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>key1</para>
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. The value must meet the following requirements:
+            /// <para>The value of the tag. The value must meet the following requirements:</para>
+            /// <list type="bullet">
+            /// <item><description>The value must be <c>1 to 128</c> characters in length.</description></item>
+            /// <item><description>The value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   The value must be `1 to 128` characters in length.
-            /// *   The value cannot contain `http://` or `https://`.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>value1</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

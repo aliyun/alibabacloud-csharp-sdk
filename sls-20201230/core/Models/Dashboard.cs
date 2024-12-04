@@ -14,25 +14,35 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, string> Attribute { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("charts")]
         [Validation(Required=false)]
         public List<Chart> Charts { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dashboard-1609294922657-434834</para>
         /// </summary>
         [NameInMap("dashboardName")]
         [Validation(Required=false)]
         public string DashboardName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>这是一个仪表盘。</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-alert</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]

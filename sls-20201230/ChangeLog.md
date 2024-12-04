@@ -1,3 +1,25 @@
+2024-12-04 Version: 5.6.0
+- Support API DescribeRegions.
+- Support API PullLogs.
+- Support API PutLogs.
+- Support API UpdateLogStoreEncryption.
+- Update API CreateMetricStore: update param project.
+- Update API CreateMetricStore: update param body.
+- Update API CreateSavedSearch: update param body.
+- Update API GetDownloadJob: update response param.
+- Update API GetLogsV2: update response param.
+- Update API GetMetricStore: update param project.
+- Update API GetMetricStoreMeteringMode: update param project.
+- Update API GetMetricStoreMeteringMode: update response param.
+- Update API ListDownloadJobs: update response param.
+- Update API ListMetricStores: update param project.
+- Update API ListMetricStores: update response param.
+- Update API UpdateLogStore: update param body.
+- Update API UpdateMetricStore: update param project.
+- Update API UpdateMetricStore: update param body.
+- Update API UpdateMetricStoreMeteringMode: update param project.
+
+
 2024-09-02 Version: 5.5.1
 - Update API CreateIndex: update param body.
 - Update API GetIndex: update response param.

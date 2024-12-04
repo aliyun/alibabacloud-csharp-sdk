@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetLogStoreMeteringModeResponseBody : TeaModel {
         /// <summary>
-        /// The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.
+        /// <para>The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ChargeByFunction</para>
         /// </summary>
         [NameInMap("meteringMode")]
         [Validation(Required=false)]

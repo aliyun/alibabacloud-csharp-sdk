@@ -17,28 +17,52 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public GetCollectionPolicyResponseBodyCollectionPolicyCentralizeConfig CentralizeConfig { get; set; }
             public class GetCollectionPolicyResponseBodyCollectionPolicyCentralizeConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>your-sls-logstore-in-beijing</para>
+                /// </summary>
                 [NameInMap("destLogstore")]
                 [Validation(Required=false)]
                 public string DestLogstore { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>your-sls-project-in-beijing</para>
+                /// </summary>
                 [NameInMap("destProject")]
                 [Validation(Required=false)]
                 public string DestProject { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
+                /// </summary>
                 [NameInMap("destRegion")]
                 [Validation(Required=false)]
                 public string DestRegion { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>your-sls-logstore-ttl</para>
+                /// </summary>
                 [NameInMap("destTTL")]
                 [Validation(Required=false)]
                 public int? DestTTL { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("centralizeEnabled")]
             [Validation(Required=false)]
             public bool? CentralizeEnabled { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>access_log</para>
+            /// </summary>
             [NameInMap("dataCode")]
             [Validation(Required=false)]
             public string DataCode { get; set; }
@@ -57,6 +81,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
@@ -77,6 +105,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 [Validation(Required=false)]
                 public List<string> Regions { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>all</para>
+                /// </summary>
                 [NameInMap("resourceMode")]
                 [Validation(Required=false)]
                 public string ResourceMode { get; set; }
@@ -87,6 +119,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>your_log_policy</para>
+            /// </summary>
             [NameInMap("policyName")]
             [Validation(Required=false)]
             public string PolicyName { get; set; }
@@ -95,6 +131,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string PolicyUid { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>oss</para>
+            /// </summary>
             [NameInMap("productCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }

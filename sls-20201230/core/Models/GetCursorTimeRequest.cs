@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetCursorTimeRequest : TeaModel {
         /// <summary>
-        /// The cursor.
+        /// <para>The cursor.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MTU0NzQ3MDY4MjM3NjUxMzQ0Ng==</para>
         /// </summary>
         [NameInMap("cursor")]
         [Validation(Required=false)]

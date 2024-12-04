@@ -10,36 +10,35 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateStoreViewRequest : TeaModel {
         /// <summary>
-        /// The type of the dataset.
+        /// <para>The type of the dataset.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>metricstore</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   metricstore
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>logstore</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   logstore
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>logstore</para>
         /// </summary>
         [NameInMap("storeType")]
         [Validation(Required=false)]
         public string StoreType { get; set; }
 
         /// <summary>
-        /// The Logstores or Metricstores.
-        /// 
-        /// This parameter is required.
+        /// <para>The Logstores or Metricstores.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("stores")]
         [Validation(Required=false)]

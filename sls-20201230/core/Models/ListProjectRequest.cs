@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? FetchQuota { get; set; }
 
         /// <summary>
-        /// The line from which the query starts. Default value: 0.
+        /// <para>The line from which the query starts. Default value: 0.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
         /// <summary>
-        /// The name of the project.
+        /// <para>The name of the project.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ali-test-project</para>
         /// </summary>
         [NameInMap("projectName")]
         [Validation(Required=false)]
@@ -32,7 +38,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 100. This operation can return up to 500 projects.
+        /// <para>The number of entries per page. Default value: 100. This operation can return up to 500 projects.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
