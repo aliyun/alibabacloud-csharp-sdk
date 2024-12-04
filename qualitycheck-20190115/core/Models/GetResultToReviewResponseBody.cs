@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string BeginTime { get; set; }
 
+                    [NameInMap("BeginTimeMs")]
+                    [Validation(Required=false)]
+                    public long? BeginTimeMs { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>7</para>

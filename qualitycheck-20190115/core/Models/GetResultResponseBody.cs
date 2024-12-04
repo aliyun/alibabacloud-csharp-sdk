@@ -786,6 +786,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public long? SchemeVersion { get; set; }
 
+                        [NameInMap("Score")]
+                        [Validation(Required=false)]
+                        public int? Score { get; set; }
+
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
@@ -1273,6 +1277,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [NameInMap("TaskName")]
                 [Validation(Required=false)]
                 public string TaskName { get; set; }
+
+                [NameInMap("Vid")]
+                [Validation(Required=false)]
+                public string Vid { get; set; }
 
             }
 

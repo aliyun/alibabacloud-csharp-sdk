@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// AssignReviewerBySessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated")]
         // Deprecated
         public AssignReviewerBySessionGroupResponse AssignReviewerBySessionGroupWithOptions(AssignReviewerBySessionGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -572,7 +572,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// AssignReviewerBySessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated")]
         // Deprecated
         public async Task<AssignReviewerBySessionGroupResponse> AssignReviewerBySessionGroupWithOptionsAsync(AssignReviewerBySessionGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -621,7 +621,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// AssignReviewerBySessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated")]
         // Deprecated
         public AssignReviewerBySessionGroupResponse AssignReviewerBySessionGroup(AssignReviewerBySessionGroupRequest request)
         {
@@ -645,7 +645,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// AssignReviewerBySessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI AssignReviewerBySessionGroup is deprecated")]
         // Deprecated
         public async Task<AssignReviewerBySessionGroupResponse> AssignReviewerBySessionGroupAsync(AssignReviewerBySessionGroupRequest request)
         {
@@ -2299,7 +2299,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteDataSet is deprecated\n")]
+        [Obsolete("OpenAPI DeleteDataSet is deprecated")]
         // Deprecated
         public DeleteDataSetResponse DeleteDataSetWithOptions(DeleteDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2346,7 +2346,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteDataSet is deprecated\n")]
+        [Obsolete("OpenAPI DeleteDataSet is deprecated")]
         // Deprecated
         public async Task<DeleteDataSetResponse> DeleteDataSetWithOptionsAsync(DeleteDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2390,7 +2390,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteDataSet is deprecated\n")]
+        [Obsolete("OpenAPI DeleteDataSet is deprecated")]
         // Deprecated
         public DeleteDataSetResponse DeleteDataSet(DeleteDataSetRequest request)
         {
@@ -2409,7 +2409,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteDataSet is deprecated\n")]
+        [Obsolete("OpenAPI DeleteDataSet is deprecated")]
         // Deprecated
         public async Task<DeleteDataSetResponse> DeleteDataSetAsync(DeleteDataSetRequest request)
         {
@@ -2672,7 +2672,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public DeleteRuleResponse DeleteRuleWithOptions(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2734,7 +2734,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public async Task<DeleteRuleResponse> DeleteRuleWithOptionsAsync(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2793,7 +2793,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public DeleteRuleResponse DeleteRule(DeleteRuleRequest request)
         {
@@ -2817,7 +2817,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public async Task<DeleteRuleResponse> DeleteRuleAsync(DeleteRuleRequest request)
         {
@@ -4463,7 +4463,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public GetRuleResponse GetRuleWithOptions(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4510,7 +4510,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public async Task<GetRuleResponse> GetRuleWithOptionsAsync(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4554,7 +4554,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public GetRuleResponse GetRule(GetRuleRequest request)
         {
@@ -4573,7 +4573,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public async Task<GetRuleResponse> GetRuleAsync(GetRuleRequest request)
         {
@@ -4600,7 +4600,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public GetRuleByIdResponse GetRuleByIdWithOptions(GetRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4654,7 +4654,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public async Task<GetRuleByIdResponse> GetRuleByIdWithOptionsAsync(GetRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4705,7 +4705,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public GetRuleByIdResponse GetRuleById(GetRuleByIdRequest request)
         {
@@ -4729,7 +4729,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public async Task<GetRuleByIdResponse> GetRuleByIdAsync(GetRuleByIdRequest request)
         {
@@ -4859,7 +4859,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public GetRuleDetailResponse GetRuleDetailWithOptions(GetRuleDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4906,7 +4906,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public async Task<GetRuleDetailResponse> GetRuleDetailWithOptionsAsync(GetRuleDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4950,7 +4950,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public GetRuleDetailResponse GetRuleDetail(GetRuleDetailRequest request)
         {
@@ -4969,7 +4969,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetRuleDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.\n")]
+        [Obsolete("OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.")]
         // Deprecated
         public async Task<GetRuleDetailResponse> GetRuleDetailAsync(GetRuleDetailRequest request)
         {
@@ -5435,7 +5435,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetScoreInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetScoreInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetScoreInfo is deprecated")]
         // Deprecated
         public GetScoreInfoResponse GetScoreInfoWithOptions(GetScoreInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5482,7 +5482,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetScoreInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetScoreInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetScoreInfo is deprecated")]
         // Deprecated
         public async Task<GetScoreInfoResponse> GetScoreInfoWithOptionsAsync(GetScoreInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5526,7 +5526,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetScoreInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetScoreInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetScoreInfo is deprecated")]
         // Deprecated
         public GetScoreInfoResponse GetScoreInfo(GetScoreInfoRequest request)
         {
@@ -5545,7 +5545,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetScoreInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetScoreInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetScoreInfo is deprecated")]
         // Deprecated
         public async Task<GetScoreInfoResponse> GetScoreInfoAsync(GetScoreInfoRequest request)
         {
@@ -5675,7 +5675,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSyncResultResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.\n")]
+        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.")]
         // Deprecated
         public GetSyncResultResponse GetSyncResultWithOptions(GetSyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5722,7 +5722,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSyncResultResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.\n")]
+        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.")]
         // Deprecated
         public async Task<GetSyncResultResponse> GetSyncResultWithOptionsAsync(GetSyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5766,7 +5766,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSyncResultResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.\n")]
+        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.")]
         // Deprecated
         public GetSyncResultResponse GetSyncResult(GetSyncResultRequest request)
         {
@@ -5785,7 +5785,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSyncResultResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.\n")]
+        [Obsolete("OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.")]
         // Deprecated
         public async Task<GetSyncResultResponse> GetSyncResultAsync(GetSyncResultRequest request)
         {
@@ -6043,7 +6043,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// InvalidRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public InvalidRuleResponse InvalidRuleWithOptions(InvalidRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6090,7 +6090,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// InvalidRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public async Task<InvalidRuleResponse> InvalidRuleWithOptionsAsync(InvalidRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6134,7 +6134,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// InvalidRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public InvalidRuleResponse InvalidRule(InvalidRuleRequest request)
         {
@@ -6153,7 +6153,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// InvalidRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.\n")]
+        [Obsolete("OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.")]
         // Deprecated
         public async Task<InvalidRuleResponse> InvalidRuleAsync(InvalidRuleRequest request)
         {
@@ -6288,7 +6288,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI ListDataSet is deprecated\n")]
+        [Obsolete("OpenAPI ListDataSet is deprecated")]
         // Deprecated
         public ListDataSetResponse ListDataSetWithOptions(ListDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6340,7 +6340,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI ListDataSet is deprecated\n")]
+        [Obsolete("OpenAPI ListDataSet is deprecated")]
         // Deprecated
         public async Task<ListDataSetResponse> ListDataSetWithOptionsAsync(ListDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6389,7 +6389,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI ListDataSet is deprecated\n")]
+        [Obsolete("OpenAPI ListDataSet is deprecated")]
         // Deprecated
         public ListDataSetResponse ListDataSet(ListDataSetRequest request)
         {
@@ -6413,7 +6413,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI ListDataSet is deprecated\n")]
+        [Obsolete("OpenAPI ListDataSet is deprecated")]
         // Deprecated
         public async Task<ListDataSetResponse> ListDataSetAsync(ListDataSetRequest request)
         {
@@ -6671,7 +6671,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListRulesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.\n")]
+        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.")]
         // Deprecated
         public ListRulesResponse ListRulesWithOptions(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6718,7 +6718,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListRulesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.\n")]
+        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.")]
         // Deprecated
         public async Task<ListRulesResponse> ListRulesWithOptionsAsync(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6762,7 +6762,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListRulesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.\n")]
+        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.")]
         // Deprecated
         public ListRulesResponse ListRules(ListRulesRequest request)
         {
@@ -6781,7 +6781,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListRulesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.\n")]
+        [Obsolete("OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.")]
         // Deprecated
         public async Task<ListRulesResponse> ListRulesAsync(ListRulesRequest request)
         {
@@ -7260,7 +7260,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI ListSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI ListSessionGroup is deprecated")]
         // Deprecated
         public ListSessionGroupResponse ListSessionGroupWithOptions(ListSessionGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7312,7 +7312,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI ListSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI ListSessionGroup is deprecated")]
         // Deprecated
         public async Task<ListSessionGroupResponse> ListSessionGroupWithOptionsAsync(ListSessionGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7361,7 +7361,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI ListSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI ListSessionGroup is deprecated")]
         // Deprecated
         public ListSessionGroupResponse ListSessionGroup(ListSessionGroupRequest request)
         {
@@ -7385,7 +7385,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI ListSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI ListSessionGroup is deprecated")]
         // Deprecated
         public async Task<ListSessionGroupResponse> ListSessionGroupAsync(ListSessionGroupRequest request)
         {
@@ -8100,7 +8100,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// RevertAssignedSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated")]
         // Deprecated
         public RevertAssignedSessionGroupResponse RevertAssignedSessionGroupWithOptions(RevertAssignedSessionGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8152,7 +8152,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// RevertAssignedSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated")]
         // Deprecated
         public async Task<RevertAssignedSessionGroupResponse> RevertAssignedSessionGroupWithOptionsAsync(RevertAssignedSessionGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8201,7 +8201,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// RevertAssignedSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated")]
         // Deprecated
         public RevertAssignedSessionGroupResponse RevertAssignedSessionGroup(RevertAssignedSessionGroupRequest request)
         {
@@ -8225,7 +8225,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// RevertAssignedSessionGroupResponse
         /// </returns>
-        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated\n")]
+        [Obsolete("OpenAPI RevertAssignedSessionGroup is deprecated")]
         // Deprecated
         public async Task<RevertAssignedSessionGroupResponse> RevertAssignedSessionGroupAsync(RevertAssignedSessionGroupRequest request)
         {
@@ -8247,7 +8247,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// SaveConfigDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI SaveConfigDataSet is deprecated\n")]
+        [Obsolete("OpenAPI SaveConfigDataSet is deprecated")]
         // Deprecated
         public SaveConfigDataSetResponse SaveConfigDataSetWithOptions(SaveConfigDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8294,7 +8294,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// SaveConfigDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI SaveConfigDataSet is deprecated\n")]
+        [Obsolete("OpenAPI SaveConfigDataSet is deprecated")]
         // Deprecated
         public async Task<SaveConfigDataSetResponse> SaveConfigDataSetWithOptionsAsync(SaveConfigDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8338,7 +8338,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// SaveConfigDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI SaveConfigDataSet is deprecated\n")]
+        [Obsolete("OpenAPI SaveConfigDataSet is deprecated")]
         // Deprecated
         public SaveConfigDataSetResponse SaveConfigDataSet(SaveConfigDataSetRequest request)
         {
@@ -8357,7 +8357,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// SaveConfigDataSetResponse
         /// </returns>
-        [Obsolete("OpenAPI SaveConfigDataSet is deprecated\n")]
+        [Obsolete("OpenAPI SaveConfigDataSet is deprecated")]
         // Deprecated
         public async Task<SaveConfigDataSetResponse> SaveConfigDataSetAsync(SaveConfigDataSetRequest request)
         {
@@ -9539,7 +9539,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public UpdateRuleResponse UpdateRuleWithOptions(UpdateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9586,7 +9586,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public async Task<UpdateRuleResponse> UpdateRuleWithOptionsAsync(UpdateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9630,7 +9630,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public UpdateRuleResponse UpdateRule(UpdateRuleRequest request)
         {
@@ -9649,7 +9649,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public async Task<UpdateRuleResponse> UpdateRuleAsync(UpdateRuleRequest request)
         {
@@ -9676,7 +9676,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public UpdateRuleByIdResponse UpdateRuleByIdWithOptions(UpdateRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9742,7 +9742,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public async Task<UpdateRuleByIdResponse> UpdateRuleByIdWithOptionsAsync(UpdateRuleByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9805,7 +9805,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public UpdateRuleByIdResponse UpdateRuleById(UpdateRuleByIdRequest request)
         {
@@ -9829,7 +9829,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateRuleByIdResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.\n")]
+        [Obsolete("OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.")]
         // Deprecated
         public async Task<UpdateRuleByIdResponse> UpdateRuleByIdAsync(UpdateRuleByIdRequest request)
         {
@@ -11028,7 +11028,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UploadDataResponse
         /// </returns>
-        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.\n")]
+        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.")]
         // Deprecated
         public UploadDataResponse UploadDataWithOptions(UploadDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11080,7 +11080,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UploadDataResponse
         /// </returns>
-        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.\n")]
+        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.")]
         // Deprecated
         public async Task<UploadDataResponse> UploadDataWithOptionsAsync(UploadDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -11129,7 +11129,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UploadDataResponse
         /// </returns>
-        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.\n")]
+        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.")]
         // Deprecated
         public UploadDataResponse UploadData(UploadDataRequest request)
         {
@@ -11153,7 +11153,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UploadDataResponse
         /// </returns>
-        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.\n")]
+        [Obsolete("OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.")]
         // Deprecated
         public async Task<UploadDataResponse> UploadDataAsync(UploadDataRequest request)
         {
