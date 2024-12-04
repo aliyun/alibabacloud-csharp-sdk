@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeTagsResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>requestid</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -24,10 +27,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public List<string> DBInstanceIds { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>testKey</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>testValue</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }

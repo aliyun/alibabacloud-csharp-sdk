@@ -21,20 +21,40 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>CONN_POOL_XPROTO_STORAGE_DB_PORT</para>
+                /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>-1</para>
+                /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
                 public string ParameterValue { get; set; }
 
             }
 
+            [NameInMap("DBInstanceId")]
+            [Validation(Required=false)]
+            public string DBInstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>polarx</para>
+            /// </summary>
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2.0</para>
+            /// </summary>
             [NameInMap("EngineVersion")]
             [Validation(Required=false)]
             public string EngineVersion { get; set; }
@@ -47,10 +67,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>CONN_POOL_XPROTO_STORAGE_DB_PORT</para>
+                /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>-1</para>
+                /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
                 public string ParameterValue { get; set; }
@@ -59,6 +87,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6BA32080EEA</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

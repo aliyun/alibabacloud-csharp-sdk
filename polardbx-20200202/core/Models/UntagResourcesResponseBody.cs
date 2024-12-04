@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// RequestId
+        /// <para>RequestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

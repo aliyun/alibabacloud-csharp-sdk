@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-unrf5ssig0ecg8.polarx.huhehaote.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-unrf5ssig0ecg8</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3300</para>
         /// </summary>
         [NameInMap("NewPort")]
         [Validation(Required=false)]
         public string NewPort { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test2</para>
         /// </summary>
         [NameInMap("NewPrefix")]
         [Validation(Required=false)]
         public string NewPrefix { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeParametersRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-********</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>compute</para>
+        /// </summary>
         [NameInMap("ParamLevel")]
         [Validation(Required=false)]
         public string ParamLevel { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

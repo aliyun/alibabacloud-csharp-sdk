@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class AllocateColdDataVolumeResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D6A4256F-7B83-5BD7-9AC0-72E1FAC05330</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

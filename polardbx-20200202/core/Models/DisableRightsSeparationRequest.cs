@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DisableRightsSeparationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-sprcym7g7w****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>account_1</para>
         /// </summary>
         [NameInMap("DbaAccountName")]
         [Validation(Required=false)]
         public string DbaAccountName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("DbaAccountPassword")]
         [Validation(Required=false)]
         public string DbaAccountPassword { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hanghzou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

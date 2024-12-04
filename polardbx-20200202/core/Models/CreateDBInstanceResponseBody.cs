@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateDBInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pxc-*********</para>
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12345</para>
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>9B2F3840-5C98-475C-B269-2D5C3A31797C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

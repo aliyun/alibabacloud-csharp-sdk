@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class CreateDBInstanceRequest : TeaModel {
+    public class CreateDBInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         [NameInMap("ExtraParams")]
         [Validation(Required=false)]
-        public Dictionary<string, string> ExtraParams { get; set; }
+        public string ExtraParamsShrink { get; set; }
 
         [NameInMap("IsColumnarReadDBInstance")]
         [Validation(Required=false)]

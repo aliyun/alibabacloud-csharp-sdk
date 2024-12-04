@@ -85,11 +85,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @param request AlignStoragePrimaryAzoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AlignStoragePrimaryAzoneResponse
-         */
+        /// <param name="request">
+        /// AlignStoragePrimaryAzoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlignStoragePrimaryAzoneResponse
+        /// </returns>
         public AlignStoragePrimaryAzoneResponse AlignStoragePrimaryAzoneWithOptions(AlignStoragePrimaryAzoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -133,11 +138,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AlignStoragePrimaryAzoneResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request AlignStoragePrimaryAzoneRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AlignStoragePrimaryAzoneResponse
-         */
+        /// <param name="request">
+        /// AlignStoragePrimaryAzoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlignStoragePrimaryAzoneResponse
+        /// </returns>
         public async Task<AlignStoragePrimaryAzoneResponse> AlignStoragePrimaryAzoneWithOptionsAsync(AlignStoragePrimaryAzoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -181,33 +191,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AlignStoragePrimaryAzoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request AlignStoragePrimaryAzoneRequest
-         * @return AlignStoragePrimaryAzoneResponse
-         */
+        /// <param name="request">
+        /// AlignStoragePrimaryAzoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlignStoragePrimaryAzoneResponse
+        /// </returns>
         public AlignStoragePrimaryAzoneResponse AlignStoragePrimaryAzone(AlignStoragePrimaryAzoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AlignStoragePrimaryAzoneWithOptions(request, runtime);
         }
 
-        /**
-         * @param request AlignStoragePrimaryAzoneRequest
-         * @return AlignStoragePrimaryAzoneResponse
-         */
+        /// <param name="request">
+        /// AlignStoragePrimaryAzoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlignStoragePrimaryAzoneResponse
+        /// </returns>
         public async Task<AlignStoragePrimaryAzoneResponse> AlignStoragePrimaryAzoneAsync(AlignStoragePrimaryAzoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AlignStoragePrimaryAzoneWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 开通冷存储
-         *
-         * @param request AllocateColdDataVolumeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateColdDataVolumeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateColdDataVolumeResponse
+        /// </returns>
         public AllocateColdDataVolumeResponse AllocateColdDataVolumeWithOptions(AllocateColdDataVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -239,13 +263,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AllocateColdDataVolumeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 开通冷存储
-         *
-         * @param request AllocateColdDataVolumeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateColdDataVolumeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateColdDataVolumeResponse
+        /// </returns>
         public async Task<AllocateColdDataVolumeResponse> AllocateColdDataVolumeWithOptionsAsync(AllocateColdDataVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -277,35 +309,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AllocateColdDataVolumeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 开通冷存储
-         *
-         * @param request AllocateColdDataVolumeRequest
-         * @return AllocateColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateColdDataVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateColdDataVolumeResponse
+        /// </returns>
         public AllocateColdDataVolumeResponse AllocateColdDataVolume(AllocateColdDataVolumeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateColdDataVolumeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 开通冷存储
-         *
-         * @param request AllocateColdDataVolumeRequest
-         * @return AllocateColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateColdDataVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateColdDataVolumeResponse
+        /// </returns>
         public async Task<AllocateColdDataVolumeResponse> AllocateColdDataVolumeAsync(AllocateColdDataVolumeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateColdDataVolumeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request AllocateInstancePublicConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// AllocateInstancePublicConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateInstancePublicConnectionResponse
+        /// </returns>
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnectionWithOptions(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -361,11 +410,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request AllocateInstancePublicConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// AllocateInstancePublicConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateInstancePublicConnectionResponse
+        /// </returns>
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionWithOptionsAsync(AllocateInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -421,33 +475,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request AllocateInstancePublicConnectionRequest
-         * @return AllocateInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// AllocateInstancePublicConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateInstancePublicConnectionResponse
+        /// </returns>
         public AllocateInstancePublicConnectionResponse AllocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateInstancePublicConnectionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request AllocateInstancePublicConnectionRequest
-         * @return AllocateInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// AllocateInstancePublicConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateInstancePublicConnectionResponse
+        /// </returns>
         public async Task<AllocateInstancePublicConnectionResponse> AllocateInstancePublicConnectionAsync(AllocateInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 取消主动运维任务
-         *
-         * @param request CancelActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelActiveOperationTasksResponse
+        /// </returns>
         public CancelActiveOperationTasksResponse CancelActiveOperationTasksWithOptions(CancelActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -471,13 +539,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CancelActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消主动运维任务
-         *
-         * @param request CancelActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelActiveOperationTasksResponse
+        /// </returns>
         public async Task<CancelActiveOperationTasksResponse> CancelActiveOperationTasksWithOptionsAsync(CancelActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -501,37 +577,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CancelActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消主动运维任务
-         *
-         * @param request CancelActiveOperationTasksRequest
-         * @return CancelActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelActiveOperationTasksResponse
+        /// </returns>
         public CancelActiveOperationTasksResponse CancelActiveOperationTasks(CancelActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CancelActiveOperationTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 取消主动运维任务
-         *
-         * @param request CancelActiveOperationTasksRequest
-         * @return CancelActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelActiveOperationTasksResponse
+        /// </returns>
         public async Task<CancelActiveOperationTasksResponse> CancelActiveOperationTasksAsync(CancelActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改实例所在资源组.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例所在资源组.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -571,13 +667,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例所在资源组.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例所在资源组.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -617,35 +721,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例所在资源组.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例所在资源组.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改实例所在资源组.
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例所在资源组.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorizedWithOptions(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -681,11 +802,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedWithOptionsAsync(CheckCloudResourceAuthorizedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -721,31 +847,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public CheckCloudResourceAuthorizedResponse CheckCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCloudResourceAuthorizedWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CheckCloudResourceAuthorizedRequest
-         * @return CheckCloudResourceAuthorizedResponse
-         */
+        /// <param name="request">
+        /// CheckCloudResourceAuthorizedRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCloudResourceAuthorizedResponse
+        /// </returns>
         public async Task<CheckCloudResourceAuthorizedResponse> CheckCloudResourceAuthorizedAsync(CheckCloudResourceAuthorizedRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckCloudResourceAuthorizedWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccountResponse
-         */
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public CreateAccountResponse CreateAccountWithOptions(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -805,11 +942,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAccountResponse
-         */
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public async Task<CreateAccountResponse> CreateAccountWithOptionsAsync(CreateAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -869,31 +1011,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateAccountRequest
-         * @return CreateAccountResponse
-         */
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public CreateAccountResponse CreateAccount(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateAccountRequest
-         * @return CreateAccountResponse
-         */
+        /// <param name="request">
+        /// CreateAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAccountResponse
+        /// </returns>
         public async Task<CreateAccountResponse> CreateAccountAsync(CreateAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateBackupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBackupResponse
-         */
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public CreateBackupResponse CreateBackupWithOptions(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -929,11 +1082,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateBackupRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBackupResponse
-         */
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public async Task<CreateBackupResponse> CreateBackupWithOptionsAsync(CreateBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -969,31 +1127,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateBackupRequest
-         * @return CreateBackupResponse
-         */
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public CreateBackupResponse CreateBackup(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBackupWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateBackupRequest
-         * @return CreateBackupResponse
-         */
+        /// <param name="request">
+        /// CreateBackupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackupResponse
+        /// </returns>
         public async Task<CreateBackupResponse> CreateBackupAsync(CreateBackupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBackupWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateDBRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDBResponse
-         */
+        /// <param name="request">
+        /// CreateDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBResponse
+        /// </returns>
         public CreateDBResponse CreateDBWithOptions(CreateDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1061,11 +1230,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateDBResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateDBRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDBResponse
-         */
+        /// <param name="request">
+        /// CreateDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBResponse
+        /// </returns>
         public async Task<CreateDBResponse> CreateDBWithOptionsAsync(CreateDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1133,34 +1307,51 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateDBRequest
-         * @return CreateDBResponse
-         */
+        /// <param name="request">
+        /// CreateDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBResponse
+        /// </returns>
         public CreateDBResponse CreateDB(CreateDBRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateDBRequest
-         * @return CreateDBResponse
-         */
+        /// <param name="request">
+        /// CreateDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBResponse
+        /// </returns>
         public async Task<CreateDBResponse> CreateDBAsync(CreateDBRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDBInstanceResponse
-         */
-        public CreateDBInstanceResponse CreateDBInstanceWithOptions(CreateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="tmpReq">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
+        public CreateDBInstanceResponse CreateDBInstanceWithOptions(CreateDBInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBInstanceShrinkRequest request = new CreateDBInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtraParams))
+            {
+                request.ExtraParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtraParams, "ExtraParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -1201,6 +1392,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParamsShrink))
+            {
+                query["ExtraParams"] = request.ExtraParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsColumnarReadDBInstance))
             {
@@ -1289,14 +1484,25 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDBInstanceResponse
-         */
-        public async Task<CreateDBInstanceResponse> CreateDBInstanceWithOptionsAsync(CreateDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <param name="tmpReq">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
+        public async Task<CreateDBInstanceResponse> CreateDBInstanceWithOptionsAsync(CreateDBInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBInstanceShrinkRequest request = new CreateDBInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtraParams))
+            {
+                request.ExtraParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtraParams, "ExtraParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -1337,6 +1543,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParamsShrink))
+            {
+                query["ExtraParams"] = request.ExtraParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsColumnarReadDBInstance))
             {
@@ -1425,31 +1635,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateDBInstanceRequest
-         * @return CreateDBInstanceResponse
-         */
+        /// <param name="request">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
         public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateDBInstanceRequest
-         * @return CreateDBInstanceResponse
-         */
+        /// <param name="request">
+        /// CreateDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceResponse
+        /// </returns>
         public async Task<CreateDBInstanceResponse> CreateDBInstanceAsync(CreateDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateSuperAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSuperAccountResponse
-         */
+        /// <param name="request">
+        /// CreateSuperAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSuperAccountResponse
+        /// </returns>
         public CreateSuperAccountResponse CreateSuperAccountWithOptions(CreateSuperAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1493,11 +1714,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateSuperAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateSuperAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSuperAccountResponse
-         */
+        /// <param name="request">
+        /// CreateSuperAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSuperAccountResponse
+        /// </returns>
         public async Task<CreateSuperAccountResponse> CreateSuperAccountWithOptionsAsync(CreateSuperAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1541,31 +1767,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateSuperAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateSuperAccountRequest
-         * @return CreateSuperAccountResponse
-         */
+        /// <param name="request">
+        /// CreateSuperAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSuperAccountResponse
+        /// </returns>
         public CreateSuperAccountResponse CreateSuperAccount(CreateSuperAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSuperAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateSuperAccountRequest
-         * @return CreateSuperAccountResponse
-         */
+        /// <param name="request">
+        /// CreateSuperAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSuperAccountResponse
+        /// </returns>
         public async Task<CreateSuperAccountResponse> CreateSuperAccountAsync(CreateSuperAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSuperAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DeleteAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccountResponse
-         */
+        /// <param name="request">
+        /// DeleteAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1609,11 +1846,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteAccountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAccountResponse
-         */
+        /// <param name="request">
+        /// DeleteAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1657,31 +1899,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteAccountRequest
-         * @return DeleteAccountResponse
-         */
+        /// <param name="request">
+        /// DeleteAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteAccountWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DeleteAccountRequest
-         * @return DeleteAccountResponse
-         */
+        /// <param name="request">
+        /// DeleteAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAccountResponse
+        /// </returns>
         public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAccountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DeleteDBRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDBResponse
-         */
+        /// <param name="request">
+        /// DeleteDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBResponse
+        /// </returns>
         public DeleteDBResponse DeleteDBWithOptions(DeleteDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1717,11 +1970,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteDBRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDBResponse
-         */
+        /// <param name="request">
+        /// DeleteDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBResponse
+        /// </returns>
         public async Task<DeleteDBResponse> DeleteDBWithOptionsAsync(DeleteDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1757,31 +2015,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteDBRequest
-         * @return DeleteDBResponse
-         */
+        /// <param name="request">
+        /// DeleteDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBResponse
+        /// </returns>
         public DeleteDBResponse DeleteDB(DeleteDBRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DeleteDBRequest
-         * @return DeleteDBResponse
-         */
+        /// <param name="request">
+        /// DeleteDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBResponse
+        /// </returns>
         public async Task<DeleteDBResponse> DeleteDBAsync(DeleteDBRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDBWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DeleteDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDBInstanceResponse
-         */
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public DeleteDBInstanceResponse DeleteDBInstanceWithOptions(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1813,11 +2082,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDBInstanceResponse
-         */
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceWithOptionsAsync(DeleteDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1849,31 +2123,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteDBInstanceRequest
-         * @return DeleteDBInstanceResponse
-         */
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public DeleteDBInstanceResponse DeleteDBInstance(DeleteDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DeleteDBInstanceRequest
-         * @return DeleteDBInstanceResponse
-         */
+        /// <param name="request">
+        /// DeleteDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceResponse
+        /// </returns>
         public async Task<DeleteDBInstanceResponse> DeleteDBInstanceAsync(DeleteDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeAccountListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccountListResponse
-         */
+        /// <param name="request">
+        /// DescribeAccountListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountListResponse
+        /// </returns>
         public DescribeAccountListResponse DescribeAccountListWithOptions(DescribeAccountListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1913,11 +2198,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeAccountListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeAccountListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAccountListResponse
-         */
+        /// <param name="request">
+        /// DescribeAccountListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountListResponse
+        /// </returns>
         public async Task<DescribeAccountListResponse> DescribeAccountListWithOptionsAsync(DescribeAccountListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1957,33 +2247,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeAccountListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeAccountListRequest
-         * @return DescribeAccountListResponse
-         */
+        /// <param name="request">
+        /// DescribeAccountListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountListResponse
+        /// </returns>
         public DescribeAccountListResponse DescribeAccountList(DescribeAccountListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAccountListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeAccountListRequest
-         * @return DescribeAccountListResponse
-         */
+        /// <param name="request">
+        /// DescribeAccountListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccountListResponse
+        /// </returns>
         public async Task<DescribeAccountListResponse> DescribeAccountListAsync(DescribeAccountListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccountListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 展示全局运维窗口配置
-         *
-         * @param request DescribeActiveOperationMaintainConfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示全局运维窗口配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationMaintainConfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationMaintainConfResponse
+        /// </returns>
         public DescribeActiveOperationMaintainConfResponse DescribeActiveOperationMaintainConfWithOptions(DescribeActiveOperationMaintainConfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2011,13 +2315,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeActiveOperationMaintainConfResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 展示全局运维窗口配置
-         *
-         * @param request DescribeActiveOperationMaintainConfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示全局运维窗口配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationMaintainConfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationMaintainConfResponse
+        /// </returns>
         public async Task<DescribeActiveOperationMaintainConfResponse> DescribeActiveOperationMaintainConfWithOptionsAsync(DescribeActiveOperationMaintainConfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2045,37 +2357,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeActiveOperationMaintainConfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 展示全局运维窗口配置
-         *
-         * @param request DescribeActiveOperationMaintainConfRequest
-         * @return DescribeActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示全局运维窗口配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationMaintainConfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationMaintainConfResponse
+        /// </returns>
         public DescribeActiveOperationMaintainConfResponse DescribeActiveOperationMaintainConf(DescribeActiveOperationMaintainConfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActiveOperationMaintainConfWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 展示全局运维窗口配置
-         *
-         * @param request DescribeActiveOperationMaintainConfRequest
-         * @return DescribeActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示全局运维窗口配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationMaintainConfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationMaintainConfResponse
+        /// </returns>
         public async Task<DescribeActiveOperationMaintainConfResponse> DescribeActiveOperationMaintainConfAsync(DescribeActiveOperationMaintainConfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActiveOperationMaintainConfWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取主动运维任务数量
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取主动运维任务数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public DescribeActiveOperationTaskCountResponse DescribeActiveOperationTaskCountWithOptions(DescribeActiveOperationTaskCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2099,13 +2431,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeActiveOperationTaskCountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取主动运维任务数量
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取主动运维任务数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTaskCountResponse> DescribeActiveOperationTaskCountWithOptionsAsync(DescribeActiveOperationTaskCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2129,37 +2469,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeActiveOperationTaskCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取主动运维任务数量
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取主动运维任务数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public DescribeActiveOperationTaskCountResponse DescribeActiveOperationTaskCount(DescribeActiveOperationTaskCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActiveOperationTaskCountWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取主动运维任务数量
-         *
-         * @param request DescribeActiveOperationTaskCountRequest
-         * @return DescribeActiveOperationTaskCountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取主动运维任务数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTaskCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTaskCountResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTaskCountResponse> DescribeActiveOperationTaskCountAsync(DescribeActiveOperationTaskCountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActiveOperationTaskCountWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取待执行自动运维任务列表
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取待执行自动运维任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public DescribeActiveOperationTasksResponse DescribeActiveOperationTasksWithOptions(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2183,13 +2543,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取待执行自动运维任务列表
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取待执行自动运维任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksWithOptionsAsync(DescribeActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2213,37 +2581,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取待执行自动运维任务列表
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取待执行自动运维任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public DescribeActiveOperationTasksResponse DescribeActiveOperationTasks(DescribeActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeActiveOperationTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取待执行自动运维任务列表
-         *
-         * @param request DescribeActiveOperationTasksRequest
-         * @return DescribeActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取待执行自动运维任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeActiveOperationTasksResponse
+        /// </returns>
         public async Task<DescribeActiveOperationTasksResponse> DescribeActiveOperationTasksAsync(DescribeActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 冷存储表列表
-         *
-         * @param request DescribeArchiveTableListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeArchiveTableListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArchiveTableListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArchiveTableListResponse
+        /// </returns>
         public DescribeArchiveTableListResponse DescribeArchiveTableListWithOptions(DescribeArchiveTableListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2295,13 +2683,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeArchiveTableListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 冷存储表列表
-         *
-         * @param request DescribeArchiveTableListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeArchiveTableListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArchiveTableListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArchiveTableListResponse
+        /// </returns>
         public async Task<DescribeArchiveTableListResponse> DescribeArchiveTableListWithOptionsAsync(DescribeArchiveTableListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2353,35 +2749,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeArchiveTableListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 冷存储表列表
-         *
-         * @param request DescribeArchiveTableListRequest
-         * @return DescribeArchiveTableListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArchiveTableListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArchiveTableListResponse
+        /// </returns>
         public DescribeArchiveTableListResponse DescribeArchiveTableList(DescribeArchiveTableListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeArchiveTableListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 冷存储表列表
-         *
-         * @param request DescribeArchiveTableListRequest
-         * @return DescribeArchiveTableListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArchiveTableListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArchiveTableListResponse
+        /// </returns>
         public async Task<DescribeArchiveTableListResponse> DescribeArchiveTableListAsync(DescribeArchiveTableListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeArchiveTableListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public DescribeBackupPolicyResponse DescribeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2413,11 +2826,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyWithOptionsAsync(DescribeBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2449,33 +2867,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeBackupPolicyRequest
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public DescribeBackupPolicyResponse DescribeBackupPolicy(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeBackupPolicyRequest
-         * @return DescribeBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupPolicyResponse
+        /// </returns>
         public async Task<DescribeBackupPolicyResponse> DescribeBackupPolicyAsync(DescribeBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 备份集详情
-         *
-         * @param request DescribeBackupSetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupSetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>备份集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetResponse
+        /// </returns>
         public DescribeBackupSetResponse DescribeBackupSetWithOptions(DescribeBackupSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2515,13 +2947,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupSetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 备份集详情
-         *
-         * @param request DescribeBackupSetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupSetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>备份集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetResponse
+        /// </returns>
         public async Task<DescribeBackupSetResponse> DescribeBackupSetWithOptionsAsync(DescribeBackupSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2561,35 +3001,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupSetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 备份集详情
-         *
-         * @param request DescribeBackupSetRequest
-         * @return DescribeBackupSetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>备份集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetResponse
+        /// </returns>
         public DescribeBackupSetResponse DescribeBackupSet(DescribeBackupSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupSetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 备份集详情
-         *
-         * @param request DescribeBackupSetRequest
-         * @return DescribeBackupSetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>备份集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBackupSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetResponse
+        /// </returns>
         public async Task<DescribeBackupSetResponse> DescribeBackupSetAsync(DescribeBackupSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupSetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeBackupSetListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupSetListResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupSetListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetListResponse
+        /// </returns>
         public DescribeBackupSetListResponse DescribeBackupSetListWithOptions(DescribeBackupSetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2613,11 +3070,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupSetListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeBackupSetListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBackupSetListResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupSetListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetListResponse
+        /// </returns>
         public async Task<DescribeBackupSetListResponse> DescribeBackupSetListWithOptionsAsync(DescribeBackupSetListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2641,31 +3103,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupSetListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeBackupSetListRequest
-         * @return DescribeBackupSetListResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupSetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetListResponse
+        /// </returns>
         public DescribeBackupSetListResponse DescribeBackupSetList(DescribeBackupSetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBackupSetListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeBackupSetListRequest
-         * @return DescribeBackupSetListResponse
-         */
+        /// <param name="request">
+        /// DescribeBackupSetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBackupSetListResponse
+        /// </returns>
         public async Task<DescribeBackupSetListResponse> DescribeBackupSetListAsync(DescribeBackupSetListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupSetListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeBinaryLogListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBinaryLogListResponse
-         */
+        /// <param name="request">
+        /// DescribeBinaryLogListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinaryLogListResponse
+        /// </returns>
         public DescribeBinaryLogListResponse DescribeBinaryLogListWithOptions(DescribeBinaryLogListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2717,11 +3190,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBinaryLogListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeBinaryLogListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeBinaryLogListResponse
-         */
+        /// <param name="request">
+        /// DescribeBinaryLogListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinaryLogListResponse
+        /// </returns>
         public async Task<DescribeBinaryLogListResponse> DescribeBinaryLogListWithOptionsAsync(DescribeBinaryLogListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2773,31 +3251,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBinaryLogListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeBinaryLogListRequest
-         * @return DescribeBinaryLogListResponse
-         */
+        /// <param name="request">
+        /// DescribeBinaryLogListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinaryLogListResponse
+        /// </returns>
         public DescribeBinaryLogListResponse DescribeBinaryLogList(DescribeBinaryLogListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBinaryLogListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeBinaryLogListRequest
-         * @return DescribeBinaryLogListResponse
-         */
+        /// <param name="request">
+        /// DescribeBinaryLogListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinaryLogListResponse
+        /// </returns>
         public async Task<DescribeBinaryLogListResponse> DescribeBinaryLogListAsync(DescribeBinaryLogListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBinaryLogListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeCharacterSetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCharacterSetResponse
-         */
+        /// <param name="request">
+        /// DescribeCharacterSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCharacterSetResponse
+        /// </returns>
         public DescribeCharacterSetResponse DescribeCharacterSetWithOptions(DescribeCharacterSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2829,11 +3318,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeCharacterSetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeCharacterSetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeCharacterSetResponse
-         */
+        /// <param name="request">
+        /// DescribeCharacterSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCharacterSetResponse
+        /// </returns>
         public async Task<DescribeCharacterSetResponse> DescribeCharacterSetWithOptionsAsync(DescribeCharacterSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2865,33 +3359,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeCharacterSetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeCharacterSetRequest
-         * @return DescribeCharacterSetResponse
-         */
+        /// <param name="request">
+        /// DescribeCharacterSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCharacterSetResponse
+        /// </returns>
         public DescribeCharacterSetResponse DescribeCharacterSet(DescribeCharacterSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCharacterSetWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeCharacterSetRequest
-         * @return DescribeCharacterSetResponse
-         */
+        /// <param name="request">
+        /// DescribeCharacterSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCharacterSetResponse
+        /// </returns>
         public async Task<DescribeCharacterSetResponse> DescribeCharacterSetAsync(DescribeCharacterSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCharacterSetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 冷存储基础信息
-         *
-         * @param request DescribeColdDataBasicInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeColdDataBasicInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeColdDataBasicInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeColdDataBasicInfoResponse
+        /// </returns>
         public DescribeColdDataBasicInfoResponse DescribeColdDataBasicInfoWithOptions(DescribeColdDataBasicInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2915,13 +3423,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeColdDataBasicInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 冷存储基础信息
-         *
-         * @param request DescribeColdDataBasicInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeColdDataBasicInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeColdDataBasicInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeColdDataBasicInfoResponse
+        /// </returns>
         public async Task<DescribeColdDataBasicInfoResponse> DescribeColdDataBasicInfoWithOptionsAsync(DescribeColdDataBasicInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2945,35 +3461,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeColdDataBasicInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 冷存储基础信息
-         *
-         * @param request DescribeColdDataBasicInfoRequest
-         * @return DescribeColdDataBasicInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeColdDataBasicInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeColdDataBasicInfoResponse
+        /// </returns>
         public DescribeColdDataBasicInfoResponse DescribeColdDataBasicInfo(DescribeColdDataBasicInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeColdDataBasicInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 冷存储基础信息
-         *
-         * @param request DescribeColdDataBasicInfoRequest
-         * @return DescribeColdDataBasicInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>冷存储基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeColdDataBasicInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeColdDataBasicInfoResponse
+        /// </returns>
         public async Task<DescribeColdDataBasicInfoResponse> DescribeColdDataBasicInfoAsync(DescribeColdDataBasicInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeColdDataBasicInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttributeWithOptions(DescribeDBInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3009,11 +3542,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public async Task<DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttributeWithOptionsAsync(DescribeDBInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3049,31 +3587,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceAttributeRequest
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttribute(DescribeDBInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceAttributeWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceAttributeRequest
-         * @return DescribeDBInstanceAttributeResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceAttributeResponse
+        /// </returns>
         public async Task<DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttributeAsync(DescribeDBInstanceAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceConfigResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceConfigResponse
+        /// </returns>
         public DescribeDBInstanceConfigResponse DescribeDBInstanceConfigWithOptions(DescribeDBInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3109,11 +3658,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceConfigResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceConfigResponse
+        /// </returns>
         public async Task<DescribeDBInstanceConfigResponse> DescribeDBInstanceConfigWithOptionsAsync(DescribeDBInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3149,31 +3703,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceConfigRequest
-         * @return DescribeDBInstanceConfigResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceConfigResponse
+        /// </returns>
         public DescribeDBInstanceConfigResponse DescribeDBInstanceConfig(DescribeDBInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceConfigRequest
-         * @return DescribeDBInstanceConfigResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceConfigResponse
+        /// </returns>
         public async Task<DescribeDBInstanceConfigResponse> DescribeDBInstanceConfigAsync(DescribeDBInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceHARequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceHARequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceHAResponse
+        /// </returns>
         public DescribeDBInstanceHAResponse DescribeDBInstanceHAWithOptions(DescribeDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3205,11 +3770,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceHAResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceHARequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceHARequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceHAResponse
+        /// </returns>
         public async Task<DescribeDBInstanceHAResponse> DescribeDBInstanceHAWithOptionsAsync(DescribeDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3241,31 +3811,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceHAResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceHARequest
-         * @return DescribeDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceHARequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceHAResponse
+        /// </returns>
         public DescribeDBInstanceHAResponse DescribeDBInstanceHA(DescribeDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceHAWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceHARequest
-         * @return DescribeDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceHARequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceHAResponse
+        /// </returns>
         public async Task<DescribeDBInstanceHAResponse> DescribeDBInstanceHAAsync(DescribeDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceHAWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSLWithOptions(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3297,11 +3878,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLWithOptionsAsync(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3333,31 +3919,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceSSLRequest
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSL(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceSSLWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceSSLRequest
-         * @return DescribeDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSSLResponse
+        /// </returns>
         public async Task<DescribeDBInstanceSSLResponse> DescribeDBInstanceSSLAsync(DescribeDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceTDERequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTDERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEResponse
+        /// </returns>
         public DescribeDBInstanceTDEResponse DescribeDBInstanceTDEWithOptions(DescribeDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3389,11 +3986,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceTDERequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTDERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEResponse
+        /// </returns>
         public async Task<DescribeDBInstanceTDEResponse> DescribeDBInstanceTDEWithOptionsAsync(DescribeDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3425,31 +4027,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceTDERequest
-         * @return DescribeDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTDERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEResponse
+        /// </returns>
         public DescribeDBInstanceTDEResponse DescribeDBInstanceTDE(DescribeDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceTDEWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceTDERequest
-         * @return DescribeDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTDERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTDEResponse
+        /// </returns>
         public async Task<DescribeDBInstanceTDEResponse> DescribeDBInstanceTDEAsync(DescribeDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceTDEWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceTopologyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceTopologyResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTopologyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTopologyResponse
+        /// </returns>
         public DescribeDBInstanceTopologyResponse DescribeDBInstanceTopologyWithOptions(DescribeDBInstanceTopologyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3461,6 +4074,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinuteSimple))
+            {
+                query["MinuteSimple"] = request.MinuteSimple;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3489,11 +4106,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceTopologyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceTopologyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceTopologyResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTopologyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTopologyResponse
+        /// </returns>
         public async Task<DescribeDBInstanceTopologyResponse> DescribeDBInstanceTopologyWithOptionsAsync(DescribeDBInstanceTopologyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3505,6 +4127,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinuteSimple))
+            {
+                query["MinuteSimple"] = request.MinuteSimple;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3533,33 +4159,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceTopologyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstanceTopologyRequest
-         * @return DescribeDBInstanceTopologyResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTopologyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTopologyResponse
+        /// </returns>
         public DescribeDBInstanceTopologyResponse DescribeDBInstanceTopology(DescribeDBInstanceTopologyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceTopologyWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstanceTopologyRequest
-         * @return DescribeDBInstanceTopologyResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstanceTopologyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceTopologyResponse
+        /// </returns>
         public async Task<DescribeDBInstanceTopologyResponse> DescribeDBInstanceTopologyAsync(DescribeDBInstanceTopologyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceTopologyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 通过Endpoint查询实例
-         *
-         * @param request DescribeDBInstanceViaEndpointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceViaEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过Endpoint查询实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceViaEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceViaEndpointResponse
+        /// </returns>
         public DescribeDBInstanceViaEndpointResponse DescribeDBInstanceViaEndpointWithOptions(DescribeDBInstanceViaEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3591,13 +4231,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceViaEndpointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过Endpoint查询实例
-         *
-         * @param request DescribeDBInstanceViaEndpointRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstanceViaEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过Endpoint查询实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceViaEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceViaEndpointResponse
+        /// </returns>
         public async Task<DescribeDBInstanceViaEndpointResponse> DescribeDBInstanceViaEndpointWithOptionsAsync(DescribeDBInstanceViaEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3629,39 +4277,60 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceViaEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过Endpoint查询实例
-         *
-         * @param request DescribeDBInstanceViaEndpointRequest
-         * @return DescribeDBInstanceViaEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过Endpoint查询实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceViaEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceViaEndpointResponse
+        /// </returns>
         public DescribeDBInstanceViaEndpointResponse DescribeDBInstanceViaEndpoint(DescribeDBInstanceViaEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstanceViaEndpointWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 通过Endpoint查询实例
-         *
-         * @param request DescribeDBInstanceViaEndpointRequest
-         * @return DescribeDBInstanceViaEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过Endpoint查询实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceViaEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceViaEndpointResponse
+        /// </returns>
         public async Task<DescribeDBInstanceViaEndpointResponse> DescribeDBInstanceViaEndpointAsync(DescribeDBInstanceViaEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstanceViaEndpointWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancesResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public DescribeDBInstancesResponse DescribeDBInstancesWithOptions(DescribeDBInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbVersion))
+            {
+                query["DbVersion"] = request.DbVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -3713,15 +4382,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstancesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBInstancesResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesWithOptionsAsync(DescribeDBInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbVersion))
+            {
+                query["DbVersion"] = request.DbVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -3773,31 +4451,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBInstancesRequest
-         * @return DescribeDBInstancesResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBInstancesRequest
-         * @return DescribeDBInstancesResponse
-         */
+        /// <param name="request">
+        /// DescribeDBInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstancesResponse
+        /// </returns>
         public async Task<DescribeDBInstancesResponse> DescribeDBInstancesAsync(DescribeDBInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBNodePerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBNodePerformanceResponse
-         */
+        /// <param name="request">
+        /// DescribeDBNodePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBNodePerformanceResponse
+        /// </returns>
         public DescribeDBNodePerformanceResponse DescribeDBNodePerformanceWithOptions(DescribeDBNodePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3853,11 +4542,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBNodePerformanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBNodePerformanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDBNodePerformanceResponse
-         */
+        /// <param name="request">
+        /// DescribeDBNodePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBNodePerformanceResponse
+        /// </returns>
         public async Task<DescribeDBNodePerformanceResponse> DescribeDBNodePerformanceWithOptionsAsync(DescribeDBNodePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3913,31 +4607,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBNodePerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDBNodePerformanceRequest
-         * @return DescribeDBNodePerformanceResponse
-         */
+        /// <param name="request">
+        /// DescribeDBNodePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBNodePerformanceResponse
+        /// </returns>
         public DescribeDBNodePerformanceResponse DescribeDBNodePerformance(DescribeDBNodePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBNodePerformanceWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDBNodePerformanceRequest
-         * @return DescribeDBNodePerformanceResponse
-         */
+        /// <param name="request">
+        /// DescribeDBNodePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBNodePerformanceResponse
+        /// </returns>
         public async Task<DescribeDBNodePerformanceResponse> DescribeDBNodePerformanceAsync(DescribeDBNodePerformanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDBNodePerformanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDbListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDbListResponse
-         */
+        /// <param name="request">
+        /// DescribeDbListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDbListResponse
+        /// </returns>
         public DescribeDbListResponse DescribeDbListWithOptions(DescribeDbListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3973,11 +4678,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDbListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDbListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDbListResponse
-         */
+        /// <param name="request">
+        /// DescribeDbListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDbListResponse
+        /// </returns>
         public async Task<DescribeDbListResponse> DescribeDbListWithOptionsAsync(DescribeDbListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4013,31 +4723,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDbListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDbListRequest
-         * @return DescribeDbListResponse
-         */
+        /// <param name="request">
+        /// DescribeDbListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDbListResponse
+        /// </returns>
         public DescribeDbListResponse DescribeDbList(DescribeDbListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDbListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDbListRequest
-         * @return DescribeDbListResponse
-         */
+        /// <param name="request">
+        /// DescribeDbListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDbListResponse
+        /// </returns>
         public async Task<DescribeDbListResponse> DescribeDbListAsync(DescribeDbListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDbListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeDistributeTableListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDistributeTableListResponse
-         */
+        /// <param name="request">
+        /// DescribeDistributeTableListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDistributeTableListResponse
+        /// </returns>
         public DescribeDistributeTableListResponse DescribeDistributeTableListWithOptions(DescribeDistributeTableListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4073,11 +4794,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDistributeTableListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDistributeTableListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeDistributeTableListResponse
-         */
+        /// <param name="request">
+        /// DescribeDistributeTableListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDistributeTableListResponse
+        /// </returns>
         public async Task<DescribeDistributeTableListResponse> DescribeDistributeTableListWithOptionsAsync(DescribeDistributeTableListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4113,33 +4839,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDistributeTableListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeDistributeTableListRequest
-         * @return DescribeDistributeTableListResponse
-         */
+        /// <param name="request">
+        /// DescribeDistributeTableListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDistributeTableListResponse
+        /// </returns>
         public DescribeDistributeTableListResponse DescribeDistributeTableList(DescribeDistributeTableListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDistributeTableListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeDistributeTableListRequest
-         * @return DescribeDistributeTableListResponse
-         */
+        /// <param name="request">
+        /// DescribeDistributeTableListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDistributeTableListResponse
+        /// </returns>
         public async Task<DescribeDistributeTableListResponse> DescribeDistributeTableListAsync(DescribeDistributeTableListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDistributeTableListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 历史事件
-         *
-         * @param request DescribeEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
         public DescribeEventsResponse DescribeEventsWithOptions(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4163,13 +4903,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeEventsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 历史事件
-         *
-         * @param request DescribeEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
         public async Task<DescribeEventsResponse> DescribeEventsWithOptionsAsync(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4193,35 +4941,188 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 历史事件
-         *
-         * @param request DescribeEventsRequest
-         * @return DescribeEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
         public DescribeEventsResponse DescribeEvents(DescribeEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEventsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 历史事件
-         *
-         * @param request DescribeEventsRequest
-         * @return DescribeEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
         public async Task<DescribeEventsResponse> DescribeEventsAsync(DescribeEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEventsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeParameterTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开放商业备份集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOpenBackupSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOpenBackupSetResponse
+        /// </returns>
+        public DescribeOpenBackupSetResponse DescribeOpenBackupSetWithOptions(DescribeOpenBackupSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOpenBackupSet",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOpenBackupSetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开放商业备份集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOpenBackupSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOpenBackupSetResponse
+        /// </returns>
+        public async Task<DescribeOpenBackupSetResponse> DescribeOpenBackupSetWithOptionsAsync(DescribeOpenBackupSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOpenBackupSet",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOpenBackupSetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开放商业备份集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOpenBackupSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOpenBackupSetResponse
+        /// </returns>
+        public DescribeOpenBackupSetResponse DescribeOpenBackupSet(DescribeOpenBackupSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeOpenBackupSetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开放商业备份集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOpenBackupSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOpenBackupSetResponse
+        /// </returns>
+        public async Task<DescribeOpenBackupSetResponse> DescribeOpenBackupSetAsync(DescribeOpenBackupSetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeOpenBackupSetWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public DescribeParameterTemplatesResponse DescribeParameterTemplatesWithOptions(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4229,6 +5130,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamLevel))
             {
@@ -4257,11 +5162,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeParameterTemplatesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesWithOptionsAsync(DescribeParameterTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4269,6 +5179,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamLevel))
             {
@@ -4297,31 +5211,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeParameterTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeParameterTemplatesRequest
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public DescribeParameterTemplatesResponse DescribeParameterTemplates(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParameterTemplatesWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeParameterTemplatesRequest
-         * @return DescribeParameterTemplatesResponse
-         */
+        /// <param name="request">
+        /// DescribeParameterTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTemplatesResponse
+        /// </returns>
         public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplatesAsync(DescribeParameterTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterTemplatesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParametersResponse
-         */
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public DescribeParametersResponse DescribeParametersWithOptions(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4357,11 +5282,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeParametersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeParametersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeParametersResponse
-         */
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public async Task<DescribeParametersResponse> DescribeParametersWithOptionsAsync(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4397,31 +5327,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeParametersRequest
-         * @return DescribeParametersResponse
-         */
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public DescribeParametersResponse DescribeParameters(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeParametersWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeParametersRequest
-         * @return DescribeParametersResponse
-         */
+        /// <param name="request">
+        /// DescribeParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParametersResponse
+        /// </returns>
         public async Task<DescribeParametersResponse> DescribeParametersAsync(DescribeParametersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParametersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4440,11 +5381,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4463,29 +5409,34 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return DescribeRegionsResponse
-         */
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(runtime);
         }
 
-        /**
-         * @return DescribeRegionsResponse
-         */
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(runtime);
         }
 
-        /**
-         * @param request DescribeScaleOutMigrateTaskListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeScaleOutMigrateTaskListResponse
-         */
+        /// <param name="request">
+        /// DescribeScaleOutMigrateTaskListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScaleOutMigrateTaskListResponse
+        /// </returns>
         public DescribeScaleOutMigrateTaskListResponse DescribeScaleOutMigrateTaskListWithOptions(DescribeScaleOutMigrateTaskListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4533,11 +5484,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeScaleOutMigrateTaskListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeScaleOutMigrateTaskListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeScaleOutMigrateTaskListResponse
-         */
+        /// <param name="request">
+        /// DescribeScaleOutMigrateTaskListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScaleOutMigrateTaskListResponse
+        /// </returns>
         public async Task<DescribeScaleOutMigrateTaskListResponse> DescribeScaleOutMigrateTaskListWithOptionsAsync(DescribeScaleOutMigrateTaskListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4585,31 +5541,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeScaleOutMigrateTaskListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeScaleOutMigrateTaskListRequest
-         * @return DescribeScaleOutMigrateTaskListResponse
-         */
+        /// <param name="request">
+        /// DescribeScaleOutMigrateTaskListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScaleOutMigrateTaskListResponse
+        /// </returns>
         public DescribeScaleOutMigrateTaskListResponse DescribeScaleOutMigrateTaskList(DescribeScaleOutMigrateTaskListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeScaleOutMigrateTaskListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeScaleOutMigrateTaskListRequest
-         * @return DescribeScaleOutMigrateTaskListResponse
-         */
+        /// <param name="request">
+        /// DescribeScaleOutMigrateTaskListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeScaleOutMigrateTaskListResponse
+        /// </returns>
         public async Task<DescribeScaleOutMigrateTaskListResponse> DescribeScaleOutMigrateTaskListAsync(DescribeScaleOutMigrateTaskListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeScaleOutMigrateTaskListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeSecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public DescribeSecurityIpsResponse DescribeSecurityIpsWithOptions(DescribeSecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4641,11 +5608,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public async Task<DescribeSecurityIpsResponse> DescribeSecurityIpsWithOptionsAsync(DescribeSecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4677,33 +5649,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeSecurityIpsRequest
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public DescribeSecurityIpsResponse DescribeSecurityIps(DescribeSecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSecurityIpsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeSecurityIpsRequest
-         * @return DescribeSecurityIpsResponse
-         */
+        /// <param name="request">
+        /// DescribeSecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIpsResponse
+        /// </returns>
         public async Task<DescribeSecurityIpsResponse> DescribeSecurityIpsAsync(DescribeSecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSecurityIpsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 标签列表查询
-         *
-         * @param request DescribeTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public DescribeTagsResponse DescribeTagsWithOptions(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4739,13 +5725,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeTagsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 标签列表查询
-         *
-         * @param request DescribeTagsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public async Task<DescribeTagsResponse> DescribeTagsWithOptionsAsync(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4781,35 +5775,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 标签列表查询
-         *
-         * @param request DescribeTagsRequest
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public DescribeTagsResponse DescribeTags(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTagsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 标签列表查询
-         *
-         * @param request DescribeTagsRequest
-         * @return DescribeTagsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTagsResponse
+        /// </returns>
         public async Task<DescribeTagsResponse> DescribeTagsAsync(DescribeTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTagsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTasksResponse
-         */
+        /// <param name="request">
+        /// DescribeTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTasksResponse
+        /// </returns>
         public DescribeTasksResponse DescribeTasksWithOptions(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4873,11 +5884,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeTasksResponse
-         */
+        /// <param name="request">
+        /// DescribeTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTasksResponse
+        /// </returns>
         public async Task<DescribeTasksResponse> DescribeTasksWithOptionsAsync(DescribeTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4941,31 +5957,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeTasksRequest
-         * @return DescribeTasksResponse
-         */
+        /// <param name="request">
+        /// DescribeTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTasksResponse
+        /// </returns>
         public DescribeTasksResponse DescribeTasks(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeTasksRequest
-         * @return DescribeTasksResponse
-         */
+        /// <param name="request">
+        /// DescribeTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTasksResponse
+        /// </returns>
         public async Task<DescribeTasksResponse> DescribeTasksAsync(DescribeTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyListWithOptions(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4997,11 +6024,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListWithOptionsAsync(DescribeUserEncryptionKeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5033,31 +6065,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public DescribeUserEncryptionKeyListResponse DescribeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserEncryptionKeyListWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescribeUserEncryptionKeyListRequest
-         * @return DescribeUserEncryptionKeyListResponse
-         */
+        /// <param name="request">
+        /// DescribeUserEncryptionKeyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserEncryptionKeyListResponse
+        /// </returns>
         public async Task<DescribeUserEncryptionKeyListResponse> DescribeUserEncryptionKeyListAsync(DescribeUserEncryptionKeyListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserEncryptionKeyListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DisableRightsSeparationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableRightsSeparationResponse
-         */
+        /// <param name="request">
+        /// DisableRightsSeparationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRightsSeparationResponse
+        /// </returns>
         public DisableRightsSeparationResponse DisableRightsSeparationWithOptions(DisableRightsSeparationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5097,11 +6140,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DisableRightsSeparationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DisableRightsSeparationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableRightsSeparationResponse
-         */
+        /// <param name="request">
+        /// DisableRightsSeparationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRightsSeparationResponse
+        /// </returns>
         public async Task<DisableRightsSeparationResponse> DisableRightsSeparationWithOptionsAsync(DisableRightsSeparationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5141,33 +6189,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DisableRightsSeparationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DisableRightsSeparationRequest
-         * @return DisableRightsSeparationResponse
-         */
+        /// <param name="request">
+        /// DisableRightsSeparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRightsSeparationResponse
+        /// </returns>
         public DisableRightsSeparationResponse DisableRightsSeparation(DisableRightsSeparationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableRightsSeparationWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DisableRightsSeparationRequest
-         * @return DisableRightsSeparationResponse
-         */
+        /// <param name="request">
+        /// DisableRightsSeparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRightsSeparationResponse
+        /// </returns>
         public async Task<DisableRightsSeparationResponse> DisableRightsSeparationAsync(DisableRightsSeparationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableRightsSeparationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 开启三权分立
-         *
-         * @param request EnableRightsSeparationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableRightsSeparationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启三权分立</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRightsSeparationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRightsSeparationResponse
+        /// </returns>
         public EnableRightsSeparationResponse EnableRightsSeparationWithOptions(EnableRightsSeparationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5223,13 +6285,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<EnableRightsSeparationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 开启三权分立
-         *
-         * @param request EnableRightsSeparationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableRightsSeparationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启三权分立</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRightsSeparationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRightsSeparationResponse
+        /// </returns>
         public async Task<EnableRightsSeparationResponse> EnableRightsSeparationWithOptionsAsync(EnableRightsSeparationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5285,37 +6355,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<EnableRightsSeparationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 开启三权分立
-         *
-         * @param request EnableRightsSeparationRequest
-         * @return EnableRightsSeparationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启三权分立</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRightsSeparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRightsSeparationResponse
+        /// </returns>
         public EnableRightsSeparationResponse EnableRightsSeparation(EnableRightsSeparationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableRightsSeparationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 开启三权分立
-         *
-         * @param request EnableRightsSeparationRequest
-         * @return EnableRightsSeparationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启三权分立</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableRightsSeparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRightsSeparationResponse
+        /// </returns>
         public async Task<EnableRightsSeparationResponse> EnableRightsSeparationAsync(EnableRightsSeparationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableRightsSeparationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5359,13 +6449,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5409,35 +6507,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyAccountDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public ModifyAccountDescriptionResponse ModifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5477,11 +6592,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAccountDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionWithOptionsAsync(ModifyAccountDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5521,31 +6641,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAccountDescriptionRequest
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public ModifyAccountDescriptionResponse ModifyAccountDescription(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountDescriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyAccountDescriptionRequest
-         * @return ModifyAccountDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountDescriptionResponse
+        /// </returns>
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescriptionAsync(ModifyAccountDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyAccountPrivilegeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccountPrivilegeResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountPrivilegeResponse
+        /// </returns>
         public ModifyAccountPrivilegeResponse ModifyAccountPrivilegeWithOptions(ModifyAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5597,11 +6728,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountPrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAccountPrivilegeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAccountPrivilegeResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountPrivilegeResponse
+        /// </returns>
         public async Task<ModifyAccountPrivilegeResponse> ModifyAccountPrivilegeWithOptionsAsync(ModifyAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5653,33 +6789,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAccountPrivilegeRequest
-         * @return ModifyAccountPrivilegeResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountPrivilegeResponse
+        /// </returns>
         public ModifyAccountPrivilegeResponse ModifyAccountPrivilege(ModifyAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAccountPrivilegeWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyAccountPrivilegeRequest
-         * @return ModifyAccountPrivilegeResponse
-         */
+        /// <param name="request">
+        /// ModifyAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccountPrivilegeResponse
+        /// </returns>
         public async Task<ModifyAccountPrivilegeResponse> ModifyAccountPrivilegeAsync(ModifyAccountPrivilegeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAccountPrivilegeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改全局运维窗口信息
-         *
-         * @param request ModifyActiveOperationMaintainConfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改全局运维窗口信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationMaintainConfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationMaintainConfResponse
+        /// </returns>
         public ModifyActiveOperationMaintainConfResponse ModifyActiveOperationMaintainConfWithOptions(ModifyActiveOperationMaintainConfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5703,13 +6853,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyActiveOperationMaintainConfResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改全局运维窗口信息
-         *
-         * @param request ModifyActiveOperationMaintainConfRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改全局运维窗口信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationMaintainConfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationMaintainConfResponse
+        /// </returns>
         public async Task<ModifyActiveOperationMaintainConfResponse> ModifyActiveOperationMaintainConfWithOptionsAsync(ModifyActiveOperationMaintainConfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5733,37 +6891,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyActiveOperationMaintainConfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改全局运维窗口信息
-         *
-         * @param request ModifyActiveOperationMaintainConfRequest
-         * @return ModifyActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改全局运维窗口信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationMaintainConfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationMaintainConfResponse
+        /// </returns>
         public ModifyActiveOperationMaintainConfResponse ModifyActiveOperationMaintainConf(ModifyActiveOperationMaintainConfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyActiveOperationMaintainConfWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改全局运维窗口信息
-         *
-         * @param request ModifyActiveOperationMaintainConfRequest
-         * @return ModifyActiveOperationMaintainConfResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改全局运维窗口信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationMaintainConfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationMaintainConfResponse
+        /// </returns>
         public async Task<ModifyActiveOperationMaintainConfResponse> ModifyActiveOperationMaintainConfAsync(ModifyActiveOperationMaintainConfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyActiveOperationMaintainConfWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改主动运维任务
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public ModifyActiveOperationTasksResponse ModifyActiveOperationTasksWithOptions(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5803,13 +6981,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改主动运维任务
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksWithOptionsAsync(ModifyActiveOperationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5849,35 +7035,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改主动运维任务
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public ModifyActiveOperationTasksResponse ModifyActiveOperationTasks(ModifyActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyActiveOperationTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改主动运维任务
-         *
-         * @param request ModifyActiveOperationTasksRequest
-         * @return ModifyActiveOperationTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改主动运维任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyActiveOperationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyActiveOperationTasksResponse
+        /// </returns>
         public async Task<ModifyActiveOperationTasksResponse> ModifyActiveOperationTasksAsync(ModifyActiveOperationTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyDBInstanceClassRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceClassResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceClassRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceClassResponse
+        /// </returns>
         public ModifyDBInstanceClassResponse ModifyDBInstanceClassWithOptions(ModifyDBInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5941,11 +7144,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceClassResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDBInstanceClassRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceClassResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceClassRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceClassResponse
+        /// </returns>
         public async Task<ModifyDBInstanceClassResponse> ModifyDBInstanceClassWithOptionsAsync(ModifyDBInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6009,33 +7217,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceClassResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDBInstanceClassRequest
-         * @return ModifyDBInstanceClassResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceClassRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceClassResponse
+        /// </returns>
         public ModifyDBInstanceClassResponse ModifyDBInstanceClass(ModifyDBInstanceClassRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceClassWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyDBInstanceClassRequest
-         * @return ModifyDBInstanceClassResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceClassRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceClassResponse
+        /// </returns>
         public async Task<ModifyDBInstanceClassResponse> ModifyDBInstanceClassAsync(ModifyDBInstanceClassRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceClassWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyDBInstanceConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConfigResponse
+        /// </returns>
         public ModifyDBInstanceConfigResponse ModifyDBInstanceConfigWithOptions(ModifyDBInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6075,13 +7297,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyDBInstanceConfigRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConfigResponse
+        /// </returns>
         public async Task<ModifyDBInstanceConfigResponse> ModifyDBInstanceConfigWithOptionsAsync(ModifyDBInstanceConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6121,37 +7351,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyDBInstanceConfigRequest
-         * @return ModifyDBInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConfigResponse
+        /// </returns>
         public ModifyDBInstanceConfigResponse ModifyDBInstanceConfig(ModifyDBInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConfigWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改实例配置
-         *
-         * @param request ModifyDBInstanceConfigRequest
-         * @return ModifyDBInstanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConfigResponse
+        /// </returns>
         public async Task<ModifyDBInstanceConfigResponse> ModifyDBInstanceConfigAsync(ModifyDBInstanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceConfigWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改实例链接串
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例链接串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionStringWithOptions(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6195,13 +7445,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例链接串
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例链接串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringWithOptionsAsync(ModifyDBInstanceConnectionStringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6245,35 +7503,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例链接串
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例链接串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public ModifyDBInstanceConnectionStringResponse ModifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceConnectionStringWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改实例链接串
-         *
-         * @param request ModifyDBInstanceConnectionStringRequest
-         * @return ModifyDBInstanceConnectionStringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例链接串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceConnectionStringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceConnectionStringResponse
+        /// </returns>
         public async Task<ModifyDBInstanceConnectionStringResponse> ModifyDBInstanceConnectionStringAsync(ModifyDBInstanceConnectionStringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceConnectionStringWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public ModifyDBInstanceDescriptionResponse ModifyDBInstanceDescriptionWithOptions(ModifyDBInstanceDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6309,11 +7584,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public async Task<ModifyDBInstanceDescriptionResponse> ModifyDBInstanceDescriptionWithOptionsAsync(ModifyDBInstanceDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6349,31 +7629,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public ModifyDBInstanceDescriptionResponse ModifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDBInstanceDescriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyDBInstanceDescriptionRequest
-         * @return ModifyDBInstanceDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDBInstanceDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceDescriptionResponse
+        /// </returns>
         public async Task<ModifyDBInstanceDescriptionResponse> ModifyDBInstanceDescriptionAsync(ModifyDBInstanceDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceDescriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyDatabaseDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDatabaseDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDatabaseDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseDescriptionResponse
+        /// </returns>
         public ModifyDatabaseDescriptionResponse ModifyDatabaseDescriptionWithOptions(ModifyDatabaseDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6413,11 +7704,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDatabaseDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDatabaseDescriptionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDatabaseDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDatabaseDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseDescriptionResponse
+        /// </returns>
         public async Task<ModifyDatabaseDescriptionResponse> ModifyDatabaseDescriptionWithOptionsAsync(ModifyDatabaseDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6457,31 +7753,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDatabaseDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyDatabaseDescriptionRequest
-         * @return ModifyDatabaseDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDatabaseDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseDescriptionResponse
+        /// </returns>
         public ModifyDatabaseDescriptionResponse ModifyDatabaseDescription(ModifyDatabaseDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDatabaseDescriptionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyDatabaseDescriptionRequest
-         * @return ModifyDatabaseDescriptionResponse
-         */
+        /// <param name="request">
+        /// ModifyDatabaseDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDatabaseDescriptionResponse
+        /// </returns>
         public async Task<ModifyDatabaseDescriptionResponse> ModifyDatabaseDescriptionAsync(ModifyDatabaseDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDatabaseDescriptionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifyParameterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyParameterResponse
-         */
+        /// <param name="request">
+        /// ModifyParameterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParameterResponse
+        /// </returns>
         public ModifyParameterResponse ModifyParameterWithOptions(ModifyParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6497,6 +7804,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamLevel))
             {
                 query["ParamLevel"] = request.ParamLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
             {
@@ -6525,11 +7836,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyParameterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyParameterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyParameterResponse
-         */
+        /// <param name="request">
+        /// ModifyParameterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParameterResponse
+        /// </returns>
         public async Task<ModifyParameterResponse> ModifyParameterWithOptionsAsync(ModifyParameterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6545,6 +7861,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamLevel))
             {
                 query["ParamLevel"] = request.ParamLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterGroupId))
+            {
+                query["ParameterGroupId"] = request.ParameterGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
             {
@@ -6573,31 +7893,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyParameterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyParameterRequest
-         * @return ModifyParameterResponse
-         */
+        /// <param name="request">
+        /// ModifyParameterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParameterResponse
+        /// </returns>
         public ModifyParameterResponse ModifyParameter(ModifyParameterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyParameterWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifyParameterRequest
-         * @return ModifyParameterResponse
-         */
+        /// <param name="request">
+        /// ModifyParameterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyParameterResponse
+        /// </returns>
         public async Task<ModifyParameterResponse> ModifyParameterAsync(ModifyParameterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyParameterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ModifySecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySecurityIpsResponse
-         */
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public ModifySecurityIpsResponse ModifySecurityIpsWithOptions(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6641,11 +7972,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifySecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifySecurityIpsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifySecurityIpsResponse
-         */
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsWithOptionsAsync(ModifySecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6689,33 +8025,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifySecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifySecurityIpsRequest
-         * @return ModifySecurityIpsResponse
-         */
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public ModifySecurityIpsResponse ModifySecurityIps(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySecurityIpsWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ModifySecurityIpsRequest
-         * @return ModifySecurityIpsResponse
-         */
+        /// <param name="request">
+        /// ModifySecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIpsResponse
+        /// </returns>
         public async Task<ModifySecurityIpsResponse> ModifySecurityIpsAsync(ModifySecurityIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 关闭冷存储
-         *
-         * @param request ReleaseColdDataVolumeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseColdDataVolumeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseColdDataVolumeResponse
+        /// </returns>
         public ReleaseColdDataVolumeResponse ReleaseColdDataVolumeWithOptions(ReleaseColdDataVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6747,13 +8097,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ReleaseColdDataVolumeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 关闭冷存储
-         *
-         * @param request ReleaseColdDataVolumeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseColdDataVolumeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseColdDataVolumeResponse
+        /// </returns>
         public async Task<ReleaseColdDataVolumeResponse> ReleaseColdDataVolumeWithOptionsAsync(ReleaseColdDataVolumeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6785,35 +8143,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ReleaseColdDataVolumeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 关闭冷存储
-         *
-         * @param request ReleaseColdDataVolumeRequest
-         * @return ReleaseColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseColdDataVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseColdDataVolumeResponse
+        /// </returns>
         public ReleaseColdDataVolumeResponse ReleaseColdDataVolume(ReleaseColdDataVolumeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseColdDataVolumeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 关闭冷存储
-         *
-         * @param request ReleaseColdDataVolumeRequest
-         * @return ReleaseColdDataVolumeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭冷存储</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseColdDataVolumeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseColdDataVolumeResponse
+        /// </returns>
         public async Task<ReleaseColdDataVolumeResponse> ReleaseColdDataVolumeAsync(ReleaseColdDataVolumeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseColdDataVolumeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ReleaseInstancePublicConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// ReleaseInstancePublicConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstancePublicConnectionResponse
+        /// </returns>
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnectionWithOptions(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6826,25 +8201,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DBInstanceName"] = request.DBInstanceName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6865,11 +8224,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ReleaseInstancePublicConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// ReleaseInstancePublicConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstancePublicConnectionResponse
+        /// </returns>
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionWithOptionsAsync(ReleaseInstancePublicConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6882,25 +8246,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DBInstanceName"] = request.DBInstanceName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6921,31 +8269,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ReleaseInstancePublicConnectionRequest
-         * @return ReleaseInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// ReleaseInstancePublicConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstancePublicConnectionResponse
+        /// </returns>
         public ReleaseInstancePublicConnectionResponse ReleaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseInstancePublicConnectionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ReleaseInstancePublicConnectionRequest
-         * @return ReleaseInstancePublicConnectionResponse
-         */
+        /// <param name="request">
+        /// ReleaseInstancePublicConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseInstancePublicConnectionResponse
+        /// </returns>
         public async Task<ReleaseInstancePublicConnectionResponse> ReleaseInstancePublicConnectionAsync(ReleaseInstancePublicConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request ResetAccountPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetAccountPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public ResetAccountPasswordResponse ResetAccountPasswordWithOptions(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6993,11 +8352,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ResetAccountPasswordRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResetAccountPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordWithOptionsAsync(ResetAccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7045,31 +8409,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ResetAccountPasswordRequest
-         * @return ResetAccountPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetAccountPasswordWithOptions(request, runtime);
         }
 
-        /**
-         * @param request ResetAccountPasswordRequest
-         * @return ResetAccountPasswordResponse
-         */
+        /// <param name="request">
+        /// ResetAccountPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetAccountPasswordResponse
+        /// </returns>
         public async Task<ResetAccountPasswordResponse> ResetAccountPasswordAsync(ResetAccountPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAccountPasswordWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request RestartDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartDBInstanceResponse
-         */
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public RestartDBInstanceResponse RestartDBInstanceWithOptions(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7101,11 +8476,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<RestartDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request RestartDBInstanceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RestartDBInstanceResponse
-         */
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public async Task<RestartDBInstanceResponse> RestartDBInstanceWithOptionsAsync(RestartDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7137,31 +8517,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<RestartDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request RestartDBInstanceRequest
-         * @return RestartDBInstanceResponse
-         */
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RestartDBInstanceWithOptions(request, runtime);
         }
 
-        /**
-         * @param request RestartDBInstanceRequest
-         * @return RestartDBInstanceResponse
-         */
+        /// <param name="request">
+        /// RestartDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartDBInstanceResponse
+        /// </returns>
         public async Task<RestartDBInstanceResponse> RestartDBInstanceAsync(RestartDBInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RestartDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request SwitchDBInstanceHARequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public SwitchDBInstanceHAResponse SwitchDBInstanceHAWithOptions(SwitchDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7209,11 +8600,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<SwitchDBInstanceHAResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request SwitchDBInstanceHARequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHAWithOptionsAsync(SwitchDBInstanceHARequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7261,33 +8657,47 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<SwitchDBInstanceHAResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request SwitchDBInstanceHARequest
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SwitchDBInstanceHAWithOptions(request, runtime);
         }
 
-        /**
-         * @param request SwitchDBInstanceHARequest
-         * @return SwitchDBInstanceHAResponse
-         */
+        /// <param name="request">
+        /// SwitchDBInstanceHARequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchDBInstanceHAResponse
+        /// </returns>
         public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHAAsync(SwitchDBInstanceHARequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchDBInstanceHAWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7327,13 +8737,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7373,37 +8791,57 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7447,13 +8885,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7497,35 +8943,52 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request UpdateBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// UpdateBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBackupPolicyResponse
+        /// </returns>
         public UpdateBackupPolicyResponse UpdateBackupPolicyWithOptions(UpdateBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7629,11 +9092,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateBackupPolicyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// UpdateBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBackupPolicyResponse
+        /// </returns>
         public async Task<UpdateBackupPolicyResponse> UpdateBackupPolicyWithOptionsAsync(UpdateBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7737,31 +9205,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateBackupPolicyRequest
-         * @return UpdateBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// UpdateBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBackupPolicyResponse
+        /// </returns>
         public UpdateBackupPolicyResponse UpdateBackupPolicy(UpdateBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateBackupPolicyWithOptions(request, runtime);
         }
 
-        /**
-         * @param request UpdateBackupPolicyRequest
-         * @return UpdateBackupPolicyResponse
-         */
+        /// <param name="request">
+        /// UpdateBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBackupPolicyResponse
+        /// </returns>
         public async Task<UpdateBackupPolicyResponse> UpdateBackupPolicyAsync(UpdateBackupPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateBackupPolicyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request UpdateDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceSSLResponse
+        /// </returns>
         public UpdateDBInstanceSSLResponse UpdateDBInstanceSSLWithOptions(UpdateDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7801,11 +9280,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateDBInstanceSSLRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceSSLResponse
+        /// </returns>
         public async Task<UpdateDBInstanceSSLResponse> UpdateDBInstanceSSLWithOptionsAsync(UpdateDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7845,31 +9329,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateDBInstanceSSLRequest
-         * @return UpdateDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceSSLResponse
+        /// </returns>
         public UpdateDBInstanceSSLResponse UpdateDBInstanceSSL(UpdateDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDBInstanceSSLWithOptions(request, runtime);
         }
 
-        /**
-         * @param request UpdateDBInstanceSSLRequest
-         * @return UpdateDBInstanceSSLResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceSSLResponse
+        /// </returns>
         public async Task<UpdateDBInstanceSSLResponse> UpdateDBInstanceSSLAsync(UpdateDBInstanceSSLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request UpdateDBInstanceTDERequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceTDERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceTDEResponse
+        /// </returns>
         public UpdateDBInstanceTDEResponse UpdateDBInstanceTDEWithOptions(UpdateDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7913,11 +9408,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateDBInstanceTDERequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceTDERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceTDEResponse
+        /// </returns>
         public async Task<UpdateDBInstanceTDEResponse> UpdateDBInstanceTDEWithOptionsAsync(UpdateDBInstanceTDERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7961,31 +9461,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateDBInstanceTDERequest
-         * @return UpdateDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceTDERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceTDEResponse
+        /// </returns>
         public UpdateDBInstanceTDEResponse UpdateDBInstanceTDE(UpdateDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDBInstanceTDEWithOptions(request, runtime);
         }
 
-        /**
-         * @param request UpdateDBInstanceTDERequest
-         * @return UpdateDBInstanceTDEResponse
-         */
+        /// <param name="request">
+        /// UpdateDBInstanceTDERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceTDEResponse
+        /// </returns>
         public async Task<UpdateDBInstanceTDEResponse> UpdateDBInstanceTDEAsync(UpdateDBInstanceTDERequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDBInstanceTDEWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request UpdatePolarDBXInstanceNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePolarDBXInstanceNodeResponse
-         */
+        /// <param name="request">
+        /// UpdatePolarDBXInstanceNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarDBXInstanceNodeResponse
+        /// </returns>
         public UpdatePolarDBXInstanceNodeResponse UpdatePolarDBXInstanceNodeWithOptions(UpdatePolarDBXInstanceNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8045,11 +9556,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdatePolarDBXInstanceNodeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdatePolarDBXInstanceNodeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdatePolarDBXInstanceNodeResponse
-         */
+        /// <param name="request">
+        /// UpdatePolarDBXInstanceNodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarDBXInstanceNodeResponse
+        /// </returns>
         public async Task<UpdatePolarDBXInstanceNodeResponse> UpdatePolarDBXInstanceNodeWithOptionsAsync(UpdatePolarDBXInstanceNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8109,31 +9625,42 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdatePolarDBXInstanceNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdatePolarDBXInstanceNodeRequest
-         * @return UpdatePolarDBXInstanceNodeResponse
-         */
+        /// <param name="request">
+        /// UpdatePolarDBXInstanceNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarDBXInstanceNodeResponse
+        /// </returns>
         public UpdatePolarDBXInstanceNodeResponse UpdatePolarDBXInstanceNode(UpdatePolarDBXInstanceNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdatePolarDBXInstanceNodeWithOptions(request, runtime);
         }
 
-        /**
-         * @param request UpdatePolarDBXInstanceNodeRequest
-         * @return UpdatePolarDBXInstanceNodeResponse
-         */
+        /// <param name="request">
+        /// UpdatePolarDBXInstanceNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePolarDBXInstanceNodeResponse
+        /// </returns>
         public async Task<UpdatePolarDBXInstanceNodeResponse> UpdatePolarDBXInstanceNodeAsync(UpdatePolarDBXInstanceNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePolarDBXInstanceNodeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionWithOptions(UpgradeDBInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8173,11 +9700,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public async Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionWithOptionsAsync(UpgradeDBInstanceKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8217,20 +9749,26 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeDBInstanceKernelVersionWithOptions(request, runtime);
         }
 
-        /**
-         * @param request UpgradeDBInstanceKernelVersionRequest
-         * @return UpgradeDBInstanceKernelVersionResponse
-         */
+        /// <param name="request">
+        /// UpgradeDBInstanceKernelVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeDBInstanceKernelVersionResponse
+        /// </returns>
         public async Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersionAsync(UpgradeDBInstanceKernelVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

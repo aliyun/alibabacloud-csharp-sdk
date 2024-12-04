@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeScaleOutMigrateTaskListRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-********</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

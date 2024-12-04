@@ -13,25 +13,44 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string AddDNSpec { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("CNNodeCount")]
         [Validation(Required=false)]
         public string CNNodeCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-hzjasdyuoo</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("DNNodeCount")]
         [Validation(Required=false)]
         public string DNNodeCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("DbInstanceNodeCount")]
         [Validation(Required=false)]
         public string DbInstanceNodeCount { get; set; }
@@ -41,7 +60,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DeleteDNIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

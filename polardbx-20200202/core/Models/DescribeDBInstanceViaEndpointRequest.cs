@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDBInstanceViaEndpointRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-hz*******.polarx.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

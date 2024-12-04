@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxx-xxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

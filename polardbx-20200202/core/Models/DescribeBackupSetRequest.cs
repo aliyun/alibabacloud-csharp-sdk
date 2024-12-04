@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBackupSetRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111</para>
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxc-htri0ori2r****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
@@ -27,6 +33,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DestCrossRegion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
