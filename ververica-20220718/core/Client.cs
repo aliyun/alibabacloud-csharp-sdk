@@ -8779,7 +8779,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// <returns>
         /// StartJobResponse
         /// </returns>
-        [Obsolete("OpenAPI StartJob is deprecated\n")]
+        [Obsolete("OpenAPI StartJob is deprecated")]
         // Deprecated
         public StartJobResponse StartJobWithOptions(string namespace_, StartJobRequest request, StartJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8835,7 +8835,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// <returns>
         /// StartJobResponse
         /// </returns>
-        [Obsolete("OpenAPI StartJob is deprecated\n")]
+        [Obsolete("OpenAPI StartJob is deprecated")]
         // Deprecated
         public async Task<StartJobResponse> StartJobWithOptionsAsync(string namespace_, StartJobRequest request, StartJobHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8885,7 +8885,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// <returns>
         /// StartJobResponse
         /// </returns>
-        [Obsolete("OpenAPI StartJob is deprecated\n")]
+        [Obsolete("OpenAPI StartJob is deprecated")]
         // Deprecated
         public StartJobResponse StartJob(string namespace_, StartJobRequest request)
         {
@@ -8910,7 +8910,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
         /// <returns>
         /// StartJobResponse
         /// </returns>
-        [Obsolete("OpenAPI StartJob is deprecated\n")]
+        [Obsolete("OpenAPI StartJob is deprecated")]
         // Deprecated
         public async Task<StartJobResponse> StartJobAsync(string namespace_, StartJobRequest request)
         {

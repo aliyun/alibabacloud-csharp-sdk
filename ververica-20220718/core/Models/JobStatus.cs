@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public JobFailure Failure { get; set; }
 
+        [NameInMap("healthScore")]
+        [Validation(Required=false)]
+        public int? HealthScore { get; set; }
+
+        [NameInMap("riskLevel")]
+        [Validation(Required=false)]
+        public string RiskLevel { get; set; }
+
         [NameInMap("running")]
         [Validation(Required=false)]
         public JobStatusRunning Running { get; set; }
