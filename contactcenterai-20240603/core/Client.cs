@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             {
                 body["serviceInspection"] = request.ServiceInspection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCallerUid))
+            {
+                body["sourceCallerUid"] = request.SourceCallerUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
             {
                 body["stream"] = request.Stream;
@@ -176,6 +180,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInspection))
             {
                 body["serviceInspection"] = request.ServiceInspection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCallerUid))
+            {
+                body["sourceCallerUid"] = request.SourceCallerUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
             {
@@ -592,7 +600,7 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         /// <para>语音文件调用大模型获取结果</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetTaskResultRequest
         /// </param>
         /// <param name="headers">
@@ -605,10 +613,20 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         /// <returns>
         /// GetTaskResultResponse
         /// </returns>
-        public GetTaskResultResponse GetTaskResultWithOptions(GetTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetTaskResultResponse GetTaskResultWithOptions(GetTaskResultRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetTaskResultShrinkRequest request = new GetTaskResultShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequiredFieldList))
+            {
+                request.RequiredFieldListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequiredFieldList, "requiredFieldList", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredFieldListShrink))
+            {
+                query["requiredFieldList"] = request.RequiredFieldListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["taskId"] = request.TaskId;
@@ -638,7 +656,7 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         /// <para>语音文件调用大模型获取结果</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetTaskResultRequest
         /// </param>
         /// <param name="headers">
@@ -651,10 +669,20 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         /// <returns>
         /// GetTaskResultResponse
         /// </returns>
-        public async Task<GetTaskResultResponse> GetTaskResultWithOptionsAsync(GetTaskResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetTaskResultResponse> GetTaskResultWithOptionsAsync(GetTaskResultRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetTaskResultShrinkRequest request = new GetTaskResultShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequiredFieldList))
+            {
+                request.RequiredFieldListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequiredFieldList, "requiredFieldList", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredFieldListShrink))
+            {
+                query["requiredFieldList"] = request.RequiredFieldListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["taskId"] = request.TaskId;

@@ -216,6 +216,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         }
 
+        [NameInMap("sourceCallerUid")]
+        [Validation(Required=false)]
+        public string SourceCallerUid { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

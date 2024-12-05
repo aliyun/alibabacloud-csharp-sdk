@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
-    public class GetTaskResultRequest : TeaModel {
+    public class GetTaskResultShrinkRequest : TeaModel {
         [NameInMap("requiredFieldList")]
         [Validation(Required=false)]
-        public List<string> RequiredFieldList { get; set; }
+        public string RequiredFieldListShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
