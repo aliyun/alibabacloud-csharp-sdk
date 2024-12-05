@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyIndexResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>93A9E542-8CF8-5BA6-99AB-94C0FE520429</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result.
+        /// <para>The result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

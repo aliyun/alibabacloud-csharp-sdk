@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetFileRequest : TeaModel {
         /// <summary>
-        /// The name of the file in full path
+        /// <para>The name of the file in full path</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/schemas/automobile_vector_schema.json</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]

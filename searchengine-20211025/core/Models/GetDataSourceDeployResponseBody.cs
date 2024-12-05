@@ -10,19 +10,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetDataSourceDeployResponseBody : TeaModel {
         /// <summary>
-        /// requestId
+        /// <para>requestId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2AE63638-5420-56DC-BF59-37D8174039A0</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result.
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetDataSourceDeployResponseBodyResult Result { get; set; }
         public class GetDataSourceDeployResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("autoBuildIndex")]
             [Validation(Required=false)]
             public bool? AutoBuildIndex { get; set; }
@@ -35,6 +42,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public GetDataSourceDeployResponseBodyResultExtendHdfs Hdfs { get; set; }
                 public class GetDataSourceDeployResponseBodyResultExtendHdfs : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>dist-dmj-job/src/main/java</para>
+                    /// </summary>
                     [NameInMap("path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
@@ -55,6 +66,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public GetDataSourceDeployResponseBodyResultExtendOss Oss { get; set; }
                 public class GetDataSourceDeployResponseBodyResultExtendOss : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>oss://opensearch</para>
+                    /// </summary>
                     [NameInMap("path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
@@ -65,10 +80,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public GetDataSourceDeployResponseBodyResultExtendSaro Saro { get; set; }
                 public class GetDataSourceDeployResponseBodyResultExtendSaro : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>dist-dmj-job/src/main/java</para>
+                    /// </summary>
                     [NameInMap("path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0.6.0</para>
+                    /// </summary>
                     [NameInMap("version")]
                     [Validation(Required=false)]
                     public string Version { get; set; }
@@ -78,21 +101,27 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The parameters of the process.
+            /// <para>The parameters of the process.</para>
             /// </summary>
             [NameInMap("processor")]
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultProcessor Processor { get; set; }
             public class GetDataSourceDeployResponseBodyResultProcessor : TeaModel {
                 /// <summary>
-                /// The startup parameters of the process.
+                /// <para>The startup parameters of the process.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("args")]
                 [Validation(Required=false)]
                 public string Args { get; set; }
 
                 /// <summary>
-                /// The resource information.
+                /// <para>The resource information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("resource")]
                 [Validation(Required=false)]
@@ -101,28 +130,37 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The information about the data source.
+            /// <para>The information about the data source.</para>
             /// </summary>
             [NameInMap("storage")]
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultStorage Storage { get; set; }
             public class GetDataSourceDeployResponseBodyResultStorage : TeaModel {
                 /// <summary>
-                /// The AccessKey ID of the MaxCompute data source.
+                /// <para>The AccessKey ID of the MaxCompute data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ak</para>
                 /// </summary>
                 [NameInMap("accessKey")]
                 [Validation(Required=false)]
                 public string AccessKey { get; set; }
 
                 /// <summary>
-                /// The AccessKey secret of the MaxCompute data source.
+                /// <para>The AccessKey secret of the MaxCompute data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>as</para>
                 /// </summary>
                 [NameInMap("accessSecret")]
                 [Validation(Required=false)]
                 public string AccessSecret { get; set; }
 
                 /// <summary>
-                /// The name of the OSS bucket.
+                /// <para>The name of the OSS bucket.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>antsys-miniapp-chongwen-static</para>
                 /// </summary>
                 [NameInMap("bucket")]
                 [Validation(Required=false)]
@@ -137,38 +175,63 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Database { get; set; }
 
                 /// <summary>
-                /// The endpoint of the MaxCompute data source.
+                /// <para>The endpoint of the MaxCompute data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
                 /// </summary>
                 [NameInMap("endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>lazada-campaign-flink</para>
+                /// </summary>
                 [NameInMap("namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// The Object Storage Service (OSS) path.
+                /// <para>The Object Storage Service (OSS) path.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oss://opensearch</para>
                 /// </summary>
                 [NameInMap("ossPath")]
                 [Validation(Required=false)]
                 public string OssPath { get; set; }
 
                 /// <summary>
-                /// The partition in the MaxCompute table. Example: ds=20180102.
+                /// <para>The partition in the MaxCompute table. Example: ds=20180102.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ds=20220926</para>
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
                 public string Partition { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>/beiming_xobject/dwd_xobjectsandbox__list_create_action_by_new/</para>
+                /// </summary>
                 [NameInMap("path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>wireless_1688_personal_rec</para>
+                /// </summary>
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>behavior</para>
+                /// </summary>
                 [NameInMap("table")]
                 [Validation(Required=false)]
                 public string Table { get; set; }
@@ -180,21 +243,27 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The information about the incremental data source Swift.
+            /// <para>The information about the incremental data source Swift.</para>
             /// </summary>
             [NameInMap("swift")]
             [Validation(Required=false)]
             public GetDataSourceDeployResponseBodyResultSwift Swift { get; set; }
             public class GetDataSourceDeployResponseBodyResultSwift : TeaModel {
                 /// <summary>
-                /// The topic.
+                /// <para>The topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>topic</para>
                 /// </summary>
                 [NameInMap("topic")]
                 [Validation(Required=false)]
                 public string Topic { get; set; }
 
                 /// <summary>
-                /// zk
+                /// <para>zk</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zk</para>
                 /// </summary>
                 [NameInMap("zk")]
                 [Validation(Required=false)]

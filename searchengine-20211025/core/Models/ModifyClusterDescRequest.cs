@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyClusterDescRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

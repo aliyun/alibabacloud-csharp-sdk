@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyIndexOnlineStrategyRequest : TeaModel {
         /// <summary>
-        /// The index change rate.
+        /// <para>The index change rate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("changeRate")]
         [Validation(Required=false)]

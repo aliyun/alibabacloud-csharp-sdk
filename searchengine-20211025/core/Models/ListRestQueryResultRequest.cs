@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListRestQueryResultRequest : TeaModel {
         /// <summary>
-        /// The instance endpoint.
+        /// <para>The instance endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// The name of the index table.
+        /// <para>The name of the index table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>main_index</para>
         /// </summary>
         [NameInMap("indexName")]
         [Validation(Required=false)]
         public string IndexName { get; set; }
 
         /// <summary>
-        /// The rest query statement.
+        /// <para>The rest query statement.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>query%3Drelation_id%3A%221151274675_2%22%26%26cluster%3Dgeneral%26%26config%3Dstart%3A0%2Chit%3A10%2Cformat%3Ajson</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

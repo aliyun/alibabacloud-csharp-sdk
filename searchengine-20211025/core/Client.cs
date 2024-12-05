@@ -37,19 +37,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Triggers reindexing.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/actions/build-index
-         *
-         * @param request BuildIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BuildIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers reindexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/actions/build-index
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BuildIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuildIndexResponse
+        /// </returns>
         public BuildIndexResponse BuildIndexWithOptions(string instanceId, BuildIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -106,19 +121,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<BuildIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Triggers reindexing.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/actions/build-index
-         *
-         * @param request BuildIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BuildIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers reindexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/actions/build-index
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BuildIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuildIndexResponse
+        /// </returns>
         public async Task<BuildIndexResponse> BuildIndexWithOptionsAsync(string instanceId, BuildIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -175,17 +205,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<BuildIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Triggers reindexing.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/actions/build-index
-         *
-         * @param request BuildIndexRequest
-         * @return BuildIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers reindexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/actions/build-index
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BuildIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuildIndexResponse
+        /// </returns>
         public BuildIndexResponse BuildIndex(string instanceId, BuildIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -193,17 +234,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return BuildIndexWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Triggers reindexing.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/actions/build-index
-         *
-         * @param request BuildIndexRequest
-         * @return BuildIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers reindexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/actions/build-index
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BuildIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuildIndexResponse
+        /// </returns>
         public async Task<BuildIndexResponse> BuildIndexAsync(string instanceId, BuildIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -211,14 +263,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await BuildIndexWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 更换实例资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更换实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(string instanceId, ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -251,14 +313,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更换实例资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更换实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(string instanceId, ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -291,12 +363,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更换实例资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更换实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public ChangeResourceGroupResponse ChangeResourceGroup(string instanceId, ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -304,12 +382,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ChangeResourceGroupWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 更换实例资源组
-         *
-         * @param request ChangeResourceGroupRequest
-         * @return ChangeResourceGroupResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更换实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
         public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(string instanceId, ChangeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -317,12 +401,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ChangeResourceGroupWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request CloneSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CloneSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CloneSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloneSqlInstanceResponse
+        /// </returns>
         public CloneSqlInstanceResponse CloneSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -355,12 +446,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CloneSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CloneSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CloneSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CloneSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloneSqlInstanceResponse
+        /// </returns>
         public async Task<CloneSqlInstanceResponse> CloneSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -393,10 +491,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CloneSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CloneSqlInstanceRequest
-         * @return CloneSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CloneSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloneSqlInstanceResponse
+        /// </returns>
         public CloneSqlInstanceResponse CloneSqlInstance(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -404,10 +505,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CloneSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request CloneSqlInstanceRequest
-         * @return CloneSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CloneSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloneSqlInstanceResponse
+        /// </returns>
         public async Task<CloneSqlInstanceResponse> CloneSqlInstanceAsync(string instanceId, string database, string sqlInstanceId, CloneSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -415,12 +519,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CloneSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateAliasRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAliasResponse
-         */
+        /// <param name="request">
+        /// CreateAliasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAliasResponse
+        /// </returns>
         public CreateAliasResponse CreateAliasWithOptions(string instanceId, CreateAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -459,12 +570,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateAliasResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateAliasRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAliasResponse
-         */
+        /// <param name="request">
+        /// CreateAliasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAliasResponse
+        /// </returns>
         public async Task<CreateAliasResponse> CreateAliasWithOptionsAsync(string instanceId, CreateAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -503,10 +621,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateAliasRequest
-         * @return CreateAliasResponse
-         */
+        /// <param name="request">
+        /// CreateAliasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAliasResponse
+        /// </returns>
         public CreateAliasResponse CreateAlias(string instanceId, CreateAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -514,10 +635,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateAliasWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateAliasRequest
-         * @return CreateAliasResponse
-         */
+        /// <param name="request">
+        /// CreateAliasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAliasResponse
+        /// </returns>
         public async Task<CreateAliasResponse> CreateAliasAsync(string instanceId, CreateAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -525,19 +649,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateAliasWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a cluster.
-         *
-         * @description ### [](#method)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters`
-         *
-         * @param request CreateClusterRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#method"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public CreateClusterResponse CreateClusterWithOptions(string instanceId, CreateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -582,19 +719,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a cluster.
-         *
-         * @description ### [](#method)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters`
-         *
-         * @param request CreateClusterRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#method"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(string instanceId, CreateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -639,17 +789,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a cluster.
-         *
-         * @description ### [](#method)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters`
-         *
-         * @param request CreateClusterRequest
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#method"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public CreateClusterResponse CreateCluster(string instanceId, CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -657,17 +816,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateClusterWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a cluster.
-         *
-         * @description ### [](#method)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters`
-         *
-         * @param request CreateClusterRequest
-         * @return CreateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#method"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterResponse
+        /// </returns>
         public async Task<CreateClusterResponse> CreateClusterAsync(string instanceId, CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -675,12 +843,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateClusterWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateConfigDirRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConfigDirResponse
-         */
+        /// <param name="request">
+        /// CreateConfigDirRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigDirResponse
+        /// </returns>
         public CreateConfigDirResponse CreateConfigDirWithOptions(string instanceId, string configName, CreateConfigDirRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -713,12 +888,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigDirResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConfigDirRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConfigDirResponse
-         */
+        /// <param name="request">
+        /// CreateConfigDirRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigDirResponse
+        /// </returns>
         public async Task<CreateConfigDirResponse> CreateConfigDirWithOptionsAsync(string instanceId, string configName, CreateConfigDirRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -751,10 +933,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigDirResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConfigDirRequest
-         * @return CreateConfigDirResponse
-         */
+        /// <param name="request">
+        /// CreateConfigDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigDirResponse
+        /// </returns>
         public CreateConfigDirResponse CreateConfigDir(string instanceId, string configName, CreateConfigDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -762,10 +947,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateConfigDirWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateConfigDirRequest
-         * @return CreateConfigDirResponse
-         */
+        /// <param name="request">
+        /// CreateConfigDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigDirResponse
+        /// </returns>
         public async Task<CreateConfigDirResponse> CreateConfigDirAsync(string instanceId, string configName, CreateConfigDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -773,12 +961,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateConfigDirWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConfigFileResponse
-         */
+        /// <param name="request">
+        /// CreateConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigFileResponse
+        /// </returns>
         public CreateConfigFileResponse CreateConfigFileWithOptions(string instanceId, string configName, CreateConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -815,12 +1010,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConfigFileResponse
-         */
+        /// <param name="request">
+        /// CreateConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigFileResponse
+        /// </returns>
         public async Task<CreateConfigFileResponse> CreateConfigFileWithOptionsAsync(string instanceId, string configName, CreateConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -857,10 +1059,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateConfigFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateConfigFileRequest
-         * @return CreateConfigFileResponse
-         */
+        /// <param name="request">
+        /// CreateConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigFileResponse
+        /// </returns>
         public CreateConfigFileResponse CreateConfigFile(string instanceId, string configName, CreateConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -868,10 +1073,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateConfigFileWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateConfigFileRequest
-         * @return CreateConfigFileResponse
-         */
+        /// <param name="request">
+        /// CreateConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigFileResponse
+        /// </returns>
         public async Task<CreateConfigFileResponse> CreateConfigFileAsync(string instanceId, string configName, CreateConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -879,14 +1087,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateConfigFileWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates data sources.
-         *
-         * @param request CreateDataSourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates data sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataSourceResponse
+        /// </returns>
         public CreateDataSourceResponse CreateDataSourceWithOptions(string instanceId, CreateDataSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -941,14 +1159,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates data sources.
-         *
-         * @param request CreateDataSourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates data sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataSourceResponse
+        /// </returns>
         public async Task<CreateDataSourceResponse> CreateDataSourceWithOptionsAsync(string instanceId, CreateDataSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1003,12 +1231,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates data sources.
-         *
-         * @param request CreateDataSourceRequest
-         * @return CreateDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates data sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataSourceResponse
+        /// </returns>
         public CreateDataSourceResponse CreateDataSource(string instanceId, CreateDataSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1016,12 +1250,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateDataSourceWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates data sources.
-         *
-         * @param request CreateDataSourceRequest
-         * @return CreateDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates data sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataSourceResponse
+        /// </returns>
         public async Task<CreateDataSourceResponse> CreateDataSourceAsync(string instanceId, CreateDataSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1029,12 +1269,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateDataSourceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateFolderRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFolderResponse
-         */
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public CreateFolderResponse CreateFolderWithOptions(string instanceId, string database, CreateFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1071,12 +1318,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateFolderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateFolderRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFolderResponse
-         */
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public async Task<CreateFolderResponse> CreateFolderWithOptionsAsync(string instanceId, string database, CreateFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1113,10 +1367,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateFolderRequest
-         * @return CreateFolderResponse
-         */
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public CreateFolderResponse CreateFolder(string instanceId, string database, CreateFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1124,10 +1381,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateFolderWithOptions(instanceId, database, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateFolderRequest
-         * @return CreateFolderResponse
-         */
+        /// <param name="request">
+        /// CreateFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFolderResponse
+        /// </returns>
         public async Task<CreateFolderResponse> CreateFolderAsync(string instanceId, string database, CreateFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1135,23 +1395,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateFolderWithOptionsAsync(instanceId, database, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an index.
-         *
-         * @description ### Method
-         * ```java
-         * POST
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/indexes
-         * ```
-         *
-         * @param request CreateIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public CreateIndexResponse CreateIndexWithOptions(string instanceId, CreateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1218,23 +1489,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an index.
-         *
-         * @description ### Method
-         * ```java
-         * POST
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/indexes
-         * ```
-         *
-         * @param request CreateIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public async Task<CreateIndexResponse> CreateIndexWithOptionsAsync(string instanceId, CreateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1301,21 +1583,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an index.
-         *
-         * @description ### Method
-         * ```java
-         * POST
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/indexes
-         * ```
-         *
-         * @param request CreateIndexRequest
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public CreateIndexResponse CreateIndex(string instanceId, CreateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1323,21 +1612,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateIndexWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an index.
-         *
-         * @description ### Method
-         * ```java
-         * POST
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/indexes
-         * ```
-         *
-         * @param request CreateIndexRequest
-         * @return CreateIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">POST
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexResponse
+        /// </returns>
         public async Task<CreateIndexResponse> CreateIndexAsync(string instanceId, CreateIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1345,19 +1641,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateIndexWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a Havenask instance.
-         *
-         * @description ### [](#)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/api/instances?dryRun=false`
-         *
-         * @param request CreateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Havenask instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1402,19 +1711,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Havenask instance.
-         *
-         * @description ### [](#)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/api/instances?dryRun=false`
-         *
-         * @param request CreateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Havenask instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1459,17 +1781,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a Havenask instance.
-         *
-         * @description ### [](#)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/api/instances?dryRun=false`
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Havenask instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1477,17 +1808,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateInstanceWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a Havenask instance.
-         *
-         * @description ### [](#)Method
-         * `POST`
-         * ### [](#uri)URI
-         * `/api/instances?dryRun=false`
-         *
-         * @param request CreateInstanceRequest
-         * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Havenask instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/api/instances?dryRun=false</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1495,13 +1835,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateInstanceWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Creates a public endpoint.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePublicUrlResponse
+        /// </returns>
         public CreatePublicUrlResponse CreatePublicUrlWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1523,13 +1871,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreatePublicUrlResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a public endpoint.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreatePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePublicUrlResponse
+        /// </returns>
         public async Task<CreatePublicUrlResponse> CreatePublicUrlWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1551,11 +1907,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreatePublicUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates a public endpoint.
-         *
-         * @return CreatePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public endpoint.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// CreatePublicUrlResponse
+        /// </returns>
         public CreatePublicUrlResponse CreatePublicUrl(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1563,11 +1922,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreatePublicUrlWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Creates a public endpoint.
-         *
-         * @return CreatePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public endpoint.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// CreatePublicUrlResponse
+        /// </returns>
         public async Task<CreatePublicUrlResponse> CreatePublicUrlAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1575,12 +1937,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreatePublicUrlWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @param request CreateSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CreateSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlInstanceResponse
+        /// </returns>
         public CreateSqlInstanceResponse CreateSqlInstanceWithOptions(string instanceId, string database, CreateSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1613,12 +1982,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CreateSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlInstanceResponse
+        /// </returns>
         public async Task<CreateSqlInstanceResponse> CreateSqlInstanceWithOptionsAsync(string instanceId, string database, CreateSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1651,10 +2027,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateSqlInstanceRequest
-         * @return CreateSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CreateSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlInstanceResponse
+        /// </returns>
         public CreateSqlInstanceResponse CreateSqlInstance(string instanceId, string database, CreateSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1662,10 +2041,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateSqlInstanceWithOptions(instanceId, database, request, headers, runtime);
         }
 
-        /**
-         * @param request CreateSqlInstanceRequest
-         * @return CreateSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// CreateSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlInstanceResponse
+        /// </returns>
         public async Task<CreateSqlInstanceResponse> CreateSqlInstanceAsync(string instanceId, string database, CreateSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1673,14 +2055,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateSqlInstanceWithOptionsAsync(instanceId, database, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an index table.
-         *
-         * @param request CreateTableRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTableResponse
+        /// </returns>
         public CreateTableResponse CreateTableWithOptions(string instanceId, CreateTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1747,14 +2139,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateTableResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an index table.
-         *
-         * @param request CreateTableRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTableResponse
+        /// </returns>
         public async Task<CreateTableResponse> CreateTableWithOptionsAsync(string instanceId, CreateTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1821,12 +2223,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<CreateTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an index table.
-         *
-         * @param request CreateTableRequest
-         * @return CreateTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTableResponse
+        /// </returns>
         public CreateTableResponse CreateTable(string instanceId, CreateTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1834,12 +2242,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return CreateTableWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Creates an index table.
-         *
-         * @param request CreateTableRequest
-         * @return CreateTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTableResponse
+        /// </returns>
         public async Task<CreateTableResponse> CreateTableAsync(string instanceId, CreateTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1847,18 +2261,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await CreateTableWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes the details about advanced configurations.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the details about advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAdvanceConfigResponse
+        /// </returns>
         public DeleteAdvanceConfigResponse DeleteAdvanceConfigWithOptions(string instanceId, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1880,18 +2307,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteAdvanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes the details about advanced configurations.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the details about advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAdvanceConfigResponse
+        /// </returns>
         public async Task<DeleteAdvanceConfigResponse> DeleteAdvanceConfigWithOptionsAsync(string instanceId, string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1913,16 +2353,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteAdvanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes the details about advanced configurations.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @return DeleteAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the details about advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteAdvanceConfigResponse
+        /// </returns>
         public DeleteAdvanceConfigResponse DeleteAdvanceConfig(string instanceId, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1930,16 +2378,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteAdvanceConfigWithOptions(instanceId, configName, headers, runtime);
         }
 
-        /**
-         * @summary Deletes the details about advanced configurations.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @return DeleteAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the details about advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteAdvanceConfigResponse
+        /// </returns>
         public async Task<DeleteAdvanceConfigResponse> DeleteAdvanceConfigAsync(string instanceId, string configName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1947,11 +2403,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteAdvanceConfigWithOptionsAsync(instanceId, configName, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAliasResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAliasResponse
+        /// </returns>
         public DeleteAliasResponse DeleteAliasWithOptions(string instanceId, string alias, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1973,11 +2434,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteAliasResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteAliasResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAliasResponse
+        /// </returns>
         public async Task<DeleteAliasResponse> DeleteAliasWithOptionsAsync(string instanceId, string alias, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1999,9 +2465,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return DeleteAliasResponse
-         */
+        /// <returns>
+        /// DeleteAliasResponse
+        /// </returns>
         public DeleteAliasResponse DeleteAlias(string instanceId, string alias)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2009,9 +2475,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteAliasWithOptions(instanceId, alias, headers, runtime);
         }
 
-        /**
-         * @return DeleteAliasResponse
-         */
+        /// <returns>
+        /// DeleteAliasResponse
+        /// </returns>
         public async Task<DeleteAliasResponse> DeleteAliasAsync(string instanceId, string alias)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2019,12 +2485,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteAliasWithOptionsAsync(instanceId, alias, headers, runtime);
         }
 
-        /**
-         * @param request DeleteConfigDirRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConfigDirResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigDirRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigDirResponse
+        /// </returns>
         public DeleteConfigDirResponse DeleteConfigDirWithOptions(string instanceId, string configName, DeleteConfigDirRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2057,12 +2530,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigDirResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConfigDirRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConfigDirResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigDirRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigDirResponse
+        /// </returns>
         public async Task<DeleteConfigDirResponse> DeleteConfigDirWithOptionsAsync(string instanceId, string configName, DeleteConfigDirRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2095,10 +2575,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigDirResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConfigDirRequest
-         * @return DeleteConfigDirResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigDirResponse
+        /// </returns>
         public DeleteConfigDirResponse DeleteConfigDir(string instanceId, string configName, DeleteConfigDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2106,10 +2589,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteConfigDirWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request DeleteConfigDirRequest
-         * @return DeleteConfigDirResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigDirResponse
+        /// </returns>
         public async Task<DeleteConfigDirResponse> DeleteConfigDirAsync(string instanceId, string configName, DeleteConfigDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2117,12 +2603,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteConfigDirWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request DeleteConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConfigFileResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigFileResponse
+        /// </returns>
         public DeleteConfigFileResponse DeleteConfigFileWithOptions(string instanceId, string configName, DeleteConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2155,12 +2648,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConfigFileResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigFileResponse
+        /// </returns>
         public async Task<DeleteConfigFileResponse> DeleteConfigFileWithOptionsAsync(string instanceId, string configName, DeleteConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2193,10 +2693,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteConfigFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DeleteConfigFileRequest
-         * @return DeleteConfigFileResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigFileResponse
+        /// </returns>
         public DeleteConfigFileResponse DeleteConfigFile(string instanceId, string configName, DeleteConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2204,10 +2707,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteConfigFileWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request DeleteConfigFileRequest
-         * @return DeleteConfigFileResponse
-         */
+        /// <param name="request">
+        /// DeleteConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigFileResponse
+        /// </returns>
         public async Task<DeleteConfigFileResponse> DeleteConfigFileAsync(string instanceId, string configName, DeleteConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2215,18 +2721,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteConfigFileWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified data source.
-         *
-         * @description ## Method
-         * `DELETE`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>DELETE</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataSourceResponse
+        /// </returns>
         public DeleteDataSourceResponse DeleteDataSourceWithOptions(string instanceId, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2248,18 +2765,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified data source.
-         *
-         * @description ## Method
-         * `DELETE`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>DELETE</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataSourceResponse
+        /// </returns>
         public async Task<DeleteDataSourceResponse> DeleteDataSourceWithOptionsAsync(string instanceId, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2281,16 +2809,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified data source.
-         *
-         * @description ## Method
-         * `DELETE`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @return DeleteDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>DELETE</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteDataSourceResponse
+        /// </returns>
         public DeleteDataSourceResponse DeleteDataSource(string instanceId, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2298,16 +2832,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteDataSourceWithOptions(instanceId, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified data source.
-         *
-         * @description ## Method
-         * `DELETE`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @return DeleteDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>DELETE</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteDataSourceResponse
+        /// </returns>
         public async Task<DeleteDataSourceResponse> DeleteDataSourceAsync(string instanceId, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2315,11 +2855,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteDataSourceWithOptionsAsync(instanceId, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFolderResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public DeleteFolderResponse DeleteFolderWithOptions(string instanceId, string database, string folderId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2341,11 +2886,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteFolderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFolderResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public async Task<DeleteFolderResponse> DeleteFolderWithOptionsAsync(string instanceId, string database, string folderId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2367,9 +2917,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return DeleteFolderResponse
-         */
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public DeleteFolderResponse DeleteFolder(string instanceId, string database, string folderId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2377,9 +2927,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteFolderWithOptions(instanceId, database, folderId, headers, runtime);
         }
 
-        /**
-         * @return DeleteFolderResponse
-         */
+        /// <returns>
+        /// DeleteFolderResponse
+        /// </returns>
         public async Task<DeleteFolderResponse> DeleteFolderAsync(string instanceId, string database, string folderId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2387,19 +2937,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteFolderWithOptionsAsync(instanceId, database, folderId, headers, runtime);
         }
 
-        /**
-         * @summary Deletes an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
-         *
-         * @param request DeleteIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public DeleteIndexResponse DeleteIndexWithOptions(string instanceId, string indexName, DeleteIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2432,19 +2997,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
-         *
-         * @param request DeleteIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public async Task<DeleteIndexResponse> DeleteIndexWithOptionsAsync(string instanceId, string indexName, DeleteIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2477,17 +3057,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
-         *
-         * @param request DeleteIndexRequest
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public DeleteIndexResponse DeleteIndex(string instanceId, string indexName, DeleteIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2495,17 +3086,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteIndexWithOptions(instanceId, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
-         *
-         * @param request DeleteIndexRequest
-         * @return DeleteIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexResponse
+        /// </returns>
         public async Task<DeleteIndexResponse> DeleteIndexAsync(string instanceId, string indexName, DeleteIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2513,18 +3115,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteIndexWithOptionsAsync(instanceId, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes the version of an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the version of an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexVersionResponse
+        /// </returns>
         public DeleteIndexVersionResponse DeleteIndexVersionWithOptions(string instanceId, string indexName, string versionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2546,18 +3161,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteIndexVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes the version of an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the version of an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexVersionResponse
+        /// </returns>
         public async Task<DeleteIndexVersionResponse> DeleteIndexVersionWithOptionsAsync(string instanceId, string indexName, string versionName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2579,16 +3207,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteIndexVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes the version of an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
-         *
-         * @return DeleteIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the version of an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteIndexVersionResponse
+        /// </returns>
         public DeleteIndexVersionResponse DeleteIndexVersion(string instanceId, string indexName, string versionName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2596,16 +3232,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteIndexVersionWithOptions(instanceId, indexName, versionName, headers, runtime);
         }
 
-        /**
-         * @summary Deletes the version of an index.
-         *
-         * @description ## Method
-         *     DELETE
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
-         *
-         * @return DeleteIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the version of an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>DELETE
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteIndexVersionResponse
+        /// </returns>
         public async Task<DeleteIndexVersionResponse> DeleteIndexVersionAsync(string instanceId, string indexName, string versionName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2613,18 +3257,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteIndexVersionWithOptionsAsync(instanceId, indexName, versionName, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified instance.
-         *
-         * @description ### Method
-         * `DELETE`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>DELETE</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2646,18 +3301,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified instance.
-         *
-         * @description ### Method
-         * `DELETE`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>DELETE</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2679,16 +3345,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a specified instance.
-         *
-         * @description ### Method
-         * `DELETE`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>DELETE</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2696,16 +3368,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a specified instance.
-         *
-         * @description ### Method
-         * `DELETE`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @return DeleteInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>DELETE</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2713,13 +3391,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 删除公网域名
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeletePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除公网域名</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePublicUrlResponse
+        /// </returns>
         public DeletePublicUrlResponse DeletePublicUrlWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2741,13 +3427,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeletePublicUrlResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除公网域名
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeletePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除公网域名</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePublicUrlResponse
+        /// </returns>
         public async Task<DeletePublicUrlResponse> DeletePublicUrlWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2769,11 +3463,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeletePublicUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除公网域名
-         *
-         * @return DeletePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除公网域名</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeletePublicUrlResponse
+        /// </returns>
         public DeletePublicUrlResponse DeletePublicUrl(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2781,11 +3478,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeletePublicUrlWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary 删除公网域名
-         *
-         * @return DeletePublicUrlResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除公网域名</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeletePublicUrlResponse
+        /// </returns>
         public async Task<DeletePublicUrlResponse> DeletePublicUrlAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2793,11 +3493,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeletePublicUrlWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSqlInstanceResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSqlInstanceResponse
+        /// </returns>
         public DeleteSqlInstanceResponse DeleteSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2819,11 +3524,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteSqlInstanceResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSqlInstanceResponse
+        /// </returns>
         public async Task<DeleteSqlInstanceResponse> DeleteSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2845,9 +3555,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return DeleteSqlInstanceResponse
-         */
+        /// <returns>
+        /// DeleteSqlInstanceResponse
+        /// </returns>
         public DeleteSqlInstanceResponse DeleteSqlInstance(string instanceId, string database, string sqlInstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2855,9 +3565,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteSqlInstanceWithOptions(instanceId, database, sqlInstanceId, headers, runtime);
         }
 
-        /**
-         * @return DeleteSqlInstanceResponse
-         */
+        /// <returns>
+        /// DeleteSqlInstanceResponse
+        /// </returns>
         public async Task<DeleteSqlInstanceResponse> DeleteSqlInstanceAsync(string instanceId, string database, string sqlInstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2865,13 +3575,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, headers, runtime);
         }
 
-        /**
-         * @summary Deletes an index table.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTableResponse
+        /// </returns>
         public DeleteTableResponse DeleteTableWithOptions(string instanceId, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2893,13 +3611,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteTableResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an index table.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTableResponse
+        /// </returns>
         public async Task<DeleteTableResponse> DeleteTableWithOptionsAsync(string instanceId, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2921,11 +3647,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DeleteTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes an index table.
-         *
-         * @return DeleteTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index table.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteTableResponse
+        /// </returns>
         public DeleteTableResponse DeleteTable(string instanceId, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2933,11 +3662,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DeleteTableWithOptions(instanceId, tableName, headers, runtime);
         }
 
-        /**
-         * @summary Deletes an index table.
-         *
-         * @return DeleteTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an index table.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteTableResponse
+        /// </returns>
         public async Task<DeleteTableResponse> DeleteTableAsync(string instanceId, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2945,14 +3677,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DeleteTableWithOptionsAsync(instanceId, tableName, headers, runtime);
         }
 
-        /**
-         * @summary Queries available regions.
-         *
-         * @param request DescribeRegionsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2981,14 +3723,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries available regions.
-         *
-         * @param request DescribeRegionsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3017,12 +3769,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries available regions.
-         *
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3030,12 +3788,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return DescribeRegionsWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries available regions.
-         *
-         * @param request DescribeRegionsRequest
-         * @return DescribeRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3043,12 +3807,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @param request ExecuteSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ExecuteSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// ExecuteSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSqlInstanceResponse
+        /// </returns>
         public ExecuteSqlInstanceResponse ExecuteSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3101,12 +3872,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ExecuteSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ExecuteSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ExecuteSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// ExecuteSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSqlInstanceResponse
+        /// </returns>
         public async Task<ExecuteSqlInstanceResponse> ExecuteSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3159,10 +3937,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ExecuteSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ExecuteSqlInstanceRequest
-         * @return ExecuteSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// ExecuteSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSqlInstanceResponse
+        /// </returns>
         public ExecuteSqlInstanceResponse ExecuteSqlInstance(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3170,10 +3951,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ExecuteSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ExecuteSqlInstanceRequest
-         * @return ExecuteSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// ExecuteSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSqlInstanceResponse
+        /// </returns>
         public async Task<ExecuteSqlInstanceResponse> ExecuteSqlInstanceAsync(string instanceId, string database, string sqlInstanceId, ExecuteSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3181,22 +3965,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ExecuteSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Performs a forced switchover.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ForceSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a forced switchover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForceSwitchResponse
+        /// </returns>
         public ForceSwitchResponse ForceSwitchWithOptions(string instanceId, string fsmId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3218,22 +4011,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ForceSwitchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a forced switchover.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ForceSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a forced switchover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForceSwitchResponse
+        /// </returns>
         public async Task<ForceSwitchResponse> ForceSwitchWithOptionsAsync(string instanceId, string fsmId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3255,20 +4057,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ForceSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Performs a forced switchover.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
-         * ```
-         *
-         * @return ForceSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a forced switchover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ForceSwitchResponse
+        /// </returns>
         public ForceSwitchResponse ForceSwitch(string instanceId, string fsmId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3276,20 +4082,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ForceSwitchWithOptions(instanceId, fsmId, headers, runtime);
         }
 
-        /**
-         * @summary Performs a forced switchover.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
-         * ```
-         *
-         * @return ForceSwitchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a forced switchover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ForceSwitchResponse
+        /// </returns>
         public async Task<ForceSwitchResponse> ForceSwitchAsync(string instanceId, string fsmId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3297,19 +4107,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ForceSwitchWithOptionsAsync(instanceId, fsmId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @param request GetAdvanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigResponse
+        /// </returns>
         public GetAdvanceConfigResponse GetAdvanceConfigWithOptions(string instanceId, string configName, GetAdvanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3338,19 +4163,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetAdvanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @param request GetAdvanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigResponse
+        /// </returns>
         public async Task<GetAdvanceConfigResponse> GetAdvanceConfigWithOptionsAsync(string instanceId, string configName, GetAdvanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3379,17 +4219,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetAdvanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @param request GetAdvanceConfigRequest
-         * @return GetAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigResponse
+        /// </returns>
         public GetAdvanceConfigResponse GetAdvanceConfig(string instanceId, string configName, GetAdvanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3397,17 +4248,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetAdvanceConfigWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-         *
-         * @param request GetAdvanceConfigRequest
-         * @return GetAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigResponse
+        /// </returns>
         public async Task<GetAdvanceConfigResponse> GetAdvanceConfigAsync(string instanceId, string configName, GetAdvanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3415,19 +4277,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetAdvanceConfigWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration file.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request GetAdvanceConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigFileResponse
+        /// </returns>
         public GetAdvanceConfigFileResponse GetAdvanceConfigFileWithOptions(string instanceId, string configName, GetAdvanceConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3456,19 +4333,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetAdvanceConfigFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration file.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request GetAdvanceConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigFileResponse
+        /// </returns>
         public async Task<GetAdvanceConfigFileResponse> GetAdvanceConfigFileWithOptionsAsync(string instanceId, string configName, GetAdvanceConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3497,17 +4389,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetAdvanceConfigFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration file.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request GetAdvanceConfigFileRequest
-         * @return GetAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigFileResponse
+        /// </returns>
         public GetAdvanceConfigFileResponse GetAdvanceConfigFile(string instanceId, string configName, GetAdvanceConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3515,17 +4418,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetAdvanceConfigFileWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an advanced configuration file.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request GetAdvanceConfigFileRequest
-         * @return GetAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an advanced configuration file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdvanceConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvanceConfigFileResponse
+        /// </returns>
         public async Task<GetAdvanceConfigFileResponse> GetAdvanceConfigFileAsync(string instanceId, string configName, GetAdvanceConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3533,18 +4447,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetAdvanceConfigFileWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of a cluster.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instance/{instanceId}/clusters/{clusterName}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public GetClusterResponse GetClusterWithOptions(string instanceId, string clusterName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3566,18 +4491,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a cluster.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instance/{instanceId}/clusters/{clusterName}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public async Task<GetClusterResponse> GetClusterWithOptionsAsync(string instanceId, string clusterName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3599,16 +4535,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a cluster.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instance/{instanceId}/clusters/{clusterName}`
-         *
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public GetClusterResponse GetCluster(string instanceId, string clusterName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3616,16 +4558,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetClusterWithOptions(instanceId, clusterName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of a cluster.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instance/{instanceId}/clusters/{clusterName}`
-         *
-         * @return GetClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public async Task<GetClusterResponse> GetClusterAsync(string instanceId, string clusterName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3633,18 +4581,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetClusterWithOptionsAsync(instanceId, clusterName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the runtime information about a specified cluster.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetClusterRunTimeInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the runtime information about a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-run-time-info</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterRunTimeInfoResponse
+        /// </returns>
         public GetClusterRunTimeInfoResponse GetClusterRunTimeInfoWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3666,18 +4625,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetClusterRunTimeInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the runtime information about a specified cluster.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetClusterRunTimeInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the runtime information about a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-run-time-info</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterRunTimeInfoResponse
+        /// </returns>
         public async Task<GetClusterRunTimeInfoResponse> GetClusterRunTimeInfoWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3699,16 +4669,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetClusterRunTimeInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the runtime information about a specified cluster.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
-         *
-         * @return GetClusterRunTimeInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the runtime information about a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-run-time-info</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetClusterRunTimeInfoResponse
+        /// </returns>
         public GetClusterRunTimeInfoResponse GetClusterRunTimeInfo(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3716,16 +4692,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetClusterRunTimeInfoWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the runtime information about a specified cluster.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
-         *
-         * @return GetClusterRunTimeInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the runtime information about a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-run-time-info</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetClusterRunTimeInfoResponse
+        /// </returns>
         public async Task<GetClusterRunTimeInfoResponse> GetClusterRunTimeInfoAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3733,18 +4715,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetClusterRunTimeInfoWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Obtains a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataSourceResponse
+        /// </returns>
         public GetDataSourceResponse GetDataSourceWithOptions(string instanceId, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3766,18 +4759,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataSourceResponse
+        /// </returns>
         public async Task<GetDataSourceResponse> GetDataSourceWithOptionsAsync(string instanceId, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3799,16 +4803,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @return GetDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetDataSourceResponse
+        /// </returns>
         public GetDataSourceResponse GetDataSource(string instanceId, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3816,16 +4826,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetDataSourceWithOptions(instanceId, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @summary Obtains a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-         *
-         * @return GetDataSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetDataSourceResponse
+        /// </returns>
         public async Task<GetDataSourceResponse> GetDataSourceAsync(string instanceId, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3833,13 +4849,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetDataSourceWithOptionsAsync(instanceId, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @summary 获取数据源部署信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataSourceDeployResponse
+        /// </returns>
         public GetDataSourceDeployResponse GetDataSourceDeployWithOptions(string instanceId, string deployName, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3861,13 +4885,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDataSourceDeployResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据源部署信息
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataSourceDeployResponse
+        /// </returns>
         public async Task<GetDataSourceDeployResponse> GetDataSourceDeployWithOptionsAsync(string instanceId, string deployName, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3889,11 +4921,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDataSourceDeployResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据源部署信息
-         *
-         * @return GetDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetDataSourceDeployResponse
+        /// </returns>
         public GetDataSourceDeployResponse GetDataSourceDeploy(string instanceId, string deployName, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3901,11 +4936,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetDataSourceDeployWithOptions(instanceId, deployName, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @summary 获取数据源部署信息
-         *
-         * @return GetDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetDataSourceDeployResponse
+        /// </returns>
         public async Task<GetDataSourceDeployResponse> GetDataSourceDeployAsync(string instanceId, string deployName, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3913,11 +4951,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetDataSourceDeployWithOptionsAsync(instanceId, deployName, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDatabaseSchemaResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseSchemaResponse
+        /// </returns>
         public GetDatabaseSchemaResponse GetDatabaseSchemaWithOptions(string instanceId, string database, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3939,11 +4982,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDatabaseSchemaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDatabaseSchemaResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatabaseSchemaResponse
+        /// </returns>
         public async Task<GetDatabaseSchemaResponse> GetDatabaseSchemaWithOptionsAsync(string instanceId, string database, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3965,9 +5013,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDatabaseSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return GetDatabaseSchemaResponse
-         */
+        /// <returns>
+        /// GetDatabaseSchemaResponse
+        /// </returns>
         public GetDatabaseSchemaResponse GetDatabaseSchema(string instanceId, string database, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3975,9 +5023,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetDatabaseSchemaWithOptions(instanceId, database, tableName, headers, runtime);
         }
 
-        /**
-         * @return GetDatabaseSchemaResponse
-         */
+        /// <returns>
+        /// GetDatabaseSchemaResponse
+        /// </returns>
         public async Task<GetDatabaseSchemaResponse> GetDatabaseSchemaAsync(string instanceId, string database, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3985,20 +5033,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetDatabaseSchemaWithOptionsAsync(instanceId, database, tableName, headers, runtime);
         }
 
-        /**
-         * @summary Displays the overview of the deployment.
-         *
-         * @description ## Method
-         * GET
-         * ## URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/deploy-graph
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeployGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays the overview of the deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para>GET</para>
+        /// <h2>URI</h2>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/deploy-graph
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeployGraphResponse
+        /// </returns>
         public GetDeployGraphResponse GetDeployGraphWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4020,20 +5078,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDeployGraphResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Displays the overview of the deployment.
-         *
-         * @description ## Method
-         * GET
-         * ## URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/deploy-graph
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeployGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays the overview of the deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para>GET</para>
+        /// <h2>URI</h2>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/deploy-graph
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeployGraphResponse
+        /// </returns>
         public async Task<GetDeployGraphResponse> GetDeployGraphWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4055,18 +5123,23 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetDeployGraphResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Displays the overview of the deployment.
-         *
-         * @description ## Method
-         * GET
-         * ## URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/deploy-graph
-         * ```
-         *
-         * @return GetDeployGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays the overview of the deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para>GET</para>
+        /// <h2>URI</h2>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/deploy-graph
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetDeployGraphResponse
+        /// </returns>
         public GetDeployGraphResponse GetDeployGraph(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4074,18 +5147,23 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetDeployGraphWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Displays the overview of the deployment.
-         *
-         * @description ## Method
-         * GET
-         * ## URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/deploy-graph
-         * ```
-         *
-         * @return GetDeployGraphResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays the overview of the deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para>GET</para>
+        /// <h2>URI</h2>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/deploy-graph
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetDeployGraphResponse
+        /// </returns>
         public async Task<GetDeployGraphResponse> GetDeployGraphAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4093,19 +5171,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetDeployGraphWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of an index table version.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request GetFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an index table version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileResponse
+        /// </returns>
         public GetFileResponse GetFileWithOptions(string instanceId, string indexName, string versionName, GetFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4134,19 +5227,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an index table version.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request GetFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an index table version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileResponse
+        /// </returns>
         public async Task<GetFileResponse> GetFileWithOptionsAsync(string instanceId, string indexName, string versionName, GetFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4175,17 +5283,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an index table version.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request GetFileRequest
-         * @return GetFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an index table version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileResponse
+        /// </returns>
         public GetFileResponse GetFile(string instanceId, string indexName, string versionName, GetFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4193,17 +5312,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetFileWithOptions(instanceId, indexName, versionName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of an index table version.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request GetFileRequest
-         * @return GetFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an index table version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileResponse
+        /// </returns>
         public async Task<GetFileResponse> GetFileAsync(string instanceId, string indexName, string versionName, GetFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4211,13 +5341,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetFileWithOptionsAsync(instanceId, indexName, versionName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an index version.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexResponse
+        /// </returns>
         public GetIndexResponse GetIndexWithOptions(string instanceId, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4239,13 +5387,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an index version.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexResponse
+        /// </returns>
         public async Task<GetIndexResponse> GetIndexWithOptionsAsync(string instanceId, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4267,11 +5433,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an index version.
-         *
-         * @return GetIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetIndexResponse
+        /// </returns>
         public GetIndexResponse GetIndex(string instanceId, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4279,11 +5458,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetIndexWithOptions(instanceId, indexName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an index version.
-         *
-         * @return GetIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetIndexResponse
+        /// </returns>
         public async Task<GetIndexResponse> GetIndexAsync(string instanceId, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4291,13 +5483,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetIndexWithOptionsAsync(instanceId, indexName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the online effective policy of an index.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the online effective policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexOnlineStrategyResponse
+        /// </returns>
         public GetIndexOnlineStrategyResponse GetIndexOnlineStrategyWithOptions(string instanceId, string dataSourceName, string deployName, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4319,13 +5519,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetIndexOnlineStrategyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the online effective policy of an index.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the online effective policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexOnlineStrategyResponse
+        /// </returns>
         public async Task<GetIndexOnlineStrategyResponse> GetIndexOnlineStrategyWithOptionsAsync(string instanceId, string dataSourceName, string deployName, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4347,11 +5555,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetIndexOnlineStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the online effective policy of an index.
-         *
-         * @return GetIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the online effective policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetIndexOnlineStrategyResponse
+        /// </returns>
         public GetIndexOnlineStrategyResponse GetIndexOnlineStrategy(string instanceId, string dataSourceName, string deployName, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4359,11 +5570,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetIndexOnlineStrategyWithOptions(instanceId, dataSourceName, deployName, indexName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the online effective policy of an index.
-         *
-         * @return GetIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the online effective policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetIndexOnlineStrategyResponse
+        /// </returns>
         public async Task<GetIndexOnlineStrategyResponse> GetIndexOnlineStrategyAsync(string instanceId, string dataSourceName, string deployName, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4371,18 +5585,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetIndexOnlineStrategyWithOptionsAsync(instanceId, dataSourceName, deployName, indexName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about index versions that the current index version can be rolled back to.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about index versions that the current index version can be rolled back to.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexVersionResponse
+        /// </returns>
         public GetIndexVersionResponse GetIndexVersionWithOptions(string instanceId, string clusterName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4404,18 +5631,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetIndexVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about index versions that the current index version can be rolled back to.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about index versions that the current index version can be rolled back to.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexVersionResponse
+        /// </returns>
         public async Task<GetIndexVersionResponse> GetIndexVersionWithOptionsAsync(string instanceId, string clusterName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4437,16 +5677,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetIndexVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about index versions that the current index version can be rolled back to.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @return GetIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about index versions that the current index version can be rolled back to.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetIndexVersionResponse
+        /// </returns>
         public GetIndexVersionResponse GetIndexVersion(string instanceId, string clusterName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4454,16 +5702,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetIndexVersionWithOptions(instanceId, clusterName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about index versions that the current index version can be rolled back to.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @return GetIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about index versions that the current index version can be rolled back to.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetIndexVersionResponse
+        /// </returns>
         public async Task<GetIndexVersionResponse> GetIndexVersionAsync(string instanceId, string clusterName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4471,18 +5727,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetIndexVersionWithOptionsAsync(instanceId, clusterName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of an instance based on the instance ID.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public GetInstanceResponse GetInstanceWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4504,18 +5773,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an instance based on the instance ID.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public async Task<GetInstanceResponse> GetInstanceWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4537,16 +5819,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an instance based on the instance ID.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public GetInstanceResponse GetInstance(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4554,16 +5844,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetInstanceWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of an instance based on the instance ID.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @return GetInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an instance based on the instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetInstanceResponse
+        /// </returns>
         public async Task<GetInstanceResponse> GetInstanceAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4571,14 +5869,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetInstanceWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Gets the configuration information of a node.
-         *
-         * @param request GetNodeConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the configuration information of a node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNodeConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNodeConfigResponse
+        /// </returns>
         public GetNodeConfigResponse GetNodeConfigWithOptions(string instanceId, GetNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4615,14 +5923,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetNodeConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Gets the configuration information of a node.
-         *
-         * @param request GetNodeConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the configuration information of a node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNodeConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNodeConfigResponse
+        /// </returns>
         public async Task<GetNodeConfigResponse> GetNodeConfigWithOptionsAsync(string instanceId, GetNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4659,12 +5977,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetNodeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Gets the configuration information of a node.
-         *
-         * @param request GetNodeConfigRequest
-         * @return GetNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the configuration information of a node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNodeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNodeConfigResponse
+        /// </returns>
         public GetNodeConfigResponse GetNodeConfig(string instanceId, GetNodeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4672,12 +5996,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetNodeConfigWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Gets the configuration information of a node.
-         *
-         * @param request GetNodeConfigRequest
-         * @return GetNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Gets the configuration information of a node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNodeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNodeConfigResponse
+        /// </returns>
         public async Task<GetNodeConfigResponse> GetNodeConfigAsync(string instanceId, GetNodeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4685,12 +6015,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetNodeConfigWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request GetSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// GetSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlInstanceResponse
+        /// </returns>
         public GetSqlInstanceResponse GetSqlInstanceWithOptions(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4719,12 +6056,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetSqlInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetSqlInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// GetSqlInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlInstanceResponse
+        /// </returns>
         public async Task<GetSqlInstanceResponse> GetSqlInstanceWithOptionsAsync(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4753,10 +6097,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetSqlInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetSqlInstanceRequest
-         * @return GetSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// GetSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlInstanceResponse
+        /// </returns>
         public GetSqlInstanceResponse GetSqlInstance(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4764,10 +6111,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request GetSqlInstanceRequest
-         * @return GetSqlInstanceResponse
-         */
+        /// <param name="request">
+        /// GetSqlInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlInstanceResponse
+        /// </returns>
         public async Task<GetSqlInstanceResponse> GetSqlInstanceAsync(string instanceId, string database, string sqlInstanceId, GetSqlInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4775,13 +6125,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetSqlInstanceWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an index table.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableResponse
+        /// </returns>
         public GetTableResponse GetTableWithOptions(string instanceId, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4803,13 +6161,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetTableResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an index table.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableResponse
+        /// </returns>
         public async Task<GetTableResponse> GetTableWithOptionsAsync(string instanceId, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4831,11 +6197,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about an index table.
-         *
-         * @return GetTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index table.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTableResponse
+        /// </returns>
         public GetTableResponse GetTable(string instanceId, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4843,11 +6212,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetTableWithOptions(instanceId, tableName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the information about an index table.
-         *
-         * @return GetTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an index table.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTableResponse
+        /// </returns>
         public async Task<GetTableResponse> GetTableAsync(string instanceId, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4855,13 +6227,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetTableWithOptionsAsync(instanceId, tableName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the status of an index version based on the ID of the full index version.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTableGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an index version based on the ID of the full index version.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableGenerationResponse
+        /// </returns>
         public GetTableGenerationResponse GetTableGenerationWithOptions(string instanceId, string tableName, string generationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4883,13 +6263,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetTableGenerationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of an index version based on the ID of the full index version.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTableGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an index version based on the ID of the full index version.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableGenerationResponse
+        /// </returns>
         public async Task<GetTableGenerationResponse> GetTableGenerationWithOptionsAsync(string instanceId, string tableName, string generationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4911,11 +6299,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<GetTableGenerationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the status of an index version based on the ID of the full index version.
-         *
-         * @return GetTableGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an index version based on the ID of the full index version.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTableGenerationResponse
+        /// </returns>
         public GetTableGenerationResponse GetTableGeneration(string instanceId, string tableName, string generationId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4923,11 +6314,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return GetTableGenerationWithOptions(instanceId, tableName, generationId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the status of an index version based on the ID of the full index version.
-         *
-         * @return GetTableGenerationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an index version based on the ID of the full index version.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetTableGenerationResponse
+        /// </returns>
         public async Task<GetTableGenerationResponse> GetTableGenerationAsync(string instanceId, string tableName, string generationId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4935,19 +6329,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await GetTableGenerationWithOptionsAsync(instanceId, tableName, generationId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the files in an advanced configuration directory.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
-         *
-         * @param request ListAdvanceConfigDirRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAdvanceConfigDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigDirRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigDirResponse
+        /// </returns>
         public ListAdvanceConfigDirResponse ListAdvanceConfigDirWithOptions(string instanceId, string configName, ListAdvanceConfigDirRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4976,19 +6383,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAdvanceConfigDirResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the files in an advanced configuration directory.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
-         *
-         * @param request ListAdvanceConfigDirRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAdvanceConfigDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigDirRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigDirResponse
+        /// </returns>
         public async Task<ListAdvanceConfigDirResponse> ListAdvanceConfigDirWithOptionsAsync(string instanceId, string configName, ListAdvanceConfigDirRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5017,17 +6437,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAdvanceConfigDirResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the files in an advanced configuration directory.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
-         *
-         * @param request ListAdvanceConfigDirRequest
-         * @return ListAdvanceConfigDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigDirResponse
+        /// </returns>
         public ListAdvanceConfigDirResponse ListAdvanceConfigDir(string instanceId, string configName, ListAdvanceConfigDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5035,17 +6464,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListAdvanceConfigDirWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the files in an advanced configuration directory.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
-         *
-         * @param request ListAdvanceConfigDirRequest
-         * @return ListAdvanceConfigDirResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the files in an advanced configuration directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigDirResponse
+        /// </returns>
         public async Task<ListAdvanceConfigDirResponse> ListAdvanceConfigDirAsync(string instanceId, string configName, ListAdvanceConfigDirRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5053,17 +6491,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListAdvanceConfigDirWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Obtains a list of advanced configurations.
-         *
-         * @description ## Sample requests
-         * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
-         *
-         * @param request ListAdvanceConfigsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAdvanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Sample requests</h2>
+        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigsResponse
+        /// </returns>
         public ListAdvanceConfigsResponse ListAdvanceConfigsWithOptions(string instanceId, ListAdvanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5104,17 +6555,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAdvanceConfigsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains a list of advanced configurations.
-         *
-         * @description ## Sample requests
-         * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
-         *
-         * @param request ListAdvanceConfigsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAdvanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Sample requests</h2>
+        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigsResponse
+        /// </returns>
         public async Task<ListAdvanceConfigsResponse> ListAdvanceConfigsWithOptionsAsync(string instanceId, ListAdvanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5155,15 +6619,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAdvanceConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains a list of advanced configurations.
-         *
-         * @description ## Sample requests
-         * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
-         *
-         * @param request ListAdvanceConfigsRequest
-         * @return ListAdvanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Sample requests</h2>
+        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigsResponse
+        /// </returns>
         public ListAdvanceConfigsResponse ListAdvanceConfigs(string instanceId, ListAdvanceConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5171,15 +6644,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListAdvanceConfigsWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Obtains a list of advanced configurations.
-         *
-         * @description ## Sample requests
-         * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
-         *
-         * @param request ListAdvanceConfigsRequest
-         * @return ListAdvanceConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a list of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Sample requests</h2>
+        /// <para><c>GET /openapi/ha3/instances/ose-test1/advanced-configs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAdvanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAdvanceConfigsResponse
+        /// </returns>
         public async Task<ListAdvanceConfigsResponse> ListAdvanceConfigsAsync(string instanceId, ListAdvanceConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5187,11 +6669,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListAdvanceConfigsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAliasesResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAliasesResponse
+        /// </returns>
         public ListAliasesResponse ListAliasesWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5213,11 +6700,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAliasesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAliasesResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAliasesResponse
+        /// </returns>
         public async Task<ListAliasesResponse> ListAliasesWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5239,9 +6731,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListAliasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return ListAliasesResponse
-         */
+        /// <returns>
+        /// ListAliasesResponse
+        /// </returns>
         public ListAliasesResponse ListAliases(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5249,9 +6741,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListAliasesWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @return ListAliasesResponse
-         */
+        /// <returns>
+        /// ListAliasesResponse
+        /// </returns>
         public async Task<ListAliasesResponse> ListAliasesAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5259,18 +6751,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListAliasesWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries cluster names.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-names
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClusterNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-names</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterNamesResponse
+        /// </returns>
         public ListClusterNamesResponse ListClusterNamesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5292,18 +6795,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListClusterNamesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries cluster names.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-names
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClusterNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-names</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterNamesResponse
+        /// </returns>
         public async Task<ListClusterNamesResponse> ListClusterNamesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5325,16 +6839,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListClusterNamesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries cluster names.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-names
-         *
-         * @return ListClusterNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-names</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListClusterNamesResponse
+        /// </returns>
         public ListClusterNamesResponse ListClusterNames()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5342,16 +6862,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListClusterNamesWithOptions(headers, runtime);
         }
 
-        /**
-         * @summary Queries cluster names.
-         *
-         * @description ### Method
-         * GET
-         * ### URI
-         * /openapi/ha3/instances/{instanceId}/cluster-names
-         *
-         * @return ListClusterNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para>GET</para>
+        /// <h3>URI</h3>
+        /// <para>/openapi/ha3/instances/{instanceId}/cluster-names</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListClusterNamesResponse
+        /// </returns>
         public async Task<ListClusterNamesResponse> ListClusterNamesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5359,22 +6885,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListClusterNamesWithOptionsAsync(headers, runtime);
         }
 
-        /**
-         * @summary Queries cluster tasks.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/cluster-tasks
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClusterTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/cluster-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterTasksResponse
+        /// </returns>
         public ListClusterTasksResponse ListClusterTasksWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5396,22 +6931,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListClusterTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries cluster tasks.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/cluster-tasks
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClusterTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/cluster-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterTasksResponse
+        /// </returns>
         public async Task<ListClusterTasksResponse> ListClusterTasksWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5433,20 +6977,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListClusterTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries cluster tasks.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/cluster-tasks
-         * ```
-         *
-         * @return ListClusterTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/cluster-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListClusterTasksResponse
+        /// </returns>
         public ListClusterTasksResponse ListClusterTasks(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5454,20 +7002,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListClusterTasksWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries cluster tasks.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/cluster-tasks
-         * ```
-         *
-         * @return ListClusterTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries cluster tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/cluster-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListClusterTasksResponse
+        /// </returns>
         public async Task<ListClusterTasksResponse> ListClusterTasksAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5475,22 +7027,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListClusterTasksWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries clusters.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public ListClustersResponse ListClustersWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5512,22 +7073,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries clusters.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public async Task<ListClustersResponse> ListClustersWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5549,20 +7119,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries clusters.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters
-         * ```
-         *
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public ListClustersResponse ListClusters(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5570,20 +7144,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListClustersWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries clusters.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters
-         * ```
-         *
-         * @return ListClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListClustersResponse
+        /// </returns>
         public async Task<ListClustersResponse> ListClustersAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5591,18 +7169,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListClustersWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the schema information about a data source.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourceSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the schema information about a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourceSchemasResponse
+        /// </returns>
         public ListDataSourceSchemasResponse ListDataSourceSchemasWithOptions(string instanceId, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5624,18 +7213,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDataSourceSchemasResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the schema information about a data source.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourceSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the schema information about a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourceSchemasResponse
+        /// </returns>
         public async Task<ListDataSourceSchemasResponse> ListDataSourceSchemasWithOptionsAsync(string instanceId, string dataSourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5657,16 +7257,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDataSourceSchemasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the schema information about a data source.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
-         *
-         * @return ListDataSourceSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the schema information about a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListDataSourceSchemasResponse
+        /// </returns>
         public ListDataSourceSchemasResponse ListDataSourceSchemas(string instanceId, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5674,16 +7280,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListDataSourceSchemasWithOptions(instanceId, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @summary Queries the schema information about a data source.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
-         *
-         * @return ListDataSourceSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the schema information about a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListDataSourceSchemasResponse
+        /// </returns>
         public async Task<ListDataSourceSchemasResponse> ListDataSourceSchemasAsync(string instanceId, string dataSourceName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5691,22 +7303,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDataSourceSchemasWithOptionsAsync(instanceId, dataSourceName, headers, runtime);
         }
 
-        /**
-         * @summary Displays data source tasks.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * GET
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/data-source-tasks
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourceTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays data source tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-source-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourceTasksResponse
+        /// </returns>
         public ListDataSourceTasksResponse ListDataSourceTasksWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5728,22 +7349,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDataSourceTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Displays data source tasks.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * GET
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/data-source-tasks
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourceTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays data source tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-source-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourceTasksResponse
+        /// </returns>
         public async Task<ListDataSourceTasksResponse> ListDataSourceTasksWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5765,20 +7395,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDataSourceTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Displays data source tasks.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * GET
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/data-source-tasks
-         * ```
-         *
-         * @return ListDataSourceTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays data source tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-source-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListDataSourceTasksResponse
+        /// </returns>
         public ListDataSourceTasksResponse ListDataSourceTasks(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5786,20 +7420,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListDataSourceTasksWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Displays data source tasks.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * GET
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/data-source-tasks
-         * ```
-         *
-         * @return ListDataSourceTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Displays data source tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-source-tasks
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListDataSourceTasksResponse
+        /// </returns>
         public async Task<ListDataSourceTasksResponse> ListDataSourceTasksAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5807,18 +7445,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDataSourceTasksWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the list of data sources.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of data sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public ListDataSourcesResponse ListDataSourcesWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5840,18 +7489,29 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDataSourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the list of data sources.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources`
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of data sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources</c></para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public async Task<ListDataSourcesResponse> ListDataSourcesWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5873,16 +7533,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDataSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the list of data sources.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources`
-         *
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of data sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public ListDataSourcesResponse ListDataSources(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5890,16 +7556,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListDataSourcesWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the list of data sources.
-         *
-         * @description ## Method
-         * `GET`
-         * ## URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources`
-         *
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of data sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <para><c>GET</c></para>
+        /// <h2>URI</h2>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources</c></para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public async Task<ListDataSourcesResponse> ListDataSourcesAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5907,11 +7579,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDataSourcesWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDatabasesResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public ListDatabasesResponse ListDatabasesWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5933,11 +7610,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDatabasesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDatabasesResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public async Task<ListDatabasesResponse> ListDatabasesWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5959,9 +7641,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDatabasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return ListDatabasesResponse
-         */
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public ListDatabasesResponse ListDatabases(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5969,9 +7651,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListDatabasesWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @return ListDatabasesResponse
-         */
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
         public async Task<ListDatabasesResponse> ListDatabasesAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5979,19 +7661,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDatabasesWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Queries the historical index versions of a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
-         *
-         * @param request ListDateSourceGenerationsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDateSourceGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the historical index versions of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDateSourceGenerationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDateSourceGenerationsResponse
+        /// </returns>
         public ListDateSourceGenerationsResponse ListDateSourceGenerationsWithOptions(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6024,19 +7719,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDateSourceGenerationsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the historical index versions of a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
-         *
-         * @param request ListDateSourceGenerationsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDateSourceGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the historical index versions of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDateSourceGenerationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDateSourceGenerationsResponse
+        /// </returns>
         public async Task<ListDateSourceGenerationsResponse> ListDateSourceGenerationsWithOptionsAsync(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6069,17 +7777,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListDateSourceGenerationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the historical index versions of a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
-         *
-         * @param request ListDateSourceGenerationsRequest
-         * @return ListDateSourceGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the historical index versions of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDateSourceGenerationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDateSourceGenerationsResponse
+        /// </returns>
         public ListDateSourceGenerationsResponse ListDateSourceGenerations(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6087,17 +7804,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListDateSourceGenerationsWithOptions(instanceId, dataSourceName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the historical index versions of a data source.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
-         *
-         * @param request ListDateSourceGenerationsRequest
-         * @return ListDateSourceGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the historical index versions of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDateSourceGenerationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDateSourceGenerationsResponse
+        /// </returns>
         public async Task<ListDateSourceGenerationsResponse> ListDateSourceGenerationsAsync(string instanceId, string dataSourceName, ListDateSourceGenerationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6105,11 +7831,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListDateSourceGenerationsWithOptionsAsync(instanceId, dataSourceName, request, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndexRecoverRecordsResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexRecoverRecordsResponse
+        /// </returns>
         public ListIndexRecoverRecordsResponse ListIndexRecoverRecordsWithOptions(string indexName, string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6131,11 +7862,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListIndexRecoverRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndexRecoverRecordsResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexRecoverRecordsResponse
+        /// </returns>
         public async Task<ListIndexRecoverRecordsResponse> ListIndexRecoverRecordsWithOptionsAsync(string indexName, string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6157,9 +7893,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListIndexRecoverRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return ListIndexRecoverRecordsResponse
-         */
+        /// <returns>
+        /// ListIndexRecoverRecordsResponse
+        /// </returns>
         public ListIndexRecoverRecordsResponse ListIndexRecoverRecords(string indexName, string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6167,9 +7903,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListIndexRecoverRecordsWithOptions(indexName, instanceId, headers, runtime);
         }
 
-        /**
-         * @return ListIndexRecoverRecordsResponse
-         */
+        /// <returns>
+        /// ListIndexRecoverRecordsResponse
+        /// </returns>
         public async Task<ListIndexRecoverRecordsResponse> ListIndexRecoverRecordsAsync(string indexName, string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6177,19 +7913,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListIndexRecoverRecordsWithOptionsAsync(indexName, instanceId, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the index list.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes
-         *
-         * @param request ListIndexesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndexesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the index list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIndexesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexesResponse
+        /// </returns>
         public ListIndexesResponse ListIndexesWithOptions(string instanceId, ListIndexesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6230,19 +7981,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListIndexesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the index list.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes
-         *
-         * @param request ListIndexesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIndexesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the index list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIndexesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexesResponse
+        /// </returns>
         public async Task<ListIndexesResponse> ListIndexesWithOptionsAsync(string instanceId, ListIndexesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6283,17 +8049,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListIndexesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Obtains the index list.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes
-         *
-         * @param request ListIndexesRequest
-         * @return ListIndexesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the index list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIndexesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexesResponse
+        /// </returns>
         public ListIndexesResponse ListIndexes(string instanceId, ListIndexesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6301,17 +8078,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListIndexesWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Obtains the index list.
-         *
-         * @description ## Method
-         *     GET
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes
-         *
-         * @param request ListIndexesRequest
-         * @return ListIndexesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the index list.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>GET
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIndexesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexesResponse
+        /// </returns>
         public async Task<ListIndexesResponse> ListIndexesAsync(string instanceId, ListIndexesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6319,19 +8107,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListIndexesWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the specifications of an instance.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/specs?type=qrs`
-         *
-         * @param request ListInstanceSpecsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceSpecsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/specs?type=qrs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstanceSpecsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceSpecsResponse
+        /// </returns>
         public ListInstanceSpecsResponse ListInstanceSpecsWithOptions(string instanceId, ListInstanceSpecsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6360,19 +8161,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListInstanceSpecsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the specifications of an instance.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/specs?type=qrs`
-         *
-         * @param request ListInstanceSpecsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstanceSpecsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/specs?type=qrs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstanceSpecsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceSpecsResponse
+        /// </returns>
         public async Task<ListInstanceSpecsResponse> ListInstanceSpecsWithOptionsAsync(string instanceId, ListInstanceSpecsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6401,17 +8215,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListInstanceSpecsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the specifications of an instance.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/specs?type=qrs`
-         *
-         * @param request ListInstanceSpecsRequest
-         * @return ListInstanceSpecsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/specs?type=qrs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstanceSpecsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceSpecsResponse
+        /// </returns>
         public ListInstanceSpecsResponse ListInstanceSpecs(string instanceId, ListInstanceSpecsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6419,17 +8242,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListInstanceSpecsWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the specifications of an instance.
-         *
-         * @description ### Method
-         * `GET`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/specs?type=qrs`
-         *
-         * @param request ListInstanceSpecsRequest
-         * @return ListInstanceSpecsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/specs?type=qrs</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstanceSpecsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceSpecsResponse
+        /// </returns>
         public async Task<ListInstanceSpecsResponse> ListInstanceSpecsAsync(string instanceId, ListInstanceSpecsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6437,19 +8269,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListInstanceSpecsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances`
-         *
-         * @param tmpReq ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances</c></para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6524,19 +8369,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances`
-         *
-         * @param tmpReq ListInstancesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances</c></para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6611,17 +8469,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances`
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstances(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6629,17 +8496,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListInstancesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of instances.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances`
-         *
-         * @param request ListInstancesRequest
-         * @return ListInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesAsync(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6647,12 +8523,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListInstancesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @param request ListLogsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListLogsResponse
-         */
+        /// <param name="request">
+        /// ListLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogsResponse
+        /// </returns>
         public ListLogsResponse ListLogsWithOptions(string instanceId, ListLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6701,12 +8584,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListLogsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ListLogsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListLogsResponse
-         */
+        /// <param name="request">
+        /// ListLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogsResponse
+        /// </returns>
         public async Task<ListLogsResponse> ListLogsWithOptionsAsync(string instanceId, ListLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6755,10 +8645,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ListLogsRequest
-         * @return ListLogsResponse
-         */
+        /// <param name="request">
+        /// ListLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogsResponse
+        /// </returns>
         public ListLogsResponse ListLogs(string instanceId, ListLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6766,10 +8659,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListLogsWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ListLogsRequest
-         * @return ListLogsResponse
-         */
+        /// <param name="request">
+        /// ListLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogsResponse
+        /// </returns>
         public async Task<ListLogsResponse> ListLogsAsync(string instanceId, ListLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6777,23 +8673,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListLogsWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of an online configuration.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
-         * ```
-         *
-         * @param request ListOnlineConfigsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListOnlineConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an online configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOnlineConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOnlineConfigsResponse
+        /// </returns>
         public ListOnlineConfigsResponse ListOnlineConfigsWithOptions(string instanceId, string nodeName, ListOnlineConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6822,23 +8729,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListOnlineConfigsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an online configuration.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
-         * ```
-         *
-         * @param request ListOnlineConfigsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListOnlineConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an online configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOnlineConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOnlineConfigsResponse
+        /// </returns>
         public async Task<ListOnlineConfigsResponse> ListOnlineConfigsWithOptionsAsync(string instanceId, string nodeName, ListOnlineConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6867,21 +8785,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListOnlineConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of an online configuration.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
-         * ```
-         *
-         * @param request ListOnlineConfigsRequest
-         * @return ListOnlineConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an online configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOnlineConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOnlineConfigsResponse
+        /// </returns>
         public ListOnlineConfigsResponse ListOnlineConfigs(string instanceId, string nodeName, ListOnlineConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6889,21 +8814,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListOnlineConfigsWithOptions(instanceId, nodeName, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the details of an online configuration.
-         *
-         * @description ### Method
-         * ```java
-         * GET
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
-         * ```
-         *
-         * @param request ListOnlineConfigsRequest
-         * @return ListOnlineConfigsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an online configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">GET
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOnlineConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOnlineConfigsResponse
+        /// </returns>
         public async Task<ListOnlineConfigsResponse> ListOnlineConfigsAsync(string instanceId, string nodeName, ListOnlineConfigsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6911,11 +8843,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListOnlineConfigsWithOptionsAsync(instanceId, nodeName, request, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPausePolicysResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPausePolicysResponse
+        /// </returns>
         public ListPausePolicysResponse ListPausePolicysWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6937,11 +8874,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListPausePolicysResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPausePolicysResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPausePolicysResponse
+        /// </returns>
         public async Task<ListPausePolicysResponse> ListPausePolicysWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6963,9 +8905,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListPausePolicysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return ListPausePolicysResponse
-         */
+        /// <returns>
+        /// ListPausePolicysResponse
+        /// </returns>
         public ListPausePolicysResponse ListPausePolicys(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6973,9 +8915,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListPausePolicysWithOptions(instanceId, headers, runtime);
         }
 
-        /**
-         * @return ListPausePolicysResponse
-         */
+        /// <returns>
+        /// ListPausePolicysResponse
+        /// </returns>
         public async Task<ListPausePolicysResponse> ListPausePolicysAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6983,12 +8925,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListPausePolicysWithOptionsAsync(instanceId, headers, runtime);
         }
 
-        /**
-         * @param request ListPostQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPostQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListPostQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostQueryResultResponse
+        /// </returns>
         public ListPostQueryResultResponse ListPostQueryResultWithOptions(string instanceId, ListPostQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7027,12 +8976,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListPostQueryResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ListPostQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListPostQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListPostQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostQueryResultResponse
+        /// </returns>
         public async Task<ListPostQueryResultResponse> ListPostQueryResultWithOptionsAsync(string instanceId, ListPostQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7071,10 +9027,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListPostQueryResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ListPostQueryResultRequest
-         * @return ListPostQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListPostQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostQueryResultResponse
+        /// </returns>
         public ListPostQueryResultResponse ListPostQueryResult(string instanceId, ListPostQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7082,10 +9041,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListPostQueryResultWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ListPostQueryResultRequest
-         * @return ListPostQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListPostQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostQueryResultResponse
+        /// </returns>
         public async Task<ListPostQueryResultResponse> ListPostQueryResultAsync(string instanceId, ListPostQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7093,19 +9055,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListPostQueryResultWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the query result.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
-         *
-         * @param request ListQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListQueryResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/query?query=xxxx</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueryResultResponse
+        /// </returns>
         public ListQueryResultResponse ListQueryResultWithOptions(string instanceId, ListQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7138,19 +9113,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListQueryResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the query result.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
-         *
-         * @param request ListQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListQueryResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/query?query=xxxx</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueryResultResponse
+        /// </returns>
         public async Task<ListQueryResultResponse> ListQueryResultWithOptionsAsync(string instanceId, ListQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7183,17 +9171,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListQueryResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the query result.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
-         *
-         * @param request ListQueryResultRequest
-         * @return ListQueryResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/query?query=xxxx</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueryResultResponse
+        /// </returns>
         public ListQueryResultResponse ListQueryResult(string instanceId, ListQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7201,17 +9198,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListQueryResultWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries the query result.
-         *
-         * @description ### [](#)Method
-         * `GET`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
-         *
-         * @param request ListQueryResultRequest
-         * @return ListQueryResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>GET</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/query?query=xxxx</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListQueryResultResponse
+        /// </returns>
         public async Task<ListQueryResultResponse> ListQueryResultAsync(string instanceId, ListQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7219,12 +9225,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListQueryResultWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ListRestQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRestQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListRestQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRestQueryResultResponse
+        /// </returns>
         public ListRestQueryResultResponse ListRestQueryResultWithOptions(string instanceId, ListRestQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7263,12 +9276,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListRestQueryResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ListRestQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRestQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListRestQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRestQueryResultResponse
+        /// </returns>
         public async Task<ListRestQueryResultResponse> ListRestQueryResultWithOptionsAsync(string instanceId, ListRestQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7307,10 +9327,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListRestQueryResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ListRestQueryResultRequest
-         * @return ListRestQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListRestQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRestQueryResultResponse
+        /// </returns>
         public ListRestQueryResultResponse ListRestQueryResult(string instanceId, ListRestQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7318,10 +9341,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListRestQueryResultWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ListRestQueryResultRequest
-         * @return ListRestQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListRestQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRestQueryResultResponse
+        /// </returns>
         public async Task<ListRestQueryResultResponse> ListRestQueryResultAsync(string instanceId, ListRestQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7329,14 +9355,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListRestQueryResultWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 通过数据源配置获取schema信息
-         *
-         * @param request ListSchemasRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过数据源配置获取schema信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSchemasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSchemasResponse
+        /// </returns>
         public ListSchemasResponse ListSchemasWithOptions(string instanceId, ListSchemasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7393,14 +9429,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListSchemasResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过数据源配置获取schema信息
-         *
-         * @param request ListSchemasRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过数据源配置获取schema信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSchemasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSchemasResponse
+        /// </returns>
         public async Task<ListSchemasResponse> ListSchemasWithOptionsAsync(string instanceId, ListSchemasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7457,12 +9503,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListSchemasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过数据源配置获取schema信息
-         *
-         * @param request ListSchemasRequest
-         * @return ListSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过数据源配置获取schema信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSchemasResponse
+        /// </returns>
         public ListSchemasResponse ListSchemas(string instanceId, ListSchemasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7470,12 +9522,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListSchemasWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 通过数据源配置获取schema信息
-         *
-         * @param request ListSchemasRequest
-         * @return ListSchemasResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过数据源配置获取schema信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSchemasResponse
+        /// </returns>
         public async Task<ListSchemasResponse> ListSchemasAsync(string instanceId, ListSchemasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7483,13 +9541,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListSchemasWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of index versions.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTableGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTableGenerationsResponse
+        /// </returns>
         public ListTableGenerationsResponse ListTableGenerationsWithOptions(string instanceId, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7511,13 +9577,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTableGenerationsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of index versions.
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTableGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTableGenerationsResponse
+        /// </returns>
         public async Task<ListTableGenerationsResponse> ListTableGenerationsWithOptionsAsync(string instanceId, string tableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7539,11 +9613,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTableGenerationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of index versions.
-         *
-         * @return ListTableGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index versions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListTableGenerationsResponse
+        /// </returns>
         public ListTableGenerationsResponse ListTableGenerations(string instanceId, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7551,11 +9628,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListTableGenerationsWithOptions(instanceId, tableName, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of index versions.
-         *
-         * @return ListTableGenerationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index versions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListTableGenerationsResponse
+        /// </returns>
         public async Task<ListTableGenerationsResponse> ListTableGenerationsAsync(string instanceId, string tableName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7563,14 +9643,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListTableGenerationsWithOptionsAsync(instanceId, tableName, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of index tables.
-         *
-         * @param request ListTablesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index tables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesResponse
+        /// </returns>
         public ListTablesResponse ListTablesWithOptions(string instanceId, ListTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7599,14 +9689,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTablesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of index tables.
-         *
-         * @param request ListTablesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index tables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesResponse
+        /// </returns>
         public async Task<ListTablesResponse> ListTablesWithOptionsAsync(string instanceId, ListTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7635,12 +9735,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a list of index tables.
-         *
-         * @param request ListTablesRequest
-         * @return ListTablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index tables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesResponse
+        /// </returns>
         public ListTablesResponse ListTables(string instanceId, ListTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7648,12 +9754,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListTablesWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Queries a list of index tables.
-         *
-         * @param request ListTablesRequest
-         * @return ListTablesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of index tables.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesResponse
+        /// </returns>
         public async Task<ListTablesResponse> ListTablesAsync(string instanceId, ListTablesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7661,14 +9773,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListTablesWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param tmpReq ListTagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7719,14 +9841,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param tmpReq ListTagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7777,12 +9909,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7790,12 +9928,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListTagResourcesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 查标签接口
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7803,14 +9947,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取集群任务列表（数据源+集群）
-         *
-         * @param request ListTasksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public ListTasksResponse ListTasksWithOptions(string instanceId, ListTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7843,14 +9997,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取集群任务列表（数据源+集群）
-         *
-         * @param request ListTasksRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public async Task<ListTasksResponse> ListTasksWithOptionsAsync(string instanceId, ListTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7883,12 +10047,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取集群任务列表（数据源+集群）
-         *
-         * @param request ListTasksRequest
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public ListTasksResponse ListTasks(string instanceId, ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7896,12 +10066,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListTasksWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取集群任务列表（数据源+集群）
-         *
-         * @param request ListTasksRequest
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群任务列表（数据源+集群）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public async Task<ListTasksResponse> ListTasksAsync(string instanceId, ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7909,12 +10085,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListTasksWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ListVectorQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListVectorQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListVectorQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVectorQueryResultResponse
+        /// </returns>
         public ListVectorQueryResultResponse ListVectorQueryResultWithOptions(string instanceId, ListVectorQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7957,12 +10140,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListVectorQueryResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ListVectorQueryResultRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListVectorQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListVectorQueryResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVectorQueryResultResponse
+        /// </returns>
         public async Task<ListVectorQueryResultResponse> ListVectorQueryResultWithOptionsAsync(string instanceId, ListVectorQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8005,10 +10195,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ListVectorQueryResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ListVectorQueryResultRequest
-         * @return ListVectorQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListVectorQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVectorQueryResultResponse
+        /// </returns>
         public ListVectorQueryResultResponse ListVectorQueryResult(string instanceId, ListVectorQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8016,10 +10209,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ListVectorQueryResultWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ListVectorQueryResultRequest
-         * @return ListVectorQueryResultResponse
-         */
+        /// <param name="request">
+        /// ListVectorQueryResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVectorQueryResultResponse
+        /// </returns>
         public async Task<ListVectorQueryResultResponse> ListVectorQueryResultAsync(string instanceId, ListVectorQueryResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8027,12 +10223,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ListVectorQueryResultWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyAdvanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAdvanceConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyAdvanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigResponse
+        /// </returns>
         public ModifyAdvanceConfigResponse ModifyAdvanceConfigWithOptions(string instanceId, string configName, ModifyAdvanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8085,12 +10288,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAdvanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAdvanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAdvanceConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyAdvanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigResponse
+        /// </returns>
         public async Task<ModifyAdvanceConfigResponse> ModifyAdvanceConfigWithOptionsAsync(string instanceId, string configName, ModifyAdvanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8143,10 +10353,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAdvanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAdvanceConfigRequest
-         * @return ModifyAdvanceConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyAdvanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigResponse
+        /// </returns>
         public ModifyAdvanceConfigResponse ModifyAdvanceConfig(string instanceId, string configName, ModifyAdvanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8154,10 +10367,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyAdvanceConfigWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyAdvanceConfigRequest
-         * @return ModifyAdvanceConfigResponse
-         */
+        /// <param name="request">
+        /// ModifyAdvanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigResponse
+        /// </returns>
         public async Task<ModifyAdvanceConfigResponse> ModifyAdvanceConfigAsync(string instanceId, string configName, ModifyAdvanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8165,19 +10381,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyAdvanceConfigWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the advanced configurations.
-         *
-         * @description ## Method
-         *     put
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request ModifyAdvanceConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>put
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvanceConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigFileResponse
+        /// </returns>
         public ModifyAdvanceConfigFileResponse ModifyAdvanceConfigFileWithOptions(string instanceId, string configName, ModifyAdvanceConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8216,19 +10447,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAdvanceConfigFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the advanced configurations.
-         *
-         * @description ## Method
-         *     put
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request ModifyAdvanceConfigFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>put
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvanceConfigFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigFileResponse
+        /// </returns>
         public async Task<ModifyAdvanceConfigFileResponse> ModifyAdvanceConfigFileWithOptionsAsync(string instanceId, string configName, ModifyAdvanceConfigFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8267,17 +10513,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAdvanceConfigFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the advanced configurations.
-         *
-         * @description ## Method
-         *     put
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request ModifyAdvanceConfigFileRequest
-         * @return ModifyAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>put
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvanceConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigFileResponse
+        /// </returns>
         public ModifyAdvanceConfigFileResponse ModifyAdvanceConfigFile(string instanceId, string configName, ModifyAdvanceConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8285,17 +10542,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyAdvanceConfigFileWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the advanced configurations.
-         *
-         * @description ## Method
-         *     put
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-         *
-         * @param request ModifyAdvanceConfigFileRequest
-         * @return ModifyAdvanceConfigFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>put
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvanceConfigFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvanceConfigFileResponse
+        /// </returns>
         public async Task<ModifyAdvanceConfigFileResponse> ModifyAdvanceConfigFileAsync(string instanceId, string configName, ModifyAdvanceConfigFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8303,12 +10571,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyAdvanceConfigFileWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyAliasRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAliasResponse
-         */
+        /// <param name="request">
+        /// ModifyAliasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAliasResponse
+        /// </returns>
         public ModifyAliasResponse ModifyAliasWithOptions(string instanceId, string alias, ModifyAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8341,12 +10616,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAliasResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAliasRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAliasResponse
-         */
+        /// <param name="request">
+        /// ModifyAliasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAliasResponse
+        /// </returns>
         public async Task<ModifyAliasResponse> ModifyAliasWithOptionsAsync(string instanceId, string alias, ModifyAliasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8379,10 +10661,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyAliasRequest
-         * @return ModifyAliasResponse
-         */
+        /// <param name="request">
+        /// ModifyAliasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAliasResponse
+        /// </returns>
         public ModifyAliasResponse ModifyAlias(string instanceId, string alias, ModifyAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8390,10 +10675,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyAliasWithOptions(instanceId, alias, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyAliasRequest
-         * @return ModifyAliasResponse
-         */
+        /// <param name="request">
+        /// ModifyAliasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAliasResponse
+        /// </returns>
         public async Task<ModifyAliasResponse> ModifyAliasAsync(string instanceId, string alias, ModifyAliasRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8401,19 +10689,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyAliasWithOptionsAsync(instanceId, alias, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the description of a specified cluster.
-         *
-         * @description ### [](#)Method
-         * `PUT`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
-         *
-         * @param request ModifyClusterDescRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyClusterDescResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterDescRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterDescResponse
+        /// </returns>
         public ModifyClusterDescResponse ModifyClusterDescWithOptions(string instanceId, string clusterName, ModifyClusterDescRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8442,19 +10743,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyClusterDescResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of a specified cluster.
-         *
-         * @description ### [](#)Method
-         * `PUT`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
-         *
-         * @param request ModifyClusterDescRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyClusterDescResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterDescRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterDescResponse
+        /// </returns>
         public async Task<ModifyClusterDescResponse> ModifyClusterDescWithOptionsAsync(string instanceId, string clusterName, ModifyClusterDescRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8483,17 +10797,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyClusterDescResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the description of a specified cluster.
-         *
-         * @description ### [](#)Method
-         * `PUT`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
-         *
-         * @param request ModifyClusterDescRequest
-         * @return ModifyClusterDescResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterDescRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterDescResponse
+        /// </returns>
         public ModifyClusterDescResponse ModifyClusterDesc(string instanceId, string clusterName, ModifyClusterDescRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8501,17 +10824,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyClusterDescWithOptions(instanceId, clusterName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the description of a specified cluster.
-         *
-         * @description ### [](#)Method
-         * `PUT`
-         * ### [](#uri)URI
-         * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
-         *
-         * @param request ModifyClusterDescRequest
-         * @return ModifyClusterDescResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the description of a specified cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterDescRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterDescResponse
+        /// </returns>
         public async Task<ModifyClusterDescResponse> ModifyClusterDescAsync(string instanceId, string clusterName, ModifyClusterDescRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8519,17 +10851,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyClusterDescWithOptionsAsync(instanceId, clusterName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration information of a cluster.
-         *
-         * @description ## Request syntax
-         *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-         *
-         * @param request ModifyClusterOfflineConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyClusterOfflineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration information of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request syntax</h2>
+        /// <pre><c>PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOfflineConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOfflineConfigResponse
+        /// </returns>
         public ModifyClusterOfflineConfigResponse ModifyClusterOfflineConfigWithOptions(string instanceId, ModifyClusterOfflineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8590,17 +10936,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyClusterOfflineConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration information of a cluster.
-         *
-         * @description ## Request syntax
-         *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-         *
-         * @param request ModifyClusterOfflineConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyClusterOfflineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration information of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request syntax</h2>
+        /// <pre><c>PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOfflineConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOfflineConfigResponse
+        /// </returns>
         public async Task<ModifyClusterOfflineConfigResponse> ModifyClusterOfflineConfigWithOptionsAsync(string instanceId, ModifyClusterOfflineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8661,15 +11021,25 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyClusterOfflineConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration information of a cluster.
-         *
-         * @description ## Request syntax
-         *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-         *
-         * @param request ModifyClusterOfflineConfigRequest
-         * @return ModifyClusterOfflineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration information of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request syntax</h2>
+        /// <pre><c>PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOfflineConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOfflineConfigResponse
+        /// </returns>
         public ModifyClusterOfflineConfigResponse ModifyClusterOfflineConfig(string instanceId, ModifyClusterOfflineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8677,15 +11047,25 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyClusterOfflineConfigWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration information of a cluster.
-         *
-         * @description ## Request syntax
-         *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-         *
-         * @param request ModifyClusterOfflineConfigRequest
-         * @return ModifyClusterOfflineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration information of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request syntax</h2>
+        /// <pre><c>PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOfflineConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOfflineConfigResponse
+        /// </returns>
         public async Task<ModifyClusterOfflineConfigResponse> ModifyClusterOfflineConfigAsync(string instanceId, ModifyClusterOfflineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8693,19 +11073,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyClusterOfflineConfigWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the online configuration of a cluster.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/cluster-online-config`
-         *
-         * @param request ModifyClusterOnlineConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyClusterOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/cluster-online-config</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOnlineConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOnlineConfigResponse
+        /// </returns>
         public ModifyClusterOnlineConfigResponse ModifyClusterOnlineConfigWithOptions(string instanceId, ModifyClusterOnlineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8738,19 +11131,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyClusterOnlineConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the online configuration of a cluster.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/cluster-online-config`
-         *
-         * @param request ModifyClusterOnlineConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyClusterOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/cluster-online-config</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOnlineConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOnlineConfigResponse
+        /// </returns>
         public async Task<ModifyClusterOnlineConfigResponse> ModifyClusterOnlineConfigWithOptionsAsync(string instanceId, ModifyClusterOnlineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8783,17 +11189,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyClusterOnlineConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the online configuration of a cluster.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/cluster-online-config`
-         *
-         * @param request ModifyClusterOnlineConfigRequest
-         * @return ModifyClusterOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/cluster-online-config</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOnlineConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOnlineConfigResponse
+        /// </returns>
         public ModifyClusterOnlineConfigResponse ModifyClusterOnlineConfig(string instanceId, ModifyClusterOnlineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8801,17 +11216,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyClusterOnlineConfigWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the online configuration of a cluster.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/cluster-online-config`
-         *
-         * @param request ModifyClusterOnlineConfigRequest
-         * @return ModifyClusterOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online configuration of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/cluster-online-config</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyClusterOnlineConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClusterOnlineConfigResponse
+        /// </returns>
         public async Task<ModifyClusterOnlineConfigResponse> ModifyClusterOnlineConfigAsync(string instanceId, ModifyClusterOnlineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8819,14 +11243,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyClusterOnlineConfigWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改数据源部署信息
-         *
-         * @param request ModifyDataSourceDeployRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataSourceDeployRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataSourceDeployResponse
+        /// </returns>
         public ModifyDataSourceDeployResponse ModifyDataSourceDeployWithOptions(string instanceId, string deployName, string dataSourceName, ModifyDataSourceDeployRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8881,14 +11315,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyDataSourceDeployResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改数据源部署信息
-         *
-         * @param request ModifyDataSourceDeployRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataSourceDeployRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataSourceDeployResponse
+        /// </returns>
         public async Task<ModifyDataSourceDeployResponse> ModifyDataSourceDeployWithOptionsAsync(string instanceId, string deployName, string dataSourceName, ModifyDataSourceDeployRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8943,12 +11387,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyDataSourceDeployResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改数据源部署信息
-         *
-         * @param request ModifyDataSourceDeployRequest
-         * @return ModifyDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataSourceDeployRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataSourceDeployResponse
+        /// </returns>
         public ModifyDataSourceDeployResponse ModifyDataSourceDeploy(string instanceId, string deployName, string dataSourceName, ModifyDataSourceDeployRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8956,12 +11406,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyDataSourceDeployWithOptions(instanceId, deployName, dataSourceName, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改数据源部署信息
-         *
-         * @param request ModifyDataSourceDeployRequest
-         * @return ModifyDataSourceDeployResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改数据源部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataSourceDeployRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataSourceDeployResponse
+        /// </returns>
         public async Task<ModifyDataSourceDeployResponse> ModifyDataSourceDeployAsync(string instanceId, string deployName, string dataSourceName, ModifyDataSourceDeployRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8969,19 +11425,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyDataSourceDeployWithOptionsAsync(instanceId, deployName, dataSourceName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies a file.
-         *
-         * @description ## Method
-         *     PUT
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request ModifyFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileResponse
+        /// </returns>
         public ModifyFileResponse ModifyFileWithOptions(string instanceId, string indexName, string versionName, ModifyFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9020,19 +11491,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyFileResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a file.
-         *
-         * @description ## Method
-         *     PUT
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request ModifyFileRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileResponse
+        /// </returns>
         public async Task<ModifyFileResponse> ModifyFileWithOptionsAsync(string instanceId, string indexName, string versionName, ModifyFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9071,17 +11557,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies a file.
-         *
-         * @description ## Method
-         *     PUT
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request ModifyFileRequest
-         * @return ModifyFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileResponse
+        /// </returns>
         public ModifyFileResponse ModifyFile(string instanceId, string indexName, string versionName, ModifyFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9089,17 +11586,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyFileWithOptions(instanceId, indexName, versionName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies a file.
-         *
-         * @description ## Method
-         *     PUT
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-         *
-         * @param request ModifyFileRequest
-         * @return ModifyFileResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFileResponse
+        /// </returns>
         public async Task<ModifyFileResponse> ModifyFileAsync(string instanceId, string indexName, string versionName, ModifyFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9107,12 +11615,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyFileWithOptionsAsync(instanceId, indexName, versionName, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexResponse
-         */
+        /// <param name="request">
+        /// ModifyIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexResponse
+        /// </returns>
         public ModifyIndexResponse ModifyIndexWithOptions(string instanceId, string indexName, ModifyIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9195,12 +11710,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexResponse
-         */
+        /// <param name="request">
+        /// ModifyIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexResponse
+        /// </returns>
         public async Task<ModifyIndexResponse> ModifyIndexWithOptionsAsync(string instanceId, string indexName, ModifyIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9283,10 +11805,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyIndexRequest
-         * @return ModifyIndexResponse
-         */
+        /// <param name="request">
+        /// ModifyIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexResponse
+        /// </returns>
         public ModifyIndexResponse ModifyIndex(string instanceId, string indexName, ModifyIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9294,10 +11819,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyIndexWithOptions(instanceId, indexName, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyIndexRequest
-         * @return ModifyIndexResponse
-         */
+        /// <param name="request">
+        /// ModifyIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexResponse
+        /// </returns>
         public async Task<ModifyIndexResponse> ModifyIndexAsync(string instanceId, string indexName, ModifyIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9305,14 +11833,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyIndexWithOptionsAsync(instanceId, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the online policy of an index.
-         *
-         * @param request ModifyIndexOnlineStrategyRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexOnlineStrategyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexOnlineStrategyResponse
+        /// </returns>
         public ModifyIndexOnlineStrategyResponse ModifyIndexOnlineStrategyWithOptions(string instanceId, string dataSourceName, string deployName, string indexName, ModifyIndexOnlineStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9341,14 +11879,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexOnlineStrategyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the online policy of an index.
-         *
-         * @param request ModifyIndexOnlineStrategyRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexOnlineStrategyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexOnlineStrategyResponse
+        /// </returns>
         public async Task<ModifyIndexOnlineStrategyResponse> ModifyIndexOnlineStrategyWithOptionsAsync(string instanceId, string dataSourceName, string deployName, string indexName, ModifyIndexOnlineStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9377,12 +11925,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexOnlineStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the online policy of an index.
-         *
-         * @param request ModifyIndexOnlineStrategyRequest
-         * @return ModifyIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexOnlineStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexOnlineStrategyResponse
+        /// </returns>
         public ModifyIndexOnlineStrategyResponse ModifyIndexOnlineStrategy(string instanceId, string dataSourceName, string deployName, string indexName, ModifyIndexOnlineStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9390,12 +11944,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyIndexOnlineStrategyWithOptions(instanceId, dataSourceName, deployName, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the online policy of an index.
-         *
-         * @param request ModifyIndexOnlineStrategyRequest
-         * @return ModifyIndexOnlineStrategyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the online policy of an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexOnlineStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexOnlineStrategyResponse
+        /// </returns>
         public async Task<ModifyIndexOnlineStrategyResponse> ModifyIndexOnlineStrategyAsync(string instanceId, string dataSourceName, string deployName, string indexName, ModifyIndexOnlineStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9403,19 +11963,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyIndexOnlineStrategyWithOptionsAsync(instanceId, dataSourceName, deployName, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the information about index partitions.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/index-partition`
-         *
-         * @param request ModifyIndexPartitionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexPartitionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about index partitions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/index-partition</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexPartitionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexPartitionResponse
+        /// </returns>
         public ModifyIndexPartitionResponse ModifyIndexPartitionWithOptions(string instanceId, ModifyIndexPartitionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9456,19 +12029,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexPartitionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about index partitions.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/index-partition`
-         *
-         * @param request ModifyIndexPartitionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexPartitionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about index partitions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/index-partition</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexPartitionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexPartitionResponse
+        /// </returns>
         public async Task<ModifyIndexPartitionResponse> ModifyIndexPartitionWithOptionsAsync(string instanceId, ModifyIndexPartitionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9509,17 +12095,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexPartitionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the information about index partitions.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/index-partition`
-         *
-         * @param request ModifyIndexPartitionRequest
-         * @return ModifyIndexPartitionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about index partitions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/index-partition</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexPartitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexPartitionResponse
+        /// </returns>
         public ModifyIndexPartitionResponse ModifyIndexPartition(string instanceId, ModifyIndexPartitionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9527,17 +12122,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyIndexPartitionWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the information about index partitions.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/index-partition`
-         *
-         * @param request ModifyIndexPartitionRequest
-         * @return ModifyIndexPartitionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about index partitions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/index-partition</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexPartitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexPartitionResponse
+        /// </returns>
         public async Task<ModifyIndexPartitionResponse> ModifyIndexPartitionAsync(string instanceId, ModifyIndexPartitionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9545,19 +12149,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyIndexPartitionWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the index version of a cluster (an index version rollback).
-         *
-         * @description ## [](#)Method
-         *     PUT
-         * ## [](#uri)URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @param request ModifyIndexVersionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the index version of a cluster (an index version rollback).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexVersionResponse
+        /// </returns>
         public ModifyIndexVersionResponse ModifyIndexVersionWithOptions(string instanceId, string clusterName, ModifyIndexVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9581,19 +12200,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the index version of a cluster (an index version rollback).
-         *
-         * @description ## [](#)Method
-         *     PUT
-         * ## [](#uri)URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @param request ModifyIndexVersionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the index version of a cluster (an index version rollback).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexVersionResponse
+        /// </returns>
         public async Task<ModifyIndexVersionResponse> ModifyIndexVersionWithOptionsAsync(string instanceId, string clusterName, ModifyIndexVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9617,17 +12251,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the index version of a cluster (an index version rollback).
-         *
-         * @description ## [](#)Method
-         *     PUT
-         * ## [](#uri)URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @param request ModifyIndexVersionRequest
-         * @return ModifyIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the index version of a cluster (an index version rollback).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexVersionResponse
+        /// </returns>
         public ModifyIndexVersionResponse ModifyIndexVersion(string instanceId, string clusterName, ModifyIndexVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9635,17 +12280,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyIndexVersionWithOptions(instanceId, clusterName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the index version of a cluster (an index version rollback).
-         *
-         * @description ## [](#)Method
-         *     PUT
-         * ## [](#uri)URI
-         *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-         *
-         * @param request ModifyIndexVersionRequest
-         * @return ModifyIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the index version of a cluster (an index version rollback).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Method</h2>
+        /// <pre><c>PUT
+        /// </c></pre>
+        /// <h2><a href="#uri"></a>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyIndexVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyIndexVersionResponse
+        /// </returns>
         public async Task<ModifyIndexVersionResponse> ModifyIndexVersionAsync(string instanceId, string clusterName, ModifyIndexVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9653,23 +12309,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyIndexVersionWithOptionsAsync(instanceId, clusterName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a node.
-         *
-         * @description ### Method
-         * ```java
-         * PUT
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-         * ```
-         *
-         * @param request ModifyNodeConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config?type=qrs&amp;name=test
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeConfigResponse
+        /// </returns>
         public ModifyNodeConfigResponse ModifyNodeConfigWithOptions(string instanceId, ModifyNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9736,23 +12403,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyNodeConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a node.
-         *
-         * @description ### Method
-         * ```java
-         * PUT
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-         * ```
-         *
-         * @param request ModifyNodeConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config?type=qrs&amp;name=test
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeConfigResponse
+        /// </returns>
         public async Task<ModifyNodeConfigResponse> ModifyNodeConfigWithOptionsAsync(string instanceId, ModifyNodeConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9819,21 +12497,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyNodeConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configurations of a node.
-         *
-         * @description ### Method
-         * ```java
-         * PUT
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-         * ```
-         *
-         * @param request ModifyNodeConfigRequest
-         * @return ModifyNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config?type=qrs&amp;name=test
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeConfigResponse
+        /// </returns>
         public ModifyNodeConfigResponse ModifyNodeConfig(string instanceId, ModifyNodeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9841,21 +12526,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyNodeConfigWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the configurations of a node.
-         *
-         * @description ### Method
-         * ```java
-         * PUT
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-         * ```
-         *
-         * @param request ModifyNodeConfigRequest
-         * @return ModifyNodeConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a node.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config?type=qrs&amp;name=test
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyNodeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyNodeConfigResponse
+        /// </returns>
         public async Task<ModifyNodeConfigResponse> ModifyNodeConfigAsync(string instanceId, ModifyNodeConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9863,23 +12555,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyNodeConfigWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies online configurations.
-         *
-         * @description ### Method
-         * ```java
-         * put
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
-         * ```
-         *
-         * @param request ModifyOnlineConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies online configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">put
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOnlineConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOnlineConfigResponse
+        /// </returns>
         public ModifyOnlineConfigResponse ModifyOnlineConfigWithOptions(string instanceId, string nodeName, string indexName, ModifyOnlineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9908,23 +12611,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyOnlineConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies online configurations.
-         *
-         * @description ### Method
-         * ```java
-         * put
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
-         * ```
-         *
-         * @param request ModifyOnlineConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies online configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">put
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOnlineConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOnlineConfigResponse
+        /// </returns>
         public async Task<ModifyOnlineConfigResponse> ModifyOnlineConfigWithOptionsAsync(string instanceId, string nodeName, string indexName, ModifyOnlineConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9953,21 +12667,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyOnlineConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies online configurations.
-         *
-         * @description ### Method
-         * ```java
-         * put
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
-         * ```
-         *
-         * @param request ModifyOnlineConfigRequest
-         * @return ModifyOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies online configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">put
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOnlineConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOnlineConfigResponse
+        /// </returns>
         public ModifyOnlineConfigResponse ModifyOnlineConfig(string instanceId, string nodeName, string indexName, ModifyOnlineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9975,21 +12696,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyOnlineConfigWithOptions(instanceId, nodeName, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies online configurations.
-         *
-         * @description ### Method
-         * ```java
-         * put
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
-         * ```
-         *
-         * @param request ModifyOnlineConfigRequest
-         * @return ModifyOnlineConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies online configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">put
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOnlineConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOnlineConfigResponse
+        /// </returns>
         public async Task<ModifyOnlineConfigResponse> ModifyOnlineConfigAsync(string instanceId, string nodeName, string indexName, ModifyOnlineConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9997,19 +12725,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyOnlineConfigWithOptionsAsync(instanceId, nodeName, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改实例的密码
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/password`
-         *
-         * @param request ModifyPasswordRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例的密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPasswordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPasswordResponse
+        /// </returns>
         public ModifyPasswordResponse ModifyPasswordWithOptions(string instanceId, ModifyPasswordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10042,19 +12783,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPasswordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例的密码
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/password`
-         *
-         * @param request ModifyPasswordRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例的密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPasswordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPasswordResponse
+        /// </returns>
         public async Task<ModifyPasswordResponse> ModifyPasswordWithOptionsAsync(string instanceId, ModifyPasswordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10087,17 +12841,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改实例的密码
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/password`
-         *
-         * @param request ModifyPasswordRequest
-         * @return ModifyPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例的密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPasswordResponse
+        /// </returns>
         public ModifyPasswordResponse ModifyPassword(string instanceId, ModifyPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10105,17 +12868,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyPasswordWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改实例的密码
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/password`
-         *
-         * @param request ModifyPasswordRequest
-         * @return ModifyPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例的密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/password</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPasswordResponse
+        /// </returns>
         public async Task<ModifyPasswordResponse> ModifyPasswordAsync(string instanceId, ModifyPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10123,12 +12895,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyPasswordWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyPausePolicyRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPausePolicyResponse
-         */
+        /// <param name="request">
+        /// ModifyPausePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPausePolicyResponse
+        /// </returns>
         public ModifyPausePolicyResponse ModifyPausePolicyWithOptions(string instanceId, ModifyPausePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10157,12 +12936,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPausePolicyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyPausePolicyRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPausePolicyResponse
-         */
+        /// <param name="request">
+        /// ModifyPausePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPausePolicyResponse
+        /// </returns>
         public async Task<ModifyPausePolicyResponse> ModifyPausePolicyWithOptionsAsync(string instanceId, ModifyPausePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10191,10 +12977,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPausePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request ModifyPausePolicyRequest
-         * @return ModifyPausePolicyResponse
-         */
+        /// <param name="request">
+        /// ModifyPausePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPausePolicyResponse
+        /// </returns>
         public ModifyPausePolicyResponse ModifyPausePolicy(string instanceId, ModifyPausePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10202,10 +12991,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyPausePolicyWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request ModifyPausePolicyRequest
-         * @return ModifyPausePolicyResponse
-         */
+        /// <param name="request">
+        /// ModifyPausePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPausePolicyResponse
+        /// </returns>
         public async Task<ModifyPausePolicyResponse> ModifyPausePolicyAsync(string instanceId, ModifyPausePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10213,14 +13005,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyPausePolicyWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改公网域名访问白名单
-         *
-         * @param request ModifyPublicUrlIpListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPublicUrlIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改公网域名访问白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPublicUrlIpListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPublicUrlIpListResponse
+        /// </returns>
         public ModifyPublicUrlIpListResponse ModifyPublicUrlIpListWithOptions(string instanceId, ModifyPublicUrlIpListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10249,14 +13051,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPublicUrlIpListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改公网域名访问白名单
-         *
-         * @param request ModifyPublicUrlIpListRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPublicUrlIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改公网域名访问白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPublicUrlIpListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPublicUrlIpListResponse
+        /// </returns>
         public async Task<ModifyPublicUrlIpListResponse> ModifyPublicUrlIpListWithOptionsAsync(string instanceId, ModifyPublicUrlIpListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10285,12 +13097,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyPublicUrlIpListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改公网域名访问白名单
-         *
-         * @param request ModifyPublicUrlIpListRequest
-         * @return ModifyPublicUrlIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改公网域名访问白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPublicUrlIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPublicUrlIpListResponse
+        /// </returns>
         public ModifyPublicUrlIpListResponse ModifyPublicUrlIpList(string instanceId, ModifyPublicUrlIpListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10298,12 +13116,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyPublicUrlIpListWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary 修改公网域名访问白名单
-         *
-         * @param request ModifyPublicUrlIpListRequest
-         * @return ModifyPublicUrlIpListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改公网域名访问白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPublicUrlIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPublicUrlIpListResponse
+        /// </returns>
         public async Task<ModifyPublicUrlIpListResponse> ModifyPublicUrlIpListAsync(string instanceId, ModifyPublicUrlIpListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10311,14 +13135,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyPublicUrlIpListWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies an index table.
-         *
-         * @param request ModifyTableRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTableResponse
+        /// </returns>
         public ModifyTableResponse ModifyTableWithOptions(string instanceId, string tableName, ModifyTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10377,14 +13211,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyTableResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies an index table.
-         *
-         * @param request ModifyTableRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTableResponse
+        /// </returns>
         public async Task<ModifyTableResponse> ModifyTableWithOptionsAsync(string instanceId, string tableName, ModifyTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10443,12 +13287,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies an index table.
-         *
-         * @param request ModifyTableRequest
-         * @return ModifyTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTableResponse
+        /// </returns>
         public ModifyTableResponse ModifyTable(string instanceId, string tableName, ModifyTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10456,12 +13306,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyTableWithOptions(instanceId, tableName, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies an index table.
-         *
-         * @param request ModifyTableRequest
-         * @return ModifyTableResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an index table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTableResponse
+        /// </returns>
         public async Task<ModifyTableResponse> ModifyTableAsync(string instanceId, string tableName, ModifyTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10469,23 +13325,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyTableWithOptionsAsync(instanceId, tableName, request, headers, runtime);
         }
 
-        /**
-         * @summary Publishes a version of advanced configurations.
-         *
-         * @description ## Method
-         * ~~~
-         * POST
-         * ~~~
-         * ## URI
-         * ~~~
-         * /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
-         * ~~~
-         *
-         * @param request PublishAdvanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PublishAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a version of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishAdvanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishAdvanceConfigResponse
+        /// </returns>
         public PublishAdvanceConfigResponse PublishAdvanceConfigWithOptions(string instanceId, string configName, PublishAdvanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10518,23 +13385,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PublishAdvanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Publishes a version of advanced configurations.
-         *
-         * @description ## Method
-         * ~~~
-         * POST
-         * ~~~
-         * ## URI
-         * ~~~
-         * /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
-         * ~~~
-         *
-         * @param request PublishAdvanceConfigRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PublishAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a version of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishAdvanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishAdvanceConfigResponse
+        /// </returns>
         public async Task<PublishAdvanceConfigResponse> PublishAdvanceConfigWithOptionsAsync(string instanceId, string configName, PublishAdvanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10567,21 +13445,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PublishAdvanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Publishes a version of advanced configurations.
-         *
-         * @description ## Method
-         * ~~~
-         * POST
-         * ~~~
-         * ## URI
-         * ~~~
-         * /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
-         * ~~~
-         *
-         * @param request PublishAdvanceConfigRequest
-         * @return PublishAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a version of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishAdvanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishAdvanceConfigResponse
+        /// </returns>
         public PublishAdvanceConfigResponse PublishAdvanceConfig(string instanceId, string configName, PublishAdvanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10589,21 +13474,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return PublishAdvanceConfigWithOptions(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Publishes a version of advanced configurations.
-         *
-         * @description ## Method
-         * ~~~
-         * POST
-         * ~~~
-         * ## URI
-         * ~~~
-         * /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
-         * ~~~
-         *
-         * @param request PublishAdvanceConfigRequest
-         * @return PublishAdvanceConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a version of advanced configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishAdvanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishAdvanceConfigResponse
+        /// </returns>
         public async Task<PublishAdvanceConfigResponse> PublishAdvanceConfigAsync(string instanceId, string configName, PublishAdvanceConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10611,19 +13503,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await PublishAdvanceConfigWithOptionsAsync(instanceId, configName, request, headers, runtime);
         }
 
-        /**
-         * @summary Publishes a specified index version.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
-         *
-         * @param request PublishIndexVersionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PublishIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishIndexVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishIndexVersionResponse
+        /// </returns>
         public PublishIndexVersionResponse PublishIndexVersionWithOptions(string instanceId, string indexName, PublishIndexVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10652,19 +13559,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PublishIndexVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Publishes a specified index version.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
-         *
-         * @param request PublishIndexVersionRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PublishIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishIndexVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishIndexVersionResponse
+        /// </returns>
         public async Task<PublishIndexVersionResponse> PublishIndexVersionWithOptionsAsync(string instanceId, string indexName, PublishIndexVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10693,17 +13615,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PublishIndexVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Publishes a specified index version.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
-         *
-         * @param request PublishIndexVersionRequest
-         * @return PublishIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishIndexVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishIndexVersionResponse
+        /// </returns>
         public PublishIndexVersionResponse PublishIndexVersion(string instanceId, string indexName, PublishIndexVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10711,17 +13644,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return PublishIndexVersionWithOptions(instanceId, indexName, request, headers, runtime);
         }
 
-        /**
-         * @summary Publishes a specified index version.
-         *
-         * @description ## Method
-         *     POST
-         * ## URI
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
-         *
-         * @param request PublishIndexVersionRequest
-         * @return PublishIndexVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified index version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Method</h2>
+        /// <pre><c>POST
+        /// </c></pre>
+        /// <h2>URI</h2>
+        /// <pre><c>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishIndexVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishIndexVersionResponse
+        /// </returns>
         public async Task<PublishIndexVersionResponse> PublishIndexVersionAsync(string instanceId, string indexName, PublishIndexVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10729,12 +13673,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await PublishIndexVersionWithOptionsAsync(instanceId, indexName, request, headers, runtime);
         }
 
-        /**
-         * @param request PushDocumentsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PushDocumentsResponse
-         */
+        /// <param name="request">
+        /// PushDocumentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDocumentsResponse
+        /// </returns>
         public PushDocumentsResponse PushDocumentsWithOptions(string instanceId, string dataSourceName, PushDocumentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10764,12 +13715,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PushDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request PushDocumentsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PushDocumentsResponse
-         */
+        /// <param name="request">
+        /// PushDocumentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDocumentsResponse
+        /// </returns>
         public async Task<PushDocumentsResponse> PushDocumentsWithOptionsAsync(string instanceId, string dataSourceName, PushDocumentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10799,10 +13757,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<PushDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request PushDocumentsRequest
-         * @return PushDocumentsResponse
-         */
+        /// <param name="request">
+        /// PushDocumentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDocumentsResponse
+        /// </returns>
         public PushDocumentsResponse PushDocuments(string instanceId, string dataSourceName, PushDocumentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10810,10 +13771,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return PushDocumentsWithOptions(instanceId, dataSourceName, request, headers, runtime);
         }
 
-        /**
-         * @param request PushDocumentsRequest
-         * @return PushDocumentsResponse
-         */
+        /// <param name="request">
+        /// PushDocumentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDocumentsResponse
+        /// </returns>
         public async Task<PushDocumentsResponse> PushDocumentsAsync(string instanceId, string dataSourceName, PushDocumentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10821,19 +13785,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await PushDocumentsWithOptionsAsync(instanceId, dataSourceName, request, headers, runtime);
         }
 
-        /**
-         * @summary Restores data from an index.
-         *
-         * @description ### Method
-         * `POST`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/recover-index`
-         *
-         * @param request RecoverIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecoverIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores data from an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecoverIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverIndexResponse
+        /// </returns>
         public RecoverIndexResponse RecoverIndexWithOptions(string instanceId, RecoverIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10874,19 +13851,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RecoverIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Restores data from an index.
-         *
-         * @description ### Method
-         * `POST`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/recover-index`
-         *
-         * @param request RecoverIndexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RecoverIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores data from an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecoverIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverIndexResponse
+        /// </returns>
         public async Task<RecoverIndexResponse> RecoverIndexWithOptionsAsync(string instanceId, RecoverIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10927,17 +13917,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RecoverIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Restores data from an index.
-         *
-         * @description ### Method
-         * `POST`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/recover-index`
-         *
-         * @param request RecoverIndexRequest
-         * @return RecoverIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores data from an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecoverIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverIndexResponse
+        /// </returns>
         public RecoverIndexResponse RecoverIndex(string instanceId, RecoverIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10945,17 +13944,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return RecoverIndexWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Restores data from an index.
-         *
-         * @description ### Method
-         * `POST`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}/recover-index`
-         *
-         * @param request RecoverIndexRequest
-         * @return RecoverIndexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores data from an index.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>POST</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}/recover-index</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecoverIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverIndexResponse
+        /// </returns>
         public async Task<RecoverIndexResponse> RecoverIndexAsync(string instanceId, RecoverIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10963,14 +13971,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await RecoverIndexWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Rebuilds an index.
-         *
-         * @param request ReindexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReindexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebuilds an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReindexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReindexResponse
+        /// </returns>
         public ReindexResponse ReindexWithOptions(string instanceId, string tableName, ReindexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11007,14 +14025,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ReindexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Rebuilds an index.
-         *
-         * @param request ReindexRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReindexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebuilds an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReindexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReindexResponse
+        /// </returns>
         public async Task<ReindexResponse> ReindexWithOptionsAsync(string instanceId, string tableName, ReindexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11051,12 +14079,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ReindexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Rebuilds an index.
-         *
-         * @param request ReindexRequest
-         * @return ReindexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebuilds an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReindexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReindexResponse
+        /// </returns>
         public ReindexResponse Reindex(string instanceId, string tableName, ReindexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11064,12 +14098,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ReindexWithOptions(instanceId, tableName, request, headers, runtime);
         }
 
-        /**
-         * @summary Rebuilds an index.
-         *
-         * @param request ReindexRequest
-         * @return ReindexResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebuilds an index.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReindexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReindexResponse
+        /// </returns>
         public async Task<ReindexResponse> ReindexAsync(string instanceId, string tableName, ReindexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11077,22 +14117,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ReindexWithOptionsAsync(instanceId, tableName, request, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a cluster.
-         *
-         * @description ### Method
-         * ```java
-         * DELETE
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClusterResponse
+        /// </returns>
         public RemoveClusterResponse RemoveClusterWithOptions(string instanceId, string clusterName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11114,22 +14163,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RemoveClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a cluster.
-         *
-         * @description ### Method
-         * ```java
-         * DELETE
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClusterResponse
+        /// </returns>
         public async Task<RemoveClusterResponse> RemoveClusterWithOptionsAsync(string instanceId, string clusterName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11151,20 +14209,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RemoveClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Deletes a cluster.
-         *
-         * @description ### Method
-         * ```java
-         * DELETE
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
-         * ```
-         *
-         * @return RemoveClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// RemoveClusterResponse
+        /// </returns>
         public RemoveClusterResponse RemoveCluster(string instanceId, string clusterName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11172,20 +14234,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return RemoveClusterWithOptions(instanceId, clusterName, headers, runtime);
         }
 
-        /**
-         * @summary Deletes a cluster.
-         *
-         * @description ### Method
-         * ```java
-         * DELETE
-         * ```
-         * ### URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
-         * ```
-         *
-         * @return RemoveClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <pre><code class="language-java">DELETE
+        /// </c></pre>
+        /// <h3>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// RemoveClusterResponse
+        /// </returns>
         public async Task<RemoveClusterResponse> RemoveClusterAsync(string instanceId, string clusterName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11193,12 +14259,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await RemoveClusterWithOptionsAsync(instanceId, clusterName, headers, runtime);
         }
 
-        /**
-         * @param request RenameFolderRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenameFolderResponse
-         */
+        /// <param name="request">
+        /// RenameFolderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameFolderResponse
+        /// </returns>
         public RenameFolderResponse RenameFolderWithOptions(string instanceId, string database, string folderId, RenameFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11227,12 +14300,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RenameFolderResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request RenameFolderRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RenameFolderResponse
-         */
+        /// <param name="request">
+        /// RenameFolderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameFolderResponse
+        /// </returns>
         public async Task<RenameFolderResponse> RenameFolderWithOptionsAsync(string instanceId, string database, string folderId, RenameFolderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11261,10 +14341,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<RenameFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request RenameFolderRequest
-         * @return RenameFolderResponse
-         */
+        /// <param name="request">
+        /// RenameFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameFolderResponse
+        /// </returns>
         public RenameFolderResponse RenameFolder(string instanceId, string database, string folderId, RenameFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11272,10 +14355,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return RenameFolderWithOptions(instanceId, database, folderId, request, headers, runtime);
         }
 
-        /**
-         * @param request RenameFolderRequest
-         * @return RenameFolderResponse
-         */
+        /// <param name="request">
+        /// RenameFolderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenameFolderResponse
+        /// </returns>
         public async Task<RenameFolderResponse> RenameFolderAsync(string instanceId, string database, string folderId, RenameFolderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11283,11 +14369,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await RenameFolderWithOptionsAsync(instanceId, database, folderId, request, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartIndexResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartIndexResponse
+        /// </returns>
         public StartIndexResponse StartIndexWithOptions(string instanceId, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11309,11 +14400,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StartIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartIndexResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartIndexResponse
+        /// </returns>
         public async Task<StartIndexResponse> StartIndexWithOptionsAsync(string instanceId, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11335,9 +14431,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StartIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return StartIndexResponse
-         */
+        /// <returns>
+        /// StartIndexResponse
+        /// </returns>
         public StartIndexResponse StartIndex(string instanceId, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11345,9 +14441,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return StartIndexWithOptions(instanceId, indexName, headers, runtime);
         }
 
-        /**
-         * @return StartIndexResponse
-         */
+        /// <returns>
+        /// StartIndexResponse
+        /// </returns>
         public async Task<StartIndexResponse> StartIndexAsync(string instanceId, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11355,11 +14451,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await StartIndexWithOptionsAsync(instanceId, indexName, headers, runtime);
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopIndexResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopIndexResponse
+        /// </returns>
         public StopIndexResponse StopIndexWithOptions(string instanceId, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11381,11 +14482,16 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StopIndexResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopIndexResponse
-         */
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopIndexResponse
+        /// </returns>
         public async Task<StopIndexResponse> StopIndexWithOptionsAsync(string instanceId, string indexName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11407,9 +14513,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StopIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @return StopIndexResponse
-         */
+        /// <returns>
+        /// StopIndexResponse
+        /// </returns>
         public StopIndexResponse StopIndex(string instanceId, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11417,9 +14523,9 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return StopIndexWithOptions(instanceId, indexName, headers, runtime);
         }
 
-        /**
-         * @return StopIndexResponse
-         */
+        /// <returns>
+        /// StopIndexResponse
+        /// </returns>
         public async Task<StopIndexResponse> StopIndexAsync(string instanceId, string indexName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11427,22 +14533,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await StopIndexWithOptionsAsync(instanceId, indexName, headers, runtime);
         }
 
-        /**
-         * @summary Stops an FSM task.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an FSM task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopTaskResponse
+        /// </returns>
         public StopTaskResponse StopTaskWithOptions(string instanceId, string fsmId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11464,22 +14579,31 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StopTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Stops an FSM task.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
-         * ```
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StopTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an FSM task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopTaskResponse
+        /// </returns>
         public async Task<StopTaskResponse> StopTaskWithOptionsAsync(string instanceId, string fsmId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11501,20 +14625,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<StopTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Stops an FSM task.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
-         * ```
-         *
-         * @return StopTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an FSM task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// StopTaskResponse
+        /// </returns>
         public StopTaskResponse StopTask(string instanceId, string fsmId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11522,20 +14650,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return StopTaskWithOptions(instanceId, fsmId, headers, runtime);
         }
 
-        /**
-         * @summary Stops an FSM task.
-         *
-         * @description ### [](#)Method
-         * ```java
-         * PUT
-         * ```
-         * ### [](#uri)URI
-         * ```java
-         * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
-         * ```
-         *
-         * @return StopTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an FSM task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Method</h3>
+        /// <pre><code class="language-java">PUT
+        /// </c></pre>
+        /// <h3><a href="#uri"></a>URI</h3>
+        /// <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <returns>
+        /// StopTaskResponse
+        /// </returns>
         public async Task<StopTaskResponse> StopTaskAsync(string instanceId, string fsmId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11543,14 +14675,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await StopTaskWithOptionsAsync(instanceId, fsmId, headers, runtime);
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11587,14 +14729,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11631,12 +14783,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11644,12 +14802,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TagResourcesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 打标签接口
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11657,14 +14821,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param tmpReq UntagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11715,14 +14889,24 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param tmpReq UntagResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11773,12 +14957,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11786,12 +14976,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UntagResourcesWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 删标签接口
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删标签接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11799,19 +14995,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration of a specified instance.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param request UpdateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstanceWithOptions(string instanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11848,19 +15057,32 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration of a specified instance.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param request UpdateInstanceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(string instanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11897,17 +15119,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the configuration of a specified instance.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param request UpdateInstanceRequest
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstance(string instanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11915,17 +15146,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UpdateInstanceWithOptions(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @summary Modifies the configuration of a specified instance.
-         *
-         * @description ### Method
-         * `PUT`
-         * ### URI
-         * `/openapi/ha3/instances/{instanceId}`
-         *
-         * @param request UpdateInstanceRequest
-         * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Method</h3>
+        /// <para><c>PUT</c></para>
+        /// <h3>URI</h3>
+        /// <para><c>/openapi/ha3/instances/{instanceId}</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceAsync(string instanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11933,12 +15173,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await UpdateInstanceWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request UpdateSqlInstanceContentRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSqlInstanceContentResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceContentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceContentResponse
+        /// </returns>
         public UpdateSqlInstanceContentResponse UpdateSqlInstanceContentWithOptions(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11967,12 +15214,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceContentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateSqlInstanceContentRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSqlInstanceContentResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceContentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceContentResponse
+        /// </returns>
         public async Task<UpdateSqlInstanceContentResponse> UpdateSqlInstanceContentWithOptionsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12001,10 +15255,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceContentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateSqlInstanceContentRequest
-         * @return UpdateSqlInstanceContentResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceContentResponse
+        /// </returns>
         public UpdateSqlInstanceContentResponse UpdateSqlInstanceContent(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12012,10 +15269,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UpdateSqlInstanceContentWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request UpdateSqlInstanceContentRequest
-         * @return UpdateSqlInstanceContentResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceContentResponse
+        /// </returns>
         public async Task<UpdateSqlInstanceContentResponse> UpdateSqlInstanceContentAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceContentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12023,12 +15283,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await UpdateSqlInstanceContentWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request UpdateSqlInstanceNameRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSqlInstanceNameResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceNameResponse
+        /// </returns>
         public UpdateSqlInstanceNameResponse UpdateSqlInstanceNameWithOptions(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12057,12 +15324,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateSqlInstanceNameRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSqlInstanceNameResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceNameResponse
+        /// </returns>
         public async Task<UpdateSqlInstanceNameResponse> UpdateSqlInstanceNameWithOptionsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12091,10 +15365,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateSqlInstanceNameRequest
-         * @return UpdateSqlInstanceNameResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceNameResponse
+        /// </returns>
         public UpdateSqlInstanceNameResponse UpdateSqlInstanceName(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12102,10 +15379,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UpdateSqlInstanceNameWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request UpdateSqlInstanceNameRequest
-         * @return UpdateSqlInstanceNameResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceNameResponse
+        /// </returns>
         public async Task<UpdateSqlInstanceNameResponse> UpdateSqlInstanceNameAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12113,12 +15393,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await UpdateSqlInstanceNameWithOptionsAsync(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request UpdateSqlInstanceParamsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSqlInstanceParamsResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceParamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceParamsResponse
+        /// </returns>
         public UpdateSqlInstanceParamsResponse UpdateSqlInstanceParamsWithOptions(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12163,12 +15450,19 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceParamsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateSqlInstanceParamsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateSqlInstanceParamsResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceParamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceParamsResponse
+        /// </returns>
         public async Task<UpdateSqlInstanceParamsResponse> UpdateSqlInstanceParamsWithOptionsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12213,10 +15507,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<UpdateSqlInstanceParamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request UpdateSqlInstanceParamsRequest
-         * @return UpdateSqlInstanceParamsResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceParamsResponse
+        /// </returns>
         public UpdateSqlInstanceParamsResponse UpdateSqlInstanceParams(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12224,10 +15521,13 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return UpdateSqlInstanceParamsWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
         }
 
-        /**
-         * @param request UpdateSqlInstanceParamsRequest
-         * @return UpdateSqlInstanceParamsResponse
-         */
+        /// <param name="request">
+        /// UpdateSqlInstanceParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlInstanceParamsResponse
+        /// </returns>
         public async Task<UpdateSqlInstanceParamsResponse> UpdateSqlInstanceParamsAsync(string instanceId, string database, string sqlInstanceId, UpdateSqlInstanceParamsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

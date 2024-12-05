@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListVectorQueryResultRequest : TeaModel {
         /// <summary>
-        /// The instance endpoint.
+        /// <para>The instance endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public Dictionary<string, object> Body { get; set; }
 
         /// <summary>
-        /// The query type. Valid values: vector, primary_key, and vector_text.
+        /// <para>The query type. Valid values: vector, primary_key, and vector_text.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>primary_key</para>
         /// </summary>
         [NameInMap("queryType")]
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
         /// <summary>
-        /// The vector query type. Valid values: vector, image, and text.
+        /// <para>The vector query type. Valid values: vector, image, and text.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image</para>
         /// </summary>
         [NameInMap("vectorQueryType")]
         [Validation(Required=false)]

@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateDataSourceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically rebuild the index.
+        /// <para>Specifies whether to automatically rebuild the index.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("autoBuildIndex")]
         [Validation(Required=false)]
         public bool? AutoBuildIndex { get; set; }
 
         /// <summary>
-        /// The configuration information.
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public CreateDataSourceRequestConfig Config { get; set; }
         public class CreateDataSourceRequestConfig : TeaModel {
             /// <summary>
-            /// The AccessKey ID of the MaxCompute data source.
+            /// <para>The AccessKey ID of the MaxCompute data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>L***p</para>
             /// </summary>
             [NameInMap("accessKey")]
             [Validation(Required=false)]
             public string AccessKey { get; set; }
 
             /// <summary>
-            /// The AccessKey secret of the MaxCompute data source.
+            /// <para>The AccessKey secret of the MaxCompute data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5**9a6</para>
             /// </summary>
             [NameInMap("accessSecret")]
             [Validation(Required=false)]
             public string AccessSecret { get; set; }
 
             /// <summary>
-            /// The name of the OSS bucket.
+            /// <para>The name of the OSS bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>opensearch</para>
             /// </summary>
             [NameInMap("bucket")]
             [Validation(Required=false)]
@@ -53,49 +65,70 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// The endpoint of the MaxCompute or Object Storage Service (OSS) data source.
+            /// <para>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// The namespace.
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aegis-ops</para>
             /// </summary>
             [NameInMap("namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The path of the OSS object.
+            /// <para>The path of the OSS object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/opensearch/search</para>
             /// </summary>
             [NameInMap("ossPath")]
             [Validation(Required=false)]
             public string OssPath { get; set; }
 
             /// <summary>
-            /// The partition in the MaxCompute table.
+            /// <para>The partition in the MaxCompute table.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ds=20220713</para>
             /// </summary>
             [NameInMap("partition")]
             [Validation(Required=false)]
             public string Partition { get; set; }
 
             /// <summary>
-            /// The file path in the Apsara File Storage for HDFS file system.
+            /// <para>The file path in the Apsara File Storage for HDFS file system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-hdfs-path</para>
             /// </summary>
             [NameInMap("path")]
             [Validation(Required=false)]
             public string Path { get; set; }
 
             /// <summary>
-            /// The name of the MaxCompute project that is used as the data source.
+            /// <para>The name of the MaxCompute project that is used as the data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>kubenest</para>
             /// </summary>
             [NameInMap("project")]
             [Validation(Required=false)]
             public string Project { get; set; }
 
             /// <summary>
-            /// The name of the MaxCompute table that is used as the data source.
+            /// <para>The name of the MaxCompute table that is used as the data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>item</para>
             /// </summary>
             [NameInMap("table")]
             [Validation(Required=false)]
@@ -108,35 +141,47 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// The data center in which the data source is deployed.
+        /// <para>The data center in which the data source is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc_hz_domain_1</para>
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The name of the data source.
+        /// <para>The name of the data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ha-cn-pl32rf0****_test_api</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The configurations of the SARO data source.
+        /// <para>The configurations of the SARO data source.</para>
         /// </summary>
         [NameInMap("saroConfig")]
         [Validation(Required=false)]
         public CreateDataSourceRequestSaroConfig SaroConfig { get; set; }
         public class CreateDataSourceRequestSaroConfig : TeaModel {
             /// <summary>
-            /// The namespace of the SARO data source.
+            /// <para>The namespace of the SARO data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>igraph-cn-x0r3e3abe02</para>
             /// </summary>
             [NameInMap("namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The name of the SARO table.
+            /// <para>The name of the SARO table.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>index_hdfs</para>
             /// </summary>
             [NameInMap("tableName")]
             [Validation(Required=false)]
@@ -145,14 +190,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// The type of the data source. Valid values: odps, oss, and swift.
+        /// <para>The type of the data source. Valid values: odps, oss, and swift.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>odps</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
+        /// <para>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

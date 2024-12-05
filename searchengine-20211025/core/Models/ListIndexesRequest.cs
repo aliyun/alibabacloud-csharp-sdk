@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
+        /// <para>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("newMode")]
         [Validation(Required=false)]

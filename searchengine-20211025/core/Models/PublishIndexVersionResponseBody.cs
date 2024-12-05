@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class PublishIndexVersionResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// <para>id of request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E45380E8-994A-5402-9806-F114B3295FCF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the index
+        /// <para>The information about the index</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

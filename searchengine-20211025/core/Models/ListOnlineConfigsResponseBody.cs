@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListOnlineConfigsResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// <para>id of request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E45380E8-994A-5402-9806-F114B3295FCF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// List
+        /// <para>List</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListOnlineConfigsResponseBodyResult> Result { get; set; }
         public class ListOnlineConfigsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The configuration information
+            /// <para>The configuration information</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;specItems\&quot;:[{\&quot;specKey\&quot;:\&quot;YQ_KEYWORD_NUMBER_PLUS\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]}</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public string Config { get; set; }
 
             /// <summary>
-            /// The name of the index
+            /// <para>The name of the index</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>generation</para>
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]

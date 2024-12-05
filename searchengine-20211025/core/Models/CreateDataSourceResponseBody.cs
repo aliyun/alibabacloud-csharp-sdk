@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class CreateDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10D5E615-69F7-5F49-B850-00169ADE513C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

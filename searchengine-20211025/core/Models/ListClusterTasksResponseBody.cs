@@ -10,77 +10,104 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListClusterTasksResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// <para>id of request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CC5EC8FA-5C0D-56AF-BEF4-6FCCEABD0511</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The index information.
+        /// <para>The index information.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListClusterTasksResponseBodyResult> Result { get; set; }
         public class ListClusterTasksResponseBodyResult : TeaModel {
             /// <summary>
-            /// The additional attributes of the card.
+            /// <para>The additional attributes of the card.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot; &quot;</para>
             /// </summary>
             [NameInMap("extraAttribute")]
             [Validation(Required=false)]
             public string ExtraAttribute { get; set; }
 
             /// <summary>
-            /// The field3 field that was passed when the FSM was created.
+            /// <para>The field3 field that was passed when the FSM was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot; &quot;</para>
             /// </summary>
             [NameInMap("field3")]
             [Validation(Required=false)]
             public string Field3 { get; set; }
 
             /// <summary>
-            /// The ID of the finite state machine (FSM).
+            /// <para>The ID of the finite state machine (FSM).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-zvp2ljiwe01_api2@bj_vpc_domain_1@null@MANUAL-ha-cn-zvp2ljiwe01_api2@1649729867698@028315</para>
             /// </summary>
             [NameInMap("fsmId")]
             [Validation(Required=false)]
             public string FsmId { get; set; }
 
             /// <summary>
-            /// The change group type.
+            /// <para>The change group type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot; &quot;</para>
             /// </summary>
             [NameInMap("groupType")]
             [Validation(Required=false)]
             public string GroupType { get; set; }
 
             /// <summary>
-            /// The card name.
+            /// <para>The card name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ha-cn-pl32rf0js04_qrs</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The FSM status.
+            /// <para>The FSM status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>onlyPublished</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags of the progress bar.
+            /// <para>The tags of the progress bar.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListClusterTasksResponseBodyResultTags> Tags { get; set; }
             public class ListClusterTasksResponseBodyResultTags : TeaModel {
                 /// <summary>
-                /// The tag content.
+                /// <para>The tag content.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>succeed in handling request</para>
                 /// </summary>
                 [NameInMap("msg")]
                 [Validation(Required=false)]
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// The tag level.
+                /// <para>The tag level.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot; &quot;</para>
                 /// </summary>
                 [NameInMap("tagLevel")]
                 [Validation(Required=false)]
@@ -89,35 +116,47 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The task information.
+            /// <para>The task information.</para>
             /// </summary>
             [NameInMap("taskNodes")]
             [Validation(Required=false)]
             public List<ListClusterTasksResponseBodyResultTaskNodes> TaskNodes { get; set; }
             public class ListClusterTasksResponseBodyResultTaskNodes : TeaModel {
                 /// <summary>
-                /// The time when the task was complete.
+                /// <para>The time when the task was complete.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot; &quot;</para>
                 /// </summary>
                 [NameInMap("finishDate")]
                 [Validation(Required=false)]
                 public string FinishDate { get; set; }
 
                 /// <summary>
-                /// The ordinal number of the task.
+                /// <para>The ordinal number of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("index")]
                 [Validation(Required=false)]
                 public long? Index { get; set; }
 
                 /// <summary>
-                /// The task name.
+                /// <para>The task name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>general</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The task status.
+                /// <para>The task status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
@@ -126,21 +165,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The timestamp of the card.
+            /// <para>The timestamp of the card.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1657610520</para>
             /// </summary>
             [NameInMap("time")]
             [Validation(Required=false)]
             public string Time { get; set; }
 
             /// <summary>
-            /// The card type.
+            /// <para>The card type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qrs</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The user who triggered the generation of the FSM process.
+            /// <para>The user who triggered the generation of the FSM process.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot; &quot;</para>
             /// </summary>
             [NameInMap("user")]
             [Validation(Required=false)]

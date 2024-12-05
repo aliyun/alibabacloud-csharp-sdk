@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetSqlInstanceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public long? Version { get; set; }

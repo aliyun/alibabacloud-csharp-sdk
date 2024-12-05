@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyAliasRequest : TeaModel {
         /// <summary>
-        /// alias name
+        /// <para>alias name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
 
         /// <summary>
-        /// index name
+        /// <para>index name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>index</para>
         /// </summary>
         [NameInMap("index")]
         [Validation(Required=false)]

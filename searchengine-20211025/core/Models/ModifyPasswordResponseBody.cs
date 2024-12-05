@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyPasswordResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request
+        /// <para>The ID of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>407BFD91-DE7D-50BA-8F88-CDE52A3B5E46</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result
+        /// <para>The result</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

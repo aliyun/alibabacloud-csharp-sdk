@@ -10,77 +10,101 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetClusterResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The clusters.
+        /// <para>The clusters.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GetClusterResponseBodyResult Result { get; set; }
         public class GetClusterResponseBodyResult : TeaModel {
             /// <summary>
-            /// The configuration information.
+            /// <para>The configuration information.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public Dictionary<string, Dictionary<string, object>> Config { get; set; }
 
             /// <summary>
-            /// The time when the cluster was updated.
+            /// <para>The time when the cluster was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-08-09 00:01:02</para>
             /// </summary>
             [NameInMap("configUpdateTime")]
             [Validation(Required=false)]
             public string ConfigUpdateTime { get; set; }
 
             /// <summary>
-            /// The time when the cluster was created.
+            /// <para>The time when the cluster was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-05-21 16:05:26</para>
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The effective advanced configuration version.
+            /// <para>The effective advanced configuration version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_yyds_data1</para>
             /// </summary>
             [NameInMap("currentAdvanceConfigVersion")]
             [Validation(Required=false)]
             public string CurrentAdvanceConfigVersion { get; set; }
 
             /// <summary>
-            /// The effective online configuration version.
+            /// <para>The effective online configuration version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_yyds_data1</para>
             /// </summary>
             [NameInMap("currentOnlineConfigVersion")]
             [Validation(Required=false)]
             public string CurrentOnlineConfigVersion { get; set; }
 
             /// <summary>
-            /// The specifications of Searcher workers.
+            /// <para>The specifications of Searcher workers.</para>
             /// </summary>
             [NameInMap("dataNode")]
             [Validation(Required=false)]
             public GetClusterResponseBodyResultDataNode DataNode { get; set; }
             public class GetClusterResponseBodyResultDataNode : TeaModel {
                 /// <summary>
-                /// The name of the Searcher worker.
+                /// <para>The name of the Searcher worker.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of replicas.
+                /// <para>The number of replicas.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("number")]
                 [Validation(Required=false)]
                 public int? Number { get; set; }
 
                 /// <summary>
-                /// The number of partitions.
+                /// <para>The number of partitions.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
@@ -89,56 +113,77 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The description of the cluster.
+            /// <para>The description of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fzz_test</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The latest advanced configuration version.
+            /// <para>The latest advanced configuration version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_yyds_data1</para>
             /// </summary>
             [NameInMap("latestAdvanceConfigVersion")]
             [Validation(Required=false)]
             public string LatestAdvanceConfigVersion { get; set; }
 
             /// <summary>
-            /// The latest online configuration version.
+            /// <para>The latest online configuration version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_yyds_data1</para>
             /// </summary>
             [NameInMap("latestOnlineConfigVersion")]
             [Validation(Required=false)]
             public string LatestOnlineConfigVersion { get; set; }
 
             /// <summary>
-            /// The cluster name.
+            /// <para>The cluster name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>general</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The specifications of Query Result Searcher (QRS) workers.
+            /// <para>The specifications of Query Result Searcher (QRS) workers.</para>
             /// </summary>
             [NameInMap("queryNode")]
             [Validation(Required=false)]
             public GetClusterResponseBodyResultQueryNode QueryNode { get; set; }
             public class GetClusterResponseBodyResultQueryNode : TeaModel {
                 /// <summary>
-                /// The name of the QRS worker.
+                /// <para>The name of the QRS worker.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The number of nodes.
+                /// <para>The number of nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("number")]
                 [Validation(Required=false)]
                 public int? Number { get; set; }
 
                 /// <summary>
-                /// The number of replicas.
+                /// <para>The number of replicas.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("partition")]
                 [Validation(Required=false)]
@@ -147,7 +192,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The creation status of the cluster. Valid values: NEW and PUBLISH. NEW indicates that the cluster is being created. PUBLISH indicates that the cluster is created.
+            /// <para>The creation status of the cluster. Valid values: NEW and PUBLISH. NEW indicates that the cluster is being created. PUBLISH indicates that the cluster is created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NEW</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

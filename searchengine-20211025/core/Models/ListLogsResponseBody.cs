@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListLogsResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// <para>id of request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>022F36C7-9FB4-5D67-BEBC-3D14B0984463</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// ListResult
+        /// <para>ListResult</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public ListLogsResponseBodyResult Result { get; set; }
         public class ListLogsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The result.
+            /// <para>The result.</para>
             /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public List<object> Result { get; set; }
 
             /// <summary>
-            /// The total number of entries returned
+            /// <para>The total number of entries returned</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("totalCount")]
             [Validation(Required=false)]

@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListInstanceSpecsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10D5E615-69F7-5F49-B850-00169ADE513C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The instance types.
+        /// <para>The instance types.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListInstanceSpecsResponseBodyResult> Result { get; set; }
         public class ListInstanceSpecsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The number of vCPUs.
+            /// <para>The number of vCPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// The maximum storage of a single data node. Unit: GB.
+            /// <para>The maximum storage of a single data node. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>600</para>
             /// </summary>
             [NameInMap("maxDisk")]
             [Validation(Required=false)]
             public int? MaxDisk { get; set; }
 
             /// <summary>
-            /// The memory of the instance. Unit: GB.
+            /// <para>The memory of the instance. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("mem")]
             [Validation(Required=false)]
             public int? Mem { get; set; }
 
             /// <summary>
-            /// The minimum storage of a single data node. Unit: GB.
+            /// <para>The minimum storage of a single data node. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("minDisk")]
             [Validation(Required=false)]

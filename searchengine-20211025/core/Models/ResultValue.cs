@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ResultValue : TeaModel {
         /// <summary>
-        /// Indicates whether all pushes are suspended.
+        /// <para>Indicates whether all pushes are suspended.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("pauseAll")]
         [Validation(Required=false)]
         public bool? PauseAll { get; set; }
 
         /// <summary>
-        /// Indicates whether the push is suspended for the new full index version.
+        /// <para>Indicates whether the push is suspended for the new full index version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("pauseIndex")]
         [Validation(Required=false)]
         public bool? PauseIndex { get; set; }
 
         /// <summary>
-        /// Indicates whether the push is suspended for the incremental indexes.
+        /// <para>Indicates whether the push is suspended for the incremental indexes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("pauseIndexBatch")]
         [Validation(Required=false)]
         public bool? PauseIndexBatch { get; set; }
 
         /// <summary>
-        /// Indicates whether the push is suspended for the configuration.
+        /// <para>Indicates whether the push is suspended for the configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("pauseBiz")]
         [Validation(Required=false)]
         public bool? PauseBiz { get; set; }
 
         /// <summary>
-        /// Indicates whether the push is suspended for the real-time incremental indexes.
+        /// <para>Indicates whether the push is suspended for the real-time incremental indexes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("pauseRuntime")]
         [Validation(Required=false)]

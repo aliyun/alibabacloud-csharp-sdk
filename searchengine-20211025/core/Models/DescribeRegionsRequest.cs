@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language of the response. Default value: zh-cn.
+        /// <para>The language of the response. Default value: zh-cn.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-cn</para>
         /// </summary>
         [NameInMap("acceptLanguage")]
         [Validation(Required=false)]

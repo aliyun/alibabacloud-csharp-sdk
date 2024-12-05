@@ -10,49 +10,67 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyIndexPartitionRequest : TeaModel {
         /// <summary>
-        /// The name of the data source.
+        /// <para>The name of the data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("dataSourceName")]
         [Validation(Required=false)]
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// The data center.
+        /// <para>The data center.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pre_domain_1</para>
         /// </summary>
         [NameInMap("domainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// The primary key.
+        /// <para>The primary key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1633293829</para>
         /// </summary>
         [NameInMap("generation")]
         [Validation(Required=false)]
         public long? Generation { get; set; }
 
         /// <summary>
-        /// The index information.
+        /// <para>The index information.</para>
         /// </summary>
         [NameInMap("indexInfos")]
         [Validation(Required=false)]
         public List<ModifyIndexPartitionRequestIndexInfos> IndexInfos { get; set; }
         public class ModifyIndexPartitionRequestIndexInfos : TeaModel {
             /// <summary>
-            /// The index name.
+            /// <para>The index name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>atest2</para>
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]
             public string IndexName { get; set; }
 
             /// <summary>
-            /// The concurrency. Default value: 1.
+            /// <para>The concurrency. Default value: 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("parallelNum")]
             [Validation(Required=false)]
             public int? ParallelNum { get; set; }
 
             /// <summary>
-            /// The number of shards.
+            /// <para>The number of shards.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("partitionCount")]
             [Validation(Required=false)]

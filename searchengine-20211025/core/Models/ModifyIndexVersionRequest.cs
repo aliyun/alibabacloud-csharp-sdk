@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyIndexVersionRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<ModifyIndexVersionRequestBody> Body { get; set; }
         public class ModifyIndexVersionRequestBody : TeaModel {
             /// <summary>
-            /// The deployment ID of the data source.
+            /// <para>The deployment ID of the data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>277</para>
             /// </summary>
             [NameInMap("buildDeployId")]
             [Validation(Required=false)]
             public string BuildDeployId { get; set; }
 
             /// <summary>
-            /// The index name.
+            /// <para>The index name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>main_index</para>
             /// </summary>
             [NameInMap("indexName")]
             [Validation(Required=false)]
             public string IndexName { get; set; }
 
             /// <summary>
-            /// The index version.
+            /// <para>The index version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

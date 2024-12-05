@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// The information about the instance specification.
+        /// <para>The information about the instance specification.</para>
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<UpdateInstanceRequestComponents> Components { get; set; }
         public class UpdateInstanceRequestComponents : TeaModel {
             /// <summary>
-            /// The code of the specification, which must be consistent with the value that you specify on the buy page.
+            /// <para>The code of the specification, which must be consistent with the value that you specify on the buy page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The value of the specification.
+            /// <para>The value of the specification.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// The description of the instance.
+        /// <para>The description of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.
+        /// <para>The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("orderType")]
         [Validation(Required=false)]

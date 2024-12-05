@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class FilesConfigVariablesValue : TeaModel {
         /// <summary>
-        /// The description of the variable.
+        /// <para>The description of the variable.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom variable</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Specifies whether the variable is not allowed to be modified.
+        /// <para>Specifies whether the variable is not allowed to be modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("disableModify")]
         [Validation(Required=false)]
         public bool? DisableModify { get; set; }
 
         /// <summary>
-        /// Specifies whether the variable is modified.
+        /// <para>Specifies whether the variable is modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("isModify")]
         [Validation(Required=false)]
         public bool? IsModify { get; set; }
 
         /// <summary>
-        /// The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.
+        /// <para>The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The variable value.
+        /// <para>The variable value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

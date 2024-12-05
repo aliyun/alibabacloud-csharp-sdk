@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListAdvanceConfigDirRequest : TeaModel {
         /// <summary>
-        /// The name of the directory
+        /// <para>The name of the directory</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/zones/general</para>
         /// </summary>
         [NameInMap("dirName")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class GetAdvanceConfigFileRequest : TeaModel {
         /// <summary>
-        /// The name of the file
+        /// <para>The name of the file</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/intervene_dict/chn_ecommerce_general.dict</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]

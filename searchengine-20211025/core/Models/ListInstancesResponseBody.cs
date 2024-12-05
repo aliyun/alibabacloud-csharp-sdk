@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request
+        /// <para>The ID of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89B968E6-1E41-58DF-BB25-5F98ECC759CE</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The results returned.
+        /// <para>The results returned.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyResult> Result { get; set; }
         public class ListInstancesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The billing method.
+            /// <para>The billing method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PrePaid</para>
             /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The commodity code of the instance.
+            /// <para>The commodity code of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The time when the instance was created.
+            /// <para>The time when the instance was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-06-04T02:03:21Z</para>
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
@@ -113,7 +125,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The description of the instance.
+            /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Emergency test</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -124,35 +139,47 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public string Edition { get; set; }
 
             /// <summary>
-            /// The time when the instance expires.
+            /// <para>The time when the instance expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1634885083</para>
             /// </summary>
             [NameInMap("expiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// Indicates whether an overdue payment is involved.
+            /// <para>Indicates whether an overdue payment is involved.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("inDebt")]
             [Validation(Required=false)]
             public bool? InDebt { get; set; }
 
             /// <summary>
-            /// The instance ID.
+            /// <para>The instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ha-cn-2r42n8oh001</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The lock state of the instance.
+            /// <para>The lock state of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unlock</para>
             /// </summary>
             [NameInMap("lockMode")]
             [Validation(Required=false)]
             public string LockMode { get; set; }
 
             /// <summary>
-            /// The network information of the instance.
+            /// <para>The network information of the instance.</para>
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
@@ -163,7 +190,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string Allow { get; set; }
 
                 /// <summary>
-                /// The instance endpoint.
+                /// <para>The instance endpoint.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
                 /// </summary>
                 [NameInMap("endpoint")]
                 [Validation(Required=false)]
@@ -174,14 +204,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 public string PublicEndpoint { get; set; }
 
                 /// <summary>
-                /// The vSwitch ID.
+                /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bp11ldcf59q2nbwkqgj6z</para>
                 /// </summary>
                 [NameInMap("vSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC) in which the instance is deployed.
+                /// <para>The ID of the virtual private cloud (VPC) in which the instance is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-wz9axk41d9vffoc79x0oe</para>
                 /// </summary>
                 [NameInMap("vpcId")]
                 [Validation(Required=false)]
@@ -194,7 +230,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             public bool? NoQrs { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekzgpiswzbksdi</para>
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
@@ -259,28 +298,37 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The instance status.
+            /// <para>The instance status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tags of the instance.
+            /// <para>The tags of the instance.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyResultTags> Tags { get; set; }
             public class ListInstancesResponseBodyResultTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>env</para>
                 /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oboms-disk</para>
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -289,7 +337,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             }
 
             /// <summary>
-            /// The time when the instance was updated.
+            /// <para>The time when the instance was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2018-12-06T11:17:49.0</para>
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
@@ -306,7 +357,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         }
 
         /// <summary>
-        /// The total number of entries returned
+        /// <para>The total number of entries returned</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

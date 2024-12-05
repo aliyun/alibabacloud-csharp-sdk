@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteIndexRequest : TeaModel {
         /// <summary>
-        /// The data source.
+        /// <para>The data source.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ha-cn-pl32rf0js04_test</para>
         /// </summary>
         [NameInMap("dataSource")]
         [Validation(Required=false)]
         public string DataSource { get; set; }
 
         /// <summary>
-        /// Specifies whether to delete the data source.
+        /// <para>Specifies whether to delete the data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("deleteDataSource")]
         [Validation(Required=false)]

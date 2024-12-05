@@ -10,19 +10,26 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class UpdateSqlInstanceContentResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// <para>id of request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E45380E8-994A-5402-9806-F114B3295FCF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// InstanceVersionVO
+        /// <para>InstanceVersionVO</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public UpdateSqlInstanceContentResponseBodyResult Result { get; set; }
         public class UpdateSqlInstanceContentResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
+            /// </summary>
             [NameInMap("combineParams")]
             [Validation(Required=false)]
             public string CombineParams { get; set; }
@@ -31,42 +38,82 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Comment { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>select * from test</para>
+            /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
+            /// </summary>
             [NameInMap("dynamicParams")]
             [Validation(Required=false)]
             public string DynamicParams { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1719221186114</para>
+            /// </summary>
             [NameInMap("gmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1719221186114</para>
+            /// </summary>
             [NameInMap("gmtModified")]
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
+            /// </summary>
             [NameInMap("kvpairs")]
             [Validation(Required=false)]
             public string Kvpairs { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("relatedTemplateId")]
             [Validation(Required=false)]
             public long? RelatedTemplateId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
+            /// </summary>
             [NameInMap("staticParams")]
             [Validation(Required=false)]
             public string StaticParams { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{\&quot;trace\&quot;:\&quot;INFO\&quot;,\&quot;databaseName\&quot;:\&quot;general\&quot;,\&quot;iquan.plan.cache.enable\&quot;:true,\&quot;iquan.plan.prepare.level\&quot;:\&quot;jni.post.optimize\&quot;,\&quot;urlencode_data\&quot;:false,\&quot;formatType\&quot;:\&quot;string\&quot;,\&quot;timeout\&quot;:1000}</para>
+            /// </summary>
             [NameInMap("templateParams")]
             [Validation(Required=false)]
             public string TemplateParams { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
             public long? Version { get; set; }

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class PushDocumentsRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<object> Body { get; set; }
 
         /// <summary>
-        /// The primary key field.
+        /// <para>The primary key field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>id</para>
         /// </summary>
         [NameInMap("pkField")]
         [Validation(Required=false)]

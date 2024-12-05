@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyPasswordRequest : TeaModel {
         /// <summary>
-        /// The password.
+        /// <para>The password.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The username.
+        /// <para>The username.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;username&quot;</para>
         /// </summary>
         [NameInMap("username")]
         [Validation(Required=false)]

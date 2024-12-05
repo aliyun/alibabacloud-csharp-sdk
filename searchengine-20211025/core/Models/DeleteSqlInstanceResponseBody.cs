@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteSqlInstanceResponseBody : TeaModel {
         /// <summary>
-        /// id of request
+        /// <para>id of request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2AE63638-5420-56DC-BF59-37D8174039A0</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Response<Map<String, String>>
+        /// <para>Response&lt;Map&lt;String, String&gt;&gt;</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public DeleteSqlInstanceResponseBodyResult Result { get; set; }
         public class DeleteSqlInstanceResponseBodyResult : TeaModel {
             /// <summary>
-            /// id of request
+            /// <para>id of request</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2AE63638-5420-56DC-BF59-37D8174039A0</para>
             /// </summary>
             [NameInMap("requestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
             /// <summary>
-            /// The result.
+            /// <para>The result.</para>
             /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]

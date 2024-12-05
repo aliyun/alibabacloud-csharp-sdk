@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListIndexRecoverRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The description.
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("desc")]
         [Validation(Required=false)]
         public string Desc { get; set; }
 
         /// <summary>
-        /// The time when the index version was published.
+        /// <para>The time when the index version was published.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-06-07 16:43:00</para>
         /// </summary>
         [NameInMap("finishedTime")]
         [Validation(Required=false)]
         public string FinishedTime { get; set; }
 
         /// <summary>
-        /// The ID of the full index version.
+        /// <para>The ID of the full index version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1708674867</para>
         /// </summary>
         [NameInMap("generationId")]
         [Validation(Required=false)]

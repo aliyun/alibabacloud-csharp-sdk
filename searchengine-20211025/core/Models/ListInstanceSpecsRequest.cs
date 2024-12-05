@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListInstanceSpecsRequest : TeaModel {
         /// <summary>
-        /// The node type. Valid values:
+        /// <para>The node type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>qrs: Query Result Searcher (QRS) Worker</description></item>
+        /// <item><description>search: Searcher Worker</description></item>
+        /// <item><description>index: index node</description></item>
+        /// <item><description>cluster: cluster</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   qrs: Query Result Searcher (QRS) Worker
-        /// *   search: Searcher Worker
-        /// *   index: index node
-        /// *   cluster: cluster
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>search</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

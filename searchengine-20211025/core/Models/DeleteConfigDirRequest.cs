@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteConfigDirRequest : TeaModel {
         /// <summary>
-        /// The directory name.
+        /// <para>The directory name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/clusters</para>
         /// </summary>
         [NameInMap("dirName")]
         [Validation(Required=false)]
         public string DirName { get; set; }
 
         /// <summary>
-        /// The path of the parent directory.
+        /// <para>The path of the parent directory.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/</para>
         /// </summary>
         [NameInMap("parentFullPath")]
         [Validation(Required=false)]

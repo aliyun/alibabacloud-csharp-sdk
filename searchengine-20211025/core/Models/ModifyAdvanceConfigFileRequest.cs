@@ -10,23 +10,28 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ModifyAdvanceConfigFileRequest : TeaModel {
         /// <summary>
-        /// The file content.
+        /// <para>The file content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;ha3&quot;</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// The variables.
+        /// <para>The variables.</para>
         /// </summary>
         [NameInMap("variables")]
         [Validation(Required=false)]
         public Dictionary<string, VariablesValue> Variables { get; set; }
 
         /// <summary>
-        /// The name of the file.
+        /// <para>The name of the file.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/qrs.json</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]

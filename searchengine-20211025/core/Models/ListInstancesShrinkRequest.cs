@@ -22,42 +22,60 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// The description of the instance. You can use this description to filter instances. Fuzzy match is supported.
+        /// <para>The description of the instance. You can use this description to filter instances. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Havenask instance</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.
+        /// <para>The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vector</para>
         /// </summary>
         [NameInMap("edition")]
         [Validation(Required=false)]
         public string Edition { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ha-cn-83570439y0n</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.
+        /// <para>The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs.
+        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzgpiswzbksdi</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
@@ -68,7 +86,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         public string Table { get; set; }
 
         /// <summary>
-        /// The tags of the instance.
+        /// <para>The tags of the instance.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

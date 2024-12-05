@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class DeleteConfigFileRequest : TeaModel {
         /// <summary>
-        /// The file name.
+        /// <para>The file name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/schemas/automobile_vector_schema.json</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// The path of the parent directory.
+        /// <para>The path of the parent directory.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>/</para>
         /// </summary>
         [NameInMap("parentFullPath")]
         [Validation(Required=false)]
