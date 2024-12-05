@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
                 [Validation(Required=false)]
                 public string Phone { get; set; }
 
+                [NameInMap("score")]
+                [Validation(Required=false)]
+                public string Score { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>[{\&quot;value\&quot;:\&quot;nttd\&quot;,\&quot;key\&quot;:\&quot;owner\&quot;}]</para>
