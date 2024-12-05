@@ -151,6 +151,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                     /// <summary>
                     /// <b>Example:</b>
+                    /// <para>xxx</para>
+                    /// </summary>
+                    [NameInMap("customTextSummary")]
+                    [Validation(Required=false)]
+                    public string CustomTextSummary { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
                     /// <para>xx</para>
                     /// </summary>
                     [NameInMap("hotTopic")]
@@ -172,6 +180,50 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                     [NameInMap("hotValue")]
                     [Validation(Required=false)]
                     public double? HotValue { get; set; }
+
+                    [NameInMap("images")]
+                    [Validation(Required=false)]
+                    public List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages> Images { get; set; }
+                    public class RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesImages : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para><a href="http://xxx">http://xxx</a></para>
+                        /// </summary>
+                        [NameInMap("url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
+
+                    }
+
+                    [NameInMap("news")]
+                    [Validation(Required=false)]
+                    public List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews> News { get; set; }
+                    public class RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>xxx</para>
+                        /// </summary>
+                        [NameInMap("title")]
+                        [Validation(Required=false)]
+                        public string Title { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para><a href="http://xxx">http://xxx</a></para>
+                        /// </summary>
+                        [NameInMap("url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xxx</para>
+                    /// </summary>
+                    [NameInMap("textSummary")]
+                    [Validation(Required=false)]
+                    public string TextSummary { get; set; }
 
                 }
 

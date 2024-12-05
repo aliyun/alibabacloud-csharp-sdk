@@ -331,160 +331,6 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>评论生成服务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RunCommentGenerationRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// RunCommentGenerationResponse
-        /// </returns>
-        public RunCommentGenerationResponse RunCommentGenerationWithOptions(string workspaceId, RunCommentGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Length))
-            {
-                body["length"] = request.Length;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumComments))
-            {
-                body["numComments"] = request.NumComments;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
-            {
-                body["sourceMaterial"] = request.SourceMaterial;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
-            {
-                body["style"] = request.Style;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RunCommentGeneration",
-                Version = "2024-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runCommentGeneration",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RunCommentGenerationResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>评论生成服务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RunCommentGenerationRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// RunCommentGenerationResponse
-        /// </returns>
-        public async Task<RunCommentGenerationResponse> RunCommentGenerationWithOptionsAsync(string workspaceId, RunCommentGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Length))
-            {
-                body["length"] = request.Length;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumComments))
-            {
-                body["numComments"] = request.NumComments;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
-            {
-                body["sourceMaterial"] = request.SourceMaterial;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Style))
-            {
-                body["style"] = request.Style;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RunCommentGeneration",
-                Version = "2024-08-01",
-                Protocol = "HTTPS",
-                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runCommentGeneration",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RunCommentGenerationResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>评论生成服务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RunCommentGenerationRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// RunCommentGenerationResponse
-        /// </returns>
-        public RunCommentGenerationResponse RunCommentGeneration(string workspaceId, RunCommentGenerationRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RunCommentGenerationWithOptions(workspaceId, request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>评论生成服务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RunCommentGenerationRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// RunCommentGenerationResponse
-        /// </returns>
-        public async Task<RunCommentGenerationResponse> RunCommentGenerationAsync(string workspaceId, RunCommentGenerationRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RunCommentGenerationWithOptionsAsync(workspaceId, request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>轻应用-热点播报-问答</para>
         /// </summary>
         /// 
@@ -1075,13 +921,25 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomLimitation))
+            {
+                body["customLimitation"] = request.CustomLimitation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
             {
                 body["customPrompt"] = request.CustomPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputExample))
+            {
+                body["inputExample"] = request.InputExample;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
                 body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputExample))
+            {
+                body["outputExample"] = request.OutputExample;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
             {
@@ -1133,13 +991,25 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomLimitation))
+            {
+                body["customLimitation"] = request.CustomLimitation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
             {
                 body["customPrompt"] = request.CustomPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputExample))
+            {
+                body["inputExample"] = request.InputExample;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
                 body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputExample))
+            {
+                body["outputExample"] = request.OutputExample;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
             {
