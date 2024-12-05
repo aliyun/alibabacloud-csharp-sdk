@@ -54,6 +54,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ApiAudiences { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
@@ -68,8 +70,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("auto_renew")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? AutoRenew { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <c>period_unit</c> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</para>
         /// <para>Default value: 1.</para>
@@ -80,8 +85,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("auto_renew_period")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? AutoRenewPeriod { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The billing method of the resource. The following resources are billed on a subscription basis:</para>
         /// <para>The internal-facing SLB instance used by the API server.</para>
@@ -96,6 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("charge_type")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ChargeType { get; set; }
 
         /// <term><b>Obsolete</b></term>
@@ -937,6 +946,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public string OsType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
@@ -948,8 +959,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("period")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? Period { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The billing cycle. This parameter is required if charge_type is set to PrePaid.</para>
         /// <para>Valid value: Month, which indicates that resources are billed only on a monthly basis.</para>
@@ -960,6 +974,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("period_unit")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PeriodUnit { get; set; }
 
         /// <term><b>Obsolete</b></term>

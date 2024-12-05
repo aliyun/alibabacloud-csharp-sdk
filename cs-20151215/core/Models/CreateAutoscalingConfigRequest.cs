@@ -122,6 +122,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? ScaleUpFromZero { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>cluster-autoscaler</para>
+        /// </summary>
+        [NameInMap("scaler_type")]
+        [Validation(Required=false)]
+        public string ScalerType { get; set; }
+
+        /// <summary>
         /// <para>The interval at which the system scans for events that trigger scaling activities. Unit: seconds. Default value: 60.</para>
         /// 
         /// <b>Example:</b>

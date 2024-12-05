@@ -146,6 +146,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Count { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether set the network type of the pod to host network.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: sets to host network.</description></item>
+        /// <item><description><c>false</c>: sets to container network.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -224,8 +230,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The network type of the edge node pool. This parameter takes effect only when the <c>type</c> of the node pool is set to <c>edge</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>basic</c>: basic.</description></item>
-        /// <item><description><c>private</c>: dedicated. Only clusters that run Kubernetes 1.22 and later support this value.</description></item>
+        /// <item><description><c>basic</c>: Internet.</description></item>
+        /// <item><description><c>private</c>: private network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -236,6 +242,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InterconnectMode { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether all nodes in the edge node pool can communicate with each other at Layer 3.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The nodes in the edge node pool can communicate with each other at Layer 3.</description></item>
+        /// <item><description><c>false</c>: The nodes in the edge node pool cannot communicate with each other at Layer 3.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -256,7 +268,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>true</c>: installs the CloudMonitor agent on ECS nodes.</description></item>
             /// <item><description><c>false</c>: does not install the CloudMonitor agent on ECS nodes.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -576,7 +588,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
                 /// <summary>
                 /// <para>The maximum number of nodes that can be in the Unavailable state. Valid values: 1 to 1000.</para>
-                /// <para>Default value: 1.</para>
+                /// <para>Default value: 1</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -612,11 +624,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The maximum number of nodes that can be contained in the edge node pool. The value of this parameter must be greater than or equal to 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster.</para>
-        /// <list type="bullet">
-        /// <item><description>In most cases, this parameter is set to a value greater than 0 for edge node pools.</description></item>
-        /// <item><description>This parameter is set to 0 for node pools whose types are ess or default edge node pools.</description></item>
-        /// </list>
+        /// <para>This parameter is deprecated.</para>
+        /// <para>The maximum number of nodes that can be contained in the edge node pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -700,7 +709,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>true</c>: enables auto-renewal.</description></item>
             /// <item><description><c>false</c>: disables auto-renewal.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -715,7 +724,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description>Valid values when PeriodUnit is set to Week: 1, 2, and 3</description></item>
             /// <item><description>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</description></item>
             /// </list>
-            /// <para>Default value: 1.</para>
+            /// <para>Default value: 1</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1304,7 +1313,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<CreateClusterNodePoolRequestScalingGroupTags> Tags { get; set; }
             public class CreateClusterNodePoolRequestScalingGroupTags : TeaModel {
                 /// <summary>
-                /// <para>The label key.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>node-k-1</para>
@@ -1314,7 +1323,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The label value.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>node-v-1</para>

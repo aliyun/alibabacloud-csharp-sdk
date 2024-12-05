@@ -470,7 +470,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated")]
         // Deprecated
         public CancelClusterUpgradeResponse CancelClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -512,7 +512,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated")]
         // Deprecated
         public async Task<CancelClusterUpgradeResponse> CancelClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -547,7 +547,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated")]
         // Deprecated
         public CancelClusterUpgradeResponse CancelClusterUpgrade(string ClusterId)
         {
@@ -568,7 +568,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelClusterUpgrade is deprecated")]
         // Deprecated
         public async Task<CancelClusterUpgradeResponse> CancelClusterUpgradeAsync(string ClusterId)
         {
@@ -596,7 +596,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated")]
         // Deprecated
         public CancelComponentUpgradeResponse CancelComponentUpgradeWithOptions(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -638,7 +638,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated")]
         // Deprecated
         public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeWithOptionsAsync(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -673,7 +673,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated")]
         // Deprecated
         public CancelComponentUpgradeResponse CancelComponentUpgrade(string clusterId, string componentId)
         {
@@ -694,7 +694,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CancelComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI CancelComponentUpgrade is deprecated")]
         // Deprecated
         public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeAsync(string clusterId, string componentId)
         {
@@ -1565,6 +1565,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["scale_up_from_zero"] = request.ScaleUpFromZero;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalerType))
+            {
+                body["scaler_type"] = request.ScalerType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
             {
                 body["scan_interval"] = request.ScanInterval;
@@ -1600,7 +1604,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateAutoscalingConfigResponse>(CallApi(params_, req, runtime));
         }
@@ -1663,6 +1667,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["scale_up_from_zero"] = request.ScaleUpFromZero;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalerType))
+            {
+                body["scaler_type"] = request.ScalerType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
             {
                 body["scan_interval"] = request.ScanInterval;
@@ -1698,7 +1706,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateAutoscalingConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -5365,7 +5373,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeAddonsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAddons is deprecated\n")]
+        [Obsolete("OpenAPI DescribeAddons is deprecated")]
         // Deprecated
         public DescribeAddonsResponse DescribeAddonsWithOptions(DescribeAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5433,7 +5441,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeAddonsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAddons is deprecated\n")]
+        [Obsolete("OpenAPI DescribeAddons is deprecated")]
         // Deprecated
         public async Task<DescribeAddonsResponse> DescribeAddonsWithOptionsAsync(DescribeAddonsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5495,7 +5503,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeAddonsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAddons is deprecated\n")]
+        [Obsolete("OpenAPI DescribeAddons is deprecated")]
         // Deprecated
         public DescribeAddonsResponse DescribeAddons(DescribeAddonsRequest request)
         {
@@ -5520,7 +5528,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeAddonsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAddons is deprecated\n")]
+        [Obsolete("OpenAPI DescribeAddons is deprecated")]
         // Deprecated
         public async Task<DescribeAddonsResponse> DescribeAddonsAsync(DescribeAddonsRequest request)
         {
@@ -5548,7 +5556,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated")]
         // Deprecated
         public DescribeClusterAddonInstanceResponse DescribeClusterAddonInstanceWithOptions(string ClusterID, string AddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5590,7 +5598,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonInstanceResponse> DescribeClusterAddonInstanceWithOptionsAsync(string ClusterID, string AddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5625,7 +5633,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated")]
         // Deprecated
         public DescribeClusterAddonInstanceResponse DescribeClusterAddonInstance(string ClusterID, string AddonName)
         {
@@ -5646,7 +5654,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonInstance is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonInstanceResponse> DescribeClusterAddonInstanceAsync(string ClusterID, string AddonName)
         {
@@ -5677,7 +5685,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonMetadataResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated")]
         // Deprecated
         public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadataWithOptions(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5729,7 +5737,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonMetadataResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataWithOptionsAsync(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5775,7 +5783,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonMetadataResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated")]
         // Deprecated
         public DescribeClusterAddonMetadataResponse DescribeClusterAddonMetadata(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request)
         {
@@ -5800,7 +5808,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonMetadataResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonMetadata is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonMetadataResponse> DescribeClusterAddonMetadataAsync(string clusterId, string componentId, DescribeClusterAddonMetadataRequest request)
         {
@@ -5828,7 +5836,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated")]
         // Deprecated
         public DescribeClusterAddonUpgradeStatusResponse DescribeClusterAddonUpgradeStatusWithOptions(string ClusterId, string ComponentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5870,7 +5878,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonUpgradeStatusResponse> DescribeClusterAddonUpgradeStatusWithOptionsAsync(string ClusterId, string ComponentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5905,7 +5913,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated")]
         // Deprecated
         public DescribeClusterAddonUpgradeStatusResponse DescribeClusterAddonUpgradeStatus(string ClusterId, string ComponentId)
         {
@@ -5926,7 +5934,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonUpgradeStatus is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonUpgradeStatusResponse> DescribeClusterAddonUpgradeStatusAsync(string ClusterId, string ComponentId)
         {
@@ -5957,7 +5965,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated")]
         // Deprecated
         public DescribeClusterAddonsUpgradeStatusResponse DescribeClusterAddonsUpgradeStatusWithOptions(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6015,7 +6023,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonsUpgradeStatusResponse> DescribeClusterAddonsUpgradeStatusWithOptionsAsync(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6067,7 +6075,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated")]
         // Deprecated
         public DescribeClusterAddonsUpgradeStatusResponse DescribeClusterAddonsUpgradeStatus(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest request)
         {
@@ -6092,7 +6100,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsUpgradeStatus is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonsUpgradeStatusResponse> DescribeClusterAddonsUpgradeStatusAsync(string ClusterId, DescribeClusterAddonsUpgradeStatusRequest request)
         {
@@ -6120,7 +6128,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsVersionResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated")]
         // Deprecated
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersionWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6162,7 +6170,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsVersionResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonsVersionResponse> DescribeClusterAddonsVersionWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6197,7 +6205,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsVersionResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated")]
         // Deprecated
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersion(string ClusterId)
         {
@@ -6218,7 +6226,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterAddonsVersionResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterAddonsVersion is deprecated")]
         // Deprecated
         public async Task<DescribeClusterAddonsVersionResponse> DescribeClusterAddonsVersionAsync(string ClusterId)
         {
@@ -7597,7 +7605,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterV2UserKubeconfigResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated")]
         // Deprecated
         public DescribeClusterV2UserKubeconfigResponse DescribeClusterV2UserKubeconfigWithOptions(string ClusterId, DescribeClusterV2UserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7649,7 +7657,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterV2UserKubeconfigResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated")]
         // Deprecated
         public async Task<DescribeClusterV2UserKubeconfigResponse> DescribeClusterV2UserKubeconfigWithOptionsAsync(string ClusterId, DescribeClusterV2UserKubeconfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7695,7 +7703,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterV2UserKubeconfigResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated")]
         // Deprecated
         public DescribeClusterV2UserKubeconfigResponse DescribeClusterV2UserKubeconfig(string ClusterId, DescribeClusterV2UserKubeconfigRequest request)
         {
@@ -7720,7 +7728,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClusterV2UserKubeconfigResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusterV2UserKubeconfig is deprecated")]
         // Deprecated
         public async Task<DescribeClusterV2UserKubeconfigResponse> DescribeClusterV2UserKubeconfigAsync(string ClusterId, DescribeClusterV2UserKubeconfigRequest request)
         {
@@ -7853,7 +7861,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClustersResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusters is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusters is deprecated")]
         // Deprecated
         public DescribeClustersResponse DescribeClustersWithOptions(DescribeClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7913,7 +7921,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClustersResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusters is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusters is deprecated")]
         // Deprecated
         public async Task<DescribeClustersResponse> DescribeClustersWithOptionsAsync(DescribeClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7967,7 +7975,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClustersResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusters is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusters is deprecated")]
         // Deprecated
         public DescribeClustersResponse DescribeClusters(DescribeClustersRequest request)
         {
@@ -7992,7 +8000,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeClustersResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeClusters is deprecated\n")]
+        [Obsolete("OpenAPI DescribeClusters is deprecated")]
         // Deprecated
         public async Task<DescribeClustersResponse> DescribeClustersAsync(DescribeClustersRequest request)
         {
@@ -8003,7 +8011,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定地域内全部集群列表</para>
+        /// <para>Queries all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8073,7 +8081,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定地域内全部集群列表</para>
+        /// <para>Queries all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8143,7 +8151,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定地域内全部集群列表</para>
+        /// <para>Queries all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8162,7 +8170,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定地域内全部集群列表</para>
+        /// <para>Queries all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12350,7 +12358,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetUpgradeStatus is deprecated")]
         // Deprecated
         public GetUpgradeStatusResponse GetUpgradeStatusWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12392,7 +12400,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetUpgradeStatus is deprecated")]
         // Deprecated
         public async Task<GetUpgradeStatusResponse> GetUpgradeStatusWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12427,7 +12435,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetUpgradeStatus is deprecated")]
         // Deprecated
         public GetUpgradeStatusResponse GetUpgradeStatus(string ClusterId)
         {
@@ -12448,7 +12456,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetUpgradeStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetUpgradeStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetUpgradeStatus is deprecated")]
         // Deprecated
         public async Task<GetUpgradeStatusResponse> GetUpgradeStatusAsync(string ClusterId)
         {
@@ -15310,7 +15318,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated")]
         // Deprecated
         public PauseClusterUpgradeResponse PauseClusterUpgradeWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15352,7 +15360,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated")]
         // Deprecated
         public async Task<PauseClusterUpgradeResponse> PauseClusterUpgradeWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15387,7 +15395,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated")]
         // Deprecated
         public PauseClusterUpgradeResponse PauseClusterUpgrade(string ClusterId)
         {
@@ -15408,7 +15416,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseClusterUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseClusterUpgrade is deprecated")]
         // Deprecated
         public async Task<PauseClusterUpgradeResponse> PauseClusterUpgradeAsync(string ClusterId)
         {
@@ -15436,7 +15444,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated")]
         // Deprecated
         public PauseComponentUpgradeResponse PauseComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15478,7 +15486,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated")]
         // Deprecated
         public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15513,7 +15521,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated")]
         // Deprecated
         public PauseComponentUpgradeResponse PauseComponentUpgrade(string clusterid, string componentid)
         {
@@ -15534,7 +15542,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// PauseComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI PauseComponentUpgrade is deprecated")]
         // Deprecated
         public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeAsync(string clusterid, string componentid)
         {
@@ -15678,7 +15686,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// RemoveClusterNodesResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveClusterNodes is deprecated\n")]
+        [Obsolete("OpenAPI RemoveClusterNodes is deprecated")]
         // Deprecated
         public RemoveClusterNodesResponse RemoveClusterNodesWithOptions(string ClusterId, RemoveClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15749,7 +15757,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// RemoveClusterNodesResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveClusterNodes is deprecated\n")]
+        [Obsolete("OpenAPI RemoveClusterNodes is deprecated")]
         // Deprecated
         public async Task<RemoveClusterNodesResponse> RemoveClusterNodesWithOptionsAsync(string ClusterId, RemoveClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -15814,7 +15822,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// RemoveClusterNodesResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveClusterNodes is deprecated\n")]
+        [Obsolete("OpenAPI RemoveClusterNodes is deprecated")]
         // Deprecated
         public RemoveClusterNodesResponse RemoveClusterNodes(string ClusterId, RemoveClusterNodesRequest request)
         {
@@ -15850,7 +15858,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// RemoveClusterNodesResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveClusterNodes is deprecated\n")]
+        [Obsolete("OpenAPI RemoveClusterNodes is deprecated")]
         // Deprecated
         public async Task<RemoveClusterNodesResponse> RemoveClusterNodesAsync(string ClusterId, RemoveClusterNodesRequest request)
         {
@@ -15867,11 +15875,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
+        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15950,11 +15957,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
+        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16033,11 +16039,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
+        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16063,11 +16068,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
+        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16250,7 +16254,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated")]
         // Deprecated
         public ResumeComponentUpgradeResponse ResumeComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16292,7 +16296,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated")]
         // Deprecated
         public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16327,7 +16331,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated")]
         // Deprecated
         public ResumeComponentUpgradeResponse ResumeComponentUpgrade(string clusterid, string componentid)
         {
@@ -16348,7 +16352,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeComponentUpgradeResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated\n")]
+        [Obsolete("OpenAPI ResumeComponentUpgrade is deprecated")]
         // Deprecated
         public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeAsync(string clusterid, string componentid)
         {
@@ -16478,7 +16482,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeUpgradeClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated\n")]
+        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated")]
         // Deprecated
         public ResumeUpgradeClusterResponse ResumeUpgradeClusterWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16520,7 +16524,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeUpgradeClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated\n")]
+        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated")]
         // Deprecated
         public async Task<ResumeUpgradeClusterResponse> ResumeUpgradeClusterWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16555,7 +16559,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeUpgradeClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated\n")]
+        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated")]
         // Deprecated
         public ResumeUpgradeClusterResponse ResumeUpgradeCluster(string ClusterId)
         {
@@ -16576,7 +16580,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ResumeUpgradeClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated\n")]
+        [Obsolete("OpenAPI ResumeUpgradeCluster is deprecated")]
         // Deprecated
         public async Task<ResumeUpgradeClusterResponse> ResumeUpgradeClusterAsync(string ClusterId)
         {
@@ -16855,7 +16859,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ScaleClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ScaleCluster is deprecated\n")]
+        [Obsolete("OpenAPI ScaleCluster is deprecated")]
         // Deprecated
         public ScaleClusterResponse ScaleClusterWithOptions(string ClusterId, ScaleClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16979,7 +16983,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ScaleClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ScaleCluster is deprecated\n")]
+        [Obsolete("OpenAPI ScaleCluster is deprecated")]
         // Deprecated
         public async Task<ScaleClusterResponse> ScaleClusterWithOptionsAsync(string ClusterId, ScaleClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17097,7 +17101,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ScaleClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ScaleCluster is deprecated\n")]
+        [Obsolete("OpenAPI ScaleCluster is deprecated")]
         // Deprecated
         public ScaleClusterResponse ScaleCluster(string ClusterId, ScaleClusterRequest request)
         {
@@ -17122,7 +17126,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ScaleClusterResponse
         /// </returns>
-        [Obsolete("OpenAPI ScaleCluster is deprecated\n")]
+        [Obsolete("OpenAPI ScaleCluster is deprecated")]
         // Deprecated
         public async Task<ScaleClusterResponse> ScaleClusterAsync(string ClusterId, ScaleClusterRequest request)
         {

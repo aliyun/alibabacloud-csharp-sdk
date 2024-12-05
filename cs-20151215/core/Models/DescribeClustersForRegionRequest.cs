@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersForRegionRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c8155823d057948c69a****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The specification of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ack.standard</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
+        /// <para>The type of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Kubernetes</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
+        /// <para>Perform a fuzzy search by using the cluster name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-cluster</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The identifier of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Serverless</para>
         /// </summary>
