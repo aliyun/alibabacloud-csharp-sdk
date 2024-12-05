@@ -4963,6 +4963,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartClipTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartClipTaskResponse
+        /// </returns>
+        public GetSmartClipTaskResponse GetSmartClipTaskWithOptions(GetSmartClipTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmartClipTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmartClipTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartClipTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartClipTaskResponse
+        /// </returns>
+        public async Task<GetSmartClipTaskResponse> GetSmartClipTaskWithOptionsAsync(GetSmartClipTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmartClipTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmartClipTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartClipTaskResponse
+        /// </returns>
+        public GetSmartClipTaskResponse GetSmartClipTask(GetSmartClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSmartClipTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartClipTaskResponse
+        /// </returns>
+        public async Task<GetSmartClipTaskResponse> GetSmartClipTaskAsync(GetSmartClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSmartClipTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>根据ID获取热点事件信息</para>
         /// </summary>
         /// 
@@ -13535,6 +13663,178 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitEnterpriseVocAnalysisTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSmartClipTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartClipTaskResponse
+        /// </returns>
+        public SubmitSmartClipTaskResponse SubmitSmartClipTaskWithOptions(SubmitSmartClipTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSmartClipTaskShrinkRequest request = new SubmitSmartClipTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EditingConfig))
+            {
+                request.EditingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EditingConfig, "EditingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputConfig))
+            {
+                request.InputConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputConfig, "InputConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputConfig))
+            {
+                request.OutputConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputConfig, "OutputConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfigShrink))
+            {
+                body["EditingConfig"] = request.EditingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfigShrink))
+            {
+                body["InputConfig"] = request.InputConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfigShrink))
+            {
+                body["OutputConfig"] = request.OutputConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSmartClipTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSmartClipTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSmartClipTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartClipTaskResponse
+        /// </returns>
+        public async Task<SubmitSmartClipTaskResponse> SubmitSmartClipTaskWithOptionsAsync(SubmitSmartClipTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSmartClipTaskShrinkRequest request = new SubmitSmartClipTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EditingConfig))
+            {
+                request.EditingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EditingConfig, "EditingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputConfig))
+            {
+                request.InputConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputConfig, "InputConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputConfig))
+            {
+                request.OutputConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputConfig, "OutputConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfigShrink))
+            {
+                body["EditingConfig"] = request.EditingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfigShrink))
+            {
+                body["InputConfig"] = request.InputConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfigShrink))
+            {
+                body["OutputConfig"] = request.OutputConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSmartClipTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSmartClipTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSmartClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartClipTaskResponse
+        /// </returns>
+        public SubmitSmartClipTaskResponse SubmitSmartClipTask(SubmitSmartClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSmartClipTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一键成片剪辑任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSmartClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartClipTaskResponse
+        /// </returns>
+        public async Task<SubmitSmartClipTaskResponse> SubmitSmartClipTaskAsync(SubmitSmartClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSmartClipTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
