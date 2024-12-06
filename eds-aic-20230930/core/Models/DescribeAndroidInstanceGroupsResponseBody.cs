@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ArchitectureType { get; set; }
 
+            [NameInMap("AvailableInstanceAmount")]
+            [Validation(Required=false)]
+            public int? AvailableInstanceAmount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>PrePaid</para>
