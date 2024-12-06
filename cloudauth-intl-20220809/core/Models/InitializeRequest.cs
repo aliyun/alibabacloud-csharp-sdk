@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class InitializeRequest : TeaModel {
+        [NameInMap("AppQualityCheck")]
+        [Validation(Required=false)]
+        public string AppQualityCheck { get; set; }
+
         [NameInMap("Authorize")]
         [Validation(Required=false)]
         public string Authorize { get; set; }

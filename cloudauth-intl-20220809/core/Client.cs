@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// CardOcrResponse
         /// </returns>
-        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.\n")]
+        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.")]
         // Deprecated
         public CardOcrResponse CardOcrWithOptions(CardOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// CardOcrResponse
         /// </returns>
-        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.\n")]
+        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.")]
         // Deprecated
         public async Task<CardOcrResponse> CardOcrWithOptionsAsync(CardOcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// CardOcrResponse
         /// </returns>
-        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.\n")]
+        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.")]
         // Deprecated
         public CardOcrResponse CardOcr(CardOcrRequest request)
         {
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// CardOcrResponse
         /// </returns>
-        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.\n")]
+        [Obsolete("OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.")]
         // Deprecated
         public async Task<CardOcrResponse> CardOcrAsync(CardOcrRequest request)
         {
@@ -556,6 +556,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardSide))
+            {
+                query["CardSide"] = request.CardSide;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
@@ -636,6 +640,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardSide))
+            {
+                query["CardSide"] = request.CardSide;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
@@ -1740,6 +1748,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppQualityCheck))
+            {
+                query["AppQualityCheck"] = request.AppQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorize))
             {
                 query["Authorize"] = request.Authorize;
@@ -1896,6 +1908,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppQualityCheck))
+            {
+                query["AppQualityCheck"] = request.AppQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorize))
             {
                 query["Authorize"] = request.Authorize;

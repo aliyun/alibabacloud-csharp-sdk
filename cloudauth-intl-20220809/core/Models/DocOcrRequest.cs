@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrRequest : TeaModel {
+        [NameInMap("CardSide")]
+        [Validation(Required=false)]
+        public string CardSide { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>00000006</para>
