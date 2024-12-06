@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Order { get; set; }
 
+        [NameInMap("OversoldInfo")]
+        [Validation(Required=false)]
+        public string OversoldInfo { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

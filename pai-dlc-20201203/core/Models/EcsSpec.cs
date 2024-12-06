@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>80</para>
+        /// </summary>
+        [NameInMap("GpuMemory")]
+        [Validation(Required=false)]
+        public int? GpuMemory { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>NVIDIA v100</para>
         /// </summary>
         [NameInMap("GpuType")]

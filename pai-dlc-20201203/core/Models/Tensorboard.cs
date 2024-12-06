@@ -189,9 +189,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Username { get; set; }
 
-        [NameInMap("Workspaceid")]
+        [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
-        public string Workspaceid { get; set; }
+        public string WorkspaceId { get; set; }
 
     }
 

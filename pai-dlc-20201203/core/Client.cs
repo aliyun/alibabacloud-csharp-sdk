@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -2726,6 +2725,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["Order"] = request.Order;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldInfo))
+            {
+                query["OversoldInfo"] = request.OversoldInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -2861,6 +2864,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
                 query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldInfo))
+            {
+                query["OversoldInfo"] = request.OversoldInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
