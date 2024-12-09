@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? SsoEnabled { get; set; }
 
+            [NameInMap("SsoLoginWithDomain")]
+            [Validation(Required=false)]
+            public bool? SsoLoginWithDomain { get; set; }
+
         }
 
     }

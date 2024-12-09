@@ -4501,7 +4501,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the console logon settings of a RAM user.</para>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4543,7 +4543,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the console logon settings of a RAM user.</para>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4585,7 +4585,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the console logon settings of a RAM user.</para>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4603,7 +4603,7 @@ namespace AlibabaCloud.SDK.Ims20190815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the console logon settings of a RAM user.</para>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8375,11 +8375,6 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await SetSecurityPreferenceWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>设置用户SSO身份提供商信息</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>
@@ -8406,6 +8401,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["SsoEnabled"] = request.SsoEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SsoLoginWithDomain))
+            {
+                query["SsoLoginWithDomain"] = request.SsoLoginWithDomain;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8425,11 +8424,6 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<SetUserSsoSettingsResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>设置用户SSO身份提供商信息</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>
@@ -8456,6 +8450,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["SsoEnabled"] = request.SsoEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SsoLoginWithDomain))
+            {
+                query["SsoLoginWithDomain"] = request.SsoLoginWithDomain;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8475,11 +8473,6 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<SetUserSsoSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>设置用户SSO身份提供商信息</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>
@@ -8493,11 +8486,6 @@ namespace AlibabaCloud.SDK.Ims20190815
             return SetUserSsoSettingsWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>设置用户SSO身份提供商信息</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>

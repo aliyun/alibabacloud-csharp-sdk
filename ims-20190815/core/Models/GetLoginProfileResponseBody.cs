@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetLoginProfileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The logon information.</para>
+        /// <para>The console logon configurations.</para>
         /// </summary>
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public GetLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class GetLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// <para>The last time when the RAM user logged on to the console.</para>
+            /// <para>The time of the most recent logon. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T07:25:25Z</para>
@@ -27,7 +27,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string LastLoginTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether multi-factor authentication (MFA) must be enabled.</para>
+            /// <para>Indicates whether multi-factor authentication (MFA) must be enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>false</description></item>
+            /// <item><description>true</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +41,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM user must reset the password at the next logon.</para>
+            /// <para>Indicates whether the RAM user is required to reset the password upon the next logon. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>false</description></item>
+            /// <item><description>true</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -47,7 +55,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? PasswordResetRequired { get; set; }
 
             /// <summary>
-            /// <para>The status of password-based logon.</para>
+            /// <para>Indicates whether console logon is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Active: enabled.</description></item>
+            /// <item><description>Inactive: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -57,7 +69,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The modification time. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T06:56:45Z</para>
