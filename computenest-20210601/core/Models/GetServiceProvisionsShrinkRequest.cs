@@ -10,47 +10,65 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceProvisionsShrinkRequest : TeaModel {
         /// <summary>
-        /// The parameters configured for the service instance.
+        /// <para>The parameters configured for the service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-hangzhou-g\&quot;,\&quot;EcsInstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;InstancePassword\&quot;:\&quot;xxxxxxxx\&quot;,\&quot;PayType\&quot;:\&quot;PostPaid\&quot;,\&quot;PayPeriodUnit\&quot;:\&quot;Month\&quot;,\&quot;PayPeriod\&quot;:1}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The service ID.
+        /// <para>The service ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>service-0efc0db451794bxxxxxx</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// The version of the service.
+        /// <para>The version of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// The template name.
+        /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// The trial policy. Valid values:
+        /// <para>The trial policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Trial: Trials are supported.</description></item>
+        /// <item><description>NotTrial: Trials are not supported.</description></item>
+        /// </list>
         /// 
-        /// *   Trial: Trials are supported.
-        /// *   NotTrial: Trials are not supported.
+        /// <b>Example:</b>
+        /// <para>Trial</para>
         /// </summary>
         [NameInMap("TrialType")]
         [Validation(Required=false)]

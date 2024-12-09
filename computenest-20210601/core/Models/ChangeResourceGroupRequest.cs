@@ -10,33 +10,45 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the new resource group.
+        /// <para>The ID of the new resource group.</para>
+        /// <para>You can view resource group IDs in the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> .</para>
         /// 
-        /// You can view resource group IDs in the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups) .
+        /// <b>Example:</b>
+        /// <para>rg-acfmzmhzo******</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the cloud resource that you want to move to a new resource group.
+        /// <para>The ID of the cloud resource that you want to move to a new resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>si-5dc794a7fd254e******</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type. Valid values:
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>service: service</description></item>
+        /// <item><description>serviceinstance: service instance</description></item>
+        /// </list>
         /// 
-        /// *   service: service
-        /// *   serviceinstance: service instance
+        /// <b>Example:</b>
+        /// <para>service</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

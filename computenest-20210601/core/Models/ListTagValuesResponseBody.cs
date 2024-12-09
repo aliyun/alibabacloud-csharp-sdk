@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListTagValuesResponseBody : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAVz7BQqj2xtiNSC3d3RAD38=</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0631D623-D917-1C2D-ACD6-5B3B19XXXXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the tag values.
+        /// <para>The information of the tag values.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

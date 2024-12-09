@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class RestartServiceInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>13FE89A5-C036-56BF-A0FF-A31C59819FD7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

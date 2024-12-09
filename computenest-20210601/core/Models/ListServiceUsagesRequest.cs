@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public List<ListServiceUsagesRequestFilter> Filter { get; set; }
         public class ListServiceUsagesRequestFilter : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ServiceId</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -23,10 +27,18 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

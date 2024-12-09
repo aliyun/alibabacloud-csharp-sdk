@@ -10,30 +10,38 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource type. Valid values:
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>service: service</description></item>
+        /// <item><description>serviceinstance: service instance</description></item>
+        /// <item><description>artifact: artifact</description></item>
+        /// <item><description>dataset: dataset</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   service: service
-        /// *   serviceinstance: service instance
-        /// *   artifact: artifact
-        /// *   dataset: dataset
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>service</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

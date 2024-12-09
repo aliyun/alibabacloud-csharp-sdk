@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpdateServiceInstanceSpecShrinkRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.
+        /// <para>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</para>
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public UpdateServiceInstanceSpecShrinkRequestCommodity Commodity { get; set; }
         public class UpdateServiceInstanceSpecShrinkRequestCommodity : TeaModel {
             /// <summary>
-            /// Specifies whether to automatically complete the payment. Valid values:
+            /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("AutoPay")]
             [Validation(Required=false)]
@@ -36,50 +43,71 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:
+        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true: performs a dry run for the request, but does not create a service instance.</b></description></item>
+        /// <item><description><b>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</b></description></item>
+        /// </list>
         /// 
-        /// *   **true: performs a dry run for the request, but does not create a service instance.**
-        /// *   **false: performs a dry run for the request, and creates a service instance if the request passes the dry run.**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Prometheus on the customer side. Valid values:
+        /// <para>Specifies whether to enable Prometheus on the customer side. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableUserPrometheus")]
         [Validation(Required=false)]
         public bool? EnableUserPrometheus { get; set; }
 
         /// <summary>
-        /// The name of the configuration update operation.
+        /// <para>The name of the configuration update operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>package modify</para>
         /// </summary>
         [NameInMap("OperationName")]
         [Validation(Required=false)]
         public string OperationName { get; set; }
 
         /// <summary>
-        /// The configuration parameters of the service instance.
+        /// <para>The configuration parameters of the service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;InstanceType&quot;: &quot;ecs.g8ise.2xlarge&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// The name of the specification package.
+        /// <para>The name of the specification package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>package One</para>
         /// </summary>
         [NameInMap("PredefinedParametersName")]
         [Validation(Required=false)]
         public string PredefinedParametersName { get; set; }
 
         /// <summary>
-        /// The service instance ID.
+        /// <para>The service instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>si-d6ab3a63ccbb4b17****</para>
         /// </summary>
         [NameInMap("ServiceInstanceId")]
         [Validation(Required=false)]

@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpdateServiceUsageShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AAAAAYChudnQUoBH+mGWFpb6oP0=</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service-39f4f251e94843xxxxxx</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]

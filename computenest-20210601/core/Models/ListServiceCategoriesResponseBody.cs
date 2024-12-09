@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceCategoriesResponseBody : TeaModel {
         /// <summary>
-        /// The category list of the service.
+        /// <para>The category list of the service.</para>
         /// </summary>
         [NameInMap("Categories")]
         [Validation(Required=false)]
         public List<string> Categories { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>13FE89A5-C036-56BF-A0FF-A31C59819FD7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
