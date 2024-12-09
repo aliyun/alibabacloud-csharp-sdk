@@ -166,6 +166,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Summary { get; set; }
 
+            [NameInMap("SummaryEn")]
+            [Validation(Required=false)]
+            public string SummaryEn { get; set; }
+
             /// <summary>
             /// <para>The version of the plug-in.</para>
             /// 

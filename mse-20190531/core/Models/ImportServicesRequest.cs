@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<ImportServicesRequestServiceList> ServiceList { get; set; }
         public class ImportServicesRequestServiceList : TeaModel {
+            [NameInMap("DnsServerList")]
+            [Validation(Required=false)]
+            public List<string> DnsServerList { get; set; }
+
             /// <summary>
             /// <para>The group.</para>
             /// 

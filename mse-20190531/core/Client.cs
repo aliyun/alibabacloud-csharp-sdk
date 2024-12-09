@@ -6157,7 +6157,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateMseServiceApplicationResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.\n")]
+        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.")]
         // Deprecated
         public CreateMseServiceApplicationResponse CreateMseServiceApplicationWithOptions(CreateMseServiceApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6237,7 +6237,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateMseServiceApplicationResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.\n")]
+        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.")]
         // Deprecated
         public async Task<CreateMseServiceApplicationResponse> CreateMseServiceApplicationWithOptionsAsync(CreateMseServiceApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6314,7 +6314,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateMseServiceApplicationResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.\n")]
+        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.")]
         // Deprecated
         public CreateMseServiceApplicationResponse CreateMseServiceApplication(CreateMseServiceApplicationRequest request)
         {
@@ -6338,7 +6338,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateMseServiceApplicationResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.\n")]
+        [Obsolete("OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.")]
         // Deprecated
         public async Task<CreateMseServiceApplicationResponse> CreateMseServiceApplicationAsync(CreateMseServiceApplicationRequest request)
         {
@@ -7020,6 +7020,142 @@ namespace AlibabaCloud.SDK.Mse20190531
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateNacosServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateNamespace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNamespaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNamespaceResponse
+        /// </returns>
+        public CreateNamespaceResponse CreateNamespaceWithOptions(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Describe))
+            {
+                query["Describe"] = request.Describe;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNamespace",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNamespaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateNamespace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNamespaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNamespaceResponse
+        /// </returns>
+        public async Task<CreateNamespaceResponse> CreateNamespaceWithOptionsAsync(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Describe))
+            {
+                query["Describe"] = request.Describe;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNamespace",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNamespaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateNamespace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNamespaceResponse
+        /// </returns>
+        public CreateNamespaceResponse CreateNamespace(CreateNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateNamespaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateNamespace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNamespaceResponse
+        /// </returns>
+        public async Task<CreateNamespaceResponse> CreateNamespaceAsync(CreateNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateNamespaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13665,7 +13801,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// GetBlackWhiteListResponse
         /// </returns>
-        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.\n")]
+        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.")]
         // Deprecated
         public GetBlackWhiteListResponse GetBlackWhiteListWithOptions(GetBlackWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13729,7 +13865,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// GetBlackWhiteListResponse
         /// </returns>
-        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.\n")]
+        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.")]
         // Deprecated
         public async Task<GetBlackWhiteListResponse> GetBlackWhiteListWithOptionsAsync(GetBlackWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13790,7 +13926,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// GetBlackWhiteListResponse
         /// </returns>
-        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.\n")]
+        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.")]
         // Deprecated
         public GetBlackWhiteListResponse GetBlackWhiteList(GetBlackWhiteListRequest request)
         {
@@ -13814,7 +13950,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// GetBlackWhiteListResponse
         /// </returns>
-        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.\n")]
+        [Obsolete("OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.")]
         // Deprecated
         public async Task<GetBlackWhiteListResponse> GetBlackWhiteListAsync(GetBlackWhiteListRequest request)
         {
@@ -19325,7 +19461,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// ListAppBySwimmingLaneGroupTagResponse
         /// </returns>
-        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.\n")]
+        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.")]
         // Deprecated
         public ListAppBySwimmingLaneGroupTagResponse ListAppBySwimmingLaneGroupTagWithOptions(ListAppBySwimmingLaneGroupTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19385,7 +19521,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// ListAppBySwimmingLaneGroupTagResponse
         /// </returns>
-        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.\n")]
+        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.")]
         // Deprecated
         public async Task<ListAppBySwimmingLaneGroupTagResponse> ListAppBySwimmingLaneGroupTagWithOptionsAsync(ListAppBySwimmingLaneGroupTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19442,7 +19578,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// ListAppBySwimmingLaneGroupTagResponse
         /// </returns>
-        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.\n")]
+        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.")]
         // Deprecated
         public ListAppBySwimmingLaneGroupTagResponse ListAppBySwimmingLaneGroupTag(ListAppBySwimmingLaneGroupTagRequest request)
         {
@@ -19466,7 +19602,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// ListAppBySwimmingLaneGroupTagResponse
         /// </returns>
-        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.\n")]
+        [Obsolete("OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.")]
         // Deprecated
         public async Task<ListAppBySwimmingLaneGroupTagResponse> ListAppBySwimmingLaneGroupTagAsync(ListAppBySwimmingLaneGroupTagRequest request)
         {
@@ -24796,6 +24932,158 @@ namespace AlibabaCloud.SDK.Mse20190531
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNacosHistoryConfigsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示命名空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNamespacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNamespacesResponse
+        /// </returns>
+        public ListNamespacesResponse ListNamespacesWithOptions(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNamespaces",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNamespacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示命名空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNamespacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNamespacesResponse
+        /// </returns>
+        public async Task<ListNamespacesResponse> ListNamespacesWithOptionsAsync(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNamespaces",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNamespacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示命名空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNamespacesResponse
+        /// </returns>
+        public ListNamespacesResponse ListNamespaces(ListNamespacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNamespacesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示命名空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNamespacesResponse
+        /// </returns>
+        public async Task<ListNamespacesResponse> ListNamespacesAsync(ListNamespacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNamespacesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35494,6 +35782,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateGatewayServiceShrinkRequest request = new UpdateGatewayServiceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DnsServerList))
+            {
+                request.DnsServerListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DnsServerList, "DnsServerList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IpList))
             {
                 request.IpListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IpList, "IpList", "json");
@@ -35502,6 +35794,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsServerListShrink))
+            {
+                query["DnsServerList"] = request.DnsServerListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {
@@ -35574,6 +35870,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateGatewayServiceShrinkRequest request = new UpdateGatewayServiceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DnsServerList))
+            {
+                request.DnsServerListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DnsServerList, "DnsServerList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IpList))
             {
                 request.IpListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IpList, "IpList", "json");
@@ -35582,6 +35882,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsServerListShrink))
+            {
+                query["DnsServerList"] = request.DnsServerListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {

@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<ListGatewayServiceResponseBodyDataResult> Result { get; set; }
             public class ListGatewayServiceResponseBodyDataResult : TeaModel {
+                [NameInMap("DnsServerList")]
+                [Validation(Required=false)]
+                public List<string> DnsServerList { get; set; }
+
                 /// <summary>
                 /// <para>The gateway ID.</para>
                 /// 

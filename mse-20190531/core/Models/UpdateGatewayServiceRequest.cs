@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("DnsServerList")]
+        [Validation(Required=false)]
+        public List<string> DnsServerList { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>501</para>

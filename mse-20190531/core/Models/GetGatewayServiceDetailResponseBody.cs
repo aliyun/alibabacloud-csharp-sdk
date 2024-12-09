@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public GetGatewayServiceDetailResponseBodyData Data { get; set; }
         public class GetGatewayServiceDetailResponseBodyData : TeaModel {
+            [NameInMap("DnsServerList")]
+            [Validation(Required=false)]
+            public List<string> DnsServerList { get; set; }
+
             /// <summary>
             /// <para>The ID of the gateway.</para>
             /// 
