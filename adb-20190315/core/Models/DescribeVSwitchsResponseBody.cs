@@ -1,0 +1,118 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Adb20190315.Models
+{
+    public class DescribeVSwitchsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1B892DA2-9ABC-5CC0-AD73-405479C3FA53</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("VSwitches")]
+        [Validation(Required=false)]
+        public DescribeVSwitchsResponseBodyVSwitches VSwitches { get; set; }
+        public class DescribeVSwitchsResponseBodyVSwitches : TeaModel {
+            [NameInMap("VSwitch")]
+            [Validation(Required=false)]
+            public List<DescribeVSwitchsResponseBodyVSwitchesVSwitch> VSwitch { get; set; }
+            public class DescribeVSwitchsResponseBodyVSwitchesVSwitch : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>195813423043****</para>
+                /// </summary>
+                [NameInMap("AliUid")]
+                [Validation(Required=false)]
+                public string AliUid { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>26842</para>
+                /// </summary>
+                [NameInMap("Bid")]
+                [Validation(Required=false)]
+                public string Bid { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>172.16.0.0/24</para>
+                /// </summary>
+                [NameInMap("CidrBlock")]
+                [Validation(Required=false)]
+                public string CidrBlock { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2022-01-18T12:43:57Z</para>
+                /// </summary>
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
+                public string GmtCreate { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2022-01-22T12:43:57Z</para>
+                /// </summary>
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public string GmtModified { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("IsDefault")]
+                [Validation(Required=false)]
+                public bool? IsDefault { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-k</para>
+                /// </summary>
+                [NameInMap("IzNo")]
+                [Validation(Required=false)]
+                public string IzNo { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
+                [NameInMap("RegionNo")]
+                [Validation(Required=false)]
+                public string RegionNo { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Available</para>
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vsw-25bcdxs7pv1****</para>
+                /// </summary>
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("VSwitchName")]
+                [Validation(Required=false)]
+                public string VSwitchName { get; set; }
+
+            }
+
+        }
+
+    }
+
+}

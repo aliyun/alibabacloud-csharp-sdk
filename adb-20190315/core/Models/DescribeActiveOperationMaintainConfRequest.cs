@@ -8,24 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
-    public class AttachUserENIRequest : TeaModel {
-        [NameInMap("AccessKeyId-copy")]
-        [Validation(Required=false)]
-        public string AccessKeyIdCopy { get; set; }
-
+    public class DescribeActiveOperationMaintainConfRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query cluster IDs.</para>
-        /// </remarks>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>am-bp11q28kvl688****</para>
+        /// <para>am-xxxxxxxx</para>
         /// </summary>
-        [NameInMap("DBClusterId")]
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string Ids { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -35,6 +25,22 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-acfmzuemxkbvwqq</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -42,6 +48,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 
