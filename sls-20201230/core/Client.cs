@@ -760,6 +760,160 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CreateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentInstanceConfigResponse
+        /// </returns>
+        public CreateAgentInstanceConfigResponse CreateAgentInstanceConfigWithOptions(CreateAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMatcher))
+            {
+                body["configMatcher"] = request.ConfigMatcher;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                body["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsGray))
+            {
+                body["isGray"] = request.IsGray;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateAgentInstanceConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<CreateAgentInstanceConfigResponse> CreateAgentInstanceConfigWithOptionsAsync(CreateAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMatcher))
+            {
+                body["configMatcher"] = request.ConfigMatcher;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                body["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsGray))
+            {
+                body["isGray"] = request.IsGray;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateAgentInstanceConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentInstanceConfigResponse
+        /// </returns>
+        public CreateAgentInstanceConfigResponse CreateAgentInstanceConfig(CreateAgentInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAgentInstanceConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<CreateAgentInstanceConfigResponse> CreateAgentInstanceConfigAsync(CreateAgentInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAgentInstanceConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>CreateAlert</para>
         /// </summary>
         /// 
@@ -5350,6 +5504,136 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DeleteAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentInstanceConfigResponse
+        /// </returns>
+        public DeleteAgentInstanceConfigResponse DeleteAgentInstanceConfigWithOptions(string configName, DeleteAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsGray))
+            {
+                query["isGray"] = request.IsGray;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs/" + configName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAgentInstanceConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<DeleteAgentInstanceConfigResponse> DeleteAgentInstanceConfigWithOptionsAsync(string configName, DeleteAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsGray))
+            {
+                query["isGray"] = request.IsGray;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs/" + configName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteAgentInstanceConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentInstanceConfigResponse
+        /// </returns>
+        public DeleteAgentInstanceConfigResponse DeleteAgentInstanceConfig(string configName, DeleteAgentInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAgentInstanceConfigWithOptions(configName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<DeleteAgentInstanceConfigResponse> DeleteAgentInstanceConfigAsync(string configName, DeleteAgentInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAgentInstanceConfigWithOptionsAsync(configName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an alert rule.</para>
         /// </summary>
         /// 
@@ -9424,6 +9708,108 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await EnableScheduledSQLWithOptionsAsync(project, scheduledSQLName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentInstanceConfigResponse
+        /// </returns>
+        public GetAgentInstanceConfigResponse GetAgentInstanceConfigWithOptions(string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs/" + configName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentInstanceConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<GetAgentInstanceConfigResponse> GetAgentInstanceConfigWithOptionsAsync(string configName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs/" + configName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentInstanceConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetAgentInstanceConfigResponse
+        /// </returns>
+        public GetAgentInstanceConfigResponse GetAgentInstanceConfig(string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentInstanceConfigWithOptions(configName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<GetAgentInstanceConfigResponse> GetAgentInstanceConfigAsync(string configName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentInstanceConfigWithOptionsAsync(configName, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15284,6 +15670,144 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetStoreViewIndexWithOptionsAsync(project, name, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAgentInstanceConfigs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceConfigsResponse
+        /// </returns>
+        public ListAgentInstanceConfigsResponse ListAgentInstanceConfigsWithOptions(ListAgentInstanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentInstanceConfigs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentInstanceConfigsResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAgentInstanceConfigs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceConfigsResponse
+        /// </returns>
+        public async Task<ListAgentInstanceConfigsResponse> ListAgentInstanceConfigsWithOptionsAsync(ListAgentInstanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentInstanceConfigs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentInstanceConfigsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAgentInstanceConfigs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceConfigsResponse
+        /// </returns>
+        public ListAgentInstanceConfigsResponse ListAgentInstanceConfigs(ListAgentInstanceConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAgentInstanceConfigsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAgentInstanceConfigs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceConfigsResponse
+        /// </returns>
+        public async Task<ListAgentInstanceConfigsResponse> ListAgentInstanceConfigsAsync(ListAgentInstanceConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAgentInstanceConfigsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22684,6 +23208,152 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentInstanceConfigResponse
+        /// </returns>
+        public UpdateAgentInstanceConfigResponse UpdateAgentInstanceConfigWithOptions(string configName, UpdateAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMatcher))
+            {
+                body["configMatcher"] = request.ConfigMatcher;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsGray))
+            {
+                body["isGray"] = request.IsGray;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs/" + configName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateAgentInstanceConfigResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<UpdateAgentInstanceConfigResponse> UpdateAgentInstanceConfigWithOptionsAsync(string configName, UpdateAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMatcher))
+            {
+                body["configMatcher"] = request.ConfigMatcher;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsGray))
+            {
+                body["isGray"] = request.IsGray;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentInstanceConfig",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/agentinstanceconfigs/" + configName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateAgentInstanceConfigResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentInstanceConfigResponse
+        /// </returns>
+        public UpdateAgentInstanceConfigResponse UpdateAgentInstanceConfig(string configName, UpdateAgentInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAgentInstanceConfigWithOptions(configName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAgentInstanceConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentInstanceConfigResponse
+        /// </returns>
+        public async Task<UpdateAgentInstanceConfigResponse> UpdateAgentInstanceConfigAsync(string configName, UpdateAgentInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAgentInstanceConfigWithOptionsAsync(configName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

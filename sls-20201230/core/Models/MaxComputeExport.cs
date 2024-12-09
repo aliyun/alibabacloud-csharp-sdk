@@ -16,13 +16,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public MaxComputeExportConfiguration Configuration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1714284115</para>
+        /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>MaxComputeExport</para>
+        /// <para>odpsexport-demo</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -32,12 +36,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MaxComputeExport</para>
+        /// <para>odpsexport-test</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1714284589</para>
+        /// </summary>
         [NameInMap("lastModifiedTime")]
         [Validation(Required=false)]
         public long? LastModifiedTime { get; set; }
@@ -46,11 +54,19 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MaxComputeExport</para>
+        /// <para>export-general-1714033191-584993-hcl</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>c7f01719d9feb105fc9d8df92af62010</para>
+        /// </summary>
+        [NameInMap("scheduleId")]
+        [Validation(Required=false)]
+        public string ScheduleId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

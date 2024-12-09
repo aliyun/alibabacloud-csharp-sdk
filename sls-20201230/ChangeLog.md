@@ -1,3 +1,11 @@
+2024-12-09 Version: 5.7.0
+- Support API CreateAgentInstanceConfig.
+- Support API DeleteAgentInstanceConfig.
+- Support API GetAgentInstanceConfig.
+- Support API ListAgentInstanceConfigs.
+- Support API UpdateAgentInstanceConfig.
+
+
 2024-12-04 Version: 5.6.0
 - Support API DescribeRegions.
 - Support API PullLogs.

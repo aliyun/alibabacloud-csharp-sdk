@@ -17,12 +17,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<string> Fields { get; set; }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asdfghjk</para>
+        /// </summary>
         [NameInMap("odpsAccessKeyId")]
         [Validation(Required=false)]
         [Obsolete]
         public string OdpsAccessKeyId { get; set; }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// 
+        /// <b>Example:</b>
+        /// <para>esasdfghjkl</para>
+        /// </summary>
         [NameInMap("odpsAccessSecret")]
         [Validation(Required=false)]
         [Obsolete]
@@ -32,7 +44,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
+        /// <para><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></para>
         /// </summary>
         [NameInMap("odpsEndpoint")]
         [Validation(Required=false)]
@@ -49,8 +61,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string OdpsProject { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::xxxxxxx</para>
+        /// <para>acs:ram::123456789:role/aliyunlogdefaultrole</para>
         /// </summary>
         [NameInMap("odpsRolearn")]
         [Validation(Required=false)]
@@ -68,6 +82,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://dt.cn-hangzhou.maxcompute.aliyun-inc.com">http://dt.cn-hangzhou.maxcompute.aliyun-inc.com</a></para>
         /// </summary>
         [NameInMap("odpsTunnelEndpoint")]
         [Validation(Required=false)]
