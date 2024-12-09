@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string Bitrate { get; set; }
 
+                [NameInMap("CodecName")]
+                [Validation(Required=false)]
+                public string CodecName { get; set; }
+
                 /// <summary>
                 /// <para>The time when the audio or video stream was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
                 /// 
