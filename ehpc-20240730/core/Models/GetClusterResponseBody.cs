@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? IdleInterval { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the cluster management node.</para>
+        /// <para>The management node configurations.</para>
         /// </summary>
         [NameInMap("Manager")]
         [Validation(Required=false)]
@@ -462,6 +462,16 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [NameInMap("MaxCount")]
         [Validation(Required=false)]
         public string MaxCount { get; set; }
+
+        [NameInMap("MonitorSpec")]
+        [Validation(Required=false)]
+        public GetClusterResponseBodyMonitorSpec MonitorSpec { get; set; }
+        public class GetClusterResponseBodyMonitorSpec : TeaModel {
+            [NameInMap("EnableComputeLoadMonitor")]
+            [Validation(Required=false)]
+            public bool? EnableComputeLoadMonitor { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The request ID.</para>

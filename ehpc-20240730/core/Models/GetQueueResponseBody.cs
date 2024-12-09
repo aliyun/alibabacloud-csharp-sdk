@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class GetQueueResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the queue.</para>
+        /// <para>The queue configurations.</para>
         /// </summary>
         [NameInMap("Queue")]
         [Validation(Required=false)]

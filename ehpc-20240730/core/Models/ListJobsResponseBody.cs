@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned jobs.</para>
+        /// <para>The jobs.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public ListJobsResponseBodyJobsJobSpec JobSpec { get; set; }
             public class ListJobsResponseBodyJobsJobSpec : TeaModel {
                 /// <summary>
-                /// <para>数组作业ID。</para>
+                /// <para>The array job ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string ArrayJobId { get; set; }
 
                 /// <summary>
-                /// <para>数组子作业ID。</para>
+                /// <para>The ID of the job in the array.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -176,6 +176,28 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
                 }
 
+                [NameInMap("ResourcesActualOccupied")]
+                [Validation(Required=false)]
+                public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied ResourcesActualOccupied { get; set; }
+                public class ListJobsResponseBodyJobsJobSpecResourcesActualOccupied : TeaModel {
+                    [NameInMap("Cores")]
+                    [Validation(Required=false)]
+                    public string Cores { get; set; }
+
+                    [NameInMap("Gpus")]
+                    [Validation(Required=false)]
+                    public string Gpus { get; set; }
+
+                    [NameInMap("Memory")]
+                    [Validation(Required=false)]
+                    public string Memory { get; set; }
+
+                    [NameInMap("Nodes")]
+                    [Validation(Required=false)]
+                    public string Nodes { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The user that ran the job.</para>
                 /// 
@@ -185,6 +207,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 [NameInMap("RunasUser")]
                 [Validation(Required=false)]
                 public string RunasUser { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
 
                 /// <summary>
                 /// <para>The job state. Valid values: (PBS cluster and Slurm cluster)</para>

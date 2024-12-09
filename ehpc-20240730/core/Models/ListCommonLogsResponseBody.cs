@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListCommonLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the returned logs.</para>
+        /// <para>The brief information of operation logs.</para>
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who performed the action.</para>
+            /// <para>The account ID of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>137***</para>

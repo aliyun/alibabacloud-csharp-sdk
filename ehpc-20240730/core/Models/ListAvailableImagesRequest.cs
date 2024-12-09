@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         /// <summary>
         /// <para>The image source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: system images</description></item>
-        /// <item><description>self: custom images</description></item>
-        /// <item><description>others: shared images</description></item>
+        /// <item><description>system: system image.</description></item>
+        /// <item><description>self: custom image.</description></item>
+        /// <item><description>others: shared image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ImageOwnerAlias { get; set; }
 
         /// <summary>
-        /// <para>The instance type for which you want to query available images. If you do not specify the instance type, all available images are returned, regardless of the supported instance types.</para>
+        /// <para>The instance type.</para>
+        /// <remarks>
+        /// <para> By default, if you do not specify an instance type, the list of images that are supported by all instance types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c7.large</para>
@@ -86,8 +89,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         /// <summary>
         /// <para>Specifies whether to return published community images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: returns published community images. If you set the value of this parameter to true, the ImageOwnerAlias parameter must be set to others.</description></item>
-        /// <item><description>false: returns non-community images. The value of the ImageOwnerAlias parameter prevails.</description></item>
+        /// <item><description>true: returns published community images. If you set the value of this parameter to <c>true</c>, the <c>ImageOwnerAlias</c> parameter must be set to <c>others</c>.</description></item>
+        /// <item><description>false: returns non-community images. The value of the <c>ImageOwnerAlias</c> parameter prevails.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

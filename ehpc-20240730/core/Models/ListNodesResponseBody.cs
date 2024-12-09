@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public string AddTime { get; set; }
 
+            [NameInMap("DeploymentSetId")]
+            [Validation(Required=false)]
+            public string DeploymentSetId { get; set; }
+
             /// <summary>
             /// <para>The time when the node expires.</para>
             /// 

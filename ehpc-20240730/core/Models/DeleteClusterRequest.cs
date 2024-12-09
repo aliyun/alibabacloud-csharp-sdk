@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class DeleteClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the E-HPC cluster to be released.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-hz-QKKVqO****</para>

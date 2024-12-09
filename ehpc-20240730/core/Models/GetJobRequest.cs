@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class GetJobRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The job ID. You can call the ListJobs operation to query the job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

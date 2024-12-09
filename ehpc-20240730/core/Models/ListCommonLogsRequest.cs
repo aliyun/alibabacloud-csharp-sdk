@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string LogType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who performed the action.</para>
+        /// <para>The account ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>137***</para>

@@ -48,6 +48,24 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public string CreateTimeStart { get; set; }
 
+            [NameInMap("Diagnosis")]
+            [Validation(Required=false)]
+            public List<ListJobsRequestJobFilterDiagnosis> Diagnosis { get; set; }
+            public class ListJobsRequestJobFilterDiagnosis : TeaModel {
+                [NameInMap("Operator")]
+                [Validation(Required=false)]
+                public string Operator { get; set; }
+
+                [NameInMap("Option")]
+                [Validation(Required=false)]
+                public string Option { get; set; }
+
+                [NameInMap("Threshold")]
+                [Validation(Required=false)]
+                public string Threshold { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The job name. Fuzzy match is supported.</para>
             /// 

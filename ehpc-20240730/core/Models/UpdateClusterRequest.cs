@@ -162,6 +162,16 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public int? MaxCount { get; set; }
 
+        [NameInMap("MonitorSpec")]
+        [Validation(Required=false)]
+        public UpdateClusterRequestMonitorSpec MonitorSpec { get; set; }
+        public class UpdateClusterRequestMonitorSpec : TeaModel {
+            [NameInMap("EnableComputeLoadMonitor")]
+            [Validation(Required=false)]
+            public bool? EnableComputeLoadMonitor { get; set; }
+
+        }
+
     }
 
 }

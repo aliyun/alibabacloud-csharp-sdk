@@ -42,6 +42,16 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The file system that you want to attach must be created in advance in the same virtual private cloud (VPC) as the destination cluster. For more information, see <a href="https://help.aliyun.com/document_detail/27530.html">Create a file system</a> and <a href="https://help.aliyun.com/document_detail/27531.html">Manage mount targets</a>.</description></item>
+        /// <item><description>E-HPC clusters support Apsara File Storage NAS file systems.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// AttachSharedStoragesRequest
         /// </param>
@@ -93,6 +103,16 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <summary>
         /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The file system that you want to attach must be created in advance in the same virtual private cloud (VPC) as the destination cluster. For more information, see <a href="https://help.aliyun.com/document_detail/27530.html">Create a file system</a> and <a href="https://help.aliyun.com/document_detail/27531.html">Manage mount targets</a>.</description></item>
+        /// <item><description>E-HPC clusters support Apsara File Storage NAS file systems.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AttachSharedStoragesRequest
@@ -146,6 +166,16 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The file system that you want to attach must be created in advance in the same virtual private cloud (VPC) as the destination cluster. For more information, see <a href="https://help.aliyun.com/document_detail/27530.html">Create a file system</a> and <a href="https://help.aliyun.com/document_detail/27531.html">Manage mount targets</a>.</description></item>
+        /// <item><description>E-HPC clusters support Apsara File Storage NAS file systems.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AttachSharedStoragesRequest
         /// </param>
@@ -164,6 +194,16 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Attaches shared storage to an Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The file system that you want to attach must be created in advance in the same virtual private cloud (VPC) as the destination cluster. For more information, see <a href="https://help.aliyun.com/document_detail/27530.html">Create a file system</a> and <a href="https://help.aliyun.com/document_detail/27531.html">Manage mount targets</a>.</description></item>
+        /// <item><description>E-HPC clusters support Apsara File Storage NAS file systems.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AttachSharedStoragesRequest
         /// </param>
@@ -179,8 +219,14 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateClusterRequest
@@ -335,8 +381,14 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateClusterRequest
@@ -491,8 +543,14 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -509,8 +567,14 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个按量付费或者预付费（包年包月） 集群	</para>
+        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -735,6 +799,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 query["Count"] = request.Count;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPCInterConnect))
             {
                 query["HPCInterConnect"] = request.HPCInterConnect;
@@ -823,6 +891,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
                 query["Count"] = request.Count;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HPCInterConnect))
             {
@@ -1202,6 +1274,15 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that data of the cluster to be deleted is backed up before you call this operation.</para>
+        /// <remarks>
+        /// <para>After a cluster is released, you cannot restore the data stored in the cluster. Exercise caution when you release a cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteClusterRequest
         /// </param>
@@ -1243,6 +1324,15 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <summary>
         /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that data of the cluster to be deleted is backed up before you call this operation.</para>
+        /// <remarks>
+        /// <para>After a cluster is released, you cannot restore the data stored in the cluster. Exercise caution when you release a cluster.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterRequest
@@ -1286,6 +1376,15 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that data of the cluster to be deleted is backed up before you call this operation.</para>
+        /// <remarks>
+        /// <para>After a cluster is released, you cannot restore the data stored in the cluster. Exercise caution when you release a cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteClusterRequest
         /// </param>
@@ -1303,6 +1402,15 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <summary>
         /// <para>Releases an Enterprise High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that data of the cluster to be deleted is backed up before you call this operation.</para>
+        /// <remarks>
+        /// <para>After a cluster is released, you cannot restore the data stored in the cluster. Exercise caution when you release a cluster.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterRequest
@@ -2463,7 +2571,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业详情</para>
+        /// <para>Obtains the details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2509,7 +2617,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业详情</para>
+        /// <para>Obtains the details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2555,7 +2663,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业详情</para>
+        /// <para>Obtains the details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2573,7 +2681,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业详情</para>
+        /// <para>Obtains the details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2898,6 +3006,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Installs an addon.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into two types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InstallAddonRequest
         /// </param>
@@ -2955,6 +3077,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <summary>
         /// <para>Installs an addon.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into two types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallAddonRequest
@@ -3014,6 +3150,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Installs an addon.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into two types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InstallAddonRequest
         /// </param>
@@ -3031,6 +3181,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <summary>
         /// <para>Installs an addon.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into two types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallAddonRequest
@@ -5254,6 +5418,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Uninstalls an addon.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into the following types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UnInstallAddonRequest
         /// </param>
@@ -5299,6 +5477,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <summary>
         /// <para>Uninstalls an addon.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into the following types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnInstallAddonRequest
@@ -5346,6 +5538,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <para>Uninstalls an addon.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into the following types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UnInstallAddonRequest
         /// </param>
@@ -5363,6 +5569,20 @@ namespace AlibabaCloud.SDK.EHPC20240730
         /// <summary>
         /// <para>Uninstalls an addon.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Take note of the following items when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>The cluster must be in the <c>Running</c> state.</description></item>
+        /// <item><description>Clusters fall into the following types:<list type="bullet">
+        /// <item><description>Regular clusters on Alibaba Cloud Public Cloud</description></item>
+        /// <item><description>Managed clusters on Alibaba Cloud Public Cloud</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnInstallAddonRequest
@@ -5525,6 +5745,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 request.ClusterCustomConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ClusterCustomConfiguration, "ClusterCustomConfiguration", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MonitorSpec))
+            {
+                request.MonitorSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MonitorSpec, "MonitorSpec", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVersion))
             {
@@ -5573,6 +5797,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCount))
             {
                 query["MaxCount"] = request.MaxCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSpecShrink))
+            {
+                query["MonitorSpec"] = request.MonitorSpecShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5617,6 +5845,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 request.ClusterCustomConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ClusterCustomConfiguration, "ClusterCustomConfiguration", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MonitorSpec))
+            {
+                request.MonitorSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MonitorSpec, "MonitorSpec", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVersion))
             {
@@ -5665,6 +5897,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCount))
             {
                 query["MaxCount"] = request.MaxCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSpecShrink))
+            {
+                query["MonitorSpec"] = request.MonitorSpecShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

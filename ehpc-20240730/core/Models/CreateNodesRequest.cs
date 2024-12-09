@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        [NameInMap("DeploymentSetId")]
+        [Validation(Required=false)]
+        public string DeploymentSetId { get; set; }
+
         /// <summary>
         /// <para>The type of the network between compute nodes. Valid values:</para>
         /// <list type="bullet">

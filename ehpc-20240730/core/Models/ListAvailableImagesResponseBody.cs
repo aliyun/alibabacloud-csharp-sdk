@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             /// <summary>
             /// <para>The boot mode of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BIOS: Basic Input/Output System (BIOS)</description></item>
-            /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI)</description></item>
+            /// <item><description>BIOS: Basic Input/Output System (BIOS).</description></item>
+            /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI).</description></item>
             /// </list>
             /// <remarks>
             /// <para> When you change the OS boot mode of an instance, you must make sure that the boot mode matches the boot mode of the associated image. Otherwise, the instance fails to be booted.</para>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             /// <summary>
             /// <para>The image source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: system images</description></item>
-            /// <item><description>self: custom images</description></item>
-            /// <item><description>others: shared images</description></item>
+            /// <item><description>system: system image.</description></item>
+            /// <item><description>self: custom image.</description></item>
+            /// <item><description>others: shared image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +136,11 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The page number of the returned page.</para>
+        /// <list type="bullet">
+        /// <item><description>Pages start from page 1.</description></item>
+        /// <item><description>Default value: 1.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -168,8 +172,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,7 +184,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -61,7 +61,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string QueueNamesShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the results are sorted in ascending or descending order. Valid values: forward (ascending) and backward (descending).</para>
+        /// <para>Specifies whether the results are sorted in ascending or descending order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Forward: ascending</description></item>
+        /// <item><description>Backward: descending</description></item>
+        /// </list>
+        /// <para>Default value: Forward.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Forward</para>
@@ -71,7 +76,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string Sequence { get; set; }
 
         /// <summary>
-        /// <para>The sorting method of the node list. Valid values: addedtime: sorted by the time when the node was added. hostname: sorted by hostname. Default value: addedtime.</para>
+        /// <para>The sorting method of the node list. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AddedTime: sorts the nodes by the time that they were added.</description></item>
+        /// <item><description>HostName: sorts the nodes by their hostnames.</description></item>
+        /// </list>
+        /// <para>Default value: addedtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AddedTime</para>

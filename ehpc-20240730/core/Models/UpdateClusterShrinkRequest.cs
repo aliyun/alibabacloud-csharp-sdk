@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public int? MaxCount { get; set; }
 
+        [NameInMap("MonitorSpec")]
+        [Validation(Required=false)]
+        public string MonitorSpecShrink { get; set; }
+
     }
 
 }
