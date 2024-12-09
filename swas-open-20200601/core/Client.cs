@@ -221,8 +221,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -278,8 +276,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -335,8 +331,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -360,8 +354,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1165,8 +1157,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1234,8 +1224,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1303,8 +1291,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1328,8 +1314,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2002,11 +1986,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.</description></item>
+        /// <item><description>A maximum of 20 simple application servers can be created within an Alibaba Cloud account.</description></item>
         /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2091,11 +2073,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.</description></item>
+        /// <item><description>A maximum of 20 simple application servers can be created within an Alibaba Cloud account.</description></item>
         /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2180,11 +2160,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.</description></item>
+        /// <item><description>A maximum of 20 simple application servers can be created within an Alibaba Cloud account.</description></item>
         /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2209,11 +2187,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.</description></item>
+        /// <item><description>A maximum of 20 simple application servers can be created within an Alibaba Cloud account.</description></item>
         /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2790,10 +2766,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
         /// <remarks>
-        /// <para>If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2850,10 +2824,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
         /// <remarks>
-        /// <para>If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2910,10 +2882,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
         /// <remarks>
-        /// <para>If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2938,10 +2908,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
         /// <remarks>
-        /// <para>If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3121,8 +3089,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3182,8 +3148,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3243,8 +3207,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3268,8 +3230,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4082,10 +4042,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para>If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4142,10 +4100,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para>If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4202,10 +4158,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para>If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4230,10 +4184,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para>If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5228,8 +5180,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
-        /// \### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5296,8 +5247,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
-        /// \### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5364,8 +5314,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
-        /// \### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5388,8 +5337,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
-        /// \### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5412,9 +5360,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5477,9 +5423,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5542,9 +5486,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5567,9 +5509,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5740,9 +5680,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5801,9 +5739,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5862,9 +5798,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5887,9 +5821,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5914,10 +5846,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
         /// <remarks>
-        /// <para>Slow query log details are retained for 7 days.</para>
+        /// <para> Slow query log details are retained for 7 days.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5986,10 +5916,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
         /// <remarks>
-        /// <para>Slow query log details are retained for 7 days.</para>
+        /// <para> Slow query log details are retained for 7 days.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6058,10 +5986,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
         /// <remarks>
-        /// <para>Slow query log details are retained for 7 days.</para>
+        /// <para> Slow query log details are retained for 7 days.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6086,10 +6012,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
         /// <remarks>
-        /// <para>Slow query log details are retained for 7 days.</para>
+        /// <para> Slow query log details are retained for 7 days.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9176,9 +9100,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c>. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter disks that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9253,9 +9175,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c>. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter disks that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9330,9 +9250,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c>. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter disks that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9355,9 +9273,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c>. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter disks that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9381,8 +9297,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9450,8 +9364,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9519,8 +9431,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9544,8 +9454,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9568,9 +9476,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query information about images in a region, including the IDs, names, and types of the images.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can query details about one or more images in a specified region, including the IDs, names, and types of the images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9625,9 +9531,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query information about images in a region, including the IDs, names, and types of the images.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can query details about one or more images in a specified region, including the IDs, names, and types of the images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9682,9 +9586,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query information about images in a region, including the IDs, names, and types of the images.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can query details about one or more images in a specified region, including the IDs, names, and types of the images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9707,9 +9609,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query information about images in a region, including the IDs, names, and types of the images.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>You can query details about one or more images in a specified region, including the IDs, names, and types of the images.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9732,13 +9632,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the server.</para>
+        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
         /// <remarks>
-        /// <para>We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
         /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9789,13 +9687,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the server.</para>
+        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
         /// <remarks>
-        /// <para>We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
         /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9846,13 +9742,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the server.</para>
+        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
         /// <remarks>
-        /// <para>We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
         /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9875,13 +9769,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the server.</para>
+        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
         /// <remarks>
-        /// <para>We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
         /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10049,8 +9941,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10134,8 +10024,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10219,8 +10107,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10244,8 +10130,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10268,16 +10152,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
-        /// Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:</para>
+        /// <para>You can query the details of data transfer plans of simple application servers, including the total quota, used quota, unused quota, and excess data transfers in the current month.
+        /// Simple Application Server provides data transfer plans that can be used to offset data transfer fees. You are charged for excess data transfers. Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.</description></item>
         /// <item><description>Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.</description></item>
         /// <item><description>You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
         /// For more information, see <a href="https://help.aliyun.com/document_detail/86281.html">Quotas and billing of data transfers</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10328,16 +10210,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
-        /// Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:</para>
+        /// <para>You can query the details of data transfer plans of simple application servers, including the total quota, used quota, unused quota, and excess data transfers in the current month.
+        /// Simple Application Server provides data transfer plans that can be used to offset data transfer fees. You are charged for excess data transfers. Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.</description></item>
         /// <item><description>Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.</description></item>
         /// <item><description>You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
         /// For more information, see <a href="https://help.aliyun.com/document_detail/86281.html">Quotas and billing of data transfers</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10388,16 +10268,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
-        /// Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:</para>
+        /// <para>You can query the details of data transfer plans of simple application servers, including the total quota, used quota, unused quota, and excess data transfers in the current month.
+        /// Simple Application Server provides data transfer plans that can be used to offset data transfer fees. You are charged for excess data transfers. Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.</description></item>
         /// <item><description>Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.</description></item>
         /// <item><description>You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
         /// For more information, see <a href="https://help.aliyun.com/document_detail/86281.html">Quotas and billing of data transfers</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10420,16 +10298,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
-        /// Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:</para>
+        /// <para>You can query the details of data transfer plans of simple application servers, including the total quota, used quota, unused quota, and excess data transfers in the current month.
+        /// Simple Application Server provides data transfer plans that can be used to offset data transfer fees. You are charged for excess data transfers. Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.</description></item>
         /// <item><description>Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.</description></item>
         /// <item><description>You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
         /// For more information, see <a href="https://help.aliyun.com/document_detail/86281.html">Quotas and billing of data transfers</a>.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10565,8 +10441,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10614,8 +10488,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10663,8 +10535,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10688,8 +10558,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10713,8 +10581,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10762,8 +10628,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10811,8 +10675,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10836,8 +10698,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10860,9 +10720,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c>. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10941,9 +10799,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c>. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11022,9 +10878,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c>. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11047,9 +10901,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can specify multiple request parameters that you want to query, such as <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c>. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</para>
-        /// <h3><a href="#qps-"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11571,7 +11423,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Simple Database Service instance.</para>
+        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11636,7 +11488,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Simple Database Service instance.</para>
+        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11701,7 +11553,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Simple Database Service instance.</para>
+        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11726,7 +11578,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the parameters of a Simple Database Service instance.</para>
+        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12112,17 +11964,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.</para>
+        /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para>The shared image in ECS resides in the same region as the custom image in Simple Application Server.
-        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:</para>
+        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.</description></item>
-        /// <item><description>After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
+        /// <item><description>You cannot query or use the custom image by using the ECS console or API.</description></item>
+        /// <item><description>You cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12181,17 +12031,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.</para>
+        /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para>The shared image in ECS resides in the same region as the custom image in Simple Application Server.
-        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:</para>
+        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.</description></item>
-        /// <item><description>After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
+        /// <item><description>You cannot query or use the custom image by using the ECS console or API.</description></item>
+        /// <item><description>You cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12250,17 +12098,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.</para>
+        /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para>The shared image in ECS resides in the same region as the custom image in Simple Application Server.
-        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:</para>
+        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.</description></item>
-        /// <item><description>After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
+        /// <item><description>You cannot query or use the custom image by using the ECS console or API.</description></item>
+        /// <item><description>You cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12283,17 +12129,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.</para>
+        /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para>The shared image in ECS resides in the same region as the custom image in Simple Application Server.
-        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:</para>
+        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.</description></item>
-        /// <item><description>After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
+        /// <item><description>You cannot query or use the custom image by using the ECS console or API.</description></item>
+        /// <item><description>You cannot re-initialize the disks of the ECS instances that were created based on the shared image.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12464,8 +12308,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <list type="bullet">
         /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12524,8 +12366,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <list type="bullet">
         /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12584,8 +12424,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <list type="bullet">
         /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12612,8 +12450,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <list type="bullet">
         /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12775,7 +12611,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a Simple Database Service instance.</para>
+        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12832,7 +12668,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a Simple Database Service instance.</para>
+        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12889,7 +12725,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a Simple Database Service instance.</para>
+        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12914,7 +12750,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a Simple Database Service instance.</para>
+        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13090,10 +12926,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13154,10 +12988,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13218,10 +13050,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13246,10 +13076,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13267,7 +13095,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of the administrator account of a Simple Database Service instance.</para>
+        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13328,7 +13156,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of the administrator account of a Simple Database Service instance.</para>
+        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13389,7 +13217,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of the administrator account of a Simple Database Service instance.</para>
+        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13414,7 +13242,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of the administrator account of a Simple Database Service instance.</para>
+        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13444,14 +13272,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.</para>
+        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.</description></item>
+        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
         /// </list>
-        /// <h3>Precautions</h3>
-        /// <para>After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13510,14 +13336,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.</para>
+        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.</description></item>
+        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
         /// </list>
-        /// <h3>Precautions</h3>
-        /// <para>After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13576,14 +13400,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.</para>
+        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.</description></item>
+        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
         /// </list>
-        /// <h3>Precautions</h3>
-        /// <para>After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13606,14 +13428,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.</para>
+        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.</description></item>
+        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
         /// </list>
-        /// <h3>Precautions</h3>
-        /// <para>After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13931,7 +13751,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Simple Database Service instance.</para>
+        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13988,7 +13808,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Simple Database Service instance.</para>
+        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14045,7 +13865,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Simple Database Service instance.</para>
+        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14070,7 +13890,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a Simple Database Service instance.</para>
+        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14353,8 +14173,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14410,8 +14228,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14467,8 +14283,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14492,8 +14306,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14517,8 +14329,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a simple application server that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14574,8 +14384,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a simple application server that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14631,8 +14439,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a simple application server that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14656,8 +14462,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to start a simple application server that is in the Stopped state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14945,8 +14749,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15002,8 +14804,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15059,8 +14859,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15084,8 +14882,6 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15110,10 +14906,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can stop a simple application server that you do not use for the time being.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.</para>
+        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15170,10 +14964,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can stop a simple application server that you do not use for the time being.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.</para>
+        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15230,10 +15022,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can stop a simple application server that you do not use for the time being.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.</para>
+        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15258,10 +15048,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can stop a simple application server that you do not use for the time being.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.</para>
+        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
         /// </remarks>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15575,7 +15363,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Unbinds and deletes tags from specified lightweight resources, such as instances, snapshots, disks, images, commands, and firewall rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15637,7 +15425,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Unbinds and deletes tags from specified lightweight resources, such as instances, snapshots, disks, images, commands, and firewall rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15699,7 +15487,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Unbinds and deletes tags from specified lightweight resources, such as instances, snapshots, disks, images, commands, and firewall rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15717,7 +15505,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Unbinds and deletes tags from specified lightweight resources, such as instances, snapshots, disks, images, commands, and firewall rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16044,10 +15832,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to allow the new password to take effect.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16110,10 +15896,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to allow the new password to take effect.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16176,10 +15960,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to allow the new password to take effect.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16202,10 +15984,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to allow the new password to take effect.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16372,12 +16152,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
+        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16436,12 +16214,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
+        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16500,12 +16276,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
+        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16528,12 +16302,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
+        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.</description></item>
+        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
         /// </list>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

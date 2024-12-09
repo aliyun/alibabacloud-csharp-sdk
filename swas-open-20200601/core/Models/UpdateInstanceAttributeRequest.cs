@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// </c></pre>
         /// <para>For Windows instances, the password cannot start with a forward slash (/).</para>
         /// <remarks>
-        /// <para> For security reasons, we recommend that you use HTTPS to send requests if the <c>Password parameter</c> is specified.</para>
+        /// <para> For security reasons, we recommend that you use HTTPS to send requests if <c>Password</c> is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

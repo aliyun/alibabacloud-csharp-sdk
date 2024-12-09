@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListFirewallRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The array of firewall rules.</para>
+        /// <para>Details of the firewall rules.</para>
         /// </summary>
         [NameInMap("FirewallRules")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public List<ListFirewallRulesResponseBodyFirewallRulesTags> Tags { get; set; }
             public class ListFirewallRulesResponseBodyFirewallRulesTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>

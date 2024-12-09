@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<ListCustomImagesResponseBodyCustomImages> CustomImages { get; set; }
         public class ListCustomImagesResponseBodyCustomImages : TeaModel {
             /// <summary>
-            /// <para>The Information about instances created using the image.</para>
+            /// <para>The simple application servers created from the image.</para>
             /// </summary>
             [NameInMap("CreateInstances")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public bool? InShare { get; set; }
 
             /// <summary>
-            /// <para>Whether the custom image is cross-account shared.</para>
+            /// <para>Indicates whether the custom image is shared across accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public bool? InShareUser { get; set; }
 
             /// <summary>
-            /// <para>The ID of the simple application server.</para>
+            /// <para>The ID of the simple application server from which the image is derived.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2d06ee0520b44de1ae88d4be****</para>
@@ -124,23 +124,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the operating system.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Linux</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Windows</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The operating system type of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux</para>
@@ -159,10 +143,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("RequiredDataDiskSize")]
             [Validation(Required=false)]
             public int? RequiredDataDiskSize { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("RequiredSystemDiskSize")]
             [Validation(Required=false)]
             public int? RequiredSystemDiskSize { get; set; }
@@ -177,16 +169,31 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>CentOS</para>
+            /// </summary>
             [NameInMap("SourceImageName")]
             [Validation(Required=false)]
             public string SourceImageName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>8.0</para>
+            /// </summary>
             [NameInMap("SourceImageVersion")]
             [Validation(Required=false)]
             public string SourceImageVersion { get; set; }
 
             /// <summary>
-            /// <para>The status of the custom image.</para>
+            /// <para>The status of the custom image. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: copying</description></item>
+            /// <item><description>1: available</description></item>
+            /// <item><description>2: unavailable</description></item>
+            /// <item><description>3: creation failed</description></item>
+            /// <item><description>4: creating</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -245,7 +252,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The Primary Alibaba Cloud account ID of the image owner.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the image belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180185828710****</para>

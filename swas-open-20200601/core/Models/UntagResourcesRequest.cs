@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is not specified. Valid values: true and false. Default value: false.</para>
+        /// <para>Specifies whether to remove all tags from the specified one or more resources. This parameter takes effect only if the TagKey.N parameter is not set. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: deletes all tags that are added to the specific lightweight resource. If no tags are added to the specific lightweight resource, the deletion operation is ignored.</description></item>
+        /// <item><description>false: does not delete the tags that are added to the specific lightweight resource.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

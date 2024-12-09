@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ImageNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Simple Application Server instance that the image originates from.</para>
+        /// <para>The ID of the simple application server from which the image is derived.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ace0706b2ac4454d984295a94213****</para>
@@ -105,14 +105,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Whether to query shared images. Value range:</para>
+        /// <para>Specifies whether to query shared images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>False: No. Indicates that shared images are not included in the returned results.</para>
-        /// </description></item>
-        /// <item><description><para>True: Yes. Indicates that only shared images are returned.</para>
-        /// </description></item>
+        /// <item><description>False: do not query shared images. The shared images are not included in the response.</description></item>
+        /// <item><description>True: query shared images. The shared images are included in the response.</description></item>
         /// </list>
-        /// <para>If not filled, all images are returned by default.</para>
+        /// <para>If you do not specify this parameter, all images are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>

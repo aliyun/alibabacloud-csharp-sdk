@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the simple application servers, which supports fuzzy search using wildcard *.</para>
+        /// <para>The name of the simple application server. Fuzzy search with the asterisk (\*) wildcard is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;42.1.**.<b>&quot;, &quot;42.2.**.</b>&quot;]</para>
+        /// <para>[&quot;<c>42.1.**.**</c>&quot;, &quot;<c>42.2.**.**</c>&quot;]</para>
         /// </summary>
         [NameInMap("PublicIpAddresses")]
         [Validation(Required=false)]

@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<ListFirewallRulesRequestTag> Tag { get; set; }
         public class ListFirewallRulesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key. A tag key must be 1 to 64 characters in length. You can add up to 20 tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value. A tag value must be 1 to 64 characters in length. You can add up to 20 tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
