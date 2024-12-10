@@ -1,3 +1,7 @@
+2024-12-10 Version: 6.5.1
+- Update API GetBucketAcl: update param BucketName.
+
+
 2024-12-02 Version: 6.5.0
 - Support API ModifySnatEntry.
 - Update API CreateSnatEntry: add param IspAffinity.

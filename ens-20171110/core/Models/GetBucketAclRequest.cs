@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class GetBucketAclRequest : TeaModel {
         /// <summary>
         /// <para>The name of the bucket.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
