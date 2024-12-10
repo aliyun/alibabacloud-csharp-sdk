@@ -102,6 +102,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string SignPrivateKey { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<UploadUserCertificateRequestTags> Tags { get; set; }
+        public class UploadUserCertificateRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

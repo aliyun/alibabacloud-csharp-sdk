@@ -104,6 +104,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateCertificateForPackageRequestRequestTags> Tags { get; set; }
+        public class CreateCertificateForPackageRequestRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The name of the applicant.</para>
         /// <para>If you do not specify this parameter, the information about the most recent contact that is added to the <b>Information Management</b> module is used. For more information about how to add a contact to the <b>Information Management</b> module, see <a href="https://help.aliyun.com/document_detail/198262.html">Manage contacts</a>.</para>

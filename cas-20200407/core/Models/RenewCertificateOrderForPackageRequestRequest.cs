@@ -38,6 +38,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<RenewCertificateOrderForPackageRequestRequestTags> Tags { get; set; }
+        public class RenewCertificateOrderForPackageRequestRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

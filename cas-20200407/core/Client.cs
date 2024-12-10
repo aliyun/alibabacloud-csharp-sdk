@@ -423,6 +423,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
                 query["Username"] = request.Username;
@@ -501,6 +505,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
@@ -628,6 +636,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
                 query["Username"] = request.Username;
@@ -699,6 +711,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
@@ -828,6 +844,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
                 query["Username"] = request.Username;
@@ -899,6 +919,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
@@ -5356,6 +5380,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["OrderId"] = request.OrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5409,6 +5437,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6397,6 +6429,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["SignPrivateKey"] = request.SignPrivateKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6471,6 +6507,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignPrivateKey))
             {
                 query["SignPrivateKey"] = request.SignPrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
