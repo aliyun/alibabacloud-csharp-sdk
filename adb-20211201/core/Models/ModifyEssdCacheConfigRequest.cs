@@ -8,39 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class RenameSparkTemplateFileRequest : TeaModel {
+    public class ModifyEssdCacheConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>amv-d*****</para>
+        /// <para>amv-bp10yt0gva71ei7d</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The template file ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("EnableEssdCache")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public bool? EnableEssdCache { get; set; }
 
         /// <summary>
-        /// <para>The name of the template file that you want to rename.</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>new_template_name</para>
+        /// <para>500</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("EssdCacheSize")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public int? EssdCacheSize { get; set; }
 
     }
 

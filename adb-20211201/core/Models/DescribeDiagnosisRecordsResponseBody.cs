@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? OutputRows { get; set; }
 
+            [NameInMap("PatternId")]
+            [Validation(Required=false)]
+            public string PatternId { get; set; }
+
             /// <summary>
             /// <para>The peak memory. Unit: bytes.</para>
             /// 

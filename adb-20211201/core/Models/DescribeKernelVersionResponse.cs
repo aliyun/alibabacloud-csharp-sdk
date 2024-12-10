@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class RenameSparkTemplateFileResponse : TeaModel {
+    public class DescribeKernelVersionResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public RenameSparkTemplateFileResponseBody Body { get; set; }
+        public DescribeKernelVersionResponseBody Body { get; set; }
 
     }
 

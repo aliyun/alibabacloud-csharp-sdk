@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class GetSparkDefinitionsRequest : TeaModel {
+    public class DescribeLakeCacheSizeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>amv-clusterxxx</para>
+        /// <para>amv-bp10b6646l07akdt</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]

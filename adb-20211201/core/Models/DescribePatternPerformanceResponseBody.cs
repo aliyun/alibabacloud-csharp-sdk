@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribePatternPerformanceResponseBody : TeaModel {
+        [NameInMap("AccessIp")]
+        [Validation(Required=false)]
+        public string AccessIp { get; set; }
+
         /// <summary>
         /// <para>The end time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("FailedCount")]
+        [Validation(Required=false)]
+        public long? FailedCount { get; set; }
 
         /// <summary>
         /// <para>The queried performance metrics.</para>
@@ -115,6 +123,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         }
 
+        [NameInMap("QueryCount")]
+        [Validation(Required=false)]
+        public long? QueryCount { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 
@@ -125,6 +137,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SQLPattern")]
+        [Validation(Required=false)]
+        public string SQLPattern { get; set; }
+
         /// <summary>
         /// <para>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</para>
         /// 
@@ -134,6 +150,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("Tables")]
+        [Validation(Required=false)]
+        public string Tables { get; set; }
+
+        [NameInMap("User")]
+        [Validation(Required=false)]
+        public string User { get; set; }
 
     }
 

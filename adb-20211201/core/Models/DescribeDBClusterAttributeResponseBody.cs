@@ -452,6 +452,60 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 }
 
+                [NameInMap("TaskInfo")]
+                [Validation(Required=false)]
+                public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo TaskInfo { get; set; }
+                public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("StepList")]
+                    [Validation(Required=false)]
+                    public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList StepList { get; set; }
+                    public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList : TeaModel {
+                        [NameInMap("StepList")]
+                        [Validation(Required=false)]
+                        public List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList> StepList { get; set; }
+                        public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList : TeaModel {
+                            [NameInMap("EndTime")]
+                            [Validation(Required=false)]
+                            public string EndTime { get; set; }
+
+                            [NameInMap("StartTime")]
+                            [Validation(Required=false)]
+                            public string StartTime { get; set; }
+
+                            [NameInMap("StepDesc")]
+                            [Validation(Required=false)]
+                            public string StepDesc { get; set; }
+
+                            [NameInMap("StepName")]
+                            [Validation(Required=false)]
+                            public string StepName { get; set; }
+
+                            [NameInMap("StepProgress")]
+                            [Validation(Required=false)]
+                            public string StepProgress { get; set; }
+
+                            [NameInMap("StepStatus")]
+                            [Validation(Required=false)]
+                            public string StepStatus { get; set; }
+
+                        }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>Indicates whether Elastic Network Interface (ENI) is enabled. Valid values:</para>
                 /// <list type="bullet">

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class GetSparkDefinitionsResponse : TeaModel {
+    public class ListTagResourcesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetSparkDefinitionsResponseBody Body { get; set; }
+        public ListTagResourcesResponseBody Body { get; set; }
 
     }
 
