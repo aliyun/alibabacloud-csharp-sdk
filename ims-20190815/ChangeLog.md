@@ -1,3 +1,6 @@
+2024-12-10 Version: 2.1.3
+- Generated csharp 2019-08-15 for Ims.
+
 2024-12-09 Version: 2.1.2
 - Update API GetUserSsoSettings: update response param.
 - Update API SetUserSsoSettings: add param SsoLoginWithDomain.
