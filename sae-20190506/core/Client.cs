@@ -1042,6 +1042,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SaeVersion"] = request.SaeVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretMountDesc))
+            {
+                query["SecretMountDesc"] = request.SecretMountDesc;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
@@ -1340,6 +1344,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaeVersion))
             {
                 query["SaeVersion"] = request.SaeVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretMountDesc))
+            {
+                query["SecretMountDesc"] = request.SecretMountDesc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
@@ -5199,6 +5207,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Replicas"] = request.Replicas;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretMountDesc))
+            {
+                query["SecretMountDesc"] = request.SecretMountDesc;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
@@ -5498,6 +5510,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
             {
                 query["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretMountDesc))
+            {
+                query["SecretMountDesc"] = request.SecretMountDesc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
@@ -11647,6 +11663,124 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetWarningEventMetricWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// GetWebshellTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebshellTokenResponse
+        /// </returns>
+        public GetWebshellTokenResponse GetWebshellTokenWithOptions(GetWebshellTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodName))
+            {
+                query["PodName"] = request.PodName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWebshellToken",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/instance/webshellToken",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWebshellTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetWebshellTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebshellTokenResponse
+        /// </returns>
+        public async Task<GetWebshellTokenResponse> GetWebshellTokenWithOptionsAsync(GetWebshellTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodName))
+            {
+                query["PodName"] = request.PodName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWebshellToken",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/instance/webshellToken",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWebshellTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetWebshellTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebshellTokenResponse
+        /// </returns>
+        public GetWebshellTokenResponse GetWebshellToken(GetWebshellTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetWebshellTokenWithOptions(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// GetWebshellTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebshellTokenResponse
+        /// </returns>
+        public async Task<GetWebshellTokenResponse> GetWebshellTokenAsync(GetWebshellTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetWebshellTokenWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

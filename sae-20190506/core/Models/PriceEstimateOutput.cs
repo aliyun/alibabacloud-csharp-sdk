@@ -153,6 +153,110 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         }
 
+        [NameInMap("PostPayItems")]
+        [Validation(Required=false)]
+        public List<PriceEstimateOutputPostPayItems> PostPayItems { get; set; }
+        public class PriceEstimateOutputPostPayItems : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3600.00</para>
+            /// </summary>
+            [NameInMap("Amount")]
+            [Validation(Required=false)]
+            public float? Amount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public long? Count { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>p_micro_service_cpu</para>
+            /// </summary>
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1.00</para>
+            /// </summary>
+            [NameInMap("Price")]
+            [Validation(Required=false)]
+            public float? Price { get; set; }
+
+            [NameInMap("Steps")]
+            [Validation(Required=false)]
+            public List<PriceEstimateOutputPostPayItemsSteps> Steps { get; set; }
+            public class PriceEstimateOutputPostPayItemsSteps : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("Begin")]
+                [Validation(Required=false)]
+                public long? Begin { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10000</para>
+                /// </summary>
+                [NameInMap("End")]
+                [Validation(Required=false)]
+                public long? End { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.0001</para>
+                /// </summary>
+                [NameInMap("Price")]
+                [Validation(Required=false)]
+                public float? Price { get; set; }
+
+                [NameInMap("RegionIds")]
+                [Validation(Required=false)]
+                public List<string> RegionIds { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>核*秒</para>
+                /// </summary>
+                [NameInMap("Unit")]
+                [Validation(Required=false)]
+                public string Unit { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pack/post</para>
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>核*秒</para>
+            /// </summary>
+            [NameInMap("Unit")]
+            [Validation(Required=false)]
+            public string Unit { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>235.66</para>
+        /// </summary>
+        [NameInMap("PostPayTotalPrice")]
+        [Validation(Required=false)]
+        public float? PostPayTotalPrice { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>235.66</para>

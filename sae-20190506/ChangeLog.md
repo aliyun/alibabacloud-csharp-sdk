@@ -1,3 +1,10 @@
+2024-12-10 Version: 1.24.0
+- Support API GetWebshellToken.
+- Update API CreateApplication: add param SecretMountDesc.
+- Update API DeployApplication: add param SecretMountDesc.
+- Update API DescribeApplicationConfig: update response param.
+
+
 2024-11-08 Version: 1.23.4
 - Update API CreateApplication: add param OidcRoleName.
 - Update API DeployApplication: add param OidcRoleName.

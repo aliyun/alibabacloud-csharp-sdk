@@ -656,6 +656,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? Replicas { get; set; }
 
+        [NameInMap("SecretMountDesc")]
+        [Validation(Required=false)]
+        public string SecretMountDesc { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>sg-wz969ngg2e49q5i4****</para>

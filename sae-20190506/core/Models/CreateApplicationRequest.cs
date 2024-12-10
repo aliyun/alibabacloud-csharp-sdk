@@ -490,6 +490,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string SaeVersion { get; set; }
 
+        [NameInMap("SecretMountDesc")]
+        [Validation(Required=false)]
+        public string SecretMountDesc { get; set; }
+
         /// <summary>
         /// <para>sg-wz969ngg2e49q5i4\<em>\</em>\<em>\</em></para>
         /// 

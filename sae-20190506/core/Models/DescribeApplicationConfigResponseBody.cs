@@ -820,6 +820,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public int? Replicas { get; set; }
 
+            [NameInMap("SecretMountDesc")]
+            [Validation(Required=false)]
+            public List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> SecretMountDesc { get; set; }
+            public class DescribeApplicationConfigResponseBodyDataSecretMountDesc : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("MountPath")]
+                [Validation(Required=false)]
+                public string MountPath { get; set; }
+
+                [NameInMap("SecretId")]
+                [Validation(Required=false)]
+                public long? SecretId { get; set; }
+
+                [NameInMap("SecretName")]
+                [Validation(Required=false)]
+                public string SecretName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the security group.</para>
             /// 
