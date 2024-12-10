@@ -36,7 +36,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 
         /// <summary>
         /// <para>The ID of the OTP message.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1008030300****</para>
@@ -44,6 +43,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
+
+        [NameInMap("To")]
+        [Validation(Required=false)]
+        public string To { get; set; }
 
     }
 

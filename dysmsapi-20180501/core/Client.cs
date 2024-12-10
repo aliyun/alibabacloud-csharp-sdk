@@ -1006,6 +1006,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             {
                 query["MessageId"] = request.MessageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["To"] = request.To;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1072,6 +1076,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
             {
                 query["MessageId"] = request.MessageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["To"] = request.To;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
