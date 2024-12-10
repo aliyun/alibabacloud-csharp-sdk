@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GpuType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>23000</para>
+        /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public List<Metric> Metrics { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg17tmvwiokhzaxg</para>
+        /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }

@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<string> Logs { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CBF05F13-B24C-5129-9048-4FA684DCD579</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>23</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

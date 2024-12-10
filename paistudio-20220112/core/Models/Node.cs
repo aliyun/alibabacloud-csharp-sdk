@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GPU { get; set; }
 
+        [NameInMap("GPUMemory")]
+        [Validation(Required=false)]
+        public string GPUMemory { get; set; }
+
         [NameInMap("GPUType")]
         [Validation(Required=false)]
         public string GPUType { get; set; }

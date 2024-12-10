@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RG1</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public int? NodeCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg17tmvwiokhzaxg</para>
+        /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
@@ -37,6 +45,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public UserVpc UserVpc { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>23000</para>
+        /// </summary>
         [NameInMap("WorkspaceID")]
         [Validation(Required=false)]
         public string WorkspaceID { get; set; }

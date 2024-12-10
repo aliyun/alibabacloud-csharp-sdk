@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? RequestMemory { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg17tmvwiokhzaxg</para>
+        /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ConditionExpression : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SupportedMachineTypes</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>in</para>
         /// </summary>
         [NameInMap("Operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

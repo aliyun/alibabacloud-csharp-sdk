@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public FeaturesQuota Quota { get; set; }
         public class FeaturesQuota : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsEnabled")]
             [Validation(Required=false)]
             public bool? IsEnabled { get; set; }

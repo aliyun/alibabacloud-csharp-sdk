@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CreatorID { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>470.199.02</para>
+        /// </summary>
         [NameInMap("DefaultDriver")]
         [Validation(Required=false)]
         public string DefaultDriver { get; set; }
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GmtStartedTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>mg1</para>
+        /// </summary>
         [NameInMap("MachineGroupID")]
         [Validation(Required=false)]
         public string MachineGroupID { get; set; }

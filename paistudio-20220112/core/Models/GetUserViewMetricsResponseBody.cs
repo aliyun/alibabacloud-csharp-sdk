@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetUserViewMetricsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rgf0zhfqn1d4ity2</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public UserViewMetric Summary { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }

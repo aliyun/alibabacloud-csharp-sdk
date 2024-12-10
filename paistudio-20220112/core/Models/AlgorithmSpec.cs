@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public Location CodeDir { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
@@ -25,21 +25,21 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public AlgorithmSpecComputeResource ComputeResource { get; set; }
         public class AlgorithmSpecComputeResource : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Policy")]
             [Validation(Required=false)]
             public AlgorithmSpecComputeResourcePolicy Policy { get; set; }
             public class AlgorithmSpecComputeResourcePolicy : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<HyperParameterDefinition> HyperParameters { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<Channel> InputChannels { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
@@ -129,7 +129,6 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         [NameInMap("SupportedInstanceTypes")]
         [Validation(Required=false)]
-        [Obsolete]
         public List<string> SupportedInstanceTypes { get; set; }
 
         [NameInMap("SupportsDistributedTraining")]

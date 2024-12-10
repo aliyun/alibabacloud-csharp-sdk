@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IsAIWorkspaceDataEnabled")]
         [Validation(Required=false)]
         public bool? IsAIWorkspaceDataEnabled { get; set; }

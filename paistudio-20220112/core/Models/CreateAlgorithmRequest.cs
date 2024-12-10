@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AlgorithmDescription { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>llm_training</para>
+        /// </summary>
         [NameInMap("AlgorithmName")]
         [Validation(Required=false)]
         public string AlgorithmName { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12345</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GPUType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>23000</para>
+        /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public List<Metric> Metrics { get; set; }

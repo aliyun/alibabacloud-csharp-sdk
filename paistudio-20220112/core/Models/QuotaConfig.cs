@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public ACS ACS { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ceeb37xxxx</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>470.199.02</para>
+        /// </summary>
         [NameInMap("DefaultGPUDriver")]
         [Validation(Required=false)]
         public string DefaultGPUDriver { get; set; }
@@ -33,6 +41,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<string> SupportGPUDrivers { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("SupportRDMA")]
         [Validation(Required=false)]
         public bool? SupportRDMA { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetNodeMetricsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DiskWriteRate</para>
+        /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]
         public string MetricType { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<NodeMetric> NodesMetrics { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rgf0zhfqn1d4ity2</para>
+        /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }

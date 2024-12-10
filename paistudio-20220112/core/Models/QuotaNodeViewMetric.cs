@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string NetworkOutputRate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>-i121212node</para>
+        /// </summary>
         [NameInMap("NodeID")]
         [Validation(Required=false)]
         public string NodeID { get; set; }

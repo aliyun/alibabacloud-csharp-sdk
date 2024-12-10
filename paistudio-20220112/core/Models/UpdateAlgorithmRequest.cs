@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AlgorithmDescription { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>LLM Train</para>
+        /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class UpdateQuotaRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>this is a test quota</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string QueueStrategy { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("QuotaConfig")]
         [Validation(Required=false)]
         public QuotaConfig QuotaConfig { get; set; }

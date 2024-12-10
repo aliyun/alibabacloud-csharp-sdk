@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class UpdateAlgorithmResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>algo-sidjc8134hv</para>
+        /// </summary>
         [NameInMap("AlgorithmId")]
         [Validation(Required=false)]
         public string AlgorithmId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>E7C42CC7-2E85-508A-84F4-923B605FD10F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

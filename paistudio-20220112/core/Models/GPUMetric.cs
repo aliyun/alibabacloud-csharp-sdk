@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Model { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0：异常；1：正常</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public long? Status { get; set; }

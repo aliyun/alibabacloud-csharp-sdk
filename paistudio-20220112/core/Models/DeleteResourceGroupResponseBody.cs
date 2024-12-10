@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class DeleteResourceGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rgvl9d6utwcscukh</para>
+        /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
