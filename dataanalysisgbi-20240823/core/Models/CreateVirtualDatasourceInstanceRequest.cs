@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public int? Type { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
