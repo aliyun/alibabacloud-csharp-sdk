@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ScalingGroupId { get; set; }
 
+            [NameInMap("SkipMatching")]
+            [Validation(Required=false)]
+            public bool? SkipMatching { get; set; }
+
             /// <summary>
             /// <para>The start time of the instance refresh task.</para>
             /// 

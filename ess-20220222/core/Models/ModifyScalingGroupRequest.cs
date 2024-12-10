@@ -49,6 +49,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? AzBalance { get; set; }
 
+        [NameInMap("CapacityOptions")]
+        [Validation(Required=false)]
+        public ModifyScalingGroupRequestCapacityOptions CapacityOptions { get; set; }
+        public class ModifyScalingGroupRequestCapacityOptions : TeaModel {
+            [NameInMap("CompensateWithOnDemand")]
+            [Validation(Required=false)]
+            public bool? CompensateWithOnDemand { get; set; }
+
+            [NameInMap("OnDemandBaseCapacity")]
+            [Validation(Required=false)]
+            public int? OnDemandBaseCapacity { get; set; }
+
+            [NameInMap("OnDemandPercentageAboveBaseCapacity")]
+            [Validation(Required=false)]
+            public int? OnDemandPercentageAboveBaseCapacity { get; set; }
+
+            [NameInMap("SpotAutoReplaceOnDemand")]
+            [Validation(Required=false)]
+            public bool? SpotAutoReplaceOnDemand { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Specifies whether to automatically create pay-as-you-go instances to meet the requirements on the number of ECS instances in the scaling group when the number of preemptible instances cannot be reached due to reasons such as cost-related issues and insufficient resources. This parameter takes effect only if you set <c>MultiAZPolicy</c> in the <c>CreateScalingGroup</c> operation to <c>COST_OPTIMIZED</c>. Valid values:</para>
         /// <list type="bullet">

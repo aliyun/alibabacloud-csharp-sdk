@@ -894,6 +894,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? EphemeralStorage { get; set; }
 
+        [NameInMap("GpuDriverVersion")]
+        [Validation(Required=false)]
+        public string GpuDriverVersion { get; set; }
+
         /// <summary>
         /// <para>The custom hostnames of the containers.</para>
         /// </summary>

@@ -82,6 +82,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? AzBalance { get; set; }
 
+        [NameInMap("CapacityOptions")]
+        [Validation(Required=false)]
+        public CreateScalingGroupRequestCapacityOptions CapacityOptions { get; set; }
+        public class CreateScalingGroupRequestCapacityOptions : TeaModel {
+            [NameInMap("CompensateWithOnDemand")]
+            [Validation(Required=false)]
+            public bool? CompensateWithOnDemand { get; set; }
+
+            [NameInMap("OnDemandBaseCapacity")]
+            [Validation(Required=false)]
+            public int? OnDemandBaseCapacity { get; set; }
+
+            [NameInMap("OnDemandPercentageAboveBaseCapacity")]
+            [Validation(Required=false)]
+            public int? OnDemandPercentageAboveBaseCapacity { get; set; }
+
+            [NameInMap("SpotAutoReplaceOnDemand")]
+            [Validation(Required=false)]
+            public bool? SpotAutoReplaceOnDemand { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</para>
