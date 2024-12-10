@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? EnableIntranet { get; set; }
 
+        [NameInMap("EnableSSLRedirection")]
+        [Validation(Required=false)]
+        public bool? EnableSSLRedirection { get; set; }
+
         /// <summary>
         /// <para>The instance type used for the private gateway.</para>
         /// 

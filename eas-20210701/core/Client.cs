@@ -1233,7 +1233,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// <para>Creates a VPC peering connection on an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1289,7 +1289,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// <para>Creates a VPC peering connection on an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1345,7 +1345,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// <para>Creates a VPC peering connection on an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1364,7 +1364,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关内网访问端点跨VPC连接</para>
+        /// <para>Creates a VPC peering connection on an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3145,7 +3145,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// <para>Deletes a VPC peering connection from an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3201,7 +3201,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// <para>Deletes a VPC peering connection from an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3257,7 +3257,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// <para>Deletes a VPC peering connection from an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3276,7 +3276,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点跨VPC连接</para>
+        /// <para>Deletes a VPC peering connection from an internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7417,7 +7417,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7463,7 +7463,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7509,7 +7509,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7528,7 +7528,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网访问端点跨VPC连接列表</para>
+        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7543,6 +7543,108 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListGatewayIntranetLinkedVpcPeerWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetSupportedZoneResponse
+        /// </returns>
+        public ListGatewayIntranetSupportedZoneResponse ListGatewayIntranetSupportedZoneWithOptions(string GatewayId, string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayIntranetSupportedZone",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_supported_zone",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayIntranetSupportedZoneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetSupportedZoneResponse
+        /// </returns>
+        public async Task<ListGatewayIntranetSupportedZoneResponse> ListGatewayIntranetSupportedZoneWithOptionsAsync(string GatewayId, string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayIntranetSupportedZone",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GatewayId) + "/intranet_supported_zone",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayIntranetSupportedZoneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetSupportedZoneResponse
+        /// </returns>
+        public ListGatewayIntranetSupportedZoneResponse ListGatewayIntranetSupportedZone(string GatewayId, string ClusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGatewayIntranetSupportedZoneWithOptions(GatewayId, ClusterId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关内网支持的可用区</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListGatewayIntranetSupportedZoneResponse
+        /// </returns>
+        public async Task<ListGatewayIntranetSupportedZoneResponse> ListGatewayIntranetSupportedZoneAsync(string GatewayId, string ClusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGatewayIntranetSupportedZoneWithOptionsAsync(GatewayId, ClusterId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8061,7 +8163,7 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListResourceServicesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListResourceServices is deprecated\n")]
+        [Obsolete("OpenAPI ListResourceServices is deprecated")]
         // Deprecated
         public ListResourceServicesResponse ListResourceServicesWithOptions(string ClusterId, string ResourceId, ListResourceServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8117,7 +8219,7 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListResourceServicesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListResourceServices is deprecated\n")]
+        [Obsolete("OpenAPI ListResourceServices is deprecated")]
         // Deprecated
         public async Task<ListResourceServicesResponse> ListResourceServicesWithOptionsAsync(string ClusterId, string ResourceId, ListResourceServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8167,7 +8269,7 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListResourceServicesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListResourceServices is deprecated\n")]
+        [Obsolete("OpenAPI ListResourceServices is deprecated")]
         // Deprecated
         public ListResourceServicesResponse ListResourceServices(string ClusterId, string ResourceId, ListResourceServicesRequest request)
         {
@@ -8192,7 +8294,7 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListResourceServicesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListResourceServices is deprecated\n")]
+        [Obsolete("OpenAPI ListResourceServices is deprecated")]
         // Deprecated
         public async Task<ListResourceServicesResponse> ListResourceServicesAsync(string ClusterId, string ResourceId, ListResourceServicesRequest request)
         {
@@ -10437,6 +10539,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["EnableIntranet"] = request.EnableIntranet;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSLRedirection))
+            {
+                body["EnableSSLRedirection"] = request.EnableSSLRedirection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 body["InstanceType"] = request.InstanceType;
@@ -10502,6 +10608,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIntranet))
             {
                 body["EnableIntranet"] = request.EnableIntranet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSLRedirection))
+            {
+                body["EnableSSLRedirection"] = request.EnableSSLRedirection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {

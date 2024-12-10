@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteGatewayIntranetLinkedVpcPeerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the private gateway.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The message that is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Successfully delete intranet linked vpc Peer for gateway</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>
         /// </summary>

@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SSLRedirectionEnabled")]
+        [Validation(Required=false)]
+        public bool? SSLRedirectionEnabled { get; set; }
+
         /// <summary>
         /// <para>The status of the private gateway.</para>
         /// <para>Valid values:</para>

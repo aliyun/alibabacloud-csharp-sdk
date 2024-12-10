@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
+        [NameInMap("CpuUsed")]
+        [Validation(Required=false)]
+        public int? CpuUsed { get; set; }
+
         /// <summary>
         /// <para>The time when the resource group was created.</para>
         /// 
@@ -59,6 +63,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? GpuCount { get; set; }
 
+        [NameInMap("GpuUsed")]
+        [Validation(Required=false)]
+        public float? GpuUsed { get; set; }
+
         /// <summary>
         /// <para>The total number of instances in the resource group.</para>
         /// 
@@ -68,6 +76,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
+
+        [NameInMap("Memory")]
+        [Validation(Required=false)]
+        public int? Memory { get; set; }
+
+        [NameInMap("MemoryUsed")]
+        [Validation(Required=false)]
+        public int? MemoryUsed { get; set; }
 
         /// <summary>
         /// <para>The returned message.</para>
