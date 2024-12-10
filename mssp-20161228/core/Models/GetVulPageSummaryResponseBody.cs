@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetVulPageSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Interface return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data query result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetVulPageSummaryResponseBodyData Data { get; set; }
         public class GetVulPageSummaryResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Number of completed items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1990</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? CompletedCount { get; set; }
 
             /// <summary>
+            /// <para>Number of items being handled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? HandingCount { get; set; }
 
             /// <summary>
+            /// <para>Number of high-risk items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? HighCount { get; set; }
 
             /// <summary>
+            /// <para>Number of low-risk items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? LowCount { get; set; }
 
             /// <summary>
+            /// <para>Number of medium-risk items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? MediumCount { get; set; }
 
             /// <summary>
+            /// <para>Total number of items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2000</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? TotalCount { get; set; }
 
             /// <summary>
+            /// <para>Number of unhandled items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>operation success</para>
         /// </summary>
@@ -96,6 +119,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the call was successful. - <b>true</b>: The call was successful. - <b>false</b>: The call failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

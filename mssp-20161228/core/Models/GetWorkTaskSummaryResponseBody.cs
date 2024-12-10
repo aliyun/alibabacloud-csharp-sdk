@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetWorkTaskSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data returned by the interface.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkTaskSummaryResponseBodyData Data { get; set; }
         public class GetWorkTaskSummaryResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Average response time (in minutes).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>60</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? DealAverageDuration { get; set; }
 
             /// <summary>
+            /// <para>Year-over-year growth rate of average response time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string DealAverageDurationGrowthRate { get; set; }
 
             /// <summary>
+            /// <para>Number of work orders responded to.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? DealWorkTaskCount { get; set; }
 
             /// <summary>
+            /// <para>Year-over-year growth rate of the number of work orders responded to.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string DealWorkTaskCountRate { get; set; }
 
             /// <summary>
+            /// <para>Number of service responses.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? WorkTaskCount { get; set; }
 
             /// <summary>
+            /// <para>Problem closure rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>90</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string WorkTaskDealRate { get; set; }
 
             /// <summary>
+            /// <para>Year-over-year growth rate of problem closure rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string WorkTaskDealRateGrowthRate { get; set; }
 
             /// <summary>
+            /// <para>Year-over-year growth rate of service responses.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Prompt message for the response result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
         /// </summary>
@@ -104,6 +129,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the call was successful. - <b>true</b>: The call was successful. - <b>false</b>: The call failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

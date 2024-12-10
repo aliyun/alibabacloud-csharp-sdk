@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class DisposeWorkTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Operator.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,13 +21,18 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Operator { get; set; }
 
         /// <summary>
+        /// <para>Operation remarks.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>处理完成</para>
         /// </summary>
         [NameInMap("OptRemark")]
         [Validation(Required=false)]
         public string OptRemark { get; set; }
 
         /// <summary>
+        /// <para>Work order status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +43,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>Work order ID, multiple IDs separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

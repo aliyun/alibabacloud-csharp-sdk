@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetDocumentSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Interface return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data query result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDocumentSummaryResponseBodyData Data { get; set; }
         public class GetDocumentSummaryResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Number of documents.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? DocumentCount { get; set; }
 
             /// <summary>
+            /// <para>Number of services or days.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Prompt message for the returned result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -56,6 +69,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +80,12 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the call was successful. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

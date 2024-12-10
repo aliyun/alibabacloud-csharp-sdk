@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class DisposeServiceWorkOrderRequest : TeaModel {
+        /// <summary>
+        /// <para>Attachment name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bbaa133c-0ac2-489f-9fc8-39f91c2e770c_20230301-20240403-服务工单列表.xlsx</para>
+        /// </summary>
         [NameInMap("AttachmentName")]
         [Validation(Required=false)]
         public string AttachmentName { get; set; }
 
         /// <summary>
+        /// <para>End time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-14 00:00:00</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>Forward to owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>405639</para>
         /// </summary>
@@ -30,6 +40,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string ForwardOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Work order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +51,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>Attachment requirement.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string IsAttachment { get; set; }
 
         /// <summary>
+        /// <para>Work order notification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -56,6 +71,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string IsWorkOrderNotify { get; set; }
 
         /// <summary>
+        /// <para>Notification ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -64,13 +81,18 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public long? NotifyId { get; set; }
 
         /// <summary>
+        /// <para>Operation remarks.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>处理完成</para>
         /// </summary>
         [NameInMap("OperateRemark")]
         [Validation(Required=false)]
         public string OperateRemark { get; set; }
 
         /// <summary>
+        /// <para>Processing type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,6 +103,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string OperateType { get; set; }
 
         /// <summary>
+        /// <para>Operator.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,6 +114,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Operator { get; set; }
 
         /// <summary>
+        /// <para>Start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-02 00:00:00</para>
         /// </summary>
@@ -99,6 +124,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>Upgrade owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>336333</para>
         /// </summary>
@@ -106,18 +133,30 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string UpgradeOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Work order details.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;questionDetail&quot;:&quot;测试工单&quot;,&quot;answerDetail&quot;:&quot;&quot;}</para>
+        /// </summary>
         [NameInMap("WorkOrderDetail")]
         [Validation(Required=false)]
         public string WorkOrderDetail { get; set; }
 
         /// <summary>
+        /// <para>Work order name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>安全产品配置问题与超量提醒</para>
         /// </summary>
         [NameInMap("WorkOrderName")]
         [Validation(Required=false)]
         public string WorkOrderName { get; set; }
 
         /// <summary>
+        /// <para>Work order status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PROCESSED</para>
         /// </summary>

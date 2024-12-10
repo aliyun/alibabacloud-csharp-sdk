@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
-    public class GetDocumentDownloadUrlRequest : TeaModel {
+    public class GetAlarmDetailByIdRequest : TeaModel {
         /// <summary>
-        /// <para>Document management ID.</para>
+        /// <para>Primary key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>175815</para>
+        /// <para>20077761</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

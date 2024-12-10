@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetSuspEventPageRequest : TeaModel {
         /// <summary>
+        /// <para>Alarm end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1732515522000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public long? AlarmEndTime { get; set; }
 
         /// <summary>
+        /// <para>Alarm start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1722515522000</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public long? AlarmStartTime { get; set; }
 
         /// <summary>
+        /// <para>Current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Alarm source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUSP_EVENT</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>Disposal status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

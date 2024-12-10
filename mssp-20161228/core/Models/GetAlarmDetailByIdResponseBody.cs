@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
-    public class GetSuspEventPageResponseBody : TeaModel {
+    public class GetAlarmDetailByIdResponseBody : TeaModel {
         /// <summary>
         /// <para>API response code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,23 +24,33 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<GetSuspEventPageResponseBodyData> Data { get; set; }
-        public class GetSuspEventPageResponseBodyData : TeaModel {
+        public GetAlarmDetailByIdResponseBodyData Data { get; set; }
+        public class GetAlarmDetailByIdResponseBodyData : TeaModel {
             /// <summary>
             /// <para>Alarm event type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>精准防御</para>
+            /// <para>Unusual Logon</para>
             /// </summary>
             [NameInMap("AlarmEventType")]
             [Validation(Required=false)]
             public string AlarmEventType { get; set; }
 
             /// <summary>
+            /// <para>Alarm event type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Login with unusual location</para>
+            /// </summary>
+            [NameInMap("AlarmEventTypeDisplay")]
+            [Validation(Required=false)]
+            public string AlarmEventTypeDisplay { get; set; }
+
+            /// <summary>
             /// <para>Alarm ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5b1eeebe4f22daa2b177298234214fa3</para>
+            /// <para>202427220</para>
             /// </summary>
             [NameInMap("AlarmId")]
             [Validation(Required=false)]
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Alarm name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Web服务漏洞利用</para>
+            /// <para>负载均衡可挂载服务器数量告警</para>
             /// </summary>
             [NameInMap("AlarmName")]
             [Validation(Required=false)]
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Latest alarm time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1722515522000</para>
+            /// <para>2018-09-26 01:51:01</para>
             /// </summary>
             [NameInMap("AlarmTime")]
             [Validation(Required=false)]
@@ -87,14 +97,83 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string AnalysisResult { get; set; }
 
             /// <summary>
+            /// <para>Whether high-protection mode is enabled. true means enabled, false means not enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("ContainHwMode")]
+            [Validation(Required=false)]
+            public bool? ContainHwMode { get; set; }
+
+            /// <summary>
             /// <para>Alarm handling time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1732515522000</para>
+            /// <para>2018-09-26 01:51:01</para>
             /// </summary>
             [NameInMap("DealTime")]
             [Validation(Required=false)]
             public string DealTime { get; set; }
+
+            /// <summary>
+            /// <para>Description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>webshell</para>
+            /// </summary>
+            [NameInMap("Desc")]
+            [Validation(Required=false)]
+            public string Desc { get; set; }
+
+            /// <summary>
+            /// <para>Event details information.</para>
+            /// </summary>
+            [NameInMap("EventDetails")]
+            [Validation(Required=false)]
+            public List<GetAlarmDetailByIdResponseBodyDataEventDetails> EventDetails { get; set; }
+            public class GetAlarmDetailByIdResponseBodyDataEventDetails : TeaModel {
+                /// <summary>
+                /// <para>Alarm event display name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Login with unusual location</para>
+                /// </summary>
+                [NameInMap("NameDisplay")]
+                [Validation(Required=false)]
+                public string NameDisplay { get; set; }
+
+                /// <summary>
+                /// <para>Alarm event type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>text</para>
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// <para>Path where the alarm event occurred.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/etc/crontab</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+                /// <summary>
+                /// <para>Path where the alarm event occurred.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/etc/crontab</para>
+                /// </summary>
+                [NameInMap("ValueDisplay")]
+                [Validation(Required=false)]
+                public string ValueDisplay { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Alarm level.</para>
@@ -107,10 +186,10 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string EventLevel { get; set; }
 
             /// <summary>
-            /// <para>Ticket primary key id.</para>
+            /// <para>Primary key ID of the work order.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>9947</para>
+            /// <para>9772</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -120,47 +199,47 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Affected asset.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>shells-azhou</para>
+            /// <para>nginx</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>Public IP address.</para>
+            /// <para>Public IP.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>47.99.188.31</para>
+            /// <para>47.116.126.79</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// <para>Private IP address.</para>
+            /// <para>Private IP.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.16.109.130</para>
+            /// <para>172.19.195.176</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>First occurrence time.</para>
+            /// <para>First occurrence time</para>
             /// 
             /// <b>Example:</b>
-            /// <para>该字段暂未使用，有问题请联系管理员</para>
+            /// <para>2018-09-26 01:51:01</para>
             /// </summary>
             [NameInMap("OccurrenceTime")]
             [Validation(Required=false)]
             public string OccurrenceTime { get; set; }
 
             /// <summary>
-            /// <para>Owner ID.</para>
+            /// <para>Owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>324546</para>
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
@@ -170,7 +249,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Disposal method.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>处理完成</para>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -180,11 +259,32 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Handling status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>未处理</para>
+            /// <para>要查询的告警事件状态。取值：</para>
+            /// <para>0：全部
+            /// 1：待处理
+            /// 2：已忽略
+            /// 4：已确认
+            /// 8：已标记为误报
+            /// 16：处理中
+            /// 32：处理完毕
+            /// 64：已经过期
+            /// 128：已经删除
+            /// 512：自动拦截中
+            /// 513：自动拦截完毕</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>ATT&amp;CK tactic name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Malicious scripts-Malicious script code execution</para>
+            /// </summary>
+            [NameInMap("TacticDisplayName")]
+            [Validation(Required=false)]
+            public string TacticDisplayName { get; set; }
 
         }
 
@@ -199,70 +299,28 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Prompt message of the returned result.</para>
+        /// <para>Return message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>system error</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Pagination information.</para>
-        /// </summary>
-        [NameInMap("PageInfo")]
-        [Validation(Required=false)]
-        public GetSuspEventPageResponseBodyPageInfo PageInfo { get; set; }
-        public class GetSuspEventPageResponseBodyPageInfo : TeaModel {
-            /// <summary>
-            /// <para>The current page number in pagination queries.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-
-            /// <summary>
-            /// <para>The number of items displayed per page in the returned data.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>10</para>
-            /// </summary>
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-
-            /// <summary>
-            /// <para>Total number of query results.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>100</para>
-            /// </summary>
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-
-        }
-
-        /// <summary>
         /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AFA6F7B7-7C4B-58BB-B8FB-E0FFA4483561</para>
+        /// <para>5C1B0668-442C-57AE-9668-D894B0B012EB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call was successful.</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful. - <b>false</b>: The call failed.</description></item>
-        /// </list>
+        /// <para>Whether the operation was successful: - true: Success. - false: Failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

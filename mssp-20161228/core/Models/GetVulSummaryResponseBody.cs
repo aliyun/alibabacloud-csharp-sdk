@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetVulSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Interface response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data returned by the interface.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetVulSummaryResponseBodyData Data { get; set; }
         public class GetVulSummaryResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Number of completed items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? CompletedCount { get; set; }
 
             /// <summary>
+            /// <para>Risk convergence rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>
@@ -37,15 +46,26 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             [Validation(Required=false)]
             public string DealRate { get; set; }
 
+            /// <summary>
+            /// <para>Collection of vulnerability trend nodes.</para>
+            /// </summary>
             [NameInMap("TrendList")]
             [Validation(Required=false)]
             public List<GetVulSummaryResponseBodyDataTrendList> TrendList { get; set; }
             public class GetVulSummaryResponseBodyDataTrendList : TeaModel {
+                /// <summary>
+                /// <para>Time point.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>202407或者20240701</para>
+                /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
                 public string Date { get; set; }
 
                 /// <summary>
+                /// <para>Number of handled items.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
                 public long? DealCount { get; set; }
 
                 /// <summary>
+                /// <para>Number of discovered items.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
                 /// </summary>
@@ -64,6 +86,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             }
 
             /// <summary>
+            /// <para>Number of unhandled items.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -74,6 +98,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -82,6 +108,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Prompt message for the response result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>system error</para>
         /// </summary>
@@ -90,6 +118,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,6 +129,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the call was successful. - <b>true</b>: The call was successful. - <b>false</b>: The call failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

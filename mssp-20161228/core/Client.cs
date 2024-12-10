@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务工单</para>
+        /// <para>Create Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务工单</para>
+        /// <para>Create Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务工单</para>
+        /// <para>Create Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务工单</para>
+        /// <para>Create Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理服务工单</para>
+        /// <para>Process Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理服务工单</para>
+        /// <para>Process Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理服务工单</para>
+        /// <para>Process Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -501,7 +501,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理服务工单</para>
+        /// <para>Process Service Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理告警工单</para>
+        /// <para>Handle Alert Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -573,7 +573,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理告警工单</para>
+        /// <para>Handle Alert Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -627,7 +627,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理告警工单</para>
+        /// <para>Handle Alert Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -645,7 +645,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>处理告警工单</para>
+        /// <para>Handle Alert Work Order</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -663,7 +663,127 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>被攻击资产收敛趋势</para>
+        /// <para>Query Alarm Details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlarmDetailByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlarmDetailByIdResponse
+        /// </returns>
+        public GetAlarmDetailByIdResponse GetAlarmDetailByIdWithOptions(GetAlarmDetailByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlarmDetailById",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlarmDetailByIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Alarm Details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlarmDetailByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlarmDetailByIdResponse
+        /// </returns>
+        public async Task<GetAlarmDetailByIdResponse> GetAlarmDetailByIdWithOptionsAsync(GetAlarmDetailByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlarmDetailById",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlarmDetailByIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Alarm Details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlarmDetailByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlarmDetailByIdResponse
+        /// </returns>
+        public GetAlarmDetailByIdResponse GetAlarmDetailById(GetAlarmDetailByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAlarmDetailByIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Alarm Details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlarmDetailByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlarmDetailByIdResponse
+        /// </returns>
+        public async Task<GetAlarmDetailByIdResponse> GetAlarmDetailByIdAsync(GetAlarmDetailByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAlarmDetailByIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trend of Attacked Asset Convergence</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -717,7 +837,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>被攻击资产收敛趋势</para>
+        /// <para>Trend of Attacked Asset Convergence</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -771,7 +891,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>被攻击资产收敛趋势</para>
+        /// <para>Trend of Attacked Asset Convergence</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -789,7 +909,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>被攻击资产收敛趋势</para>
+        /// <para>Trend of Attacked Asset Convergence</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -807,7 +927,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规风险收敛趋势</para>
+        /// <para>Compliance Risk Convergence Trend</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -861,7 +981,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规风险收敛趋势</para>
+        /// <para>Compliance Risk Convergence Trend</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -915,7 +1035,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规风险收敛趋势</para>
+        /// <para>Compliance Risk Convergence Trend</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -933,7 +1053,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规风险收敛趋势</para>
+        /// <para>Compliance Risk Convergence Trend</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -951,7 +1071,151 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险详情</para>
+        /// <para>Get Console Score</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsoleScoreRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsoleScoreResponse
+        /// </returns>
+        public GetConsoleScoreResponse GetConsoleScoreWithOptions(GetConsoleScoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["DateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuspEventSource))
+            {
+                body["SuspEventSource"] = request.SuspEventSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConsoleScore",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConsoleScoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Console Score</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsoleScoreRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsoleScoreResponse
+        /// </returns>
+        public async Task<GetConsoleScoreResponse> GetConsoleScoreWithOptionsAsync(GetConsoleScoreRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["DateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuspEventSource))
+            {
+                body["SuspEventSource"] = request.SuspEventSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConsoleScore",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConsoleScoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Console Score</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsoleScoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsoleScoreResponse
+        /// </returns>
+        public GetConsoleScoreResponse GetConsoleScore(GetConsoleScoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetConsoleScoreWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Console Score</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConsoleScoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsoleScoreResponse
+        /// </returns>
+        public async Task<GetConsoleScoreResponse> GetConsoleScoreAsync(GetConsoleScoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetConsoleScoreWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Risk Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -993,7 +1257,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险详情</para>
+        /// <para>Query Risk Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1035,7 +1299,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险详情</para>
+        /// <para>Query Risk Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1053,7 +1317,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询风险详情</para>
+        /// <para>Query Risk Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1071,7 +1335,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告单个下载</para>
+        /// <para>Single Service Report Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1113,7 +1377,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告单个下载</para>
+        /// <para>Single Service Report Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1155,7 +1419,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告单个下载</para>
+        /// <para>Single Service Report Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1173,7 +1437,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告单个下载</para>
+        /// <para>Single Service Report Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1191,7 +1455,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告查询</para>
+        /// <para>Service Report Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1253,7 +1517,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告查询</para>
+        /// <para>Service Report Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1315,7 +1579,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告查询</para>
+        /// <para>Service Report Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1333,7 +1597,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告查询</para>
+        /// <para>Service Report Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1351,7 +1615,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告首页统计项获取</para>
+        /// <para>Service Report Home Page Statistics Acquisition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1393,7 +1657,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告首页统计项获取</para>
+        /// <para>Service Report Home Page Statistics Acquisition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1435,7 +1699,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告首页统计项获取</para>
+        /// <para>Service Report Home Page Statistics Acquisition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1453,7 +1717,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务报告首页统计项获取</para>
+        /// <para>Service Report Home Page Statistics Acquisition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1471,7 +1735,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到最近上传的服务报告</para>
+        /// <para>Get Recently Uploaded Service Reports</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1525,7 +1789,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到最近上传的服务报告</para>
+        /// <para>Get Recently Uploaded Service Reports</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1579,7 +1843,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到最近上传的服务报告</para>
+        /// <para>Get Recently Uploaded Service Reports</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1597,7 +1861,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到最近上传的服务报告</para>
+        /// <para>Get Recently Uploaded Service Reports</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1615,7 +1879,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到安全防护覆盖度</para>
+        /// <para>Get Safety Coverage</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1669,7 +1933,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到安全防护覆盖度</para>
+        /// <para>Get Safety Coverage</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1723,7 +1987,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到安全防护覆盖度</para>
+        /// <para>Get Safety Coverage</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1741,7 +2005,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到安全防护覆盖度</para>
+        /// <para>Get Safety Coverage</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,7 +2023,151 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警处置查询</para>
+        /// <para>Get SOW List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSowListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSowListResponse
+        /// </returns>
+        public GetSowListResponse GetSowListWithOptions(GetSowListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["DateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuspEventSource))
+            {
+                body["SuspEventSource"] = request.SuspEventSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSowList",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSowListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get SOW List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSowListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSowListResponse
+        /// </returns>
+        public async Task<GetSowListResponse> GetSowListWithOptionsAsync(GetSowListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateType))
+            {
+                body["DateType"] = request.DateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuspEventSource))
+            {
+                body["SuspEventSource"] = request.SuspEventSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSowList",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSowListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get SOW List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSowListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSowListResponse
+        /// </returns>
+        public GetSowListResponse GetSowList(GetSowListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSowListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get SOW List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSowListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSowListResponse
+        /// </returns>
+        public async Task<GetSowListResponse> GetSowListAsync(GetSowListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSowListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Alarm Disposal Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1821,7 +2229,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警处置查询</para>
+        /// <para>Alarm Disposal Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1883,7 +2291,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警处置查询</para>
+        /// <para>Alarm Disposal Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1901,7 +2309,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警处置查询</para>
+        /// <para>Alarm Disposal Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1919,7 +2327,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到告警的统计项</para>
+        /// <para>Get Alert Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1973,7 +2381,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到告警的统计项</para>
+        /// <para>Get Alert Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2027,7 +2435,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到告警的统计项</para>
+        /// <para>Get Alert Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2045,7 +2453,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到告警的统计项</para>
+        /// <para>Get Alert Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,7 +2471,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警页统计</para>
+        /// <para>Alarm Page Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2096,7 +2504,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警页统计</para>
+        /// <para>Alarm Page Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2129,7 +2537,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警页统计</para>
+        /// <para>Alarm Page Statistics</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2143,7 +2551,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>告警页统计</para>
+        /// <para>Alarm Page Statistics</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2157,7 +2565,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通状态</para>
+        /// <para>Query User Activation Status</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2190,7 +2598,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通状态</para>
+        /// <para>Query User Activation Status</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2223,7 +2631,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通状态</para>
+        /// <para>Query User Activation Status</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2237,7 +2645,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通状态</para>
+        /// <para>Query User Activation Status</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2251,7 +2659,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险查询</para>
+        /// <para>Risk Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2317,7 +2725,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险查询</para>
+        /// <para>Risk Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2383,7 +2791,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险查询</para>
+        /// <para>Risk Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2401,7 +2809,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险查询</para>
+        /// <para>Risk Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2419,7 +2827,175 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险页统计</para>
+        /// <para>Query processed details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulListByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulListByIdResponse
+        /// </returns>
+        public GetVulListByIdResponse GetVulListByIdWithOptions(GetVulListByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
+            {
+                body["Dealed"] = request.Dealed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
+            {
+                body["Necessity"] = request.Necessity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                body["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulListById",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulListByIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query processed details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulListByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulListByIdResponse
+        /// </returns>
+        public async Task<GetVulListByIdResponse> GetVulListByIdWithOptionsAsync(GetVulListByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dealed))
+            {
+                body["Dealed"] = request.Dealed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
+            {
+                body["Necessity"] = request.Necessity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                body["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulListById",
+                Version = "2016-12-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulListByIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query processed details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulListByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulListByIdResponse
+        /// </returns>
+        public GetVulListByIdResponse GetVulListById(GetVulListByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVulListByIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query processed details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulListByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulListByIdResponse
+        /// </returns>
+        public async Task<GetVulListByIdResponse> GetVulListByIdAsync(GetVulListByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVulListByIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Risk Page Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2452,7 +3028,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险页统计</para>
+        /// <para>Risk Page Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2485,7 +3061,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险页统计</para>
+        /// <para>Risk Page Statistics</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2499,7 +3075,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>风险页统计</para>
+        /// <para>Risk Page Statistics</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2513,7 +3089,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到风险的统计项</para>
+        /// <para>Get Risk Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2567,7 +3143,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到风险的统计项</para>
+        /// <para>Get Risk Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2621,7 +3197,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到风险的统计项</para>
+        /// <para>Get Risk Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2639,7 +3215,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到风险的统计项</para>
+        /// <para>Get Risk Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2657,7 +3233,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到首行工单的统计项</para>
+        /// <para>Get the First Line Work Order Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2711,7 +3287,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到首行工单的统计项</para>
+        /// <para>Get the First Line Work Order Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2765,7 +3341,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到首行工单的统计项</para>
+        /// <para>Get the First Line Work Order Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2783,7 +3359,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到首行工单的统计项</para>
+        /// <para>Get the First Line Work Order Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2801,7 +3377,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务客户信息查询</para>
+        /// <para>Service Customer Information Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2867,7 +3443,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务客户信息查询</para>
+        /// <para>Service Customer Information Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2933,7 +3509,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务客户信息查询</para>
+        /// <para>Service Customer Information Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2951,7 +3527,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务客户信息查询</para>
+        /// <para>Service Customer Information Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2969,7 +3545,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送自定义告警事件</para>
+        /// <para>Send Custom Alert Event</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3071,7 +3647,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送自定义告警事件</para>
+        /// <para>Send Custom Alert Event</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3173,7 +3749,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送自定义告警事件</para>
+        /// <para>Send Custom Alert Event</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3191,7 +3767,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送自定义告警事件</para>
+        /// <para>Send Custom Alert Event</para>
         /// </summary>
         /// 
         /// <param name="request">

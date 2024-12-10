@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
-    public class GetRecentDocumentRequest : TeaModel {
+    public class GetSowListRequest : TeaModel {
         /// <summary>
         /// <para>Filter time type, supports filtering by the last 7 days, the last 30 days, the last half year, or custom time ranges.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>该字段暂未使用，有问题请联系管理员</para>
+        /// <para>month</para>
         /// </summary>
         [NameInMap("DateType")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>该字段暂未使用，有问题请联系管理员</para>
+        /// <para>1732156885986</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>该字段暂未使用，有问题请联系管理员</para>
+        /// <para>1729478485000</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

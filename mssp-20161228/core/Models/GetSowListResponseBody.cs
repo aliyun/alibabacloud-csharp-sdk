@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
-    public class GetSuspPageSummaryResponseBody : TeaModel {
+    public class GetSowListResponseBody : TeaModel {
         /// <summary>
         /// <para>Interface response code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -24,77 +24,77 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetSuspPageSummaryResponseBodyData Data { get; set; }
-        public class GetSuspPageSummaryResponseBodyData : TeaModel {
+        public List<GetSowListResponseBodyData> Data { get; set; }
+        public class GetSowListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Number of completed items.</para>
+            /// <para>Completion time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>2024-03-28 16:19:35</para>
             /// </summary>
-            [NameInMap("CompletedCount")]
+            [NameInMap("CompleteTime")]
             [Validation(Required=false)]
-            public long? CompletedCount { get; set; }
+            public string CompleteTime { get; set; }
 
             /// <summary>
-            /// <para>Number of items being processed.</para>
+            /// <para>Operation remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>新建</para>
             /// </summary>
-            [NameInMap("HandingCount")]
+            [NameInMap("OperateRemark")]
             [Validation(Required=false)]
-            public long? HandingCount { get; set; }
+            public string OperateRemark { get; set; }
 
             /// <summary>
-            /// <para>Number of high-risk items.</para>
+            /// <para>Progress.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>IN_PREPARATION</para>
             /// </summary>
-            [NameInMap("HighCount")]
+            [NameInMap("Progress")]
             [Validation(Required=false)]
-            public long? HighCount { get; set; }
+            public string Progress { get; set; }
 
             /// <summary>
-            /// <para>Number of low-risk items.</para>
+            /// <para>Record count.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>173</para>
             /// </summary>
-            [NameInMap("LowCount")]
+            [NameInMap("RecordCount")]
             [Validation(Required=false)]
-            public long? LowCount { get; set; }
+            public int? RecordCount { get; set; }
 
             /// <summary>
-            /// <para>Number of medium-risk items.</para>
+            /// <para>Start time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>2023-03-24 16:51:26</para>
             /// </summary>
-            [NameInMap("MediumCount")]
+            [NameInMap("StartTime")]
             [Validation(Required=false)]
-            public long? MediumCount { get; set; }
+            public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>Total number of items.</para>
+            /// <para>Task type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>30</para>
+            /// <para>安全风险评估</para>
             /// </summary>
-            [NameInMap("TotalCount")]
+            [NameInMap("TaskTypeName")]
             [Validation(Required=false)]
-            public long? TotalCount { get; set; }
+            public string TaskTypeName { get; set; }
 
             /// <summary>
-            /// <para>Number of unhandled items.</para>
+            /// <para>Work order name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>安全产品配置问题与超量提醒</para>
             /// </summary>
-            [NameInMap("WaitHandleCount")]
+            [NameInMap("WorkOrderName")]
             [Validation(Required=false)]
-            public long? WaitHandleCount { get; set; }
+            public string WorkOrderName { get; set; }
 
         }
 
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Prompt message for the result returned.</para>
+        /// <para>Prompt information for the returned result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SUCCESS</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -123,18 +123,14 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EF801DD1-D934-51B3-92D4-776CE17B184F</para>
+        /// <para>FA8883BC-CB18-5E28-A113-8249917CA05E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: Call succeeded.</description></item>
-        /// <item><description><b>false</b>: Call failed.</description></item>
-        /// </list>
+        /// <para>Whether the call was successful. - <b>true</b>: The call was successful. - <b>false</b>: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

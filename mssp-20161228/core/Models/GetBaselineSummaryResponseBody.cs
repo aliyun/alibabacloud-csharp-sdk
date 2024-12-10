@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetBaselineSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Interface response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,19 +19,33 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data returned by the interface.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBaselineSummaryResponseBodyData Data { get; set; }
         public class GetBaselineSummaryResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Collection of baseline statistical data.</para>
+            /// </summary>
             [NameInMap("TrendDTOList")]
             [Validation(Required=false)]
             public List<GetBaselineSummaryResponseBodyDataTrendDTOList> TrendDTOList { get; set; }
             public class GetBaselineSummaryResponseBodyDataTrendDTOList : TeaModel {
+                /// <summary>
+                /// <para>Date point.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>202408或者20240801</para>
+                /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
                 public string Date { get; set; }
 
                 /// <summary>
+                /// <para>Number of processed items.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -38,6 +54,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
                 public long? DealCount { get; set; }
 
                 /// <summary>
+                /// <para>Number of discovered items.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
                 /// </summary>
@@ -50,6 +68,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +78,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Prompt message for the returned result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -66,6 +88,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful. Values: true: success; false: failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

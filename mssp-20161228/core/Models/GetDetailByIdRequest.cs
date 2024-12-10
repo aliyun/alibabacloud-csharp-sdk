@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetDetailByIdRequest : TeaModel {
         /// <summary>
+        /// <para>Primary key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

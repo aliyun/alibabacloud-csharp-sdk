@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetDocumentPageResponseBody : TeaModel {
         /// <summary>
+        /// <para>Interface response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,19 +19,36 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetDocumentPageResponseBodyData> Data { get; set; }
         public class GetDocumentPageResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Delivered by.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>张三</para>
+            /// </summary>
             [NameInMap("DeliveredBy")]
             [Validation(Required=false)]
             public string DeliveredBy { get; set; }
 
+            /// <summary>
+            /// <para>Report name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>季度报告</para>
+            /// </summary>
             [NameInMap("DocumentName")]
             [Validation(Required=false)]
             public string DocumentName { get; set; }
 
             /// <summary>
+            /// <para>Service report type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -38,6 +57,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string DocumentType { get; set; }
 
             /// <summary>
+            /// <para>Document primary key ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>346409</para>
             /// </summary>
@@ -46,6 +67,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>Report generation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-03-21 17:26:34</para>
             /// </summary>
@@ -56,6 +79,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -64,6 +89,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Prompt message for the response result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -71,11 +98,16 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Pagination information.</para>
+        /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public GetDocumentPageResponseBodyPageInfo PageInfo { get; set; }
         public class GetDocumentPageResponseBodyPageInfo : TeaModel {
             /// <summary>
+            /// <para>The current page number in pagination queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -84,6 +116,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>The number of data items displayed per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -92,6 +126,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of data items found.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3149</para>
             /// </summary>
@@ -102,6 +138,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,6 +149,8 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. - <b>true</b>: The call was successful. - <b>false</b>: The call failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
