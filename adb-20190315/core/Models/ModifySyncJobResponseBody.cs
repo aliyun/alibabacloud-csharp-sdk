@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifySyncJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5AD3D9DF-614F-5B97-9522-A2406A432012</para>
         /// </summary>

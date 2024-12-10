@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifySyncJobRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +32,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +51,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The source instances or clusters.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -54,6 +61,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public List<ModifySyncJobRequestSourceDBCluster> SourceDBCluster { get; set; }
         public class ModifySyncJobRequestSourceDBCluster : TeaModel {
             /// <summary>
+            /// <para>The ID of the source instance or cluster. Separate multiple IDs with commas (,).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -64,6 +72,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string ClusterIds { get; set; }
 
             /// <summary>
+            /// <para>The ID of the synchronization job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dts-xxxxxx</para>
             /// </summary>
@@ -72,6 +82,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>The operation type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Create</description></item>
+            /// <item><description>Modify</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -82,6 +98,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string OperateType { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -92,6 +109,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The source database type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>rds: ApsaraDB RDS.</description></item>
+            /// <item><description>sls: Simple Log Service.</description></item>
+            /// <item><description>polardb: PolarDB.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -104,6 +128,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
+        /// <para>The synchronization platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ADB-CDC</para>
         /// </summary>
