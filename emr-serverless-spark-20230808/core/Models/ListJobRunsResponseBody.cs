@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            [NameInMap("cuHours")]
+            [Validation(Required=false)]
+            public long? CuHours { get; set; }
+
             [NameInMap("displayReleaseVersion")]
             [Validation(Required=false)]
             public string DisplayReleaseVersion { get; set; }
@@ -106,6 +110,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("log")]
             [Validation(Required=false)]
             public RunLog Log { get; set; }
+
+            [NameInMap("mbSeconds")]
+            [Validation(Required=false)]
+            public long? MbSeconds { get; set; }
 
             /// <summary>
             /// <para>The job name.</para>
@@ -182,6 +190,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
+
+            [NameInMap("vcoreSeconds")]
+            [Validation(Required=false)]
+            public long? VcoreSeconds { get; set; }
 
             /// <summary>
             /// <para>The web UI of the job.</para>
