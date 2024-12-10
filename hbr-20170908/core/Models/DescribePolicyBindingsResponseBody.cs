@@ -185,6 +185,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail OssDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail : TeaModel {
+                    /// <summary>
+                    /// <para>不在任务统计和失败文件列表中提示归档型对象</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("IgnoreArchiveObject")]
                     [Validation(Required=false)]
                     public bool? IgnoreArchiveObject { get; set; }
@@ -341,6 +347,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether the resource is automatically associated with the related resource tag in the backup policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -426,11 +434,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public string Exclude { get; set; }
 
+            /// <summary>
+            /// <para>The matched tag rules.</para>
+            /// </summary>
             [NameInMap("HitTags")]
             [Validation(Required=false)]
             public List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> HitTags { get; set; }
             public class DescribePolicyBindingsResponseBodyPolicyBindingsHitTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
                 /// </summary>
@@ -439,6 +452,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag-based matching rule.</para>
+                /// <list type="bullet">
+                /// <item><description><b>EQUAL</b>: Both the tag key and tag value are matched.</description></item>
+                /// <item><description><b>NOT</b>: The tag key is matched and the tag value is not matched.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>EQUAL</para>
                 /// </summary>
@@ -447,6 +466,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Operator { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>prod</para>
                 /// </summary>

@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
+                [NameInMap("CreatedByTag")]
+                [Validation(Required=false)]
+                public bool? CreatedByTag { get; set; }
+
                 /// <summary>
                 /// <para>The time when the backup plan was created. This value is a UNIX timestamp. Unit: seconds.</para>
                 /// 
@@ -217,6 +221,30 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
+
+                [NameInMap("HitTags")]
+                [Validation(Required=false)]
+                public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags HitTags { get; set; }
+                public class DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags : TeaModel {
+                    [NameInMap("HitTag")]
+                    [Validation(Required=false)]
+                    public List<DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag> HitTag { get; set; }
+                    public class DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Operator")]
+                        [Validation(Required=false)]
+                        public string Operator { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>This parameter is valid only when <b>SourceType</b> is set to <b>ECS_FILE</b>. This parameter indicates the paths to the files that are backed up.</para>
