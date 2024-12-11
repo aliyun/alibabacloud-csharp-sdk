@@ -360,6 +360,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 request.HotTopicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotTopics, "hotTopics", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "messages", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StepForBroadcastContentConfig))
             {
                 request.StepForBroadcastContentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StepForBroadcastContentConfig, "stepForBroadcastContentConfig", "json");
@@ -384,6 +388,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCount))
             {
                 body["imageCount"] = request.ImageCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["messages"] = request.MessagesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCustomPromptTemplate))
             {
@@ -460,6 +468,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 request.HotTopicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HotTopics, "hotTopics", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "messages", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StepForBroadcastContentConfig))
             {
                 request.StepForBroadcastContentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StepForBroadcastContentConfig, "stepForBroadcastContentConfig", "json");
@@ -484,6 +496,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCount))
             {
                 body["imageCount"] = request.ImageCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["messages"] = request.MessagesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCustomPromptTemplate))
             {

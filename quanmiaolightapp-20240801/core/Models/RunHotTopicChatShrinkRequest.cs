@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public int? ImageCount { get; set; }
 
+        [NameInMap("messages")]
+        [Validation(Required=false)]
+        public string MessagesShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>xx</para>

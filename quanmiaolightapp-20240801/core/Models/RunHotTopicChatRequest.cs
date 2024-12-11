@@ -37,6 +37,36 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public int? ImageCount { get; set; }
 
+        [NameInMap("messages")]
+        [Validation(Required=false)]
+        public List<RunHotTopicChatRequestMessages> Messages { get; set; }
+        public class RunHotTopicChatRequestMessages : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
+            [NameInMap("content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2024-12-10 18:51:29</para>
+            /// </summary>
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>user</para>
+            /// </summary>
+            [NameInMap("role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>xx</para>
