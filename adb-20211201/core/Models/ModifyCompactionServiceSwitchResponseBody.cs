@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyCompactionServiceSwitchResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21ABF219-10E0-571B-94B8-9C9AE5022BF8</para>
         /// </summary>

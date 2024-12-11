@@ -9,11 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeCompactionServiceSwitchResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeCompactionServiceSwitchResponseBodyData Data { get; set; }
         public class DescribeCompactionServiceSwitchResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the remote build feature is enabled.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -24,6 +34,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D761DA51-12F8-5457-AAA9-F52B9F436D2D</para>
         /// </summary>

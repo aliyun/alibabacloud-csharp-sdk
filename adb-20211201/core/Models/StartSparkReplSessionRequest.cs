@@ -8,33 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class ModifyCompactionServiceSwitchRequest : TeaModel {
+    public class StartSparkReplSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>amv-bp14t95lun0w****</para>
+        /// <para>{ &quot;spark.shuffle.timeout&quot;: &quot;:0s&quot; }</para>
+        /// </summary>
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>amv-bp1mfe9qm****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the remote build feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>test</para>
         /// </summary>
-        [NameInMap("EnableCompactionService")]
+        [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
-        public bool? EnableCompactionService { get; set; }
+        public string ResourceGroupName { get; set; }
 
     }
 
