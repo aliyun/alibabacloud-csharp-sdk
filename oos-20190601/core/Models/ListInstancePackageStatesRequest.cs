@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListInstancePackageStatesRequest : TeaModel {
         /// <summary>
+        /// <para>ECS instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctzxxxxxxx</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>List of extension names</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;template1&quot;,&quot;template2&quot;]</para>
         /// </summary>

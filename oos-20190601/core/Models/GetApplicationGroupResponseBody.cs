@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetApplicationGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the application group.</para>
+        /// <para>The information about the application group.</para>
         /// </summary>
         [NameInMap("ApplicationGroup")]
         [Validation(Required=false)]
@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
+
+            [NameInMap("ApplicationSource")]
+            [Validation(Required=false)]
+            public string ApplicationSource { get; set; }
 
             /// <summary>
             /// <para>The ID of the application group in CloudMonitor.</para>
@@ -116,6 +120,12 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The operation metadata.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;PrometheusConfigMap\&quot;:{\&quot;模板1\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</para>
+            /// </summary>
             [NameInMap("OperationMetadata")]
             [Validation(Required=false)]
             public string OperationMetadata { get; set; }

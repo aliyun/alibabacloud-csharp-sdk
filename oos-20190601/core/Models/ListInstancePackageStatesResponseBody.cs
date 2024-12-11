@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListInstancePackageStatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token string for pagination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctzxxxxxxx</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>List of extensions</para>
+        /// </summary>
         [NameInMap("PackageStates")]
         [Validation(Required=false)]
         public List<ListInstancePackageStatesResponseBodyPackageStates> PackageStates { get; set; }
         public class ListInstancePackageStatesResponseBodyPackageStates : TeaModel {
             /// <summary>
+            /// <para>Description</para>
+            /// 
             /// <b>Example:</b>
             /// <para>template description</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Parameters</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Parameters { get; set; }
 
             /// <summary>
+            /// <para>Publisher</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Publisher { get; set; }
 
             /// <summary>
+            /// <para>Template type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Package</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateCategory { get; set; }
 
             /// <summary>
+            /// <para>Template ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>087b1e11072a40259f6fxxxxxxxxx</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateId { get; set; }
 
             /// <summary>
+            /// <para>Template name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ACS-ECS-Docker</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateName { get; set; }
 
             /// <summary>
+            /// <para>Template version number</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v3</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateVersion { get; set; }
 
             /// <summary>
+            /// <para>Template version name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fix bug</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string TemplateVersionName { get; set; }
 
             /// <summary>
+            /// <para>Update time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-05-04T11:17:28</para>
             /// </summary>
@@ -104,7 +129,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1306108F-610C-40FD-AAD5-XXXXXX</para>

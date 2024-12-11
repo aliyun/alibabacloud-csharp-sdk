@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         }
 
+        [NameInMap("ApplicationSource")]
+        [Validation(Required=false)]
+        public string ApplicationSource { get; set; }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 

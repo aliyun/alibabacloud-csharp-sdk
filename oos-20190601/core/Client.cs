@@ -662,6 +662,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["AlarmConfig"] = request.AlarmConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSource))
+            {
+                query["ApplicationSource"] = request.ApplicationSource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -741,6 +745,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigShrink))
             {
                 query["AlarmConfig"] = request.AlarmConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSource))
+            {
+                query["ApplicationSource"] = request.ApplicationSource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -6019,6 +6027,166 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取参数可用值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTemplateParameterConstraintsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTemplateParameterConstraintsResponse
+        /// </returns>
+        public GetTemplateParameterConstraintsResponse GetTemplateParameterConstraintsWithOptions(GetTemplateParameterConstraintsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContent))
+            {
+                query["TemplateContent"] = request.TemplateContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
+            {
+                query["TemplateURL"] = request.TemplateURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["TemplateVersion"] = request.TemplateVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTemplateParameterConstraints",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTemplateParameterConstraintsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取参数可用值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTemplateParameterConstraintsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTemplateParameterConstraintsResponse
+        /// </returns>
+        public async Task<GetTemplateParameterConstraintsResponse> GetTemplateParameterConstraintsWithOptionsAsync(GetTemplateParameterConstraintsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContent))
+            {
+                query["TemplateContent"] = request.TemplateContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateURL))
+            {
+                query["TemplateURL"] = request.TemplateURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["TemplateVersion"] = request.TemplateVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTemplateParameterConstraints",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTemplateParameterConstraintsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取参数可用值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTemplateParameterConstraintsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTemplateParameterConstraintsResponse
+        /// </returns>
+        public GetTemplateParameterConstraintsResponse GetTemplateParameterConstraints(GetTemplateParameterConstraintsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTemplateParameterConstraintsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取参数可用值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTemplateParameterConstraintsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTemplateParameterConstraintsResponse
+        /// </returns>
+        public async Task<GetTemplateParameterConstraintsResponse> GetTemplateParameterConstraintsAsync(GetTemplateParameterConstraintsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTemplateParameterConstraintsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the available actions, including atomic actions and cloud product actions.</para>
         /// </summary>
         /// 
@@ -7519,7 +7687,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例软件包状态</para>
+        /// <para>List Instance Package States</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7577,7 +7745,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例软件包状态</para>
+        /// <para>List Instance Package States</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7635,7 +7803,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例软件包状态</para>
+        /// <para>List Instance Package States</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7653,7 +7821,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例软件包状态</para>
+        /// <para>List Instance Package States</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12675,7 +12843,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例软件包状态</para>
+        /// <para>Updates the installed extensions of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12743,7 +12911,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例软件包状态</para>
+        /// <para>Updates the installed extensions of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12811,7 +12979,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例软件包状态</para>
+        /// <para>Updates the installed extensions of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12829,7 +12997,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例软件包状态</para>
+        /// <para>Updates the installed extensions of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public bool? HasTrigger { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the template is an example template</para>
+        /// <para>Specifies whether the template is an example template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -41,10 +41,22 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string NewName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the configuration update operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/business/v1/product/spus/{spu_id}</para>
+        /// </summary>
         [NameInMap("OperationName")]
         [Validation(Required=false)]
         public string OperationName { get; set; }
 
+        /// <summary>
+        /// <para>The JSON string that consists of a set of parameters. Default value: {}.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;username&quot;: &quot;xx&quot;}</para>
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }

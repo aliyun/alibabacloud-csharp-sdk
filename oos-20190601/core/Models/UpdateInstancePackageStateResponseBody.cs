@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateInstancePackageStateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2597E94B-5346-42D1-BB58-XXXXXXXXXXX</para>

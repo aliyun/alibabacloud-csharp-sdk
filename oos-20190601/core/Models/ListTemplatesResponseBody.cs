@@ -271,6 +271,12 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string UpdatedDate { get; set; }
 
+            /// <summary>
+            /// <para>The version name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v2.1</para>
+            /// </summary>
             [NameInMap("VersionName")]
             [Validation(Required=false)]
             public string VersionName { get; set; }

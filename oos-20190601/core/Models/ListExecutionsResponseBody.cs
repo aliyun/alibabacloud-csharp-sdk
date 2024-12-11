@@ -197,6 +197,12 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Mode { get; set; }
 
+            /// <summary>
+            /// <para>The next schedule time for timer trigger execution.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-05-16T10:26:14Z</para>
+            /// </summary>
             [NameInMap("NextScheduleTime")]
             [Validation(Required=false)]
             public string NextScheduleTime { get; set; }
