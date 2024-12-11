@@ -634,6 +634,166 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return await GetLoginTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影StsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public GetStsTokenResponse GetStsTokenWithOptions(GetStsTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                body["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                body["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                body["ClientIp"] = request.ClientIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientOS))
+            {
+                body["ClientOS"] = request.ClientOS;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVersion))
+            {
+                body["ClientVersion"] = request.ClientVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                body["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStsToken",
+                Version = "2021-02-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStsTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影StsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public async Task<GetStsTokenResponse> GetStsTokenWithOptionsAsync(GetStsTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                body["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                body["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                body["ClientIp"] = request.ClientIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientOS))
+            {
+                body["ClientOS"] = request.ClientOS;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVersion))
+            {
+                body["ClientVersion"] = request.ClientVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                body["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStsToken",
+                Version = "2021-02-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStsTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影StsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public GetStsTokenResponse GetStsToken(GetStsTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetStsTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取无影StsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public async Task<GetStsTokenResponse> GetStsTokenAsync(GetStsTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetStsTokenWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
