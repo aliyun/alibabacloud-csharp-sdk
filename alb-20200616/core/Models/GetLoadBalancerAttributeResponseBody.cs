@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone and the vSwitch in the zone. A maximum of 10 zones is returned. If the current region supports two or more zones, at least two zones are returned.</para>
+        /// <para>The mappings between zones and vSwitches. At most 10 zones are returned. If the current region supports two or more zones, at least two zones are returned.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
@@ -463,10 +463,26 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public string IntranetAddress { get; set; }
 
+                /// <summary>
+                /// <para>The health status of the private IPv4 address of the ALB instance. 
+                /// This parameter is returned only when the Status of the zone is Active.Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Healthy</b></para>
+                /// </description></item>
+                /// <item><description><para><b>Unhealthy</b></para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Healthy</para>
+                /// </summary>
                 [NameInMap("IntranetAddressHcStatus")]
                 [Validation(Required=false)]
                 public string IntranetAddressHcStatus { get; set; }
 
+                /// <summary>
+                /// <para>The IPv4 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</para>
+                /// </summary>
                 [NameInMap("Ipv4LocalAddresses")]
                 [Validation(Required=false)]
                 public List<string> Ipv4LocalAddresses { get; set; }
@@ -482,16 +498,50 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
 
+                /// <summary>
+                /// <para>The health status of the private IPv6 address of the ALB instance. 
+                /// This parameter is returned only when the Status of the zone is Active.Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Healthy</b></para>
+                /// </description></item>
+                /// <item><description><para><b>Unhealthy</b></para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Healthy</para>
+                /// </summary>
                 [NameInMap("Ipv6AddressHcStatus")]
                 [Validation(Required=false)]
                 public string Ipv6AddressHcStatus { get; set; }
 
+                /// <summary>
+                /// <para>The IPv6 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</para>
+                /// </summary>
                 [NameInMap("Ipv6LocalAddresses")]
                 [Validation(Required=false)]
                 public List<string> Ipv6LocalAddresses { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The zone status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Active</b>: The ALB instance is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopped</b>: The ALB instance is disabled. </para>
+            /// </description></item>
+            /// <item><description><para><b>Shifted</b>: The ALB instance is removed.</para>
+            /// </description></item>
+            /// <item><description><para><b>Starting</b>: The ALB instance is starting.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopping</b>: The ALB instance is stopping.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Active</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

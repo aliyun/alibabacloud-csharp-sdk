@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        [NameInMap("CrossZoneEnabled")]
+        [Validation(Required=false)]
+        public bool? CrossZoneEnabled { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
@@ -124,16 +128,22 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// <para>The domain name that is used for health checks. The domain name must meet the following requirements:</para>
+            /// <para>The domain name that is used for health checks.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Backend Server Internal IP</b> (default): Use the internal IP address of backend servers as the health check domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>Custom Domain Name</b>: Enter a domain name.</para>
             /// <list type="bullet">
             /// <item><description>The domain name must be 1 to 80 characters in length.</description></item>
             /// <item><description>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</description></item>
             /// <item><description>The domain name must contain at least one period (.) but cannot start or end with a period (.).</description></item>
-            /// <item><description>The rightmost field of the domain name can contain only letters and cannot contain digits or hyphens (-).</description></item>
-            /// <item><description>Other fields cannot start or end with a hyphen (-).</description></item>
+            /// <item><description>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</description></item>
+            /// <item><description>The domain name cannot start or end with a hyphen (-).</description></item>
+            /// </list>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckEnabled</b> to true and <b>HealthCheckProtocol</b> to <b>HTTP</b> or <b>HTTPS</b>.</para>
+            /// <para> This parameter takes effect only if <b>HealthCheckProtocol</b> is set to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -211,7 +221,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <list type="bullet">
             /// <item><description><b>HTTP</b>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</description></item>
             /// <item><description><b>HTTPS</b>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</description></item>
-            /// <item><description><b>TCP</b>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</description></item>
+            /// <item><description><b>TCP</b>: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.</description></item>
             /// <item><description><b>gRPC</b>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</description></item>
             /// </list>
             /// 

@@ -2811,13 +2811,21 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["ListenerId"] = request.ListenerId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
             {
-                query["Rules"] = request.Rules;
+                bodyFlat["Rules"] = request.Rules;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2884,13 +2892,21 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["ListenerId"] = request.ListenerId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
             {
-                query["Rules"] = request.Rules;
+                bodyFlat["Rules"] = request.Rules;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3185,6 +3201,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["ConnectionDrainConfig"] = request.ConnectionDrainConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossZoneEnabled))
+            {
+                query["CrossZoneEnabled"] = request.CrossZoneEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -3295,6 +3315,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionDrainConfig))
             {
                 query["ConnectionDrainConfig"] = request.ConnectionDrainConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossZoneEnabled))
+            {
+                query["CrossZoneEnabled"] = request.CrossZoneEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -13936,13 +13960,21 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["DryRun"] = request.DryRun;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
             {
-                query["Rules"] = request.Rules;
+                bodyFlat["Rules"] = request.Rules;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14000,13 +14032,21 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["DryRun"] = request.DryRun;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
             {
-                query["Rules"] = request.Rules;
+                bodyFlat["Rules"] = request.Rules;
             }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14324,6 +14364,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["ConnectionDrainConfig"] = request.ConnectionDrainConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossZoneEnabled))
+            {
+                query["CrossZoneEnabled"] = request.CrossZoneEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -14419,6 +14463,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionDrainConfig))
             {
                 query["ConnectionDrainConfig"] = request.ConnectionDrainConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossZoneEnabled))
+            {
+                query["CrossZoneEnabled"] = request.CrossZoneEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {

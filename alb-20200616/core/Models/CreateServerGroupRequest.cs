@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        [NameInMap("CrossZoneEnabled")]
+        [Validation(Required=false)]
+        public bool? CrossZoneEnabled { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The configuration of health checks.</para>
+        /// <para>The configuration of the health check feature.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HealthCheckConfig")]
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public CreateServerGroupRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class CreateServerGroupRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// <para>The HTTP status codes that are used to indicate whether the backend server passes the health check.</para>
+            /// <para>The HTTP status codes that indicate healthy backend servers.</para>
             /// </summary>
             [NameInMap("HealthCheckCodes")]
             [Validation(Required=false)]
@@ -125,16 +129,22 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// <para>The domain name that is used for health checks. The domain name must meet the following requirements:</para>
+            /// <para>The domain name that is used for health checks.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Backend Server Internal IP</b> (default): Use the internal IP address of backend servers as the health check domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>Custom Domain Name</b>: Enter a domain name.</para>
             /// <list type="bullet">
             /// <item><description>The domain name must be 1 to 80 characters in length.</description></item>
             /// <item><description>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</description></item>
-            /// <item><description>The domain name must contain at least one period (.) but cannot start or end with a period (.).</description></item>
+            /// <item><description>The domain name can contain at least one period (.) but cannot start or end with a period (.).</description></item>
             /// <item><description>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</description></item>
             /// <item><description>The domain name cannot start or end with a hyphen (-).</description></item>
             /// </list>
+            /// </description></item>
+            /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if <b>HealthCheckProtocol</b> is set to <b>HTTP</b> or <b>HTTPS</b>.</para>
+            /// <para> This parameter takes effect only if <b>HealthCheckProtocol</b> is set to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -188,7 +198,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckMethod { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used for health checks.</para>
+            /// <para>The path that is used for health checks.</para>
             /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <c>- / . % ? # &amp; =</c>. It can also contain the following extended characters: <c>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</c>. The URL must start with a forward slash (/).</para>
             /// <remarks>
             /// <para> This parameter takes effect only if <b>HealthCheckProtocol</b> is set to <b>HTTP</b> or <b>HTTPS</b>.</para>
@@ -206,7 +216,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <list type="bullet">
             /// <item><description><b>HTTP</b>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</description></item>
             /// <item><description><b>HTTPS</b>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security than HTTP because HTTPS supports data encryption.</description></item>
-            /// <item><description><b>TCP</b>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</description></item>
+            /// <item><description><b>TCP</b>: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.</description></item>
             /// <item><description><b>gRPC</b>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</description></item>
             /// </list>
             /// 
@@ -230,7 +240,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthCheckTimeout { get; set; }
 
             /// <summary>
-            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>.</para>
+            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <b>fail</b> to <b>success</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>3</b>.</para>
             /// 
@@ -242,7 +252,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthyThreshold { get; set; }
 
             /// <summary>
-            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>.</para>
+            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <b>success</b> to <b>fail</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>3</b>.</para>
             /// 

@@ -115,6 +115,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>是否开启跨可用区转发。（默认开启）</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("CrossZoneEnabled")]
+            [Validation(Required=false)]
+            public bool? CrossZoneEnabled { get; set; }
+
+            /// <summary>
             /// <para>The health check configurations.</para>
             /// </summary>
             [NameInMap("HealthCheckConfig")]
@@ -154,7 +164,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public bool? HealthCheckEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The domain name that is used for health checks. The domain name meets the following requirements:</para>
+                /// <para>The domain name that is used for health checks.</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Backend Server Internal IP</b> (default): Use the internal IP address of backend servers as the health check domain name.</para>
+                /// </description></item>
+                /// <item><description><para><b>Custom Domain Name</b>: Enter a domain name.</para>
                 /// <list type="bullet">
                 /// <item><description>The domain name is 1 to 80 characters in length.</description></item>
                 /// <item><description>The domain name contains lowercase letters, digits, hyphens (-), and periods (.).</description></item>
@@ -162,8 +176,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description>The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).</description></item>
                 /// <item><description>The domain name does not start or end with a hyphen (-).</description></item>
                 /// </list>
+                /// </description></item>
+                /// </list>
                 /// <remarks>
-                /// <para> This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b> or <b>HTTPS</b>.</para>
+                /// <para> This parameter takes effect only if HealthCheckProtocol is set to HTTP, HTTPS, or gRPC.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
