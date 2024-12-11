@@ -222,42 +222,105 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string IpInfo { get; set; }
 
+        /// <summary>
+        /// <para>The information about the monthly summary bills.</para>
+        /// </summary>
         [NameInMap("MonthlySummaryList")]
         [Validation(Required=false)]
         public List<DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList> MonthlySummaryList { get; set; }
         public class DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList : TeaModel {
+            /// <summary>
+            /// <para>The number of days that the instance is activated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("EnableDays")]
             [Validation(Required=false)]
             public int? EnableDays { get; set; }
 
+            /// <summary>
+            /// <para>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("FlowCn")]
             [Validation(Required=false)]
             public long? FlowCn { get; set; }
 
+            /// <summary>
+            /// <para>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("FlowIntl")]
             [Validation(Required=false)]
             public long? FlowIntl { get; set; }
 
+            /// <summary>
+            /// <para>The total number of protected IP addresses in the Chinese mainland.</para>
+            /// <remarks>
+            /// <para> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>28</para>
+            /// </summary>
             [NameInMap("IpCountCn")]
             [Validation(Required=false)]
             public int? IpCountCn { get; set; }
 
+            /// <summary>
+            /// <para>The total number of protected IP addresses outside the Chinese mainland.</para>
+            /// <remarks>
+            /// <para> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("IpCountIntl")]
             [Validation(Required=false)]
             public int? IpCountIntl { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the member.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>112873971277****</para>
+            /// </summary>
             [NameInMap("MemberUid")]
             [Validation(Required=false)]
             public string MemberUid { get; set; }
 
+            /// <summary>
+            /// <para>The total traffic of regular Alibaba Cloud services in the Chinese mainland. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("StandardAssetsFlowCn")]
             [Validation(Required=false)]
             public long? StandardAssetsFlowCn { get; set; }
 
+            /// <summary>
+            /// <para>The total traffic of regular Alibaba Cloud services outside the Chinese mainland. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("StandardAssetsFlowIntl")]
             [Validation(Required=false)]
             public long? StandardAssetsFlowIntl { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the administrator account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>102518028277****</para>
+            /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
             public string Uid { get; set; }

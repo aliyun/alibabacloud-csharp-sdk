@@ -46,12 +46,13 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The bill type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>flow_cn</b>: the bill for the clean bandwidth of elastic IP addresses (EIPs) with Anti-DDoS (Enhanced) enabled in the Chinese mainland</description></item>
-        /// <item><description><b>flow_ov</b>: the bill for the clean bandwidth of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland</description></item>
-        /// <item><description><b>standard_assets_flow_cn</b>: the bill for the clean bandwidth of regular Alibaba Cloud services in the Chinese mainland</description></item>
-        /// <item><description><b>standard_assets_flow_ov</b>: the bill for the clean bandwidth of regular Alibaba Cloud services outside the Chinese mainland</description></item>
-        /// <item><description><b>function</b>: the bill for the basic fee</description></item>
-        /// <item><description><b>ip_count</b>: the bill for protected IP addresses</description></item>
+        /// <item><description><b>flow_cn</b>: the bill for the clean bandwidth of elastic IP addresses (EIPs) with Anti-DDoS (Enhanced) enabled in the Chinese mainland.</description></item>
+        /// <item><description><b>flow_ov</b>: the bill for the clean bandwidth of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland.</description></item>
+        /// <item><description><b>standard_assets_flow_cn</b>: the bill for the clean bandwidth of regular Alibaba Cloud services in the Chinese mainland.</description></item>
+        /// <item><description><b>standard_assets_flow_ov</b>: the bill for the clean bandwidth of regular Alibaba Cloud services outside the Chinese mainland.</description></item>
+        /// <item><description><b>function</b>: the bill for the basic fee.</description></item>
+        /// <item><description><b>ip_count</b>: the bill for protected IP addresses.</description></item>
+        /// <item><description><b>monthly_summary</b>: the monthly summary bill.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
