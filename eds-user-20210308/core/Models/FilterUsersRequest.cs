@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public bool? IncludeDesktopGroupCount { get; set; }
 
+        [NameInMap("IsQueryAllSubOrgs")]
+        [Validation(Required=false)]
+        public bool? IsQueryAllSubOrgs { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.</para>
         /// 

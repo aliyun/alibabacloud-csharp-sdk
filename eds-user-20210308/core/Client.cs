@@ -1603,6 +1603,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["IncludeDesktopGroupCount"] = request.IncludeDesktopGroupCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQueryAllSubOrgs))
+            {
+                query["IsQueryAllSubOrgs"] = request.IsQueryAllSubOrgs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -1694,6 +1698,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDesktopGroupCount))
             {
                 query["IncludeDesktopGroupCount"] = request.IncludeDesktopGroupCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQueryAllSubOrgs))
+            {
+                query["IsQueryAllSubOrgs"] = request.IsQueryAllSubOrgs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
