@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class RefreshObjectCacheByCacheTagRequest : TeaModel {
         /// <summary>
+        /// <para>The tags of Cache. If multiple tags are returned, the tags are separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

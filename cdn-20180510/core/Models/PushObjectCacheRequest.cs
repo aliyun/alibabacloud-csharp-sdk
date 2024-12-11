@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class PushObjectCacheRequest : TeaModel {
         /// <summary>
-        /// <para>The accelerated region where content is to be prefetched. Valid values:</para>
+        /// <para>The acceleration region where content is to be prefetched. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>domestic</b><b>: Chinese mainland</b></description></item>
         /// <item><description><b>overseas</b><b>: regions outside the Chinese mainland</b></description></item>
         /// </list>
-        /// <para>If you do not set this parameter, content in the accelerated region of the domain name is prefetched.</para>
+        /// <para>If you do not set this parameter, content in the service location (specified by parameter Coverage) that you configured for the domain is prefetched. Content is prefetched based on the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the accelerated region is set to <b>Mainland China Only</b>, content in regions in the Chinese mainland is prefetched.</description></item>
-        /// <item><description>If the accelerated region is set to <b>Global</b>, content in all regions is prefetched.</description></item>
-        /// <item><description>If the accelerated region is set to <b>Global (Excluding Mainland China)</b>, content in regions outside the Chinese mainland is prefetched.</description></item>
+        /// <item><description>If the acceleration region is set to <b>Chinese Mainland Only</b>, content in regions in the Chinese mainland is prefetched.</description></item>
+        /// <item><description>If the acceleration region is set to <b>Global</b>, content in all regions is prefetched.</description></item>
+        /// <item><description>If the acceleration region is set to <b>Global (Excluding the Chinese Mainland)</b>, content in regions outside the Chinese mainland is prefetched.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         public string Area { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to prefetch content to POPs. Valid values:</para>
+        /// <para>Specifies whether to prefetch content to L2 points of presence (POPs). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prefetches content to POPs.</description></item>
+        /// <item><description><b>true</b>: prefetches content to L2 POPs.</description></item>
         /// <item><description><b>false</b>: prefetches content to regular POPs. Regular POPs can be L2 POPs or L3 POPs. Default value: <b>false</b>.</description></item>
         /// </list>
         /// 
@@ -61,6 +61,16 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter specifies whether to enable the hash key query mode when you run a prefetch task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: The default mode, in which the submitted URL is used as the hash key for the prefetch.</description></item>
+        /// <item><description>true: In this mode, the actual hash key used for the prefetch is queried based on the configuration of the domain name.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("QueryHashkey")]
         [Validation(Required=false)]
         public bool? QueryHashkey { get; set; }

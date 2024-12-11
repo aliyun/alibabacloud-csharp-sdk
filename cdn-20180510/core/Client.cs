@@ -5583,7 +5583,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeCdnCertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.\n")]
+        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.")]
         // Deprecated
         public DescribeCdnCertificateListResponse DescribeCdnCertificateListWithOptions(DescribeCdnCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5646,7 +5646,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeCdnCertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.\n")]
+        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.")]
         // Deprecated
         public async Task<DescribeCdnCertificateListResponse> DescribeCdnCertificateListWithOptionsAsync(DescribeCdnCertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5706,7 +5706,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeCdnCertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.\n")]
+        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.")]
         // Deprecated
         public DescribeCdnCertificateListResponse DescribeCdnCertificateList(DescribeCdnCertificateListRequest request)
         {
@@ -5737,7 +5737,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeCdnCertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.\n")]
+        [Obsolete("OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.")]
         // Deprecated
         public async Task<DescribeCdnCertificateListResponse> DescribeCdnCertificateListAsync(DescribeCdnCertificateListRequest request)
         {
@@ -24894,7 +24894,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeUserConfigsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeUserConfigs is deprecated\n")]
+        [Obsolete("OpenAPI DescribeUserConfigs is deprecated")]
         // Deprecated
         public DescribeUserConfigsResponse DescribeUserConfigsWithOptions(DescribeUserConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24950,7 +24950,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeUserConfigsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeUserConfigs is deprecated\n")]
+        [Obsolete("OpenAPI DescribeUserConfigs is deprecated")]
         // Deprecated
         public async Task<DescribeUserConfigsResponse> DescribeUserConfigsWithOptionsAsync(DescribeUserConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -25003,7 +25003,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeUserConfigsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeUserConfigs is deprecated\n")]
+        [Obsolete("OpenAPI DescribeUserConfigs is deprecated")]
         // Deprecated
         public DescribeUserConfigsResponse DescribeUserConfigs(DescribeUserConfigsRequest request)
         {
@@ -25027,7 +25027,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// DescribeUserConfigsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeUserConfigs is deprecated\n")]
+        [Obsolete("OpenAPI DescribeUserConfigs is deprecated")]
         // Deprecated
         public async Task<DescribeUserConfigsResponse> DescribeUserConfigsAsync(DescribeUserConfigsRequest request)
         {
@@ -26562,11 +26562,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>\<em>\</em> \<em>\</em></para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ListRealtimeLogDeliveryRequest
         /// </param>
@@ -26599,11 +26594,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <summary>
         /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>\<em>\</em> \<em>\</em></para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListRealtimeLogDeliveryRequest
@@ -26638,11 +26628,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>\<em>\</em> \<em>\</em></para>
-        /// </description>
-        /// 
         /// <returns>
         /// ListRealtimeLogDeliveryResponse
         /// </returns>
@@ -26656,11 +26641,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <summary>
         /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>\<em>\</em> \<em>\</em></para>
-        /// </description>
         /// 
         /// <returns>
         /// ListRealtimeLogDeliveryResponse
@@ -30186,7 +30166,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// SetDomainServerCertificateResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.\n")]
+        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.")]
         // Deprecated
         public SetDomainServerCertificateResponse SetDomainServerCertificateWithOptions(SetDomainServerCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -30274,7 +30254,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// SetDomainServerCertificateResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.\n")]
+        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.")]
         // Deprecated
         public async Task<SetDomainServerCertificateResponse> SetDomainServerCertificateWithOptionsAsync(SetDomainServerCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -30359,7 +30339,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// SetDomainServerCertificateResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.\n")]
+        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.")]
         // Deprecated
         public SetDomainServerCertificateResponse SetDomainServerCertificate(SetDomainServerCertificateRequest request)
         {
@@ -30391,7 +30371,7 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <returns>
         /// SetDomainServerCertificateResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.\n")]
+        [Obsolete("OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.")]
         // Deprecated
         public async Task<SetDomainServerCertificateResponse> SetDomainServerCertificateAsync(SetDomainServerCertificateRequest request)
         {
