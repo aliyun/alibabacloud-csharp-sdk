@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? PrivateIpAddress { get; set; }
 
+        [NameInMap("TemporaryDurationMinutes")]
+        [Validation(Required=false)]
+        public long? TemporaryDurationMinutes { get; set; }
+
     }
 
 }

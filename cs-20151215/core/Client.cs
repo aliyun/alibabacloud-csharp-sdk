@@ -3217,6 +3217,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return await CreateEdgeMachineWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the CreateKubernetesTrigger operation to create a trigger for an application.</para>
@@ -3235,6 +3239,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CreateKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateKubernetesTrigger is deprecated")]
+        // Deprecated
         public CreateKubernetesTriggerResponse CreateKubernetesTriggerWithOptions(CreateKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3275,6 +3281,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateKubernetesTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the CreateKubernetesTrigger operation to create a trigger for an application.</para>
@@ -3293,6 +3303,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CreateKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateKubernetesTrigger is deprecated")]
+        // Deprecated
         public async Task<CreateKubernetesTriggerResponse> CreateKubernetesTriggerWithOptionsAsync(CreateKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3333,6 +3345,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<CreateKubernetesTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the CreateKubernetesTrigger operation to create a trigger for an application.</para>
@@ -3345,6 +3361,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CreateKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateKubernetesTrigger is deprecated")]
+        // Deprecated
         public CreateKubernetesTriggerResponse CreateKubernetesTrigger(CreateKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3352,6 +3370,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return CreateKubernetesTriggerWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the CreateKubernetesTrigger operation to create a trigger for an application.</para>
@@ -3364,6 +3386,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// CreateKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateKubernetesTrigger is deprecated")]
+        // Deprecated
         public async Task<CreateKubernetesTriggerResponse> CreateKubernetesTriggerAsync(CreateKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4591,6 +4615,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DeleteEdgeMachineWithOptionsAsync(edgeMachineid, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID</para>
@@ -4606,6 +4634,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DeleteKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteKubernetesTrigger is deprecated")]
+        // Deprecated
         public DeleteKubernetesTriggerResponse DeleteKubernetesTriggerWithOptions(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4627,6 +4657,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteKubernetesTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID</para>
@@ -4642,6 +4676,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DeleteKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteKubernetesTrigger is deprecated")]
+        // Deprecated
         public async Task<DeleteKubernetesTriggerResponse> DeleteKubernetesTriggerWithOptionsAsync(string Id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4663,6 +4699,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteKubernetesTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID</para>
@@ -4671,6 +4711,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DeleteKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteKubernetesTrigger is deprecated")]
+        // Deprecated
         public DeleteKubernetesTriggerResponse DeleteKubernetesTrigger(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4678,6 +4720,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return DeleteKubernetesTriggerWithOptions(Id, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DeleteKubernetesTrigger operation to delete an application trigger by trigger ID</para>
@@ -4686,6 +4732,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DeleteKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteKubernetesTrigger is deprecated")]
+        // Deprecated
         public async Task<DeleteKubernetesTriggerResponse> DeleteKubernetesTriggerAsync(string Id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7615,6 +7663,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemporaryDurationMinutes))
+            {
+                query["TemporaryDurationMinutes"] = request.TemporaryDurationMinutes;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7666,6 +7718,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
             {
                 query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemporaryDurationMinutes))
+            {
+                query["TemporaryDurationMinutes"] = request.TemporaryDurationMinutes;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8373,6 +8429,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeClustersV1WithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeEdgeMachineActiveProcess is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.</para>
@@ -8388,6 +8448,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeEdgeMachineActiveProcessResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeEdgeMachineActiveProcess is deprecated")]
+        // Deprecated
         public DescribeEdgeMachineActiveProcessResponse DescribeEdgeMachineActiveProcessWithOptions(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8409,6 +8471,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineActiveProcessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeEdgeMachineActiveProcess is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.</para>
@@ -8424,6 +8490,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeEdgeMachineActiveProcessResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeEdgeMachineActiveProcess is deprecated")]
+        // Deprecated
         public async Task<DescribeEdgeMachineActiveProcessResponse> DescribeEdgeMachineActiveProcessWithOptionsAsync(string edgeMachineid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8445,6 +8513,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeEdgeMachineActiveProcessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeEdgeMachineActiveProcess is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.</para>
@@ -8453,6 +8525,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeEdgeMachineActiveProcessResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeEdgeMachineActiveProcess is deprecated")]
+        // Deprecated
         public DescribeEdgeMachineActiveProcessResponse DescribeEdgeMachineActiveProcess(string edgeMachineid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8460,6 +8534,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeEdgeMachineActiveProcessWithOptions(edgeMachineid, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeEdgeMachineActiveProcess is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the DescribeEdgeMachineActiveProcess operation to query the activation progress of a cloud-native box.</para>
@@ -8468,6 +8546,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeEdgeMachineActiveProcessResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeEdgeMachineActiveProcess is deprecated")]
+        // Deprecated
         public async Task<DescribeEdgeMachineActiveProcessResponse> DescribeEdgeMachineActiveProcessAsync(string edgeMachineid)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9149,6 +9229,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeEventsForRegionWithOptionsAsync(regionId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeExternalAgent is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the proxy configurations of a registered cluster based on the cluster ID.</para>
@@ -9172,6 +9256,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeExternalAgentResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeExternalAgent is deprecated")]
+        // Deprecated
         public DescribeExternalAgentResponse DescribeExternalAgentWithOptions(string ClusterId, DescribeExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9204,6 +9290,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeExternalAgentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeExternalAgent is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the proxy configurations of a registered cluster based on the cluster ID.</para>
@@ -9227,6 +9317,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeExternalAgentResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeExternalAgent is deprecated")]
+        // Deprecated
         public async Task<DescribeExternalAgentResponse> DescribeExternalAgentWithOptionsAsync(string ClusterId, DescribeExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9259,6 +9351,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeExternalAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeExternalAgent is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the proxy configurations of a registered cluster based on the cluster ID.</para>
@@ -9276,6 +9372,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeExternalAgentResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeExternalAgent is deprecated")]
+        // Deprecated
         public DescribeExternalAgentResponse DescribeExternalAgent(string ClusterId, DescribeExternalAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9283,6 +9381,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return DescribeExternalAgentWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeExternalAgent is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the proxy configurations of a registered cluster based on the cluster ID.</para>
@@ -9300,6 +9402,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// DescribeExternalAgentResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeExternalAgent is deprecated")]
+        // Deprecated
         public async Task<DescribeExternalAgentResponse> DescribeExternalAgentAsync(string ClusterId, DescribeExternalAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11335,6 +11439,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return await DescribeUserQuotaWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EdgeClusterAddEdgeMachine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.</para>
@@ -11353,6 +11461,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// EdgeClusterAddEdgeMachineResponse
         /// </returns>
+        [Obsolete("OpenAPI EdgeClusterAddEdgeMachine is deprecated")]
+        // Deprecated
         public EdgeClusterAddEdgeMachineResponse EdgeClusterAddEdgeMachineWithOptions(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11389,6 +11499,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<EdgeClusterAddEdgeMachineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EdgeClusterAddEdgeMachine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.</para>
@@ -11407,6 +11521,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// EdgeClusterAddEdgeMachineResponse
         /// </returns>
+        [Obsolete("OpenAPI EdgeClusterAddEdgeMachine is deprecated")]
+        // Deprecated
         public async Task<EdgeClusterAddEdgeMachineResponse> EdgeClusterAddEdgeMachineWithOptionsAsync(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11443,6 +11559,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<EdgeClusterAddEdgeMachineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EdgeClusterAddEdgeMachine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.</para>
@@ -11455,6 +11575,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// EdgeClusterAddEdgeMachineResponse
         /// </returns>
+        [Obsolete("OpenAPI EdgeClusterAddEdgeMachine is deprecated")]
+        // Deprecated
         public EdgeClusterAddEdgeMachineResponse EdgeClusterAddEdgeMachine(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11462,6 +11584,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return EdgeClusterAddEdgeMachineWithOptions(clusterid, edgeMachineid, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EdgeClusterAddEdgeMachine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the EdgeClusterAddEdgeMachine operation to add a cloud-native box to a Container Service for Kubernetes (ACK) Edge cluster.</para>
@@ -11474,6 +11600,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// EdgeClusterAddEdgeMachineResponse
         /// </returns>
+        [Obsolete("OpenAPI EdgeClusterAddEdgeMachine is deprecated")]
+        // Deprecated
         public async Task<EdgeClusterAddEdgeMachineResponse> EdgeClusterAddEdgeMachineAsync(string clusterid, string edgeMachineid, EdgeClusterAddEdgeMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12185,6 +12313,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return await GetClusterDiagnosisResultWithOptionsAsync(clusterId, diagnosisId, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.</para>
@@ -12203,6 +12335,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetKubernetesTrigger is deprecated")]
+        // Deprecated
         public GetKubernetesTriggerResponse GetKubernetesTriggerWithOptions(string ClusterId, GetKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12243,6 +12377,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetKubernetesTriggerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.</para>
@@ -12261,6 +12399,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetKubernetesTrigger is deprecated")]
+        // Deprecated
         public async Task<GetKubernetesTriggerResponse> GetKubernetesTriggerWithOptionsAsync(string ClusterId, GetKubernetesTriggerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12301,6 +12441,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<GetKubernetesTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.</para>
@@ -12313,6 +12457,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetKubernetesTrigger is deprecated")]
+        // Deprecated
         public GetKubernetesTriggerResponse GetKubernetesTrigger(string ClusterId, GetKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12320,6 +12466,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return GetKubernetesTriggerWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetKubernetesTrigger is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>You can call the GetKubernetesTrigger operationto query the triggers of an application by application name.</para>
@@ -12332,6 +12482,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetKubernetesTriggerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetKubernetesTrigger is deprecated")]
+        // Deprecated
         public async Task<GetKubernetesTriggerResponse> GetKubernetesTriggerAsync(string ClusterId, GetKubernetesTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14373,6 +14525,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ModifyClusterAddonWithOptionsAsync(clusterId, componentId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyClusterConfiguration is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.</para>
@@ -14391,6 +14547,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ModifyClusterConfigurationResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyClusterConfiguration is deprecated")]
+        // Deprecated
         public ModifyClusterConfigurationResponse ModifyClusterConfigurationWithOptions(string ClusterId, ModifyClusterConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14419,6 +14577,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyClusterConfiguration is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.</para>
@@ -14437,6 +14599,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ModifyClusterConfigurationResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyClusterConfiguration is deprecated")]
+        // Deprecated
         public async Task<ModifyClusterConfigurationResponse> ModifyClusterConfigurationWithOptionsAsync(string ClusterId, ModifyClusterConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14465,6 +14629,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<ModifyClusterConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyClusterConfiguration is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.</para>
@@ -14477,6 +14645,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ModifyClusterConfigurationResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyClusterConfiguration is deprecated")]
+        // Deprecated
         public ModifyClusterConfigurationResponse ModifyClusterConfiguration(string ClusterId, ModifyClusterConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14484,6 +14654,10 @@ namespace AlibabaCloud.SDK.CS20151215
             return ModifyClusterConfigurationWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyClusterConfiguration is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>This API operation applies only to Container Service for Kubernetes (ACK) managed clusters.</para>
@@ -14496,6 +14670,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// ModifyClusterConfigurationResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyClusterConfiguration is deprecated")]
+        // Deprecated
         public async Task<ModifyClusterConfigurationResponse> ModifyClusterConfigurationAsync(string ClusterId, ModifyClusterConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

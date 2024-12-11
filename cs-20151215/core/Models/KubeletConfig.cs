@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<string> AllowedUnsafeSysctls { get; set; }
 
+        [NameInMap("clusterDNS")]
+        [Validation(Required=false)]
+        public List<string> ClusterDNS { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>5</para>
@@ -28,6 +32,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("containerLogMaxSize")]
         [Validation(Required=false)]
         public string ContainerLogMaxSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("cpuCFSQuota")]
+        [Validation(Required=false)]
+        public bool? CpuCFSQuota { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100ms</para>
+        /// </summary>
+        [NameInMap("cpuCFSQuotaPeriod")]
+        [Validation(Required=false)]
+        public string CpuCFSQuotaPeriod { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -71,6 +91,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>85</para>
+        /// </summary>
+        [NameInMap("imageGCHighThresholdPercent")]
+        [Validation(Required=false)]
+        public int? ImageGCHighThresholdPercent { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>80</para>
+        /// </summary>
+        [NameInMap("imageGCLowThresholdPercent")]
+        [Validation(Required=false)]
+        public int? ImageGCLowThresholdPercent { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
         [NameInMap("kubeAPIBurst")]
@@ -99,6 +135,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>none</para>
+        /// </summary>
+        [NameInMap("memoryManagerPolicy")]
+        [Validation(Required=false)]
+        public string MemoryManagerPolicy { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>-1</para>
+        /// </summary>
+        [NameInMap("podPidsLimit")]
+        [Validation(Required=false)]
+        public long? PodPidsLimit { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
         [NameInMap("readOnlyPort")]
@@ -121,6 +173,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public long? RegistryPullQPS { get; set; }
 
+        [NameInMap("reservedMemory")]
+        [Validation(Required=false)]
+        public List<KubeletConfigReservedMemory> ReservedMemory { get; set; }
+        public class KubeletConfigReservedMemory : TeaModel {
+            [NameInMap("limits")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Limits { get; set; }
+
+            [NameInMap("numaNode")]
+            [Validation(Required=false)]
+            public int? NumaNode { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
@@ -132,6 +198,32 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("systemReserved")]
         [Validation(Required=false)]
         public Dictionary<string, object> SystemReserved { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>restricted</para>
+        /// </summary>
+        [NameInMap("topologyManagerPolicy")]
+        [Validation(Required=false)]
+        public string TopologyManagerPolicy { get; set; }
+
+        [NameInMap("tracing")]
+        [Validation(Required=false)]
+        public KubeletConfigTracing Tracing { get; set; }
+        public class KubeletConfigTracing : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>localhost:4317</para>
+            /// </summary>
+            [NameInMap("endpoint")]
+            [Validation(Required=false)]
+            public string Endpoint { get; set; }
+
+            [NameInMap("samplingRatePerMillion")]
+            [Validation(Required=false)]
+            public int? SamplingRatePerMillion { get; set; }
+
+        }
 
     }
 
