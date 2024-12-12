@@ -4420,7 +4420,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <para>Queries a list of function instances.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListInstancesRequest
         /// </param>
         /// <param name="headers">
@@ -4433,13 +4433,47 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <returns>
         /// ListInstancesResponse
         /// </returns>
-        public ListInstancesResponse ListInstancesWithOptions(string functionName, ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListInstancesResponse ListInstancesWithOptions(string functionName, ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListInstancesShrinkRequest request = new ListInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "instanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceStatus))
+            {
+                request.InstanceStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceStatus, "instanceStatus", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeMs))
+            {
+                query["endTimeMs"] = request.EndTimeMs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["instanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceStatusShrink))
+            {
+                query["instanceStatus"] = request.InstanceStatusShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
                 query["qualifier"] = request.Qualifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartKey))
+            {
+                query["startKey"] = request.StartKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeMs))
+            {
+                query["startTimeMs"] = request.StartTimeMs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithAllActive))
             {
@@ -4470,7 +4504,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <para>Queries a list of function instances.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListInstancesRequest
         /// </param>
         /// <param name="headers">
@@ -4483,13 +4517,47 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <returns>
         /// ListInstancesResponse
         /// </returns>
-        public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(string functionName, ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(string functionName, ListInstancesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListInstancesShrinkRequest request = new ListInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "instanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceStatus))
+            {
+                request.InstanceStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceStatus, "instanceStatus", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeMs))
+            {
+                query["endTimeMs"] = request.EndTimeMs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["instanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceStatusShrink))
+            {
+                query["instanceStatus"] = request.InstanceStatusShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
                 query["qualifier"] = request.Qualifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartKey))
+            {
+                query["startKey"] = request.StartKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeMs))
+            {
+                query["startTimeMs"] = request.StartTimeMs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithAllActive))
             {

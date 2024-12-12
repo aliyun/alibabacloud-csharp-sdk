@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class ListInstancesOutput : TeaModel {
-        [NameInMap("instances")]
+    public class GetInstanceLifecycleEventsOutput : TeaModel {
+        [NameInMap("events")]
         [Validation(Required=false)]
-        public List<InstanceInfo> Instances { get; set; }
+        public List<InstanceEventItem> Events { get; set; }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]

@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class ListInstancesRequest : TeaModel {
+    public class ListInstancesShrinkRequest : TeaModel {
         [NameInMap("endTimeMs")]
         [Validation(Required=false)]
         public long? EndTimeMs { get; set; }
 
         [NameInMap("instanceIds")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string InstanceIdsShrink { get; set; }
 
         [NameInMap("instanceStatus")]
         [Validation(Required=false)]
-        public List<string> InstanceStatus { get; set; }
+        public string InstanceStatusShrink { get; set; }
 
         [NameInMap("limit")]
         [Validation(Required=false)]
