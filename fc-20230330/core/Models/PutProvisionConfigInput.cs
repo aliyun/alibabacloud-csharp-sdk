@@ -25,18 +25,32 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? AlwaysAllocateGPU { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("defaultTarget")]
+        [Validation(Required=false)]
+        public long? DefaultTarget { get; set; }
+
         [NameInMap("scheduledActions")]
         [Validation(Required=false)]
         public List<ScheduledAction> ScheduledActions { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("target")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? Target { get; set; }
 
         [NameInMap("targetTrackingPolicies")]

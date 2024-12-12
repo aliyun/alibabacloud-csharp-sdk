@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("defaultTarget")]
+        [Validation(Required=false)]
+        public long? DefaultTarget { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:124:functions/myFunction</para>
         /// </summary>
         [NameInMap("functionArn")]

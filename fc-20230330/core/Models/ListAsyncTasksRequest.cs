@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? IncludePayload { get; set; }
 
         /// <summary>
-        /// <para>The number of asynchronous tasks to return. Valid values: [1,100]. Default value: 20.</para>
+        /// <para>The number of asynchronous tasks to return. The default value is 20. Valid values: [1,100].</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
