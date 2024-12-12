@@ -30,6 +30,22 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string DisplayLink { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://s2.zimgs.cn/ims?kt=url&at=smstruct&key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&tv=400_400">https://s2.zimgs.cn/ims?kt=url&amp;at=smstruct&amp;key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&amp;sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&amp;tv=400_400</a></para>
+        /// </summary>
+        [NameInMap("hostLogo")]
+        [Validation(Required=false)]
+        public string HostLogo { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>新华网</para>
+        /// </summary>
+        [NameInMap("hostname")]
+        [Validation(Required=false)]
+        public string Hostname { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,6 +120,14 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [NameInMap("score")]
         [Validation(Required=false)]
         public double? Score { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>权威媒体</para>
+        /// </summary>
+        [NameInMap("siteLabel")]
+        [Validation(Required=false)]
+        public string SiteLabel { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

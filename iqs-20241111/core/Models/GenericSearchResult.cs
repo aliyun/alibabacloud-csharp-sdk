@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("sceneItems")]
+        [Validation(Required=false)]
+        public List<SceneItem> SceneItems { get; set; }
+
         [NameInMap("searchInformation")]
         [Validation(Required=false)]
         public SearchInformation SearchInformation { get; set; }
