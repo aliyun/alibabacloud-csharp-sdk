@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The clip parameters for submitting a video production job. You can replace mediaId and text with real values to submit a job. References:</para>
             /// <list type="bullet">
-            /// <item><description><a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a></description></item>
-            /// <item><description><a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a></description></item>
+            /// <item><description><a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a></description></item>
+            /// <item><description><a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <summary>
             /// <para>The template configurations.</para>
             /// <list type="bullet">
-            /// <item><description>For more information about the configurations of a regular template, see <a href="https://help.aliyun.com/document_detail/277430.html">Config object of a regular template</a>.</description></item>
-            /// <item><description>For more information about the configurations of an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html#title-3tf-skt-eoi">Create and use advanced templates</a>.</description></item>
+            /// <item><description>For more information about the configurations of a regular template, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</description></item>
+            /// <item><description>For more information about the configurations of an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

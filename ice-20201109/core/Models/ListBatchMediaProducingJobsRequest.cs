@@ -72,11 +72,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// </list>
         /// <!---->
         /// 
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>

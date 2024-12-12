@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateLiveRecordTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>代表资源名称的资源属性字段</para>
+        /// <para>The template name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>录制格式</para>
+        /// <para>The list of recording formats.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RecordFormat")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RecordFormatShrink { get; set; }
 
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

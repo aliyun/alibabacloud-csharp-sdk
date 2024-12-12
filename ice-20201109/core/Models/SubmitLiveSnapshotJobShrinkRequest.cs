@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveSnapshotJobShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The snapshot callback URL.</para>
+        /// <list type="bullet">
+        /// <item><description>It cannot exceed 255 characters in length.</description></item>
+        /// <item><description>Both HTTP and HTTPS URLs are supported.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></para>
         /// </summary>
@@ -18,6 +24,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
+        /// <para>The name of the job.</para>
+        /// <list type="bullet">
+        /// <item><description>It cannot exceed 128 characters in length.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JobName")]
@@ -25,6 +35,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para>The information about the output snapshot.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SnapshotOutput")]
@@ -32,6 +43,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SnapshotOutputShrink { get; set; }
 
         /// <summary>
+        /// <para>The information about the input stream.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamInput")]
@@ -39,6 +51,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string StreamInputShrink { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

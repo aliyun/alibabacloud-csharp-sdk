@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public float? EndTime { get; set; }
 
+                [NameInMap("Expression")]
+                [Validation(Required=false)]
+                public string Expression { get; set; }
+
                 /// <summary>
                 /// <para>The start time of the clip. Unit: seconds. The value is of the Float type.</para>
                 /// 

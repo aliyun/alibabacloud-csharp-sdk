@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLiveSnapshotFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The list of timestamps when the jobs were created. The values are UNIX timestamps representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A maximum of 200 jobs can be deleted at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateTimestampList")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<long?> CreateTimestampList { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to delete the original files at the same time. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? DeleteOriginalFile { get; set; }
 
         /// <summary>
+        /// <para>The ID of the snapshot job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

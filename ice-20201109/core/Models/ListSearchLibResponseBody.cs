@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSearchLibResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Information about search libraries.</para>
+        /// </summary>
         [NameInMap("SearchLibInfoList")]
         [Validation(Required=false)]
         public List<ListSearchLibResponseBodySearchLibInfoList> SearchLibInfoList { get; set; }
         public class ListSearchLibResponseBodySearchLibInfoList : TeaModel {
             /// <summary>
+            /// <para>The search library.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>faceSearchLib</para>
             /// </summary>
@@ -38,6 +47,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string SearchLibName { get; set; }
 
             /// <summary>
+            /// <para>The status of the search library.</para>
+            /// <list type="bullet">
+            /// <item><description>normal</description></item>
+            /// <item><description>deleting</description></item>
+            /// <item><description>deleteFail</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>normal</para>
             /// </summary>
@@ -48,12 +64,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
+
+        /// <summary>
+        /// <para>总数。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
+        /// </summary>
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitLiveRecordJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>代表资源名称的资源属性字段</para>
+        /// <para>The name of the recording job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>回调地址</para>
+        /// <para>The callback URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></para>
@@ -31,6 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NotifyUrl { get; set; }
 
         /// <summary>
+        /// <para>The storage address of the recording.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RecordOutput")]
@@ -38,6 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RecordOutputShrink { get; set; }
 
         /// <summary>
+        /// <para>The URL of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamInput")]
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string StreamInputShrink { get; set; }
 
         /// <summary>
-        /// <para>录制模板ID</para>
+        /// <para>The ID of the recording template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

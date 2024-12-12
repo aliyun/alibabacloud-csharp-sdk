@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveRecordTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -25,12 +29,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The list of recording templates.</para>
+        /// </summary>
         [NameInMap("RecordTemplateList")]
         [Validation(Required=false)]
         public List<ListLiveRecordTemplatesResponseBodyRecordTemplateList> RecordTemplateList { get; set; }
         public class ListLiveRecordTemplatesResponseBodyRecordTemplateList : TeaModel {
             /// <summary>
-            /// <para>代表创建时间的资源属性字段</para>
+            /// <para>The time when the job was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -41,7 +48,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>最后修改时间</para>
+            /// <para>The time when the template was last modified.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -52,7 +59,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>代表资源名称的资源属性字段</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test template</para>
@@ -62,13 +69,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>录制格式</para>
+            /// <para>The list of recording formats.</para>
             /// </summary>
             [NameInMap("RecordFormatList")]
             [Validation(Required=false)]
             public List<ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList> RecordFormatList { get; set; }
             public class ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList : TeaModel {
                 /// <summary>
+                /// <para>The duration of the recording cycle. Unit: seconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>21600</para>
                 /// </summary>
@@ -77,7 +86,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? CycleDuration { get; set; }
 
                 /// <summary>
-                /// <para>格式</para>
+                /// <para>The output file format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m3u8</para>
@@ -87,7 +96,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>Oss对象名，不包含后缀</para>
+                /// <para>The name of the recording file that is stored in Object Storage Service (OSS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</para>
@@ -97,7 +106,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string OssObjectPrefix { get; set; }
 
                 /// <summary>
-                /// <para>切片时长</para>
+                /// <para>The duration of a single segment. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -107,7 +116,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public int? SliceDuration { get; set; }
 
                 /// <summary>
-                /// <para>切片Oss对象名，不包含后缀</para>
+                /// <para>The name of the TS segment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>record/{JobId}/{UnixTimestamp}_{Sequence}</para>
@@ -119,7 +128,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>代表资源一级ID的资源属性字段</para>
+            /// <para>The template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</para>
@@ -129,7 +138,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>代表资源名称的资源属性字段</para>
+            /// <para>The type of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -141,6 +150,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA98A0C-7870-15FE-B96F-8880BB600A2C</para>
         /// </summary>
@@ -149,6 +160,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The sorting order. By default, the query results are sorted by creation time in descending order.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>asc: sorts the query results in ascending order.</description></item>
+        /// <item><description>desc: sorts the query results in descending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -157,6 +175,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

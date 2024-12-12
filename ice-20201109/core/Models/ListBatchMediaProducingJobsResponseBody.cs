@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/zh/ims/use-cases/to-configure-a-callback-when-a-clip-completes">Configure a callback upon editing completion</a>.</para>
+            /// <para>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</para>
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]

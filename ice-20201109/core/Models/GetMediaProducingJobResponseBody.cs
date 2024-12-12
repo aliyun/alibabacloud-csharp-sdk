@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
+            [NameInMap("Progress")]
+            [Validation(Required=false)]
+            public int? Progress { get; set; }
+
             /// <summary>
             /// <para>The ID of the online editing project.</para>
             /// 

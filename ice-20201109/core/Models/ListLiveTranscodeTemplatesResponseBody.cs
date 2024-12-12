@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLiveTranscodeTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of transcoding templates.</para>
+        /// </summary>
         [NameInMap("TemplateContentList")]
         [Validation(Required=false)]
         public List<ListLiveTranscodeTemplatesResponseBodyTemplateContentList> TemplateContentList { get; set; }
         public class ListLiveTranscodeTemplatesResponseBodyTemplateContentList : TeaModel {
             /// <summary>
+            /// <para>The category of the template. Valid values:</para>
+            /// 
             /// <b>Example:</b>
             /// <para>system</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <para>The time when the job was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-07-20T03:26:36Z</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The template name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my_template</para>
             /// </summary>
@@ -45,15 +56,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The configuration of the template.</para>
+            /// </summary>
             [NameInMap("TemplateConfig")]
             [Validation(Required=false)]
             public ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfig TemplateConfig { get; set; }
             public class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfig : TeaModel {
+                /// <summary>
+                /// <para>The audio parameters.</para>
+                /// </summary>
                 [NameInMap("AudioParams")]
                 [Validation(Required=false)]
                 public ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigAudioParams AudioParams { get; set; }
                 public class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigAudioParams : TeaModel {
                     /// <summary>
+                    /// <para>The audio bitrate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
                     /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
+                    /// <para>The number of sound channels.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
                     /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Channels { get; set; }
 
                     /// <summary>
+                    /// <para>The audio codec.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AAC</para>
                     /// </summary>
@@ -78,6 +101,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Codec { get; set; }
 
                     /// <summary>
+                    /// <para>The encoding profile.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>aac_low</para>
                     /// </summary>
@@ -86,6 +111,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Profile { get; set; }
 
                     /// <summary>
+                    /// <para>The audio sampling rate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>44100</para>
                     /// </summary>
@@ -95,11 +122,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 }
 
+                /// <summary>
+                /// <para>The video parameters.</para>
+                /// </summary>
                 [NameInMap("VideoParams")]
                 [Validation(Required=false)]
                 public ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigVideoParams VideoParams { get; set; }
                 public class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigVideoParams : TeaModel {
                     /// <summary>
+                    /// <para>The video bitrate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2500</para>
                     /// </summary>
@@ -108,6 +140,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
+                    /// <para>The encoding format.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>264</para>
                     /// </summary>
@@ -116,6 +150,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Codec { get; set; }
 
                     /// <summary>
+                    /// <para>The video frame rate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
                     /// </summary>
@@ -124,6 +160,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Fps { get; set; }
 
                     /// <summary>
+                    /// <para>The group of pictures (GOP) of the output video. Unit: frame.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
                     /// </summary>
@@ -132,6 +170,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Gop { get; set; }
 
                     /// <summary>
+                    /// <para>The vertical resolution of the video.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1280</para>
                     /// </summary>
@@ -140,6 +180,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Height { get; set; }
 
                     /// <summary>
+                    /// <para>The encoding profile.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
                     /// </summary>
@@ -148,6 +190,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Profile { get; set; }
 
                     /// <summary>
+                    /// <para>The horizontal resolution of the video.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>720</para>
                     /// </summary>
@@ -160,6 +204,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <para>The template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>9b1571b513cb44f7a1ba6ae561ff46f7</para>
             /// </summary>
@@ -168,6 +214,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TemplateId { get; set; }
 
             /// <summary>
+            /// <para>The type of the template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>normal</para>
             /// </summary>
@@ -178,6 +226,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

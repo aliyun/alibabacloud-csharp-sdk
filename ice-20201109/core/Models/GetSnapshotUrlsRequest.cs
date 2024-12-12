@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The order that you use to sort the query results. Valid values: Asc and Desc.</para>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
+        /// <item><description><para>Asc</para>
+        /// </description></item>
+        /// <item><description><para>Desc</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

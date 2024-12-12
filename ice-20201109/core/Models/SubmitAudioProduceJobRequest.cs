@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The audio editing configurations.</para>
         /// <list type="bullet">
-        /// <item><description>voice: the <a href="https://help.aliyun.com/document_detail/402424.html">voice type</a>.</description></item>
+        /// <item><description>voice: the <a href="https://help.aliyun.com/document_detail/449563.html">voice type</a>.</description></item>
         /// <item><description>customizedVoice: the ID of the personalized human voice.</description></item>
         /// <item><description>format: the format of the output file. Valid values: PCM, WAV, and MP3.</description></item>
         /// <item><description>volume: the volume. Default value: 50. Valid values: 0 to 100.</description></item>

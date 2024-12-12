@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchIndexJobRerunRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media asset. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaIds { get; set; }
 
         /// <summary>
+        /// <para>The search library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-1</para>
         /// </summary>
@@ -28,6 +31,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SearchLibName { get; set; }
 
         /// <summary>
+        /// <para>The type of the job. Separate multiple types with commas (,).</para>
+        /// <list type="bullet">
+        /// <item><description>aiLabel: smart tagging.</description></item>
+        /// <item><description>face: face recognition.</description></item>
+        /// <item><description>mm: large visual model.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>AiLabel,Face,Mm</para>
         /// </summary>

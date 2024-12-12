@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// </ol>
             /// <para>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</para>
             /// <remarks>
-            /// <para> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</para>
+            /// <para> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -42,10 +42,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <item><description>OSS: an Object Storage Service (OSS) object.</description></item>
             /// <item><description>Media: a media asset.</description></item>
             /// </ol>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description></description></item>
-            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +79,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// </list>
             /// <para>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</para>
             /// <remarks>
-            /// <para> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/440592.html">Storage Management</a> page of the IMS console.</para>
+            /// <para> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -100,10 +96,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <item><description>OSS: an OSS object.</description></item>
             /// <item><description>Media: a media asset.</description></item>
             /// </ol>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description></description></item>
-            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -238,6 +230,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
                     /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
                     /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>01:59:59.999 or 32000.23</para>
                     /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
@@ -249,6 +244,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
                     /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
                     /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>01:59:59.999 or 32000.23</para>
                     /// </summary>
                     [NameInMap("End")]
                     [Validation(Required=false)]
@@ -260,6 +258,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     /// <item><description>Format: <c>hh:mm:ss[.SSS]</c> or <c>sssss[.SSS]</c>.</description></item>
                     /// <item><description>Valid values: <c>[00:00:00.000,23:59:59.999]</c> or <c>[0.000,86399.999]</c>.</description></item>
                     /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>01:59:59.999 or 32000.23</para>
                     /// </summary>
                     [NameInMap("Seek")]
                     [Validation(Required=false)]

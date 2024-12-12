@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string BailianAppParams { get; set; }
 
+            [NameInMap("EnableIntelligentSegment")]
+            [Validation(Required=false)]
+            public bool? EnableIntelligentSegment { get; set; }
+
             [NameInMap("EnablePushToTalk")]
             [Validation(Required=false)]
             public bool? EnablePushToTalk { get; set; }
@@ -40,6 +44,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Greeting")]
             [Validation(Required=false)]
             public string Greeting { get; set; }
+
+            [NameInMap("LlmHistory")]
+            [Validation(Required=false)]
+            public List<AIAgentTemplateConfigAvatarChat3DLlmHistory> LlmHistory { get; set; }
+            public class AIAgentTemplateConfigAvatarChat3DLlmHistory : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
+
+            }
+
+            [NameInMap("LlmHistoryLimit")]
+            [Validation(Required=false)]
+            public int? LlmHistoryLimit { get; set; }
 
             [NameInMap("MaxIdleTime")]
             [Validation(Required=false)]
@@ -68,6 +90,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Volume")]
             [Validation(Required=false)]
             public long? Volume { get; set; }
+
+            [NameInMap("WakeUpQuery")]
+            [Validation(Required=false)]
+            public string WakeUpQuery { get; set; }
 
             [NameInMap("WorkflowOverrideParams")]
             [Validation(Required=false)]
@@ -107,6 +133,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("LlmHistory")]
+            [Validation(Required=false)]
+            public List<AIAgentTemplateConfigVisionChatLlmHistory> LlmHistory { get; set; }
+            public class AIAgentTemplateConfigVisionChatLlmHistory : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
+
+            }
+
+            [NameInMap("LlmHistoryLimit")]
+            [Validation(Required=false)]
+            public int? LlmHistoryLimit { get; set; }
+
             [NameInMap("MaxIdleTime")]
             [Validation(Required=false)]
             public int? MaxIdleTime { get; set; }
@@ -134,6 +178,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Volume")]
             [Validation(Required=false)]
             public long? Volume { get; set; }
+
+            [NameInMap("WakeUpQuery")]
+            [Validation(Required=false)]
+            public string WakeUpQuery { get; set; }
 
             [NameInMap("WorkflowOverrideParams")]
             [Validation(Required=false)]
@@ -161,6 +209,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string BailianAppParams { get; set; }
 
+            [NameInMap("EnableIntelligentSegment")]
+            [Validation(Required=false)]
+            public bool? EnableIntelligentSegment { get; set; }
+
             [NameInMap("EnablePushToTalk")]
             [Validation(Required=false)]
             public bool? EnablePushToTalk { get; set; }
@@ -176,6 +228,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Greeting")]
             [Validation(Required=false)]
             public string Greeting { get; set; }
+
+            [NameInMap("LlmHistory")]
+            [Validation(Required=false)]
+            public List<AIAgentTemplateConfigVoiceChatLlmHistory> LlmHistory { get; set; }
+            public class AIAgentTemplateConfigVoiceChatLlmHistory : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
+
+            }
+
+            [NameInMap("LlmHistoryLimit")]
+            [Validation(Required=false)]
+            public int? LlmHistoryLimit { get; set; }
 
             [NameInMap("MaxIdleTime")]
             [Validation(Required=false)]
@@ -204,6 +274,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Volume")]
             [Validation(Required=false)]
             public long? Volume { get; set; }
+
+            [NameInMap("WakeUpQuery")]
+            [Validation(Required=false)]
+            public string WakeUpQuery { get; set; }
 
             [NameInMap("WorkflowOverrideParams")]
             [Validation(Required=false)]

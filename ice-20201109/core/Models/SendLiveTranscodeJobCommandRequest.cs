@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SendLiveTranscodeJobCommandRequest : TeaModel {
         /// <summary>
+        /// <para>The operation command. Only the stop command is supported. This command is used to stop a transcoding job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Command { get; set; }
 
         /// <summary>
+        /// <para>The ID of the transcoding job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

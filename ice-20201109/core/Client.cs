@@ -636,9 +636,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -717,9 +717,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -798,9 +798,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -825,9 +825,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// <item><description>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -2391,8 +2391,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播录制模板</para>
+        /// <para>Creates a live stream recording template to submit live stream recording jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateLiveRecordTemplateRequest
@@ -2443,8 +2448,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播录制模板</para>
+        /// <para>Creates a live stream recording template to submit live stream recording jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateLiveRecordTemplateRequest
@@ -2495,8 +2505,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播录制模板</para>
+        /// <para>Creates a live stream recording template to submit live stream recording jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLiveRecordTemplateRequest
@@ -2513,8 +2528,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播录制模板</para>
+        /// <para>Creates a live stream recording template to submit live stream recording jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLiveRecordTemplateRequest
@@ -2531,7 +2551,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图模板</para>
+        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2585,7 +2605,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图模板</para>
+        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2639,7 +2659,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图模板</para>
+        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2657,7 +2677,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图模板</para>
+        /// <para>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2675,7 +2695,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建转码模版</para>
+        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2731,7 +2751,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建转码模版</para>
+        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2787,7 +2807,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建转码模版</para>
+        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2805,7 +2825,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建转码模版</para>
+        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4839,7 +4859,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时媒体服务-删除录制文件</para>
+        /// <para>Deletes live stream recording files. You can choose to delete only the recording files or delete both the recording files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4885,7 +4905,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时媒体服务-删除录制文件</para>
+        /// <para>Deletes live stream recording files. You can choose to delete only the recording files or delete both the recording files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4931,7 +4951,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时媒体服务-删除录制文件</para>
+        /// <para>Deletes live stream recording files. You can choose to delete only the recording files or delete both the recording files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4949,7 +4969,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时媒体服务-删除录制文件</para>
+        /// <para>Deletes live stream recording files. You can choose to delete only the recording files or delete both the recording files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4967,7 +4987,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播录制模板</para>
+        /// <para>Deletes a live stream recording template without affecting existing jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5009,7 +5029,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播录制模板</para>
+        /// <para>Deletes a live stream recording template without affecting existing jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5051,7 +5071,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播录制模板</para>
+        /// <para>Deletes a live stream recording template without affecting existing jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5069,7 +5089,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播录制模板</para>
+        /// <para>Deletes a live stream recording template without affecting existing jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5087,7 +5107,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除直播截图文件</para>
+        /// <para>Deletes live stream snapshot files. You can choose to delete only the snapshot files or delete both the snapshot files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5143,7 +5163,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除直播截图文件</para>
+        /// <para>Deletes live stream snapshot files. You can choose to delete only the snapshot files or delete both the snapshot files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5199,7 +5219,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除直播截图文件</para>
+        /// <para>Deletes live stream snapshot files. You can choose to delete only the snapshot files or delete both the snapshot files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5217,7 +5237,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除直播截图文件</para>
+        /// <para>Deletes live stream snapshot files. You can choose to delete only the snapshot files or delete both the snapshot files and the original Object Storage Service (OSS) files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5235,7 +5255,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播截图模板</para>
+        /// <para>Deletes a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5277,7 +5297,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播截图模板</para>
+        /// <para>Deletes a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5319,7 +5339,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播截图模板</para>
+        /// <para>Deletes a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5337,7 +5357,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播截图模板</para>
+        /// <para>Deletes a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5475,7 +5495,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定转码模版</para>
+        /// <para>Deletes a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5517,7 +5537,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定转码模版</para>
+        /// <para>Deletes a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5559,7 +5579,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定转码模版</para>
+        /// <para>Deletes a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5577,7 +5597,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定转码模版</para>
+        /// <para>Deletes a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10137,7 +10157,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件回调地址</para>
+        /// <para>Queries event callback configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10170,7 +10190,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件回调地址</para>
+        /// <para>Queries event callback configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10203,7 +10223,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件回调地址</para>
+        /// <para>Queries event callback configurations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10217,7 +10237,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件回调地址</para>
+        /// <para>Queries event callback configurations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10495,7 +10515,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务明细</para>
+        /// <para>Queries the information about a live stream recording job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10533,7 +10553,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务明细</para>
+        /// <para>Queries the information about a live stream recording job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10571,7 +10591,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务明细</para>
+        /// <para>Queries the information about a live stream recording job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10589,7 +10609,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务明细</para>
+        /// <para>Queries the information about a live stream recording job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10607,7 +10627,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板详情</para>
+        /// <para>Queries the information about a live stream recording template or a snapshot of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10645,7 +10665,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板详情</para>
+        /// <para>Queries the information about a live stream recording template or a snapshot of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10683,7 +10703,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板详情</para>
+        /// <para>Queries the information about a live stream recording template or a snapshot of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10701,7 +10721,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板详情</para>
+        /// <para>Queries the information about a live stream recording template or a snapshot of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10719,7 +10739,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务</para>
+        /// <para>Queries the information a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10757,7 +10777,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务</para>
+        /// <para>Queries the information a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10795,7 +10815,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务</para>
+        /// <para>Queries the information a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10813,7 +10833,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务</para>
+        /// <para>Queries the information a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10831,7 +10851,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板</para>
+        /// <para>Queries the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10869,7 +10889,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板</para>
+        /// <para>Queries the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10907,7 +10927,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板</para>
+        /// <para>Queries the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10925,7 +10945,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板</para>
+        /// <para>Queries the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10943,7 +10963,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务详情</para>
+        /// <para>Queries the information about a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10985,7 +11005,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务详情</para>
+        /// <para>Queries the information about a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11027,7 +11047,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务详情</para>
+        /// <para>Queries the information about a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11045,7 +11065,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务详情</para>
+        /// <para>Queries the information about a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11063,7 +11083,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版详情</para>
+        /// <para>Queries the information a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11105,7 +11125,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版详情</para>
+        /// <para>Queries the information a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11147,7 +11167,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版详情</para>
+        /// <para>Queries the information a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11165,7 +11185,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版详情</para>
+        /// <para>Queries the information a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12870,8 +12890,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12925,8 +12945,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12980,8 +13000,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13007,8 +13027,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15867,7 +15887,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制文件</para>
+        /// <para>Queries all recording index files in the specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15905,7 +15925,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制文件</para>
+        /// <para>Queries all recording index files in the specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15943,7 +15963,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制文件</para>
+        /// <para>Queries all recording index files in the specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15961,7 +15981,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制文件</para>
+        /// <para>Queries all recording index files in the specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15979,7 +15999,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务</para>
+        /// <para>Queries a list of live stream recording jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16017,7 +16037,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务</para>
+        /// <para>Queries a list of live stream recording jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16055,7 +16075,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务</para>
+        /// <para>Queries a list of live stream recording jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16073,7 +16093,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务</para>
+        /// <para>Queries a list of live stream recording jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16091,7 +16111,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板</para>
+        /// <para>Queries a list of live stream recording templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16129,7 +16149,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板</para>
+        /// <para>Queries a list of live stream recording templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16167,7 +16187,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板</para>
+        /// <para>Queries a list of live stream recording templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16185,7 +16205,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播录制模板</para>
+        /// <para>Queries a list of live stream recording templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16203,7 +16223,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图文件列表</para>
+        /// <para>Queries a list of live stream snapshot files by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16241,7 +16261,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图文件列表</para>
+        /// <para>Queries a list of live stream snapshot files by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16279,7 +16299,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图文件列表</para>
+        /// <para>Queries a list of live stream snapshot files by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16297,7 +16317,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图文件列表</para>
+        /// <para>Queries a list of live stream snapshot files by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16315,7 +16335,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务列表</para>
+        /// <para>Queries a list of live stream snapshot jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16353,7 +16373,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务列表</para>
+        /// <para>Queries a list of live stream snapshot jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16391,7 +16411,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务列表</para>
+        /// <para>Queries a list of live stream snapshot jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16409,7 +16429,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图任务列表</para>
+        /// <para>Queries a list of live stream snapshot jobs by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16427,7 +16447,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板列表</para>
+        /// <para>Queries a list of live stream snapshot templates by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16465,7 +16485,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板列表</para>
+        /// <para>Queries a list of live stream snapshot templates by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16503,7 +16523,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板列表</para>
+        /// <para>Queries a list of live stream snapshot templates by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16521,7 +16541,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询直播截图模板列表</para>
+        /// <para>Queries a list of live stream snapshot templates by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16539,7 +16559,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务列表</para>
+        /// <para>Queries a list of live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16605,7 +16625,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务列表</para>
+        /// <para>Queries a list of live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16671,7 +16691,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务列表</para>
+        /// <para>Queries a list of live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16689,7 +16709,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码任务列表</para>
+        /// <para>Queries a list of live stream transcoding jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16707,7 +16727,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版列表</para>
+        /// <para>Queries a list of live stream transcoding templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16773,7 +16793,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版列表</para>
+        /// <para>Queries a list of live stream transcoding templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16839,7 +16859,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版列表</para>
+        /// <para>Queries a list of live stream transcoding templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16857,7 +16877,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询转码模版列表</para>
+        /// <para>Queries a list of live stream transcoding templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18039,7 +18059,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取搜索库列表</para>
+        /// <para>Queries the information about search libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18085,7 +18105,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取搜索库列表</para>
+        /// <para>Queries the information about search libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18131,7 +18151,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取搜索库列表</para>
+        /// <para>Queries the information about search libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18149,7 +18169,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取搜索库列表</para>
+        /// <para>Queries the information about search libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19349,6 +19369,286 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询版权水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightExtractJobResponse
+        /// </returns>
+        public QueryCopyrightExtractJobResponse QueryCopyrightExtractJobWithOptions(QueryCopyrightExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询版权水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightExtractJobResponse
+        /// </returns>
+        public async Task<QueryCopyrightExtractJobResponse> QueryCopyrightExtractJobWithOptionsAsync(QueryCopyrightExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询版权水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightExtractJobResponse
+        /// </returns>
+        public QueryCopyrightExtractJobResponse QueryCopyrightExtractJob(QueryCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCopyrightExtractJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询版权水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightExtractJobResponse
+        /// </returns>
+        public async Task<QueryCopyrightExtractJobResponse> QueryCopyrightExtractJobAsync(QueryCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCopyrightExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频版权水印任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightJobListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightJobListResponse
+        /// </returns>
+        public QueryCopyrightJobListResponse QueryCopyrightJobListWithOptions(QueryCopyrightJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightJobList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightJobListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频版权水印任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightJobListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightJobListResponse
+        /// </returns>
+        public async Task<QueryCopyrightJobListResponse> QueryCopyrightJobListWithOptionsAsync(QueryCopyrightJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCopyrightJobList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCopyrightJobListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频版权水印任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightJobListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightJobListResponse
+        /// </returns>
+        public QueryCopyrightJobListResponse QueryCopyrightJobList(QueryCopyrightJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCopyrightJobListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频版权水印任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCopyrightJobListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCopyrightJobListResponse
+        /// </returns>
+        public async Task<QueryCopyrightJobListResponse> QueryCopyrightJobListAsync(QueryCopyrightJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCopyrightJobListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of media fingerprint analysis jobs.</para>
         /// </summary>
         /// 
@@ -20541,6 +20841,438 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceAbJobListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceAbJobListResponse
+        /// </returns>
+        public QueryTraceAbJobListResponse QueryTraceAbJobListWithOptions(QueryTraceAbJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceMediaId))
+            {
+                query["TraceMediaId"] = request.TraceMediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceAbJobList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceAbJobListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceAbJobListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceAbJobListResponse
+        /// </returns>
+        public async Task<QueryTraceAbJobListResponse> QueryTraceAbJobListWithOptionsAsync(QueryTraceAbJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceMediaId))
+            {
+                query["TraceMediaId"] = request.TraceMediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceAbJobList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceAbJobListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceAbJobListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceAbJobListResponse
+        /// </returns>
+        public QueryTraceAbJobListResponse QueryTraceAbJobList(QueryTraceAbJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryTraceAbJobListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceAbJobListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceAbJobListResponse
+        /// </returns>
+        public async Task<QueryTraceAbJobListResponse> QueryTraceAbJobListAsync(QueryTraceAbJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryTraceAbJobListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceExtractJobResponse
+        /// </returns>
+        public QueryTraceExtractJobResponse QueryTraceExtractJobWithOptions(QueryTraceExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceExtractJobResponse
+        /// </returns>
+        public async Task<QueryTraceExtractJobResponse> QueryTraceExtractJobWithOptionsAsync(QueryTraceExtractJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceExtractJobResponse
+        /// </returns>
+        public QueryTraceExtractJobResponse QueryTraceExtractJob(QueryTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryTraceExtractJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceExtractJobResponse
+        /// </returns>
+        public async Task<QueryTraceExtractJobResponse> QueryTraceExtractJobAsync(QueryTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryTraceExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频溯源水印m3u8任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceM3u8JobListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceM3u8JobListResponse
+        /// </returns>
+        public QueryTraceM3u8JobListResponse QueryTraceM3u8JobListWithOptions(QueryTraceM3u8JobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceM3u8JobList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceM3u8JobListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频溯源水印m3u8任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceM3u8JobListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceM3u8JobListResponse
+        /// </returns>
+        public async Task<QueryTraceM3u8JobListResponse> QueryTraceM3u8JobListWithOptionsAsync(QueryTraceM3u8JobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                query["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTraceM3u8JobList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTraceM3u8JobListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频溯源水印m3u8任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceM3u8JobListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceM3u8JobListResponse
+        /// </returns>
+        public QueryTraceM3u8JobListResponse QueryTraceM3u8JobList(QueryTraceM3u8JobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryTraceM3u8JobListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频溯源水印m3u8任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTraceM3u8JobListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTraceM3u8JobListResponse
+        /// </returns>
+        public async Task<QueryTraceM3u8JobListResponse> QueryTraceM3u8JobListAsync(QueryTraceM3u8JobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryTraceM3u8JobListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtain a new upload credential for a media asset after its upload credential expires.</para>
         /// </summary>
         /// 
@@ -21089,7 +21821,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchEditingProject</para>
+        /// <para>Queries online editing projects by creation time and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21163,7 +21895,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchEditingProject</para>
+        /// <para>Queries online editing projects by creation time and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21237,7 +21969,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchEditingProject</para>
+        /// <para>Queries online editing projects by creation time and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21255,7 +21987,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchEditingProject</para>
+        /// <para>Queries online editing projects by creation time and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21273,7 +22005,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索索引任务重新分析</para>
+        /// <para>Re-analyzes the search index jobs of media assets. You can re-run the search index jobs of up to 20 media assets in each request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21323,7 +22055,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索索引任务重新分析</para>
+        /// <para>Re-analyzes the search index jobs of media assets. You can re-run the search index jobs of up to 20 media assets in each request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21373,7 +22105,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索索引任务重新分析</para>
+        /// <para>Re-analyzes the search index jobs of media assets. You can re-run the search index jobs of up to 20 media assets in each request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21391,7 +22123,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索索引任务重新分析</para>
+        /// <para>Re-analyzes the search index jobs of media assets. You can re-run the search index jobs of up to 20 media assets in each request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22821,7 +23553,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送实时截图任务指令</para>
+        /// <para>Sends a command to process a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22867,7 +23599,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送实时截图任务指令</para>
+        /// <para>Sends a command to process a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22913,7 +23645,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送实时截图任务指令</para>
+        /// <para>Sends a command to process a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22931,7 +23663,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送实时截图任务指令</para>
+        /// <para>Sends a command to process a live stream snapshot job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22949,7 +23681,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给指定转码任务发实时命令</para>
+        /// <para>Sends a command to process a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22995,7 +23727,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给指定转码任务发实时命令</para>
+        /// <para>Sends a command to process a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23041,7 +23773,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给指定转码任务发实时命令</para>
+        /// <para>Sends a command to process a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23059,7 +23791,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给指定转码任务发实时命令</para>
+        /// <para>Sends a command to process a live stream transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23469,7 +24201,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置事件回调地址</para>
+        /// <para>Configures a callback method for one or more events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23531,7 +24263,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置事件回调地址</para>
+        /// <para>Configures a callback method for one or more events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23593,7 +24325,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置事件回调地址</para>
+        /// <para>Configures a callback method for one or more events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23611,7 +24343,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置事件回调地址</para>
+        /// <para>Configures a callback method for one or more events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24973,7 +25705,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交虚拟人视频合成任务</para>
+        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25035,7 +25767,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交虚拟人视频合成任务</para>
+        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25097,7 +25829,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交虚拟人视频合成任务</para>
+        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25115,7 +25847,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交虚拟人视频合成任务</para>
+        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25285,6 +26017,358 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitBatchMediaProducingJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印提取作业</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitCopyrightExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightExtractJobResponse
+        /// </returns>
+        public SubmitCopyrightExtractJobResponse SubmitCopyrightExtractJobWithOptions(SubmitCopyrightExtractJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitCopyrightExtractJobShrinkRequest request = new SubmitCopyrightExtractJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印提取作业</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitCopyrightExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightExtractJobResponse
+        /// </returns>
+        public async Task<SubmitCopyrightExtractJobResponse> SubmitCopyrightExtractJobWithOptionsAsync(SubmitCopyrightExtractJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitCopyrightExtractJobShrinkRequest request = new SubmitCopyrightExtractJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印提取作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitCopyrightExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightExtractJobResponse
+        /// </returns>
+        public SubmitCopyrightExtractJobResponse SubmitCopyrightExtractJob(SubmitCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitCopyrightExtractJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印提取作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitCopyrightExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightExtractJobResponse
+        /// </returns>
+        public async Task<SubmitCopyrightExtractJobResponse> SubmitCopyrightExtractJobAsync(SubmitCopyrightExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitCopyrightExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitCopyrightJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightJobResponse
+        /// </returns>
+        public SubmitCopyrightJobResponse SubmitCopyrightJobWithOptions(SubmitCopyrightJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitCopyrightJobShrinkRequest request = new SubmitCopyrightJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            {
+                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            {
+                query["Output"] = request.OutputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitCopyrightJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightJobResponse
+        /// </returns>
+        public async Task<SubmitCopyrightJobResponse> SubmitCopyrightJobWithOptionsAsync(SubmitCopyrightJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitCopyrightJobShrinkRequest request = new SubmitCopyrightJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            {
+                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            {
+                query["Output"] = request.OutputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCopyrightJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCopyrightJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitCopyrightJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightJobResponse
+        /// </returns>
+        public SubmitCopyrightJobResponse SubmitCopyrightJob(SubmitCopyrightJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitCopyrightJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交版权水印任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitCopyrightJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCopyrightJobResponse
+        /// </returns>
+        public async Task<SubmitCopyrightJobResponse> SubmitCopyrightJobAsync(SubmitCopyrightJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitCopyrightJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -26477,8 +27561,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交录制任务</para>
+        /// <para>Submits a live stream recording job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
+        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
+        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitLiveRecordJobRequest
@@ -26545,8 +27636,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交录制任务</para>
+        /// <para>Submits a live stream recording job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
+        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
+        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitLiveRecordJobRequest
@@ -26613,8 +27711,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交录制任务</para>
+        /// <para>Submits a live stream recording job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
+        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
+        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveRecordJobRequest
@@ -26631,8 +27736,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交录制任务</para>
+        /// <para>Submits a live stream recording job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
+        /// Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
+        /// If the preset recording template does not meet your requirements, you can create a custom recording template.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveRecordJobRequest
@@ -26649,7 +27761,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图任务</para>
+        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26717,7 +27829,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图任务</para>
+        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26785,7 +27897,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图任务</para>
+        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26803,7 +27915,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建直播截图任务</para>
+        /// <para>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26821,8 +27933,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交转码任务</para>
+        /// <para>Submits a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitLiveTranscodeJobRequest
@@ -26897,8 +28017,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交转码任务</para>
+        /// <para>Submits a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitLiveTranscodeJobRequest
@@ -26973,8 +28101,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交转码任务</para>
+        /// <para>Submits a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveTranscodeJobRequest
@@ -26991,8 +28127,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交转码任务</para>
+        /// <para>Submits a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you submit a transcoding job that immediately takes effect, make sure that the input stream can be streamed.</para>
+        /// <list type="bullet">
+        /// <item><description>When you submit a timed transcoding job, make sure that the input stream can be streamed before the specified time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitLiveTranscodeJobRequest
@@ -29105,6 +30249,506 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>提交视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitTraceAbJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceAbJobResponse
+        /// </returns>
+        public SubmitTraceAbJobResponse SubmitTraceAbJobWithOptions(SubmitTraceAbJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitTraceAbJobShrinkRequest request = new SubmitTraceAbJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            {
+                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherBase64ed))
+            {
+                query["CipherBase64ed"] = request.CipherBase64ed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            {
+                query["Output"] = request.OutputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceAbJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceAbJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitTraceAbJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceAbJobResponse
+        /// </returns>
+        public async Task<SubmitTraceAbJobResponse> SubmitTraceAbJobWithOptionsAsync(SubmitTraceAbJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitTraceAbJobShrinkRequest request = new SubmitTraceAbJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            {
+                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherBase64ed))
+            {
+                query["CipherBase64ed"] = request.CipherBase64ed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["Level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            {
+                query["Output"] = request.OutputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                query["TotalTime"] = request.TotalTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceAbJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceAbJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTraceAbJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceAbJobResponse
+        /// </returns>
+        public SubmitTraceAbJobResponse SubmitTraceAbJob(SubmitTraceAbJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitTraceAbJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频溯源水印ab流任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTraceAbJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceAbJobResponse
+        /// </returns>
+        public async Task<SubmitTraceAbJobResponse> SubmitTraceAbJobAsync(SubmitTraceAbJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitTraceAbJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitTraceExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceExtractJobResponse
+        /// </returns>
+        public SubmitTraceExtractJobResponse SubmitTraceExtractJobWithOptions(SubmitTraceExtractJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitTraceExtractJobShrinkRequest request = new SubmitTraceExtractJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceExtractJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitTraceExtractJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceExtractJobResponse
+        /// </returns>
+        public async Task<SubmitTraceExtractJobResponse> SubmitTraceExtractJobWithOptionsAsync(SubmitTraceExtractJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitTraceExtractJobShrinkRequest request = new SubmitTraceExtractJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceExtractJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceExtractJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTraceExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceExtractJobResponse
+        /// </returns>
+        public SubmitTraceExtractJobResponse SubmitTraceExtractJob(SubmitTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitTraceExtractJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交溯源水印提取任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTraceExtractJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceExtractJobResponse
+        /// </returns>
+        public async Task<SubmitTraceExtractJobResponse> SubmitTraceExtractJobAsync(SubmitTraceExtractJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitTraceExtractJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitTraceM3u8JobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceM3u8JobResponse
+        /// </returns>
+        public SubmitTraceM3u8JobResponse SubmitTraceM3u8JobWithOptions(SubmitTraceM3u8JobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitTraceM3u8JobShrinkRequest request = new SubmitTraceM3u8JobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            {
+                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyUri))
+            {
+                query["KeyUri"] = request.KeyUri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            {
+                query["Output"] = request.OutputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trace))
+            {
+                query["Trace"] = request.Trace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceMediaId))
+            {
+                query["TraceMediaId"] = request.TraceMediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceM3u8Job",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceM3u8JobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitTraceM3u8JobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceM3u8JobResponse
+        /// </returns>
+        public async Task<SubmitTraceM3u8JobResponse> SubmitTraceM3u8JobWithOptionsAsync(SubmitTraceM3u8JobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitTraceM3u8JobShrinkRequest request = new SubmitTraceM3u8JobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            {
+                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyUri))
+            {
+                query["KeyUri"] = request.KeyUri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            {
+                query["Output"] = request.OutputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trace))
+            {
+                query["Trace"] = request.Trace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceMediaId))
+            {
+                query["TraceMediaId"] = request.TraceMediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitTraceM3u8Job",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitTraceM3u8JobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTraceM3u8JobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceM3u8JobResponse
+        /// </returns>
+        public SubmitTraceM3u8JobResponse SubmitTraceM3u8Job(SubmitTraceM3u8JobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitTraceM3u8JobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitTraceM3u8JobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitTraceM3u8JobResponse
+        /// </returns>
+        public async Task<SubmitTraceM3u8JobResponse> SubmitTraceM3u8JobAsync(SubmitTraceM3u8JobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitTraceM3u8JobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Submits a transcoding job.</para>
         /// </summary>
         /// 
@@ -30389,8 +32033,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播录制模板</para>
+        /// <para>Updates the information about a live stream recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only user-created templates can be updated. The preset template cannot be updated.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLiveRecordTemplateRequest
@@ -30445,8 +32094,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播录制模板</para>
+        /// <para>Updates the information about a live stream recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only user-created templates can be updated. The preset template cannot be updated.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLiveRecordTemplateRequest
@@ -30501,8 +32155,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播录制模板</para>
+        /// <para>Updates the information about a live stream recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only user-created templates can be updated. The preset template cannot be updated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLiveRecordTemplateRequest
@@ -30519,8 +32178,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播录制模板</para>
+        /// <para>Updates the information about a live stream recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only user-created templates can be updated. The preset template cannot be updated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLiveRecordTemplateRequest
@@ -30537,7 +32201,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新直播截图模板</para>
+        /// <para>Updates the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30595,7 +32259,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新直播截图模板</para>
+        /// <para>Updates the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30653,7 +32317,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新直播截图模板</para>
+        /// <para>Updates the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30671,7 +32335,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新直播截图模板</para>
+        /// <para>Updates the information about a live stream snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30689,8 +32353,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码任务配置</para>
+        /// <para>Updates the information about a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</para>
+        /// <list type="bullet">
+        /// <item><description>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLiveTranscodeJobRequest
@@ -30761,8 +32433,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码任务配置</para>
+        /// <para>Updates the information about a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</para>
+        /// <list type="bullet">
+        /// <item><description>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLiveTranscodeJobRequest
@@ -30833,8 +32513,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码任务配置</para>
+        /// <para>Updates the information about a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</para>
+        /// <list type="bullet">
+        /// <item><description>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLiveTranscodeJobRequest
@@ -30851,8 +32539,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码任务配置</para>
+        /// <para>Updates the information about a live stream transcoding job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For a non-timed transcoding job, you can modify the Name parameter of the job, regardless of the job state.</para>
+        /// <list type="bullet">
+        /// <item><description>For a timed job, you can modify the Name, StreamInput, TranscodeOutput, and TimedConfig parameters. However, the StreamInput, TranscodeOutput, and TimedConfig parameters can be modified only when the job is not started.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLiveTranscodeJobRequest
@@ -30869,7 +32565,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码模版</para>
+        /// <para>Updates the information about a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30925,7 +32621,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码模版</para>
+        /// <para>Updates the information about a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30981,7 +32677,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码模版</para>
+        /// <para>Updates the information about a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30999,7 +32695,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新转码模版</para>
+        /// <para>Updates the information about a live stream transcoding template.</para>
         /// </summary>
         /// 
         /// <param name="request">

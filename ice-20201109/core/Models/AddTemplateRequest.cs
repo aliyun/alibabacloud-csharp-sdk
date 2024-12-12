@@ -66,12 +66,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// </list>
         /// <!---->
         /// 
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>OpenAPI</para>
         /// </summary>
@@ -91,15 +85,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// </list>
         /// <!---->
         /// 
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>Available</para>
         /// </summary>
@@ -114,11 +99,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <item><description>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</description></item>
         /// </list>
         /// <!---->
-        /// 
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Timeline</para>

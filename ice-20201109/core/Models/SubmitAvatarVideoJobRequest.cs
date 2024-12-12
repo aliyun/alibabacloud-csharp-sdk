@@ -25,6 +25,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EditingConfig { get; set; }
 
+        /// <summary>
+        /// <para>The input configurations of the video rendering job for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</para>
+        /// <remarks>
+        /// <para> The text must be at least five words in length.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("InputConfig")]
         [Validation(Required=false)]
         public string InputConfig { get; set; }
