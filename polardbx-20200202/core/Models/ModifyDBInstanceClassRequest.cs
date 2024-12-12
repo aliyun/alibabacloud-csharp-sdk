@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DnClass { get; set; }
 
+        [NameInMap("DnStorageSpace")]
+        [Validation(Required=false)]
+        public string DnStorageSpace { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

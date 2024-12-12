@@ -7101,6 +7101,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DnClass"] = request.DnClass;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnStorageSpace))
+            {
+                query["DnStorageSpace"] = request.DnStorageSpace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -7173,6 +7177,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnClass))
             {
                 query["DnClass"] = request.DnClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnStorageSpace))
+            {
+                query["DnStorageSpace"] = request.DnStorageSpace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
