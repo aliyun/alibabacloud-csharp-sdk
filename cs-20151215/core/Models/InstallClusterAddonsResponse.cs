@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public InstallClusterAddonsResponseBody Body { get; set; }
+
     }
 
 }

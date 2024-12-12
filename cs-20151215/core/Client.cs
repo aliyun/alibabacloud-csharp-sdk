@@ -12809,7 +12809,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<InstallClusterAddonsResponse>(CallApi(params_, req, runtime));
         }
@@ -12850,7 +12850,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<InstallClusterAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -18409,7 +18409,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UnInstallClusterAddonsResponse>(CallApi(params_, req, runtime));
         }
@@ -18450,7 +18450,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UnInstallClusterAddonsResponse>(await CallApiAsync(params_, req, runtime));
         }
