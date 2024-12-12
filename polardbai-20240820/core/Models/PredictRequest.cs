@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PolardbAI20240820.Models
 {
-    public class PredictSseRequest : TeaModel {
+    public class PredictRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>db_test</para>
@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.PolardbAI20240820.Models
         [Validation(Required=false)]
         public string ModelClass { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{&quot;basic_index_name&quot;:&quot;index_table&quot;}</para>
-        /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }

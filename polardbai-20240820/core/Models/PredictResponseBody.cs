@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PolardbAI20240820.Models
 {
-    public class PredictSseResponseBody : TeaModel {
+    public class PredictResponseBody : TeaModel {
         [NameInMap("data")]
         [Validation(Required=false)]
         public object Data { get; set; }
