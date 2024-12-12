@@ -176,6 +176,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public string Remark { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
