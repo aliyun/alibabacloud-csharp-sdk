@@ -289,6 +289,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public List<string> Backends { get; set; }
 
+            [NameInMap("BackupBackends")]
+            [Validation(Required=false)]
+            public List<string> BackupBackends { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable the public cloud disaster recovery feature. Valid values:</para>
             /// <list type="bullet">
@@ -537,6 +541,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateDomainRequestTag> Tag { get; set; }
+        public class CreateDomainRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

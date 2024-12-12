@@ -335,6 +335,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             }
 
+            [NameInMap("BackupBackends")]
+            [Validation(Required=false)]
+            public List<DescribeDomainDetailResponseBodyRedirectBackupBackends> BackupBackends { get; set; }
+            public class DescribeDomainDetailResponseBodyRedirectBackupBackends : TeaModel {
+                [NameInMap("Backend")]
+                [Validation(Required=false)]
+                public string Backend { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The timeout period of the connection. Unit: seconds. Valid values: 5 to 120.</para>
             /// 

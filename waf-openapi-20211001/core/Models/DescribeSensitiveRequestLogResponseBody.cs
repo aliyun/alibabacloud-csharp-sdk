@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string MatchedHost { get; set; }
 
+            /// <summary>
+            /// <para>IP region, formatted as a region code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CN</para>
+            /// </summary>
             [NameInMap("RemoteCountryId")]
             [Validation(Required=false)]
             public string RemoteCountryId { get; set; }

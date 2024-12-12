@@ -284,6 +284,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public List<string> Backends { get; set; }
 
+            [NameInMap("BackupBackends")]
+            [Validation(Required=false)]
+            public List<string> BackupBackends { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable the public cloud disaster recovery feature. Valid values:</para>
             /// <list type="bullet">

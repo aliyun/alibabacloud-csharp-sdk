@@ -26,7 +26,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <item><description><b>us-west-1</b>: US (Silicon Valley).</description></item>
         /// <item><description><b>ap-northeast-1</b>: Japan (Tokyo).</description></item>
         /// <item><description><b>ap-northeast-2</b>: South Korea (Seoul).</description></item>
-        /// <item><description><b>ap-south-1</b>: India (Mumbai) Closing Down.</description></item>
         /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
         /// <item><description><b>cn-hangzhou-finance</b>: China East 1 Finance.</description></item>
         /// <item><description><b>cn-shanghai-finance-1</b>: China East 2 Finance.</description></item>
