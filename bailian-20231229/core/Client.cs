@@ -3365,6 +3365,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 body["Fields"] = request.Fields;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["FileId"] = request.FileId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filed))
             {
                 body["Filed"] = request.Filed;
@@ -3434,6 +3438,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
             {
                 body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["FileId"] = request.FileId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filed))
             {

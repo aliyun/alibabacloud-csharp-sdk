@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public List<string> Fields { get; set; }
 
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public string FileId { get; set; }
+
         /// <summary>
         /// <para>The primary key ID of the document. This parameter is not required for structured knowledge base, but is required for unstructured knowledge base. To view the ID, you can click the ID icon next to the file name on the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page. You can filter returned chunks by the document ID. This parameter is left empty by default.</para>
         /// 
