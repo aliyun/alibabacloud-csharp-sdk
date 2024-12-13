@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The material parameters of the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</para>
+        /// <para>The material parameters of the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</para>
         /// </summary>
         [NameInMap("ClipsParam")]
         [Validation(Required=false)]
         public string ClipsParam { get; set; }
 
         /// <summary>
-        /// <para>The parameters for editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html#title-10z-t9u-n69">EditingProduceConfig</a>.</para>
+        /// <para>The parameters for editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">EditingProduceConfig</a>.</para>
         /// <remarks>
         /// <para> If no thumbnail is specified in EditingProduceConfig, the first frame of the video is used as the thumbnail.</para>
         /// </remarks>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EditingProduceConfig { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the produced video, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html?spm=a2c4g.445712.0.0.49a716dbA8hgdz#97ff26d0e3c28">MediaMetadata</a>.</para>
+        /// <para>The metadata of the produced video, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html">MediaMetadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <summary>
         /// <para>The configurations of the output file, in the JSON format. You can specify an OSS URL or a storage location in a storage bucket of ApsaraVideo VOD.</para>
         /// <para>To store the output file in OSS, you must specify MediaURL. To store the output file in ApsaraVideo VOD, you must specify StorageLocation and FileName.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/357745.html#title-4j6-ve7-g31">OutputMediaConfig</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">OutputMediaConfig</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the editing project, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html#title-yvp-81k-wff">ProjectMetadata</a>.</para>
+        /// <para>The metadata of the editing project, in the JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/357745.html">ProjectMetadata</a>.</para>
         /// </summary>
         [NameInMap("ProjectMetadata")]
         [Validation(Required=false)]

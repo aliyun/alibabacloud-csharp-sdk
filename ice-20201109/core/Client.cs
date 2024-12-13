@@ -19004,8 +19004,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19079,8 +19079,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19154,8 +19154,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19181,8 +19181,8 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <description>
         /// <para>A template is an encapsulation of the timeline of a media editing and production job. You can define a common timeline as a template. When you have the same requirements, you need to only specify key parameters and materials to produce videos.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</description></item>
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23413,6 +23413,134 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchPublicMediaInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向智能体通话发送datachannel消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAIAgentDataChannelMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAIAgentDataChannelMessageResponse
+        /// </returns>
+        public SendAIAgentDataChannelMessageResponse SendAIAgentDataChannelMessageWithOptions(SendAIAgentDataChannelMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAIAgentDataChannelMessage",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendAIAgentDataChannelMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向智能体通话发送datachannel消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAIAgentDataChannelMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAIAgentDataChannelMessageResponse
+        /// </returns>
+        public async Task<SendAIAgentDataChannelMessageResponse> SendAIAgentDataChannelMessageWithOptionsAsync(SendAIAgentDataChannelMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAIAgentDataChannelMessage",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendAIAgentDataChannelMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向智能体通话发送datachannel消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAIAgentDataChannelMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAIAgentDataChannelMessageResponse
+        /// </returns>
+        public SendAIAgentDataChannelMessageResponse SendAIAgentDataChannelMessage(SendAIAgentDataChannelMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendAIAgentDataChannelMessageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向智能体通话发送datachannel消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAIAgentDataChannelMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAIAgentDataChannelMessageResponse
+        /// </returns>
+        public async Task<SendAIAgentDataChannelMessageResponse> SendAIAgentDataChannelMessageAsync(SendAIAgentDataChannelMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendAIAgentDataChannelMessageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -31125,6 +31253,142 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>切换真人客服接管模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TakeoverAIAgentCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TakeoverAIAgentCallResponse
+        /// </returns>
+        public TakeoverAIAgentCallResponse TakeoverAIAgentCallWithOptions(TakeoverAIAgentCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HumanAgentUserId))
+            {
+                query["HumanAgentUserId"] = request.HumanAgentUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireToken))
+            {
+                query["RequireToken"] = request.RequireToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TakeoverAIAgentCall",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TakeoverAIAgentCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换真人客服接管模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TakeoverAIAgentCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TakeoverAIAgentCallResponse
+        /// </returns>
+        public async Task<TakeoverAIAgentCallResponse> TakeoverAIAgentCallWithOptionsAsync(TakeoverAIAgentCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HumanAgentUserId))
+            {
+                query["HumanAgentUserId"] = request.HumanAgentUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireToken))
+            {
+                query["RequireToken"] = request.RequireToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TakeoverAIAgentCall",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TakeoverAIAgentCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换真人客服接管模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TakeoverAIAgentCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TakeoverAIAgentCallResponse
+        /// </returns>
+        public TakeoverAIAgentCallResponse TakeoverAIAgentCall(TakeoverAIAgentCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TakeoverAIAgentCallWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换真人客服接管模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TakeoverAIAgentCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TakeoverAIAgentCallResponse
+        /// </returns>
+        public async Task<TakeoverAIAgentCallResponse> TakeoverAIAgentCallAsync(TakeoverAIAgentCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TakeoverAIAgentCallWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改实例的配置</para>
         /// </summary>
         /// 
@@ -33494,9 +33758,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33574,9 +33838,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33654,9 +33918,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33680,9 +33944,9 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/270942.html">Create and use a regular template</a>.</para>
+        /// <para>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</description></item>
+        /// <item><description>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</description></item>
         /// </list>
         /// </description>
         /// 
