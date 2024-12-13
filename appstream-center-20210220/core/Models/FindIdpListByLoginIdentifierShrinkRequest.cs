@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>22.21.XX.XX</para>
-        /// </summary>
         [NameInMap("ClientIp")]
         [Validation(Required=false)]
         public string ClientIp { get; set; }

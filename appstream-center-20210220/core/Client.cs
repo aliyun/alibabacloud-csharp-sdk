@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             {
                 query["AvailableFeatures"] = request.AvailableFeaturesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                query["ClientIp"] = request.ClientIp;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientChannel))
             {
@@ -75,10 +79,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 body["ClientId"] = request.ClientId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
-            {
-                body["ClientIp"] = request.ClientIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientOS))
             {
@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             {
                 query["AvailableFeatures"] = request.AvailableFeaturesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                query["ClientIp"] = request.ClientIp;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientChannel))
             {
@@ -157,10 +161,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 body["ClientId"] = request.ClientId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
-            {
-                body["ClientIp"] = request.ClientIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientOS))
             {
