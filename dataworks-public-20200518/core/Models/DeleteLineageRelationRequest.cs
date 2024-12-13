@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteLineageRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the destination entity.</para>
+        /// <para>Destination entity unique identifier</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DestEntityQualifiedName { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the lineage.</para>
+        /// <para>Lineage relationship unique identifier</para>
         /// 
         /// <b>Example:</b>
         /// <para>dfazcdfdfccdedd</para>
@@ -30,12 +30,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
+        /// <summary>
+        /// <para>Relationship type</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sql</para>
+        /// </summary>
         [NameInMap("RelationshipType")]
         [Validation(Required=false)]
         public string RelationshipType { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the source entity.</para>
+        /// <para>Source entity unique identifier</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

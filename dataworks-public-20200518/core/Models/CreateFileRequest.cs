@@ -385,6 +385,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? Stop { get; set; }
 
+        [NameInMap("Timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
+
     }
 
 }

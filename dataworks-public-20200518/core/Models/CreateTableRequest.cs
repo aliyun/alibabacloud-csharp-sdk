@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>reserved</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -57,6 +60,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The display name of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>columnName in chinese</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
@@ -75,6 +81,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The comment of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>comment</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -114,6 +123,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The comment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>comment</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

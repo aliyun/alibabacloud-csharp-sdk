@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteLineageRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>Error code</para>
         /// 
         /// <b>Example:</b>
         /// <para>1010040007</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>Error message</para>
         /// 
         /// <b>Example:</b>
         /// <para>qualifiedName should be in format as entity-table.entity-guid</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP status code</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID: used for locating logs and troubleshooting</para>
         /// 
         /// <b>Example:</b>
         /// <para>64B-587A-8CED-969E1973887FXXX-TT</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the operation. Valid values:</para>
-        /// <para>true: successful</para>
-        /// <para>false: failed</para>
+        /// <para>Operation result:</para>
+        /// <para>true: Success</para>
+        /// <para>false: Failure</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true</para>
-        /// <para>false</para>
+        /// <para>Whether the call was successful. Values are as follows:</para>
+        /// <para>true: success</para>
+        /// <para>false: failed</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

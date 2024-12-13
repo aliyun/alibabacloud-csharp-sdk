@@ -372,6 +372,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public long? EndEffectDate { get; set; }
 
+                [NameInMap("IgnoreParentSkipRunningProperty")]
+                [Validation(Required=false)]
+                public string IgnoreParentSkipRunningProperty { get; set; }
+
                 /// <summary>
                 /// <para>The output names of the parent files on which the current file depends.</para>
                 /// </summary>
@@ -617,6 +621,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [NameInMap("Stop")]
                 [Validation(Required=false)]
                 public bool? Stop { get; set; }
+
+                [NameInMap("Timeout")]
+                [Validation(Required=false)]
+                public int? Timeout { get; set; }
 
             }
 

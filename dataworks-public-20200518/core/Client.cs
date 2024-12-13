@@ -343,7 +343,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Manage members and roles</a>.</para>
+        /// <para>  For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Add workspace members and assign roles to them</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you assign a built-in workspace-level role to a member of a DataWorks workspace, the member is automatically granted the permissions of the mapped role of the MaxCompute compute engine in the development environment. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Appendix: Mappings between the built-in workspace-level roles of DataWorks and the roles of MaxCompute</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -402,7 +405,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Manage members and roles</a>.</para>
+        /// <para>  For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Add workspace members and assign roles to them</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you assign a built-in workspace-level role to a member of a DataWorks workspace, the member is automatically granted the permissions of the mapped role of the MaxCompute compute engine in the development environment. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Appendix: Mappings between the built-in workspace-level roles of DataWorks and the roles of MaxCompute</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -461,7 +467,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Manage members and roles</a>.</para>
+        /// <para>  For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Add workspace members and assign roles to them</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you assign a built-in workspace-level role to a member of a DataWorks workspace, the member is automatically granted the permissions of the mapped role of the MaxCompute compute engine in the development environment. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Appendix: Mappings between the built-in workspace-level roles of DataWorks and the roles of MaxCompute</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -484,7 +493,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Manage members and roles</a>.</para>
+        /// <para>  For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Add workspace members and assign roles to them</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you assign a built-in workspace-level role to a member of a DataWorks workspace, the member is automatically granted the permissions of the mapped role of the MaxCompute compute engine in the development environment. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Appendix: Mappings between the built-in workspace-level roles of DataWorks and the roles of MaxCompute</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2083,7 +2095,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateConnection is deprecated\n")]
+        [Obsolete("OpenAPI CreateConnection is deprecated")]
         // Deprecated
         public CreateConnectionResponse CreateConnectionWithOptions(CreateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2155,7 +2167,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateConnection is deprecated\n")]
+        [Obsolete("OpenAPI CreateConnection is deprecated")]
         // Deprecated
         public async Task<CreateConnectionResponse> CreateConnectionWithOptionsAsync(CreateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2224,7 +2236,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateConnection is deprecated\n")]
+        [Obsolete("OpenAPI CreateConnection is deprecated")]
         // Deprecated
         public CreateConnectionResponse CreateConnection(CreateConnectionRequest request)
         {
@@ -2248,7 +2260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateConnection is deprecated\n")]
+        [Obsolete("OpenAPI CreateConnection is deprecated")]
         // Deprecated
         public async Task<CreateConnectionResponse> CreateConnectionAsync(CreateConnectionRequest request)
         {
@@ -2906,7 +2918,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagComplementResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagComplement is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagComplement is deprecated")]
         // Deprecated
         public CreateDagComplementResponse CreateDagComplementWithOptions(CreateDagComplementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2989,7 +3001,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagComplementResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagComplement is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagComplement is deprecated")]
         // Deprecated
         public async Task<CreateDagComplementResponse> CreateDagComplementWithOptionsAsync(CreateDagComplementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3069,7 +3081,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagComplementResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagComplement is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagComplement is deprecated")]
         // Deprecated
         public CreateDagComplementResponse CreateDagComplement(CreateDagComplementRequest request)
         {
@@ -3088,7 +3100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagComplementResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagComplement is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagComplement is deprecated")]
         // Deprecated
         public async Task<CreateDagComplementResponse> CreateDagComplementAsync(CreateDagComplementRequest request)
         {
@@ -3110,7 +3122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagTestResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagTest is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagTest is deprecated")]
         // Deprecated
         public CreateDagTestResponse CreateDagTestWithOptions(CreateDagTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3169,7 +3181,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagTestResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagTest is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagTest is deprecated")]
         // Deprecated
         public async Task<CreateDagTestResponse> CreateDagTestWithOptionsAsync(CreateDagTestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3225,7 +3237,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagTestResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagTest is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagTest is deprecated")]
         // Deprecated
         public CreateDagTestResponse CreateDagTest(CreateDagTestRequest request)
         {
@@ -3244,7 +3256,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateDagTestResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateDagTest is deprecated\n")]
+        [Obsolete("OpenAPI CreateDagTest is deprecated")]
         // Deprecated
         public async Task<CreateDagTestResponse> CreateDagTestAsync(CreateDagTestRequest request)
         {
@@ -4447,6 +4459,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["Stop"] = request.Stop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["Timeout"] = request.Timeout;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -4612,6 +4628,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stop))
             {
                 body["Stop"] = request.Stop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["Timeout"] = request.Timeout;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5251,7 +5271,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateManualDagResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateManualDag is deprecated\n")]
+        [Obsolete("OpenAPI CreateManualDag is deprecated")]
         // Deprecated
         public CreateManualDagResponse CreateManualDagWithOptions(CreateManualDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5327,7 +5347,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateManualDagResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateManualDag is deprecated\n")]
+        [Obsolete("OpenAPI CreateManualDag is deprecated")]
         // Deprecated
         public async Task<CreateManualDagResponse> CreateManualDagWithOptionsAsync(CreateManualDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5400,7 +5420,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateManualDagResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateManualDag is deprecated\n")]
+        [Obsolete("OpenAPI CreateManualDag is deprecated")]
         // Deprecated
         public CreateManualDagResponse CreateManualDag(CreateManualDagRequest request)
         {
@@ -5424,7 +5444,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateManualDagResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateManualDag is deprecated\n")]
+        [Obsolete("OpenAPI CreateManualDag is deprecated")]
         // Deprecated
         public async Task<CreateManualDagResponse> CreateManualDagAsync(CreateManualDagRequest request)
         {
@@ -8643,7 +8663,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteConnection is deprecated\n")]
+        [Obsolete("OpenAPI DeleteConnection is deprecated")]
         // Deprecated
         public DeleteConnectionResponse DeleteConnectionWithOptions(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8691,7 +8711,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteConnection is deprecated\n")]
+        [Obsolete("OpenAPI DeleteConnection is deprecated")]
         // Deprecated
         public async Task<DeleteConnectionResponse> DeleteConnectionWithOptionsAsync(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8736,7 +8756,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteConnection is deprecated\n")]
+        [Obsolete("OpenAPI DeleteConnection is deprecated")]
         // Deprecated
         public DeleteConnectionResponse DeleteConnection(DeleteConnectionRequest request)
         {
@@ -8760,7 +8780,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteConnection is deprecated\n")]
+        [Obsolete("OpenAPI DeleteConnection is deprecated")]
         // Deprecated
         public async Task<DeleteConnectionResponse> DeleteConnectionAsync(DeleteConnectionRequest request)
         {
@@ -9966,12 +9986,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lineage between entities. You can call this operation to delete only custom lineages that are registered by users.</para>
+        /// <para>Delete lineage, supports deleting user-defined lineage relationships</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.</para>
+        /// <para>This API is currently in the trial phase. Users who wish to experience it can apply, and after the administrator adds them to the trial list, they can call this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10025,12 +10045,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lineage between entities. You can call this operation to delete only custom lineages that are registered by users.</para>
+        /// <para>Delete lineage, supports deleting user-defined lineage relationships</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.</para>
+        /// <para>This API is currently in the trial phase. Users who wish to experience it can apply, and after the administrator adds them to the trial list, they can call this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10084,12 +10104,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lineage between entities. You can call this operation to delete only custom lineages that are registered by users.</para>
+        /// <para>Delete lineage, supports deleting user-defined lineage relationships</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.</para>
+        /// <para>This API is currently in the trial phase. Users who wish to experience it can apply, and after the administrator adds them to the trial list, they can call this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10107,12 +10127,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lineage between entities. You can call this operation to delete only custom lineages that are registered by users.</para>
+        /// <para>Delete lineage, supports deleting user-defined lineage relationships</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.</para>
+        /// <para>This API is currently in the trial phase. Users who wish to experience it can apply, and after the administrator adds them to the trial list, they can call this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19333,7 +19353,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceConsumeTimeRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated")]
         // Deprecated
         public GetInstanceConsumeTimeRankResponse GetInstanceConsumeTimeRankWithOptions(GetInstanceConsumeTimeRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19385,7 +19405,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceConsumeTimeRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated")]
         // Deprecated
         public async Task<GetInstanceConsumeTimeRankResponse> GetInstanceConsumeTimeRankWithOptionsAsync(GetInstanceConsumeTimeRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19434,7 +19454,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceConsumeTimeRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated")]
         // Deprecated
         public GetInstanceConsumeTimeRankResponse GetInstanceConsumeTimeRank(GetInstanceConsumeTimeRankRequest request)
         {
@@ -19458,7 +19478,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceConsumeTimeRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceConsumeTimeRank is deprecated")]
         // Deprecated
         public async Task<GetInstanceConsumeTimeRankResponse> GetInstanceConsumeTimeRankAsync(GetInstanceConsumeTimeRankRequest request)
         {
@@ -19485,7 +19505,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceCountTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated")]
         // Deprecated
         public GetInstanceCountTrendResponse GetInstanceCountTrendWithOptions(GetInstanceCountTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19541,7 +19561,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceCountTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated")]
         // Deprecated
         public async Task<GetInstanceCountTrendResponse> GetInstanceCountTrendWithOptionsAsync(GetInstanceCountTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19594,7 +19614,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceCountTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated")]
         // Deprecated
         public GetInstanceCountTrendResponse GetInstanceCountTrend(GetInstanceCountTrendRequest request)
         {
@@ -19618,7 +19638,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceCountTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceCountTrend is deprecated")]
         // Deprecated
         public async Task<GetInstanceCountTrendResponse> GetInstanceCountTrendAsync(GetInstanceCountTrendRequest request)
         {
@@ -19645,7 +19665,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceErrorRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated")]
         // Deprecated
         public GetInstanceErrorRankResponse GetInstanceErrorRankWithOptions(GetInstanceErrorRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19693,7 +19713,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceErrorRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated")]
         // Deprecated
         public async Task<GetInstanceErrorRankResponse> GetInstanceErrorRankWithOptionsAsync(GetInstanceErrorRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -19738,7 +19758,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceErrorRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated")]
         // Deprecated
         public GetInstanceErrorRankResponse GetInstanceErrorRank(GetInstanceErrorRankRequest request)
         {
@@ -19762,7 +19782,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceErrorRankResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceErrorRank is deprecated")]
         // Deprecated
         public async Task<GetInstanceErrorRankResponse> GetInstanceErrorRankAsync(GetInstanceErrorRankRequest request)
         {
@@ -19945,7 +19965,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceStatusCountResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated")]
         // Deprecated
         public GetInstanceStatusCountResponse GetInstanceStatusCountWithOptions(GetInstanceStatusCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20001,7 +20021,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceStatusCountResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated")]
         // Deprecated
         public async Task<GetInstanceStatusCountResponse> GetInstanceStatusCountWithOptionsAsync(GetInstanceStatusCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20054,7 +20074,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceStatusCountResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated")]
         // Deprecated
         public GetInstanceStatusCountResponse GetInstanceStatusCount(GetInstanceStatusCountRequest request)
         {
@@ -20078,7 +20098,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetInstanceStatusCountResponse
         /// </returns>
-        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated\n")]
+        [Obsolete("OpenAPI GetInstanceStatusCount is deprecated")]
         // Deprecated
         public async Task<GetInstanceStatusCountResponse> GetInstanceStatusCountAsync(GetInstanceStatusCountRequest request)
         {
@@ -20265,7 +20285,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetManualDagInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManualDagInstances is deprecated\n")]
+        [Obsolete("OpenAPI GetManualDagInstances is deprecated")]
         // Deprecated
         public GetManualDagInstancesResponse GetManualDagInstancesWithOptions(GetManualDagInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20321,7 +20341,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetManualDagInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManualDagInstances is deprecated\n")]
+        [Obsolete("OpenAPI GetManualDagInstances is deprecated")]
         // Deprecated
         public async Task<GetManualDagInstancesResponse> GetManualDagInstancesWithOptionsAsync(GetManualDagInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -20374,7 +20394,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetManualDagInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManualDagInstances is deprecated\n")]
+        [Obsolete("OpenAPI GetManualDagInstances is deprecated")]
         // Deprecated
         public GetManualDagInstancesResponse GetManualDagInstances(GetManualDagInstancesRequest request)
         {
@@ -20398,7 +20418,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetManualDagInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManualDagInstances is deprecated\n")]
+        [Obsolete("OpenAPI GetManualDagInstances is deprecated")]
         // Deprecated
         public async Task<GetManualDagInstancesResponse> GetManualDagInstancesAsync(GetManualDagInstancesRequest request)
         {
@@ -21564,7 +21584,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete information about a metatable, including information about fields in the metatable.</para>
+        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21602,7 +21622,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete information about a metatable, including information about fields in the metatable.</para>
+        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21640,7 +21660,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete information about a metatable, including information about fields in the metatable.</para>
+        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21658,7 +21678,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete information about a metatable, including information about fields in the metatable.</para>
+        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22460,7 +22480,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Table的产出任务列表</para>
+        /// <para>Queries the output tasks of a metatable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22522,7 +22542,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Table的产出任务列表</para>
+        /// <para>Queries the output tasks of a metatable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22584,7 +22604,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Table的产出任务列表</para>
+        /// <para>Queries the output tasks of a metatable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22602,7 +22622,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Table的产出任务列表</para>
+        /// <para>Queries the output tasks of a metatable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23389,7 +23409,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeOnBaselineResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated")]
         // Deprecated
         public GetNodeOnBaselineResponse GetNodeOnBaselineWithOptions(GetNodeOnBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23437,7 +23457,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeOnBaselineResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated")]
         // Deprecated
         public async Task<GetNodeOnBaselineResponse> GetNodeOnBaselineWithOptionsAsync(GetNodeOnBaselineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23482,7 +23502,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeOnBaselineResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated")]
         // Deprecated
         public GetNodeOnBaselineResponse GetNodeOnBaseline(GetNodeOnBaselineRequest request)
         {
@@ -23506,7 +23526,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeOnBaselineResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeOnBaseline is deprecated")]
         // Deprecated
         public async Task<GetNodeOnBaselineResponse> GetNodeOnBaselineAsync(GetNodeOnBaselineRequest request)
         {
@@ -23661,7 +23681,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeTypeListInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated")]
         // Deprecated
         public GetNodeTypeListInfoResponse GetNodeTypeListInfoWithOptions(GetNodeTypeListInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23729,7 +23749,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeTypeListInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated")]
         // Deprecated
         public async Task<GetNodeTypeListInfoResponse> GetNodeTypeListInfoWithOptionsAsync(GetNodeTypeListInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23794,7 +23814,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeTypeListInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated")]
         // Deprecated
         public GetNodeTypeListInfoResponse GetNodeTypeListInfo(GetNodeTypeListInfoRequest request)
         {
@@ -23818,7 +23838,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetNodeTypeListInfoResponse
         /// </returns>
-        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated\n")]
+        [Obsolete("OpenAPI GetNodeTypeListInfo is deprecated")]
         // Deprecated
         public async Task<GetNodeTypeListInfoResponse> GetNodeTypeListInfoAsync(GetNodeTypeListInfoRequest request)
         {
@@ -24445,7 +24465,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated\n")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
         // Deprecated
         public GetProjectDetailResponse GetProjectDetailWithOptions(GetProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24493,7 +24513,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated\n")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
         // Deprecated
         public async Task<GetProjectDetailResponse> GetProjectDetailWithOptionsAsync(GetProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -24538,7 +24558,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated\n")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
         // Deprecated
         public GetProjectDetailResponse GetProjectDetail(GetProjectDetailRequest request)
         {
@@ -24562,7 +24582,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetProjectDetailResponse
         /// </returns>
-        [Obsolete("OpenAPI GetProjectDetail is deprecated\n")]
+        [Obsolete("OpenAPI GetProjectDetail is deprecated")]
         // Deprecated
         public async Task<GetProjectDetailResponse> GetProjectDetailAsync(GetProjectDetailRequest request)
         {
@@ -25229,7 +25249,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetSuccessInstanceTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated")]
         // Deprecated
         public GetSuccessInstanceTrendResponse GetSuccessInstanceTrendWithOptions(GetSuccessInstanceTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -25277,7 +25297,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetSuccessInstanceTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated")]
         // Deprecated
         public async Task<GetSuccessInstanceTrendResponse> GetSuccessInstanceTrendWithOptionsAsync(GetSuccessInstanceTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -25322,7 +25342,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetSuccessInstanceTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated")]
         // Deprecated
         public GetSuccessInstanceTrendResponse GetSuccessInstanceTrend(GetSuccessInstanceTrendRequest request)
         {
@@ -25346,7 +25366,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetSuccessInstanceTrendResponse
         /// </returns>
-        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated\n")]
+        [Obsolete("OpenAPI GetSuccessInstanceTrend is deprecated")]
         // Deprecated
         public async Task<GetSuccessInstanceTrendResponse> GetSuccessInstanceTrendAsync(GetSuccessInstanceTrendRequest request)
         {
@@ -27201,7 +27221,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListConnectionsResponse
         /// </returns>
-        [Obsolete("OpenAPI ListConnections is deprecated\n")]
+        [Obsolete("OpenAPI ListConnections is deprecated")]
         // Deprecated
         public ListConnectionsResponse ListConnectionsWithOptions(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27245,7 +27265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListConnectionsResponse
         /// </returns>
-        [Obsolete("OpenAPI ListConnections is deprecated\n")]
+        [Obsolete("OpenAPI ListConnections is deprecated")]
         // Deprecated
         public async Task<ListConnectionsResponse> ListConnectionsWithOptionsAsync(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27286,7 +27306,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListConnectionsResponse
         /// </returns>
-        [Obsolete("OpenAPI ListConnections is deprecated\n")]
+        [Obsolete("OpenAPI ListConnections is deprecated")]
         // Deprecated
         public ListConnectionsResponse ListConnections(ListConnectionsRequest request)
         {
@@ -27310,7 +27330,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListConnectionsResponse
         /// </returns>
-        [Obsolete("OpenAPI ListConnections is deprecated\n")]
+        [Obsolete("OpenAPI ListConnections is deprecated")]
         // Deprecated
         public async Task<ListConnectionsResponse> ListConnectionsAsync(ListConnectionsRequest request)
         {
@@ -32425,7 +32445,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListNodeIOResponse
         /// </returns>
-        [Obsolete("OpenAPI ListNodeIO is deprecated\n")]
+        [Obsolete("OpenAPI ListNodeIO is deprecated")]
         // Deprecated
         public ListNodeIOResponse ListNodeIOWithOptions(ListNodeIORequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -32481,7 +32501,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListNodeIOResponse
         /// </returns>
-        [Obsolete("OpenAPI ListNodeIO is deprecated\n")]
+        [Obsolete("OpenAPI ListNodeIO is deprecated")]
         // Deprecated
         public async Task<ListNodeIOResponse> ListNodeIOWithOptionsAsync(ListNodeIORequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -32534,7 +32554,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListNodeIOResponse
         /// </returns>
-        [Obsolete("OpenAPI ListNodeIO is deprecated\n")]
+        [Obsolete("OpenAPI ListNodeIO is deprecated")]
         // Deprecated
         public ListNodeIOResponse ListNodeIO(ListNodeIORequest request)
         {
@@ -32558,7 +32578,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListNodeIOResponse
         /// </returns>
-        [Obsolete("OpenAPI ListNodeIO is deprecated\n")]
+        [Obsolete("OpenAPI ListNodeIO is deprecated")]
         // Deprecated
         public async Task<ListNodeIOResponse> ListNodeIOAsync(ListNodeIORequest request)
         {
@@ -33353,7 +33373,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListProgramTypeCountResponse
         /// </returns>
-        [Obsolete("OpenAPI ListProgramTypeCount is deprecated\n")]
+        [Obsolete("OpenAPI ListProgramTypeCount is deprecated")]
         // Deprecated
         public ListProgramTypeCountResponse ListProgramTypeCountWithOptions(ListProgramTypeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -33405,7 +33425,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListProgramTypeCountResponse
         /// </returns>
-        [Obsolete("OpenAPI ListProgramTypeCount is deprecated\n")]
+        [Obsolete("OpenAPI ListProgramTypeCount is deprecated")]
         // Deprecated
         public async Task<ListProgramTypeCountResponse> ListProgramTypeCountWithOptionsAsync(ListProgramTypeCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -33454,7 +33474,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListProgramTypeCountResponse
         /// </returns>
-        [Obsolete("OpenAPI ListProgramTypeCount is deprecated\n")]
+        [Obsolete("OpenAPI ListProgramTypeCount is deprecated")]
         // Deprecated
         public ListProgramTypeCountResponse ListProgramTypeCount(ListProgramTypeCountRequest request)
         {
@@ -33478,7 +33498,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListProgramTypeCountResponse
         /// </returns>
-        [Obsolete("OpenAPI ListProgramTypeCount is deprecated\n")]
+        [Obsolete("OpenAPI ListProgramTypeCount is deprecated")]
         // Deprecated
         public async Task<ListProgramTypeCountResponse> ListProgramTypeCountAsync(ListProgramTypeCountRequest request)
         {
@@ -39871,7 +39891,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SearchNodesByOutputResponse
         /// </returns>
-        [Obsolete("OpenAPI SearchNodesByOutput is deprecated\n")]
+        [Obsolete("OpenAPI SearchNodesByOutput is deprecated")]
         // Deprecated
         public SearchNodesByOutputResponse SearchNodesByOutputWithOptions(SearchNodesByOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -39923,7 +39943,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SearchNodesByOutputResponse
         /// </returns>
-        [Obsolete("OpenAPI SearchNodesByOutput is deprecated\n")]
+        [Obsolete("OpenAPI SearchNodesByOutput is deprecated")]
         // Deprecated
         public async Task<SearchNodesByOutputResponse> SearchNodesByOutputWithOptionsAsync(SearchNodesByOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -39972,7 +39992,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SearchNodesByOutputResponse
         /// </returns>
-        [Obsolete("OpenAPI SearchNodesByOutput is deprecated\n")]
+        [Obsolete("OpenAPI SearchNodesByOutput is deprecated")]
         // Deprecated
         public SearchNodesByOutputResponse SearchNodesByOutput(SearchNodesByOutputRequest request)
         {
@@ -39996,7 +40016,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SearchNodesByOutputResponse
         /// </returns>
-        [Obsolete("OpenAPI SearchNodesByOutput is deprecated\n")]
+        [Obsolete("OpenAPI SearchNodesByOutput is deprecated")]
         // Deprecated
         public async Task<SearchNodesByOutputResponse> SearchNodesByOutputAsync(SearchNodesByOutputRequest request)
         {
@@ -40023,7 +40043,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SetDataSourceShareResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDataSourceShare is deprecated\n")]
+        [Obsolete("OpenAPI SetDataSourceShare is deprecated")]
         // Deprecated
         public SetDataSourceShareResponse SetDataSourceShareWithOptions(SetDataSourceShareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40087,7 +40107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SetDataSourceShareResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDataSourceShare is deprecated\n")]
+        [Obsolete("OpenAPI SetDataSourceShare is deprecated")]
         // Deprecated
         public async Task<SetDataSourceShareResponse> SetDataSourceShareWithOptionsAsync(SetDataSourceShareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40148,7 +40168,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SetDataSourceShareResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDataSourceShare is deprecated\n")]
+        [Obsolete("OpenAPI SetDataSourceShare is deprecated")]
         // Deprecated
         public SetDataSourceShareResponse SetDataSourceShare(SetDataSourceShareRequest request)
         {
@@ -40172,7 +40192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// SetDataSourceShareResponse
         /// </returns>
-        [Obsolete("OpenAPI SetDataSourceShare is deprecated\n")]
+        [Obsolete("OpenAPI SetDataSourceShare is deprecated")]
         // Deprecated
         public async Task<SetDataSourceShareResponse> SetDataSourceShareAsync(SetDataSourceShareRequest request)
         {
@@ -43067,7 +43087,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateConnection is deprecated\n")]
+        [Obsolete("OpenAPI UpdateConnection is deprecated")]
         // Deprecated
         public UpdateConnectionResponse UpdateConnectionWithOptions(UpdateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -43131,7 +43151,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateConnection is deprecated\n")]
+        [Obsolete("OpenAPI UpdateConnection is deprecated")]
         // Deprecated
         public async Task<UpdateConnectionResponse> UpdateConnectionWithOptionsAsync(UpdateConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -43192,7 +43212,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateConnection is deprecated\n")]
+        [Obsolete("OpenAPI UpdateConnection is deprecated")]
         // Deprecated
         public UpdateConnectionResponse UpdateConnection(UpdateConnectionRequest request)
         {
@@ -43216,7 +43236,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateConnectionResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateConnection is deprecated\n")]
+        [Obsolete("OpenAPI UpdateConnection is deprecated")]
         // Deprecated
         public async Task<UpdateConnectionResponse> UpdateConnectionAsync(UpdateConnectionRequest request)
         {
@@ -44460,6 +44480,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["Stop"] = request.Stop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["Timeout"] = request.Timeout;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -44626,6 +44650,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stop))
             {
                 body["Stop"] = request.Stop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["Timeout"] = request.Timeout;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

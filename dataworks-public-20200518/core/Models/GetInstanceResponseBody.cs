@@ -217,6 +217,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NodeName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>111</para>
+            /// </summary>
+            [NameInMap("Owner")]
+            [Validation(Required=false)]
+            public string Owner { get; set; }
+
+            /// <summary>
             /// <para>The parameters related to the node.</para>
             /// 
             /// <b>Example:</b>
@@ -225,6 +233,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ParamValues")]
             [Validation(Required=false)]
             public string ParamValues { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("PeriodNumber")]
+            [Validation(Required=false)]
+            public int? PeriodNumber { get; set; }
 
             /// <summary>
             /// <para>The priority of the instance. Valid values: 1, 3, 5, 7, and 8. A greater value indicates a higher priority. Default value: 1.</para>
