@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetUserIdShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource directory.
+        /// <para>The ID of the resource directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The identifier information about the user that is synchronized from an external identity provider (IdP).
+        /// <para>The identifier information about the user that is synchronized from an external identity provider (IdP).</para>
         /// </summary>
         [NameInMap("ExternalId")]
         [Validation(Required=false)]

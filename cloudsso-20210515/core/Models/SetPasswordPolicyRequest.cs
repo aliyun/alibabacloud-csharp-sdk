@@ -10,66 +10,83 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class SetPasswordPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The number of password retries.
+        /// <para>The number of password retries.</para>
+        /// <para>If you enter wrong passwords for the specified consecutive times, the account is locked for 1 hour.</para>
+        /// <para>Valid values: 0 to 32. The value 0 specifies that the number of password retries is not limited.</para>
         /// 
-        /// If you enter wrong passwords for the specified consecutive times, the account is locked for 1 hour.
-        /// 
-        /// Valid values: 0 to 32. The value 0 specifies that the number of password retries is not limited.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("MaxLoginAttempts")]
         [Validation(Required=false)]
         public int? MaxLoginAttempts { get; set; }
 
         /// <summary>
-        /// The validity period of a password.
+        /// <para>The validity period of a password.</para>
+        /// <para>Valid values: 1 to 120. Unit: days.</para>
         /// 
-        /// Valid values: 1 to 120. Unit: days.
+        /// <b>Example:</b>
+        /// <para>90</para>
         /// </summary>
         [NameInMap("MaxPasswordAge")]
         [Validation(Required=false)]
         public int? MaxPasswordAge { get; set; }
 
         /// <summary>
-        /// The minimum number of unique characters in a password.
+        /// <para>The minimum number of unique characters in a password.</para>
+        /// <para>The minimum value is 0, which specifies that the minimum number of unique characters in a password is not limited. The maximum value is the value of the <c>MinPasswordLength</c> parameter.</para>
         /// 
-        /// The minimum value is 0, which specifies that the minimum number of unique characters in a password is not limited. The maximum value is the value of the `MinPasswordLength` parameter.
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("MinPasswordDifferentChars")]
         [Validation(Required=false)]
         public int? MinPasswordDifferentChars { get; set; }
 
         /// <summary>
-        /// The minimum password length.
+        /// <para>The minimum password length.</para>
+        /// <para>Valid values: 8 to 32 characters.</para>
         /// 
-        /// Valid values: 8 to 32 characters.
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("MinPasswordLength")]
         [Validation(Required=false)]
         public int? MinPasswordLength { get; set; }
 
         /// <summary>
-        /// Specifies whether a password can contain the username. Valid value:
+        /// <para>Specifies whether a password can contain the username. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>true: A password cannot contain the username.</description></item>
+        /// <item><description>false: A password can contain the username.</description></item>
+        /// </list>
         /// 
-        /// *   true: A password cannot contain the username.
-        /// *   false: A password can contain the username.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PasswordNotContainUsername")]
         [Validation(Required=false)]
         public bool? PasswordNotContainUsername { get; set; }
 
         /// <summary>
-        /// The policy for password history check.
+        /// <para>The policy for password history check.</para>
+        /// <para>The previous N passwords cannot be reused. Valid values of N: 0 to 24. The value 0 specifies that all historical passwords can be reused.</para>
+        /// <remarks>
+        /// <para> Passwords that are generated before January 5, 2024 are not counted as historical passwords.</para>
+        /// </remarks>
         /// 
-        /// The previous N passwords cannot be reused. Valid values of N: 0 to 24. The value 0 specifies that all historical passwords can be reused.
-        /// 
-        /// >  Passwords that are generated before January 5, 2024 are not counted as historical passwords.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PasswordReusePrevention")]
         [Validation(Required=false)]

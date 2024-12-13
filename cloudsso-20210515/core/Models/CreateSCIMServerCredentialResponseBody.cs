@@ -10,65 +10,90 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class CreateSCIMServerCredentialResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2D2E5180-7ACF-57FF-A56C-26A49ABEBFF7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the SCIM credential.
+        /// <para>The information about the SCIM credential.</para>
         /// </summary>
         [NameInMap("SCIMServerCredential")]
         [Validation(Required=false)]
         public CreateSCIMServerCredentialResponseBodySCIMServerCredential SCIMServerCredential { get; set; }
         public class CreateSCIMServerCredentialResponseBodySCIMServerCredential : TeaModel {
             /// <summary>
-            /// The time when the SCIM credential was created.
+            /// <para>The time when the SCIM credential was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-11-09T08:12:52Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the SCIM credential.
+            /// <para>The ID of the SCIM credential.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>scimcred-004whl0kvfwcypbi****</para>
             /// </summary>
             [NameInMap("CredentialId")]
             [Validation(Required=false)]
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// The SCIM credential.
+            /// <para>The SCIM credential.</para>
+            /// <remarks>
+            /// <para> The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</para>
+            /// </remarks>
             /// 
-            /// >  The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.
+            /// <b>Example:</b>
+            /// <para>8aAJCtpbyPJ8saXeYDgyw****</para>
             /// </summary>
             [NameInMap("CredentialSecret")]
             [Validation(Required=false)]
             public string CredentialSecret { get; set; }
 
             /// <summary>
-            /// The type of the SCIM credential.
+            /// <para>The type of the SCIM credential.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BearerToken</para>
             /// </summary>
             [NameInMap("CredentialType")]
             [Validation(Required=false)]
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// The ID of the directory.
+            /// <para>The ID of the directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d-00fc2p61****</para>
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// The time when the SCIM credential expires.
+            /// <para>The time when the SCIM credential expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-11-09T08:12:52Z</para>
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.
+            /// <para>The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

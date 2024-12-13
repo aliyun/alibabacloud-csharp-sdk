@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class RemoveUserFromGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The ID of the group.
+        /// <para>The ID of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>g-00jqzghi2n3o5hkh****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the user.
+        /// <para>The ID of the user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>u-00q8wbq42wiltcrk****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,16 +10,21 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class AddExternalSAMLIdPCertificateRequest : TeaModel {
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The X.509 certificate in the PEM format.
+        /// <para>The X.509 certificate in the PEM format.</para>
+        /// <para>The certificate is provided by the SAML IdP.</para>
         /// 
-        /// The certificate is provided by the SAML IdP.
+        /// <b>Example:</b>
+        /// <para>MIIC8DCCAdigAwIBAgIQP9eomUYGeoND****</para>
         /// </summary>
         [NameInMap("X509Certificate")]
         [Validation(Required=false)]

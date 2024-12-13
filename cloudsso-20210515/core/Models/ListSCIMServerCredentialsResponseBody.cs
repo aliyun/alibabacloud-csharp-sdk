@@ -10,59 +10,81 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListSCIMServerCredentialsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FE4B7037-C315-5DD5-826E-57A87950BCD1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The SCIM credentials.
+        /// <para>The SCIM credentials.</para>
         /// </summary>
         [NameInMap("SCIMServerCredentials")]
         [Validation(Required=false)]
         public List<ListSCIMServerCredentialsResponseBodySCIMServerCredentials> SCIMServerCredentials { get; set; }
         public class ListSCIMServerCredentialsResponseBodySCIMServerCredentials : TeaModel {
             /// <summary>
-            /// The time when the SCIM credential was created.
+            /// <para>The time when the SCIM credential was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-11-09T08:12:52Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the SCIM credential.
+            /// <para>The ID of the SCIM credential.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>scimcred-004whl0kvfwcypbi****</para>
             /// </summary>
             [NameInMap("CredentialId")]
             [Validation(Required=false)]
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// The type of the SCIM credential.
+            /// <para>The type of the SCIM credential.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BearerToken</para>
             /// </summary>
             [NameInMap("CredentialType")]
             [Validation(Required=false)]
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// The ID of the directory.
+            /// <para>The ID of the directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d-00fc2p61****</para>
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// The time when the SCIM credential expires.
+            /// <para>The time when the SCIM credential expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-11-09T08:12:52Z</para>
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// The status of the SCIM credential. Valid values:
+            /// <para>The status of the SCIM credential. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enabled: The SCIM credential is enabled.</description></item>
+            /// <item><description>Disabled: The SCIM credential is disabled.</description></item>
+            /// </list>
             /// 
-            /// *   Enabled: The SCIM credential is enabled.
-            /// *   Disabled: The SCIM credential is disabled.
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -71,7 +93,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCounts")]
         [Validation(Required=false)]

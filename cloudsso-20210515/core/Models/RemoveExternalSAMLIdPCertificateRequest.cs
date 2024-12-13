@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class RemoveExternalSAMLIdPCertificateRequest : TeaModel {
         /// <summary>
-        /// The ID of the certificate.
+        /// <para>The ID of the certificate.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/341629.html">ListExternalSAMLIdPCertificates</a> operation to query the IDs of certificates.</para>
         /// 
-        /// You can call the [ListExternalSAMLIdPCertificates](https://help.aliyun.com/document_detail/341629.html) operation to query the IDs of certificates.
+        /// <b>Example:</b>
+        /// <para>idp-c-00dt9gnl7fmjaw9c****</para>
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]

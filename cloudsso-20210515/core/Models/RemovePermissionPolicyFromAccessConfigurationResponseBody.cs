@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class RemovePermissionPolicyFromAccessConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9B13E4EE-3853-5852-9165-597C32AD8FB7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

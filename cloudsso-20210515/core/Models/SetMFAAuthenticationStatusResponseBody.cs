@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class SetMFAAuthenticationStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>14E2B1A9-7713-5E6F-8409-8DE12DF51AF4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class UpdateGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The ID of the group.
+        /// <para>The ID of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>g-00jqzghi2n3o5hkh****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The new description of the group.
+        /// <para>The new description of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a group.</para>
         /// </summary>
         [NameInMap("NewDescription")]
         [Validation(Required=false)]
         public string NewDescription { get; set; }
 
         /// <summary>
-        /// The new name of the group.
+        /// <para>The new name of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NewTestGroup</para>
         /// </summary>
         [NameInMap("NewGroupName")]
         [Validation(Required=false)]

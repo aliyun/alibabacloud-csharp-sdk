@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class UpdateDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// The information about the directory.
+        /// <para>The information about the directory.</para>
         /// </summary>
         [NameInMap("Directory")]
         [Validation(Required=false)]
         public UpdateDirectoryResponseBodyDirectory Directory { get; set; }
         public class UpdateDirectoryResponseBodyDirectory : TeaModel {
             /// <summary>
-            /// The time when the directory was created.
+            /// <para>The time when the directory was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-06-30T08:35:26Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the directory.
+            /// <para>The ID of the directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d-00fc2p61****</para>
             /// </summary>
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// The name of the directory.
+            /// <para>The name of the directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>new-example</para>
             /// </summary>
             [NameInMap("DirectoryName")]
             [Validation(Required=false)]
             public string DirectoryName { get; set; }
 
             /// <summary>
-            /// The region ID of the directory.
+            /// <para>The region ID of the directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The time when the directory was modified.
+            /// <para>The time when the directory was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-10-25T09:13:24Z</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -54,7 +69,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B182C041-8C64-5F2F-A07B-FC67FAF89CF9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class RemovePermissionPolicyFromAccessConfigurationRequest : TeaModel {
         /// <summary>
-        /// The ID of the access configuration.
+        /// <para>The ID of the access configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ac-00jhtfl8thteu6uj****</para>
         /// </summary>
         [NameInMap("AccessConfigurationId")]
         [Validation(Required=false)]
         public string AccessConfigurationId { get; set; }
 
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AliyunECSFullAccess</para>
         /// </summary>
         [NameInMap("PermissionPolicyName")]
         [Validation(Required=false)]
         public string PermissionPolicyName { get; set; }
 
         /// <summary>
-        /// The type of the policy. Valid values:
+        /// <para>The type of the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>System: system policy</description></item>
+        /// <item><description>Inline: inline policy</description></item>
+        /// </list>
         /// 
-        /// *   System: system policy
-        /// *   Inline: inline policy
+        /// <b>Example:</b>
+        /// <para>System</para>
         /// </summary>
         [NameInMap("PermissionPolicyType")]
         [Validation(Required=false)]

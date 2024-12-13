@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ClearExternalSAMLIdentityProviderResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>96D1E5FF-0301-5636-8D33-071E033CFB82</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

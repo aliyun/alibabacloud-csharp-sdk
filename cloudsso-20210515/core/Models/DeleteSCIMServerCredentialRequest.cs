@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class DeleteSCIMServerCredentialRequest : TeaModel {
         /// <summary>
-        /// The ID of the SCIM credential.
+        /// <para>The ID of the SCIM credential.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>scimcred-004whl0kvfwcypbi****</para>
         /// </summary>
         [NameInMap("CredentialId")]
         [Validation(Required=false)]
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]

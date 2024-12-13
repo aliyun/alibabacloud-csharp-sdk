@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class DeleteMFADeviceForUserRequest : TeaModel {
         /// <summary>
-        /// The ID of the directory.
+        /// <para>The ID of the directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// The ID of the MFA device.
+        /// <para>The ID of the MFA device.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/333531.html">ListMFADevicesForUser</a> operation to query the IDs of MFA devices.</para>
         /// 
-        /// You can call the [ListMFADevicesForUser](https://help.aliyun.com/document_detail/333531.html) operation to query the IDs of MFA devices.
+        /// <b>Example:</b>
+        /// <para>mfa-00ujhet8pycljj7j****</para>
         /// </summary>
         [NameInMap("MFADeviceId")]
         [Validation(Required=false)]
         public string MFADeviceId { get; set; }
 
         /// <summary>
-        /// The ID of the user.
+        /// <para>The ID of the user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>u-00q8wbq42wiltcrk****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

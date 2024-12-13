@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class EnableServiceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3D57EAD2-8723-1F26-B69C-F8707D8B565D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetUserProvisioningConfigurationRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource directory.
+        /// <para>The ID of the resource directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
         /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
