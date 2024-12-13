@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
         [NameInMap("Components")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Components { get; set; }
+        public object Components { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
