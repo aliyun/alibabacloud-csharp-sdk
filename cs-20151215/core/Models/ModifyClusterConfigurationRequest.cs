@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The custom configuration.</para>
+        /// <para>The custom configurations.</para>
         /// </summary>
         [NameInMap("customize_config")]
         [Validation(Required=false)]
         public List<ModifyClusterConfigurationRequestCustomizeConfig> CustomizeConfig { get; set; }
         public class ModifyClusterConfigurationRequestCustomizeConfig : TeaModel {
             /// <summary>
-            /// <para>The custom configuration.</para>
+            /// <para>The custom configurations.</para>
             /// </summary>
             [NameInMap("configs")]
             [Validation(Required=false)]

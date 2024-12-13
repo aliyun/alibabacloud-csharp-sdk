@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateResourcesDeleteProtectionRequest : TeaModel {
         /// <summary>
-        /// <para>Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</para>
+        /// <para>Specifies whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the clusters.</para>
+        /// <para>Details of the clusters.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The pod CIDR block.</para>
+            /// <para>The pod CIDR block and the configuration of the Flannel network plug-in.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.20.0.0/16</para>
@@ -293,7 +293,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Profile { get; set; }
 
             /// <summary>
-            /// <para>The kube-proxy mode. Valid values: ipvs and iptables.</para>
+            /// <para>The Kube-proxy mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>iptables</c>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</description></item>
+            /// <item><description><c>ipvs</c>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ipvs</para>
@@ -378,7 +382,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</para>
+            /// <para>Tis parameter is deprecated. Use the container_cidr parameter to obtain the pod CIDR block. The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</para>
             /// <list type="bullet">
             /// <item><description>10.0.0.0/8</description></item>
             /// <item><description>172.16-31.0.0/12-16</description></item>
@@ -403,7 +407,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// <para>The time zone.</para>
+            /// <para>The time zone</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>

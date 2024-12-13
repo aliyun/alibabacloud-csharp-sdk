@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>delete</c>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
         /// <item><description><c>patch</c>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
         /// </list>
-        /// <para>Default value: <c>apply</c></para>
+        /// <para>Default value: <c>apply</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apply</para>

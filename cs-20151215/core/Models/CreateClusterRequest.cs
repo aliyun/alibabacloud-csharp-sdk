@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: enables auto-renewal.</description></item>
-        /// <item><description><c>false</c>: disables auto-renewal.</description></item>
+        /// <item><description><c>false</c>: disables auto-renewal</description></item>
         /// </list>
         /// <para>Default value: <c>false</c></para>
         /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// 
         /// <summary>
         /// <para>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <c>period_unit</c> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <list type="bullet">
         /// <item><description><c>Kubernetes</c>: an ACK dedicated cluster.</description></item>
-        /// <item><description><c>ManagedKubernetes</c>: an ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</description></item>
+        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</description></item>
         /// <item><description><c>ExternalKubernetes</c>: a registered cluster.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -196,34 +196,66 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public CreateClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
         public class CreateClusterRequestControlPlaneConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("auto_renew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("auto_renew_period")]
             [Validation(Required=false)]
             public long? AutoRenewPeriod { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PrePaid</para>
+            /// </summary>
             [NameInMap("charge_type")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("cloud_monitor_flags")]
             [Validation(Required=false)]
             public bool? CloudMonitorFlags { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>none</para>
+            /// </summary>
             [NameInMap("cpu_policy")]
             [Validation(Required=false)]
             public string CpuPolicy { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ds-bp10b35imuam5amw****</para>
+            /// </summary>
             [NameInMap("deploymentset_id")]
             [Validation(Required=false)]
             public string DeploymentsetId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>aliyun_3_x64_20G_alibase_20240819.vhd</para>
+            /// </summary>
             [NameInMap("image_id")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AliyunLinux3</para>
+            /// </summary>
             [NameInMap("image_type")]
             [Validation(Required=false)]
             public string ImageType { get; set; }
@@ -232,62 +264,122 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<string> InstanceTypes { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ack</para>
+            /// </summary>
             [NameInMap("key_pair")]
             [Validation(Required=false)]
             public string KeyPair { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ack@Test</para>
+            /// </summary>
             [NameInMap("login_password")]
             [Validation(Required=false)]
             public string LoginPassword { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30000-32767</para>
+            /// </summary>
             [NameInMap("node_port_range")]
             [Validation(Required=false)]
             public string NodePortRange { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("period")]
             [Validation(Required=false)]
             public long? Period { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Month</para>
+            /// </summary>
             [NameInMap("period_unit")]
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>containerd</para>
+            /// </summary>
             [NameInMap("runtime")]
             [Validation(Required=false)]
             public string Runtime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("security_hardening_os")]
             [Validation(Required=false)]
             public bool? SecurityHardeningOs { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("soc_enabled")]
             [Validation(Required=false)]
             public bool? SocEnabled { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("system_disk_bursting_enabled")]
             [Validation(Required=false)]
             public bool? SystemDiskBurstingEnabled { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
+            /// </summary>
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PL1</para>
+            /// </summary>
             [NameInMap("system_disk_performance_level")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("system_disk_provisioned_iops")]
             [Validation(Required=false)]
             public long? SystemDiskProvisionedIops { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>120</para>
+            /// </summary>
             [NameInMap("system_disk_size")]
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>sp-2zej1nogjvovnz4z****</para>
+            /// </summary>
             [NameInMap("system_disk_snapshot_policy_id")]
             [Validation(Required=false)]
             public string SystemDiskSnapshotPolicyId { get; set; }
@@ -622,7 +714,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// <para>Cluster maintenance window.</para>
+        /// <para>The configurations of the cluster maintenance window.</para>
         /// </summary>
         [NameInMap("maintenance_window")]
         [Validation(Required=false)]
@@ -634,7 +726,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: enables auto-renewal.</description></item>
-        /// <item><description><c>false</c>: disables auto-renewal.</description></item>
+        /// <item><description><c>false</c>: disables auto-renewal</description></item>
         /// </list>
         /// <para>Default value: <c>true</c></para>
         /// 
@@ -651,7 +743,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</para>
         /// <para>Valid values: 1, 2, 3, 6, and 12.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -681,7 +773,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The billing method of master nodes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>PrePaid</c>: subscription.</description></item>
-        /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
+        /// <item><description><c>PostPaid</c>: the pay-as-you-go.</description></item>
         /// </list>
         /// <para>Default value: <c>PostPaid</c></para>
         /// 
@@ -696,7 +788,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</para>
         /// </summary>
         [NameInMap("master_instance_types")]
         [Validation(Required=false)]
@@ -708,7 +800,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The subscription duration of master nodes. This parameter takes effect and is required only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -738,7 +830,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The system disk type of master nodes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>cloud_efficiency</c>: ultra disk</description></item>
-        /// <item><description><c>cloud_ssd</c>: standard SSD</description></item>
+        /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
         /// <item><description><c>cloud_essd</c>: Enterprise SSD (ESSD).</description></item>
         /// </list>
         /// <para>Default value: <c>cloud_ssd</c>. The default value may vary in different zones.</para>
@@ -803,7 +895,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> MasterVswitchIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// <para>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and underscores (_). The cluster name cannot start with a hyphen (-).</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -886,21 +978,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? NumOfNodes { get; set; }
 
         /// <summary>
-        /// <para>Cluster auto operation and maintenance policy.</para>
+        /// <para>The automatic O\&amp;M policy of the cluster.</para>
         /// </summary>
         [NameInMap("operation_policy")]
         [Validation(Required=false)]
         public CreateClusterRequestOperationPolicy OperationPolicy { get; set; }
         public class CreateClusterRequestOperationPolicy : TeaModel {
             /// <summary>
-            /// <para>Automatic cluster upgrade</para>
+            /// <para>The configurations of auto cluster update.</para>
             /// </summary>
             [NameInMap("cluster_auto_upgrade")]
             [Validation(Required=false)]
             public CreateClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
             public class CreateClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
                 /// <summary>
-                /// <para>Cluster auto-upgrade frequency. Possible values: </para>
+                /// <para>The automatic update frequency. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>patch</description></item>
                 /// <item><description>stable</description></item>
@@ -915,7 +1007,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>Whether to enable automatic cluster upgrades.</para>
+                /// <para>Specifies whether to enable auto cluster update.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -951,7 +1043,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -980,7 +1072,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The operating system distribution. Valid values:</para>
+        /// <para>The OS distribution that is used. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CentOS</description></item>
         /// <item><description>AliyunLinux</description></item>
@@ -1012,10 +1104,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>If you set <c>cluster_type</c> to <c>ManagedKubernetes</c>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>Default</c>. an ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
-        /// <item><description><c>Edge</c>: an ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
-        /// <item><description><c>Serverless</c>: an ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</description></item>
-        /// <item><description><c>Lingjun</c>: an ACK Lingjun Pro cluster.</description></item>
+        /// <item><description><c>Default</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
+        /// <item><description><c>Edge</c>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
+        /// <item><description><c>Serverless</c>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</description></item>
+        /// <item><description><c>Lingjun</c>: ACK Lingjun Pro cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1163,11 +1255,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to enable security hardening based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</para>
+        /// <para>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables security hardening based on MLPS.</description></item>
-        /// <item><description><c>false</c>: disables security hardening based on MLPS.</description></item>
+        /// <item><description><c>true</c>: enables MLPS security hardening.</description></item>
+        /// <item><description><c>false</c>: disables MLPS security hardening.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c></para>
         /// 
@@ -1195,9 +1287,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SshFlags { get; set; }
 
         /// <summary>
-        /// <para>The tags to be added to nodes. You must add labels based on the following rules:</para>
+        /// <para>The tags to be added to nodes. When you add tags to a node, the following rules apply:</para>
         /// <list type="bullet">
-        /// <item><description>A label is a case-sensitive key-value pair. You can add up to 20 labels.</description></item>
+        /// <item><description>A tag is a case-sensitive key-value pair. You can add up to 20 tags.</description></item>
         /// <item><description>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</description></item>
         /// </list>
         /// </summary>
@@ -1208,7 +1300,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
+        /// <para>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
         /// </summary>
         [NameInMap("taints")]
         [Validation(Required=false)]
@@ -1373,7 +1465,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The billing method of worker nodes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>PrePaid</c>: subscription.</description></item>
-        /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
+        /// <item><description><c>PostPaid</c>: the pay-as-you-go.</description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -1400,7 +1492,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The subscription duration of worker nodes. This parameter takes effect and is required only when <c>worker_instance_charge_type</c> is set to <c>PrePaid</c>.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

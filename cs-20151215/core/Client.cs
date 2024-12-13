@@ -1141,7 +1141,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</para>
+        /// <para>Deletes kubeconfig files that may pose potential risks from a user and revokes Role-Based Access Control (RBAC) permissions on a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1198,7 +1198,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</para>
+        /// <para>Deletes kubeconfig files that may pose potential risks from a user and revokes Role-Based Access Control (RBAC) permissions on a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1255,7 +1255,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</para>
+        /// <para>Deletes kubeconfig files that may pose potential risks from a user and revokes Role-Based Access Control (RBAC) permissions on a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1285,7 +1285,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</para>
+        /// <para>Deletes kubeconfig files that may pose potential risks from a user and revokes Role-Based Access Control (RBAC) permissions on a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2709,7 +2709,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群诊断</para>
+        /// <para>Starts a cluster diagnostic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2759,7 +2759,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群诊断</para>
+        /// <para>Starts a cluster diagnostic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2809,7 +2809,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群诊断</para>
+        /// <para>Starts a cluster diagnostic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2828,7 +2828,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群诊断</para>
+        /// <para>Starts a cluster diagnostic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3713,7 +3713,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人</para>
+        /// <para>Deletes one or more ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3765,7 +3765,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人</para>
+        /// <para>Deletes one or more ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3817,7 +3817,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人</para>
+        /// <para>Deletes one or more ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3836,7 +3836,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人</para>
+        /// <para>Deletes one or more ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3855,7 +3855,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人分组</para>
+        /// <para>Deletes an ACK alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3907,7 +3907,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人分组</para>
+        /// <para>Deletes an ACK alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3959,7 +3959,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人分组</para>
+        /// <para>Deletes an ACK alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3978,7 +3978,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ACK报警联系人分组</para>
+        /// <para>Deletes an ACK alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12111,9 +12111,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断检查项</para>
+        /// <para>Queries cluster diagnostic items.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisCheckItemsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12124,11 +12127,18 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetClusterDiagnosisCheckItemsResponse
         /// </returns>
-        public GetClusterDiagnosisCheckItemsResponse GetClusterDiagnosisCheckItemsWithOptions(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetClusterDiagnosisCheckItemsResponse GetClusterDiagnosisCheckItemsWithOptions(string clusterId, string diagnosisId, GetClusterDiagnosisCheckItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12147,9 +12157,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断检查项</para>
+        /// <para>Queries cluster diagnostic items.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisCheckItemsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12160,11 +12173,18 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetClusterDiagnosisCheckItemsResponse
         /// </returns>
-        public async Task<GetClusterDiagnosisCheckItemsResponse> GetClusterDiagnosisCheckItemsWithOptionsAsync(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetClusterDiagnosisCheckItemsResponse> GetClusterDiagnosisCheckItemsWithOptionsAsync(string clusterId, string diagnosisId, GetClusterDiagnosisCheckItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12183,39 +12203,50 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断检查项</para>
+        /// <para>Queries cluster diagnostic items.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisCheckItemsRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetClusterDiagnosisCheckItemsResponse
         /// </returns>
-        public GetClusterDiagnosisCheckItemsResponse GetClusterDiagnosisCheckItems(string clusterId, string diagnosisId)
+        public GetClusterDiagnosisCheckItemsResponse GetClusterDiagnosisCheckItems(string clusterId, string diagnosisId, GetClusterDiagnosisCheckItemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetClusterDiagnosisCheckItemsWithOptions(clusterId, diagnosisId, headers, runtime);
+            return GetClusterDiagnosisCheckItemsWithOptions(clusterId, diagnosisId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断检查项</para>
+        /// <para>Queries cluster diagnostic items.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisCheckItemsRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetClusterDiagnosisCheckItemsResponse
         /// </returns>
-        public async Task<GetClusterDiagnosisCheckItemsResponse> GetClusterDiagnosisCheckItemsAsync(string clusterId, string diagnosisId)
+        public async Task<GetClusterDiagnosisCheckItemsResponse> GetClusterDiagnosisCheckItemsAsync(string clusterId, string diagnosisId, GetClusterDiagnosisCheckItemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetClusterDiagnosisCheckItemsWithOptionsAsync(clusterId, diagnosisId, headers, runtime);
+            return await GetClusterDiagnosisCheckItemsWithOptionsAsync(clusterId, diagnosisId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断结果</para>
+        /// <para>Queries cluster diagnostic results.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisResultRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12226,11 +12257,18 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetClusterDiagnosisResultResponse
         /// </returns>
-        public GetClusterDiagnosisResultResponse GetClusterDiagnosisResultWithOptions(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetClusterDiagnosisResultResponse GetClusterDiagnosisResultWithOptions(string clusterId, string diagnosisId, GetClusterDiagnosisResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12249,9 +12287,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断结果</para>
+        /// <para>Queries cluster diagnostic results.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisResultRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12262,11 +12303,18 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <returns>
         /// GetClusterDiagnosisResultResponse
         /// </returns>
-        public async Task<GetClusterDiagnosisResultResponse> GetClusterDiagnosisResultWithOptionsAsync(string clusterId, string diagnosisId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetClusterDiagnosisResultResponse> GetClusterDiagnosisResultWithOptionsAsync(string clusterId, string diagnosisId, GetClusterDiagnosisResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12285,32 +12333,40 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断结果</para>
+        /// <para>Queries cluster diagnostic results.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisResultRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetClusterDiagnosisResultResponse
         /// </returns>
-        public GetClusterDiagnosisResultResponse GetClusterDiagnosisResult(string clusterId, string diagnosisId)
+        public GetClusterDiagnosisResultResponse GetClusterDiagnosisResult(string clusterId, string diagnosisId, GetClusterDiagnosisResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetClusterDiagnosisResultWithOptions(clusterId, diagnosisId, headers, runtime);
+            return GetClusterDiagnosisResultWithOptions(clusterId, diagnosisId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断结果</para>
+        /// <para>Queries cluster diagnostic results.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDiagnosisResultRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetClusterDiagnosisResultResponse
         /// </returns>
-        public async Task<GetClusterDiagnosisResultResponse> GetClusterDiagnosisResultAsync(string clusterId, string diagnosisId)
+        public async Task<GetClusterDiagnosisResultResponse> GetClusterDiagnosisResultAsync(string clusterId, string diagnosisId, GetClusterDiagnosisResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetClusterDiagnosisResultWithOptionsAsync(clusterId, diagnosisId, headers, runtime);
+            return await GetClusterDiagnosisResultWithOptionsAsync(clusterId, diagnosisId, request, headers, runtime);
         }
 
         /// <term><b>Deprecated</b></term>
@@ -13305,7 +13361,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13365,7 +13421,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13425,7 +13481,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13454,7 +13510,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16050,11 +16106,12 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When you remove a node, the pods on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
         /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
-        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
+        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
         /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>Even if you set the <c>release_node</c> parameter to <c>true</c>, subscription nodes are not released. You must release the subscription nodes in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after you remove the nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16132,11 +16189,12 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When you remove a node, the pods on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
         /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
-        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
+        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
         /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>Even if you set the <c>release_node</c> parameter to <c>true</c>, subscription nodes are not released. You must release the subscription nodes in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after you remove the nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16214,11 +16272,12 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When you remove a node, the pods on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
         /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
-        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
+        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
         /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>Even if you set the <c>release_node</c> parameter to <c>true</c>, subscription nodes are not released. You must release the subscription nodes in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after you remove the nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16243,11 +16302,12 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When you remove a node, the pods on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
         /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. </description></item>
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation. </description></item>
-        /// <item><description>When the system removes a node, it sets the status of the node to Unschedulable. </description></item>
+        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
+        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
         /// <item><description>The system removes only worker nodes. It does not remove master nodes.</description></item>
+        /// <item><description>Even if you set the <c>release_node</c> parameter to <c>true</c>, subscription nodes are not released. You must release the subscription nodes in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after you remove the nodes.</description></item>
         /// </list>
         /// </description>
         /// 

@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextVersion { get; set; }
 
         /// <summary>
-        /// <para>Policy of rolling.</para>
+        /// <para>The rotation configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public UpgradeClusterRequestRollingPolicy RollingPolicy { get; set; }
         public class UpgradeClusterRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>Maximum number of executions per batch.</para>
+            /// <para>The maximum size of each batch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

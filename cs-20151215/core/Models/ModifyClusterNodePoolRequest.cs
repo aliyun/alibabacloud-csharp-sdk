@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The maximum bandwidth of the EIP.</para>
+            /// <para>The maximum bandwidth of the elastic IP address (EIP).</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The billing method of the EIP. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>PayByBandwidth</c>: pay-by-bandwidth.</description></item>
-            /// <item><description><c>PayByTraffic</c>: pay-by-data-transfer.</description></item>
+            /// <item><description><c>PayByTraffic</c>: pay-by-data-transfer</description></item>
             /// </list>
             /// <para>Default value: <c>PayByBandwidth</c>.</para>
             /// 
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Specifies whether to associate an elastic IP address (EIP) with the node pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: associates an EIP with the node pool.</description></item>
+            /// <item><description><c>true</c>: An EIP is associated with the node pool.</description></item>
             /// <item><description><c>false</c>: No EIP is associated with the node pool.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The instance type that is used for auto scaling. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cpu</c>: regular instance.</description></item>
+            /// <item><description><c>cpu</c>: regular instance</description></item>
             /// <item><description><c>gpu</c>: GPU-accelerated instance.</description></item>
             /// <item><description><c>gpushare</c>: shared GPU-accelerated instance.</description></item>
             /// <item><description><c>spot</c>: preemptible instance.</description></item>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>true</c>: enables auto repair.</description></item>
             /// <item><description><c>false</c>: disables auto repair.</description></item>
             /// </list>
-            /// <para>Default value: <c>true</c>.</para>
+            /// <para>Default value: <c>true</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -271,8 +271,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows node restart.</description></item>
-                /// <item><description><c>false</c>: does not allow node restart.</description></item>
+                /// <item><description><c>true</c>: yes.</description></item>
+                /// <item><description><c>false</c>: no.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether auto update is enabled. Valid values:</para>
+            /// <para>Specifies whether to enable auto update. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>true</c>: enables auto update.</description></item>
             /// <item><description><c>false</c>: disables auto update.</description></item>
@@ -308,8 +308,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>Specifies whether ACK is allowed to automatically update the kubelet. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows auto update of the kubelet.</description></item>
-                /// <item><description><c>false</c>: does not allow auto update of the kubelet.</description></item>
+                /// <item><description><c>true</c>: yes.</description></item>
+                /// <item><description><c>false</c>: no.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables auto CVE patching.</description></item>
+            /// <item><description><c>true</c>: eanbles auto CVE patching.</description></item>
             /// <item><description><c>true</c>: disables auto CVE patching.</description></item>
             /// </list>
             /// 
@@ -369,8 +369,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows node restart.</description></item>
-                /// <item><description><c>false</c>: does not allow node restart.</description></item>
+                /// <item><description><c>true</c>: yes.</description></item>
+                /// <item><description><c>false</c>: no.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>Specifies whether to enable auto update.</para>
+                /// <para>Specifies whether to enable auto update. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: enables auto update.</description></item>
                 /// <item><description>false: disables auto update.</description></item>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>The maximum number of nodes that can be in the Unavailable state.</para>
                 /// <para>Valid values: 1 to 1000.</para>
-                /// <para>Default value: 1.</para>
+                /// <para>Default value: 1</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmyvw3wjm****</para>
@@ -527,8 +527,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The duration of the auto-renewal. This parameter takes effect and is required only when you set <c>instance_charge_type</c> to <c>PrePaid</c>.</para>
-            /// <para>If you specify <c>PeriodUnit=Month</c>, the valid values are 1, 2, 3, 6, and 12.</para>
+            /// <para>The auto-renewal period. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values when PeriodUnit is set to Week: 1, 2, and 3</description></item>
+            /// <item><description>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</description></item>
+            /// </list>
+            /// <para>Default value: 1</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -540,7 +544,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect only when you set <c>multi_az_policy</c> to <c>COST_OPTIMIZED</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</description></item>
+            /// <item><description><c>true</c>: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created</description></item>
             /// <item><description><c>false</c>: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</description></item>
             /// </list>
             /// 
@@ -552,7 +556,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CompensateWithOnDemand { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the data disks that are mounted to the nodes in the node pool. You can mount at most 10 data disks to the nodes in the node pool.</para>
+            /// <para>The configurations of the data disks that are mounted to nodes in the node pool. Valid values: 0 to 10. You can mount at most 10 data disks to the nodes in the node pool.</para>
             /// </summary>
             [NameInMap("data_disks")]
             [Validation(Required=false)]
@@ -583,7 +587,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <list type="bullet">
             /// <item><description><c>AliyunLinux</c>: Alibaba Cloud Linux 2.</description></item>
             /// <item><description><c>AliyunLinuxSecurity</c>: Alibaba Cloud Linux 2 (UEFI).</description></item>
-            /// <item><description><c>AliyunLinux3</c>: Alibaba Cloud Linux 3.</description></item>
+            /// <item><description><c>AliyunLinux3</c>: Alibaba Cloud Linux 3</description></item>
             /// <item><description><c>AliyunLinux3Arm64</c>: Alibaba Cloud Linux 3 (ARM).</description></item>
             /// <item><description><c>AliyunLinux3Security</c>: Alibaba Cloud Linux 3 (UEFI).</description></item>
             /// <item><description><c>CentOS</c>: CentOS.</description></item>
@@ -629,7 +633,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>The metering method of the public IP address. Valid values:</para>
+            /// <para>The billing method of the public IP address. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>PayByBandwidth</c>: pay-by-bandwidth.</description></item>
             /// <item><description><c>PayByTraffic</c>: pay-by-data-transfer</description></item>
@@ -775,7 +779,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>The type of private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. The system selects a private pool to start instances. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>Open</c>: open private node pool. The system selects an open private pool to start instances. If no matching open private pools are available, the resources in the public pool are used.</description></item>
+                /// <item><description><c>Open</c>: open private pool. The system selects an open private pool to start instances. If no matching open private pools are available, the resources in the public pool are used.</description></item>
                 /// <item><description><c>Target</c>: private node pool. The system uses the resources of the specified private pool to start instances. If the specified private pool is unavailable, instances cannot be started.</description></item>
                 /// <item><description><c>None</c>: does not use private pools. The resources of private node pools are not used to launch instances.</description></item>
                 /// </list>
@@ -868,7 +872,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The bidding policy of preemptible instances. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>NoSpot</c>: non-preemptible instance.</description></item>
-            /// <item><description><c>SpotWithPriceLimit</c>: specifies the highest bid for the preemptible instance.</description></item>
+            /// <item><description><c>SpotWithPriceLimit</c>: specifies the highest bid.</description></item>
             /// <item><description><c>SpotAsPriceGo</c>: automatically submits bids based on the up-to-date market price.</description></item>
             /// </list>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/157759.html">Create a preemptible elastic container instance</a>.</para>
@@ -891,7 +895,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The system disk types. The system attempts to create system disks of a disk type with a lower priority if the disk type with a higher priority is unavailable. Valid values: cloud: disk. cloud_efficiency (ultra disk), cloud_ssd: standard SSD. cloud_essd: Enterprise SSD (ESSD).</para>
+            /// <para>The system disk types. The system attempts to create system disks of a disk type with a lower priority if the disk type with a higher priority is unavailable. Valid values: cloud: disk. cloud_efficiency (ultra disk). cloud_ssd: standard SSD. cloud_essd: Enterprise SSD (ESSD).</para>
             /// </summary>
             [NameInMap("system_disk_categories")]
             [Validation(Required=false)]
@@ -901,7 +905,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The type of system disk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
-            /// <item><description><c>cloud_ssd</c>: standard SSD</description></item>
+            /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
             /// </list>
             /// <para>Default value: <c>cloud_ssd</c>.</para>
             /// 
@@ -923,7 +927,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskEncryptAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</para>
+            /// <para>Specifies whether to encrypt the system disk. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -965,7 +969,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The size of the system disk in GiB.</para>
             /// <para>Valid values: 20 to 500.</para>
-            /// <para>The value of this parameter must be at least 20 and greater than or equal to the image size.</para>
+            /// <para>The value of this parameter must be at least 20 and greater than or equal to the size of the image.</para>
             /// <para>Default value: the greater value between 40 and the image size.</para>
             /// 
             /// <b>Example:</b>
@@ -977,7 +981,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The tags that you want to add only to ECS instances.</para>
-            /// <para>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</para>
+            /// <para>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: and cannot contain https:// or http://.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]

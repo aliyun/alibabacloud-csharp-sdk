@@ -43,7 +43,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>This parameter is deprecated.</para>
         /// <para>A list of nodes that you want to remove.</para>
+        /// <remarks>
+        /// <para> This parameter is deprecated. Use instance_ids instead.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]

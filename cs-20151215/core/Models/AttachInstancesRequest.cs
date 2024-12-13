@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The CPU management policy of the node. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</para>
         /// <list type="bullet">
         /// <item><description><c>static</c>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</description></item>
-        /// <item><description><c>none</c>: specifies that the default CPU affinity is used.</description></item>
+        /// <item><description><c>none</c>: uses default CPU affinity.</description></item>
         /// </list>
-        /// <para>Default value: <c>none</c>.</para>
+        /// <para>Default value: <c>none</c></para>
         /// <remarks>
         /// <para> This parameter is not supported if you specify <c>nodepool_id</c>.</para>
         /// </remarks>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CpuPolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to store container data and images on data disks. Valid values:</para>
+        /// <para>Specifies whether to store container data and images on data disks. Valid value:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: stores container data and images on data disks.</description></item>
         /// <item><description><c>false</c>: does not store container data or images on data disks.</description></item>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Instances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the node that you want to add is an Edge Node Service (ENS) node. Valid values:</para>
+        /// <para>Specifies whether the node that you want to add is an Edge Node Service (ENS) node. Valid value:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: the node that you want to add is an ENS node.</description></item>
         /// <item><description><c>false</c>: the node that you want to add is not an ENS node.</description></item>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? IsEdgeWorker { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain the instance name. Valid values:</para>
+        /// <para>Specifies whether to retain the instance name. Valid value:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: retains the instance name.</description></item>
         /// <item><description><c>false</c>: does not retain the instance name.</description></item>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data on the node. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
+        /// <para>The user-defined data on the node. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Use instance user data to automatically run commands or scripts on instance startup</a>.</para>
         /// <remarks>
         /// <para> This parameter is not supported if you specify <c>nodepool_id</c>.</para>
         /// </remarks>

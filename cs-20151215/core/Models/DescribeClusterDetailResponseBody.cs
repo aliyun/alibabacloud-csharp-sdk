@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The on-premises domain name of the cluster.</para>
+        /// <para>The domain name of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster.local</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the pod.</para>
+        /// <para>The CIDR block of the pod. The configuration of the Flannel network plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.20.0.0/16</para>
@@ -67,98 +67,236 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ContainerCidr { get; set; }
 
+        /// <summary>
+        /// <para>The control plane configurations in an ACK dedicated cluster.</para>
+        /// </summary>
         [NameInMap("control_plane_config")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyControlPlaneConfig ControlPlaneConfig { get; set; }
         public class DescribeClusterDetailResponseBodyControlPlaneConfig : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether auto-renewal is enabled for the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("auto_renew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            /// <summary>
+            /// <para>The auto-renewal duration for the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("auto_renew_period")]
             [Validation(Required=false)]
             public long? AutoRenewPeriod { get; set; }
 
+            /// <summary>
+            /// <para>The billing method of the control plane node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PrePaid</para>
+            /// </summary>
             [NameInMap("charge_type")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to install CloudMonitor for the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("cloud_monitor_flags")]
             [Validation(Required=false)]
             public bool? CloudMonitorFlags { get; set; }
 
+            /// <summary>
+            /// <para>The CPU management policy of nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
+            /// </summary>
             [NameInMap("cpu_policy")]
             [Validation(Required=false)]
             public string CpuPolicy { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the deployment set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ds-bp10b35imuam5amw****</para>
+            /// </summary>
             [NameInMap("deploymentset_id")]
             [Validation(Required=false)]
             public string DeploymentsetId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aliyun_3_x64_20G_alibase_20240819.vhd</para>
+            /// </summary>
             [NameInMap("image_id")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            /// <summary>
+            /// <para>The type of the OS image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AliyunLinux3</para>
+            /// </summary>
             [NameInMap("image_type")]
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            /// <summary>
+            /// <para>The instance type of the node.</para>
+            /// </summary>
             [NameInMap("instance_types")]
             [Validation(Required=false)]
             public List<string> InstanceTypes { get; set; }
 
+            /// <summary>
+            /// <para>The name of the key pair. You must set key_pair or login_password.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ack</para>
+            /// </summary>
             [NameInMap("key_pair")]
             [Validation(Required=false)]
             public string KeyPair { get; set; }
 
+            /// <summary>
+            /// <para>The node port range.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30000-32767</para>
+            /// </summary>
             [NameInMap("node_port_range")]
             [Validation(Required=false)]
             public string NodePortRange { get; set; }
 
+            /// <summary>
+            /// <para>The subscription duration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("period")]
             [Validation(Required=false)]
             public long? Period { get; set; }
 
+            /// <summary>
+            /// <para>The unit of the subscription duration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Month</para>
+            /// </summary>
             [NameInMap("period_unit")]
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
 
+            /// <summary>
+            /// <para>The runtime.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>containerd</para>
+            /// </summary>
             [NameInMap("runtime")]
             [Validation(Required=false)]
             public string Runtime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to enable Alibaba Cloud Linux Security Hardening.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("security_hardening_os")]
             [Validation(Required=false)]
             public bool? SecurityHardeningOs { get; set; }
 
+            /// <summary>
+            /// <para>The number of control plane nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to enable Multi-Level Protection Scheme (MLPS) security hardening.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("soc_enabled")]
             [Validation(Required=false)]
             public bool? SocEnabled { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to enable the burst feature for the system disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("system_disk_bursting_enabled")]
             [Validation(Required=false)]
             public bool? SystemDiskBurstingEnabled { get; set; }
 
+            /// <summary>
+            /// <para>The category of the system disk for nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
+            /// </summary>
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            /// <summary>
+            /// <para>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PL1</para>
+            /// </summary>
             [NameInMap("system_disk_performance_level")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
 
+            /// <summary>
+            /// <para>The preset read/write IOPS of the system disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("system_disk_provisioned_iops")]
             [Validation(Required=false)]
             public long? SystemDiskProvisionedIops { get; set; }
 
+            /// <summary>
+            /// <para>The system disk size of the node. The value must be at least 40 GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120</para>
+            /// </summary>
             [NameInMap("system_disk_size")]
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
 
+            /// <summary>
+            /// <para>The automatic snapshot policy of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sp-2zej1nogjvovnz4z****</para>
+            /// </summary>
             [NameInMap("system_disk_snapshot_policy_id")]
             [Validation(Required=false)]
             public string SystemDiskSnapshotPolicyId { get; set; }
@@ -302,7 +440,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of the IP addresses of the node.</para>
+        /// <para>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel network plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>26</para>
@@ -394,7 +532,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>The proxy mode. Valid values: ipvs and iptables.</para>
+        /// <para>The kube-proxy mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>iptables</c>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</description></item>
+        /// <item><description><c>ipvs</c>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ipvs</para>
@@ -434,7 +576,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the Service.</para>
+        /// <para>The CIDR block of the service network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -506,7 +648,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// <para>The time zone.</para>
+        /// <para>The time zone</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Shanghai</para>
@@ -538,7 +680,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</para>
+        /// <para>The ID of the vSwitche. This field is deprecated. Use vswitch_ids to query the vSwitches on the control plane and vswitch_ids to query the vSwitches on the data plane.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</para>

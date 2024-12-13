@@ -184,12 +184,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</para>
+        /// <para>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: enables cluster deletion protection.</description></item>
         /// <item><description><c>false</c>: disables cluster deletion protection.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>true</c>: remaps the test domain name of the cluster.</description></item>
         /// <item><description><c>false</c>: does not remap the test domain name of the cluster.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>true</c>: enables instance deletion protection.</description></item>
         /// <item><description><c>false</c>: disables instance deletion protection.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -267,18 +267,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ModifyClusterRequestOperationPolicy OperationPolicy { get; set; }
         public class ModifyClusterRequestOperationPolicy : TeaModel {
             /// <summary>
-            /// <para>The configurations of auto cluster update.</para>
+            /// <para>The configurations of automatic update.</para>
             /// </summary>
             [NameInMap("cluster_auto_upgrade")]
             [Validation(Required=false)]
             public ModifyClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
             public class ModifyClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
                 /// <summary>
-                /// <para>The frequency of auto cluster updates. Valid values:</para>
+                /// <para>The automatic update frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>patch</description></item>
-                /// <item><description>stable</description></item>
-                /// <item><description>rapid</description></item>
+                /// <item><description>patch: specifies the latest patch version.</description></item>
+                /// <item><description>stables: the second-latest minor version.</description></item>
+                /// <item><description>rapid: the latest minor version.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -289,7 +290,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable auto cluster update.</para>
+                /// <para>Specifies whether to enable automatic update.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -341,6 +342,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>The vSwitches of the control planes. This parameter can be used to change the vSwitches of the control planes in an ACK managed cluster. Take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter overwrites the existing configuration. You must specify all vSwitches of the control planes.</description></item>
+        /// <item><description>The control planes restart during the update process. Exercise caution when you perform this operation.</description></item>
+        /// <item><description>Make sure that all security groups of the cluster, including the security groups of the control planes, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</description></item>
+        /// <item><description>If the new vSwitches of the control planes are configured with an access control list (ACL), ensure that the ACL allows communication between the new vSwitches and the CIDR blocks of cluster nodes and container networks.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("vswitch_ids")]
         [Validation(Required=false)]
         public List<string> VswitchIds { get; set; }
