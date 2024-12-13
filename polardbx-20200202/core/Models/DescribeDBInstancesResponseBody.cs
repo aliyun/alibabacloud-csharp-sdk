@@ -235,6 +235,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string PayType { get; set; }
 
+            [NameInMap("PrimaryInstanceId")]
+            [Validation(Required=false)]
+            public string PrimaryInstanceId { get; set; }
+
             /// <summary>
             /// <para>主可用区。</para>
             /// <para>This parameter is required.</para>
