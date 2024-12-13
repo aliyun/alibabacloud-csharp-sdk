@@ -421,6 +421,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
 
                         }
 
+                        [NameInMap("index")]
+                        [Validation(Required=false)]
+                        public string Index { get; set; }
+
                     }
 
                     [NameInMap("railway")]
@@ -545,6 +549,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
                         [Validation(Required=false)]
                         public string Id { get; set; }
 
+                        [NameInMap("index")]
+                        [Validation(Required=false)]
+                        public string Index { get; set; }
+
                         [NameInMap("name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
@@ -620,6 +628,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
                         [NameInMap("driveTimeSecond")]
                         [Validation(Required=false)]
                         public string DriveTimeSecond { get; set; }
+
+                        [NameInMap("index")]
+                        [Validation(Required=false)]
+                        public string Index { get; set; }
 
                         [NameInMap("originName")]
                         [Validation(Required=false)]
@@ -704,6 +716,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
                         [NameInMap("distanceMeter")]
                         [Validation(Required=false)]
                         public string DistanceMeter { get; set; }
+
+                        [NameInMap("index")]
+                        [Validation(Required=false)]
+                        public string Index { get; set; }
 
                         /// <summary>
                         /// <b>Example:</b>
