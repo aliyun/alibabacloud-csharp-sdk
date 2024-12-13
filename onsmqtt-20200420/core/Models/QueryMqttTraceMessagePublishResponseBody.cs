@@ -10,58 +10,79 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class QueryMqttTraceMessagePublishResponseBody : TeaModel {
         /// <summary>
-        /// The message traces.
+        /// <para>The message traces.</para>
         /// </summary>
         [NameInMap("MessageTraceLists")]
         [Validation(Required=false)]
         public List<QueryMqttTraceMessagePublishResponseBodyMessageTraceLists> MessageTraceLists { get; set; }
         public class QueryMqttTraceMessagePublishResponseBodyMessageTraceLists : TeaModel {
             /// <summary>
-            /// The action on the message. Valid values:
+            /// <para>The action on the message. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>pub_mqtt</b>: indicates that the message was sent by an ApsaraMQ for MQTT client.</description></item>
+            /// <item><description><b>pub_mq</b>: indicates that the message was sent by an ApsaraMQ for RocketMQ client.</description></item>
+            /// </list>
             /// 
-            /// *   **pub_mqtt**: indicates that the message was sent by an ApsaraMQ for MQTT client.
-            /// *   **pub_mq**: indicates that the message was sent by an ApsaraMQ for RocketMQ client.
+            /// <b>Example:</b>
+            /// <para>pub_mqtt</para>
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// The returned code for the action on the message. Valid values:
+            /// <para>The returned code for the action on the message. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>mqtt.trace.action.msg.pub.mqtt</b>: This value is returned if the value of Action is <b>pub_mqtt</b>.</description></item>
+            /// <item><description><b>mqtt.trace.action.msg.pub.mq</b>: This value is returned if the value of Action is <b>pub_mq</b>.</description></item>
+            /// </list>
             /// 
-            /// *   **mqtt.trace.action.msg.pub.mqtt**: This value is returned if the value of Action is **pub_mqtt**.
-            /// *   **mqtt.trace.action.msg.pub.mq**: This value is returned if the value of Action is **pub_mq**.
+            /// <b>Example:</b>
+            /// <para>mqtt.trace.action.msg.pub.mqtt</para>
             /// </summary>
             [NameInMap("ActionCode")]
             [Validation(Required=false)]
             public string ActionCode { get; set; }
 
             /// <summary>
-            /// The returned information for the action on the message. Valid values:
+            /// <para>The returned information for the action on the message. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Pub From Mqtt Client</b>: This value is returned if the value of Action is <b>pub_mqtt</b>.</description></item>
+            /// <item><description><b>Pub From MQ</b>: This value is returned if the value of Action is <b>pub_mq</b>.</description></item>
+            /// </list>
             /// 
-            /// *   **Pub From Mqtt Client**: This value is returned if the value of Action is **pub_mqtt**.
-            /// *   **Pub From MQ**: This value is returned if the value of Action is **pub_mq**.
+            /// <b>Example:</b>
+            /// <para>Pub From Mqtt Client</para>
             /// </summary>
             [NameInMap("ActionInfo")]
             [Validation(Required=false)]
             public string ActionInfo { get; set; }
 
             /// <summary>
-            /// The ID of the client that sends the message.
+            /// <para>The ID of the client that sends the message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>GID_test@@@producer</para>
             /// </summary>
             [NameInMap("ClientId")]
             [Validation(Required=false)]
             public string ClientId { get; set; }
 
             /// <summary>
-            /// The message ID.
+            /// <para>The message ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AC1EC0030EAB78308DB16A3EC773BD95</para>
             /// </summary>
             [NameInMap("MsgId")]
             [Validation(Required=false)]
             public string MsgId { get; set; }
 
             /// <summary>
-            /// The time when the message was sent.
+            /// <para>The time when the message was sent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-05-21 15:08:19.210</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -70,7 +91,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         }
 
         /// <summary>
-        /// The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.
+        /// <para>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69AD5550-BF22-438A-9202-A6E89185****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

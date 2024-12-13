@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class GetDeviceCredentialRequest : TeaModel {
         /// <summary>
-        /// The client ID of the device whose access credential you want to query.
+        /// <para>The client ID of the device whose access credential you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>GID_test@@@test</para>
         /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the **Instance Details** page that corresponds to the instance in the ApsaraMQ for MQTT console.
+        /// <para>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the <b>Instance Details</b> page that corresponds to the instance in the ApsaraMQ for MQTT console.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>post-cn-0pp12gl****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

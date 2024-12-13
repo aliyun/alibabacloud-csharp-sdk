@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class RevokeTokenResponseBody : TeaModel {
         /// <summary>
-        /// The request ID. This parameter is a common parameter.
+        /// <para>The request ID. This parameter is a common parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>833EDFCB-C447-4CE3-B21F-3A4C2D1B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

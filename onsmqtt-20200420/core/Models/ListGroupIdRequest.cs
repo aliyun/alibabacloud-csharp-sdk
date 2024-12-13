@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class ListGroupIdRequest : TeaModel {
         /// <summary>
-        /// The ID of the ApsaraMQ for MQTT instance whose groups you want to query.
+        /// <para>The ID of the ApsaraMQ for MQTT instance whose groups you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mqtt-cn-0pp1ldu****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

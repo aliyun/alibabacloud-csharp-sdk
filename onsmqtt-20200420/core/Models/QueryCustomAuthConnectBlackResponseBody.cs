@@ -10,49 +10,64 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class QueryCustomAuthConnectBlackResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.
+        /// <para>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryCustomAuthConnectBlackResponseBodyData Data { get; set; }
         public class QueryCustomAuthConnectBlackResponseBodyData : TeaModel {
             /// <summary>
-            /// The pagination token that is used in the next request to retrieve a new page of results.
+            /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AAAAAZ0cM0HTqLXvgm7oMHWXcvc=</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// The returned results.
+            /// <para>The returned results.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<QueryCustomAuthConnectBlackResponseBodyDataResults> Results { get; set; }
             public class QueryCustomAuthConnectBlackResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// The client ID.
+                /// <para>The client ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>GID_TEST@@@test</para>
                 /// </summary>
                 [NameInMap("ClientId")]
                 [Validation(Required=false)]
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// Indicates whether to allow or deny access.
+                /// <para>Indicates whether to allow or deny access.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALLOW</para>
                 /// </summary>
                 [NameInMap("Effect")]
                 [Validation(Required=false)]
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// The authorized permissions.
+                /// <para>The authorized permissions.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CONNECT</para>
                 /// </summary>
                 [NameInMap("PermitAction")]
                 [Validation(Required=false)]
@@ -63,21 +78,30 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operation success.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>020F6A43-19E6-4B6E-B846-44EB31DF****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: true and false.
+        /// <para>Indicates whether the request is successful. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

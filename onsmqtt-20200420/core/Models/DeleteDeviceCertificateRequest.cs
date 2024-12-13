@@ -10,21 +10,35 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteDeviceCertificateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The serial number of the CA certificate to which the device certificate belongs. The serial number is the unique identifier of a CA certificate. CA certificates are used to validate device certificates.</para>
+        /// <para>The serial number of a CA certificate cannot exceed 128 bytes in size.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>007269004887******</para>
         /// </summary>
         [NameInMap("CaSn")]
         [Validation(Required=false)]
         public string CaSn { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The serial number of the device certificate whose registration information you want to delete. The serial number is the unique identifier of a device.</para>
+        /// <para>The serial number of a device certificate cannot exceed 128 bytes in size.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>356217374433****</para>
         /// </summary>
         [NameInMap("DeviceSn")]
         [Validation(Required=false)]
         public string DeviceSn { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the ApsaraMQ for MQTT instance to which the device certificate is bound.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>post-cn-7mz2d******</para>
         /// </summary>
         [NameInMap("MqttInstanceId")]
         [Validation(Required=false)]

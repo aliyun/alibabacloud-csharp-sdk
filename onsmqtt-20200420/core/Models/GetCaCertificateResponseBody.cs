@@ -9,44 +9,113 @@ using Tea;
 namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class GetCaCertificateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Certificate details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCaCertificateResponseBodyData Data { get; set; }
         public class GetCaCertificateResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Content of the CA certificate.</para>
+            /// <remarks>
+            /// <para>\n represents a new line.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-----BEGIN CERTIFICATE-----\nMIIDuzCCAqdGVzdC5jbi1xaW5n******\n-----END CERTIFICATE-----</para>
+            /// </summary>
             [NameInMap("CaContent")]
             [Validation(Required=false)]
             public string CaContent { get; set; }
 
+            /// <summary>
+            /// <para>Name of the CA certificate</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mqtt_ca</para>
+            /// </summary>
             [NameInMap("CaName")]
             [Validation(Required=false)]
             public string CaName { get; set; }
 
+            /// <summary>
+            /// <para>Registration code of the CA certificate</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>13274673-8f90-4630-bea1-9cccb25756ad2089******</para>
+            /// </summary>
             [NameInMap("RegistrationCode")]
             [Validation(Required=false)]
             public string RegistrationCode { get; set; }
 
+            /// <summary>
+            /// <para>The SN serial number of the CA certificate, used to uniquely identify a CA certificate. Value range: no more than 128 bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>00f26900ba87******</para>
+            /// </summary>
             [NameInMap("Sn")]
             [Validation(Required=false)]
             public string Sn { get; set; }
 
+            /// <summary>
+            /// <para>The status of the CA certificate. The values are as follows:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Indicates that the certificate is in an inactive state. - <b>1</b>: Indicates that the certificate is in an active state.<remarks>
+            /// <para>After the CA certificate is registered, it is in an active state by default.</para>
+            /// </remarks>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The start time when the CA certificate becomes effective. The format is a Unix timestamp in milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1654137303000</para>
+            /// </summary>
             [NameInMap("ValidBegin")]
             [Validation(Required=false)]
             public string ValidBegin { get; set; }
 
+            /// <summary>
+            /// <para>The end time when the CA certificate becomes effective. The format is a Unix timestamp in milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1969497303000</para>
+            /// </summary>
             [NameInMap("ValidEnd")]
             [Validation(Required=false)]
             public string ValidEnd { get; set; }
 
+            /// <summary>
+            /// <para>Content of the Verification certificate.</para>
+            /// <remarks>
+            /// <para>\n represents a new line.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-----BEGIN CERTIFICATE-----\nMIID/DCCAu+Y5sRMpp9tnd+4s******\n-----END CERTIFICATE-----</para>
+            /// </summary>
             [NameInMap("VerificationContent")]
             [Validation(Required=false)]
             public string VerificationContent { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>Public parameters, each request ID is unique and can be used for troubleshooting and problem localization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>020F6A43-19E6-4B6E-B846-44EB31DF****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

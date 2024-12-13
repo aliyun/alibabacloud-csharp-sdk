@@ -10,68 +10,92 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class QueryMqttTraceMessageOfClientResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The returned messages.
+        /// <para>The returned messages.</para>
         /// </summary>
         [NameInMap("MessageOfClientList")]
         [Validation(Required=false)]
         public List<QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList> MessageOfClientList { get; set; }
         public class QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList : TeaModel {
             /// <summary>
-            /// The action on the message. Valid values:
+            /// <para>The action on the message. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>pub_mqtt</b>: The ApsaraMQ for MQTT client sends the message.</description></item>
+            /// <item><description><b>sub</b>: The ApsaraMQ for MQTT client subscribes to the message.</description></item>
+            /// <item><description><b>push_offline</b>: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</description></item>
+            /// </list>
             /// 
-            /// *   **pub_mqtt**: The ApsaraMQ for MQTT client sends the message.
-            /// *   **sub**: The ApsaraMQ for MQTT client subscribes to the message.
-            /// *   **push_offline**: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.
+            /// <b>Example:</b>
+            /// <para>pub_mqtt</para>
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// The returned code for the action on the message. Valid values:
+            /// <para>The returned code for the action on the message. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>mqtt.trace.action.msg.pub.mqtt</b>: This value is returned if the value of Action is <b>pub_mqtt</b>.</description></item>
+            /// <item><description><b>mqtt.trace.action.msg.sub</b>: This value is returned if the value of Action is <b>sub</b>.</description></item>
+            /// <item><description><b>mqtt.trace.action.msg.push.offline</b>: This value is returned if the value of Action is <b>push_offline</b>.</description></item>
+            /// </list>
             /// 
-            /// *   **mqtt.trace.action.msg.pub.mqtt**: This value is returned if the value of Action is **pub_mqtt**.
-            /// *   **mqtt.trace.action.msg.sub**: This value is returned if the value of Action is **sub**.
-            /// *   **mqtt.trace.action.msg.push.offline**: This value is returned if the value of Action is **push_offline**.
+            /// <b>Example:</b>
+            /// <para>mqtt.trace.action.msg.pub.mqtt</para>
             /// </summary>
             [NameInMap("ActionCode")]
             [Validation(Required=false)]
             public string ActionCode { get; set; }
 
             /// <summary>
-            /// The information returned for the action on the message. Valid values:
+            /// <para>The information returned for the action on the message. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Pub From Mqtt Client</b>: This value is returned if the value of Action is <b>pub_mqtt</b>.</description></item>
+            /// <item><description><b>Push To Mqtt Client</b>: This value is returned if the value of Action is <b>sub</b>.</description></item>
+            /// <item><description><b>Push Offline Msg To Mqtt Client</b>: This value is returned if the value of Action is <b>push_offline</b>.</description></item>
+            /// </list>
             /// 
-            /// *   **Pub From Mqtt Client**: This value is returned if the value of Action is **pub_mqtt**.
-            /// *   **Push To Mqtt Client**: This value is returned if the value of Action is **sub**.
-            /// *   **Push Offline Msg To Mqtt Client**: This value is returned if the value of Action is **push_offline**.
+            /// <b>Example:</b>
+            /// <para>Pub From Mqtt Client</para>
             /// </summary>
             [NameInMap("ActionInfo")]
             [Validation(Required=false)]
             public string ActionInfo { get; set; }
 
             /// <summary>
-            /// The client ID of the device.
+            /// <para>The client ID of the device.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>GID_test@@@producer</para>
             /// </summary>
             [NameInMap("ClientId")]
             [Validation(Required=false)]
             public string ClientId { get; set; }
 
             /// <summary>
-            /// The message ID.
+            /// <para>The message ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AC1EC0030EAB78308DB16A3EC773****</para>
             /// </summary>
             [NameInMap("MsgId")]
             [Validation(Required=false)]
             public string MsgId { get; set; }
 
             /// <summary>
-            /// The time when the message was sent or received.
+            /// <para>The time when the message was sent or received.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-05-21 15:08:19.234</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -80,21 +104,30 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.
+        /// <para>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B096B9D6-62F3-4567-BB59-58D1362E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of messages returned.
+        /// <para>The total number of messages returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

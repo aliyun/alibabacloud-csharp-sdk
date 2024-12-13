@@ -8,17 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
-    public class GetRegisterCodeRequest : TeaModel {
+    public class SetSniConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>post-cn-7mz2d******</para>
+        /// </summary>
+        [NameInMap("DefaultCertificate")]
+        [Validation(Required=false)]
+        public string DefaultCertificate { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MqttInstanceId")]
         [Validation(Required=false)]
         public string MqttInstanceId { get; set; }
+
+        [NameInMap("SniConfig")]
+        [Validation(Required=false)]
+        public string SniConfig { get; set; }
 
     }
 

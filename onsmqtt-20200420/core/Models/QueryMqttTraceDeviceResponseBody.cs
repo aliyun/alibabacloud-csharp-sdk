@@ -10,67 +10,88 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class QueryMqttTraceDeviceResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The details of the action on the device.
+        /// <para>The details of the action on the device.</para>
         /// </summary>
         [NameInMap("DeviceInfoList")]
         [Validation(Required=false)]
         public List<QueryMqttTraceDeviceResponseBodyDeviceInfoList> DeviceInfoList { get; set; }
         public class QueryMqttTraceDeviceResponseBodyDeviceInfoList : TeaModel {
             /// <summary>
-            /// The action on the device. Valid values:
+            /// <para>The action on the device. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>connect</b>: The ApsaraMQ for MQTT client requests a connection to the ApsaraMQ for MQTT broker.</description></item>
+            /// <item><description><b>close</b>: The TCP connection is closed.</description></item>
+            /// <item><description><b>disconnect</b>: The ApsaraMQ for MQTT client requests a disconnection from the ApsaraMQ for MQTT broker.</description></item>
+            /// </list>
             /// 
-            /// *   **connect**: The ApsaraMQ for MQTT client requests a connection to the ApsaraMQ for MQTT broker.
-            /// *   **close**: The TCP connection is closed.
-            /// *   **disconnect**: The ApsaraMQ for MQTT client requests a disconnection from the ApsaraMQ for MQTT broker.
+            /// <b>Example:</b>
+            /// <para>connect</para>
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
             /// <summary>
-            /// The returned code for the action on the device. Valid values:
+            /// <para>The returned code for the action on the device. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>mqtt.trace.action.connect</b>: This value is returned if the value of Action is <b>connect</b>.</description></item>
+            /// <item><description><b>mqtt.trace.action.close</b>: This value is returned if the value of Action is <b>close</b>.</description></item>
+            /// <item><description><b>mqtt.trace.action.disconnect</b>: This value is returned if the value of Action is <b>disconnect</b>.</description></item>
+            /// </list>
             /// 
-            /// *   **mqtt.trace.action.connect**: This value is returned if the value of Action is **connect**.
-            /// *   **mqtt.trace.action.close**: This value is returned if the value of Action is **close**.
-            /// *   **mqtt.trace.action.disconnect**: This value is returned if the value of Action is **disconnect**.
+            /// <b>Example:</b>
+            /// <para>mqtt.trace.action.connect</para>
             /// </summary>
             [NameInMap("ActionCode")]
             [Validation(Required=false)]
             public string ActionCode { get; set; }
 
             /// <summary>
-            /// The returned information for the action on the device. Valid values:
+            /// <para>The returned information for the action on the device. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>accepted</b>: The ApsaraMQ for MQTT broker accepts the connection request from the ApsaraMQ for MQTT client.</description></item>
+            /// <item><description><b>not authorized</b>: The TCP connection is closed because the permission verification of the client to access the instance fails.</description></item>
+            /// <item><description><b>clientId conflict</b>: The TCP connection is closed due to a conflict in the ID of the ApsaraMQ for MQTT client.</description></item>
+            /// <item><description><b>resource auth failed</b>: The TCP connection is closed because the permission verification for the ApsaraMQ for MQTT client to access the topic or group fails.</description></item>
+            /// <item><description><b>no heart</b>: The TCP connection is closed because no heartbeat is detected on the client.</description></item>
+            /// <item><description><b>closed by client</b>: The TCP connection is closed because an exception occurs on the client.</description></item>
+            /// <item><description><b>disconnected by client</b>: The client requests a disconnection.</description></item>
+            /// <item><description><b>invalid param</b>: The TCP connection is closed due to invalid request parameters.</description></item>
+            /// <item><description><b>Socket IOException</b>: The TCP connection is closed due to network jitter or packet loss.</description></item>
+            /// </list>
             /// 
-            /// *   **accepted**: The ApsaraMQ for MQTT broker accepts the connection request from the ApsaraMQ for MQTT client.
-            /// *   **not authorized**: The TCP connection is closed because the permission verification of the client to access the instance fails.
-            /// *   **clientId conflict**: The TCP connection is closed due to a conflict in the ID of the ApsaraMQ for MQTT client.
-            /// *   **resource auth failed**: The TCP connection is closed because the permission verification for the ApsaraMQ for MQTT client to access the topic or group fails.
-            /// *   **no heart**: The TCP connection is closed because no heartbeat is detected on the client.
-            /// *   **closed by client**: The TCP connection is closed because an exception occurs on the client.
-            /// *   **disconnected by client**: The client requests a disconnection.
-            /// *   **invalid param**: The TCP connection is closed due to invalid request parameters.
-            /// *   **Socket IOException**: The TCP connection is closed due to network jitter or packet loss.
+            /// <b>Example:</b>
+            /// <para>accept</para>
             /// </summary>
             [NameInMap("ActionInfo")]
             [Validation(Required=false)]
             public string ActionInfo { get; set; }
 
             /// <summary>
-            /// The connection ID.
+            /// <para>The connection ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c69fe839209547fa9d073781b9cd****</para>
             /// </summary>
             [NameInMap("ChannelId")]
             [Validation(Required=false)]
             public string ChannelId { get; set; }
 
             /// <summary>
-            /// The time when the action occurred on the device.
+            /// <para>The time when the action occurred on the device.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-05-21 15:51:54.867</para>
             /// </summary>
             [NameInMap("Time")]
             [Validation(Required=false)]
@@ -79,21 +100,30 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.
+        /// <para>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>317076B7-F946-46BC-A98F-4CF9777C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned actions on the device.
+        /// <para>The total number of returned actions on the device.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

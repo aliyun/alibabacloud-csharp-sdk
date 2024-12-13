@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteGroupIdRequest : TeaModel {
         /// <summary>
-        /// The ID of the group that you want to delete.
+        /// <para>The ID of the group that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>GID_test</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The ID of the ApsaraMQ for MQTT instance from which you want to delete a group.
+        /// <para>The ID of the ApsaraMQ for MQTT instance from which you want to delete a group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mqtt-cn-0pp1ldu****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
