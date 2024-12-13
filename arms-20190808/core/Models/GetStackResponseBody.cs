@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string Api { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("CallCount")]
             [Validation(Required=false)]
             public string CallCount { get; set; }

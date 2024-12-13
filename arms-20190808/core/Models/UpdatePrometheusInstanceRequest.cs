@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public bool? EnableAuthToken { get; set; }
 
+        [NameInMap("PaymentType")]
+        [Validation(Required=false)]
+        public string PaymentType { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>

@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string AppType { get; set; }
 
             /// <summary>
+            /// <para>The region where the backend is deployed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string BackendServiceTraceRegion { get; set; }
 
             /// <summary>
-            /// <para>The mobile collection configurations.</para>
+            /// <para>The collection configurations.</para>
             /// </summary>
             [NameInMap("BonreeSDKConfig")]
             [Validation(Required=false)]
@@ -98,10 +100,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig SamplingConfig { get; set; }
                 public class GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>500</para>
+                    /// </summary>
                     [NameInMap("samplingRate")]
                     [Validation(Required=false)]
                     public int? SamplingRate { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("samplingType")]
                     [Validation(Required=false)]
                     public int? SamplingType { get; set; }

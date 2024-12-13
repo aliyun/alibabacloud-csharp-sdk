@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string GrafanaInstanceId { get; set; }
 
+        [NameInMap("PaymentType")]
+        [Validation(Required=false)]
+        public string PaymentType { get; set; }
+
         /// <summary>
         /// <para>The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.</para>
         /// <para>This parameter is required.</para>

@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public AddIntegrationResponse AddIntegrationWithOptions(AddIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public async Task<AddIntegrationResponse> AddIntegrationWithOptionsAsync(AddIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public AddIntegrationResponse AddIntegration(AddIntegrationRequest request)
         {
@@ -506,7 +506,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public async Task<AddIntegrationResponse> AddIntegrationAsync(AddIntegrationRequest request)
         {
@@ -829,7 +829,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddPrometheusInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.")]
         // Deprecated
         public AddPrometheusInstanceResponse AddPrometheusInstanceWithOptions(AddPrometheusInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -885,7 +885,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddPrometheusInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.")]
         // Deprecated
         public async Task<AddPrometheusInstanceResponse> AddPrometheusInstanceWithOptionsAsync(AddPrometheusInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -938,7 +938,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddPrometheusInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.")]
         // Deprecated
         public AddPrometheusInstanceResponse AddPrometheusInstance(AddPrometheusInstanceRequest request)
         {
@@ -962,7 +962,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// AddPrometheusInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI AddPrometheusInstance is deprecated, please use ARMS::2019-08-08::CreatePrometheusInstance instead.")]
         // Deprecated
         public async Task<AddPrometheusInstanceResponse> AddPrometheusInstanceAsync(AddPrometheusInstanceRequest request)
         {
@@ -4219,13 +4219,29 @@ namespace AlibabaCloud.SDK.ARMS20190808
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNumber))
+            {
+                query["AccountNumber"] = request.AccountNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
             {
                 query["AliyunLang"] = request.AliyunLang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAccountNumber))
+            {
+                query["CustomAccountNumber"] = request.CustomAccountNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                query["Duration"] = request.Duration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaVersion))
             {
@@ -4242,6 +4258,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
+            {
+                query["PricingCycle"] = request.PricingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4311,13 +4331,29 @@ namespace AlibabaCloud.SDK.ARMS20190808
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNumber))
+            {
+                query["AccountNumber"] = request.AccountNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
             {
                 query["AliyunLang"] = request.AliyunLang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAccountNumber))
+            {
+                query["CustomAccountNumber"] = request.CustomAccountNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                query["Duration"] = request.Duration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaVersion))
             {
@@ -4334,6 +4370,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
+            {
+                query["PricingCycle"] = request.PricingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -6469,6 +6509,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["GrafanaInstanceId"] = request.GrafanaInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -6562,6 +6606,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaInstanceId))
             {
                 query["GrafanaInstanceId"] = request.GrafanaInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9061,7 +9109,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public DeleteCmsExporterResponse DeleteCmsExporterWithOptions(DeleteCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9113,7 +9161,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public async Task<DeleteCmsExporterResponse> DeleteCmsExporterWithOptionsAsync(DeleteCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -9162,7 +9210,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public DeleteCmsExporterResponse DeleteCmsExporter(DeleteCmsExporterRequest request)
         {
@@ -9186,7 +9234,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteCmsExporter is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public async Task<DeleteCmsExporterResponse> DeleteCmsExporterAsync(DeleteCmsExporterRequest request)
         {
@@ -10817,7 +10865,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public DeleteIntegrationResponse DeleteIntegrationWithOptions(DeleteIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10873,7 +10921,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public async Task<DeleteIntegrationResponse> DeleteIntegrationWithOptionsAsync(DeleteIntegrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -10926,7 +10974,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public DeleteIntegrationResponse DeleteIntegration(DeleteIntegrationRequest request)
         {
@@ -10950,7 +10998,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// DeleteIntegrationResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.\n")]
+        [Obsolete("OpenAPI DeleteIntegration is deprecated, please use ARMS::2019-08-08::DeleteAddonRelease instead.")]
         // Deprecated
         public async Task<DeleteIntegrationResponse> DeleteIntegrationAsync(DeleteIntegrationRequest request)
         {
@@ -13128,7 +13176,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Example Query metric details about an Addon.</para>
+        /// <para>Queries the metric details of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13186,7 +13234,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Example Query metric details about an Addon.</para>
+        /// <para>Queries the metric details of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13244,7 +13292,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Example Query metric details about an Addon.</para>
+        /// <para>Queries the metric details of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13262,7 +13310,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Example Query metric details about an Addon.</para>
+        /// <para>Queries the metric details of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16217,7 +16265,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetCloudClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.\n")]
+        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.")]
         // Deprecated
         public GetCloudClusterAllUrlResponse GetCloudClusterAllUrlWithOptions(GetCloudClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16269,7 +16317,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetCloudClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.\n")]
+        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.")]
         // Deprecated
         public async Task<GetCloudClusterAllUrlResponse> GetCloudClusterAllUrlWithOptionsAsync(GetCloudClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16318,7 +16366,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetCloudClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.\n")]
+        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.")]
         // Deprecated
         public GetCloudClusterAllUrlResponse GetCloudClusterAllUrl(GetCloudClusterAllUrlRequest request)
         {
@@ -16342,7 +16390,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetCloudClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.\n")]
+        [Obsolete("OpenAPI GetCloudClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetRemoteWriteUrl instead.")]
         // Deprecated
         public async Task<GetCloudClusterAllUrlResponse> GetCloudClusterAllUrlAsync(GetCloudClusterAllUrlRequest request)
         {
@@ -16369,7 +16417,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.")]
         // Deprecated
         public GetClusterAllUrlResponse GetClusterAllUrlWithOptions(GetClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16421,7 +16469,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.")]
         // Deprecated
         public async Task<GetClusterAllUrlResponse> GetClusterAllUrlWithOptionsAsync(GetClusterAllUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -16470,7 +16518,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.")]
         // Deprecated
         public GetClusterAllUrlResponse GetClusterAllUrl(GetClusterAllUrlRequest request)
         {
@@ -16494,7 +16542,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetClusterAllUrlResponse
         /// </returns>
-        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.\n")]
+        [Obsolete("OpenAPI GetClusterAllUrl is deprecated, please use ARMS::2019-08-08::GetPrometheusInstance instead.")]
         // Deprecated
         public async Task<GetClusterAllUrlResponse> GetClusterAllUrlAsync(GetClusterAllUrlRequest request)
         {
@@ -16949,7 +16997,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetIntegrationStateResponse
         /// </returns>
-        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.\n")]
+        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.")]
         // Deprecated
         public GetIntegrationStateResponse GetIntegrationStateWithOptions(GetIntegrationStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17005,7 +17053,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetIntegrationStateResponse
         /// </returns>
-        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.\n")]
+        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.")]
         // Deprecated
         public async Task<GetIntegrationStateResponse> GetIntegrationStateWithOptionsAsync(GetIntegrationStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17058,7 +17106,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetIntegrationStateResponse
         /// </returns>
-        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.\n")]
+        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.")]
         // Deprecated
         public GetIntegrationStateResponse GetIntegrationState(GetIntegrationStateRequest request)
         {
@@ -17082,7 +17130,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetIntegrationStateResponse
         /// </returns>
-        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.\n")]
+        [Obsolete("OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.")]
         // Deprecated
         public async Task<GetIntegrationStateResponse> GetIntegrationStateAsync(GetIntegrationStateRequest request)
         {
@@ -17109,7 +17157,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetManagedPrometheusStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated")]
         // Deprecated
         public GetManagedPrometheusStatusResponse GetManagedPrometheusStatusWithOptions(GetManagedPrometheusStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17173,7 +17221,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetManagedPrometheusStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated")]
         // Deprecated
         public async Task<GetManagedPrometheusStatusResponse> GetManagedPrometheusStatusWithOptionsAsync(GetManagedPrometheusStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -17234,7 +17282,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetManagedPrometheusStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated")]
         // Deprecated
         public GetManagedPrometheusStatusResponse GetManagedPrometheusStatus(GetManagedPrometheusStatusRequest request)
         {
@@ -17258,7 +17306,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// GetManagedPrometheusStatusResponse
         /// </returns>
-        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated\n")]
+        [Obsolete("OpenAPI GetManagedPrometheusStatus is deprecated")]
         // Deprecated
         public async Task<GetManagedPrometheusStatusResponse> GetManagedPrometheusStatusAsync(GetManagedPrometheusStatusRequest request)
         {
@@ -21853,7 +21901,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public InstallCmsExporterResponse InstallCmsExporterWithOptions(InstallCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21917,7 +21965,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public async Task<InstallCmsExporterResponse> InstallCmsExporterWithOptionsAsync(InstallCmsExporterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -21978,7 +22026,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public InstallCmsExporterResponse InstallCmsExporter(InstallCmsExporterRequest request)
         {
@@ -22002,7 +22050,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallCmsExporterResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.\n")]
+        [Obsolete("OpenAPI InstallCmsExporter is deprecated, please use ARMS::2019-08-08::InstallAddon instead.")]
         // Deprecated
         public async Task<InstallCmsExporterResponse> InstallCmsExporterAsync(InstallCmsExporterRequest request)
         {
@@ -22202,7 +22250,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated")]
         // Deprecated
         public InstallManagedPrometheusResponse InstallManagedPrometheusWithOptions(InstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22291,7 +22339,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated")]
         // Deprecated
         public async Task<InstallManagedPrometheusResponse> InstallManagedPrometheusWithOptionsAsync(InstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -22377,7 +22425,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated")]
         // Deprecated
         public InstallManagedPrometheusResponse InstallManagedPrometheus(InstallManagedPrometheusRequest request)
         {
@@ -22406,7 +22454,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// InstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI InstallManagedPrometheus is deprecated")]
         // Deprecated
         public async Task<InstallManagedPrometheusResponse> InstallManagedPrometheusAsync(InstallManagedPrometheusRequest request)
         {
@@ -23377,7 +23425,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// ListCmsInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.\n")]
+        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.")]
         // Deprecated
         public ListCmsInstancesResponse ListCmsInstancesWithOptions(ListCmsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23433,7 +23481,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// ListCmsInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.\n")]
+        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.")]
         // Deprecated
         public async Task<ListCmsInstancesResponse> ListCmsInstancesWithOptionsAsync(ListCmsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -23486,7 +23534,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// ListCmsInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.\n")]
+        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.")]
         // Deprecated
         public ListCmsInstancesResponse ListCmsInstances(ListCmsInstancesRequest request)
         {
@@ -23510,7 +23558,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// ListCmsInstancesResponse
         /// </returns>
-        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.\n")]
+        [Obsolete("OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.")]
         // Deprecated
         public async Task<ListCmsInstancesResponse> ListCmsInstancesAsync(ListCmsInstancesRequest request)
         {
@@ -33806,7 +33854,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// UninstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated")]
         // Deprecated
         public UninstallManagedPrometheusResponse UninstallManagedPrometheusWithOptions(UninstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -33875,7 +33923,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// UninstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated")]
         // Deprecated
         public async Task<UninstallManagedPrometheusResponse> UninstallManagedPrometheusWithOptionsAsync(UninstallManagedPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -33941,7 +33989,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// UninstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated")]
         // Deprecated
         public UninstallManagedPrometheusResponse UninstallManagedPrometheus(UninstallManagedPrometheusRequest request)
         {
@@ -33970,7 +34018,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <returns>
         /// UninstallManagedPrometheusResponse
         /// </returns>
-        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated\n")]
+        [Obsolete("OpenAPI UninstallManagedPrometheus is deprecated")]
         // Deprecated
         public async Task<UninstallManagedPrometheusResponse> UninstallManagedPrometheusAsync(UninstallManagedPrometheusRequest request)
         {
@@ -36625,6 +36673,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["EnableAuthToken"] = request.EnableAuthToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -36702,6 +36754,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAuthToken))
             {
                 query["EnableAuthToken"] = request.EnableAuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

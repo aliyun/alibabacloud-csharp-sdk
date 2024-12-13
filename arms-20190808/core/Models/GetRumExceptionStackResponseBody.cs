@@ -20,12 +20,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned message.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRumExceptionStackResponseBodyData Data { get; set; }
         public class GetRumExceptionStackResponseBodyData : TeaModel {
+            [NameInMap("BinaryImages")]
+            [Validation(Required=false)]
+            public string BinaryImages { get; set; }
+
             [NameInMap("CrashAddress")]
             [Validation(Required=false)]
             public string CrashAddress { get; set; }

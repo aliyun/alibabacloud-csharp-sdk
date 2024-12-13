@@ -204,6 +204,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
+            [NameInMap("PaymentTypeUpdateTime")]
+            [Validation(Required=false)]
+            public string PaymentTypeUpdateTime { get; set; }
+
             /// <summary>
             /// <para>The product to which the Prometheus instance belongs. Valid values: arms and cms.</para>
             /// 
@@ -389,6 +393,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
+
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
             /// <summary>
             /// <para>The VPC ID. This parameter is returned only for Prometheus instances for ECS.</para>

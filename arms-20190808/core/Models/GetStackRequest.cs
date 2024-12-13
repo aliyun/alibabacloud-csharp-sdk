@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RpcID { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>88c32dfa4b******</para>
+        /// </summary>
         [NameInMap("SpanID")]
         [Validation(Required=false)]
         public string SpanID { get; set; }

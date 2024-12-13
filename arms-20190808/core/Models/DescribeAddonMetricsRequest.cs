@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeAddonMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>Version of Addon.</para>
+        /// <para>The version of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>The environment type. Valid values: CS, ECS, and Cloud.</para>
+        /// <para>The environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CS</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentType { get; set; }
 
         /// <summary>
-        /// <para>Name fo Addon.</para>
+        /// <para>The name of the component.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -1,3 +1,17 @@
+2024-12-13 Version: 7.3.1
+- Update API CreateGrafanaWorkspace: add param AccountNumber.
+- Update API CreateGrafanaWorkspace: add param AutoRenew.
+- Update API CreateGrafanaWorkspace: add param CustomAccountNumber.
+- Update API CreateGrafanaWorkspace: add param Duration.
+- Update API CreateGrafanaWorkspace: add param PricingCycle.
+- Update API CreatePrometheusInstance: add param PaymentType.
+- Update API CreatePrometheusInstance: update param ArchiveDuration.
+- Update API GetPrometheusInstance: update response param.
+- Update API GetRumExceptionStack: update response param.
+- Update API UpdatePrometheusInstance: add param PaymentType.
+- Update API UpdatePrometheusInstance: update param ArchiveDuration.
+
+
 2024-11-21 Version: 7.3.0
 - Support API ListEnvironmentAddons.
 - Support API ListEnvironmentAlertRules.

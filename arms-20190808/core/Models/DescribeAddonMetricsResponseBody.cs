@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Metric information list.</para>
+        /// <para>The metric details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeAddonMetricsResponseBodyData> Data { get; set; }
         public class DescribeAddonMetricsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Metric Group.</para>
+            /// <para>The metric group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Common</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>Metric Labels.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<DescribeAddonMetricsResponseBodyDataLabels> Labels { get; set; }
             public class DescribeAddonMetricsResponseBodyDataLabels : TeaModel {
                 /// <summary>
-                /// <para>Metric label description.</para>
+                /// <para>The description of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Metric label key.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>page_size</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Metric label value.</para>
+                /// <para>The source of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>db</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>Metric list.</para>
+            /// <para>The metrics.</para>
             /// </summary>
             [NameInMap("Metrics")]
             [Validation(Required=false)]
             public List<DescribeAddonMetricsResponseBodyDataMetrics> Metrics { get; set; }
             public class DescribeAddonMetricsResponseBodyDataMetrics : TeaModel {
                 /// <summary>
-                /// <para>Metric description.</para>
+                /// <para>The description of the metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Metric label collection.</para>
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public List<DescribeAddonMetricsResponseBodyDataMetricsLabels> Labels { get; set; }
                 public class DescribeAddonMetricsResponseBodyDataMetricsLabels : TeaModel {
                     /// <summary>
-                    /// <para>Label description.</para>
+                    /// <para>The description of the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PAGE_SIZE</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Label key.</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>page_size</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>Metric source.</para>
+                    /// <para>The source of the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>db</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>Metric name.</para>
+                /// <para>The metric name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql_exporter_collector_duration_seconds</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Metric { get; set; }
 
                 /// <summary>
-                /// <para>Metric type.</para>
+                /// <para>The type of the metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GAUGE</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Metric unit.</para>
+                /// <para>The unit of the metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bytes</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

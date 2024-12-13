@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateGrafanaWorkspaceRequest : TeaModel {
+        [NameInMap("AccountNumber")]
+        [Validation(Required=false)]
+        public string AccountNumber { get; set; }
+
         /// <summary>
         /// <para>The language. Default value: zh. Valid values:</para>
         /// <list type="bullet">
@@ -23,6 +27,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public string AutoRenew { get; set; }
+
+        [NameInMap("CustomAccountNumber")]
+        [Validation(Required=false)]
+        public string CustomAccountNumber { get; set; }
+
         /// <summary>
         /// <para>The description of the workspace</para>
         /// 
@@ -32,6 +44,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public string Duration { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -81,6 +97,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
+
+        [NameInMap("PricingCycle")]
+        [Validation(Required=false)]
+        public string PricingCycle { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
