@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>40823</para>

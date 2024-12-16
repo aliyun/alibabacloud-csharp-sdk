@@ -599,6 +599,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public long? Priority { get; set; }
 
+        [NameInMap("ProxyPath")]
+        [Validation(Required=false)]
+        public string ProxyPath { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Internal Error</para>
@@ -704,6 +708,20 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<GetInstanceResponseBodyTags> Tags { get; set; }
+        public class GetInstanceResponseBodyTags : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

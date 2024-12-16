@@ -1,3 +1,10 @@
+2024-12-16 Version: 1.5.8
+- Update API CreateInstance: update param body.
+- Update API GetInstance: update response param.
+- Update API ListInstances: add param Tag.
+- Update API ListInstances: update response param.
+
+
 2024-11-15 Version: 1.5.7
 - Generated csharp 2022-01-01 for pai-dsw.
 
