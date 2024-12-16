@@ -1,3 +1,7 @@
+2024-12-16 Version: 2.0.1
+- Update API Enrich: update param journey_param_list.
+
+
 2024-11-21 Version: 2.0.0
 - Update API CollectFlightLowestPrice: add param lowest_price_flight_info_list.
 - Update API CollectFlightLowestPrice: delete param lowestPriceFlightList.

@@ -107,7 +107,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public class EnrichRequestJourneyParamListSegmentParamList : TeaModel {
                 /// <summary>
                 /// <para>arrival airport code (capitalized)</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MFM</para>
@@ -148,7 +147,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 /// <summary>
                 /// <para>departure airport code (capitalized)</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PVG</para>
@@ -169,7 +167,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 /// <summary>
                 /// <para>departure time in string format (yyyy-MM-dd HH:mm:ss)</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-10 07:55:00</para>
