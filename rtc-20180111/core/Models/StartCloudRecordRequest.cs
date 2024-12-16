@@ -345,6 +345,26 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("LayoutSpecifiedUsers")]
+        [Validation(Required=false)]
+        public StartCloudRecordRequestLayoutSpecifiedUsers LayoutSpecifiedUsers { get; set; }
+        public class StartCloudRecordRequestLayoutSpecifiedUsers : TeaModel {
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
+            [NameInMap("Ids")]
+            [Validation(Required=false)]
+            public List<string> Ids { get; set; }
+
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// <para>panes</para>
         /// </summary>

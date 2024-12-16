@@ -335,6 +335,26 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("LayoutSpecifiedUsers")]
+        [Validation(Required=false)]
+        public UpdateCloudRecordRequestLayoutSpecifiedUsers LayoutSpecifiedUsers { get; set; }
+        public class UpdateCloudRecordRequestLayoutSpecifiedUsers : TeaModel {
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
+            [NameInMap("Ids")]
+            [Validation(Required=false)]
+            public List<string> Ids { get; set; }
+
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         [NameInMap("Panes")]
         [Validation(Required=false)]
         public List<UpdateCloudRecordRequestPanes> Panes { get; set; }

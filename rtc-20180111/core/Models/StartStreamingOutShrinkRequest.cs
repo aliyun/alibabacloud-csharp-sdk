@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
-    public class UpdateStreamingOutRequest : TeaModel {
+    public class StartStreamingOutShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("Backgrounds")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestBackgrounds> Backgrounds { get; set; }
-        public class UpdateStreamingOutRequestBackgrounds : TeaModel {
+        public List<StartStreamingOutShrinkRequestBackgrounds> Backgrounds { get; set; }
+        public class StartStreamingOutShrinkRequestBackgrounds : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("ClockWidgets")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestClockWidgets> ClockWidgets { get; set; }
-        public class UpdateStreamingOutRequestClockWidgets : TeaModel {
+        public List<StartStreamingOutShrinkRequestClockWidgets> ClockWidgets { get; set; }
+        public class StartStreamingOutShrinkRequestClockWidgets : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -139,8 +139,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("BoxColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestClockWidgetsBoxColor BoxColor { get; set; }
-            public class UpdateStreamingOutRequestClockWidgetsBoxColor : TeaModel {
+            public StartStreamingOutShrinkRequestClockWidgetsBoxColor BoxColor { get; set; }
+            public class StartStreamingOutShrinkRequestClockWidgetsBoxColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -177,8 +177,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("FontColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestClockWidgetsFontColor FontColor { get; set; }
-            public class UpdateStreamingOutRequestClockWidgetsFontColor : TeaModel {
+            public StartStreamingOutShrinkRequestClockWidgetsFontColor FontColor { get; set; }
+            public class StartStreamingOutShrinkRequestClockWidgetsFontColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -255,10 +255,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("CropMode")]
+        [Validation(Required=false)]
+        public int? CropMode { get; set; }
+
         [NameInMap("Images")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestImages> Images { get; set; }
-        public class UpdateStreamingOutRequestImages : TeaModel {
+        public List<StartStreamingOutShrinkRequestImages> Images { get; set; }
+        public class StartStreamingOutShrinkRequestImages : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -297,7 +305,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://aliyun.com/123.jpg">https://aliyun.com/123.jpg</a></para>
+            /// <para><a href="https://aliyun.com/123xxx.jpg">https://aliyun.com/123xxx.jpg</a></para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -337,32 +345,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("LayoutSpecifiedUsers")]
         [Validation(Required=false)]
-        public UpdateStreamingOutRequestLayoutSpecifiedUsers LayoutSpecifiedUsers { get; set; }
-        public class UpdateStreamingOutRequestLayoutSpecifiedUsers : TeaModel {
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
-            [NameInMap("Ids")]
-            [Validation(Required=false)]
-            public List<string> Ids { get; set; }
-
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-        }
+        public string LayoutSpecifiedUsersShrink { get; set; }
 
         [NameInMap("Panes")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestPanes> Panes { get; set; }
-        public class UpdateStreamingOutRequestPanes : TeaModel {
+        public List<StartStreamingOutShrinkRequestPanes> Panes { get; set; }
+        public class StartStreamingOutShrinkRequestPanes : TeaModel {
             [NameInMap("Images")]
             [Validation(Required=false)]
-            public List<UpdateStreamingOutRequestPanesImages> Images { get; set; }
-            public class UpdateStreamingOutRequestPanesImages : TeaModel {
+            public List<StartStreamingOutShrinkRequestPanesImages> Images { get; set; }
+            public class StartStreamingOutShrinkRequestPanesImages : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -401,7 +393,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="https://aliyun.com/123.jpg">https://aliyun.com/123.jpg</a></para>
+                /// <para><a href="https://aliyun.com/123xxx.jpg">https://aliyun.com/123xxx.jpg</a></para>
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -431,7 +423,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0.2</para>
+                /// <para>0.3</para>
                 /// </summary>
                 [NameInMap("Y")]
                 [Validation(Required=false)]
@@ -448,16 +440,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? PaneCropMode { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("PaneId")]
             [Validation(Required=false)]
-            public int? PaneId { get; set; }
+            public string PaneId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>22</para>
+            /// <para>1811****</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -465,7 +459,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>video</para>
+            /// <para>Video</para>
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
@@ -473,8 +467,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("Texts")]
             [Validation(Required=false)]
-            public List<UpdateStreamingOutRequestPanesTexts> Texts { get; set; }
-            public class UpdateStreamingOutRequestPanesTexts : TeaModel {
+            public List<StartStreamingOutShrinkRequestPanesTexts> Texts { get; set; }
+            public class StartStreamingOutShrinkRequestPanesTexts : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -501,8 +495,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 [NameInMap("BoxColor")]
                 [Validation(Required=false)]
-                public UpdateStreamingOutRequestPanesTextsBoxColor BoxColor { get; set; }
-                public class UpdateStreamingOutRequestPanesTextsBoxColor : TeaModel {
+                public StartStreamingOutShrinkRequestPanesTextsBoxColor BoxColor { get; set; }
+                public class StartStreamingOutShrinkRequestPanesTextsBoxColor : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>255</para>
@@ -539,8 +533,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 [NameInMap("FontColor")]
                 [Validation(Required=false)]
-                public UpdateStreamingOutRequestPanesTextsFontColor FontColor { get; set; }
-                public class UpdateStreamingOutRequestPanesTextsFontColor : TeaModel {
+                public StartStreamingOutShrinkRequestPanesTextsFontColor FontColor { get; set; }
+                public class StartStreamingOutShrinkRequestPanesTextsFontColor : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>255</para>
@@ -621,9 +615,37 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("RegionColor")]
+        [Validation(Required=false)]
+        public StartStreamingOutShrinkRequestRegionColor RegionColor { get; set; }
+        public class StartStreamingOutShrinkRequestRegionColor : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("B")]
+            [Validation(Required=false)]
+            public int? B { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("G")]
+            [Validation(Required=false)]
+            public int? G { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("R")]
+            [Validation(Required=false)]
+            public int? R { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>
@@ -643,8 +665,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("Texts")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestTexts> Texts { get; set; }
-        public class UpdateStreamingOutRequestTexts : TeaModel {
+        public List<StartStreamingOutShrinkRequestTexts> Texts { get; set; }
+        public class StartStreamingOutShrinkRequestTexts : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.1</para>
@@ -671,8 +693,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("BoxColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestTextsBoxColor BoxColor { get; set; }
-            public class UpdateStreamingOutRequestTextsBoxColor : TeaModel {
+            public StartStreamingOutShrinkRequestTextsBoxColor BoxColor { get; set; }
+            public class StartStreamingOutShrinkRequestTextsBoxColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -709,8 +731,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("FontColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestTextsFontColor FontColor { get; set; }
-            public class UpdateStreamingOutRequestTextsFontColor : TeaModel {
+            public StartStreamingOutShrinkRequestTextsFontColor FontColor { get; set; }
+            public class StartStreamingOutShrinkRequestTextsFontColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -788,6 +810,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public double? Y { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rtmp://example.com/live/stream</para>
+        /// </summary>
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 

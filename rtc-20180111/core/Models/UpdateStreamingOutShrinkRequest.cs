@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
-    public class UpdateStreamingOutRequest : TeaModel {
+    public class UpdateStreamingOutShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("Backgrounds")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestBackgrounds> Backgrounds { get; set; }
-        public class UpdateStreamingOutRequestBackgrounds : TeaModel {
+        public List<UpdateStreamingOutShrinkRequestBackgrounds> Backgrounds { get; set; }
+        public class UpdateStreamingOutShrinkRequestBackgrounds : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("ClockWidgets")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestClockWidgets> ClockWidgets { get; set; }
-        public class UpdateStreamingOutRequestClockWidgets : TeaModel {
+        public List<UpdateStreamingOutShrinkRequestClockWidgets> ClockWidgets { get; set; }
+        public class UpdateStreamingOutShrinkRequestClockWidgets : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -139,8 +139,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("BoxColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestClockWidgetsBoxColor BoxColor { get; set; }
-            public class UpdateStreamingOutRequestClockWidgetsBoxColor : TeaModel {
+            public UpdateStreamingOutShrinkRequestClockWidgetsBoxColor BoxColor { get; set; }
+            public class UpdateStreamingOutShrinkRequestClockWidgetsBoxColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -177,8 +177,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("FontColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestClockWidgetsFontColor FontColor { get; set; }
-            public class UpdateStreamingOutRequestClockWidgetsFontColor : TeaModel {
+            public UpdateStreamingOutShrinkRequestClockWidgetsFontColor FontColor { get; set; }
+            public class UpdateStreamingOutShrinkRequestClockWidgetsFontColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -257,8 +257,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("Images")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestImages> Images { get; set; }
-        public class UpdateStreamingOutRequestImages : TeaModel {
+        public List<UpdateStreamingOutShrinkRequestImages> Images { get; set; }
+        public class UpdateStreamingOutShrinkRequestImages : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -337,32 +337,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("LayoutSpecifiedUsers")]
         [Validation(Required=false)]
-        public UpdateStreamingOutRequestLayoutSpecifiedUsers LayoutSpecifiedUsers { get; set; }
-        public class UpdateStreamingOutRequestLayoutSpecifiedUsers : TeaModel {
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
-            [NameInMap("Ids")]
-            [Validation(Required=false)]
-            public List<string> Ids { get; set; }
-
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-        }
+        public string LayoutSpecifiedUsersShrink { get; set; }
 
         [NameInMap("Panes")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestPanes> Panes { get; set; }
-        public class UpdateStreamingOutRequestPanes : TeaModel {
+        public List<UpdateStreamingOutShrinkRequestPanes> Panes { get; set; }
+        public class UpdateStreamingOutShrinkRequestPanes : TeaModel {
             [NameInMap("Images")]
             [Validation(Required=false)]
-            public List<UpdateStreamingOutRequestPanesImages> Images { get; set; }
-            public class UpdateStreamingOutRequestPanesImages : TeaModel {
+            public List<UpdateStreamingOutShrinkRequestPanesImages> Images { get; set; }
+            public class UpdateStreamingOutShrinkRequestPanesImages : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -473,8 +457,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("Texts")]
             [Validation(Required=false)]
-            public List<UpdateStreamingOutRequestPanesTexts> Texts { get; set; }
-            public class UpdateStreamingOutRequestPanesTexts : TeaModel {
+            public List<UpdateStreamingOutShrinkRequestPanesTexts> Texts { get; set; }
+            public class UpdateStreamingOutShrinkRequestPanesTexts : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -501,8 +485,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 [NameInMap("BoxColor")]
                 [Validation(Required=false)]
-                public UpdateStreamingOutRequestPanesTextsBoxColor BoxColor { get; set; }
-                public class UpdateStreamingOutRequestPanesTextsBoxColor : TeaModel {
+                public UpdateStreamingOutShrinkRequestPanesTextsBoxColor BoxColor { get; set; }
+                public class UpdateStreamingOutShrinkRequestPanesTextsBoxColor : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>255</para>
@@ -539,8 +523,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 [NameInMap("FontColor")]
                 [Validation(Required=false)]
-                public UpdateStreamingOutRequestPanesTextsFontColor FontColor { get; set; }
-                public class UpdateStreamingOutRequestPanesTextsFontColor : TeaModel {
+                public UpdateStreamingOutShrinkRequestPanesTextsFontColor FontColor { get; set; }
+                public class UpdateStreamingOutShrinkRequestPanesTextsFontColor : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>255</para>
@@ -643,8 +627,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("Texts")]
         [Validation(Required=false)]
-        public List<UpdateStreamingOutRequestTexts> Texts { get; set; }
-        public class UpdateStreamingOutRequestTexts : TeaModel {
+        public List<UpdateStreamingOutShrinkRequestTexts> Texts { get; set; }
+        public class UpdateStreamingOutShrinkRequestTexts : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.1</para>
@@ -671,8 +655,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("BoxColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestTextsBoxColor BoxColor { get; set; }
-            public class UpdateStreamingOutRequestTextsBoxColor : TeaModel {
+            public UpdateStreamingOutShrinkRequestTextsBoxColor BoxColor { get; set; }
+            public class UpdateStreamingOutShrinkRequestTextsBoxColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -709,8 +693,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("FontColor")]
             [Validation(Required=false)]
-            public UpdateStreamingOutRequestTextsFontColor FontColor { get; set; }
-            public class UpdateStreamingOutRequestTextsFontColor : TeaModel {
+            public UpdateStreamingOutShrinkRequestTextsFontColor FontColor { get; set; }
+            public class UpdateStreamingOutShrinkRequestTextsFontColor : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>255</para>
