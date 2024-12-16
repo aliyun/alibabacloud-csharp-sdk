@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
             }
 
+            [NameInMap("DlcJobId")]
+            [Validation(Required=false)]
+            public string DlcJobId { get; set; }
+
             [NameInMap("Environments")]
             [Validation(Required=false)]
             public Dictionary<string, string> Environments { get; set; }
