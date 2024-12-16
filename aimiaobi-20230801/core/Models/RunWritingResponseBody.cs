@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunWritingResponseBody : TeaModel {
+        [NameInMap("End")]
+        [Validation(Required=false)]
+        public bool? End { get; set; }
+
         [NameInMap("Header")]
         [Validation(Required=false)]
         public RunWritingResponseBodyHeader Header { get; set; }
