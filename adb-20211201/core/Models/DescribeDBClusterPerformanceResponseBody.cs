@@ -313,6 +313,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
+                [NameInMap("TranslateKey")]
+                [Validation(Required=false)]
+                public string TranslateKey { get; set; }
+
                 /// <summary>
                 /// <para>The values of the performance metric at different points in time.</para>
                 /// </summary>
