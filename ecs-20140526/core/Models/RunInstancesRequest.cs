@@ -1236,10 +1236,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<RunInstancesRequestNetworkInterface> NetworkInterface { get; set; }
         public class RunInstancesRequestNetworkInterface : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to release ENI N when the associated instance is released. Valid values:</para>
+            /// <para>Specifies whether to release ENI N when the instance is released. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: releases the ENI when the associated instance is released.</description></item>
-            /// <item><description>false: retains the ENI when the associated instance is released.</description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// <para>Default value: true.</para>
             /// <remarks>
@@ -1273,8 +1273,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Primary: the primary ENI</description></item>
-            /// <item><description>Secondary: the secondary ENI</description></item>
+            /// <item><description>Primary</description></item>
+            /// <item><description>Secondary</description></item>
             /// </list>
             /// <para>Default value: Secondary.</para>
             /// 
@@ -1290,7 +1290,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>Example: <c>Ipv6Address.1=2001:db8:1234:1a00::***</c>.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter is valid only when <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>. If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</description></item>
+            /// <item><description>This parameter takes effect only when <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>. If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</description></item>
             /// <item><description>If you specify this parameter, you must set <c>Amount</c> to 1 and cannot specify <c>Ipv6AddressCount</c>, <c>Ipv6Address.N</c>, or <c>NetworkInterface.N.Ipv6AddressCount</c>.</description></item>
             /// </list>
             /// </summary>
@@ -1302,7 +1302,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter is valid only when <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>. If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</description></item>
+            /// <item><description>This parameter takes effect only when <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>. If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</description></item>
             /// <item><description>If you specify this parameter, you cannot specify <c>Ipv6AddressCount</c>, <c>Ipv6Address.N</c>, or <c>NetworkInterface.N.Ipv6Address.N</c>.</description></item>
             /// </list>
             /// 
@@ -1317,9 +1317,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The index of the network card for ENI N.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>You can specify NIC indexes only for instances of specific instance types.</description></item>
+            /// <item><description>You can specify network card indexes only for instances of specific instance types.</description></item>
             /// <item><description>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</description></item>
-            /// <item><description>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
+            /// <item><description>If you set NetworkInterface.N.InstanceType to Secondary or leave the parameter empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1450,7 +1450,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
-            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>SecurityGroupId</c> and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>SecurityGroupId</c>, and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
             /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
             /// </list>
             /// 
@@ -1778,11 +1778,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityEnhancementStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</para>
+        /// <para>The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota~~">Limits and quotas</a>.</para>
         /// <remarks>
         /// <para> The network type of the new instance is the same as the network type of the security group specified by <c>SecurityGroupId</c>. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify <c>VSwitchId</c>.</para>
         /// </remarks>
-        /// <para>If you do not use <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template, you must specify a security group ID. Take note of the following items:</para>
+        /// <para>If you do not use <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template, you must specify a security group ID. When you specify this parameter, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>You can set <c>SecurityGroupId</c> to specify a single security group or set <c>SecurityGroupIds.N</c> to specify one or more security groups. However, you cannot specify both <c>SecurityGroupId</c> and <c>SecurityGroupIds.N</c> in the same request.</description></item>
         /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you cannot specify <c>SecurityGroupId</c> or <c>SecurityGroupIds.N</c> but can specify <c>NetworkInterface.N.SecurityGroupId</c> or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
@@ -1796,8 +1796,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a> section of the &quot;Limits&quot; topic.</para>
-        /// <para>Take note of the following items:</para>
+        /// <para>The IDs of security groups to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a> section of the &quot;Limits&quot; topic.</para>
+        /// <para>When you specify this parameter, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>You cannot specify both <c>SecurityGroupId</c> and <c>SecurityGroupIds.N</c> in the same request.</description></item>
         /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you cannot specify <c>SecurityGroupId</c> or <c>SecurityGroupIds.N</c> but can specify <c>NetworkInterface.N.SecurityGroupId</c> or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>

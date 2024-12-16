@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the disk. The disk specified by <c>DiskId</c> and the instance specified by <c>InstanceId</c> must reside in the same zone.</para>
         /// <remarks>
-        /// <para> For more information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</para>
+        /// <para> For information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -456,6 +456,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 /// <summary>
                 /// <para>The locations in which data is stored.</para>
+                /// <para>This parameter is returned only if you specify <c>Placement</c> in the AdditionalAttributes.N request parameter.</para>
+                /// <remarks>
+                /// <para> This parameter is valid only for Regional ESSDs (cloud_regional_disk_auto).</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("Placement")]
                 [Validation(Required=false)]

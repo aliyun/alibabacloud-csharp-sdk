@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated block storage cluster.</para>
+        /// <para>The ID of the dedicated block storage cluster to which data disk N belongs.</para>
         /// <list type="bullet">
-        /// <item><description>When you migrate a disk to a dedicated block storage cluster, the StorageClusterId parameter must be specified.</description></item>
-        /// <item><description>When you migrate a disk to a public block storage cluster, the StorageClusterId parameter must be left empty.</description></item>
+        /// <item><description>When you migrate a disk to a dedicated block storage cluster, the<c> StorageClusterId</c> parameter must be specified.</description></item>
+        /// <item><description>When you migrate a disk to a public block storage cluster, the <c>StorageClusterId</c> parameter must be left empty.</description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that the disk is migrated to a public block storage cluster.</para>
         /// 

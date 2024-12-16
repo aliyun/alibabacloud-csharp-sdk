@@ -36,7 +36,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The attribute value. Set the value to IOPS, which indicates the maximum IOPS of the disk.</para>
+        /// <para>The additional attributes. Set the value to <c>Placement</c>, which indicates the data storage locations of the disk.</para>
+        /// <remarks>
+        /// <para> This attribute is valid only for Regional Enterprise SSDs (ESSDs).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>IOPS</para>

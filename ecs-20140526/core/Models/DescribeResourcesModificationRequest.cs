@@ -17,7 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Conditions { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs of the instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</para>
+        /// <para>The number of vCPUs of the instance type. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -27,10 +28,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type that you want to change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InstanceType</description></item>
-        /// <item><description>SystemDisk</description></item>
+        /// <item><description><para>InstanceType</para>
+        /// </description></item>
+        /// <item><description><para>SystemDisk</para>
+        /// <para>If you set this parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +46,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationResource { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</para>
+        /// <para>The instance type to which you want to change the instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
+        /// <para>If you set the DestinationResource parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g5.large</para>
@@ -52,7 +57,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The memory size of the instance type. Unit: GiB. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</para>
+        /// <para>The memory size of the instance type. Unit: GiB. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance for which you want to change the instance type or system disk category. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource. For example, when DestinationResource is set to InstanceType, this parameter can be interpreted as InstanceId.</para>
+        /// <para>The ID of the instance for which you want to change the instance type or system disk category.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,7 +155,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID.</para>
+        /// <para>The ID of the destination zone to which you want to migrate the instance.</para>
+        /// <para>If you want to change the instance type across zones, you must specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

@@ -21,6 +21,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstancesResponseBodyInstancesInstance : TeaModel {
                 /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("AdditionalInfo")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo AdditionalInfo { get; set; }
+                public class DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo : TeaModel {
+                    [NameInMap("EnableHighDensityMode")]
+                    [Validation(Required=false)]
+                    public bool? EnableHighDensityMode { get; set; }
+
+                }
+
+                /// <summary>
                 /// <para>The automatic release time of the pay-as-you-go instance.</para>
                 /// 
                 /// <b>Example:</b>

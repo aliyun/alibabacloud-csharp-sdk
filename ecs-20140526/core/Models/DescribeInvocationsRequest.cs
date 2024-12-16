@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description><para>Failed:</para>
         /// <list type="bullet">
         /// <item><description>Scheduled task: The overall execution state can never be Failed.</description></item>
-        /// <item><description>One-time task: The execution fails on all instances.</description></item>
+        /// <item><description>One-time task: The execution failed on all instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Stopped: The task is stopped.</para>
@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description><para>Stopping: The task is being stopped.</para>
         /// </description></item>
         /// <item><description><para>PartialFailed: The task fails on some instances. If you specify both this parameter and <c>InstanceId</c>, this parameter does not take effect.</para>
+        /// </description></item>
+        /// <item><description><para>Pending: The command is being verified or sent. If the execution state on at least one instance is Pending, the overall execution state is Pending.</para>
+        /// </description></item>
+        /// <item><description><para>Scheduled: The command that is set to run on a schedule is sent and waiting to be run. If the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -167,9 +171,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
-        /// <para>Page numbers start from 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -179,9 +183,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
-        /// <para>Maximum value: 50.</para>
-        /// <para>Default value: 10.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

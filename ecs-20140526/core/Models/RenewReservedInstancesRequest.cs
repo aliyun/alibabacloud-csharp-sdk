@@ -10,8 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RenewReservedInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</para>
-        /// <para>Valid values: 12 and 36. Default value: 12.</para>
+        /// <para>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -21,7 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</para>
+        /// <para>Valid values: 12 and 36. Default value: 12.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,12 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -54,8 +54,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the validity period of the reserved instance.</para>
-        /// <para>Set the value to Year.</para>
+        /// <para>The validity period of the reserved instance.</para>
+        /// <para>Valid values: 1 and 3.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +66,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The unit of the validity period of the reserved instance.</para>
+        /// <para>Set the value to Year.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -75,9 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the reserved instance.</para>
-        /// <para>Valid values: 1 and 3.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The region ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -87,8 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/100065.html">DescribeReservedInstances</a> operation to query the IDs of reserved instances that you purchased.</para>
-        /// <para>You can specify up to 10 IDs of reserved instances in a single request.</para>
+        /// <para>The IDs of the reserved instances.</para>
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]

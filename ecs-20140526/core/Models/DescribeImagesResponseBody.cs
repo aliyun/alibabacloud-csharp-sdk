@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string Device { get; set; }
 
+                        [NameInMap("Encrypted")]
+                        [Validation(Required=false)]
+                        public string Encrypted { get; set; }
+
                         /// <summary>
                         /// <para>The format of the image.</para>
                         /// 
@@ -266,6 +270,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageFeatures Features { get; set; }
                 public class DescribeImagesResponseBodyImagesImageFeatures : TeaModel {
+                    [NameInMap("ImdsSupport")]
+                    [Validation(Required=false)]
+                    public string ImdsSupport { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
                     /// <list type="bullet">

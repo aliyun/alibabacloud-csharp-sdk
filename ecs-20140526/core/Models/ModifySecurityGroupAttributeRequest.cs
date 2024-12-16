@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifySecurityGroupAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The new description of the security group. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>By default, this parameter is left empty.</para>
+        /// <para>By default, the parameter is empty, which indicates that the description remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestDescription</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>By default, the parameter is empty, which indicates that the name remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SecurityGroupTestName</para>

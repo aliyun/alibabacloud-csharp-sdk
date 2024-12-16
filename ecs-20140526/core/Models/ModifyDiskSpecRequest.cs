@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The new category of the disk. Valid values:</para>
+        /// <para>The new disk category of the cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_essd: enhanced SSD (ESSD)</description></item>
+        /// <item><description>cloud_essd: ESSD</description></item>
         /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
         /// <item><description>cloud_ssd: standard SSD</description></item>
-        /// <item><description>cloud_efficiency: ultra disk</description></item>
+        /// <item><description>cloud_efficiency: utra disk</description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that the disk category is not changed.</para>
         /// <remarks>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyDiskSpecRequestPerformanceControlOptions PerformanceControlOptions { get; set; }
         public class ModifyDiskSpecRequestPerformanceControlOptions : TeaModel {
             /// <summary>
-            /// <para>The new IOPS rate of the disk. You can modify the IOPS rate of only disks in dedicated block storage clusters.</para>
-            /// <para>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</para>
+            /// <para>The new IOPS rate of the cloud disk. You can modify the IOPS rate of only cloud disks in dedicated block storage clusters.</para>
+            /// <para>Valid values: 900 to maximum IOPS per cloud disk (with an increment of 100).</para>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? IOPS { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to reset the IOPS rate and throughput of the disk. This parameter takes effect only when the disk belongs to a dedicated block storage cluster.</para>
+            /// <para>Specifies whether to reset the IOPS rate and throughput of the cloud disk. This parameter takes effect only when the cloud disk belongs to a dedicated block storage cluster.</para>
             /// <para>After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.</para>
-            /// <para>Set the value to All, which indicates that the IOPS rate and throughput of the disk are reset to the initial values.</para>
+            /// <para>Set the value to All, which indicates that the IOPS rate and throughput of the cloud disk are reset to the initial values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>All</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Recover { get; set; }
 
             /// <summary>
-            /// <para>The new throughput of the disk. You can modify the throughput of only disks in dedicated block storage clusters. Unit: MB/s.</para>
+            /// <para>The new throughput of the cloud disk. You can change the throughput of only cloud disks in dedicated block storage clusters. Unit: MB/s.</para>
             /// <para>Valid values: 60 to maximum throughput per disk.</para>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</para>
             /// 

@@ -146,6 +146,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("Features")]
+        [Validation(Required=false)]
+        public CreateImageRequestFeatures Features { get; set; }
+        public class CreateImageRequestFeatures : TeaModel {
+            [NameInMap("ImdsSupport")]
+            [Validation(Required=false)]
+            public string ImdsSupport { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 

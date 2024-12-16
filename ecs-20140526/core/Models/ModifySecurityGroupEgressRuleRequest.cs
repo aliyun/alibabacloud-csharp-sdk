@@ -132,8 +132,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>You cannot modify this parameter when you modify a security group rule by specifying its ID.\
-        /// You can add a new rule that meets your business requirements and delete the original rule.</para>
+        /// <para>The network interface controller (NIC) type.</para>
+        /// <remarks>
+        /// <para> You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>intranet</para>
@@ -223,8 +225,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group rule.\
-        /// This parameter is required when you modify a security group rule based on the security group rule ID.</para>
+        /// <para>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2679845.html">DescribeSecurityGroupAttribute</a> operation to query the IDs of security group rules in a security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sgr-bp67acfmxazb4q****</para>

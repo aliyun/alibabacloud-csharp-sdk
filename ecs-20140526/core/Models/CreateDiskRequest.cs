@@ -20,14 +20,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AdvancedFeatures { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not publicly available.</para>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Arn")]
         [Validation(Required=false)]
         public List<CreateDiskRequestArn> Arn { get; set; }
         public class CreateDiskRequestArn : TeaModel {
             /// <summary>
-            /// <para>This parameter is not publicly available.</para>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1000000000</para>
@@ -37,7 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? AssumeRoleFor { get; set; }
 
             /// <summary>
-            /// <para>This parameter is not publicly available.</para>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>hide</para>
@@ -47,7 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RoleType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is not publicly available.</para>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>hide</para>
@@ -65,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>false</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para> This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,6 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>cloud_essd: ESSD</description></item>
         /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
         /// <item><description>cloud_essd_entry: ESSD Entry disk</description></item>
+        /// <item><description>cloud_regional_disk_auto: Regional ESSD</description></item>
         /// <item><description>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</description></item>
         /// <item><description>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</description></item>
         /// </list>
@@ -118,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name must start with a letter.</para>
         /// <para>This parameter is left empty by default.</para>
         /// 
         /// <b>Example:</b>
@@ -224,9 +233,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
-        /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+        /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</para>
         /// <remarks>
-        /// <para> This parameter is available only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para> This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -266,7 +275,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The size of the disk. Unit: GiB. This parameter is required. Valid values:</para>
+        /// <para>The size of the data disk. Unit: GiB. This parameter is required. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Valid values when DiskCategory is set to cloud: 5 to 2000.</para>
         /// </description></item>
@@ -286,12 +295,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>Valid values when DiskCategory is set to cloud_essd_entry: 10 to 32768.</para>
         /// </description></item>
+        /// <item><description><para>Valid values when DiskCategory is set to cloud_regional_disk_auto: 10 to 65536.</para>
+        /// </description></item>
         /// <item><description><para>Valid values when DiskCategory is set to elastic_ephemeral_disk_standard: 64 to 8192.</para>
         /// </description></item>
         /// <item><description><para>Valid values when DiskCategory is set to elastic_ephemeral_disk_premium: 64 to 8192.</para>
         /// </description></item>
         /// </list>
-        /// <para>If <c>SnapshotId</c> is specified, the following limits apply to <c>SnapshotId</c> and <c>Size</c>:</para>
+        /// <para>If you specify <c>SnapshotId</c>, the following limits apply to <c>SnapshotId</c> and <c>Size</c>:</para>
         /// <list type="bullet">
         /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is larger than the value of <c>Size</c>, the size of the created disk is equal to the size of the snapshot.</description></item>
         /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is smaller than the value of <c>Size</c>, the size of the created disk is equal to the value of <c>Size</c>.</description></item>
@@ -390,8 +401,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The ID of the zone in which to create the pay-as-you-go disk.</para>
         /// <list type="bullet">
         /// <item><description>If you do not specify InstanceId, you must specify ZoneId.</description></item>
-        /// <item><description>You cannot specify both ZoneId and InstanceId in a request.</description></item>
+        /// <item><description>You cannot specify both ZoneId and InstanceId in the same request.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> You do not need to specify this parameter if you set DiskCategory to <c>cloud_regional_disk_auto</c> to create a Regional ESSD.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>

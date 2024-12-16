@@ -20,12 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The internal access policy of the security group. Valid values:</para>
+        /// <para>The internal access control policy of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Accept: All instances in the security group can communicate with each other.</description></item>
-        /// <item><description>Drop: All instances in the security group are isolated from each other.</description></item>
+        /// <item><description>Accept: the internal interconnectivity policy</description></item>
+        /// <item><description>Drop: the internal isolation policy</description></item>
         /// </list>
-        /// <para>The value of this parameter is not case-sensitive.</para>
+        /// <remarks>
+        /// <para> The value of this parameter is case-insensitive.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAttachmentAttributesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the private pools that the instances match.</para>
+        /// <para>The information about the association between private pools and instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]

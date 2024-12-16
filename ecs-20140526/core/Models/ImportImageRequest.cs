@@ -188,6 +188,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ImportImageRequestFeatures Features { get; set; }
         public class ImportImageRequestFeatures : TeaModel {
+            [NameInMap("ImdsSupport")]
+            [Validation(Required=false)]
+            public string ImdsSupport { get; set; }
+
             /// <summary>
             /// <para>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
             /// <list type="bullet">

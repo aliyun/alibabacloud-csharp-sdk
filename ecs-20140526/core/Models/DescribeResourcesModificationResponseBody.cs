@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The information about the resources.</para>
+                        /// <para>The information about the supported resources.</para>
                         /// </summary>
                         [NameInMap("SupportedResources")]
                         [Validation(Required=false)]
@@ -231,14 +231,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The type of the resources. Valid values:</para>
+                        /// <para>The resource type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Zone</description></item>
-                        /// <item><description>IoOptimized</description></item>
                         /// <item><description>InstanceType</description></item>
                         /// <item><description>SystemDisk</description></item>
-                        /// <item><description>DataDisk</description></item>
-                        /// <item><description>Network</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>

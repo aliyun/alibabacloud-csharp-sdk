@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ModifyImageAttributeRequestFeatures Features { get; set; }
         public class ModifyImageAttributeRequestFeatures : TeaModel {
+            [NameInMap("ImdsSupport")]
+            [Validation(Required=false)]
+            public string ImdsSupport { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to support the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
             /// <list type="bullet">
