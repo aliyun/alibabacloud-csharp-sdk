@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        [NameInMap("EndUserIdFilter")]
+        [Validation(Required=false)]
+        public string EndUserIdFilter { get; set; }
+
         /// <summary>
         /// <para>The ID of the office network.</para>
         /// 

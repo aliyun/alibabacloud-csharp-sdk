@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>127.0.**.**</para>
+        /// <para><c>127.0.**.**</c></para>
         /// </summary>
         [NameInMap("DnsAddress")]
         [Validation(Required=false)]
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// If you specify the <c>SubDomainName</c> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>127.0.**.**</para>
+        /// <para><c>127.0.**.**</c></para>
         /// </summary>
         [NameInMap("SubDomainDnsAddress")]
         [Validation(Required=false)]

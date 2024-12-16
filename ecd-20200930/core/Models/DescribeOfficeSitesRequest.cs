@@ -80,6 +80,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The security protection setting of the office network.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SASE: SASE is configured.</description></item>
+        /// <item><description>OFF: No security protection setting is configured.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SASE</para>
+        /// </summary>
         [NameInMap("SecurityProtection")]
         [Validation(Required=false)]
         public string SecurityProtection { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class CreateDesktopsRequest : TeaModel {
+    public class CreateDesktopsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: 1.</para>
         /// 
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </summary>
         [NameInMap("BundleModels")]
         [Validation(Required=false)]
-        public List<CreateDesktopsRequestBundleModels> BundleModels { get; set; }
-        public class CreateDesktopsRequestBundleModels : TeaModel {
+        public List<CreateDesktopsShrinkRequestBundleModels> BundleModels { get; set; }
+        public class CreateDesktopsShrinkRequestBundleModels : TeaModel {
             /// <summary>
             /// <para>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.</para>
             /// 
@@ -172,45 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         [NameInMap("DesktopAttachment")]
         [Validation(Required=false)]
-        public CreateDesktopsRequestDesktopAttachment DesktopAttachment { get; set; }
-        public class CreateDesktopsRequestDesktopAttachment : TeaModel {
-            [NameInMap("DataDiskCategory")]
-            [Validation(Required=false)]
-            public string DataDiskCategory { get; set; }
-
-            [NameInMap("DataDiskPerLevel")]
-            [Validation(Required=false)]
-            public string DataDiskPerLevel { get; set; }
-
-            [NameInMap("DataDiskSize")]
-            [Validation(Required=false)]
-            public int? DataDiskSize { get; set; }
-
-            [NameInMap("DefaultLanguage")]
-            [Validation(Required=false)]
-            public string DefaultLanguage { get; set; }
-
-            [NameInMap("DesktopType")]
-            [Validation(Required=false)]
-            public string DesktopType { get; set; }
-
-            [NameInMap("ImageId")]
-            [Validation(Required=false)]
-            public string ImageId { get; set; }
-
-            [NameInMap("SystemDiskCategory")]
-            [Validation(Required=false)]
-            public string SystemDiskCategory { get; set; }
-
-            [NameInMap("SystemDiskPerLevel")]
-            [Validation(Required=false)]
-            public string SystemDiskPerLevel { get; set; }
-
-            [NameInMap("SystemDiskSize")]
-            [Validation(Required=false)]
-            public int? SystemDiskSize { get; set; }
-
-        }
+        public string DesktopAttachmentShrink { get; set; }
 
         /// <summary>
         /// <para>The private IP address of the cloud computer.</para>
@@ -271,8 +233,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </summary>
         [NameInMap("DesktopTimers")]
         [Validation(Required=false)]
-        public List<CreateDesktopsRequestDesktopTimers> DesktopTimers { get; set; }
-        public class CreateDesktopsRequestDesktopTimers : TeaModel {
+        public List<CreateDesktopsShrinkRequestDesktopTimers> DesktopTimers { get; set; }
+        public class CreateDesktopsShrinkRequestDesktopTimers : TeaModel {
             /// <summary>
             /// <para>Specifies whether to allow the end user to configure the scheduled task.</para>
             /// 
@@ -456,8 +418,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </summary>
         [NameInMap("MonthDesktopSetting")]
         [Validation(Required=false)]
-        public CreateDesktopsRequestMonthDesktopSetting MonthDesktopSetting { get; set; }
-        public class CreateDesktopsRequestMonthDesktopSetting : TeaModel {
+        public CreateDesktopsShrinkRequestMonthDesktopSetting MonthDesktopSetting { get; set; }
+        public class CreateDesktopsShrinkRequestMonthDesktopSetting : TeaModel {
             /// <summary>
             /// <remarks>
             /// <para>This parameter is not publicly available.</para>
@@ -590,8 +552,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateDesktopsRequestTag> Tag { get; set; }
-        public class CreateDesktopsRequestTag : TeaModel {
+        public List<CreateDesktopsShrinkRequestTag> Tag { get; set; }
+        public class CreateDesktopsShrinkRequestTag : TeaModel {
             /// <summary>
             /// <para>The key of the tag. You can specify 1 to 20 keys for a tag.</para>
             /// 
@@ -653,8 +615,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </summary>
         [NameInMap("UserCommands")]
         [Validation(Required=false)]
-        public List<CreateDesktopsRequestUserCommands> UserCommands { get; set; }
-        public class CreateDesktopsRequestUserCommands : TeaModel {
+        public List<CreateDesktopsShrinkRequestUserCommands> UserCommands { get; set; }
+        public class CreateDesktopsShrinkRequestUserCommands : TeaModel {
             /// <summary>
             /// <para>The command content.</para>
             /// 

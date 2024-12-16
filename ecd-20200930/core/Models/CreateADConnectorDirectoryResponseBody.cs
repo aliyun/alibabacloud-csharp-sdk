@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The connection address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>127.0.**.**</para>
+            /// <para><c>127.0.**.**</c></para>
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]

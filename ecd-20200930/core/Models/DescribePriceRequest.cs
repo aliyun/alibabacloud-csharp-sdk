@@ -33,97 +33,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
-        /// <summary>
-        /// <b>if can be null:</b>
-        /// <c>true</c>
-        /// </summary>
-        [NameInMap("BundleModels")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public List<DescribePriceRequestBundleModels> BundleModels { get; set; }
-        public class DescribePriceRequestBundleModels : TeaModel {
-            [NameInMap("Amount")]
-            [Validation(Required=false)]
-            public int? Amount { get; set; }
-
-            [NameInMap("BundleId")]
-            [Validation(Required=false)]
-            public string BundleId { get; set; }
-
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public int? Duration { get; set; }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-            [NameInMap("OsType")]
-            [Validation(Required=false)]
-            public string OsType { get; set; }
-
-            [NameInMap("RootDiskId")]
-            [Validation(Required=false)]
-            public string RootDiskId { get; set; }
-
-            [NameInMap("UserDiskId")]
-            [Validation(Required=false)]
-            public string UserDiskId { get; set; }
-
-        }
-
-        [NameInMap("EduCdsEnable")]
-        [Validation(Required=false)]
-        public string EduCdsEnable { get; set; }
-
-        [NameInMap("EduCdsSize")]
-        [Validation(Required=false)]
-        public int? EduCdsSize { get; set; }
-
-        [NameInMap("EduCommittedTime")]
-        [Validation(Required=false)]
-        public int? EduCommittedTime { get; set; }
-
-        [NameInMap("EduDesktopBundleId")]
-        [Validation(Required=false)]
-        public string EduDesktopBundleId { get; set; }
-
-        [NameInMap("EduDesktopNum")]
-        [Validation(Required=false)]
-        public int? EduDesktopNum { get; set; }
-
-        [NameInMap("EduRoomClassify")]
-        [Validation(Required=false)]
-        public string EduRoomClassify { get; set; }
-
-        [NameInMap("EduStudentBundleId")]
-        [Validation(Required=false)]
-        public string EduStudentBundleId { get; set; }
-
-        [NameInMap("EduStudentNum")]
-        [Validation(Required=false)]
-        public int? EduStudentNum { get; set; }
-
-        [NameInMap("EduTeacherBundleId")]
-        [Validation(Required=false)]
-        public string EduTeacherBundleId { get; set; }
-
-        [NameInMap("EduTeacherNum")]
-        [Validation(Required=false)]
-        public int? EduTeacherNum { get; set; }
+        public int? Duration { get; set; }
 
         [NameInMap("GroupDesktopCount")]
         [Validation(Required=false)]
         public int? GroupDesktopCount { get; set; }
-
-        /// <summary>
-        /// <para>The model of the WUYING hardware client.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>hide</para>
-        /// </summary>
-        [NameInMap("HardwareVersion")]
-        [Validation(Required=false)]
-        public string HardwareVersion { get; set; }
 
         /// <summary>
         /// <para>The resource specifications.</para>
@@ -177,10 +93,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
-        [NameInMap("NetworkType")]
-        [Validation(Required=false)]
-        public string NetworkType { get; set; }
-
         /// <summary>
         /// <para>The OS. Valid values:</para>
         /// <list type="bullet">
@@ -195,10 +107,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }
-
-        [NameInMap("PackageSize")]
-        [Validation(Required=false)]
-        public int? PackageSize { get; set; }
 
         /// <summary>
         /// <para>The subscription duration. Default value: 1.</para>
@@ -263,21 +171,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        /// <summary>
-        /// <para>The performance level (PL) of the system disk. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PL0</description></item>
-        /// <item><description>PL1</description></item>
-        /// <item><description>PL2</description></item>
-        /// <item><description>PL3</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>PL0</para>
-        /// </summary>
-        [NameInMap("RootDiskPerformanceLevel")]
+        [NameInMap("RootDiskCategory")]
         [Validation(Required=false)]
-        public string RootDiskPerformanceLevel { get; set; }
+        public string RootDiskCategory { get; set; }
 
         /// <summary>
         /// <para>The system disk size. Unit: GiB.</para>
@@ -289,33 +185,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? RootDiskSizeGib { get; set; }
 
-        [NameInMap("SpPeriodInfo")]
+        [NameInMap("UserDiskCategory")]
         [Validation(Required=false)]
-        public string SpPeriodInfo { get; set; }
-
-        [NameInMap("SpPrice")]
-        [Validation(Required=false)]
-        public bool? SpPrice { get; set; }
-
-        [NameInMap("SpType")]
-        [Validation(Required=false)]
-        public string SpType { get; set; }
-
-        /// <summary>
-        /// <para>The PL of the data disk. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PL0</description></item>
-        /// <item><description>PL1</description></item>
-        /// <item><description>PL2</description></item>
-        /// <item><description>PL3</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>PL0</para>
-        /// </summary>
-        [NameInMap("UserDiskPerformanceLevel")]
-        [Validation(Required=false)]
-        public string UserDiskPerformanceLevel { get; set; }
+        public string UserDiskCategory { get; set; }
 
         /// <summary>
         /// <para>The data disk size. Unit: GiB.</para>

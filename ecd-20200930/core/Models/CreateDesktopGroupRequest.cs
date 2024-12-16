@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The Apsara File Storage NAS (NAS) file system that is used after data roaming is enabled.</para>
+        /// <para>The File Storage NAS (NAS) file system that is used after data roaming is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04f314****</para>
@@ -344,6 +344,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ProfileFollowSwitch")]
         [Validation(Required=false)]
         public bool? ProfileFollowSwitch { get; set; }
+
+        [NameInMap("PromotionId")]
+        [Validation(Required=false)]
+        public string PromotionId { get; set; }
 
         /// <summary>
         /// <para>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. <c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%</c>. When the specified threshold is reached, new cloud desktops are automatically created. When the specified threshold is not reached, idle cloud desktops are released.</para>

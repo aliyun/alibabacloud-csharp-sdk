@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListOfficeSiteUsersRequest : TeaModel {
+        [NameInMap("AssignedInfo")]
+        [Validation(Required=false)]
+        public string AssignedInfo { get; set; }
+
         /// <summary>
         /// <para>The query string for fuzzy query.</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
+
+        [NameInMap("IncludeAssignedUser")]
+        [Validation(Required=false)]
+        public bool? IncludeAssignedUser { get; set; }
 
         /// <summary>
         /// <para>The number of entries per page.</para>
@@ -74,6 +82,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("SortType")]
+        [Validation(Required=false)]
+        public string SortType { get; set; }
 
     }
 

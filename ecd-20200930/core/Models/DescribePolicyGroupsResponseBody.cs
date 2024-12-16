@@ -897,6 +897,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RemoteCoordinate { get; set; }
 
+            [NameInMap("ResourceRegionId")]
+            [Validation(Required=false)]
+            public string ResourceRegionId { get; set; }
+
             /// <summary>
             /// <para>The effective scope of the policy. Valid values:</para>
             /// <list type="bullet">
@@ -1232,6 +1236,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("WatermarkType")]
             [Validation(Required=false)]
             public string WatermarkType { get; set; }
+
+            [NameInMap("WyAssistant")]
+            [Validation(Required=false)]
+            public string WyAssistant { get; set; }
 
         }
 

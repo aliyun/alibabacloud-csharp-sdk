@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        [NameInMap("IncludeInvokeDesktops")]
+        [Validation(Required=false)]
+        public bool? IncludeInvokeDesktops { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to return command outputs in the response. Valid values:</para>
         /// <list type="bullet">

@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? DisableSessionConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Apsara File Storage NAS (NAS) file system for the user data roaming feature.</para>
+        /// <para>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</para>
         /// <remarks>
         /// <para> This parameter is unavailable.</para>
         /// </remarks>

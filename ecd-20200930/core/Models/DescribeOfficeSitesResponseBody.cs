@@ -204,6 +204,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("CustomAccessPoint")]
+            [Validation(Required=false)]
+            public string CustomAccessPoint { get; set; }
+
+            [NameInMap("CustomDnsAddress")]
+            [Validation(Required=false)]
+            public List<string> CustomDnsAddress { get; set; }
+
             /// <summary>
             /// <para>The ID of the security group.</para>
             /// 
@@ -346,7 +354,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableServiceRoute { get; set; }
 
             /// <summary>
-            /// <para>An array of Apsara File Storage NAS (NAS) file system IDs.</para>
+            /// <para>An array of File Storage NAS (NAS) file system IDs.</para>
             /// </summary>
             [NameInMap("FileSystemIds")]
             [Validation(Required=false)]
@@ -462,6 +470,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string NetworkPackageId { get; set; }
 
+            [NameInMap("NmVersion")]
+            [Validation(Required=false)]
+            public string NmVersion { get; set; }
+
             /// <summary>
             /// <para>The IDs of the office networks.</para>
             /// 
@@ -542,6 +554,31 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RdsLicenseStatus { get; set; }
 
+            [NameInMap("ResourceAmounts")]
+            [Validation(Required=false)]
+            public List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> ResourceAmounts { get; set; }
+            public class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts : TeaModel {
+                [NameInMap("amount")]
+                [Validation(Required=false)]
+                public long? Amount { get; set; }
+
+                [NameInMap("resourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The security protection setting of the office network.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SASE: SASE is configured.</description></item>
+            /// <item><description>OFF: No security protection setting is configured.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SASE</para>
+            /// </summary>
             [NameInMap("SecurityProtection")]
             [Validation(Required=false)]
             public string SecurityProtection { get; set; }
@@ -609,6 +646,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SubDomainName { get; set; }
 
+            /// <summary>
+            /// <para>The subnet mode of the office network.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: disabled.</description></item>
+            /// <item><description>1: enabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("SubnetMode")]
             [Validation(Required=false)]
             public string SubnetMode { get; set; }
@@ -632,6 +680,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("TotalEdsCountForGroup")]
             [Validation(Required=false)]
             public long? TotalEdsCountForGroup { get; set; }
+
+            [NameInMap("TotalResourceAmount")]
+            [Validation(Required=false)]
+            public long? TotalResourceAmount { get; set; }
 
             /// <summary>
             /// <remarks>
@@ -690,6 +742,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

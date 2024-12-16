@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebuildDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify 1 to 20 IDs.</para>
+        /// <para>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +30,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// <para>The OS language. Only system images are supported, and Linux cloud computers support only English.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en-US: English</description></item>
+        /// <item><description>zh-HK: Traditional Chinese (Hong Kong, China)</description></item>
+        /// <item><description>zh-CN: Simplified Chinese</description></item>
+        /// <item><description>ja-JP: Japanese</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en-US</para>
+        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
@@ -69,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

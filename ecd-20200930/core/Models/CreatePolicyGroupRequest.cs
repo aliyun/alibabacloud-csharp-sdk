@@ -1382,6 +1382,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string WatermarkType { get; set; }
 
+        [NameInMap("WyAssistant")]
+        [Validation(Required=false)]
+        public string WyAssistant { get; set; }
+
     }
 
 }

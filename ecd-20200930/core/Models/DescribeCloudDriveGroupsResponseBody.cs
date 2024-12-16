@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string OrgId { get; set; }
 
+            [NameInMap("RecycleBinSize")]
+            [Validation(Required=false)]
+            public string RecycleBinSize { get; set; }
+
             /// <summary>
             /// <para>The team space status. Valid values:</para>
             /// <list type="bullet">

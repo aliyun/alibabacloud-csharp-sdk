@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DownloadUploadEndUserIds { get; set; }
 
+        [NameInMap("NoDownloadNoUploadEndUserIds")]
+        [Validation(Required=false)]
+        public List<string> NoDownloadNoUploadEndUserIds { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>

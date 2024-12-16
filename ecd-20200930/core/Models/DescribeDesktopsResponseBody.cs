@@ -228,6 +228,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<DescribeDesktopsResponseBodyDesktopsDisks> Disks { get; set; }
             public class DescribeDesktopsResponseBodyDesktopsDisks : TeaModel {
+                [NameInMap("DiskCategory")]
+                [Validation(Required=false)]
+                public string DiskCategory { get; set; }
+
                 /// <summary>
                 /// <para>The disk ID.</para>
                 /// 
@@ -935,6 +939,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <para>The ID of the request.</para>

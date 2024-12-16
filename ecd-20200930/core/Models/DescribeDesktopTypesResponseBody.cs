@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public float? GpuCount { get; set; }
 
+            [NameInMap("GpuMemory")]
+            [Validation(Required=false)]
+            public int? GpuMemory { get; set; }
+
             /// <summary>
             /// <para>The GPU memory.</para>
             /// 
@@ -95,6 +99,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("MemorySize")]
             [Validation(Required=false)]
             public string MemorySize { get; set; }
+
+            [NameInMap("Scopes")]
+            [Validation(Required=false)]
+            public List<string> Scopes { get; set; }
+
+            [NameInMap("StockState")]
+            [Validation(Required=false)]
+            public string StockState { get; set; }
 
             /// <summary>
             /// <para>The size of the system disk. Unit: GiB.</para>

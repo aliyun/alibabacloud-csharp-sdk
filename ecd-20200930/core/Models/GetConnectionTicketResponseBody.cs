@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetConnectionTicketResponseBody : TeaModel {
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public string DesktopId { get; set; }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 
@@ -19,6 +23,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TaskCode")]
+        [Validation(Required=false)]
+        public string TaskCode { get; set; }
+
         /// <summary>
         /// <para>The ID of the cloud computer connection task.</para>
         /// 
@@ -28,6 +36,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("TaskMessage")]
+        [Validation(Required=false)]
+        public string TaskMessage { get; set; }
 
         /// <summary>
         /// <para>The task status.</para>

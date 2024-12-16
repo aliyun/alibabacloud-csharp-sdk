@@ -204,6 +204,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopTypeId { get; set; }
 
+        [NameInMap("DesktopTypeIdList")]
+        [Validation(Required=false)]
+        public List<string> DesktopTypeIdList { get; set; }
+
         /// <summary>
         /// <para>The number of GPUs.</para>
         /// 
@@ -292,6 +296,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
         /// <summary>
         /// <para>The order type.</para>
         /// 
@@ -312,6 +320,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
+
+        [NameInMap("SortType")]
+        [Validation(Required=false)]
+        public string SortType { get; set; }
 
     }
 

@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string InvocationStatus { get; set; }
 
+            [NameInMap("InvokeDesktopCount")]
+            [Validation(Required=false)]
+            public int? InvokeDesktopCount { get; set; }
+
+            [NameInMap("InvokeDesktopSucceedCount")]
+            [Validation(Required=false)]
+            public int? InvokeDesktopSucceedCount { get; set; }
+
             /// <summary>
             /// <para>The cloud desktops on which the command is executed.</para>
             /// </summary>

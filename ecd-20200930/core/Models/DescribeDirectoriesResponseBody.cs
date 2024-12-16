@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The connection address.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>172.17.**.**</para>
+                /// <para><c>172.17.**.**</c></para>
                 /// </summary>
                 [NameInMap("ADConnectorAddress")]
                 [Validation(Required=false)]
@@ -118,14 +118,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>dc001</para>
+            /// </summary>
             [NameInMap("AdHostname")]
             [Validation(Required=false)]
             public string AdHostname { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>dc002</para>
+            /// </summary>
             [NameInMap("BackupDCHostname")]
             [Validation(Required=false)]
             public string BackupDCHostname { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>192.168.2.100</para>
+            /// </summary>
             [NameInMap("BackupDns")]
             [Validation(Required=false)]
             public string BackupDns { get; set; }
@@ -310,7 +322,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? EnableInternetAccess { get; set; }
 
             /// <summary>
-            /// <para>The IDs of Apsara File Storage NAS (NAS) file systems.</para>
+            /// <para>The IDs of File Storage NAS (NAS) file systems.</para>
             /// </summary>
             [NameInMap("FileSystemIds")]
             [Validation(Required=false)]

@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MinDesktopsCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Apsara File Storage NAS (NAS) file system for the user data roaming feature.</para>
+            /// <para>The ID of the File Storage NAS (NAS) file system for the user data roaming feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0783b4****</para>

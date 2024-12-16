@@ -40,7 +40,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The ID of the CEN instance.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-3gwy16dojz1m65****</para>
@@ -70,7 +69,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <item><description><c>172.16.0.0/12</c> (subnet mask range: 12 to 24 bits)</description></item>
         /// <item><description><c>192.168.0.0/16</c> (subnet mask range: 16 to 24 bits)</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.XX.XX</para>
@@ -276,6 +274,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("SubDomainName")]
         [Validation(Required=false)]
         public string SubDomainName { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public List<string> VSwitchId { get; set; }
 
         /// <summary>
         /// <para>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain the verification code.</para>
