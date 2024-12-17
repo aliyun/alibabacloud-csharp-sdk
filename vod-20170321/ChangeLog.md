@@ -1,3 +1,8 @@
+2024-12-17 Version: 3.5.0
+- Support API DescribeMediaDistribution.
+- Update API DescribeVodDomainUsageData: update param DomainName.
+
+
 2024-12-09 Version: 3.4.1
 - Update API GetPlayInfo: update response param.
 
