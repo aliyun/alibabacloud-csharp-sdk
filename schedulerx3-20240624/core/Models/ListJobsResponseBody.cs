@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
+                [NameInMap("CurrentExecuteStatus")]
+                [Validation(Required=false)]
+                public int? CurrentExecuteStatus { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("DataOffset")]
                 [Validation(Required=false)]
                 public int? DataOffset { get; set; }
@@ -98,6 +106,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("ExecutorBlockStrategy")]
+                [Validation(Required=false)]
+                public string ExecutorBlockStrategy { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -122,6 +134,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("JobType")]
                 [Validation(Required=false)]
                 public string JobType { get; set; }
+
+                [NameInMap("LastExecuteEndTime")]
+                [Validation(Required=false)]
+                public string LastExecuteEndTime { get; set; }
+
+                [NameInMap("LastExecuteStatus")]
+                [Validation(Required=false)]
+                public int? LastExecuteStatus { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

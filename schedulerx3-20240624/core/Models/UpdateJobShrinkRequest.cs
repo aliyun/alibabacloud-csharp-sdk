@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ExecutorBlockStrategy")]
+        [Validation(Required=false)]
+        public int? ExecutorBlockStrategy { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>testJobVoidHandler</para>
         /// </summary>
         [NameInMap("JobHandler")]
