@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
 
+                [NameInMap("book_mode")]
+                [Validation(Required=false)]
+                public string BookMode { get; set; }
+
                 [NameInMap("book_reason")]
                 [Validation(Required=false)]
                 public string BookReason { get; set; }
@@ -251,6 +255,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("country_code")]
                 [Validation(Required=false)]
                 public string CountryCode { get; set; }
+
+                [NameInMap("deductible_tax")]
+                [Validation(Required=false)]
+                public double? DeductibleTax { get; set; }
 
                 [NameInMap("department")]
                 [Validation(Required=false)]
@@ -611,6 +619,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
+
+                [NameInMap("voucher_type_desc")]
+                [Validation(Required=false)]
+                public string VoucherTypeDesc { get; set; }
 
             }
 

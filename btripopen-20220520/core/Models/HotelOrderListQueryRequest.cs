@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? ApplyId { get; set; }
 
+        [NameInMap("category")]
+        [Validation(Required=false)]
+        public int? Category { get; set; }
+
         [NameInMap("depart_id")]
         [Validation(Required=false)]
         public string DepartId { get; set; }

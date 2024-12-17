@@ -192,6 +192,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? CouponPrice { get; set; }
 
+                [NameInMap("deductible_tax")]
+                [Validation(Required=false)]
+                public double? DeductibleTax { get; set; }
+
                 [NameInMap("dep_city_code")]
                 [Validation(Required=false)]
                 public string DepCityCode { get; set; }
@@ -482,6 +486,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string UserConfirmDesc { get; set; }
 
+                [NameInMap("vehicle_scene_id")]
+                [Validation(Required=false)]
+                public string VehicleSceneId { get; set; }
+
+                [NameInMap("vehicle_scene_name")]
+                [Validation(Required=false)]
+                public string VehicleSceneName { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -489,6 +501,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
+
+                [NameInMap("voucher_type_desc")]
+                [Validation(Required=false)]
+                public string VoucherTypeDesc { get; set; }
 
             }
 

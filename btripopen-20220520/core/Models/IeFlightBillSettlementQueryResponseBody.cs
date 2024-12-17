@@ -264,6 +264,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? Coupon { get; set; }
 
+                [NameInMap("deductible_tax")]
+                [Validation(Required=false)]
+                public double? DeductibleTax { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>KHN</para>
@@ -645,6 +649,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
+
+                [NameInMap("voucher_type_desc")]
+                [Validation(Required=false)]
+                public string VoucherTypeDesc { get; set; }
 
                 [NameInMap("voyage_name")]
                 [Validation(Required=false)]

@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
 
+                [NameInMap("book_mode")]
+                [Validation(Required=false)]
+                public string BookMode { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2021-10-01 00:17:05</para>
@@ -224,6 +228,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? ChangeFee { get; set; }
 
+                [NameInMap("change_reason_code")]
+                [Validation(Required=false)]
+                public string ChangeReasonCode { get; set; }
+
                 [NameInMap("change_result")]
                 [Validation(Required=false)]
                 public string ChangeResult { get; set; }
@@ -259,6 +267,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("coupon")]
                 [Validation(Required=false)]
                 public double? Coupon { get; set; }
+
+                [NameInMap("deductible_tax")]
+                [Validation(Required=false)]
+                public double? DeductibleTax { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -436,6 +448,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? NegotiationCouponFee { get; set; }
 
+                [NameInMap("offline_status")]
+                [Validation(Required=false)]
+                public string OfflineStatus { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -511,6 +527,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("refund_fee")]
                 [Validation(Required=false)]
                 public double? RefundFee { get; set; }
+
+                [NameInMap("refund_reason_code")]
+                [Validation(Required=false)]
+                public string RefundReasonCode { get; set; }
 
                 [NameInMap("refund_result")]
                 [Validation(Required=false)]
@@ -657,6 +677,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
+
+                [NameInMap("voucher_type_desc")]
+                [Validation(Required=false)]
+                public string VoucherTypeDesc { get; set; }
 
                 [NameInMap("voyage_name")]
                 [Validation(Required=false)]

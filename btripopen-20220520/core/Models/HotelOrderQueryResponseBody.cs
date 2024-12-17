@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CityAdCode { get; set; }
 
+                [NameInMap("country_code")]
+                [Validation(Required=false)]
+                public string CountryCode { get; set; }
+
+                [NameInMap("country_name")]
+                [Validation(Required=false)]
+                public string CountryName { get; set; }
+
                 [NameInMap("hotel_address")]
                 [Validation(Required=false)]
                 public string HotelAddress { get; set; }
@@ -143,6 +151,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("btrip_title")]
                 [Validation(Required=false)]
                 public string BtripTitle { get; set; }
+
+                [NameInMap("category")]
+                [Validation(Required=false)]
+                public int? Category { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -223,6 +235,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("order_type")]
                 [Validation(Required=false)]
                 public int? OrderType { get; set; }
+
+                [NameInMap("supplier")]
+                [Validation(Required=false)]
+                public string Supplier { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

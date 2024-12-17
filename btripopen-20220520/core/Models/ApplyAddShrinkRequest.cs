@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string InternationalFlightCabins { get; set; }
 
+        [NameInMap("intl_flight_budget")]
+        [Validation(Required=false)]
+        public long? IntlFlightBudget { get; set; }
+
+        [NameInMap("intl_hotel_budget")]
+        [Validation(Required=false)]
+        public long? IntlHotelBudget { get; set; }
+
         [NameInMap("itinerary_list")]
         [Validation(Required=false)]
         public string ItineraryListShrink { get; set; }

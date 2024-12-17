@@ -389,6 +389,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
 
+                [NameInMap("voucher_type_desc")]
+                [Validation(Required=false)]
+                public string VoucherTypeDesc { get; set; }
+
             }
 
             /// <summary>

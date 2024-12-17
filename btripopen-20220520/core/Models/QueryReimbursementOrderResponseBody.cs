@@ -257,6 +257,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("payment_finish_time")]
+            [Validation(Required=false)]
+            public string PaymentFinishTime { get; set; }
+
             [NameInMap("payment_infos")]
             [Validation(Required=false)]
             public List<QueryReimbursementOrderResponseBodyModulePaymentInfos> PaymentInfos { get; set; }
@@ -286,6 +290,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("personal_amount")]
             [Validation(Required=false)]
             public string PersonalAmount { get; set; }
+
+            [NameInMap("process_end_time")]
+            [Validation(Required=false)]
+            public string ProcessEndTime { get; set; }
 
             [NameInMap("project_code")]
             [Validation(Required=false)]

@@ -31,8 +31,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutDeptId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>dept456</para>
         /// </summary>

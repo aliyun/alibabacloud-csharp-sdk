@@ -221,6 +221,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public int? CancelPolicyType { get; set; }
 
+                    [NameInMap("content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("short_desc")]
+                    [Validation(Required=false)]
+                    public string ShortDesc { get; set; }
+
                 }
 
                 /// <summary>

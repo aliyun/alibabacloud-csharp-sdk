@@ -153,6 +153,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string GmtModify { get; set; }
 
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>00-123123</para>
@@ -164,6 +168,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("out_apply_id")]
                 [Validation(Required=false)]
                 public string OutApplyId { get; set; }
+
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
 
                 [NameInMap("stop_city")]
                 [Validation(Required=false)]
@@ -239,6 +247,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrCityName { get; set; }
 
+                [NameInMap("arr_terminal")]
+                [Validation(Required=false)]
+                public string ArrTerminal { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2022-07-20T10:40Z</para>
@@ -291,6 +303,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepCityName { get; set; }
 
+                [NameInMap("dep_terminal")]
+                [Validation(Required=false)]
+                public string DepTerminal { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2022-07-20T10:40Z</para>
@@ -314,6 +330,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("flight_no")]
                 [Validation(Required=false)]
                 public string FlightNo { get; set; }
+
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
+
+                [NameInMap("stop_city")]
+                [Validation(Required=false)]
+                public List<string> StopCity { get; set; }
 
             }
 
@@ -381,6 +409,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string GmtModify { get; set; }
 
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
                 [NameInMap("out_apply_id")]
                 [Validation(Required=false)]
                 public string OutApplyId { get; set; }
@@ -417,6 +449,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? RefundType { get; set; }
 
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>000-13232</para>
@@ -438,6 +474,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("arr_airport_code")]
                 [Validation(Required=false)]
                 public string ArrAirportCode { get; set; }
+
+                [NameInMap("arr_city")]
+                [Validation(Required=false)]
+                public string ArrCity { get; set; }
+
+                [NameInMap("arr_city_code")]
+                [Validation(Required=false)]
+                public string ArrCityCode { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -462,6 +506,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("dep_airport_code")]
                 [Validation(Required=false)]
                 public string DepAirportCode { get; set; }
+
+                [NameInMap("dep_city")]
+                [Validation(Required=false)]
+                public string DepCity { get; set; }
+
+                [NameInMap("dep_city_code")]
+                [Validation(Required=false)]
+                public string DepCityCode { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -491,6 +543,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string GmtModify { get; set; }
 
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -510,6 +566,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("personal_price")]
                 [Validation(Required=false)]
                 public double? PersonalPrice { get; set; }
+
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -576,6 +636,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("insurance_no")]
                 [Validation(Required=false)]
                 public string InsuranceNo { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -692,6 +756,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("order_status")]
                 [Validation(Required=false)]
                 public int? OrderStatus { get; set; }
+
+                [NameInMap("supplier")]
+                [Validation(Required=false)]
+                public string Supplier { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

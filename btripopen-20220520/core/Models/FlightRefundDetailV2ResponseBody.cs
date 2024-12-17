@@ -266,6 +266,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("non_refundable_change_service_price")]
+            [Validation(Required=false)]
+            public long? NonRefundableChangeServicePrice { get; set; }
+
+            [NameInMap("non_refundable_change_upgrade_price")]
+            [Validation(Required=false)]
+            public long? NonRefundableChangeUpgradePrice { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1002039195025156700</para>

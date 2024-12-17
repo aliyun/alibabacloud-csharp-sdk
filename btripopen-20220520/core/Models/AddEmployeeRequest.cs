@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class AddEmployeeRequest : TeaModel {
+        [NameInMap("attribute")]
+        [Validation(Required=false)]
+        public string Attribute { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg">https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg</a></para>

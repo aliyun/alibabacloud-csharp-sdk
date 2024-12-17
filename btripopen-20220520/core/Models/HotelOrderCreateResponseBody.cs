@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? BtripOrderId { get; set; }
 
+            [NameInMap("payment_no")]
+            [Validation(Required=false)]
+            public string PaymentNo { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>100</para>

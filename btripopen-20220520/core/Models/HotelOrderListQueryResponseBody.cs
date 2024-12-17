@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string BtripTitle { get; set; }
 
+            [NameInMap("category")]
+            [Validation(Required=false)]
+            public int? Category { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-05-15T22:27Z</para>
@@ -102,6 +106,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Number { get; set; }
 
             }
+
+            [NameInMap("country_code")]
+            [Validation(Required=false)]
+            public string CountryCode { get; set; }
+
+            [NameInMap("country_name")]
+            [Validation(Required=false)]
+            public string CountryName { get; set; }
 
             [NameInMap("depart_id")]
             [Validation(Required=false)]
@@ -217,6 +229,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<HotelOrderListQueryResponseBodyModulePriceInfoList> PriceInfoList { get; set; }
             public class HotelOrderListQueryResponseBodyModulePriceInfoList : TeaModel {
+                [NameInMap("category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -310,6 +326,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("room_type")]
             [Validation(Required=false)]
             public string RoomType { get; set; }
+
+            [NameInMap("supplier")]
+            [Validation(Required=false)]
+            public string Supplier { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

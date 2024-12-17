@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillingEntity { get; set; }
 
+                [NameInMap("book_mode")]
+                [Validation(Required=false)]
+                public string BookMode { get; set; }
+
                 [NameInMap("book_reason")]
                 [Validation(Required=false)]
                 public string BookReason { get; set; }
@@ -219,6 +223,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("cost_center_number")]
                 [Validation(Required=false)]
                 public string CostCenterNumber { get; set; }
+
+                [NameInMap("deductible_tax")]
+                [Validation(Required=false)]
+                public double? DeductibleTax { get; set; }
 
                 [NameInMap("department")]
                 [Validation(Required=false)]
@@ -396,6 +404,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? PromotionFee { get; set; }
 
+                [NameInMap("recover_money_receipt_amt")]
+                [Validation(Required=false)]
+                public double? RecoverMoneyReceiptAmt { get; set; }
+
                 [NameInMap("remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
@@ -530,6 +542,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TravelerName { get; set; }
 
+                [NameInMap("unbooked_lowest_price_reason")]
+                [Validation(Required=false)]
+                public string UnbookedLowestPriceReason { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -537,6 +553,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
+
+                [NameInMap("voucher_type_desc")]
+                [Validation(Required=false)]
+                public string VoucherTypeDesc { get; set; }
 
             }
 

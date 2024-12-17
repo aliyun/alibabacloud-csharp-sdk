@@ -185,6 +185,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Memo { get; set; }
 
+            [NameInMap("order_id")]
+            [Validation(Required=false)]
+            public string OrderId { get; set; }
+
             [NameInMap("order_status")]
             [Validation(Required=false)]
             public int? OrderStatus { get; set; }

@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? SegmentIndex { get; set; }
 
+                [NameInMap("short_ticket_no")]
+                [Validation(Required=false)]
+                public string ShortTicketNo { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2022-05-15T22:27Z</para>
@@ -678,6 +682,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [NameInMap("service_fee")]
                         [Validation(Required=false)]
                         public double? ServiceFee { get; set; }
+
+                        [NameInMap("short_ticket_no")]
+                        [Validation(Required=false)]
+                        public string ShortTicketNo { get; set; }
 
                         [NameInMap("start_time")]
                         [Validation(Required=false)]

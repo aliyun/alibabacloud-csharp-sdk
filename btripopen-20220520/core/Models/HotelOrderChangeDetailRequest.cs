@@ -18,8 +18,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>21351235134</para>
         /// </summary>
@@ -28,8 +26,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ChangeOrderId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>dis123</para>
         /// </summary>
@@ -38,8 +34,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1402002197440511306</para>
         /// </summary>
