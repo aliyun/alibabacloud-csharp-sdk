@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetDomainDnsChallengeRequest : TeaModel {
         /// <summary>
-        /// 域名。
+        /// <para>域名。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dm_examplexxxx</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// IDaaS EIAM实例的ID。
+        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

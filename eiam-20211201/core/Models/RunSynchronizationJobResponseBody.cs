@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RunSynchronizationJobResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sync_0000347vjovtcf41li0fgsd98gn24q9nj9xxxxx</para>
+        /// </summary>
         [NameInMap("SynchronizationJobId")]
         [Validation(Required=false)]
         public string SynchronizationJobId { get; set; }

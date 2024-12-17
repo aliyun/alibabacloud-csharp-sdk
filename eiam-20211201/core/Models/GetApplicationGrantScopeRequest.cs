@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationGrantScopeRequest : TeaModel {
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

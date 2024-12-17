@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class EnableApplicationSsoRequest : TeaModel {
         /// <summary>
-        /// IDaaS的应用主键id
+        /// <para>IDaaS的应用主键id</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// IDaaS EIAM的实例id
+        /// <para>IDaaS EIAM的实例id</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

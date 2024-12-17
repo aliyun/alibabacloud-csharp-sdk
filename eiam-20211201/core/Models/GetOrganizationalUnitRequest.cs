@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetOrganizationalUnitRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the organizational unit.
+        /// <para>The ID of the organizational unit.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
         /// </summary>
         [NameInMap("OrganizationalUnitId")]
         [Validation(Required=false)]

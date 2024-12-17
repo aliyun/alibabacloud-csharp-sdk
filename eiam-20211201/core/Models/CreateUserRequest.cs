@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateUserRequest : TeaModel {
         /// <summary>
-        /// The extended fields.
+        /// <para>The extended fields.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>description</para>
         /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<CreateUserRequestCustomFields> CustomFields { get; set; }
         public class CreateUserRequestCustomFields : TeaModel {
             /// <summary>
-            /// The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts > Extended Fields, and then click Create Field on the Extended Fields page.
+            /// <para>The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts &gt; Extended Fields, and then click Create Field on the Extended Fields page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>age</para>
             /// </summary>
             [NameInMap("FieldName")]
             [Validation(Required=false)]
             public string FieldName { get; set; }
 
             /// <summary>
-            /// The value of the extended field. The value follows the limits on the properties of the extended field.
+            /// <para>The value of the extended field. The value follows the limits on the properties of the extended field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("FieldValue")]
             [Validation(Required=false)]
@@ -33,94 +42,126 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The description of the organizational unit. The description can be up to 256 characters in length.
+        /// <para>The description of the organizational unit. The description can be up to 256 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>description text</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The display name of the account. The display name can be up to 64 characters in length.
+        /// <para>The display name of the account. The display name can be up to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name_001</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).
+        /// <para>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:example@example.com">example@example.com</a></para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// Specifies whether the email address is a trusted email address. This parameter is required if the Email parameter is specified. If you have no special business requirements, set this parameter to true.
+        /// <para>Specifies whether the email address is a trusted email address. This parameter is required if the Email parameter is specified. If you have no special business requirements, set this parameter to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EmailVerified")]
         [Validation(Required=false)]
         public bool? EmailVerified { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.
+        /// <para>The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.</para>
         /// </summary>
         [NameInMap("OrganizationalUnitIds")]
         [Validation(Required=false)]
         public List<string> OrganizationalUnitIds { get; set; }
 
         /// <summary>
-        /// The password of the account. For more information, view the password policy of the instance in the IDaaS console.
+        /// <para>The password of the account. For more information, view the password policy of the instance in the IDaaS console.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The configurations for password initialization.
+        /// <para>The configurations for password initialization.</para>
         /// </summary>
         [NameInMap("PasswordInitializationConfig")]
         [Validation(Required=false)]
         public CreateUserRequestPasswordInitializationConfig PasswordInitializationConfig { get; set; }
         public class CreateUserRequestPasswordInitializationConfig : TeaModel {
             /// <summary>
-            /// Specifies whether to forcibly change the password status. Default value: disabled. Valid values:
+            /// <para>Specifies whether to forcibly change the password status. Default value: disabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enabled: forcibly changes the password status.</description></item>
+            /// <item><description>disabled: does not forcibly change the password status.</description></item>
+            /// </list>
             /// 
-            /// *   enabled: forcibly changes the password status.
-            /// *   disabled: does not forcibly change the password status.
+            /// <b>Example:</b>
+            /// <para>enabled</para>
             /// </summary>
             [NameInMap("PasswordForcedUpdateStatus")]
             [Validation(Required=false)]
             public string PasswordForcedUpdateStatus { get; set; }
 
             /// <summary>
-            /// The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:
+            /// <para>The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>global: The password initialization policy globally takes effect.</description></item>
+            /// <item><description>custom: The password initialization policy takes effect based on custom settings.</description></item>
+            /// </list>
             /// 
-            /// *   global: The password initialization policy globally takes effect.
-            /// *   custom: The password initialization policy takes effect based on custom settings.
+            /// <b>Example:</b>
+            /// <para>global</para>
             /// </summary>
             [NameInMap("PasswordInitializationPolicyPriority")]
             [Validation(Required=false)]
             public string PasswordInitializationPolicyPriority { get; set; }
 
             /// <summary>
-            /// The password initialization method. Set the value to random,
+            /// <para>The password initialization method. Set the value to random,</para>
+            /// <list type="bullet">
+            /// <item><description>which indicates that the password is randomly generated.</description></item>
+            /// </list>
             /// 
-            /// *   which indicates that the password is randomly generated.
+            /// <b>Example:</b>
+            /// <para>random</para>
             /// </summary>
             [NameInMap("PasswordInitializationType")]
             [Validation(Required=false)]
             public string PasswordInitializationType { get; set; }
 
             /// <summary>
-            /// The password notification methods.
+            /// <para>The password notification methods.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sms</para>
             /// </summary>
             [NameInMap("UserNotificationChannels")]
             [Validation(Required=false)]
@@ -129,46 +170,62 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The mobile phone number, which contains 6 to 15 digits.
+        /// <para>The mobile phone number, which contains 6 to 15 digits.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345678901</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.
+        /// <para>Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PhoneNumberVerified")]
         [Validation(Required=false)]
         public bool? PhoneNumberVerified { get; set; }
 
         /// <summary>
-        /// The country code of the mobile phone number. The country code contains only digits and does not contain a plus sign (+).
+        /// <para>The country code of the mobile phone number. The country code contains only digits and does not contain a plus sign (+).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>86</para>
         /// </summary>
         [NameInMap("PhoneRegion")]
         [Validation(Required=false)]
         public string PhoneRegion { get; set; }
 
         /// <summary>
-        /// The ID of the primary organizational unit to which the account belongs.
+        /// <para>The ID of the primary organizational unit to which the account belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
         /// </summary>
         [NameInMap("PrimaryOrganizationalUnitId")]
         [Validation(Required=false)]
         public string PrimaryOrganizationalUnitId { get; set; }
 
         /// <summary>
-        /// The external ID of the account. The external ID can be used to associate the account with an external system. The external ID can be up to 64 characters in length. If you do not specify an external ID for the account, the ID of the account is used as the external ID by default.
+        /// <para>The external ID of the account. The external ID can be used to associate the account with an external system. The external ID can be up to 64 characters in length. If you do not specify an external ID for the account, the ID of the account is used as the external ID by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
         /// </summary>
         [NameInMap("UserExternalId")]
         [Validation(Required=false)]
         public string UserExternalId { get; set; }
 
         /// <summary>
-        /// The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).
+        /// <para>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user_001</para>
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

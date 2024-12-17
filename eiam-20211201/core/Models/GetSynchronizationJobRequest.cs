@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetSynchronizationJobRequest : TeaModel {
         /// <summary>
-        /// IDaaS EIAM实例的ID。
+        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// 同步任务ID
+        /// <para>同步任务ID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sync_0000347vjovtcf41li0fgsd98gn24q9njxxxxx</para>
         /// </summary>
         [NameInMap("SynchronizationJobId")]
         [Validation(Required=false)]

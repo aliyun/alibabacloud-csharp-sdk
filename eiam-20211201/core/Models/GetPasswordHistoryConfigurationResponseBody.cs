@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetPasswordHistoryConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The password history configurations.
+        /// <para>The password history configurations.</para>
         /// </summary>
         [NameInMap("PasswordHistoryConfiguration")]
         [Validation(Required=false)]
         public GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration PasswordHistoryConfiguration { get; set; }
         public class GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration : TeaModel {
             /// <summary>
-            /// The maximum number of recent passwords that are retained.
+            /// <para>The maximum number of recent passwords that are retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("PasswordHistoryMaxRetention")]
             [Validation(Required=false)]
             public int? PasswordHistoryMaxRetention { get; set; }
 
             /// <summary>
-            /// Indicates whether the password history feature is enabled. Valid values:
+            /// <para>Indicates whether the password history feature is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enabled</description></item>
+            /// <item><description>disabled</description></item>
+            /// </list>
             /// 
-            /// *   enabled
-            /// *   disabled
+            /// <b>Example:</b>
+            /// <para>enabled</para>
             /// </summary>
             [NameInMap("PasswordHistoryStatus")]
             [Validation(Required=false)]
@@ -36,7 +43,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

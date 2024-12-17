@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsForApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the organizations that are allowed to access the application.
+        /// <para>The IDs of the organizations that are allowed to access the application.</para>
         /// </summary>
         [NameInMap("OrganizationalUnits")]
         [Validation(Required=false)]
         public List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits> OrganizationalUnits { get; set; }
         public class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits : TeaModel {
             /// <summary>
-            /// The ID of the organization that is allowed to access the application.
+            /// <para>The ID of the organization that is allowed to access the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
             /// </summary>
             [NameInMap("OrganizationalUnitId")]
             [Validation(Required=false)]
@@ -26,14 +29,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of the returned entries.
+        /// <para>The total number of the returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

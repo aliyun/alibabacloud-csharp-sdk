@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListDomainsRequest : TeaModel {
         /// <summary>
-        /// IDaaS EIAM实例的ID。
+        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,51 +10,68 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// The external ID of the group.
+        /// <para>The external ID of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group_external_id</para>
         /// </summary>
         [NameInMap("GroupExternalId")]
         [Validation(Required=false)]
         public string GroupExternalId { get; set; }
 
         /// <summary>
-        /// The group IDs.
+        /// <para>The group IDs.</para>
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public List<string> GroupIds { get; set; }
 
         /// <summary>
-        /// The name of the group. If you specify this parameter, the query is based on an exact match.
+        /// <para>The name of the group. If you specify this parameter, the query is based on an exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name_test</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.
+        /// <para>The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("GroupNameStartsWith")]
         [Validation(Required=false)]
         public string GroupNameStartsWith { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,47 +10,59 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetApplicationProvisioningConfigRequest : TeaModel {
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// The configuration of event callback synchronization. This parameter is required when the ProvisionProtocolType parameter is set to idaas_callback.
+        /// <para>The configuration of event callback synchronization. This parameter is required when the ProvisionProtocolType parameter is set to idaas_callback.</para>
         /// </summary>
         [NameInMap("CallbackProvisioningConfig")]
         [Validation(Required=false)]
         public SetApplicationProvisioningConfigRequestCallbackProvisioningConfig CallbackProvisioningConfig { get; set; }
         public class SetApplicationProvisioningConfigRequestCallbackProvisioningConfig : TeaModel {
             /// <summary>
-            /// The URL that the application uses to receive IDaaS event callbacks.
+            /// <para>The URL that the application uses to receive IDaaS event callbacks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/event/callback">https://example.com/event/callback</a></para>
             /// </summary>
             [NameInMap("CallbackUrl")]
             [Validation(Required=false)]
             public string CallbackUrl { get; set; }
 
             /// <summary>
-            /// The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.
+            /// <para>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ad3b248**************************b3561a73d7</para>
             /// </summary>
             [NameInMap("EncryptKey")]
             [Validation(Required=false)]
             public string EncryptKey { get; set; }
 
             /// <summary>
-            /// Specifies whether to encrypt IDaaS event callback messages. Valid values:
+            /// <para>Specifies whether to encrypt IDaaS event callback messages. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: encrypt the messages.</description></item>
+            /// <item><description>false: transmit the messages in plaintext.</description></item>
+            /// </list>
             /// 
-            /// *   true: encrypt the messages.
-            /// *   false: transmit the messages in plaintext.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EncryptRequired")]
             [Validation(Required=false)]
             public bool? EncryptRequired { get; set; }
 
             /// <summary>
-            /// The list of types of IDaaS event callback messages that are supported by the listener.
+            /// <para>The list of types of IDaaS event callback messages that are supported by the listener.</para>
             /// </summary>
             [NameInMap("ListenEventScopes")]
             [Validation(Required=false)]
@@ -59,102 +71,132 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:
+        /// <para>Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: synchronize the password.</description></item>
+        /// <item><description>false: do not synchronize the password.</description></item>
+        /// </list>
         /// 
-        /// *   true: synchronize the password.
-        /// *   false: do not synchronize the password.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ProvisionPassword")]
         [Validation(Required=false)]
         public bool? ProvisionPassword { get; set; }
 
         /// <summary>
-        /// The synchronization protocol type of the application. Valid values:
+        /// <para>The synchronization protocol type of the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>idaas_callback: custom event callback protocol of IDaaS.</description></item>
+        /// <item><description>scim2: System for Cross-domain Identity Management (SCIM) protocol.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   idaas_callback: custom event callback protocol of IDaaS.
-        /// *   scim2: System for Cross-domain Identity Management (SCIM) protocol.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_callback</para>
         /// </summary>
         [NameInMap("ProvisionProtocolType")]
         [Validation(Required=false)]
         public string ProvisionProtocolType { get; set; }
 
         /// <summary>
-        /// The configuration of SCIM-based IDaaS synchronization. This parameter is required when the ProvisionProtocolType parameter is set to scim2.
+        /// <para>The configuration of SCIM-based IDaaS synchronization. This parameter is required when the ProvisionProtocolType parameter is set to scim2.</para>
         /// </summary>
         [NameInMap("ScimProvisioningConfig")]
         [Validation(Required=false)]
         public SetApplicationProvisioningConfigRequestScimProvisioningConfig ScimProvisioningConfig { get; set; }
         public class SetApplicationProvisioningConfigRequestScimProvisioningConfig : TeaModel {
             /// <summary>
-            /// The configuration parameters related to SCIM-based synchronization.
+            /// <para>The configuration parameters related to SCIM-based synchronization.</para>
             /// </summary>
             [NameInMap("AuthnConfiguration")]
             [Validation(Required=false)]
             public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration AuthnConfiguration { get; set; }
             public class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration : TeaModel {
                 /// <summary>
-                /// The authentication mode of the SCIM protocol. Valid value:
+                /// <para>The authentication mode of the SCIM protocol. Valid value:</para>
+                /// <list type="bullet">
+                /// <item><description>oauth2: OAuth2.0 mode.</description></item>
+                /// </list>
                 /// 
-                /// *   oauth2: OAuth2.0 mode.
+                /// <b>Example:</b>
+                /// <para>oauth2</para>
                 /// </summary>
                 [NameInMap("AuthnMode")]
                 [Validation(Required=false)]
                 public string AuthnMode { get; set; }
 
                 /// <summary>
-                /// The configuration parameters related to authorization.
-                /// 
-                /// *   If the GrantType parameter is set to client_credentials, you can set the configuration parameters ClientId, ClientSecret, and AuthnMethod.
-                /// *   If the GrantType parameter is set to bearer_token, you can set the configuration parameter AccessToken.
+                /// <para>The configuration parameters related to authorization.</para>
+                /// <list type="bullet">
+                /// <item><description>If the GrantType parameter is set to client_credentials, you can set the configuration parameters ClientId, ClientSecret, and AuthnMethod.</description></item>
+                /// <item><description>If the GrantType parameter is set to bearer_token, you can set the configuration parameter AccessToken.</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("AuthnParam")]
                 [Validation(Required=false)]
                 public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam AuthnParam { get; set; }
                 public class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam : TeaModel {
                     /// <summary>
-                    /// The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.
+                    /// <para>The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>k52x2ru63rlkflina5utgkxxxx</para>
                     /// </summary>
                     [NameInMap("AccessToken")]
                     [Validation(Required=false)]
                     public string AccessToken { get; set; }
 
                     /// <summary>
-                    /// The authentication mode of the SCIM protocol. Valid values:
+                    /// <para>The authentication mode of the SCIM protocol. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>client_secret_basic: The client secret is passed in the request header.</description></item>
+                    /// <item><description>client_secret_post: The client secret is passed in the request body.</description></item>
+                    /// </list>
                     /// 
-                    /// *   client_secret_basic: The client secret is passed in the request header.
-                    /// *   client_secret_post: The client secret is passed in the request body.
+                    /// <b>Example:</b>
+                    /// <para>client_secret_basic</para>
                     /// </summary>
                     [NameInMap("AuthnMethod")]
                     [Validation(Required=false)]
                     public string AuthnMethod { get; set; }
 
                     /// <summary>
-                    /// The client ID of the application.
+                    /// <para>The client ID of the application.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>mkv7rgt4d7i4u7zqtzev2mxxxx</para>
                     /// </summary>
                     [NameInMap("ClientId")]
                     [Validation(Required=false)]
                     public string ClientId { get; set; }
 
                     /// <summary>
-                    /// The client secret of the application.
+                    /// <para>The client secret of the application.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</para>
                     /// </summary>
                     [NameInMap("ClientSecret")]
                     [Validation(Required=false)]
                     public string ClientSecret { get; set; }
 
                     /// <summary>
-                    /// The token endpoint.
+                    /// <para>The token endpoint.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para><a href="https://www.example.com/oauth/token">https://www.example.com/oauth/token</a></para>
                     /// </summary>
                     [NameInMap("TokenEndpoint")]
                     [Validation(Required=false)]
@@ -163,10 +205,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// The grant type of the SCIM protocol. Valid values:
+                /// <para>The grant type of the SCIM protocol. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>client_credentials: client mode.</description></item>
+                /// <item><description>bearer_token: key mode.</description></item>
+                /// </list>
                 /// 
-                /// *   client_credentials: client mode.
-                /// *   bearer_token: key mode.
+                /// <b>Example:</b>
+                /// <para>bearer_token</para>
                 /// </summary>
                 [NameInMap("GrantType")]
                 [Validation(Required=false)]
@@ -175,27 +221,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// The full synchronization scope of the SCIM protocol. Valid value:
-            /// 
-            /// *   urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.
+            /// <para>The full synchronization scope of the SCIM protocol. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("FullPushScopes")]
             [Validation(Required=false)]
             public List<string> FullPushScopes { get; set; }
 
             /// <summary>
-            /// The resource operations of the SCIM protocol. Valid values:
-            /// 
-            /// *   urn:alibaba:idaas:app:scim:User:CREATE: account creation.
-            /// *   urn:alibaba:idaas:app:scim:User:UPDATE: account update.
-            /// *   urn:alibaba:idaas:app:scim:User:DELETE: account deletion.
+            /// <para>The resource operations of the SCIM protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>urn:alibaba:idaas:app:scim:User:CREATE: account creation.</description></item>
+            /// <item><description>urn:alibaba:idaas:app:scim:User:UPDATE: account update.</description></item>
+            /// <item><description>urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("ProvisioningActions")]
             [Validation(Required=false)]
             public List<string> ProvisioningActions { get; set; }
 
             /// <summary>
-            /// The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.
+            /// <para>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/scim">https://example.com/scim</a></para>
             /// </summary>
             [NameInMap("ScimBaseUrl")]
             [Validation(Required=false)]

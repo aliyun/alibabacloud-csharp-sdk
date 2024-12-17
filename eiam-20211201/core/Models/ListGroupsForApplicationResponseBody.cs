@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListGroupsForApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The group IDs.
+        /// <para>The group IDs.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<ListGroupsForApplicationResponseBodyGroups> Groups { get; set; }
         public class ListGroupsForApplicationResponseBodyGroups : TeaModel {
             /// <summary>
-            /// The group ID.
+            /// <para>The group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>group_miu8e4t4d7i4u7uwezgr54xxxx</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
@@ -26,14 +29,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

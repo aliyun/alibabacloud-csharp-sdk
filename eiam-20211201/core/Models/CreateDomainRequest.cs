@@ -10,23 +10,28 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// 域名。最大长度限制255，格式由数字、字母、横线（-）点（.）组成;
+        /// <para>域名。最大长度限制255，格式由数字、字母、横线（-）点（.）组成;</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// 备案信息参数。
+        /// <para>备案信息参数。</para>
         /// </summary>
         [NameInMap("Filing")]
         [Validation(Required=false)]
         public CreateDomainRequestFiling Filing { get; set; }
         public class CreateDomainRequestFiling : TeaModel {
             /// <summary>
-            /// 域名关联的备案号，长度最大限制64。
+            /// <para>域名关联的备案号，长度最大限制64。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>浙xx-xxxxxx</para>
             /// </summary>
             [NameInMap("IcpNumber")]
             [Validation(Required=false)]
@@ -35,9 +40,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// IDaaS EIAM实例的ID。
+        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

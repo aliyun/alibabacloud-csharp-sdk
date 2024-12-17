@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,27 +10,30 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class AddUserToOrganizationalUnitsRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The organization IDs. You can add an account to a maximum of 100 organizations.
-        /// 
-        /// This parameter is required.
+        /// <para>The organization IDs. You can add an account to a maximum of 100 organizations.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrganizationalUnitIds")]
         [Validation(Required=false)]
         public List<string> OrganizationalUnitIds { get; set; }
 
         /// <summary>
-        /// The account ID.
+        /// <para>The account ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateOrganizationalUnitResponseBody : TeaModel {
         /// <summary>
-        /// The organization ID.
+        /// <para>The organization ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
         /// </summary>
         [NameInMap("OrganizationalUnitId")]
         [Validation(Required=false)]
         public string OrganizationalUnitId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,44 +10,57 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateUserPasswordRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The new password of the account. For more information about the password format, see the "Password Policies" topic.
+        /// <para>The new password of the account. For more information about the password format, see the &quot;Password Policies&quot; topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:
+        /// <para>Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
         /// 
-        /// *   enabled
-        /// *   disabled
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("PasswordForcedUpdateStatus")]
         [Validation(Required=false)]
         public string PasswordForcedUpdateStatus { get; set; }
 
         /// <summary>
-        /// The account ID.
+        /// <para>The account ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// The methods for receiving password notifications.
+        /// <para>The methods for receiving password notifications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sms</para>
         /// </summary>
         [NameInMap("UserNotificationChannels")]
         [Validation(Required=false)]

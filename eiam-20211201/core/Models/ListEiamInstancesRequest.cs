@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEiamInstancesRequest : TeaModel {
         /// <summary>
-        /// 实例ID列表，支持0到100个
+        /// <para>实例ID列表，支持0到100个</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// 实例所属Region
+        /// <para>实例所属Region</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("InstanceRegionId")]
         [Validation(Required=false)]

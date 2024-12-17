@@ -10,57 +10,79 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
-        /// The IDs of the applications.
+        /// <para>The IDs of the applications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ram Account SSO</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// The name of the application. Only fuzzy match from the leftmost character is supported.
+        /// <para>The name of the application. Only fuzzy match from the leftmost character is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ram Account SSO</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// The authorization of the application. Valid values:
+        /// <para>The authorization of the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>authorize_required: Only the user with explicit authorization can access the application.</description></item>
+        /// <item><description>default_all: By default, all users can access the application.</description></item>
+        /// </list>
         /// 
-        /// *   authorize_required: Only the user with explicit authorization can access the application.
-        /// *   default_all: By default, all users can access the application.
+        /// <b>Example:</b>
+        /// <para>authorize_required</para>
         /// </summary>
         [NameInMap("AuthorizationType")]
         [Validation(Required=false)]
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The status of the application. Valid values:
+        /// <para>The status of the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enabled: The application is enabled.</description></item>
+        /// <item><description>Disabled: The application is disabled.</description></item>
+        /// </list>
         /// 
-        /// *   Enabled: The application is enabled.
-        /// *   Disabled: The application is disabled.
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

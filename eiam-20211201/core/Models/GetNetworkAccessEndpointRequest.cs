@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetNetworkAccessEndpointRequest : TeaModel {
         /// <summary>
-        /// IDaaS EIAM实例的ID。
+        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// 专属网络端点ID。
+        /// <para>专属网络端点ID。</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>nae-examplexxxx</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpointId")]
         [Validation(Required=false)]

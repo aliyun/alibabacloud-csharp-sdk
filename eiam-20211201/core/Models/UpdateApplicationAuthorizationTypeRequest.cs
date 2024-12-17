@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateApplicationAuthorizationTypeRequest : TeaModel {
         /// <summary>
-        /// The ID of the application that you want to modify.
+        /// <para>The ID of the application that you want to modify.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// The authorization type of the application. Valid values:
+        /// <para>The authorization type of the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>authorize_required: Only the user with explicit authorization can access the application.</description></item>
+        /// <item><description>default_all: By default, all users can access the application.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   authorize_required: Only the user with explicit authorization can access the application.
-        /// *   default_all: By default, all users can access the application.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>authorize_required</para>
         /// </summary>
         [NameInMap("AuthorizationType")]
         [Validation(Required=false)]
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

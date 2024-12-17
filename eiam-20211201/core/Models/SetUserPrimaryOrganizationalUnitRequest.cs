@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetUserPrimaryOrganizationalUnitRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the new primary organizational unit.
+        /// <para>The ID of the new primary organizational unit.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
         /// </summary>
         [NameInMap("OrganizationalUnitId")]
         [Validation(Required=false)]
         public string OrganizationalUnitId { get; set; }
 
         /// <summary>
-        /// The ID of the account.
+        /// <para>The ID of the account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

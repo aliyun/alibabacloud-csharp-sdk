@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the instance that is created.
+        /// <para>The ID of the instance that is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>idaas_wj5htncdvoc4q5xxxxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

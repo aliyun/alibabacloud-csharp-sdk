@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateOrganizationalUnitParentIdRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The organization ID.
+        /// <para>The organization ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
         /// </summary>
         [NameInMap("OrganizationalUnitId")]
         [Validation(Required=false)]
         public string OrganizationalUnitId { get; set; }
 
         /// <summary>
-        /// The parent organization ID.
+        /// <para>The parent organization ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]

@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class AuthorizeApplicationToGroupsRequest : TeaModel {
         /// <summary>
-        /// The application ID.
+        /// <para>The application ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// The group IDs. You can specify up to 100 group IDs at a time.
+        /// <para>The group IDs. You can specify up to 100 group IDs at a time.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>group_miu8e4t4d7i4u7uwezgr54xxxx</para>
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public List<string> GroupIds { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk2676xxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

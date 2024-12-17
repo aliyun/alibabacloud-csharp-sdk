@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// The description of the instance. The description can be up to 128 characters in length.
+        /// <para>The description of the instance. The description can be up to 128 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>instance_for_test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

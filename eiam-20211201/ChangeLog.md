@@ -1,3 +1,32 @@
+2024-12-17 Version: 1.5.0
+- Support API CreateIdentityProvider.
+- Support API DeleteIdentityProvider.
+- Support API DeleteOrganizationalUnitChildren.
+- Support API DisableIdentityProviderUdPull.
+- Support API EnableIdentityProviderUdPull.
+- Support API GetIdentityProvider.
+- Support API GetIdentityProviderUdPullConfiguration.
+- Support API ListIdentityProviders.
+- Support API SetIdentityProviderUdPullConfiguration.
+- Support API UpdateIdentityProvider.
+- Update API CreateOrganizationalUnit: update param OrganizationalUnitName.
+- Update API GetApplication: update response param.
+- Update API GetApplicationSsoConfig: update response param.
+- Update API GetPasswordExpirationConfiguration: update response param.
+- Update API ListSynchronizationJobs: add param Filters.
+- Update API ListSynchronizationJobs: update response param.
+- Update API RunSynchronizationJob: add param Description.
+- Update API RunSynchronizationJob: add param PasswordInitialization.
+- Update API RunSynchronizationJob: add param SynchronizationScopeConfig.
+- Update API RunSynchronizationJob: add param UserIdentityTypes.
+- Update API RunSynchronizationJob: update param TargetId.
+- Update API RunSynchronizationJob: update response param.
+- Update API SetApplicationSsoConfig: add param ClientToken.
+- Update API SetApplicationSsoConfig: update param SamlSsoConfig.
+- Update API SetPasswordExpirationConfiguration: add param EffectiveAuthenticationSourceIds.
+- Update API UpdateOrganizationalUnit: update param OrganizationalUnitName.
+
+
 2024-07-30 Version: 1.4.0
 - Support API GetSynchronizationJob.
 - Support API ListSynchronizationJobs.

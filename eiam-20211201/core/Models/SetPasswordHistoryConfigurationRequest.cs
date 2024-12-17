@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetPasswordHistoryConfigurationRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The maximum number of recent passwords that can be retained. This parameter must be specified when PasswordHistoryStatus is set to enabled.
+        /// <para>The maximum number of recent passwords that can be retained. This parameter must be specified when PasswordHistoryStatus is set to enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("PasswordHistoryMaxRetention")]
         [Validation(Required=false)]
         public int? PasswordHistoryMaxRetention { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the password history feature. Valid values:
+        /// <para>Specifies whether to enable the password history feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   enabled
-        /// *   disabled
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("PasswordHistoryStatus")]
         [Validation(Required=false)]

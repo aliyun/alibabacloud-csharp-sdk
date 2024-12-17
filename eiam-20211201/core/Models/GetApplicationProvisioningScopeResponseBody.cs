@@ -10,35 +10,41 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationProvisioningScopeResponseBody : TeaModel {
         /// <summary>
-        /// The scope of account synchronization.
+        /// <para>The scope of account synchronization.</para>
         /// </summary>
         [NameInMap("ApplicationProvisioningScope")]
         [Validation(Required=false)]
         public GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope ApplicationProvisioningScope { get; set; }
         public class GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope : TeaModel {
             /// <summary>
-            /// 同步授权的组列表
+            /// <para>Synchronize the list of authorized groups</para>
             /// </summary>
             [NameInMap("GroupIds")]
             [Validation(Required=false)]
             public List<string> GroupIds { get; set; }
 
             /// <summary>
-            /// 租户最大授权主体quota数量
+            /// <para>Instance Indicates the maximum quota number of authorized agents</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("MaxQuota")]
             [Validation(Required=false)]
             public int? MaxQuota { get; set; }
 
             /// <summary>
-            /// The list of organizational units that are authorized for account synchronization.
+            /// <para>The list of organizational units that are authorized for account synchronization.</para>
             /// </summary>
             [NameInMap("OrganizationalUnitIds")]
             [Validation(Required=false)]
             public List<string> OrganizationalUnitIds { get; set; }
 
             /// <summary>
-            /// 已使用授权主体quota数量
+            /// <para>Indicates the quota number of used authorized agents</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("UsedQuota")]
             [Validation(Required=false)]
@@ -47,7 +53,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

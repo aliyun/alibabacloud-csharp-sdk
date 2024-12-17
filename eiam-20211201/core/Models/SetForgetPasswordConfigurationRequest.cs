@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetForgetPasswordConfigurationRequest : TeaModel {
         /// <summary>
-        /// 身份认证渠道。枚举取值:email(邮件)、sms(短信)
+        /// <para>The authentication channels. Valid values: email and sms.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>email</para>
         /// </summary>
         [NameInMap("AuthenticationChannels")]
         [Validation(Required=false)]
         public List<string> AuthenticationChannels { get; set; }
 
         /// <summary>
-        /// 忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)
+        /// <para>The status of the forgot password feature. Valid values: enabled and disabled.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("ForgetPasswordStatus")]
         [Validation(Required=false)]
         public string ForgetPasswordStatus { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eiam-111ccc1111</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

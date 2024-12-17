@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListNetworkAccessEndpointAvailableRegionsResponseBodyRegions> Regions { get; set; }
         public class ListNetworkAccessEndpointAvailableRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// 地域名称。
+            /// <para>地域名称。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>华东1（杭州）</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// 地域ID。
+            /// <para>地域ID。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -29,6 +35,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

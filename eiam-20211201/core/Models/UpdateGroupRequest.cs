@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateGroupRequest : TeaModel {
         /// <summary>
-        /// The external ID of the group.
+        /// <para>The external ID of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group_d6sbsuumeta4h66ec3il7yxxxx</para>
         /// </summary>
         [NameInMap("GroupExternalId")]
         [Validation(Required=false)]
         public string GroupExternalId { get; set; }
 
         /// <summary>
-        /// The group ID.
+        /// <para>The group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>group_d6sbsuumeta4h66ec3il7yxxxx</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// The name of the group.
+        /// <para>The name of the group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name_test</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

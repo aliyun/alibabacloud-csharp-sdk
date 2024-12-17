@@ -10,42 +10,51 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetForgetPasswordConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The forgot password configurations.
+        /// <para>The forgot password configurations.</para>
         /// </summary>
         [NameInMap("OpenForgetPasswordConfiguration")]
         [Validation(Required=false)]
         public GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration OpenForgetPasswordConfiguration { get; set; }
         public class GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration : TeaModel {
             /// <summary>
-            /// 表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)
+            /// <para>表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)</para>
             /// </summary>
             [NameInMap("AuthenticationChannels")]
             [Validation(Required=false)]
             public List<string> AuthenticationChannels { get; set; }
 
             /// <summary>
-            /// Indicates whether the forgot password feature is enabled.
+            /// <para>Indicates whether the forgot password feature is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// Indicates whether email authentication is enabled for the forgot password feature.
+            /// <para>Indicates whether email authentication is enabled for the forgot password feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EnableEmail")]
             [Validation(Required=false)]
             public bool? EnableEmail { get; set; }
 
             /// <summary>
-            /// Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.
+            /// <para>Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EnableSms")]
             [Validation(Required=false)]
             public bool? EnableSms { get; set; }
 
             /// <summary>
-            /// 表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)
+            /// <para>表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</para>
             /// </summary>
             [NameInMap("ForgetPasswordStatus")]
             [Validation(Required=false)]
@@ -54,7 +63,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
