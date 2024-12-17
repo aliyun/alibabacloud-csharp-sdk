@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? ContentCategory { get; set; }
 
+        [NameInMap("CooperationChannel")]
+        [Validation(Required=false)]
+        public string CooperationChannel { get; set; }
+
         /// <summary>
         /// <para>The page number of the page to return.</para>
         /// 
@@ -194,6 +198,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
+
+        [NameInMap("Simplify")]
+        [Validation(Required=false)]
+        public bool? Simplify { get; set; }
 
         /// <summary>
         /// <para>The status of the sensitive data detection rule. Valid values:</para>
