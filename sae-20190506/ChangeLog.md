@@ -16,6 +16,15 @@
 - Update API DescribeInstanceLog: add param ContainerId.
 
 
+2024-12-17 Version: 1.24.1
+- Update API CreateApplication: add param EnableSidecarResourceIsolated.
+- Update API CreateApplication: add param SidecarContainersConfig.
+- Update API DeployApplication: add param EnableSidecarResourceIsolated.
+- Update API DeployApplication: add param SidecarContainersConfig.
+- Update API DescribeApplicationConfig: update response param.
+- Update API DescribeInstanceLog: add param ContainerId.
+
+
 2024-12-10 Version: 1.24.0
 - Support API GetWebshellToken.
 - Update API CreateApplication: add param SecretMountDesc.
