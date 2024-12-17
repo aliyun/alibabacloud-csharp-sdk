@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public float? SpotDiscountLimit { get; set; }
 
+        [NameInMap("SpotPriceLimit")]
+        [Validation(Required=false)]
+        public float? SpotPriceLimit { get; set; }
+
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }

@@ -1,3 +1,6 @@
+2024-12-17 Version: 1.5.20
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2024-12-06 Version: 1.5.19
 - Update API ListJobs: add param OversoldInfo.
 

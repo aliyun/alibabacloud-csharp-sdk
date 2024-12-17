@@ -61,12 +61,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("UseSpotInstance")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? UseSpotInstance { get; set; }
 
     }
