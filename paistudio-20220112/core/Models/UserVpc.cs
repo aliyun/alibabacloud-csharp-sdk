@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class UserVpc : TeaModel {
+        [NameInMap("DefaultForwardInfo")]
+        [Validation(Required=false)]
+        public ForwardInfo DefaultForwardInfo { get; set; }
+
         [NameInMap("DefaultRoute")]
         [Validation(Required=false)]
         public string DefaultRoute { get; set; }
