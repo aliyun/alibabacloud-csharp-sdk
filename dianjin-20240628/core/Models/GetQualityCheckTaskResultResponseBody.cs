@@ -331,6 +331,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string RuleType { get; set; }
 
+                [NameInMap("subNodeCol")]
+                [Validation(Required=false)]
+                public List<object> SubNodeCol { get; set; }
+
             }
 
             /// <summary>
