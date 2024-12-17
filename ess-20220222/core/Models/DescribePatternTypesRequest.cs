@@ -10,13 +10,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribePatternTypesRequest : TeaModel {
         /// <summary>
-        /// <para>The architectures of instance types. Valid values:</para>
+        /// <para>The architecture types of the instance types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>X86: x86</description></item>
-        /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</description></item>
-        /// <item><description>BareMetal: ECS Bare Metal Instance</description></item>
-        /// <item><description>Arm: Arm</description></item>
-        /// <item><description>SuperComputeCluster: Super Computing Cluster</description></item>
+        /// <item><description>X86: x86 architecture.</description></item>
+        /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</description></item>
+        /// <item><description>BareMetal: ECS Bare Metal Instance.</description></item>
+        /// <item><description>Arm: Arm.</description></item>
         /// </list>
         /// <para>By default, all values are selected.</para>
         /// </summary>
@@ -93,24 +92,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> GpuSpecs { get; set; }
 
         /// <summary>
-        /// <para>The categories of the instance types. Valid values:</para>
+        /// <para>The classifications of the instance types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>General-purpose</description></item>
-        /// <item><description>Compute-optimized</description></item>
-        /// <item><description>Memory-optimized</description></item>
-        /// <item><description>Big data</description></item>
-        /// <item><description>Local SSDs</description></item>
-        /// <item><description>High Clock Speed</description></item>
-        /// <item><description>Enhanced</description></item>
-        /// <item><description>Shared</description></item>
-        /// <item><description>Compute-optimized with GPU</description></item>
-        /// <item><description>Visual Compute-optimized</description></item>
-        /// <item><description>Heterogeneous Service</description></item>
-        /// <item><description>Compute-optimized with FPGA</description></item>
-        /// <item><description>Compute-optimized with NPU</description></item>
-        /// <item><description>ECS Bare Metal</description></item>
-        /// <item><description>Super Computing Cluster</description></item>
-        /// <item><description>High Performance Compute</description></item>
+        /// <item><description>General-purpose: general-purpose instance type.</description></item>
+        /// <item><description>Compute-optimized: compute-optimized instance type.</description></item>
+        /// <item><description>Memory-optimized: memory-optimized instance type.</description></item>
+        /// <item><description>Big data: big data instance type.</description></item>
+        /// <item><description>Local SSDs: instance type with local SSDs.</description></item>
+        /// <item><description>High Clock Speed: instance type with high clock speeds.</description></item>
+        /// <item><description>Enhanced: enhanced instance type.</description></item>
+        /// <item><description>Shared: shared instance type.</description></item>
+        /// <item><description>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</description></item>
+        /// <item><description>Visual Compute-optimized: visual compute-optimized instance type.</description></item>
+        /// <item><description>Heterogeneous Service: heterogeneous service instance type.</description></item>
+        /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</description></item>
+        /// <item><description>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</description></item>
+        /// <item><description>ECS Bare Metal: ECS Bare Metal Instance type.</description></item>
+        /// <item><description>High Performance Compute: HPC-optimized instance type.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("InstanceCategories")]
@@ -317,6 +315,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> VSwitchId { get; set; }
 
+        /// <summary>
+        /// <para>The zone IDs. If you pass vSwitch IDs to the system, this parameter does not take effect.</para>
+        /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public List<string> ZoneId { get; set; }

@@ -13,14 +13,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> DataDiskCategories { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CentOS7</para>
+        /// </summary>
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
         public string ImageFamily { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>centos6u5_64_20G_aliaegis****.vhd</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ubuntu_18_04_x64_20G_alibase_20231225.vhd</para>
+        /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
@@ -32,6 +44,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Ipv6AddressCount")]
         [Validation(Required=false)]
         public int? Ipv6AddressCount { get; set; }
@@ -80,6 +96,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> ScalingGroupIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
+        /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }

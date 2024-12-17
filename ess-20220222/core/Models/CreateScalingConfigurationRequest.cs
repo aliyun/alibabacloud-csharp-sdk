@@ -594,10 +594,38 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string HpcClusterId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// <para>Default value: enabled.</para>
+        /// <remarks>
+        /// <para> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain instance metadata</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enabled</para>
+        /// </summary>
         [NameInMap("HttpEndpoint")]
         [Validation(Required=false)]
         public string HttpEndpoint { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>optional: does not forcibly use the security hardening mode (IMDSv2).</description></item>
+        /// <item><description>required: forcibly uses the security hardening mode (IMDSv2). If you set this parameter to required, you cannot access instance metadata in normal mode.</description></item>
+        /// </list>
+        /// <para>Default value: optional.</para>
+        /// <remarks>
+        /// <para> For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Access modes of instance metadata</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>optional</para>
+        /// </summary>
         [NameInMap("HttpTokens")]
         [Validation(Required=false)]
         public string HttpTokens { get; set; }
@@ -654,22 +682,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The information about the intelligent configuration settings, which determine the available instance types.</para>
+        /// <para>The intelligent configuration settings, which determine the available instance types.</para>
         /// </summary>
         [NameInMap("InstancePatternInfos")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestInstancePatternInfos> InstancePatternInfos { get; set; }
         public class CreateScalingConfigurationRequestInstancePatternInfos : TeaModel {
             /// <summary>
-            /// <para>The architecture types of instance types. Valid values:</para>
+            /// <para>The architecture types of the instance types. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>X86: x86.</description></item>
+            /// <item><description>X86: x86 architecture.</description></item>
             /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</description></item>
             /// <item><description>BareMetal: ECS Bare Metal Instance.</description></item>
             /// <item><description>Arm: Arm.</description></item>
-            /// <item><description>SuperComputeCluster: Super Computing Cluster.</description></item>
             /// </list>
-            /// <para>By default, all values are included.</para>
+            /// <para>By default, all values are selected.</para>
             /// </summary>
             [NameInMap("Architectures")]
             [Validation(Required=false)]
@@ -678,7 +705,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>Specifies whether to include burstable instance types. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Exclude: does not include burstable instance types.</description></item>
+            /// <item><description>Exclude: excludes burstable instance types.</description></item>
             /// <item><description>Include: includes burstable instance types.</description></item>
             /// <item><description>Required: includes only burstable instance types.</description></item>
             /// </list>
@@ -692,10 +719,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string BurstablePerformance { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs per instance type in intelligent configuration mode. You can use this parameter to match the available instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+            /// <para>The number of vCPUs per instance type in intelligent configuration mode. You can specify this parameter to filter the available instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>InstancePatternInfos applies only to the scaling groups that reside in virtual private clouds (VPCs).</description></item>
+            /// <item><description>InstancePatternInfos applies only to scaling groups that reside in virtual private clouds (VPCs).</description></item>
             /// <item><description>If you specify InstancePatternInfos, you must also specify InstancePatternInfos.Cores and InstancePatternInfos.Memory.</description></item>
             /// <item><description>If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type has insufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.</description></item>
             /// </list>
@@ -708,9 +735,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Cores { get; set; }
 
             /// <summary>
-            /// <para>The CPU architectures of instance types. Valid values:</para>
+            /// <para>The CPU architectures of the instance types. Valid values:</para>
             /// <remarks>
-            /// <para> You can specify 1 to 2 CPU architectures.</para>
+            /// <para> You can specify up to two CPU architectures.</para>
             /// </remarks>
             /// <list type="bullet">
             /// <item><description>x86</description></item>
@@ -722,7 +749,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> CpuArchitectures { get; set; }
 
             /// <summary>
-            /// <para>The instance types that you want to exclude. You can use wildcard characters, such as an asterisk (\*), to exclude an instance type or an instance family. Examples:</para>
+            /// <para>The instance types that you want to exclude. You can use an asterisk (\*) as a wildcard character to exclude an instance type or an instance family. Examples:</para>
             /// <list type="bullet">
             /// <item><description>ecs.c6.large: excludes the ecs.c6.large instance type.</description></item>
             /// <item><description>ecs.c6.\*: excludes the c6 instance family.</description></item>
@@ -740,27 +767,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> GpuSpecs { get; set; }
 
             /// <summary>
-            /// <para>The categories of instance types. Valid values:</para>
+            /// <para>The categories of the instance types. Valid values:</para>
             /// <remarks>
             /// <para> You can specify up to 10 categories.</para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>General-purpose</description></item>
-            /// <item><description>Compute-optimized</description></item>
-            /// <item><description>Memory-optimized</description></item>
-            /// <item><description>Big data</description></item>
-            /// <item><description>Local SSDs</description></item>
-            /// <item><description>High Clock Speed</description></item>
-            /// <item><description>Enhanced</description></item>
-            /// <item><description>Shared</description></item>
-            /// <item><description>Compute-optimized with GPU</description></item>
-            /// <item><description>Visual Compute-optimized</description></item>
-            /// <item><description>Heterogeneous Service</description></item>
-            /// <item><description>Compute-optimized with FPGA</description></item>
-            /// <item><description>Compute-optimized with NPU</description></item>
-            /// <item><description>ECS Bare Metal</description></item>
-            /// <item><description>Super Computing Cluster</description></item>
-            /// <item><description>High Performance Compute</description></item>
+            /// <item><description>General-purpose: general-purpose instance type.</description></item>
+            /// <item><description>Compute-optimized: compute-optimized instance type.</description></item>
+            /// <item><description>Memory-optimized: memory-optimized instance type.</description></item>
+            /// <item><description>Big data: big data instance type.</description></item>
+            /// <item><description>Local SSDs: instance type that uses local SSDs.</description></item>
+            /// <item><description>High Clock Speed: instance type that has high clock speeds.</description></item>
+            /// <item><description>Enhanced: enhanced instance type.</description></item>
+            /// <item><description>Shared: shared instance type.</description></item>
+            /// <item><description>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</description></item>
+            /// <item><description>Visual Compute-optimized: visual compute-optimized instance type.</description></item>
+            /// <item><description>Heterogeneous Service: heterogeneous service instance type.</description></item>
+            /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</description></item>
+            /// <item><description>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</description></item>
+            /// <item><description>ECS Bare Metal: ECS Bare Metal Instance type.</description></item>
+            /// <item><description>High Performance Compute: HPC-optimized instance type.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("InstanceCategories")]
@@ -768,11 +794,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> InstanceCategories { get; set; }
 
             /// <summary>
-            /// <para>The level of the instance family. You can use this parameter to match the available instance types. This parameter takes effect only if you set <c>CostOptimization</c> to true. Valid values:</para>
+            /// <para>The level of the instance family. You can specify this parameter to match the available instance types. This parameter takes effect only if you set <c>CostOptimization</c> to true. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
-            /// <item><description>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
-            /// <item><description>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+            /// <item><description>EntryLevel: entry-level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
+            /// <item><description>EnterpriseLevel: enterprise-level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
+            /// <item><description>CreditEntryLevel: credit entry-level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -836,7 +862,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MaximumMemorySize { get; set; }
 
             /// <summary>
-            /// <para>The memory size per instance type in intelligent configuration mode. Unit: GiB. You can use this parameter to match the available instance types.</para>
+            /// <para>The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -926,7 +952,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MinimumMemorySize { get; set; }
 
             /// <summary>
-            /// <para>The processor models of instance types. You can specify up to 10 processor models.</para>
+            /// <para>The processor models of the instance types. You can specify up to 10 processor models.</para>
             /// </summary>
             [NameInMap("PhysicalProcessorModels")]
             [Validation(Required=false)]
@@ -1015,8 +1041,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 200.</para>
-        /// <para>Default value: 200 This parameter is not used for billing because inbound traffic to instances is free of charge.</para>
+        /// <para>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10, and the default value is 10.</description></item>
+        /// <item><description>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of <c>InternetMaxBandwidthOut</c>, and the default value is the value of <c>InternetMaxBandwidthOut</c>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -1026,11 +1055,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? InternetMaxBandwidthIn { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Valid values if you set InternetChargeType to PayByBandwidth: 0 to 100. If you leave this parameter empty, this parameter is automatically set to 0.</description></item>
-        /// <item><description>Valid values if you set InternetChargeType to PayByTraffic: 0 to 100. If you leave this parameter empty, an error is returned.</description></item>
-        /// </list>
+        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</para>
+        /// <para>Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

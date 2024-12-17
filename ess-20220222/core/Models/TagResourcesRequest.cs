@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Details of the tags.</para>
+        /// <para>The tags that you want to add to the Auto Scaling resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<TagResourcesRequestTags> Tags { get; set; }
         public class TagResourcesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that you want to add to the Auto Scaling resource.</para>
-            /// <para>You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key.</para>
+            /// <para>You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>Specifies whether to propagate the tag that you want to add. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.</description></item>
-            /// <item><description>false: does not propagate the tag to any instances.</description></item>
+            /// <item><description>true: propagates the tag to new instances.</description></item>
+            /// <item><description>false: does not propagate the tag to any instance.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Propagate { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag that you want to add to the Auto Scaling resource.</para>
-            /// <para>You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
+            /// <para>The tag value.</para>
+            /// <para>You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

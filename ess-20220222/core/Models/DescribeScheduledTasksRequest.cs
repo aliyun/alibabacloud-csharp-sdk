@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The interval at which scheduled task N is repeatedly executed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Daily: Scheduled task N is executed once every specified number of days.</description></item>
+        /// <item><description>Weekly: Scheduled task N is executed on each specified day of a week.</description></item>
+        /// <item><description>Monthly: Scheduled task N is executed on each specified day of a month.</description></item>
+        /// <item><description>Cron: Scheduled task N is executed based on the specified Cron expression.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Weekly</para>
         /// </summary>
@@ -48,6 +56,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RecurrenceType { get; set; }
 
         /// <summary>
+        /// <para>The number of times scheduled task N is repeatedly executed.</para>
+        /// <para>You can specify this parameter only if you set RecurrenceType to Weekly. Separate multiple values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
         /// </summary>
@@ -106,6 +117,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> ScheduledTaskNames { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether scheduled task N is enabled.</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -114,6 +131,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? TaskEnabled { get; set; }
 
         /// <summary>
+        /// <para>The name of scheduled task N. Fuzzy search based on keywords is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>scheduled****</para>
         /// </summary>

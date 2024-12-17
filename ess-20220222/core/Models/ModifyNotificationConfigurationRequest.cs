@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyNotificationConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</para>
         /// <list type="bullet">
-        /// <item><description>If you use CloudMonitor as the notification method, specify the value in the <c>acs:ess:{region-id}:{account-id}:cloudmonitor</c> format.</description></item>
-        /// <item><description>If you use an MNS queue as the notification method, specify the value in the <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c> format.</description></item>
-        /// <item><description>If you use an MNS topic as the notification method, specify the value in the <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c> format.</description></item>
+        /// <item><description>If you specify CloudMonitor as the notification recipient, specify the value in the <c>acs:ess:{region-id}:{account-id}:cloudmonitor</c> format.</description></item>
+        /// <item><description>If you specify a Simple Message Queue (SMQ) queue as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c> format.</description></item>
+        /// <item><description>If you specify an SMQ topic as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c> format.</description></item>
         /// </list>
-        /// <para>The variables in the preceding formats have the following meanings:</para>
+        /// <para>The variables in the preceding value formats have the following meanings:</para>
         /// <list type="bullet">
         /// <item><description>region-id: the region ID of your scaling group.</description></item>
-        /// <item><description>account-id: the ID of your Alibaba Cloud.</description></item>
-        /// <item><description>queuename: the name of the MNS queue.</description></item>
-        /// <item><description>topicname: the name of the MNS topic.</description></item>
+        /// <item><description>account-id: the ID of your Alibaba Cloud account.</description></item>
+        /// <item><description>queuename: the name of the SMQ queue.</description></item>
+        /// <item><description>topicname: the name of the SMQ topic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

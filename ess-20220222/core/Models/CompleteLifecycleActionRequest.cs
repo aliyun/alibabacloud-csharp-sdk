@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LifecycleActionResult { get; set; }
 
         /// <summary>
-        /// <para>The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.</para>
+        /// <para>The token of the lifecycle action. You can obtain the token from the Simple Message Queue (SMQ, formerly MNS) queue or topic that is specified for the lifecycle hook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

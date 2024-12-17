@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeDiagnoseReportsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,11 +40,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the diagnostic reports. You can specify at most 20 IDs.</para>
+        /// </summary>
         [NameInMap("ReportIds")]
         [Validation(Required=false)]
         public List<string> ReportIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

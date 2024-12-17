@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivitiesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance refresh task. If you specify this parameter, this operation returns the list of scaling activities associated with the instance refresh task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ir-a12ds234fasd*****</para>
         /// </summary>

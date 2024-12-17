@@ -894,6 +894,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? EphemeralStorage { get; set; }
 
+        /// <summary>
+        /// <para>The version of the GPU driver. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>tesla=470.82.01 (default)</description></item>
+        /// <item><description>tesla=525.85.12</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tesla=525.85.12</para>
+        /// </summary>
         [NameInMap("GpuDriverVersion")]
         [Validation(Required=false)]
         public string GpuDriverVersion { get; set; }

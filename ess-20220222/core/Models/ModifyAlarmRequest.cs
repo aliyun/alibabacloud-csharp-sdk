@@ -333,10 +333,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The type of the metric. Valid values:</para>
+        /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>system: system metrics of CloudMonitor</description></item>
-        /// <item><description>custom: custom metrics that are reported to CloudMonitor</description></item>
+        /// <item><description>custom: custom metrics that are reported to CloudMonitor.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

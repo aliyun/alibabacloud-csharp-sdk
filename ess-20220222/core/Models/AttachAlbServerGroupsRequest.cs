@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the ALB server group. Valid values:</para>
+        /// <para>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new ALB server group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: adds the existing ECS instances or elastic container instances in the scaling group to the ALB server group. In this case, the system returns the value of <c>ScalingActivityId</c>.</description></item>
-        /// <item><description>false: does not add the existing ECS instances or elastic container instances in the scaling group to the ALB server group.</description></item>
+        /// <item><description>true: adds the existing ECS instances or elastic container instances in the scaling group to the new ALB server group. In this case, the system returns the value of <c>ScalingActivityId</c>.</description></item>
+        /// <item><description>false: does not add the existing ECS instances or elastic container instances in the scaling group to the new ALB server group.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

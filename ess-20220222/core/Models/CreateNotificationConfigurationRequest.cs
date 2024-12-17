@@ -13,15 +13,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</para>
         /// <list type="bullet">
         /// <item><description>If you specify CloudMonitor as the notification recipient, specify the value in the <c>acs:ess:{region-id}:{account-id}:cloudmonitor</c> format.</description></item>
-        /// <item><description>If you specify an MNS queue as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c> format.</description></item>
-        /// <item><description>If you specify an MNS topic as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c> format.</description></item>
+        /// <item><description>If you specify an SMQ queue as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c> format.</description></item>
+        /// <item><description>If you specify an SMQ topic as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c> format.</description></item>
         /// </list>
         /// <para>The variables in the preceding formats have the following meanings:</para>
         /// <list type="bullet">
         /// <item><description><c>region-id</c>: the region ID of the scaling group.</description></item>
         /// <item><description><c>account-id</c>: the ID of the Alibaba Cloud account.</description></item>
-        /// <item><description><c>queuename</c>: the name of the MNS queue.</description></item>
-        /// <item><description><c>topicname</c>: the name of the MNS topic.</description></item>
+        /// <item><description><c>queuename</c>: the name of the SMQ queue.</description></item>
+        /// <item><description><c>topicname</c>: the name of the SMQ topic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

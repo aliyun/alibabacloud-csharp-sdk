@@ -171,6 +171,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The ID of the instance refresh task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ir-asdf12adsxg*****</para>
             /// </summary>

@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels> NotificationConfigurationModels { get; set; }
         public class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The value is in one of the following formats:</para>
             /// <list type="bullet">
-            /// <item><description>If you use CloudMonitor as the notification method, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</description></item>
-            /// <item><description>If you use a Message Service (MNS) queue as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</description></item>
-            /// <item><description>If you use an MNS topic as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</description></item>
+            /// <item><description>If you specify CloudMonitor as the notification recipient, the value is in the acs:ess:{region-id}:{account-id}:cloudmonitor format.</description></item>
+            /// <item><description>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, the value is in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</description></item>
+            /// <item><description>If you specify an SMQ topic as the notification recipient, the value is in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</description></item>
             /// </list>
-            /// <para>The variables in the preceding formats have the following meanings:</para>
+            /// <para>The variables in the preceding value formats have the following meanings:</para>
             /// <list type="bullet">
-            /// <item><description>region-id: the region ID of the scaling group.</description></item>
-            /// <item><description>account-id: the ID of the Alibaba Cloud account.</description></item>
-            /// <item><description>queuename: the name of the MNS queue.</description></item>
-            /// <item><description>topicname: the name of the MNS topic.</description></item>
+            /// <item><description>region-id: the region ID of your scaling group.</description></item>
+            /// <item><description>account-id: the ID of your Alibaba Cloud account.</description></item>
+            /// <item><description>queuename: the name of the SMQ queue.</description></item>
+            /// <item><description>topicname: the name of the SMQ topic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

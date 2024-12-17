@@ -82,22 +82,61 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? AzBalance { get; set; }
 
+        /// <summary>
+        /// <para>The capacity options.</para>
+        /// </summary>
         [NameInMap("CapacityOptions")]
         [Validation(Required=false)]
         public CreateScalingGroupRequestCapacityOptions CapacityOptions { get; set; }
         public class CreateScalingGroupRequestCapacityOptions : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether to automatically create pay-as-you-go ECS instances to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect when you set <c>MultiAZPolicy</c> to <c>COST_OPTIMIZED</c>. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: true.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("CompensateWithOnDemand")]
             [Validation(Required=false)]
             public bool? CompensateWithOnDemand { get; set; }
 
+            /// <summary>
+            /// <para>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</para>
+            /// <para>If you set <c>MultiAZPolicy</c> to <c>COMPOSABLE</c>, the default value is 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("OnDemandBaseCapacity")]
             [Validation(Required=false)]
             public int? OnDemandBaseCapacity { get; set; }
 
+            /// <summary>
+            /// <para>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <c>OnDemandBaseCapacity</c> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100.</para>
+            /// <para>If you set <c>MultiAZPolicy</c> to <c>COMPOSABLE</c>, the default value is 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("OnDemandPercentageAboveBaseCapacity")]
             [Validation(Required=false)]
             public int? OnDemandPercentageAboveBaseCapacity { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <c>CompensateWithOnDemand</c>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <c>OnDemandPercentageAboveBaseCapacity</c>. In this scenario, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <c>CompensateWithOnDemand</c> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("SpotAutoReplaceOnDemand")]
             [Validation(Required=false)]
             public bool? SpotAutoReplaceOnDemand { get; set; }
@@ -825,7 +864,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<CreateScalingGroupRequestTags> Tags { get; set; }
         public class CreateScalingGroupRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key that you want to add to the scaling group.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Department</para>
@@ -835,10 +874,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</para>
+            /// <para>Specifies whether to propagate the tag that you want to add. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: propagates the tag to only instances that are newly created.</description></item>
-            /// <item><description>false: does not propagate the tag to any instances.</description></item>
+            /// <item><description>true: propagates the tag to new instances.</description></item>
+            /// <item><description>false: does not propagate the tag to any instance.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -850,7 +889,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Propagate { get; set; }
 
             /// <summary>
-            /// <para>The tag value that you want to add to the scaling group.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Finance</para>

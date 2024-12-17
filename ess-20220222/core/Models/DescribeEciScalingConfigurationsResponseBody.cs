@@ -986,6 +986,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? EphemeralStorage { get; set; }
 
+            /// <summary>
+            /// <para>The version of the GPU driver.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tesla=470.82.01</para>
+            /// </summary>
             [NameInMap("GpuDriverVersion")]
             [Validation(Required=false)]
             public string GpuDriverVersion { get; set; }

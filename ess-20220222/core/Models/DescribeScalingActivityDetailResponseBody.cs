@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivityDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.</para>
+        /// <para>The details of the scaling activity. The result of a scaling activity is either successful or failed. If the scaling activity is rejected, no scaling activity details are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>new ECS instances \&quot;i-bp16t2cgmiiymeqv****\&quot; are created.</para>

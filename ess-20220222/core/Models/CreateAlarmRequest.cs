@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> AlarmActions { get; set; }
 
         /// <summary>
-        /// <para>The operator that is used to compare the metric value and the threshold. Valid values:</para>
+        /// <para>The operator that you want to use to compare the metric value and the threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the metric value is greater than or equal to the threshold, set the value to: &gt;=.</description></item>
-        /// <item><description>If the metric value is less than or equal to the threshold, set the value to: &lt;=.</description></item>
-        /// <item><description>If the metric value is greater than the threshold, set the value to: &gt;.</description></item>
-        /// <item><description>If the metric value is less than the threshold, set the value to: &lt;.</description></item>
+        /// <item><description>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</description></item>
+        /// <item><description>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</description></item>
+        /// <item><description>If the metric value is greater than the metric threshold, set the value to &gt;.</description></item>
+        /// <item><description>If the metric value is less than the metric threshold, set the value to &lt;.</description></item>
         /// </list>
         /// <para>Default value: &gt;=.</para>
         /// 
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Effective { get; set; }
 
         /// <summary>
-        /// <para>The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.</para>
+        /// <para>The number of consecutive times that the threshold must be reached before a scaling rule is executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before the scaling rule is executed.</para>
         /// <para>Default value: 3.</para>
         /// 
         /// <b>Example:</b>
@@ -334,10 +334,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The type of the metric. Valid values:</para>
+        /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: system metrics of CloudMonitor</description></item>
-        /// <item><description>custom: custom metrics that are reported to CloudMonitor</description></item>
+        /// <item><description>system: system metrics of CloudMonitor.</description></item>
+        /// <item><description>custom: custom metrics that are reported to CloudMonitor.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -409,11 +409,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to aggregate statistics for the metric. Valid values:</para>
+        /// <para>The method that you want to use to aggregate the metric data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Average</description></item>
-        /// <item><description>Minimum</description></item>
-        /// <item><description>Maximum</description></item>
+        /// <item><description>Average: the average value.</description></item>
+        /// <item><description>Minimum: the minimum value.</description></item>
+        /// <item><description>Maximum: the maximum value.</description></item>
         /// </list>
         /// <para>Default value: Average.</para>
         /// 

@@ -391,10 +391,30 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string HpcClusterId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the access channel is enabled for instance metadata. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enabled</description></item>
+            /// <item><description>disabled</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
             [NameInMap("HttpEndpoint")]
             [Validation(Required=false)]
             public string HttpEndpoint { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>optional: The security hardening mode IMDSv2 is not forcibly used.</description></item>
+            /// <item><description>required: The security hardening mode (IMDSv2) is forcibly used. After you set this parameter to required, you cannot access instance metadata in normal mode.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>optional</para>
+            /// </summary>
             [NameInMap("HttpTokens")]
             [Validation(Required=false)]
             public string HttpTokens { get; set; }
@@ -497,13 +517,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos> InstancePatternInfos { get; set; }
             public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos : TeaModel {
                 /// <summary>
-                /// <para>The architecture types of the instance types. Valid values:</para>
+                /// <para>The architectures of instance types. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>X86: x86</description></item>
-                /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</description></item>
-                /// <item><description>BareMetal: ECS Bare Metal Instance</description></item>
-                /// <item><description>Arm: Arm</description></item>
-                /// <item><description>SuperComputeCluster: Super Computing Cluster</description></item>
+                /// <item><description>X86: x86.</description></item>
+                /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</description></item>
+                /// <item><description>BareMetal: ECS Bare Metal Instance.</description></item>
+                /// <item><description>Arm: Arm.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("Architectures")]
@@ -568,27 +587,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<string> GpuSpecs { get; set; }
 
                 /// <summary>
-                /// <para>The categories of the instance.families. Valid values:</para>
+                /// <para>The categories of ECS instances. Valid values:</para>
                 /// <remarks>
-                /// <para> You can specify 1 to 10 categories.</para>
+                /// <para> Up to 10 categories of ECS instances are supported.</para>
                 /// </remarks>
                 /// <list type="bullet">
-                /// <item><description>General-purpose</description></item>
-                /// <item><description>Compute-optimized</description></item>
-                /// <item><description>Memory-optimized</description></item>
-                /// <item><description>Big data</description></item>
-                /// <item><description>Local SSDs</description></item>
-                /// <item><description>High Clock Speed</description></item>
-                /// <item><description>Enhanced</description></item>
-                /// <item><description>Shared</description></item>
-                /// <item><description>Compute-optimized with GPU</description></item>
-                /// <item><description>Visual Compute-optimized</description></item>
-                /// <item><description>Heterogeneous Service</description></item>
-                /// <item><description>Compute-optimized with FPGA</description></item>
-                /// <item><description>Compute-optimized with NPU</description></item>
-                /// <item><description>ECS Bare Metal</description></item>
-                /// <item><description>Super Computing Cluster</description></item>
-                /// <item><description>High Performance Compute</description></item>
+                /// <item><description>General-purpose: general-purpose instance type.</description></item>
+                /// <item><description>Compute-optimized: compute-optimized instance type.</description></item>
+                /// <item><description>Memory-optimized: memory-optimized instance type.</description></item>
+                /// <item><description>Big data: big data instance type.</description></item>
+                /// <item><description>Local SSDs: instance type with local SSDs.</description></item>
+                /// <item><description>High Clock Speed: instance type with high clock speeds.</description></item>
+                /// <item><description>Enhanced: enhanced instance type.</description></item>
+                /// <item><description>Shared: shared instance type.</description></item>
+                /// <item><description>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</description></item>
+                /// <item><description>Visual Compute-optimized: visual compute-optimized instance type.</description></item>
+                /// <item><description>Heterogeneous Service: heterogeneous service instance type.</description></item>
+                /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</description></item>
+                /// <item><description>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</description></item>
+                /// <item><description>ECS Bare Metal: ECS Bare Metal Instance type.</description></item>
+                /// <item><description>High Performance Compute: HPC-optimized instance type.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("InstanceCategories")]
@@ -791,7 +809,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The maximum inbound bandwidth. Unit: Mbit/s. Valid values: 1 to 200.</para>
+            /// <para>The maximum inbound public bandwidth. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -801,11 +819,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? InternetMaxBandwidthIn { get; set; }
 
             /// <summary>
-            /// <para>The maximum outbound bandwidth. Unit: Mbit/s. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0 to 1024 if you set InternetChargeType to PayByBandwidth. If you leave this parameter empty, this parameter is automatically set to 0.</description></item>
-            /// <item><description>0 to 1024 if you set InternetChargeType to PayByTraffic. If you leave this parameter empty, an error is returned.</description></item>
-            /// </list>
+            /// <para>The maximum outbound public bandwidth. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1072,20 +1086,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
-            /// <summary>
-            /// <para>安全选项。</para>
-            /// </summary>
             [NameInMap("SecurityOptions")]
             [Validation(Required=false)]
             public DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions SecurityOptions { get; set; }
             public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsSecurityOptions : TeaModel {
                 /// <summary>
-                /// <para>机密计算模式。可能值：</para>
-                /// <list type="bullet">
-                /// <item><description>Enclave：表示ECS实例使用Enclave构建机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/203433.html">使用Enclave构建机密计算环境</a>。</description></item>
-                /// <item><description>TDX：表示构建TDX机密计算环境。更多信息，请参见<a href="https://help.aliyun.com/document_detail/479090.html">构建TDX机密计算环境</a>。</description></item>
-                /// </list>
-                /// 
                 /// <b>Example:</b>
                 /// <para>TDX</para>
                 /// </summary>

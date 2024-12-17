@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeElasticStrengthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The scaling strength models.</para>
+        /// <para>The scaling strengths of scaling configurations that are queried at the same time.</para>
         /// </summary>
         [NameInMap("ElasticStrengthModels")]
         [Validation(Required=false)]

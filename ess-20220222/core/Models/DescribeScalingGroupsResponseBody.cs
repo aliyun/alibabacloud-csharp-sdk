@@ -133,22 +133,57 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public bool? AzBalance { get; set; }
 
+            /// <summary>
+            /// <para>The capacity options.</para>
+            /// </summary>
             [NameInMap("CapacityOptions")]
             [Validation(Required=false)]
             public DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions CapacityOptions { get; set; }
             public class DescribeScalingGroupsResponseBodyScalingGroupsCapacityOptions : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether pay-as-you-go ECS instances can be automatically created to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect when you set <c>MultiAZPolicy</c> to <c>COST_OPTIMIZED</c>. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("CompensateWithOnDemand")]
                 [Validation(Required=false)]
                 public bool? CompensateWithOnDemand { get; set; }
 
+                /// <summary>
+                /// <para>The minimum number of pay-as-you-go instances required in the scaling group. When the actual number of pay-as-you-go instances drops below the minimum threshold, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("OnDemandBaseCapacity")]
                 [Validation(Required=false)]
                 public int? OnDemandBaseCapacity { get; set; }
 
+                /// <summary>
+                /// <para>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <c>OnDemandBaseCapacity</c> specifies the minimum number of pay-as-you-go instances required in the scaling group. Valid values: 0 to 100.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("OnDemandPercentageAboveBaseCapacity")]
                 [Validation(Required=false)]
                 public int? OnDemandPercentageAboveBaseCapacity { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to replace pay-as-you-go ECS instances with preemptible ECS instances. If you specify <c>CompensateWithOnDemand</c>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <c>OnDemandPercentageAboveBaseCapacity</c>. In this scenario, Auto Scaling will try to deploy preemptible ECS instances to replace the surplus pay-as-you-go ECS instances. When <c>CompensateWithOnDemand</c> is specified, Auto Scaling creates pay-as-you-go ECS instances if there are not enough preemptible instance types available. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("SpotAutoReplaceOnDemand")]
                 [Validation(Required=false)]
                 public bool? SpotAutoReplaceOnDemand { get; set; }

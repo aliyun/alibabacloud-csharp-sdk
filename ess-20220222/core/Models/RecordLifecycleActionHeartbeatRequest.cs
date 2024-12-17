@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The time window during which the desired ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.</para>
-        /// <para>After you create a lifecycle hook, you can call this operation to extend the time window during which the desired ECS instance stays in a Pending state. You can also call the <a href="https://help.aliyun.com/document_detail/459335.html">CompleteLifecycleAction</a> operation to remove the desired ECS instance from a Pending state ahead of schedule.</para>
+        /// <para>The time window during which the ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.</para>
+        /// <para>After you create a lifecycle hook, you can call this operation to extend the time window during which the ECS instance stays in a Pending state. You can also call the <a href="https://help.aliyun.com/document_detail/459335.html">CompleteLifecycleAction</a> operation to remove the ECS instance from the Pending state ahead of schedule.</para>
         /// <para>Default value: 600.</para>
         /// 
         /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? HeartbeatTimeout { get; set; }
 
         /// <summary>
-        /// <para>The action token of the lifecycle hook. You can obtain the token from the details page of the Message Service (MNS) queue specified for the lifecycle hook when the desired ECS instance enters a Pending state.\
-        /// You can also call the <a href="https://help.aliyun.com/document_detail/459333.html">DescribeLifecycleActions</a> operation to obtain the action token of the lifecycle hook.\
-        /// If you specified an MNS topic for the lifecycle hook, you can obtain the token from the MNS topic.</para>
+        /// <para>The action token of the lifecycle hook. You can obtain the token from the details page of the Simple Message Queue (SMQ, formerly MNS) queue specified for the lifecycle hook.</para>
+        /// <para>You can also call the <a href="https://help.aliyun.com/document_detail/459333.html">DescribeLifecycleActions</a> operation to obtain the action token of the lifecycle hook.</para>
+        /// <para>If you specified an SMQ topic for the lifecycle hook, you can obtain the token from the MNS topic.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

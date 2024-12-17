@@ -64,18 +64,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LifecycleTransition { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the notification method that is used by Auto Scaling to send notifications when the lifecycle hook takes effect. If you do not specify this parameter, no notification is sent when the lifecycle hook takes effect. If you specify this parameter, the following rules apply:</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. If you do not specify this parameter, no notification is sent when the lifecycle hook takes effect. If you specify this parameter, the value must be in one of the following formats:</para>
         /// <list type="bullet">
-        /// <item><description>If you use a Message Service (MNS) queue as the notification method, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</description></item>
-        /// <item><description>If you use an MNS topic as the notification method, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</description></item>
-        /// <item><description>If you use an OOS template as the notification method, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</description></item>
+        /// <item><description>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</description></item>
+        /// <item><description>If you specify an SMQ topic as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</description></item>
+        /// <item><description>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</description></item>
+        /// <item><description>If you specify an event bus as the notification recipient, specify the value in the acs:eventbridge:{region-id}:{account-id}:eventbus/default format.</description></item>
         /// </list>
-        /// <para>The variables in the preceding parameter formats have the following meanings:</para>
+        /// <para>The variables in the preceding value formats have the following meanings:</para>
         /// <list type="bullet">
-        /// <item><description>region-id: the region ID of the scaling group.</description></item>
-        /// <item><description>account-id: the ID of the Alibaba Cloud account. The ID of the RAM user is not supported.</description></item>
-        /// <item><description>queuename: the name of the MNS queue.</description></item>
-        /// <item><description>topicname: the name of the MNS topic.</description></item>
+        /// <item><description>region-id: the region ID of your scaling group.</description></item>
+        /// <item><description>account-id: the ID of the Alibaba Cloud account. IDs of Resource Access Management (RAM) users are not supported.</description></item>
+        /// <item><description>queuename: the name of the SMQ queue.</description></item>
+        /// <item><description>topicname: the name of the SMQ topic.</description></item>
         /// <item><description>templatename: the name of the OOS template.</description></item>
         /// </list>
         /// 
