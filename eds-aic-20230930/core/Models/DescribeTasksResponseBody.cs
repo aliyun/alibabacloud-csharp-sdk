@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ErrorMsg { get; set; }
 
+            [NameInMap("FailedChildCount")]
+            [Validation(Required=false)]
+            public int? FailedChildCount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-10-11T08:53:32Z</para>
@@ -29,6 +33,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string FinishTime { get; set; }
 
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>B8ED2BA9-0C6A-5643-818F-B5D60A64****</para>
@@ -36,6 +48,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("InvokeId")]
             [Validation(Required=false)]
             public string InvokeId { get; set; }
+
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public int? Level { get; set; }
+
+            [NameInMap("Operator")]
+            [Validation(Required=false)]
+            public string Operator { get; set; }
+
+            [NameInMap("Param")]
+            [Validation(Required=false)]
+            public string Param { get; set; }
+
+            [NameInMap("ParentTaskId")]
+            [Validation(Required=false)]
+            public string ParentTaskId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -57,6 +85,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string Result { get; set; }
 
+            [NameInMap("RunningChildCount")]
+            [Validation(Required=false)]
+            public int? RunningChildCount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-10-11T08:53:32Z</para>
@@ -64,6 +96,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
+            [NameInMap("SuccessChildCount")]
+            [Validation(Required=false)]
+            public int? SuccessChildCount { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -88,6 +124,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
+
+            [NameInMap("TotalChildCount")]
+            [Validation(Required=false)]
+            public int? TotalChildCount { get; set; }
 
         }
 

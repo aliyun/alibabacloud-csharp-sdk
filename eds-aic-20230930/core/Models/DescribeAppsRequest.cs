@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstallationStatus { get; set; }
 
+        [NameInMap("MD5")]
+        [Validation(Required=false)]
+        public string MD5 { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>

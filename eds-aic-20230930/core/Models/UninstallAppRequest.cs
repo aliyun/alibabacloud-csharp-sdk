@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> InstanceGroupIdList { get; set; }
 
+        [NameInMap("InstanceIdList")]
+        [Validation(Required=false)]
+        public List<string> InstanceIdList { get; set; }
+
     }
 
 }

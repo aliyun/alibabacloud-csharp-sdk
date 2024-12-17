@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AndroidAppVersion { get; set; }
 
+            [NameInMap("ApkSize")]
+            [Validation(Required=false)]
+            public string ApkSize { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>10404</para>
@@ -80,6 +84,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("InstanceGroupList")]
             [Validation(Required=false)]
             public List<string> InstanceGroupList { get; set; }
+
+            [NameInMap("MD5")]
+            [Validation(Required=false)]
+            public string MD5 { get; set; }
 
             [NameInMap("PackageName")]
             [Validation(Required=false)]

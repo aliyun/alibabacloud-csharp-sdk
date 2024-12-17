@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeTasksRequest : TeaModel {
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>B8ED2BA9-0C6A-5643-818F-B5D60A64****</para>
@@ -16,6 +24,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("InvokeId")]
         [Validation(Required=false)]
         public string InvokeId { get; set; }
+
+        [NameInMap("Level")]
+        [Validation(Required=false)]
+        public int? Level { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -33,6 +45,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("Param")]
+        [Validation(Required=false)]
+        public string Param { get; set; }
+
+        [NameInMap("ParentTaskId")]
+        [Validation(Required=false)]
+        public string ParentTaskId { get; set; }
+
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
@@ -49,6 +69,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
+        [NameInMap("TaskStatuses")]
+        [Validation(Required=false)]
+        public List<string> TaskStatuses { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>StartInstance</para>
@@ -56,6 +80,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
+
+        [NameInMap("TaskTypes")]
+        [Validation(Required=false)]
+        public List<string> TaskTypes { get; set; }
 
     }
 
