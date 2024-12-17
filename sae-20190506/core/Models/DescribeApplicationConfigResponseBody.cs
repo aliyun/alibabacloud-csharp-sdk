@@ -856,6 +856,80 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public Dictionary<string, string> ServiceTags { get; set; }
 
+            [NameInMap("SidecarContainersConfig")]
+            [Validation(Required=false)]
+            public List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfig> SidecarContainersConfig { get; set; }
+            public class DescribeApplicationConfigResponseBodyDataSidecarContainersConfig : TeaModel {
+                [NameInMap("AcrInstanceId")]
+                [Validation(Required=false)]
+                public string AcrInstanceId { get; set; }
+
+                [NameInMap("Command")]
+                [Validation(Required=false)]
+                public string Command { get; set; }
+
+                [NameInMap("CommandArgs")]
+                [Validation(Required=false)]
+                public string CommandArgs { get; set; }
+
+                [NameInMap("ConfigMapMountDesc")]
+                [Validation(Required=false)]
+                public List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc> ConfigMapMountDesc { get; set; }
+                public class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc : TeaModel {
+                    [NameInMap("ConfigMapId")]
+                    [Validation(Required=false)]
+                    public long? ConfigMapId { get; set; }
+
+                    [NameInMap("ConfigMapName")]
+                    [Validation(Required=false)]
+                    public string ConfigMapName { get; set; }
+
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("MountPath")]
+                    [Validation(Required=false)]
+                    public string MountPath { get; set; }
+
+                }
+
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
+                public int? Cpu { get; set; }
+
+                [NameInMap("EmptyDirDesc")]
+                [Validation(Required=false)]
+                public List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc> EmptyDirDesc { get; set; }
+                public class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc : TeaModel {
+                    [NameInMap("MountPath")]
+                    [Validation(Required=false)]
+                    public string MountPath { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                [NameInMap("Envs")]
+                [Validation(Required=false)]
+                public string Envs { get; set; }
+
+                [NameInMap("ImageUrl")]
+                [Validation(Required=false)]
+                public string ImageUrl { get; set; }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
+                public int? Memory { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The logging configurations of Log Service.</para>
             /// <list type="bullet">

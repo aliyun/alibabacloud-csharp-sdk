@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class SidecarContainerConfig : TeaModel {
+        [NameInMap("AcrInstanceId")]
+        [Validation(Required=false)]
+        public string AcrInstanceId { get; set; }
+
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }

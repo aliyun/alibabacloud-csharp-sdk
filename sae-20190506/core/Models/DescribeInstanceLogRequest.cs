@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeInstanceLogRequest : TeaModel {
+        [NameInMap("ContainerId")]
+        [Validation(Required=false)]
+        public string ContainerId { get; set; }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// <para>This parameter is required.</para>

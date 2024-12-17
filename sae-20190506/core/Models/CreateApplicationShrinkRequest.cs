@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class CreateApplicationRequest : TeaModel {
+    public class CreateApplicationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>acs:ram::123456789012\<em>\</em>\<em>\</em>:role/adminrole</para>
         /// 
@@ -514,7 +514,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         [NameInMap("SidecarContainersConfig")]
         [Validation(Required=false)]
-        public List<SidecarContainerConfig> SidecarContainersConfig { get; set; }
+        public string SidecarContainersConfigShrink { get; set; }
 
         /// <summary>
         /// <para>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</para>

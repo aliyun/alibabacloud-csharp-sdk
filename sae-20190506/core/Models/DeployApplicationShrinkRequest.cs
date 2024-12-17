@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class DeployApplicationRequest : TeaModel {
+    public class DeployApplicationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The Alibaba Cloud Resource Name (ARN) required for a RAM role to obtain images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</para>
         /// 
@@ -682,7 +682,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         [NameInMap("SidecarContainersConfig")]
         [Validation(Required=false)]
-        public List<SidecarContainerConfig> SidecarContainersConfig { get; set; }
+        public string SidecarContainersConfigShrink { get; set; }
 
         /// <summary>
         /// <para>The logging configurations of Log Service.</para>
