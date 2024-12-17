@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyDBInstanceAutoUpgradeResponseBody : TeaModel {
         /// <summary>
-        /// ID of the request.
+        /// <para>ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2FF6158E-3394-4A90-B634-79C49184****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

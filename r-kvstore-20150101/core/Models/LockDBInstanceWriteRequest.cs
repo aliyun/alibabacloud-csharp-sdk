@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class LockDBInstanceWriteRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The reason why write operations on the instance are locked.
+        /// <para>The reason why write operations on the instance are locked.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lock reason</para>
         /// </summary>
         [NameInMap("LockReason")]
         [Validation(Required=false)]

@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RestartInstanceRequest : TeaModel {
         /// <summary>
-        /// The time when you want to restart the instance. Default value: Immediately. Valid values:
+        /// <para>The time when you want to restart the instance. Default value: Immediately. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediately</b>: immediately restarts the instance.</description></item>
+        /// <item><description><b>MaintainTime</b>: restarts the instance during the maintenance window.</description></item>
+        /// </list>
         /// 
-        /// *   **Immediately**: immediately restarts the instance.
-        /// *   **MaintainTime**: restarts the instance during the maintenance window.
+        /// <b>Example:</b>
+        /// <para>Immediately</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -49,12 +55,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to update to the latest minor version when the instance is restarted. Valid values:
+        /// <para>Specifies whether to update to the latest minor version when the instance is restarted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: updates the minor version.</description></item>
+        /// <item><description><b>false</b>: does not update the minor version.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The default value is <b>true</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **true**: updates the minor version.
-        /// *   **false**: does not update the minor version.
-        /// 
-        /// > The default value is **true**.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("UpgradeMinorVersion")]
         [Validation(Required=false)]

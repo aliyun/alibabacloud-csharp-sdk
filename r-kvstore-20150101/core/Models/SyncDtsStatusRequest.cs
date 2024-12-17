@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SyncDtsStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -27,7 +29,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,19 +51,27 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// Disables configuration changes for the instance. Valid values:
+        /// <para>Disables configuration changes for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: does not disable configuration changes.</description></item>
+        /// <item><description><b>1</b>: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: does not disable configuration changes.
-        /// *   **1**: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The ID of the DTS instance. You can view the ID in the [DTS console](https://dts.console.aliyun.com/).
+        /// <para>The ID of the DTS instance. You can view the ID in the <a href="https://dts.console.aliyun.com/">DTS console</a>.</para>
+        /// <remarks>
+        /// <para>An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</para>
+        /// </remarks>
         /// 
-        /// > An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.
+        /// <b>Example:</b>
+        /// <para>dtss0611o8vv90****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

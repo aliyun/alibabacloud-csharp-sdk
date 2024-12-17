@@ -10,10 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeMonitorItemsResponseBody : TeaModel {
         /// <summary>
-        /// The returned metrics.
-        /// 
-        /// > *   **memoryUsage**, **GetQps**, and **PutQps** are supported only by ApsaraDB for Redis instances that use Redis 4.0 or later. **GetQps** and **PutQps** require the latest minor version. You can upgrade the major version or minor version of the instance as needed. For more information, see [Upgrade the major version](https://help.aliyun.com/document_detail/101764.html) and [Upgrade the minor version](https://help.aliyun.com/document_detail/56450.html).
-        /// > *   When you use instances of Redis 2.8, if the **hit_rate** metric is not displayed, you must upgrade the minor version of the instance. For more information, see [Upgrade the minor version](https://help.aliyun.com/document_detail/56450.html).
+        /// <para>The returned metrics.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><b>memoryUsage</b>, <b>GetQps</b>, and <b>PutQps</b> are supported only by ApsaraDB for Redis instances that use Redis 4.0 or later. <b>GetQps</b> and <b>PutQps</b> require the latest minor version. You can upgrade the major version or minor version of the instance as needed. For more information, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a> and <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</description></item>
+        /// <item><description>When you use instances of Redis 2.8, if the <b>hit_rate</b> metric is not displayed, you must upgrade the minor version of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</description></item>
+        /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("MonitorItems")]
         [Validation(Required=false)]
@@ -24,14 +27,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeMonitorItemsResponseBodyMonitorItemsKVStoreMonitorItem> KVStoreMonitorItem { get; set; }
             public class DescribeMonitorItemsResponseBodyMonitorItemsKVStoreMonitorItem : TeaModel {
                 /// <summary>
-                /// The metric.
+                /// <para>The metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>select</para>
                 /// </summary>
                 [NameInMap("MonitorKey")]
                 [Validation(Required=false)]
                 public string MonitorKey { get; set; }
 
                 /// <summary>
-                /// The unit of the metric.
+                /// <para>The unit of the metric.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Counts/s</para>
                 /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
@@ -42,7 +51,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8BEB2618-9517-43F3-A233-E0B34512****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,36 +10,46 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportRequest : TeaModel {
         /// <summary>
-        /// The type of analytics. Set the value to **BigKey**.
+        /// <para>The type of analytics. Set the value to <b>BigKey</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>BigKey</para>
         /// </summary>
         [NameInMap("AnalysisType")]
         [Validation(Required=false)]
         public string AnalysisType { get; set; }
 
         /// <summary>
-        /// The date to query. You can query the report for one day each time. Specify the date in the *yyyy-MM-dd*Z format. The time must be in UTC.
+        /// <para>The date to query. You can query the report for one day each time. Specify the date in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2019-08-05Z</para>
         /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]
         public string Date { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the child node in the cluster instance.
+        /// <para>The ID of the child node in the cluster instance.</para>
+        /// <remarks>
+        /// <para>If this parameter is not specified, the analytics results of all child nodes in the instance are returned.</para>
+        /// </remarks>
         /// 
-        /// > If this parameter is not specified, the analytics results of all child nodes in the instance are returned.
+        /// <b>Example:</b>
+        /// <para>-bp1zxszhcgatnx****-db-0</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -54,18 +64,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <remarks>
+        /// <para>If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.</para>
+        /// </remarks>
         /// 
-        /// > If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumbers")]
         [Validation(Required=false)]
         public int? PageNumbers { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <remarks>
+        /// <para>The default value is <b>30</b>.</para>
+        /// </remarks>
         /// 
-        /// > The default value is **30**.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

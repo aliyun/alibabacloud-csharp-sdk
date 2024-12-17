@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class FlushInstanceForDBResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

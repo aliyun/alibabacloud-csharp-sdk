@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AllocateInstancePublicConnectionRequest : TeaModel {
         /// <summary>
-        /// The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
+        /// <para>The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.</para>
+        /// <remarks>
+        /// <para> The endpoint is in the <c>&lt;prefix&gt;.redis.rds.aliyuncs.com</c> format.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -38,9 +43,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The service port number of the instance. Valid values: **1024** to **65535**.
+        /// <para>The service port number of the instance. Valid values: <b>1024</b> to <b>65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6379</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

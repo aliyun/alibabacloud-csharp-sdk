@@ -10,84 +10,120 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEncryptionKeyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the Alibaba Cloud account that is used to create the custom key.
+        /// <para>The ID of the Alibaba Cloud account that is used to create the custom key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>17649847********</para>
         /// </summary>
         [NameInMap("Creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
 
         /// <summary>
-        /// The time when the custom key is expected to be deleted. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// <para>The time when the custom key is expected to be deleted. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <remarks>
+        /// <para>If the return value is an empty string, the custom key cannot be automatically deleted.</para>
+        /// </remarks>
         /// 
-        /// > If the return value is an empty string, the custom key cannot be automatically deleted.
+        /// <b>Example:</b>
+        /// <para>2021-09-24T18:22:03Z</para>
         /// </summary>
         [NameInMap("DeleteDate")]
         [Validation(Required=false)]
         public string DeleteDate { get; set; }
 
         /// <summary>
-        /// The description of the custom key. By default, an empty string is returned.
+        /// <para>The description of the custom key. By default, an empty string is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testkey</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the custom key.
+        /// <para>The ID of the custom key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ad463061-992d-4195-8a94-ed63********</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// The state of the custom key. Valid values:
+        /// <para>The state of the custom key. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enabled</b>: The custom key is available.</description></item>
+        /// <item><description><b>Disabled</b>: The custom key is unavailable.</description></item>
+        /// </list>
         /// 
-        /// *   **Enabled**: The custom key is available.
-        /// *   **Disabled**: The custom key is unavailable.
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
         /// </summary>
         [NameInMap("EncryptionKeyStatus")]
         [Validation(Required=false)]
         public string EncryptionKeyStatus { get; set; }
 
         /// <summary>
-        /// The encryption algorithm.
+        /// <para>The encryption algorithm.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AES-CTR-256</para>
         /// </summary>
         [NameInMap("EncryptionName")]
         [Validation(Required=false)]
         public string EncryptionName { get; set; }
 
         /// <summary>
-        /// The purpose of the custom key. A value of `ENCRYPT/DECRYPT` indicates encryption and decryption.
+        /// <para>The purpose of the custom key. A value of <c>ENCRYPT/DECRYPT</c> indicates encryption and decryption.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ENCRYPT/DECRYPT</para>
         /// </summary>
         [NameInMap("KeyUsage")]
         [Validation(Required=false)]
         public string KeyUsage { get; set; }
 
         /// <summary>
-        /// The time when the custom key expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /// <para>The time when the custom key expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <remarks>
+        /// <para>If the return value is an empty string, the custom key does not expire.</para>
+        /// </remarks>
         /// 
-        /// > If the return value is an empty string, the custom key does not expire.
+        /// <b>Example:</b>
+        /// <para>2021-09-24T18:22:03Z</para>
         /// </summary>
         [NameInMap("MaterialExpireTime")]
         [Validation(Required=false)]
         public string MaterialExpireTime { get; set; }
 
         /// <summary>
-        /// The source of the custom key. A value of **Aliyun_KMS** indicates [Key Management Service (KMS)](https://help.aliyun.com/document_detail/28935.html) of Alibaba Cloud.
+        /// <para>The source of the custom key. A value of <b>Aliyun_KMS</b> indicates <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> of Alibaba Cloud.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Aliyun_KMS</para>
         /// </summary>
         [NameInMap("Origin")]
         [Validation(Required=false)]
         public string Origin { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9A931CE5-C926-5E09-B0EC-6299C4A6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</para>
         /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]

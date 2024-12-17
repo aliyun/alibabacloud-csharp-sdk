@@ -10,50 +10,67 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class TransformInstanceChargeTypeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Automatic payment is enabled.</description></item>
+        /// <item><description><b>false</b>: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane of the Billing Management console, click <b>Orders</b>. On the <b>Orders</b> page, find the order and complete the payment.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: Automatic payment is enabled.
-        /// *   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the instance. Valid values:
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables auto-renewal.
-        /// *   **false** (default): disables auto-renewal.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// The subscription duration that is supported by auto-renewal. Unit: month. Valid values: **1**, **2**, **3**, **6**, and **12**.
+        /// <para>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
+        /// <remarks>
+        /// <para> This parameter is required if the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required if the **AutoRenew** parameter is set to **true**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public long? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// The new billing method. Valid values:
+        /// <para>The new billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PrePaid</b>: subscription. If you set this parameter to PrePaid, you must also specify the <b>Period</b> parameter.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also specify the **Period** parameter.
-        /// *   **PostPaid**: pay-as-you-go
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.
+        /// <para>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -68,9 +85,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, **36**.
+        /// <para>The subscription duration. Unit: months. Valid values: <b>1</b>, 2, 3, 4, 5, 6, 7, 8, <b>9</b>, <b>12</b>, <b>24</b>, <b>36</b>.</para>
+        /// <remarks>
+        /// <para> This parameter is valid and required only if you set the <b>ChargeType</b> parameter to <b>PrePaid</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is valid and required only if you set the **ChargeType** parameter to **PrePaid**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

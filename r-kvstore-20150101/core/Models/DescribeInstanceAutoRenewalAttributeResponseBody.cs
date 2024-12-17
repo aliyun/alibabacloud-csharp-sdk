@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceAutoRenewalAttributeResponseBody : TeaModel {
         /// <summary>
-        /// Details of the auto-renewal information for the instance.
+        /// <para>Details of the auto-renewal information for the instance.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,31 +21,44 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem> Item { get; set; }
             public class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem : TeaModel {
                 /// <summary>
-                /// Indicates whether auto-renewal is enabled. Valid values:
+                /// <para>Indicates whether auto-renewal is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
+                /// <item><description><b>false</b>: Auto-renewal is disabled.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: Auto-renewal is enabled.
-                /// *   **false**: Auto-renewal is disabled.
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("AutoRenew")]
                 [Validation(Required=false)]
                 public string AutoRenew { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>r-bp1zxszhcgatnx****</para>
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The auto-renewal period. Unit: months.
+                /// <para>The auto-renewal period. Unit: months.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// <para>The region ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -56,28 +69,40 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned on the current page.
+        /// <para>The number of entries returned on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2B17D708-1D6D-49F3-B6D7-478371DD****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

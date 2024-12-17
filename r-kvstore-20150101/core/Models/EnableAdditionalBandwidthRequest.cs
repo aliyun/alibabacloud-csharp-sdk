@@ -10,87 +10,123 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class EnableAdditionalBandwidthRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane, click <b>Orders</b>. On the <b>Orders</b> page, find the order and complete the payment.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal. Valid values:
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. This is the default value.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables auto-renewal.
-        /// *   **false**: disables auto-renewal. This is the default value.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The auto-renewal cycle based on which ApsaraDB for Redis automatically renews the purchased bandwidth. Unit: months. Valid values: **1**, **2**, **3**, **4**, **5**, **6**, **7**, **8**, **9**, **12**, **24**, **36**, and **60**.
+        /// <para>The auto-renewal cycle based on which ApsaraDB for Redis automatically renews the purchased bandwidth. Unit: months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, <b>5</b>, <b>6</b>, <b>7</b>, <b>8</b>, <b>9</b>, <b>12</b>, <b>24</b>, <b>36</b>, and <b>60</b>.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect and must be specified only when you set the <b>AutoRenew</b> parameter to <b>true</b>.</description></item>
+        /// <item><description>You cannot query the auto-renewal cycle by calling an API operation. To obtain the auto-renewal cycle, you can perform the following procedure: In the top navigation bar of the ApsaraDB for Redis console, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. On the page that appears, enter the ID of the instance and the <c>-bw</c> suffix in the <b>Instance ID</b> field. Example: r-bp1zxszhcgatnx****-bw.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > * This parameter takes effect and must be specified only when you set the **AutoRenew** parameter to **true**.
-        /// > * You cannot query the auto-renewal cycle by calling an API operation. To obtain the auto-renewal cycle, you can perform the following procedure: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. On the page that appears, enter the ID of the instance and the `-bw` suffix in the **Instance ID** field. Example: r-bp1zxszhcgatnx****-bw.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// The amount of extra bandwidth that you want to purchase. Unit: Mbit/s. The value must be an integer greater than or equal to **0**. The maximum value can be up to six times the default bandwidth of the instance or a single shard, but cannot exceed 192 Mbit/s. For example, if the default bandwidth of an instance is 10 Mbit/s, the value range of this parameter is **0** to **60**.
+        /// <para>The amount of extra bandwidth that you want to purchase. Unit: Mbit/s. The value must be an integer greater than or equal to <b>0</b>. The maximum value can be up to six times the default bandwidth of the instance or a single shard, but cannot exceed 192 Mbit/s. For example, if the default bandwidth of an instance is 10 Mbit/s, the value range of this parameter is <b>0</b> to <b>60</b>.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to obtain the default maximum bandwidth returned by the <b>DefaultBandWidth</b> response parameter. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify multiple data shard IDs in the <b>NodeId</b> parameter, you must specify the amount of bandwidth that you want to purchase for each specified data shard in the Bandwidth parameter. The bandwidth values that you specify in the Bandwidth parameter must be in the same sequence as the data shard IDs that you specify in the NodeId parameter. In addition, you must separate the bandwidth values with commas (,).</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   You can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/190794.html) operation to obtain the default maximum bandwidth returned by the **DefaultBandWidth** response parameter. For more information about instance types, see [Overview](https://help.aliyun.com/document_detail/26350.html).
-        /// 
-        /// *   If you specify multiple data shard IDs in the **NodeId** parameter, you must specify the amount of bandwidth that you want to purchase for each specified data shard in the Bandwidth parameter. The bandwidth values that you specify in the Bandwidth parameter must be in the same sequence as the data shard IDs that you specify in the NodeId parameter. In addition, you must separate the bandwidth values with commas (,).
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// The billing method of the bandwidth instance. Default value: PostPaid. Valid values:
+        /// <para>The billing method of the bandwidth instance. Default value: PostPaid. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription</description></item>
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// </list>
         /// 
-        /// - PrePaid: subscription
-        /// - PostPaid: pay-as-you-go
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The coupon ID.
+        /// <para>The coupon ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the IDs of instances.
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the IDs of instances.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the data shard for which you want to purchase a specific amount of bandwidth. You can call the [DescribeLogicInstanceTopology](https://help.aliyun.com/document_detail/94665.html) operation to query the IDs of the data shards in an instance. If you specify multiple data shard IDs, separate the data shard IDs with commas (,). You can also set this parameter to **All**, which specifies all the data shards of the instance.
+        /// <para>The ID of the data shard for which you want to purchase a specific amount of bandwidth. You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query the IDs of the data shards in an instance. If you specify multiple data shard IDs, separate the data shard IDs with commas (,). You can also set this parameter to <b>All</b>, which specifies all the data shards of the instance.</para>
+        /// <remarks>
+        /// <para>This parameter is available and required only if the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster master-replica</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting</a> instance.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is available and required only if the instance is a [cluster master-replica](https://help.aliyun.com/document_detail/52228.html) or [read/write splitting](https://help.aliyun.com/document_detail/62870.html) instance.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****-db-0</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// The validity period of the bandwidth that you purchase. Unit: day. Valid values: **1**, **2**, **3**, **7**, **14**, **30**, **60**, **90**, **180**, **365**, **730**, **1095**, and **1825**.
+        /// <para>The validity period of the bandwidth that you purchase. Unit: day. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>7</b>, <b>14</b>, <b>30</b>, <b>60</b>, <b>90</b>, <b>180</b>, <b>365</b>, <b>730</b>, <b>1095</b>, and <b>1825</b>.</para>
+        /// <remarks>
+        /// <para>If you want to continue using the purchased bandwidth after the specified period of time elapses, you must call the <a href="https://help.aliyun.com/document_detail/211199.html">RenewAdditionalBandwidth</a> operation to submit a renewal order.</para>
+        /// </remarks>
         /// 
-        /// > If you want to continue using the purchased bandwidth after the specified period of time elapses, you must call the [RenewAdditionalBandwidth](https://help.aliyun.com/document_detail/211199.html) operation to submit a renewal order.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("OrderTimeLength")]
         [Validation(Required=false)]
@@ -117,7 +153,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.
+        /// <para>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SDK</para>
         /// </summary>
         [NameInMap("SourceBiz")]
         [Validation(Required=false)]

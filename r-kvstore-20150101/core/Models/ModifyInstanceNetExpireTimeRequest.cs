@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceNetExpireTimeRequest : TeaModel {
         /// <summary>
-        /// The extension period to retain the classic network endpoint of the instance. Unit: days. Valid values: **14**, **30**, **60**, and **120**.
+        /// <para>The extension period to retain the classic network endpoint of the instance. Unit: days. Valid values: <b>14</b>, <b>30</b>, <b>60</b>, and <b>120</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>14</para>
         /// </summary>
         [NameInMap("ClassicExpiredDays")]
         [Validation(Required=false)]
         public int? ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// The endpoint of the classic network.
+        /// <para>The endpoint of the classic network.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

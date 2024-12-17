@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class FlushInstanceForDBRequest : TeaModel {
         /// <summary>
-        /// The index number of the database. Valid values: 0 to 255.
+        /// <para>The index number of the database. Valid values: 0 to 255.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("DbIndex")]
         [Validation(Required=false)]
         public int? DbIndex { get; set; }
 
         /// <summary>
-        /// The instance ID. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the ID of the instance.
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

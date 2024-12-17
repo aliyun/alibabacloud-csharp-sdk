@@ -10,77 +10,106 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Default value: true. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables automatic payment.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment.</description></item>
+        /// </list>
+        /// <para>If you select false, you must choose <b>Expenses</b> &gt; <b>Renewal Management</b> in the top navigation bar. In the left-side navigation pane, click <b>Orders</b>. Find the specified order and pay for it.</para>
         /// 
-        /// *   **true**: enables automatic payment.
-        /// *   **false**: disables automatic payment.
-        /// 
-        /// If you select false, you must choose **Expenses** > **Renewal Management** in the top navigation bar. In the left-side navigation pane, click **Orders**. Find the specified order and pay for it.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable auto-renewal for the instance. Valid values:
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.</description></item>
+        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.
-        /// *   **false** (default): disables auto-renewal.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// The ID of the promotional event or business information.
+        /// <para>The ID of the promotional event or business information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>000000000</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.
+        /// <para>The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.</para>
+        /// <remarks>
+        /// <para>To change the specifications when you renew the instance, you must specify at least one of the <c>Capacity</c> and <c>InstanceClass</c> parameters.</para>
+        /// </remarks>
         /// 
-        /// > To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.
+        /// <b>Example:</b>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("Capacity")]
         [Validation(Required=false)]
         public string Capacity { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TF-ModifyInstanceSpec-1686645570-7dac7257-4a14-4811-939c-51a282f</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// The source of the request. The default value is **OpenAPI** and cannot be changed.
+        /// <para>The source of the request. The default value is <b>OpenAPI</b> and cannot be changed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OpenAPI</para>
         /// </summary>
         [NameInMap("FromApp")]
         [Validation(Required=false)]
         public string FromApp { get; set; }
 
         /// <summary>
-        /// The instance type code. For more information, see [Instance specifications overview](https://help.aliyun.com/document_detail/26350.html). When you renew the instance, you can specify this parameter to change specifications of the instance.
+        /// <para>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications overview</a>. When you renew the instance, you can specify this parameter to change specifications of the instance.</para>
+        /// <remarks>
+        /// <para>To change the specifications when you renew the instance, you must specify at least one of the <c>Capacity</c> and <c>InstanceClass</c> parameters.</para>
+        /// </remarks>
         /// 
-        /// > To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.
+        /// <b>Example:</b>
+        /// <para>redis.master.small.default</para>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -95,9 +124,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The renewal period. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**. Unit: months.
+        /// <para>The renewal period. Valid values: <b>1</b>, 2, 3, 4, 5, 6, 7, 8, <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>. Unit: months.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]

@@ -10,9 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// The display language of the response. Default value: zh-CN. Valid values:
-        /// * **zh-C**N: Chinese
-        /// * **en-US**: English
+        /// <para>The display language of the response. Default value: zh-CN. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-C</b>N: Chinese</description></item>
+        /// <item><description><b>en-US</b>: English</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en-US</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -27,7 +32,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

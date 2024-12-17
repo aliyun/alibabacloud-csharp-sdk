@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterGroupsRequest : TeaModel {
         /// <summary>
-        /// The database type. Valid values: **redis** (default) and **tair**.
+        /// <para>The database type. Valid values: <b>redis</b> (default) and <b>tair</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>redis</para>
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterModificationHistoryRequest : TeaModel {
         /// <summary>
-        /// The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-09-05T09:49:27Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the ID of the instance.
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the node.
+        /// <para>The ID of the node.</para>
+        /// <remarks>
+        /// <para>You can set this parameter to query the parameter settings of the specified node in a cluster instance.</para>
+        /// </remarks>
         /// 
-        /// > You can set this parameter to query the parameter settings of the specified node in a cluster instance.
+        /// <b>Example:</b>
+        /// <para>r-bp1xxxxxxxxxxxxx-db-0</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -45,7 +53,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The name of the parameter.
+        /// <para>The name of the parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>script_check_enable</para>
         /// </summary>
         [NameInMap("ParameterName")]
         [Validation(Required=false)]
@@ -64,9 +75,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2022-09-05T08:49:27Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

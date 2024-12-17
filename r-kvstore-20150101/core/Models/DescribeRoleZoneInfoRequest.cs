@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRoleZoneInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query instance IDs.
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query instance IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-t4nlenc2p04uvb****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -27,27 +29,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
+        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b> and less than or equal to the maximum value supported by the integer data type. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.
+        /// <para>The number of entries to return on each page. Valid values: <b>10</b>, <b>20</b>, and <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of node to query. Default value: 1. Valid values:
+        /// <para>The type of node to query. Default value: 1. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: proxy node</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is supported only for cluster and read/write splitting instances.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: data node</description></item>
+        /// </list>
         /// 
-        /// *   **0**: proxy node
-        /// 
-        /// > This parameter is supported only for cluster and read/write splitting instances.
-        /// 
-        /// *   **1**: data node
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("QueryType")]
         [Validation(Required=false)]

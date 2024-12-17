@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
         /// <summary>
-        /// The progress of the backup task in percentage.
+        /// <para>The progress of the backup task in percentage.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1162****</para>
         /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]
         public string BackupJobId { get; set; }
 
         /// <summary>
-        /// The details of the backup tasks.
+        /// <para>The details of the backup tasks.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The backup mode. Valid values:
+        /// <para>The backup mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Automated</b>: automatic backup. You can call the <a href="https://help.aliyun.com/document_detail/61078.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</description></item>
+        /// <item><description><b>Manual</b>: manual backup.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>By default, the information about backup tasks in both modes is returned.</para>
+        /// </remarks>
         /// 
-        /// *   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](https://help.aliyun.com/document_detail/61078.html) operation to query the automatic backup policy.
-        /// *   **Manual**: manual backup.
-        /// 
-        /// > By default, the information about backup tasks in both modes is returned.
+        /// <b>Example:</b>
+        /// <para>Manual</para>
         /// </summary>
         [NameInMap("JobMode")]
         [Validation(Required=false)]

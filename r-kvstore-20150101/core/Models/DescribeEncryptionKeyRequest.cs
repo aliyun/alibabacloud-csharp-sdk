@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEncryptionKeyRequest : TeaModel {
         /// <summary>
-        /// The ID of the custom key. You can call the [DescribeEncryptionKeyList](https://help.aliyun.com/document_detail/302339.html) operation to query the ID of the key.
+        /// <para>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/302339.html">DescribeEncryptionKeyList</a> operation to query the ID of the key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ad463061-992d-4195-8a94-ed63********</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](https://help.aliyun.com/document_detail/60933.html) operation to query the ID of the instance.
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

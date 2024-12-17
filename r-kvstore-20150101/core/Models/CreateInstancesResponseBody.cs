@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of instances that were created.
+        /// <para>The IDs of instances that were created.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -23,14 +23,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20905403119****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>561AFBF1-BE20-44DB-9BD1-6988B53E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceParameterRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,16 +28,35 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The parameter template ID.</para>
+        /// <remarks>
+        /// <para>You can view the list of parameter templates in the target region, including the parameter template ID, through the DescribeParameterGroups interface.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>g-idhwofwofewhf****</para>
+        /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The information about parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;hz&quot;: &quot;50&quot;}</para>
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

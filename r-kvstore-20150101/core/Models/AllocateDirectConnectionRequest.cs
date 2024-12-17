@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AllocateDirectConnectionRequest : TeaModel {
         /// <summary>
-        /// The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.
+        /// <para>The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>redisdirect123</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -34,7 +39,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.
+        /// <para>The port number of the instance. Valid values: <b>1024</b> to <b>65535</b>. Default value: <b>6379</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6379</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

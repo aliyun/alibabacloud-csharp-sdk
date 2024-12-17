@@ -10,12 +10,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The display language of the **LocalName** parameter value. Valid values:
+        /// <para>The display language of the <b>LocalName</b> parameter value. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b>: Chinese</description></item>
+        /// <item><description><b>en-US</b>: English</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The default value is <b>zh-CN</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **zh-CN**: Chinese
-        /// *   **en-US**: English
-        /// 
-        /// > The default value is **zh-CN**.
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

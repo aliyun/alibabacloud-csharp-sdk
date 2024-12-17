@@ -10,23 +10,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class MigrateToOtherZoneRequest : TeaModel {
         /// <summary>
-        /// The ID of the ApsaraDB for Redis instance.
+        /// <para>The ID of the ApsaraDB for Redis instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// Specifies the time when the database is switched after data is migrated. Valid values:
+        /// <para>Specifies the time when the database is switched after data is migrated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediately</b>: immediately switched after the data is migrated.</description></item>
+        /// <item><description><b>MaintainTime</b>: switched within the maintenance window.</description></item>
+        /// <item><description><b>0</b>: immediately switched after the data is migrated.</description></item>
+        /// <item><description><b>1</b>: switched within the maintenance window.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Default value: <b>Immediately</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **Immediately**: immediately switched after the data is migrated.
-        /// *   **MaintainTime**: switched within the maintenance window.
-        /// *   **0**: immediately switched after the data is migrated.
-        /// *   **1**: switched within the maintenance window.
-        /// 
-        /// >  Default value: **Immediately**.
+        /// <b>Example:</b>
+        /// <para>Immediately</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
@@ -49,9 +56,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the destination secondary zone. You can call the [DescribeZones](~~DescribeZones~~) operation to query zone IDs.
+        /// <para>The ID of the destination secondary zone. You can call the <a href="~~DescribeZones~~">DescribeZones</a> operation to query zone IDs.</para>
+        /// <remarks>
+        /// <para> You can specify this parameter to deploy the master node and replica node in different zones to implement zone-disaster recovery. This helps withstand data center-level breakdowns.</para>
+        /// </remarks>
         /// 
-        /// >  You can specify this parameter to deploy the master node and replica node in different zones to implement zone-disaster recovery. This helps withstand data center-level breakdowns.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
         /// </summary>
         [NameInMap("SecondaryZoneId")]
         [Validation(Required=false)]
@@ -62,19 +73,27 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.</description></item>
+        /// <item><description>If the network type of the instance is VPC, this parameter is required.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > *   The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.
-        /// > *   If the network type of the instance is VPC, this parameter is required.
+        /// <b>Example:</b>
+        /// <para>vsw-bp1e7clcw529l773d****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the destination primary zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/94527.html) operation to query zone IDs.
+        /// <para>The ID of the destination primary zone. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query zone IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-g</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

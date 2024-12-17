@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// The information about the order.
+        /// <para>The information about the order.</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// Details about coupons.
+            /// <para>Details about coupons.</para>
             /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
@@ -32,28 +32,40 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public List<DescribePriceResponseBodyOrderCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyOrderCouponsCoupon : TeaModel {
                     /// <summary>
-                    /// The coupon ID.
+                    /// <para>The coupon ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>youhuiquan_promotion_option_id_for_blank</para>
                     /// </summary>
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
                     public string CouponNo { get; set; }
 
                     /// <summary>
-                    /// The description of the coupon.
+                    /// <para>The description of the coupon.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>coupondemo</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the coupon was selected.
+                    /// <para>Indicates whether the coupon was selected.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("IsSelected")]
                     [Validation(Required=false)]
                     public string IsSelected { get; set; }
 
                     /// <summary>
-                    /// The coupon name.
+                    /// <para>The coupon name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -64,7 +76,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).
+            /// <para>The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CNY</para>
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
@@ -153,14 +168,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// The discount amount of the order.
+            /// <para>The discount amount of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.21</para>
             /// </summary>
             [NameInMap("DiscountAmount")]
             [Validation(Required=false)]
             public string DiscountAmount { get; set; }
 
             /// <summary>
-            /// The service fees of the order.
+            /// <para>The service fees of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.1</para>
             /// </summary>
             [NameInMap("HandlingFeeAmount")]
             [Validation(Required=false)]
@@ -175,14 +196,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// The original price of the order.
+            /// <para>The original price of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.21</para>
             /// </summary>
             [NameInMap("OriginalAmount")]
             [Validation(Required=false)]
             public string OriginalAmount { get; set; }
 
             /// <summary>
-            /// Details about promotion rule IDs.
+            /// <para>Details about promotion rule IDs.</para>
             /// </summary>
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
@@ -195,7 +219,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// Indicates whether the discount information is displayed.
+            /// <para>Indicates whether the discount information is displayed.</para>
             /// </summary>
             [NameInMap("ShowDiscountInfo")]
             [Validation(Required=false)]
@@ -210,7 +234,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? StandPrice { get; set; }
 
             /// <summary>
-            /// The transaction price of the order.
+            /// <para>The transaction price of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("TradeAmount")]
             [Validation(Required=false)]
@@ -219,21 +246,27 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The parameters of the order. This parameter is returned when OrderParamOut is set to `true`.
+        /// <para>The parameters of the order. This parameter is returned when OrderParamOut is set to <c>true</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>String</para>
         /// </summary>
         [NameInMap("OrderParams")]
         [Validation(Required=false)]
         public string OrderParams { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3A40BE4E-1890-4972-889C-FEFA37663635</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about promotion rules.
+        /// <para>Details about promotion rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -244,21 +277,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// The name of the promotion rule.
+                /// <para>The name of the promotion rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The ID of the rule.
+                /// <para>The ID of the rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1111111111</para>
                 /// </summary>
                 [NameInMap("RuleDescId")]
                 [Validation(Required=false)]
                 public long? RuleDescId { get; set; }
 
                 /// <summary>
-                /// The title of the rule.
+                /// <para>The title of the rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -269,7 +311,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// Details about rules that match the coupon.
+        /// <para>Details about rules that match the coupon.</para>
         /// </summary>
         [NameInMap("SubOrders")]
         [Validation(Required=false)]
@@ -366,14 +408,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The discount amount of the order.
+                /// <para>The discount amount of the order.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.21</para>
                 /// </summary>
                 [NameInMap("DiscountAmount")]
                 [Validation(Required=false)]
                 public string DiscountAmount { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>r-bp1xxxxxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -562,7 +610,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The original price of the order.
+                /// <para>The original price of the order.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.21</para>
                 /// </summary>
                 [NameInMap("OriginalAmount")]
                 [Validation(Required=false)]
@@ -613,7 +664,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The rule IDs.
+                /// <para>The rule IDs.</para>
                 /// </summary>
                 [NameInMap("RuleIds")]
                 [Validation(Required=false)]
@@ -634,7 +685,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? StandPrice { get; set; }
 
                 /// <summary>
-                /// The final price of the order.
+                /// <para>The final price of the order.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("TradeAmount")]
                 [Validation(Required=false)]

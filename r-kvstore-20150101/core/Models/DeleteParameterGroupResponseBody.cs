@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteParameterGroupResponseBody : TeaModel {
         /// <summary>
-        /// The parameter template ID, which is globally unique.
+        /// <para>The parameter template ID, which is globally unique.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sys-001*****</para>
         /// </summary>
         [NameInMap("ParamGroupId")]
         [Validation(Required=false)]
         public string ParamGroupId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2BE6E619-A657-42E3-AD2D-18F8428A****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

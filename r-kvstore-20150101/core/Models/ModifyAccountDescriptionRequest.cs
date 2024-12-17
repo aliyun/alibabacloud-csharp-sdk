@@ -10,31 +10,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyAccountDescriptionRequest : TeaModel {
         /// <summary>
-        /// The description of the account.
+        /// <para>The description of the account.</para>
+        /// <list type="bullet">
+        /// <item><description>The description must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The description must be 2 to 256 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The description must start with a letter and cannot start with `http://` or `https://`.
-        /// *   The description can contain letters, digits, underscores (_), and hyphens (-).
-        /// *   The description must be 2 to 256 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testescription</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The username of the account. You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/95802.html) operation to query the username of the account.
+        /// <para>The username of the account. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>demoaccount</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

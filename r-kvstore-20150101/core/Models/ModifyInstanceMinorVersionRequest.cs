@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMinorVersionRequest : TeaModel {
         /// <summary>
-        /// The time when the minor version is updated. Valid values:
+        /// <para>The time when the minor version is updated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediately</b>: The minor version is immediately updated.</description></item>
+        /// <item><description><b>MaintainTime</b>: The minor version is updated within the maintenance window.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</para>
+        /// </remarks>
         /// 
-        /// *   **Immediately**: The minor version is immediately updated.
-        /// *   **MaintainTime**: The minor version is updated within the maintenance window.
-        /// 
-        /// >  You can call the [ModifyInstanceMaintainTime](https://help.aliyun.com/document_detail/61000.html) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+        /// <b>Example:</b>
+        /// <para>Immediately</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The minor version to which you want to update. Default value: **latest_version**.
+        /// <para>The minor version to which you want to update. Default value: <b>latest_version</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>latest_version</para>
         /// </summary>
         [NameInMap("Minorversion")]
         [Validation(Required=false)]

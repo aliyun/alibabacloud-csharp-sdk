@@ -10,31 +10,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyGlobalSecurityIPGroupRequest : TeaModel {
         /// <summary>
-        /// The IP addresses in the IP whitelist template.
+        /// <para>The IP addresses in the IP whitelist template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.168.0.1,10.10.10.10,172.16.0.1</para>
         /// </summary>
         [NameInMap("GIpList")]
         [Validation(Required=false)]
         public string GIpList { get; set; }
 
         /// <summary>
-        /// The name of the IP whitelist template. The name must meet the following requirements:
+        /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>The name must start with a letter and end with a letter or a digit.</description></item>
+        /// <item><description>The name must be 2 to 120 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The name can contain lowercase letters, digits, and underscores (_).
-        /// *   The name must start with a letter and end with a letter or a digit.
-        /// *   The name must be 2 to 120 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_123</para>
         /// </summary>
         [NameInMap("GlobalIgName")]
         [Validation(Required=false)]
         public string GlobalIgName { get; set; }
 
         /// <summary>
-        /// The ID of the IP whitelist template.
+        /// <para>The ID of the IP whitelist template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>g-zsldxfiwjmti0kcm****</para>
         /// </summary>
         [NameInMap("GlobalSecurityGroupId")]
         [Validation(Required=false)]
@@ -49,16 +56,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmyiu4ekp****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

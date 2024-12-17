@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalDistributeCacheRequest : TeaModel {
         /// <summary>
-        /// The ID of the distributed instance.
+        /// <para>The ID of the distributed instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gr-bp14rkqrhac****</para>
         /// </summary>
         [NameInMap("GlobalInstanceId")]
         [Validation(Required=false)]
@@ -25,14 +28,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return each page.
+        /// <para>The number of entries to return each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -51,7 +60,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the child instance that is attached to the distributed instance.
+        /// <para>The ID of the child instance that is attached to the distributed instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gr-bp1zcjlobkyrq****</para>
         /// </summary>
         [NameInMap("SubInstanceId")]
         [Validation(Required=false)]

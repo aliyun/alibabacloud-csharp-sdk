@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateAccountResponseBody : TeaModel {
         /// <summary>
-        /// The name of the account.
+        /// <para>The name of the account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demoaccount</para>
         /// </summary>
         [NameInMap("AcountName")]
         [Validation(Required=false)]
         public string AcountName { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABAF95F6-35C1-4177-AF3A-70969EBD****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

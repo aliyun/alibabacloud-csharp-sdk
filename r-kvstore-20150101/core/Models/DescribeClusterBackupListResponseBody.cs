@@ -10,96 +10,128 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeClusterBackupListResponseBody : TeaModel {
         /// <summary>
-        /// The backup sets of the instance. An instance backup contains the backup sets of all nodes in the instance.
+        /// <para>The backup sets of the instance. An instance backup contains the backup sets of all nodes in the instance.</para>
         /// </summary>
         [NameInMap("ClusterBackups")]
         [Validation(Required=false)]
         public List<DescribeClusterBackupListResponseBodyClusterBackups> ClusterBackups { get; set; }
         public class DescribeClusterBackupListResponseBodyClusterBackups : TeaModel {
             /// <summary>
-            /// The backup sets of all nodes in the instance.
+            /// <para>The backup sets of all nodes in the instance.</para>
             /// </summary>
             [NameInMap("Backups")]
             [Validation(Required=false)]
             public List<DescribeClusterBackupListResponseBodyClusterBackupsBackups> Backups { get; set; }
             public class DescribeClusterBackupListResponseBodyClusterBackupsBackups : TeaModel {
                 /// <summary>
-                /// The public download URL of the backup file.
+                /// <para>The public download URL of the backup file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb">http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb</a></para>
                 /// </summary>
                 [NameInMap("BackupDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupDownloadURL { get; set; }
 
                 /// <summary>
-                /// The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2024-01-09T17:21:57</para>
                 /// </summary>
                 [NameInMap("BackupEndTime")]
                 [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
 
                 /// <summary>
-                /// The ID of the backup file.
+                /// <para>The ID of the backup file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>514645788</para>
                 /// </summary>
                 [NameInMap("BackupId")]
                 [Validation(Required=false)]
                 public string BackupId { get; set; }
 
                 /// <summary>
-                /// The internal download URL of the backup file.
+                /// <para>The internal download URL of the backup file.</para>
+                /// <remarks>
+                /// <para> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</para>
+                /// </remarks>
                 /// 
-                /// >  You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.
+                /// <b>Example:</b>
+                /// <para><a href="http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote-internal.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb">http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote-internal.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb</a></para>
                 /// </summary>
                 [NameInMap("BackupIntranetDownloadURL")]
                 [Validation(Required=false)]
                 public string BackupIntranetDownloadURL { get; set; }
 
                 /// <summary>
-                /// The backup name.
+                /// <para>The backup name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hins100322105_data_20240110012135.rdb</para>
                 /// </summary>
                 [NameInMap("BackupName")]
                 [Validation(Required=false)]
                 public string BackupName { get; set; }
 
                 /// <summary>
-                /// The size of the backup file. Unit: bytes.
+                /// <para>The size of the backup file. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
                 /// </summary>
                 [NameInMap("BackupSize")]
                 [Validation(Required=false)]
                 public string BackupSize { get; set; }
 
                 /// <summary>
-                /// The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+                /// <para>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2024-01-09T17:21:30Z</para>
                 /// </summary>
                 [NameInMap("BackupStartTime")]
                 [Validation(Required=false)]
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// The status of the backup. Valid values:
+                /// <para>The status of the backup. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>OK</b></description></item>
+                /// <item><description><b>ERROR</b></description></item>
+                /// </list>
                 /// 
-                /// *   **OK**
-                /// *   **ERROR**
+                /// <b>Example:</b>
+                /// <para>OK</para>
                 /// </summary>
                 [NameInMap("BackupStatus")]
                 [Validation(Required=false)]
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// The database engine. The return value is **redis**.
+                /// <para>The database engine. The return value is <b>redis</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>redis</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The additional information.
+                /// <para>The additional information.</para>
                 /// </summary>
                 [NameInMap("ExtraInfo")]
                 [Validation(Required=false)]
                 public DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo ExtraInfo { get; set; }
                 public class DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo : TeaModel {
                     /// <summary>
-                    /// The engine version.
+                    /// <para>The engine version.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5.0</para>
                     /// </summary>
                     [NameInMap("CustinsDbVersion")]
                     [Validation(Required=false)]
@@ -108,17 +140,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The name of the instance.
+                /// <para>The name of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hins100322105_data_20240108012127.rdb</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the backup set is available. Valid values:
+                /// <para>Indicates whether the backup set is available. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: unavailable</description></item>
+                /// <item><description><b>1</b>: available</description></item>
+                /// </list>
                 /// 
-                /// *   **0**: unavailable
-                /// *   **1**: available
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("IsAvail")]
                 [Validation(Required=false)]
@@ -131,67 +170,95 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// The end time of the backup.
+            /// <para>The end time of the backup.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-01-10T17:21:55Z</para>
             /// </summary>
             [NameInMap("ClusterBackupEndTime")]
             [Validation(Required=false)]
             public string ClusterBackupEndTime { get; set; }
 
             /// <summary>
-            /// The ID of the backup set.
+            /// <para>The ID of the backup set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cb-zmdqj2m3xyxjtdt0</para>
             /// </summary>
             [NameInMap("ClusterBackupId")]
             [Validation(Required=false)]
             public string ClusterBackupId { get; set; }
 
             /// <summary>
-            /// The backup mode.
+            /// <para>The backup mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Automated</para>
             /// </summary>
             [NameInMap("ClusterBackupMode")]
             [Validation(Required=false)]
             public string ClusterBackupMode { get; set; }
 
             /// <summary>
-            /// The size of the backup set.
+            /// <para>The size of the backup set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2048</para>
             /// </summary>
             [NameInMap("ClusterBackupSize")]
             [Validation(Required=false)]
             public string ClusterBackupSize { get; set; }
 
             /// <summary>
-            /// The start time of the backup.
+            /// <para>The start time of the backup.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-01-10T17:21:25Z</para>
             /// </summary>
             [NameInMap("ClusterBackupStartTime")]
             [Validation(Required=false)]
             public string ClusterBackupStartTime { get; set; }
 
             /// <summary>
-            /// The status of the backup set.
+            /// <para>The status of the backup set.</para>
+            /// <list type="bullet">
+            /// <item><description>OK</description></item>
+            /// <item><description>RUNNING</description></item>
+            /// <item><description>Failed</description></item>
+            /// </list>
             /// 
-            /// *   OK
-            /// *   RUNNING
-            /// *   Failed
+            /// <b>Example:</b>
+            /// <para>OK</para>
             /// </summary>
             [NameInMap("ClusterBackupStatus")]
             [Validation(Required=false)]
             public string ClusterBackupStatus { get; set; }
 
             /// <summary>
-            /// Indicates whether the backup set is valid. A value of 0 indicates that node-level backups failed or have not been completed.
+            /// <para>Indicates whether the backup set is valid. A value of 0 indicates that node-level backups failed or have not been completed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("IsAvail")]
             [Validation(Required=false)]
             public int? IsAvail { get; set; }
 
             /// <summary>
-            /// The backup progress. The system displays only the progress of running backup tasks.
+            /// <para>The backup progress. The system displays only the progress of running backup tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100%</para>
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
 
             /// <summary>
-            /// The memory size of a single node during a full backup. Unit: MB.
+            /// <para>The memory size of a single node during a full backup. Unit: MB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024</para>
             /// </summary>
             [NameInMap("ShardClassMemory")]
             [Validation(Required=false)]
@@ -200,55 +267,80 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// This parameter does not take effect. Ignore this parameter.
+        /// <para>This parameter does not take effect. Ignore this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100000</para>
         /// </summary>
         [NameInMap("FreeSize")]
         [Validation(Required=false)]
         public long? FreeSize { get; set; }
 
         /// <summary>
-        /// The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.
+        /// <para>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</para>
+        /// <remarks>
+        /// <para> The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid full backups of the instance.</para>
+        /// </remarks>
         /// 
-        /// >  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid full backups of the instance.
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("FullStorageSize")]
         [Validation(Required=false)]
         public long? FullStorageSize { get; set; }
 
         /// <summary>
-        /// The size of the log backup file of the instance. Unit: bytes. This parameter is valid only when flashback is enabled.
+        /// <para>The size of the log backup file of the instance. Unit: bytes. This parameter is valid only when flashback is enabled.</para>
+        /// <remarks>
+        /// <para> The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid log backups of the instance.</para>
+        /// </remarks>
         /// 
-        /// >  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid log backups of the instance.
+        /// <b>Example:</b>
+        /// <para>5000</para>
         /// </summary>
         [NameInMap("LogStorageSize")]
         [Validation(Required=false)]
         public long? LogStorageSize { get; set; }
 
         /// <summary>
-        /// The number of entries to return per page. Valid values: 1 to 100.
-        /// Default value: 30.
-        /// >If you specify this parameter, PageSize and PageNumber are unavailable.
+        /// <para>The number of entries to return per page. Valid values: 1 to 100.
+        /// Default value: 30.</para>
+        /// <remarks>
+        /// <para>If you specify this parameter, PageSize and PageNumber are unavailable.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The maximum number of entries returned per page.
+        /// <para>The maximum number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C009DA42-3B19-5B81-963D-1509DE2408DD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

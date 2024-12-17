@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeActiveOperationTaskRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the historical tasks. Default value: 0. Valid values:
+        /// <para>Specifies whether to return the historical tasks. Default value: 0. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: returns the current task.</description></item>
+        /// <item><description><b>1</b>: returns the historical tasks.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: returns the current task.
-        /// *   **1**: returns the historical tasks.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("IsHistory")]
         [Validation(Required=false)]
@@ -28,25 +32,34 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.
+        /// <para>The number of entries to return on each page. Specify a value greater than <b>10</b>. Default value: <b>30</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the O&M task. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+        /// <para>The region ID of the O&amp;M task. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <remarks>
+        /// <para>A value of <b>all</b> indicates all region IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > A value of **all** indicates all region IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -65,13 +78,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The type of the O\\&M task. Valid values:
+        /// <para>The type of the O\&amp;M task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>rds_apsaradb_ha</b>: master-replica switchover</description></item>
+        /// <item><description><b>rds_apsaradb_transfer</b>: instance migration</description></item>
+        /// <item><description><b>rds_apsaradb_upgrade</b>: minor version update</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **rds_apsaradb_ha**: master-replica switchover
-        /// *   **rds_apsaradb_transfer**: instance migration
-        /// *   **rds_apsaradb_upgrade**: minor version update
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>all</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

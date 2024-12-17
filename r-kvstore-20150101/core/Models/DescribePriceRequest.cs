@@ -10,111 +10,150 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribePriceRequest : TeaModel {
         /// <summary>
-        /// The extended information such as the promotional event ID and business information.
+        /// <para>The extended information such as the promotional event ID and business information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>000000000000</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: MB. This parameter is used only to query ApsaraDB for Redis Community Edition instances that are deployed in classic mode. We recommend that you use the **InstanceClass** parameter to specify an exact instance type.
+        /// <para>The storage capacity of the instance. Unit: MB. This parameter is used only to query ApsaraDB for Redis Community Edition instances that are deployed in classic mode. We recommend that you use the <b>InstanceClass</b> parameter to specify an exact instance type.</para>
+        /// <remarks>
+        /// <para> If you specify the <b>InstanceClass</b> parameter, you do not need to specify the Capacity parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If you specify the **InstanceClass** parameter, you do not need to specify the Capacity parameter.
+        /// <b>Example:</b>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("Capacity")]
         [Validation(Required=false)]
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PostPaid</b> (default): pay-as-you-go</description></item>
+        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// </list>
         /// 
-        /// *   **PostPaid** (default): pay-as-you-go
-        /// *   **PrePaid**: subscription
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.
+        /// <para>The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// Specifies whether to forcefully change the configurations of the instance. Valid values:
+        /// <para>Specifies whether to forcefully change the configurations of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: forcefully changes the configurations.</description></item>
+        /// <item><description><b>true</b> (default): does not forcefully change the configurations.</description></item>
+        /// </list>
         /// 
-        /// *   **false**: forcefully changes the configurations.
-        /// *   **true** (default): does not forcefully change the configurations.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ForceUpgrade")]
         [Validation(Required=false)]
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// The instance type.
+        /// <para>The instance type.</para>
+        /// <para><b>To view the instance type, perform the following steps:</b></para>
+        /// <ol>
+        /// <item><description>In the <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a> topic, click the link in the <b>Reference</b> column corresponding to the instance type that you want to view.</description></item>
+        /// <item><description>In the instance type table of the page that appears, find the instance type in the <b>InstanceClass</b> column.</description></item>
+        /// </ol>
+        /// <para>When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.</para>
+        /// <list type="bullet">
+        /// <item><description>ApsaraDB for Redis cluster instances: redis.cluster.sharding.common.ce</description></item>
+        /// <item><description>Tair DRAM-based cluster instances: tair.rdb.cluster.sharding.common</description></item>
+        /// <item><description>Tair persistent memory-based cluster instances: tair.scm.cluster.sharding.common.ce</description></item>
+        /// </list>
         /// 
-        /// **To view the instance type, perform the following steps:**
-        /// 
-        /// 1.  In the [Overview](https://help.aliyun.com/document_detail/26350.html) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
-        /// 2.  In the instance type table of the page that appears, find the instance type in the **InstanceClass** column.
-        /// 
-        /// When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.
-        /// 
-        /// *   ApsaraDB for Redis cluster instances: redis.cluster.sharding.common.ce
-        /// *   Tair DRAM-based cluster instances: tair.rdb.cluster.sharding.common
-        /// *   Tair persistent memory-based cluster instances: tair.scm.cluster.sharding.common.ce
+        /// <b>Example:</b>
+        /// <para>redis.master.small.default</para>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> This parameter is required when the <b>OrderType</b> parameter is set to <b>UPGRADE</b> or <b>RENEW</b>.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when the **OrderType** parameter is set to **UPGRADE** or **RENEW**.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// A JSON string that contains information about one or more cloud-native cluster instances. For more information, see the "Additional description of the Instances parameter" section of this topic.
+        /// <para>A JSON string that contains information about one or more cloud-native cluster instances. For more information, see the &quot;Additional description of the Instances parameter&quot; section of this topic.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instances=[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;InstanceClass&quot;: &quot;redis.master.small.default&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;,&quot;Capacity&quot;: &quot;4096&quot;}]</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public string Instances { get; set; }
 
         /// <summary>
-        /// The node type. Valid values:
+        /// <para>The node type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>STAND_ALONE</b>: standalone</description></item>
+        /// <item><description><b>MASTER_SLAVE</b> (default): high availability (master-replica)</description></item>
+        /// </list>
         /// 
-        /// *   **STAND_ALONE**: standalone
-        /// *   **MASTER_SLAVE** (default): high availability (master-replica)
+        /// <b>Example:</b>
+        /// <para>MASTER_SLAVE</para>
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
 
         /// <summary>
-        /// Specifies whether to return parameters related to the order. Valid values:
+        /// <para>Specifies whether to return parameters related to the order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
         /// 
-        /// *   **false** (default)
-        /// *   **true**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("OrderParamOut")]
         [Validation(Required=false)]
         public string OrderParamOut { get; set; }
 
         /// <summary>
-        /// The order type. Valid values:
+        /// <para>The order type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BUY</b>: The order is used to purchase instances.</description></item>
+        /// <item><description><b>UPGRADE</b>: The order is used to change the configurations of instances.</description></item>
+        /// <item><description><b>RENEW</b>: The order is used to renew instances.</description></item>
+        /// <item><description><b>CONVERT</b>: The order is used to change the billing methods of instances.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **BUY**: The order is used to purchase instances.
-        /// *   **UPGRADE**: The order is used to change the configurations of instances.
-        /// *   **RENEW**: The order is used to renew instances.
-        /// *   **CONVERT**: The order is used to change the billing methods of instances.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>BUY</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
@@ -129,21 +168,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**.
+        /// <para>The subscription duration. Unit: months. Valid values: <b>1</b>, 2, 3, 4, 5, 6, 7, 8, <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public long? Period { get; set; }
 
         /// <summary>
-        /// The number of instances that you want to purchase. Valid values: **1** to **30**. Default value: **1**.
+        /// <para>The number of instances that you want to purchase. Valid values: <b>1</b> to <b>30</b>. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Quantity")]
         [Validation(Required=false)]
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61012.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -166,7 +214,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance. You can call the [DescribeZones](https://help.aliyun.com/document_detail/94527.html) operation to query the most recent zone list.
+        /// <para>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-e</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

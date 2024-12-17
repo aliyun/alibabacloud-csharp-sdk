@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
         /// <summary>
-        /// The name of the account. You can call the [DescribeAccounts](~~DescribeAccounts~~) operation to obtain the name of the account.
+        /// <para>The name of the account. You can call the <a href="~~DescribeAccounts~~">DescribeAccounts</a> operation to obtain the name of the account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>demoaccount</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The permissions of the account. Default value: RoleReadWrite. Valid values:
+        /// <para>The permissions of the account. Default value: RoleReadWrite. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RoleReadOnly: The account has the read-only permissions.</description></item>
+        /// <item><description>RoleReadWrite: The account has the read and write permissions.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   RoleReadOnly: The account has the read-only permissions.
-        /// *   RoleReadWrite: The account has the read and write permissions.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>RoleReadWrite</para>
         /// </summary>
         [NameInMap("AccountPrivilege")]
         [Validation(Required=false)]
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// The ID of the instance to which the account belongs.
+        /// <para>The ID of the instance to which the account belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

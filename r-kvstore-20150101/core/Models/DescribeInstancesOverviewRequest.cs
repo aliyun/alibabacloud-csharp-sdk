@@ -10,100 +10,135 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstancesOverviewRequest : TeaModel {
         /// <summary>
-        /// The architecture of the instance. Valid values:
+        /// <para>The architecture of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cluster</b>: cluster architecture</description></item>
+        /// <item><description><b>standard</b>: standard architecture</description></item>
+        /// <item><description><b>rwsplit</b>: read/write splitting architecture</description></item>
+        /// </list>
         /// 
-        /// *   **cluster**: cluster architecture
-        /// *   **standard**: standard architecture
-        /// *   **rwsplit**: read/write splitting architecture
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("ArchitectureType")]
         [Validation(Required=false)]
         public string ArchitectureType { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// </list>
         /// 
-        /// *   **PrePaid**: subscription
-        /// *   **PostPaid**: pay-as-you-go
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// The edition of the instance. Valid values:
+        /// <para>The edition of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Community</b>: Community Edition</description></item>
+        /// <item><description><b>Enterprise</b>: Enhanced Edition (Tair)</description></item>
+        /// </list>
         /// 
-        /// *   **Community**: Community Edition
-        /// *   **Enterprise**: Enhanced Edition (Tair)
+        /// <b>Example:</b>
+        /// <para>Enterprise</para>
         /// </summary>
         [NameInMap("EditionType")]
         [Validation(Required=false)]
         public string EditionType { get; set; }
 
         /// <summary>
-        /// The database engine version of the instance.
+        /// <para>The database engine version of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. For more information, see [Instance types](https://help.aliyun.com/document_detail/107984.html).
+        /// <para>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>redis.master.small.default</para>
         /// </summary>
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// The IDs of instances.
+        /// <para>The IDs of instances.</para>
+        /// <remarks>
+        /// <para>By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).</para>
+        /// </remarks>
         /// 
-        /// > By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// The state of the instance. Valid values:
+        /// <para>The state of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b>: The instance is normal.</description></item>
+        /// <item><description><b>Creating</b>: The instance is being created.</description></item>
+        /// <item><description><b>Changing</b>: The configurations of the instance are being changed.</description></item>
+        /// <item><description><b>Inactive</b>: The instance is disabled.</description></item>
+        /// <item><description><b>Flushing</b>: The instance is being released.</description></item>
+        /// <item><description><b>Released</b>: The instance is released.</description></item>
+        /// <item><description><b>Transforming</b>: The billing method of the instance is being changed.</description></item>
+        /// <item><description><b>Unavailable</b>: The instance is unavailable.</description></item>
+        /// <item><description><b>Error</b>: The instance failed to be created.</description></item>
+        /// <item><description><b>Migrating</b>: The instance is being migrated.</description></item>
+        /// <item><description><b>BackupRecovering</b>: The instance is being restored from a backup.</description></item>
+        /// <item><description><b>MinorVersionUpgrading</b>: The minor version of the instance is being updated.</description></item>
+        /// <item><description><b>NetworkModifying</b>: The network type of the instance is being changed.</description></item>
+        /// <item><description><b>SSLModifying</b>: The SSL certificate of the instance is being changed.</description></item>
+        /// <item><description><b>MajorVersionUpgrading</b>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</para>
+        /// </remarks>
         /// 
-        /// *   **Normal**: The instance is normal.
-        /// *   **Creating**: The instance is being created.
-        /// *   **Changing**: The configurations of the instance are being changed.
-        /// *   **Inactive**: The instance is disabled.
-        /// *   **Flushing**: The instance is being released.
-        /// *   **Released**: The instance is released.
-        /// *   **Transforming**: The billing method of the instance is being changed.
-        /// *   **Unavailable**: The instance is unavailable.
-        /// *   **Error**: The instance failed to be created.
-        /// *   **Migrating**: The instance is being migrated.
-        /// *   **BackupRecovering**: The instance is being restored from a backup.
-        /// *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
-        /// *   **NetworkModifying**: The network type of the instance is being changed.
-        /// *   **SSLModifying**: The SSL certificate of the instance is being changed.
-        /// *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
-        /// 
-        /// > For more information about instance states, see [Instance states and impacts](https://help.aliyun.com/document_detail/200740.html).
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("InstanceStatus")]
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// The category of the instance. Valid values:
+        /// <para>The category of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Tair</b></description></item>
+        /// <item><description><b>Redis</b></description></item>
+        /// <item><description><b>Memcache</b></description></item>
+        /// </list>
         /// 
-        /// *   **Tair**
-        /// *   **Redis**
-        /// *   **Memcache**
+        /// <b>Example:</b>
+        /// <para>Redis</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Valid values:
+        /// <para>The network type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CLASSIC</b>: classic network</description></item>
+        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC)</description></item>
+        /// </list>
         /// 
-        /// *   **CLASSIC**: classic network
-        /// *   **VPC**: Virtual Private Cloud (VPC)
+        /// <b>Example:</b>
+        /// <para>CLASSIC</para>
         /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -118,23 +153,33 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The private IP address of the instance.
+        /// <para>The private IP address of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.16.49.***</para>
         /// </summary>
         [NameInMap("PrivateIp")]
         [Validation(Required=false)]
         public string PrivateIp { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instances you want to query reside. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/61012.html) operation to query the most recent region list.
+        /// <para>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instances you want to query belong.
+        /// <para>The ID of the resource group to which the instances you want to query belong.</para>
+        /// <remarks>
+        /// <para>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// </remarks>
         /// 
-        /// > You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation. For more information, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
+        /// <b>Example:</b>
+        /// <para>rg-acfmyiu4ekp****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -149,7 +194,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The keyword used for fuzzy search. The keyword can be based on an instance ID or an instance description.
+        /// <para>The keyword used for fuzzy search. The keyword can be based on an instance ID or an instance description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apitest</para>
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
@@ -160,21 +208,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-bp1e7clcw529l773d****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// The ID of the VPC.
+        /// <para>The ID of the VPC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1nme44gek34slfc****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// The zone ID of the instance.
+        /// <para>The zone ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

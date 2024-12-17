@@ -18,9 +18,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the parameter template.
+        /// <para>The ID of the parameter template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rpg-sys-00*****</para>
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]

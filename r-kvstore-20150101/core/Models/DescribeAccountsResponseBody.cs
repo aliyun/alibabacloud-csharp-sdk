@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
         /// <summary>
-        /// Details about returned accounts of the instance.
+        /// <para>Details about returned accounts of the instance.</para>
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -21,41 +21,55 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
                 /// <summary>
-                /// The description of the account.
+                /// <para>The description of the account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testdec</para>
                 /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
                 public string AccountDescription { get; set; }
 
                 /// <summary>
-                /// The name of the account.
+                /// <para>The name of the account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demoaccount</para>
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// The state of the account. Valid values:
+                /// <para>The state of the account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Unavailable</b>: The account is unavailable.</description></item>
+                /// <item><description><b>Available</b>: The account is available.</description></item>
+                /// </list>
                 /// 
-                /// *   **Unavailable**: The account is unavailable.
-                /// *   **Available**: The account is available.
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
                 /// <summary>
-                /// The type of the account. Valid values:
+                /// <para>The type of the account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Normal</b>: standard account</description></item>
+                /// <item><description><b>Super</b>: super account</description></item>
+                /// </list>
                 /// 
-                /// *   **Normal**: standard account
-                /// *   **Super**: super account
+                /// <b>Example:</b>
+                /// <para>Normal</para>
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// Details about account permissions.
+                /// <para>Details about account permissions.</para>
                 /// </summary>
                 [NameInMap("DatabasePrivileges")]
                 [Validation(Required=false)]
@@ -66,10 +80,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     public List<DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege> DatabasePrivilege { get; set; }
                     public class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege : TeaModel {
                         /// <summary>
-                        /// The permission of the account. Default value: RoleReadWrite. Valid values:
+                        /// <para>The permission of the account. Default value: RoleReadWrite. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>RoleReadOnly</b>: The account has the read-only permissions.</description></item>
+                        /// <item><description><b>RoleReadWrite</b>: The account has the read and write permissions.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **RoleReadOnly**: The account has the read-only permissions.
-                        /// *   **RoleReadWrite**: The account has the read and write permissions.
+                        /// <b>Example:</b>
+                        /// <para>RoleReadWrite</para>
                         /// </summary>
                         [NameInMap("AccountPrivilege")]
                         [Validation(Required=false)]
@@ -80,7 +98,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>r-bp10noxlhcoim2****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -91,7 +112,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6C9E114C-217C-4118-83C0-B4070222****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

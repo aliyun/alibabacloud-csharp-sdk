@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The end time of the order.
+        /// <para>The end time of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-02-19T00:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the order.
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111111111111111</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2222245-222A-4155-9349-E22222****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

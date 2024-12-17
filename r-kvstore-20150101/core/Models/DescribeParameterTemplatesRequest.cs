@@ -10,37 +10,47 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
-        /// The architecture of the instance. For more information, see [Overview](https://help.aliyun.com/document_detail/86132.html). Valid values:
+        /// <para>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Overview</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>logic</b>: The instance is a cluster master-replica instance or a read/write splitting instance.</description></item>
+        /// <item><description><b>normal</b>: The instance is a standard master-replica instance.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.
-        /// *   **normal**: The instance is a standard master-replica instance.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>logic</para>
         /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// The database engine that is run on the instance. Set the value to **Redis**.
+        /// <para>The database engine that is run on the instance. Set the value to <b>Redis</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Redis</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The major version that is run on the instance. Valid values: **2.8**, **4.0**, and **5.0**.
+        /// <para>The major version that is run on the instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the IDs of instances.
+        /// <para>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the IDs of instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -55,9 +65,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the IDs of resource groups.
+        /// <para>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</para>
+        /// <remarks>
+        /// <para> You can also query the ID of a resource group in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// </remarks>
         /// 
-        /// >  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).
+        /// <b>Example:</b>
+        /// <para>rg-acfmyiu4ekp****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

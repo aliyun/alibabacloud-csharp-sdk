@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyDBInstanceConnectionStringResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1790D68A-465C-44E3-BC24-9732652961F9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,45 +10,62 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AddShardingNodeRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Renewal</a>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The default value is <b>true</b>.</para>
+        /// </remarks>
         /// 
-        /// *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-        /// *   **false**: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see [Renewal](https://help.aliyun.com/document_detail/26352.html).
-        /// 
-        /// > The default value is **true**.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The business information. This is an additional parameter.
+        /// <para>The business information. This is an additional parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>000000000</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// The ID of the coupon.
+        /// <para>The ID of the coupon.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable forced transmission during a configuration change. Valid values:
+        /// <para>Specifies whether to enable forced transmission during a configuration change. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</description></item>
+        /// <item><description><b>true</b>: The system skips the version check and directly performs the configuration change.</description></item>
+        /// </list>
         /// 
-        /// *   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.
-        /// *   **true**: The system skips the version check and directly performs the configuration change.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ForceTrans")]
         [Validation(Required=false)]
         public bool? ForceTrans { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -78,23 +92,33 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The number of data shards that you want to add. Default value: **1**.
+        /// <para>The number of data shards that you want to add. Default value: <b>1</b>.</para>
+        /// <remarks>
+        /// <para> The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.</para>
+        /// </remarks>
         /// 
-        /// >  The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.
+        /// <para>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SDK</para>
         /// </summary>
         [NameInMap("SourceBiz")]
         [Validation(Required=false)]
         public string SourceBiz { get; set; }
 
         /// <summary>
-        /// The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.
+        /// <para>The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-bp1e7clcw529l773d****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

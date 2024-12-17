@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMinorVersionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>28761557-0B33-41DF-AEEB-322DFF96****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
