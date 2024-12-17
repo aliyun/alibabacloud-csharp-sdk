@@ -1,3 +1,10 @@
+2024-12-17 Version: 1.5.1
+- Update API CreateIdentityProvider: add param LogoUrl.
+- Update API GetIdentityProvider: update response param.
+- Update API ListIdentityProviders: update response param.
+- Update API UpdateIdentityProvider: add param LogoUrl.
+
+
 2024-12-17 Version: 1.5.0
 - Support API CreateIdentityProvider.
 - Support API DeleteIdentityProvider.

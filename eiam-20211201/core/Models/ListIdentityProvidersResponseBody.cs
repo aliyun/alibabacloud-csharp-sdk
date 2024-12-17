@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string LockReason { get; set; }
 
+            [NameInMap("LogoUrl")]
+            [Validation(Required=false)]
+            public string LogoUrl { get; set; }
+
             /// <summary>
             /// <para>IDaaS EIAM 是否支持UD同步</para>
             /// 
