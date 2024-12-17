@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeInstanceForIsvResponseBody : TeaModel {
+        [NameInMap("ActiveAddress")]
+        [Validation(Required=false)]
+        public string ActiveAddress { get; set; }
+
+        [NameInMap("AppJson")]
+        [Validation(Required=false)]
+        public string AppJson { get; set; }
+
+        [NameInMap("AutoRenewal")]
+        [Validation(Required=false)]
+        public string AutoRenewal { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1570634021000</para>
@@ -45,6 +57,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string ExtendJson { get; set; }
 
+        [NameInMap("HostJson")]
+        [Validation(Required=false)]
+        public string HostJson { get; set; }
+
+        [NameInMap("ImageJson")]
+        [Validation(Required=false)]
+        public string ImageJson { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1551111111</para>
@@ -60,6 +80,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [NameInMap("IsTrial")]
         [Validation(Required=false)]
         public bool? IsTrial { get; set; }
+
+        [NameInMap("LicenseCode")]
+        [Validation(Required=false)]
+        public string LicenseCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
