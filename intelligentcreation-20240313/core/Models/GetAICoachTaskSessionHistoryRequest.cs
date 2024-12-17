@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class GetAICoachTaskSessionHistoryRequest : TeaModel {
+        [NameInMap("pageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>111</para>

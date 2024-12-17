@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class ListAnchorRequest : TeaModel {
+        [NameInMap("anchorCategory")]
+        [Validation(Required=false)]
+        public string AnchorCategory { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>PUBLIC_MODEL</para>

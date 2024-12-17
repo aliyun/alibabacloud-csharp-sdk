@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<GetAICoachTaskSessionHistoryResponseBodyConversationList> ConversationList { get; set; }
         public class GetAICoachTaskSessionHistoryResponseBodyConversationList : TeaModel {
+            [NameInMap("audioUrl")]
+            [Validation(Required=false)]
+            public string AudioUrl { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
+            [NameInMap("recordId")]
+            [Validation(Required=false)]
+            public string RecordId { get; set; }
 
             [NameInMap("role")]
             [Validation(Required=false)]
@@ -70,6 +78,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

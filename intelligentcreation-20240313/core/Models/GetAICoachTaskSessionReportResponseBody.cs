@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string EvaluationResult { get; set; }
 
+        [NameInMap("feedback")]
+        [Validation(Required=false)]
+        public bool? Feedback { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</para>

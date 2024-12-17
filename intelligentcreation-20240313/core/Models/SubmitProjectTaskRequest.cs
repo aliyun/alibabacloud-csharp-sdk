@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [Validation(Required=false)]
                 public SubmitProjectTaskRequestFramesLayersMaterial Material { get; set; }
                 public class SubmitProjectTaskRequestFramesLayersMaterial : TeaModel {
+                    [NameInMap("anchorStyleLevel")]
+                    [Validation(Required=false)]
+                    public string AnchorStyleLevel { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>video/mp4</para>
