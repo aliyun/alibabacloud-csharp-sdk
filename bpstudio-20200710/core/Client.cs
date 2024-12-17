@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.BPStudio20200710
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "BPStudio";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("bpstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -37,13 +40,21 @@ namespace AlibabaCloud.SDK.BPStudio20200710
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary BillingApplication
-         *
-         * @param request BillingApplicationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BillingApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BillingApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BillingApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BillingApplicationResponse
+        /// </returns>
         public BillingApplicationResponse BillingApplicationWithOptions(BillingApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,16 +87,31 @@ namespace AlibabaCloud.SDK.BPStudio20200710
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<BillingApplicationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BillingApplicationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BillingApplicationResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary BillingApplication
-         *
-         * @param request BillingApplicationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BillingApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BillingApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BillingApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BillingApplicationResponse
+        /// </returns>
         public async Task<BillingApplicationResponse> BillingApplicationWithOptionsAsync(BillingApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -118,40 +144,67 @@ namespace AlibabaCloud.SDK.BPStudio20200710
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<BillingApplicationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BillingApplicationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BillingApplicationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary BillingApplication
-         *
-         * @param request BillingApplicationRequest
-         * @return BillingApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BillingApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BillingApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BillingApplicationResponse
+        /// </returns>
         public BillingApplicationResponse BillingApplication(BillingApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BillingApplicationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary BillingApplication
-         *
-         * @param request BillingApplicationRequest
-         * @return BillingApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BillingApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BillingApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BillingApplicationResponse
+        /// </returns>
         public async Task<BillingApplicationResponse> BillingApplicationAsync(BillingApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BillingApplicationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 分页查询部署清单
-         *
-         * @param request GetDeployDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeployDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询部署清单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeployDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeployDetailResponse
+        /// </returns>
         public GetDeployDetailResponse GetDeployDetailWithOptions(GetDeployDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -204,16 +257,31 @@ namespace AlibabaCloud.SDK.BPStudio20200710
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDeployDetailResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDeployDetailResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDeployDetailResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 分页查询部署清单
-         *
-         * @param request GetDeployDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDeployDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询部署清单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeployDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeployDetailResponse
+        /// </returns>
         public async Task<GetDeployDetailResponse> GetDeployDetailWithOptionsAsync(GetDeployDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -266,27 +334,46 @@ namespace AlibabaCloud.SDK.BPStudio20200710
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetDeployDetailResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDeployDetailResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDeployDetailResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary 分页查询部署清单
-         *
-         * @param request GetDeployDetailRequest
-         * @return GetDeployDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询部署清单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeployDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeployDetailResponse
+        /// </returns>
         public GetDeployDetailResponse GetDeployDetail(GetDeployDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDeployDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 分页查询部署清单
-         *
-         * @param request GetDeployDetailRequest
-         * @return GetDeployDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询部署清单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeployDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeployDetailResponse
+        /// </returns>
         public async Task<GetDeployDetailResponse> GetDeployDetailAsync(GetDeployDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
