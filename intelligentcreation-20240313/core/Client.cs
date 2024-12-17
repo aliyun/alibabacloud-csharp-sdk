@@ -358,6 +358,162 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量查询文案</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchQueryIndividuationTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryIndividuationTextResponse
+        /// </returns>
+        public BatchQueryIndividuationTextResponse BatchQueryIndividuationTextWithOptions(BatchQueryIndividuationTextRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchQueryIndividuationTextShrinkRequest request = new BatchQueryIndividuationTextShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TextIdList))
+            {
+                request.TextIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TextIdList, "textIdList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextIdListShrink))
+            {
+                query["textIdList"] = request.TextIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchQueryIndividuationText",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/batchQueryText",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchQueryIndividuationTextResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchQueryIndividuationTextResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询文案</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchQueryIndividuationTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryIndividuationTextResponse
+        /// </returns>
+        public async Task<BatchQueryIndividuationTextResponse> BatchQueryIndividuationTextWithOptionsAsync(BatchQueryIndividuationTextRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchQueryIndividuationTextShrinkRequest request = new BatchQueryIndividuationTextShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TextIdList))
+            {
+                request.TextIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TextIdList, "textIdList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextIdListShrink))
+            {
+                query["textIdList"] = request.TextIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchQueryIndividuationText",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/batchQueryText",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchQueryIndividuationTextResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchQueryIndividuationTextResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询文案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchQueryIndividuationTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryIndividuationTextResponse
+        /// </returns>
+        public BatchQueryIndividuationTextResponse BatchQueryIndividuationText(BatchQueryIndividuationTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchQueryIndividuationTextWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询文案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchQueryIndividuationTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryIndividuationTextResponse
+        /// </returns>
+        public async Task<BatchQueryIndividuationTextResponse> BatchQueryIndividuationTextAsync(BatchQueryIndividuationTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchQueryIndividuationTextWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>检查会话状态</para>
         /// </summary>
         /// 
@@ -982,6 +1138,182 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAnchorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnchorResponse
+        /// </returns>
+        public CreateAnchorResponse CreateAnchorWithOptions(CreateAnchorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnchorMaterialName))
+            {
+                body["anchorMaterialName"] = request.AnchorMaterialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverUrl))
+            {
+                body["coverUrl"] = request.CoverUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalHumanType))
+            {
+                body["digitalHumanType"] = request.DigitalHumanType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseScene))
+            {
+                body["useScene"] = request.UseScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnchor",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/anchorOpen/createAnchor",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateAnchorResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateAnchorResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAnchorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnchorResponse
+        /// </returns>
+        public async Task<CreateAnchorResponse> CreateAnchorWithOptionsAsync(CreateAnchorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnchorMaterialName))
+            {
+                body["anchorMaterialName"] = request.AnchorMaterialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoverUrl))
+            {
+                body["coverUrl"] = request.CoverUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalHumanType))
+            {
+                body["digitalHumanType"] = request.DigitalHumanType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                body["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseScene))
+            {
+                body["useScene"] = request.UseScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnchor",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/digitalHuman/anchorOpen/createAnchor",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateAnchorResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateAnchorResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAnchorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnchorResponse
+        /// </returns>
+        public CreateAnchorResponse CreateAnchor(CreateAnchorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAnchorWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAnchorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnchorResponse
+        /// </returns>
+        public async Task<CreateAnchorResponse> CreateAnchorAsync(CreateAnchorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAnchorWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建配图生成任务</para>
         /// </summary>
         /// 
@@ -1112,6 +1444,334 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateIllustrationTaskWithOptionsAsync(textId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationProjectResponse
+        /// </returns>
+        public CreateIndividuationProjectResponse CreateIndividuationProjectWithOptions(CreateIndividuationProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectInfo))
+            {
+                body["projectInfo"] = request.ProjectInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                body["projectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Purpose))
+            {
+                body["purpose"] = request.Purpose;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["sceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIndividuationProject",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/createProject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateIndividuationProjectResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateIndividuationProjectResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationProjectResponse
+        /// </returns>
+        public async Task<CreateIndividuationProjectResponse> CreateIndividuationProjectWithOptionsAsync(CreateIndividuationProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectInfo))
+            {
+                body["projectInfo"] = request.ProjectInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                body["projectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Purpose))
+            {
+                body["purpose"] = request.Purpose;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["sceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIndividuationProject",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/createProject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateIndividuationProjectResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateIndividuationProjectResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationProjectResponse
+        /// </returns>
+        public CreateIndividuationProjectResponse CreateIndividuationProject(CreateIndividuationProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateIndividuationProjectWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationProjectResponse
+        /// </returns>
+        public async Task<CreateIndividuationProjectResponse> CreateIndividuationProjectAsync(CreateIndividuationProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateIndividuationProjectWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationTextTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationTextTaskResponse
+        /// </returns>
+        public CreateIndividuationTextTaskResponse CreateIndividuationTextTaskWithOptions(CreateIndividuationTextTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrowdPack))
+            {
+                body["crowdPack"] = request.CrowdPack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["projectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["taskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIndividuationTextTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/createTextTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateIndividuationTextTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateIndividuationTextTaskResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationTextTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationTextTaskResponse
+        /// </returns>
+        public async Task<CreateIndividuationTextTaskResponse> CreateIndividuationTextTaskWithOptionsAsync(CreateIndividuationTextTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrowdPack))
+            {
+                body["crowdPack"] = request.CrowdPack;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["projectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["taskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIndividuationTextTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/createTextTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateIndividuationTextTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateIndividuationTextTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationTextTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationTextTaskResponse
+        /// </returns>
+        public CreateIndividuationTextTaskResponse CreateIndividuationTextTask(CreateIndividuationTextTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateIndividuationTextTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndividuationTextTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndividuationTextTaskResponse
+        /// </returns>
+        public async Task<CreateIndividuationTextTaskResponse> CreateIndividuationTextTaskAsync(CreateIndividuationTextTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateIndividuationTextTaskWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1494,6 +2154,294 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateTextTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationProjectResponse
+        /// </returns>
+        public DeleteIndividuationProjectResponse DeleteIndividuationProjectWithOptions(DeleteIndividuationProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["projectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndividuationProject",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/deleteProject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteIndividuationProjectResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteIndividuationProjectResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationProjectResponse
+        /// </returns>
+        public async Task<DeleteIndividuationProjectResponse> DeleteIndividuationProjectWithOptionsAsync(DeleteIndividuationProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["projectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndividuationProject",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/deleteProject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteIndividuationProjectResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteIndividuationProjectResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationProjectResponse
+        /// </returns>
+        public DeleteIndividuationProjectResponse DeleteIndividuationProject(DeleteIndividuationProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteIndividuationProjectWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationProjectResponse
+        /// </returns>
+        public async Task<DeleteIndividuationProjectResponse> DeleteIndividuationProjectAsync(DeleteIndividuationProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteIndividuationProjectWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationTextResponse
+        /// </returns>
+        public DeleteIndividuationTextResponse DeleteIndividuationTextWithOptions(DeleteIndividuationTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextIdList))
+            {
+                body["textIdList"] = request.TextIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndividuationText",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/deleteText",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteIndividuationTextResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteIndividuationTextResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationTextResponse
+        /// </returns>
+        public async Task<DeleteIndividuationTextResponse> DeleteIndividuationTextWithOptionsAsync(DeleteIndividuationTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextIdList))
+            {
+                body["textIdList"] = request.TextIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIndividuationText",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/deleteText",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteIndividuationTextResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteIndividuationTextResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationTextResponse
+        /// </returns>
+        public DeleteIndividuationTextResponse DeleteIndividuationText(DeleteIndividuationTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteIndividuationTextWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除个性化文案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIndividuationTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndividuationTextResponse
+        /// </returns>
+        public async Task<DeleteIndividuationTextResponse> DeleteIndividuationTextAsync(DeleteIndividuationTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteIndividuationTextWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4550,6 +5498,150 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryIndividuationTextTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryIndividuationTextTaskResponse
+        /// </returns>
+        public QueryIndividuationTextTaskResponse QueryIndividuationTextTaskWithOptions(QueryIndividuationTextTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryIndividuationTextTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/queryTextTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryIndividuationTextTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryIndividuationTextTaskResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryIndividuationTextTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryIndividuationTextTaskResponse
+        /// </returns>
+        public async Task<QueryIndividuationTextTaskResponse> QueryIndividuationTextTaskWithOptionsAsync(QueryIndividuationTextTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryIndividuationTextTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/individuationText/queryTextTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryIndividuationTextTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryIndividuationTextTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryIndividuationTextTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryIndividuationTextTaskResponse
+        /// </returns>
+        public QueryIndividuationTextTaskResponse QueryIndividuationTextTask(QueryIndividuationTextTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryIndividuationTextTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询个性化文案任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryIndividuationTextTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryIndividuationTextTaskResponse
+        /// </returns>
+        public async Task<QueryIndividuationTextTaskResponse> QueryIndividuationTextTaskAsync(QueryIndividuationTextTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryIndividuationTextTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询会话信息</para>
         /// </summary>
         /// 
@@ -5294,6 +6386,174 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SelectResourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送sdk消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendSdkMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendSdkMessageResponse
+        /// </returns>
+        public SendSdkMessageResponse SendSdkMessageWithOptions(SendSdkMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                body["moduleName"] = request.ModuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationName))
+            {
+                body["operationName"] = request.OperationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendSdkMessage",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/sdk/sendMessage",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendSdkMessageResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendSdkMessageResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送sdk消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendSdkMessageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendSdkMessageResponse
+        /// </returns>
+        public async Task<SendSdkMessageResponse> SendSdkMessageWithOptionsAsync(SendSdkMessageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                body["moduleName"] = request.ModuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationName))
+            {
+                body["operationName"] = request.OperationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendSdkMessage",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/sdk/sendMessage",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendSdkMessageResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendSdkMessageResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送sdk消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendSdkMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendSdkMessageResponse
+        /// </returns>
+        public SendSdkMessageResponse SendSdkMessage(SendSdkMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SendSdkMessageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送sdk消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendSdkMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendSdkMessageResponse
+        /// </returns>
+        public async Task<SendSdkMessageResponse> SendSdkMessageAsync(SendSdkMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SendSdkMessageWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
