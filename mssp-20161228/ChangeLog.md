@@ -1,3 +1,8 @@
+2024-12-17 Version: 1.2.0
+- Support API CreateServiceLinkedRole.
+- Support API DescribeServiceLinkedRole.
+
+
 2024-12-10 Version: 1.1.0
 - Support API GetAlarmDetailById.
 - Support API GetConsoleScore.
