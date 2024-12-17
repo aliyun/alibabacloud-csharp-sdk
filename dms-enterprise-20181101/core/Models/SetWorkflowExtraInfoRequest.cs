@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? Tid { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>184****</para>
         /// </summary>
