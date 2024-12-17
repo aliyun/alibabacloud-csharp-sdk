@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        /// <summary>
+        /// <para>Application reason, currently used for trial application extension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>\&quot;\&quot;</para>
+        /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }

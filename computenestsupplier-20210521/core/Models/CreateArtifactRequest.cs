@@ -16,36 +16,93 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public CreateArtifactRequestArtifactBuildProperty ArtifactBuildProperty { get; set; }
         public class CreateArtifactRequestArtifactBuildProperty : TeaModel {
+            /// <summary>
+            /// <para>The build arguments used during the image build process.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the ArtifactBuildType is Dockerfile type.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("BuildArgs")]
             [Validation(Required=false)]
             public List<CreateArtifactRequestArtifactBuildPropertyBuildArgs> BuildArgs { get; set; }
             public class CreateArtifactRequestArtifactBuildPropertyBuildArgs : TeaModel {
+                /// <summary>
+                /// <para>The name of a specific build argument.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ENV</para>
+                /// </summary>
                 [NameInMap("ArgumentName")]
                 [Validation(Required=false)]
                 public string ArgumentName { get; set; }
 
+                /// <summary>
+                /// <para>The value of a specific build argument.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>nginx:latest</para>
+                /// </summary>
                 [NameInMap("ArgumentValue")]
                 [Validation(Required=false)]
                 public string ArgumentValue { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The address of the code repository.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the ArtifactBuildType is Dockerfile or Buildpacks type.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("CodeRepo")]
             [Validation(Required=false)]
             public CreateArtifactRequestArtifactBuildPropertyCodeRepo CodeRepo { get; set; }
             public class CreateArtifactRequestArtifactBuildPropertyCodeRepo : TeaModel {
+                /// <summary>
+                /// <para>The name of the branch in the code repository.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>main</para>
+                /// </summary>
                 [NameInMap("Branch")]
                 [Validation(Required=false)]
                 public string Branch { get; set; }
 
+                /// <summary>
+                /// <para>The owner of the code repository.</para>
+                /// <remarks>
+                /// <para> This parameter is available only if the git repository is private.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aliyun-computenest</para>
+                /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
+                /// <summary>
+                /// <para>The platform type. Valid values: </para>
+                /// <list type="bullet">
+                /// <item><description><para>github</para>
+                /// </description></item>
+                /// <item><description><para>gitee</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>github</para>
+                /// </summary>
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
+                /// <summary>
+                /// <para>The name of the repository.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aliyun-computenest/quickstart-Lobexxx</para>
+                /// </summary>
                 [NameInMap("RepoName")]
                 [Validation(Required=false)]
                 public string RepoName { get; set; }
@@ -83,6 +140,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string CommandType { get; set; }
 
+            /// <summary>
+            /// <para>The relative path to the Dockerfile within the code repository.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the ArtifactBuildType is Dockerfile type.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>./file/Dockerfile</para>
+            /// </summary>
             [NameInMap("DockerfilePath")]
             [Validation(Required=false)]
             public string DockerfilePath { get; set; }
@@ -100,6 +166,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The pull location of the source container image. This is used for the command docker pull ${SourceContainerImage}.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if the ArtifactBuildType is ContainerImage type.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel</para>
+            /// </summary>
             [NameInMap("SourceContainerImage")]
             [Validation(Required=false)]
             public string SourceContainerImage { get; set; }
@@ -127,6 +202,22 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        /// <summary>
+        /// <para>The type of the artifact build task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>EcsImage: Build ECS (Elastic Container Service) image.</para>
+        /// </description></item>
+        /// <item><description><para>Dockerfile: Build container image based on Dockerfile.</para>
+        /// </description></item>
+        /// <item><description><para>Buildpacks: Build container image based on Buildpacks.</para>
+        /// </description></item>
+        /// <item><description><para>ContainerImage: Rebuild container image by renaming an existing container image.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dockerfile</para>
+        /// </summary>
         [NameInMap("ArtifactBuildType")]
         [Validation(Required=false)]
         public string ArtifactBuildType { get; set; }
@@ -173,16 +264,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("CommodityVersion")]
             [Validation(Required=false)]
             public string CommodityVersion { get; set; }
-
-            /// <summary>
-            /// <para>The script metadata.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>{\&quot;WorkDir\&quot;:\&quot;/root\&quot;,\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;echo hello\&quot;}</para>
-            /// </summary>
-            [NameInMap("FileScriptMetadata")]
-            [Validation(Required=false)]
-            public string FileScriptMetadata { get; set; }
 
             /// <summary>
             /// <para>The image ID.</para>
@@ -236,22 +317,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string RepoName { get; set; }
 
+            /// <summary>
+            /// <para>The default repository type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>Public</c>: a public repository.</description></item>
+            /// <item><description><c>Private</c>: a private repository.</description></item>
+            /// </list>
+            /// <para>You can specify the RepoType or Summary parameter. The RepoType parameter is optional.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Public</para>
+            /// </summary>
             [NameInMap("RepoType")]
             [Validation(Required=false)]
             public string RepoType { get; set; }
-
-            /// <summary>
-            /// <para>The script content.</para>
-            /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a script.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>{&quot;ScriptMetadata&quot;:&quot;{\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;ls\&quot;}&quot;}</para>
-            /// </summary>
-            [NameInMap("ScriptMetadata")]
-            [Validation(Required=false)]
-            public string ScriptMetadata { get; set; }
 
             /// <summary>
             /// <para>The version tag of the image repository.</para>
@@ -294,6 +373,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10CM943JP0EN9D51H</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <para>The description of the deployment package.</para>

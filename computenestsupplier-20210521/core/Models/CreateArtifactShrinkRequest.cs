@@ -16,6 +16,22 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactBuildPropertyShrink { get; set; }
 
+        /// <summary>
+        /// <para>The type of the artifact build task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>EcsImage: Build ECS (Elastic Container Service) image.</para>
+        /// </description></item>
+        /// <item><description><para>Dockerfile: Build container image based on Dockerfile.</para>
+        /// </description></item>
+        /// <item><description><para>Buildpacks: Build container image based on Buildpacks.</para>
+        /// </description></item>
+        /// <item><description><para>ContainerImage: Rebuild container image by renaming an existing container image.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dockerfile</para>
+        /// </summary>
         [NameInMap("ArtifactBuildType")]
         [Validation(Required=false)]
         public string ArtifactBuildType { get; set; }
@@ -53,6 +69,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10CM943JP0EN9D51H</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <para>The description of the deployment package.</para>

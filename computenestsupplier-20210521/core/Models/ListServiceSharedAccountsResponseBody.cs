@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Service shared account information.</para>
+        /// </summary>
         [NameInMap("ShareAccount")]
         [Validation(Required=false)]
         public List<ListServiceSharedAccountsResponseBodyShareAccount> ShareAccount { get; set; }
@@ -112,6 +115,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The user aliUid.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>127383705xxxxxx</para>
             /// </summary>

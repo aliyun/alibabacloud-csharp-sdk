@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactBuildProperty { get; set; }
 
+        /// <summary>
+        /// <para>The type of the deployment package to be built.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dockerfile</para>
+        /// </summary>
         [NameInMap("ArtifactBuildType")]
         [Validation(Required=false)]
         public string ArtifactBuildType { get; set; }
@@ -111,6 +117,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The status of the deployment package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</para>
+        /// </summary>
         [NameInMap("StatusDetail")]
         [Validation(Required=false)]
         public string StatusDetail { get; set; }

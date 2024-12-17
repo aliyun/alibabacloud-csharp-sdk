@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactBuildProperty { get; set; }
 
+        /// <summary>
+        /// <para>The type of the deployment package to be built.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dockerfile</para>
+        /// </summary>
         [NameInMap("ArtifactBuildType")]
         [Validation(Required=false)]
         public string ArtifactBuildType { get; set; }

@@ -333,6 +333,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string OperationEndTime { get; set; }
 
+        /// <summary>
+        /// <para>Operate extra info</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6cc5ce3590ed7f5529e85fec</para>
+        /// </summary>
         [NameInMap("OperationExtraInfo")]
         [Validation(Required=false)]
         public string OperationExtraInfo { get; set; }
@@ -629,14 +635,29 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string SupplierUrl { get; set; }
 
+            /// <summary>
+            /// <para>The upgradable service Info.</para>
+            /// </summary>
             [NameInMap("UpgradableServiceInfos")]
             [Validation(Required=false)]
             public List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> UpgradableServiceInfos { get; set; }
             public class GetServiceInstanceResponseBodyServiceUpgradableServiceInfos : TeaModel {
+                /// <summary>
+                /// <para>The upgradable service version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
+                /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }
 
+                /// <summary>
+                /// <para>The version name of an upgradable service version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Init version</para>
+                /// </summary>
                 [NameInMap("VersionName")]
                 [Validation(Required=false)]
                 public string VersionName { get; set; }

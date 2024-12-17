@@ -471,10 +471,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        /// <summary>
+        /// <para>Compliance check metadata.</para>
+        /// </summary>
         [NameInMap("ComplianceMetadata")]
         [Validation(Required=false)]
         public GetServiceResponseBodyComplianceMetadata ComplianceMetadata { get; set; }
         public class GetServiceResponseBodyComplianceMetadata : TeaModel {
+            /// <summary>
+            /// <para>The compliance package is selected.</para>
+            /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
             public List<string> CompliancePacks { get; set; }
@@ -723,18 +729,39 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ServiceDiscoverable { get; set; }
 
+        /// <summary>
+        /// <para>Service document information.</para>
+        /// </summary>
         [NameInMap("ServiceDocumentInfos")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodyServiceDocumentInfos> ServiceDocumentInfos { get; set; }
         public class GetServiceResponseBodyServiceDocumentInfos : TeaModel {
+            /// <summary>
+            /// <para>The URL that is used to access the document.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://docurl">http://docurl</a></para>
+            /// </summary>
             [NameInMap("DocumentUrl")]
             [Validation(Required=false)]
             public string DocumentUrl { get; set; }
 
+            /// <summary>
+            /// <para>The language of the return data. Valid values: zh-CN and en-US.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zh-CN</para>
+            /// </summary>
             [NameInMap("Locale")]
             [Validation(Required=false)]
             public string Locale { get; set; }
 
+            /// <summary>
+            /// <para>The template name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Default Template.</para>
+            /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
@@ -841,14 +868,29 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string ShortDescription { get; set; }
 
+            /// <summary>
+            /// <para>The list of the information about the software in the service.</para>
+            /// </summary>
             [NameInMap("Softwares")]
             [Validation(Required=false)]
             public List<GetServiceResponseBodyServiceInfosSoftwares> Softwares { get; set; }
             public class GetServiceResponseBodyServiceInfosSoftwares : TeaModel {
+                /// <summary>
+                /// <para>The name of the software</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MySQL</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The version of the software.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5.7</para>
+                /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }

@@ -27,6 +27,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string LicenseDataShrink { get; set; }
 
+        /// <summary>
+        /// <para>Application reason, currently used for trial application extension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>\&quot;\&quot;</para>
+        /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }

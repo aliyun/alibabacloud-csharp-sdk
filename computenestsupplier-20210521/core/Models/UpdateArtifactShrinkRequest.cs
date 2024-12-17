@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactPropertyShrink { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
         /// <para>The description of the deployment package.</para>
         /// 

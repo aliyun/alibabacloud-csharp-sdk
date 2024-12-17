@@ -224,10 +224,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        /// <summary>
+        /// <para>Compliance check metadata.</para>
+        /// </summary>
         [NameInMap("ComplianceMetadata")]
         [Validation(Required=false)]
         public UpdateServiceRequestComplianceMetadata ComplianceMetadata { get; set; }
         public class UpdateServiceRequestComplianceMetadata : TeaModel {
+            /// <summary>
+            /// <para>The compliance package is selected.</para>
+            /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
             public List<string> CompliancePacks { get; set; }
@@ -254,6 +260,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string DeployType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run for the request, but does not update a service.</description></item>
+        /// <item><description>false: performs a dry run for the request, and update a service if the request passes the dry run.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

@@ -39,10 +39,22 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        /// <summary>
+        /// <para>The Service Instance Id.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>si-85b1exxx</para>
+        /// </summary>
         [NameInMap("ServiceInstanceId")]
         [Validation(Required=false)]
         public string ServiceInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The Service Name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Wordpress社区版</para>
+        /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
