@@ -8,26 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
-    public class ListImagesRequest : TeaModel {
+    public class GetAppVersionsRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>V-Ray</para>
+        /// </summary>
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Public</para>
+        /// </summary>
         [NameInMap("ImageCategory")]
         [Validation(Required=false)]
         public string ImageCategory { get; set; }
 
-        [NameInMap("ImageIds")]
-        [Validation(Required=false)]
-        public List<string> ImageIds { get; set; }
-
-        [NameInMap("ImageNames")]
-        [Validation(Required=false)]
-        public List<string> ImageNames { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>VM</para>
+        /// </summary>
         [NameInMap("ImageType")]
         [Validation(Required=false)]
         public string ImageType { get; set; }
-
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

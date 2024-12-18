@@ -1,3 +1,10 @@
+2024-12-18 Version: 1.2.0
+- Support API GetAppVersions.
+- Update API GetImage: update response param.
+- Update API ListImages: add param Mode.
+- Update API ListImages: update response param.
+
+
 2024-11-18 Version: 1.1.2
 - Update API ListImages: update response param.
 

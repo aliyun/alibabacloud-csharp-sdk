@@ -8,69 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
-    public class ListImagesResponseBody : TeaModel {
-        [NameInMap("Images")]
+    public class GetAppVersionsResponseBody : TeaModel {
+        [NameInMap("AppVersions")]
         [Validation(Required=false)]
-        public List<ListImagesResponseBodyImages> Images { get; set; }
-        public class ListImagesResponseBodyImages : TeaModel {
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
-            [NameInMap("AppId")]
-            [Validation(Required=false)]
-            public string AppId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2022-12-09T07:06:34Z</para>
-            /// </summary>
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("DocumentId")]
-            [Validation(Required=false)]
-            public int? DocumentId { get; set; }
-
+        public List<GetAppVersionsResponseBodyAppVersions> AppVersions { get; set; }
+        public class GetAppVersionsResponseBodyAppVersions : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>m-bp181x855551ww5yq****</para>
+            /// <para>m-f8z0dfa96luomqly****</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>VM</para>
-            /// </summary>
-            [NameInMap("ImageType")]
-            [Validation(Required=false)]
-            public string ImageType { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>app-image</para>
+            /// <para>V-Ray</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-
-            [NameInMap("OsTag")]
-            [Validation(Required=false)]
-            public string OsTag { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=false)]
-            public string UpdateTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -79,10 +38,6 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-
-            [NameInMap("Weight")]
-            [Validation(Required=false)]
-            public int? Weight { get; set; }
 
         }
 
@@ -104,7 +59,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

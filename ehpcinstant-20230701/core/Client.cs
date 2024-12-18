@@ -843,6 +843,158 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查看应用版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppVersionsResponse
+        /// </returns>
+        public GetAppVersionsResponse GetAppVersionsWithOptions(GetAppVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppVersions",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看应用版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppVersionsResponse
+        /// </returns>
+        public async Task<GetAppVersionsResponse> GetAppVersionsWithOptionsAsync(GetAppVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                query["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppVersions",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看应用版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppVersionsResponse
+        /// </returns>
+        public GetAppVersionsResponse GetAppVersions(GetAppVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAppVersionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看应用版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppVersionsResponse
+        /// </returns>
+        public async Task<GetAppVersionsResponse> GetAppVersionsAsync(GetAppVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAppVersionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询托管侧镜像详情。</para>
         /// </summary>
         /// 
@@ -1290,6 +1442,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             {
                 query["ImageType"] = request.ImageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -1361,6 +1517,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
             {
                 query["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

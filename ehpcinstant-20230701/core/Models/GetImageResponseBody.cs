@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public GetImageResponseBodyImageContainerImageSpec ContainerImageSpec { get; set; }
             public class GetImageResponseBodyImageContainerImageSpec : TeaModel {
+                [NameInMap("Architecture")]
+                [Validation(Required=false)]
+                public string Architecture { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -36,6 +40,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 [NameInMap("IsACRRegistry")]
                 [Validation(Required=false)]
                 public bool? IsACRRegistry { get; set; }
+
+                [NameInMap("OsTag")]
+                [Validation(Required=false)]
+                public string OsTag { get; set; }
+
+                [NameInMap("Platform")]
+                [Validation(Required=false)]
+                public string Platform { get; set; }
 
                 [NameInMap("RegistryCredential")]
                 [Validation(Required=false)]
@@ -96,6 +108,24 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("DocumentInfo")]
+            [Validation(Required=false)]
+            public GetImageResponseBodyImageDocumentInfo DocumentInfo { get; set; }
+            public class GetImageResponseBodyImageDocumentInfo : TeaModel {
+                [NameInMap("Document")]
+                [Validation(Required=false)]
+                public string Document { get; set; }
+
+                [NameInMap("DocumentId")]
+                [Validation(Required=false)]
+                public string DocumentId { get; set; }
+
+                [NameInMap("EncodingMode")]
+                [Validation(Required=false)]
+                public string EncodingMode { get; set; }
+
+            }
 
             /// <summary>
             /// <para>This parameter is required.</para>
