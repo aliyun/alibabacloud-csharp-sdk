@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class ModifyBEClusterAttributeRequest : TeaModel {
+    public class EnDisableScalingRulesRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>selectdb-xxxb9f2w-be</para>
+        /// <para>selectdb-cn-nwy3jv1oa02-be</para>
         /// </summary>
-        [NameInMap("DBClusterId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string ClusterId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -25,20 +25,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <b>Example:</b>
         /// <para>selectdb-cn-7213cjv****</para>
         /// </summary>
-        [NameInMap("DBInstanceId")]
+        [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The attribute type of the instance. Set this parameter to DBInstanceDescription.</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>DBInstanceDescription</para>
+        /// <para>selectdb</para>
         /// </summary>
-        [NameInMap("InstanceAttributeType")]
+        [NameInMap("Product")]
         [Validation(Required=false)]
-        public string InstanceAttributeType { get; set; }
+        public string Product { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -55,15 +52,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testdb</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("Value")]
+        [NameInMap("ScalingRulesEnable")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public bool? ScalingRulesEnable { get; set; }
 
     }
 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The size of the reserved cache.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>

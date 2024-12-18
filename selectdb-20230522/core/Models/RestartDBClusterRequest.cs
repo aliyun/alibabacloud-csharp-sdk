@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region in which the ApsaraDB for SelectDB instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

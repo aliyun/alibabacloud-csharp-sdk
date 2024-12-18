@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
+        /// <para>The database engine of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SelectDB</para>
         /// </summary>

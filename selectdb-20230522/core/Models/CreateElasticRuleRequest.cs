@@ -8,16 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class ModifyBEClusterAttributeRequest : TeaModel {
+    public class CreateElasticRuleRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>selectdb.2xlarge</para>
+        /// </summary>
+        [NameInMap("ClusterClass")]
+        [Validation(Required=false)]
+        public string ClusterClass { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb-xxxb9f2w-be</para>
         /// </summary>
-        [NameInMap("DBClusterId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string ClusterId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -25,20 +35,29 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <b>Example:</b>
         /// <para>selectdb-cn-7213cjv****</para>
         /// </summary>
-        [NameInMap("DBInstanceId")]
+        [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The attribute type of the instance. Set this parameter to DBInstanceDescription.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DBInstanceDescription</para>
+        /// <para>00:00</para>
         /// </summary>
-        [NameInMap("InstanceAttributeType")]
+        [NameInMap("ElasticRuleStartTime")]
         [Validation(Required=false)]
-        public string InstanceAttributeType { get; set; }
+        public string ElasticRuleStartTime { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Day</para>
+        /// </summary>
+        [NameInMap("ExecutionPeriod")]
+        [Validation(Required=false)]
+        public string ExecutionPeriod { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -53,17 +72,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        /// <summary>
-        /// <para>The new name of the cluster.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testdb</para>
-        /// </summary>
-        [NameInMap("Value")]
-        [Validation(Required=false)]
-        public string Value { get; set; }
 
     }
 
