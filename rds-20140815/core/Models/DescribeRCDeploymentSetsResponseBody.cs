@@ -181,14 +181,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Strategy { get; set; }
 
-                [NameInMap("TagResources")]
+                [NameInMap("Tags")]
                 [Validation(Required=false)]
-                public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources TagResources { get; set; }
-                public class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResources : TeaModel {
-                    [NameInMap("TagResources")]
+                public DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags Tags { get; set; }
+                public class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTags : TeaModel {
+                    [NameInMap("Tag")]
                     [Validation(Required=false)]
-                    public List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources> TagResources { get; set; }
-                    public class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagResourcesTagResources : TeaModel {
+                    public List<DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag> Tag { get; set; }
+                    public class DescribeRCDeploymentSetsResponseBodyDeploymentSetsDeploymentSetTagsTag : TeaModel {
                         [NameInMap("ResourceId")]
                         [Validation(Required=false)]
                         public string ResourceId { get; set; }

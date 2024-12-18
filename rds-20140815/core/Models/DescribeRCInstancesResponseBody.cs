@@ -170,6 +170,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeRCInstancesResponseBodyRCInstancesTags> Tags { get; set; }
+            public class DescribeRCInstancesResponseBodyRCInstancesTags : TeaModel {
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The VPC ID.</para>
             /// 

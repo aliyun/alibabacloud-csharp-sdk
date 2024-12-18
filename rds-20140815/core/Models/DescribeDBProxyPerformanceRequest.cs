@@ -44,6 +44,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>Dimension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>service</para>
+        /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]
         public string Dimension { get; set; }

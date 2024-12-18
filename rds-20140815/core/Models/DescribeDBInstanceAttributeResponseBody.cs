@@ -833,6 +833,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? MultipleTempUpgrade { get; set; }
 
                 /// <summary>
+                /// <para>OptimizedWritesInfo contains two fields:</para>
+                /// <list type="bullet">
+                /// <item><description><para>optimized_writes: Whether write optimization is enabled for the current instance.</para>
+                /// </description></item>
+                /// <item><description><para>init_optimized_writes: Whether write optimization can be enabled for the instance. Some instances do not display the write optimization switch in the console because init_optimized_writes is false.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;optimized_writes&quot;:true,&quot;init_optimized_writes&quot;:true}</para>
+                /// </summary>
+                [NameInMap("OptimizedWritesInfo")]
+                [Validation(Required=false)]
+                public string OptimizedWritesInfo { get; set; }
+
+                /// <summary>
                 /// <para>Indicates whether PgBouncer is enabled.</para>
                 /// <remarks>
                 /// <para> This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is <b>true</b>.</para>

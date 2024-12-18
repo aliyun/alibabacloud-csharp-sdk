@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class DescribeRCInstanceAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-dh2jf9n6j4s14926****</para>
@@ -19,6 +18,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

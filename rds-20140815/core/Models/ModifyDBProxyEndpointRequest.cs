@@ -86,6 +86,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbEndpointAliases { get; set; }
 
+        /// <summary>
+        /// <para>The minimum number of reserved instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("DbEndpointMinSlaveCount")]
         [Validation(Required=false)]
         public string DbEndpointMinSlaveCount { get; set; }
@@ -186,10 +192,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReadOnlyInstanceDistributionType { get; set; }
 
         /// <summary>
-        /// <para>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: <b>0</b> to <b>3600</b>. Default value: <b>30</b>.</para>
+        /// <para>The maximum latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. If you do not specify this parameter, the original value of this parameter is retained. Valid values: <b>0</b> to <b>3600</b>.</para>
         /// <remarks>
-        /// <para>You must specify this parameter only when the read/write splitting feature is enabled.</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You must specify this parameter only when read/write splitting is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>If the database proxy endpoint has the read and write attributes, the default value of this parameter is <b>30</b> and read/write splitting is supported. If the database proxy endpoint has the read-only attribute, the default value of this parameter is <b>-1</b> and read/write splitting is not supported. Unit: seconds.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

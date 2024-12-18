@@ -1143,6 +1143,142 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public AssociateEipAddressWithRCInstanceResponse AssociateEipAddressWithRCInstanceWithOptions(AssociateEipAddressWithRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllocationId))
+            {
+                query["AllocationId"] = request.AllocationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateEipAddressWithRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateEipAddressWithRCInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public async Task<AssociateEipAddressWithRCInstanceResponse> AssociateEipAddressWithRCInstanceWithOptionsAsync(AssociateEipAddressWithRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllocationId))
+            {
+                query["AllocationId"] = request.AllocationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateEipAddressWithRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateEipAddressWithRCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public AssociateEipAddressWithRCInstanceResponse AssociateEipAddressWithRCInstance(AssociateEipAddressWithRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateEipAddressWithRCInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public async Task<AssociateEipAddressWithRCInstanceResponse> AssociateEipAddressWithRCInstanceAsync(AssociateEipAddressWithRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateEipAddressWithRCInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>挂载RC云盘</para>
         /// </summary>
         /// 
@@ -5919,6 +6055,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizedWrites))
+            {
+                query["OptimizedWrites"] = request.OptimizedWrites;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -6223,6 +6363,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
             {
                 query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizedWrites))
+            {
+                query["OptimizedWrites"] = request.OptimizedWrites;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
@@ -39820,6 +39964,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
+            {
+                query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -39865,6 +40013,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
+            {
+                query["PrivateIpAddress"] = request.PrivateIpAddress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -52876,6 +53028,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
+            {
+                query["SwitchTime"] = request.SwitchTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTimeMode))
+            {
+                query["SwitchTimeMode"] = request.SwitchTimeMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -52961,6 +53121,14 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
+            {
+                query["SwitchTime"] = request.SwitchTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTimeMode))
+            {
+                query["SwitchTimeMode"] = request.SwitchTimeMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -56667,6 +56835,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizedWrites))
+            {
+                query["OptimizedWrites"] = request.OptimizedWrites;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -56851,6 +57023,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoAccelerationEnabled))
             {
                 query["IoAccelerationEnabled"] = request.IoAccelerationEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizedWrites))
+            {
+                query["OptimizedWrites"] = request.OptimizedWrites;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -63228,6 +63404,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -63309,6 +63489,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -71947,6 +72131,142 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>同步RDS Custom的安全组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncRCSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncRCSecurityGroupResponse
+        /// </returns>
+        public SyncRCSecurityGroupResponse SyncRCSecurityGroupWithOptions(SyncRCSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncRCSecurityGroup",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncRCSecurityGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步RDS Custom的安全组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncRCSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncRCSecurityGroupResponse
+        /// </returns>
+        public async Task<SyncRCSecurityGroupResponse> SyncRCSecurityGroupWithOptionsAsync(SyncRCSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncRCSecurityGroup",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncRCSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步RDS Custom的安全组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncRCSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncRCSecurityGroupResponse
+        /// </returns>
+        public SyncRCSecurityGroupResponse SyncRCSecurityGroup(SyncRCSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SyncRCSecurityGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步RDS Custom的安全组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncRCSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncRCSecurityGroupResponse
+        /// </returns>
+        public async Task<SyncRCSecurityGroupResponse> SyncRCSecurityGroupAsync(SyncRCSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SyncRCSecurityGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates and adds tags to one or more instances.</para>
         /// </summary>
         /// 
@@ -72679,6 +72999,142 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TransformDBInstancePayTypeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public UnassociateEipAddressWithRCInstanceResponse UnassociateEipAddressWithRCInstanceWithOptions(UnassociateEipAddressWithRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllocationId))
+            {
+                query["AllocationId"] = request.AllocationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassociateEipAddressWithRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassociateEipAddressWithRCInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public async Task<UnassociateEipAddressWithRCInstanceResponse> UnassociateEipAddressWithRCInstanceWithOptionsAsync(UnassociateEipAddressWithRCInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllocationId))
+            {
+                query["AllocationId"] = request.AllocationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassociateEipAddressWithRCInstance",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassociateEipAddressWithRCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public UnassociateEipAddressWithRCInstanceResponse UnassociateEipAddressWithRCInstance(UnassociateEipAddressWithRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnassociateEipAddressWithRCInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateEipAddressWithRCInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateEipAddressWithRCInstanceResponse
+        /// </returns>
+        public async Task<UnassociateEipAddressWithRCInstanceResponse> UnassociateEipAddressWithRCInstanceAsync(UnassociateEipAddressWithRCInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnassociateEipAddressWithRCInstanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: uses a coupon.</description></item>
+        /// <item><description><b>false</b> (default): does not use a coupon.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
@@ -98,6 +108,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>726702810223</para>
+        /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }

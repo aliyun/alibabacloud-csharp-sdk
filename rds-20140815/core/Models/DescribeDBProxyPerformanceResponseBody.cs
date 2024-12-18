@@ -60,6 +60,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The service dimension.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>reserve_3</para>
+                /// </summary>
                 [NameInMap("Service")]
                 [Validation(Required=false)]
                 public string Service { get; set; }

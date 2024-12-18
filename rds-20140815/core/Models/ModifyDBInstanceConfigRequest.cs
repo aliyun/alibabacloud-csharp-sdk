@@ -86,6 +86,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The update time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-05-06T09:24:00Z</para>
+        /// </summary>
+        [NameInMap("SwitchTime")]
+        [Validation(Required=false)]
+        public string SwitchTime { get; set; }
+
+        /// <summary>
+        /// <para>The time at which the modification takes effect. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediate</b>: immediately modifies the parameter. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.</description></item>
+        /// <item><description><b>ScheduleTime</b>: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify <b>SwitchTime</b>.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Immediate</para>
+        /// </summary>
+        [NameInMap("SwitchTimeMode")]
+        [Validation(Required=false)]
+        public string SwitchTimeMode { get; set; }
+
     }
 
 }

@@ -575,6 +575,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string StoppedMode { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public DescribeRCInstanceAttributeResponseBodyTags Tags { get; set; }
+        public class DescribeRCInstanceAttributeResponseBodyTags : TeaModel {
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<DescribeRCInstanceAttributeResponseBodyTagsTag> Tag { get; set; }
+            public class DescribeRCInstanceAttributeResponseBodyTagsTag : TeaModel {
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The virtual LAN (VLAN) ID of the instance.</para>
         /// <remarks>

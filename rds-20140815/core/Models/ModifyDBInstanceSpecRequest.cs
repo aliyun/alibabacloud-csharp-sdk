@@ -236,6 +236,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string IoAccelerationEnabled { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the write optimization feature.</para>
+        /// <list type="bullet">
+        /// <item><description><b>optimized</b>: enables the feature.</description></item>
+        /// <item><description><b>none</b>: disables the feature.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>optimized</para>
+        /// </summary>
+        [NameInMap("OptimizedWrites")]
+        [Validation(Required=false)]
+        public string OptimizedWrites { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -259,6 +276,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>723298850895</para>
+        /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
