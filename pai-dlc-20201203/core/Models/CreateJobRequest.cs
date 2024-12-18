@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string DataSourceId { get; set; }
 
+            [NameInMap("DataSourceVersion")]
+            [Validation(Required=false)]
+            public string DataSourceVersion { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>/root/data</para>

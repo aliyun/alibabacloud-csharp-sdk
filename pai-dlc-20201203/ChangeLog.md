@@ -1,3 +1,8 @@
+2024-12-18 Version: 1.5.21
+- Update API CreateJob: update param body.
+- Update API GetJob: update response param.
+
+
 2024-12-17 Version: 1.5.20
 - Generated csharp 2020-12-03 for pai-dlc.
 

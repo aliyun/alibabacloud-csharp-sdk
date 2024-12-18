@@ -493,6 +493,44 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string UserId { get; set; }
 
+        [NameInMap("UserVpc")]
+        [Validation(Required=false)]
+        public GetJobResponseBodyUserVpc UserVpc { get; set; }
+        public class GetJobResponseBodyUserVpc : TeaModel {
+            [NameInMap("DefaultRoute")]
+            [Validation(Required=false)]
+            public string DefaultRoute { get; set; }
+
+            [NameInMap("ExtendedCidrs")]
+            [Validation(Required=false)]
+            public List<string> ExtendedCidrs { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>sg-abcdef****</para>
+            /// </summary>
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vs-abcdef****</para>
+            /// </summary>
+            [NameInMap("SwitchId")]
+            [Validation(Required=false)]
+            public string SwitchId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vpc-abcdef****</para>
+            /// </summary>
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>268</para>
