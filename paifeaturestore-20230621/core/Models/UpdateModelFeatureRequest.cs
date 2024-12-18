@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("LabelPriorityLevel")]
+        [Validation(Required=false)]
+        public long? LabelPriorityLevel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
         [NameInMap("LabelTableId")]

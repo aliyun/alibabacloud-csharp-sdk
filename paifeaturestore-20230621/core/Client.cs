@@ -1173,108 +1173,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public CreateModelFeatureTrainingSetFGTableResponse CreateModelFeatureTrainingSetFGTableWithOptions(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateModelFeatureTrainingSetFGTable",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/trainingsetfgtable",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateModelFeatureTrainingSetFGTableResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public async Task<CreateModelFeatureTrainingSetFGTableResponse> CreateModelFeatureTrainingSetFGTableWithOptionsAsync(string InstanceId, string ModelFeatureId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateModelFeatureTrainingSetFGTable",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/trainingsetfgtable",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateModelFeatureTrainingSetFGTableResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// CreateModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public CreateModelFeatureTrainingSetFGTableResponse CreateModelFeatureTrainingSetFGTable(string InstanceId, string ModelFeatureId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateModelFeatureTrainingSetFGTableWithOptions(InstanceId, ModelFeatureId, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// CreateModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public async Task<CreateModelFeatureTrainingSetFGTableResponse> CreateModelFeatureTrainingSetFGTableAsync(string InstanceId, string ModelFeatureId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateModelFeatureTrainingSetFGTableWithOptionsAsync(InstanceId, ModelFeatureId, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>创建FeatureStore项目</para>
         /// </summary>
         /// 
@@ -2183,136 +2081,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteProjectWithOptionsAsync(InstanceId, ProjectId, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>导出训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ExportModelFeatureTrainingSetFGTableRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ExportModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public ExportModelFeatureTrainingSetFGTableResponse ExportModelFeatureTrainingSetFGTableWithOptions(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetFgConfig))
-            {
-                body["TrainingSetFgConfig"] = request.TrainingSetFgConfig;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ExportModelFeatureTrainingSetFGTable",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/action/exporttrainingsetfgtable",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ExportModelFeatureTrainingSetFGTableResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>导出训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ExportModelFeatureTrainingSetFGTableRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ExportModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public async Task<ExportModelFeatureTrainingSetFGTableResponse> ExportModelFeatureTrainingSetFGTableWithOptionsAsync(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrainingSetFgConfig))
-            {
-                body["TrainingSetFgConfig"] = request.TrainingSetFgConfig;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ExportModelFeatureTrainingSetFGTable",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/action/exporttrainingsetfgtable",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ExportModelFeatureTrainingSetFGTableResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>导出训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ExportModelFeatureTrainingSetFGTableRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ExportModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public ExportModelFeatureTrainingSetFGTableResponse ExportModelFeatureTrainingSetFGTable(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ExportModelFeatureTrainingSetFGTableWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>导出训练样本FG表。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ExportModelFeatureTrainingSetFGTableRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ExportModelFeatureTrainingSetFGTableResponse
-        /// </returns>
-        public async Task<ExportModelFeatureTrainingSetFGTableResponse> ExportModelFeatureTrainingSetFGTableAsync(string InstanceId, string ModelFeatureId, ExportModelFeatureTrainingSetFGTableRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ExportModelFeatureTrainingSetFGTableWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6681,6 +6449,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["Features"] = request.Features;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelPriorityLevel))
+            {
+                body["LabelPriorityLevel"] = request.LabelPriorityLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelTableId))
             {
                 body["LabelTableId"] = request.LabelTableId;
@@ -6734,6 +6506,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Features))
             {
                 body["Features"] = request.Features;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelPriorityLevel))
+            {
+                body["LabelPriorityLevel"] = request.LabelPriorityLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelTableId))
             {
@@ -6953,136 +6729,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateModelFeatureFGFeatureWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>更新模型特征的fg.json文件配置信息。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UpdateModelFeatureFGInfoRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateModelFeatureFGInfoResponse
-        /// </returns>
-        public UpdateModelFeatureFGInfoResponse UpdateModelFeatureFGInfoWithOptions(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
-            {
-                body["Content"] = request.Content;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateModelFeatureFGInfo",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fginfo",
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateModelFeatureFGInfoResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>更新模型特征的fg.json文件配置信息。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UpdateModelFeatureFGInfoRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateModelFeatureFGInfoResponse
-        /// </returns>
-        public async Task<UpdateModelFeatureFGInfoResponse> UpdateModelFeatureFGInfoWithOptionsAsync(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
-            {
-                body["Content"] = request.Content;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateModelFeatureFGInfo",
-                Version = "2023-06-21",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/modelfeatures/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ModelFeatureId) + "/fginfo",
-                Method = "PUT",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateModelFeatureFGInfoResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>更新模型特征的fg.json文件配置信息。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UpdateModelFeatureFGInfoRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateModelFeatureFGInfoResponse
-        /// </returns>
-        public UpdateModelFeatureFGInfoResponse UpdateModelFeatureFGInfo(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateModelFeatureFGInfoWithOptions(InstanceId, ModelFeatureId, request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>更新模型特征的fg.json文件配置信息。</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UpdateModelFeatureFGInfoRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateModelFeatureFGInfoResponse
-        /// </returns>
-        public async Task<UpdateModelFeatureFGInfoResponse> UpdateModelFeatureFGInfoAsync(string InstanceId, string ModelFeatureId, UpdateModelFeatureFGInfoRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateModelFeatureFGInfoWithOptionsAsync(InstanceId, ModelFeatureId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
