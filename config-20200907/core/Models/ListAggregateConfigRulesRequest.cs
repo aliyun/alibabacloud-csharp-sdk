@@ -10,87 +10,116 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateConfigRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-f632626622af0079****</para>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        [NameInMap("CompliancePackId")]
+        [Validation(Required=false)]
+        public string CompliancePackId { get; set; }
+
         /// <summary>
-        /// The compliance evaluation result. Valid values:
+        /// <para>The compliance evaluation result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>COMPLIANT: The resources are evaluated as compliant.</description></item>
+        /// <item><description>NON_COMPLIANT: The resources are evaluated as non-compliant.</description></item>
+        /// <item><description>NOT_APPLICABLE: The rule does not apply to the resources.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: No data is available.</description></item>
+        /// </list>
         /// 
-        /// *   COMPLIANT: The resources are evaluated as compliant.
-        /// *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-        /// *   NOT_APPLICABLE: The rule does not apply to the resources.
-        /// *   INSUFFICIENT_DATA: No data is available.
+        /// <b>Example:</b>
+        /// <para>COMPLIANT</para>
         /// </summary>
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
         public string ComplianceType { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-rule-name</para>
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
         public string ConfigRuleName { get; set; }
 
         /// <summary>
-        /// The status of the rule. Valid values:
+        /// <para>The status of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ACTIVE: The rule is being used to monitor resource configurations.</description></item>
+        /// <item><description>DELETING: The rule is being deleted.</description></item>
+        /// <item><description>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</description></item>
+        /// <item><description>INACTIVE: The rule is disabled.</description></item>
+        /// </list>
         /// 
-        /// *   ACTIVE: The rule is being used to monitor resource configurations.
-        /// *   DELETING: The rule is being deleted.
-        /// *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
-        /// *   INACTIVE: The rule is disabled.
+        /// <b>Example:</b>
+        /// <para>ACTIVE</para>
         /// </summary>
         [NameInMap("ConfigRuleState")]
         [Validation(Required=false)]
         public string ConfigRuleState { get; set; }
 
         /// <summary>
-        /// The keyword that is used for queries.
+        /// <para>The keyword that is used for queries.</para>
+        /// <para>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</para>
         /// 
-        /// You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1. Default value: 1</para>
         /// 
-        /// Pages start from page 1. Default value: 1
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100. Minimum value: 1. Default value: 10</para>
         /// 
-        /// Valid values: 1 to 100. Minimum value: 1. Default value: 10
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Resource type for the rule to evaluate.
+        /// <para>Resource type for the rule to evaluate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACS::ECS::Instance</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// The risk level of the resources that do not comply with the rule. Valid values:
+        /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: high</description></item>
+        /// <item><description>2: medium</description></item>
+        /// <item><description>3: low</description></item>
+        /// </list>
         /// 
-        /// *   1: high
-        /// *   2: medium
-        /// *   3: low
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]

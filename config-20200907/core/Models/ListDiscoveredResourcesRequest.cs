@@ -18,47 +18,68 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceTypes { get; set; }
 
         /// <summary>
-        /// The maximum number of entries returned for a single request. Valid values: 1 to 100.
+        /// <para>The maximum number of entries returned for a single request. Valid values: 1 to 100.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The `token` that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.
+        /// <para>The <c>token</c> that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IWBjqMYSy0is7zSMGu16****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the resource resides. Separate multiple region IDs with commas (,).
+        /// <para>The ID of the region where the resource resides. Separate multiple region IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public string Regions { get; set; }
 
         /// <summary>
-        /// The status of the resource. Valid values:
+        /// <para>The status of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: The resource is deleted. If a resource is deleted from the desired cloud service, <b>Deleted</b> is displayed in the resource list in the Cloud Config console.</description></item>
+        /// <item><description>1 (default): The resource is retained. If a resource is managed as expected, <b>Active</b> is displayed in the resource list in the Cloud Config console.</description></item>
+        /// </list>
         /// 
-        /// *   0: The resource is deleted. If a resource is deleted from the desired cloud service, **Deleted** is displayed in the resource list in the Cloud Config console.
-        /// *   1 (default): The resource is retained. If a resource is managed as expected, **Active** is displayed in the resource list in the Cloud Config console.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ResourceDeleted")]
         [Validation(Required=false)]
         public int? ResourceDeleted { get; set; }
 
         /// <summary>
-        /// The resource ID.
+        /// <para>The resource ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eni-hp31cqoba96jagtz****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Separate multiple resource types with commas (,).
+        /// <para>The type of the resource. Separate multiple resource types with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACS::ECS::NetworkInterface</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]

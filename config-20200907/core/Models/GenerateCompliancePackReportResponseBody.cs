@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GenerateCompliancePackReportResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the compliance package.
+        /// <para>The ID of the compliance package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cp-a8a8626622af0082****</para>
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6EC7AED1-172F-42AE-9C12-295BC2ADB751</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

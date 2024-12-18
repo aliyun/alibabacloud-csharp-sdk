@@ -10,90 +10,122 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListDiscoveredResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The information about the resources.
+        /// <para>The information about the resources.</para>
         /// </summary>
         [NameInMap("DiscoveredResourceProfiles")]
         [Validation(Required=false)]
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles DiscoveredResourceProfiles { get; set; }
         public class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles : TeaModel {
             /// <summary>
-            /// The details of the resources.
+            /// <para>The details of the resources.</para>
             /// </summary>
             [NameInMap("DiscoveredResourceProfileList")]
             [Validation(Required=false)]
             public List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> DiscoveredResourceProfileList { get; set; }
             public class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList : TeaModel {
                 /// <summary>
-                /// The ID of the Alibaba Cloud account to which the resource belongs.
+                /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>161259599160****</para>
                 /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// The zone ID.
+                /// <para>The zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-h</para>
                 /// </summary>
                 [NameInMap("AvailabilityZone")]
                 [Validation(Required=false)]
                 public string AvailabilityZone { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// The timestamp when the resource was created. Unit: milliseconds.
+                /// <para>The timestamp when the resource was created. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1618675206000</para>
                 /// </summary>
                 [NameInMap("ResourceCreationTime")]
                 [Validation(Required=false)]
                 public long? ResourceCreationTime { get; set; }
 
                 /// <summary>
-                /// The status of the resource. Valid values:
+                /// <para>The status of the resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: The resource is deleted.</description></item>
+                /// <item><description>1: The resource is retained.</description></item>
+                /// </list>
                 /// 
-                /// *   0: The resource is deleted.
-                /// *   1: The resource is retained.
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ResourceDeleted")]
                 [Validation(Required=false)]
                 public int? ResourceDeleted { get; set; }
 
                 /// <summary>
-                /// The resource ID.
+                /// <para>The resource ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eni-hp31cqoba96jagtz****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The resource name.
+                /// <para>The resource name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Cloud Firewall</para>
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:
+                /// <para>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</para>
+                /// <list type="bullet">
+                /// <item><description>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</description></item>
+                /// <item><description>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</description></item>
+                /// </list>
                 /// 
-                /// *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
-                /// *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
+                /// <b>Example:</b>
+                /// <para>InUse</para>
                 /// </summary>
                 [NameInMap("ResourceStatus")]
                 [Validation(Required=false)]
                 public string ResourceStatus { get; set; }
 
                 /// <summary>
-                /// The type of the resource.
+                /// <para>The type of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ACS::ECS::NetworkInterface</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The tags of the resource.
+                /// <para>The tags of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;key1\&quot;:[\&quot;value2\&quot;]}</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -104,7 +136,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
-                /// The version of the resource change.
+                /// <para>The version of the resource change.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -113,21 +148,30 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The maximum number of entries returned on each page.
+            /// <para>The maximum number of entries returned on each page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("MaxResults")]
             [Validation(Required=false)]
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// A pagination token. It can be used in the next request to retrieve a new page of results.
+            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>161259599160****</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// The total number of resources.
+            /// <para>The total number of resources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -136,7 +180,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

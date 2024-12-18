@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListResourcesByAdvancedSearchRequest : TeaModel {
         /// <summary>
-        /// The SQL query statement.
+        /// <para>The SQL query statement.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SELECT ResourceId, ResourceName WHERE Tags.Kvpair=\&quot;business:online\&quot;</para>
         /// </summary>
         [NameInMap("Sql")]
         [Validation(Required=false)]

@@ -10,33 +10,40 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceByConfigRuleResponseBody : TeaModel {
         /// <summary>
-        /// The compliance result.
+        /// <para>The compliance result.</para>
         /// </summary>
         [NameInMap("ComplianceResult")]
         [Validation(Required=false)]
         public GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult ComplianceResult { get; set; }
         public class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult : TeaModel {
             /// <summary>
-            /// The compliance list result.
+            /// <para>The compliance list result.</para>
             /// </summary>
             [NameInMap("Compliances")]
             [Validation(Required=false)]
             public List<GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> Compliances { get; set; }
             public class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances : TeaModel {
                 /// <summary>
-                /// The compliance evaluation results of the resources. Valid values:
+                /// <para>The compliance evaluation results of the resources. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>COMPLIANT: The resource was evaluated as compliant.</description></item>
+                /// <item><description>NON_COMPLIANT: The resource was evaluated as incompliant.</description></item>
+                /// <item><description>NOT_APPLICABLE: The rule did not apply to your resources.</description></item>
+                /// <item><description>INSUFFICIENT_DATA: No resource data was available.</description></item>
+                /// </list>
                 /// 
-                /// *   COMPLIANT: The resource was evaluated as compliant.
-                /// *   NON_COMPLIANT: The resource was evaluated as incompliant.
-                /// *   NOT_APPLICABLE: The rule did not apply to your resources.
-                /// *   INSUFFICIENT_DATA: No resource data was available.
+                /// <b>Example:</b>
+                /// <para>COMPLIANT</para>
                 /// </summary>
                 [NameInMap("ComplianceType")]
                 [Validation(Required=false)]
                 public string ComplianceType { get; set; }
 
                 /// <summary>
-                /// The number of resources that have compliance evaluation results. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.
+                /// <para>The number of resources that have compliance evaluation results. For example, if the value of the <c>ComplianceType</c> parameter is <c>COMPLIANT</c>, this parameter value indicates the number of compliant resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
@@ -45,7 +52,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The total number of evaluated resources.
+            /// <para>The total number of evaluated resources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -54,7 +64,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23306AB1-34E0-468F-BD7B-68D8AEAB754C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

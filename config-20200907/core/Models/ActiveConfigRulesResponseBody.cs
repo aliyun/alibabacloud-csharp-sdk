@@ -10,41 +10,52 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public ActiveConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class ActiveConfigRulesResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// The returned results.
+            /// <para>The returned results.</para>
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
             public List<ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
                 /// <summary>
-                /// The rule ID.
+                /// <para>The rule ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cr-2da35180a8d1008e****</para>
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The error code.
+                /// <para>The error code.</para>
+                /// <list type="bullet">
+                /// <item><description>If the rule is enabled, no error code is returned.</description></item>
+                /// <item><description>If the rule fails to be enabled, an error code is returned. For more information about error codes, see <a href="https://next.api.aliyun.com/document/Config/2020-09-07/errorCode">Error codes</a>.</description></item>
+                /// </list>
                 /// 
-                /// *   If the rule is enabled, no error code is returned.
-                /// *   If the rule fails to be enabled, an error code is returned. For more information about error codes, see [Error codes](https://next.api.aliyun.com/document/Config/2020-09-07/errorCode).
+                /// <b>Example:</b>
+                /// <para>ConfigRuleStatusNotInActive</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the rule is enabled. Valid values:
+                /// <para>Indicates whether the rule is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
-                /// *   true
-                /// *   false
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -55,7 +66,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>61C1A88F-D163-40DF-84A6-F200229F37B2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

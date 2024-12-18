@@ -10,41 +10,52 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteAggregateCompliancePacksResponseBody : TeaModel {
         /// <summary>
-        /// The results of the delete operations.
+        /// <para>The results of the delete operations.</para>
         /// </summary>
         [NameInMap("OperateCompliancePacksResult")]
         [Validation(Required=false)]
         public DeleteAggregateCompliancePacksResponseBodyOperateCompliancePacksResult OperateCompliancePacksResult { get; set; }
         public class DeleteAggregateCompliancePacksResponseBodyOperateCompliancePacksResult : TeaModel {
             /// <summary>
-            /// An array that contains the deleted compliance packages.
+            /// <para>An array that contains the deleted compliance packages.</para>
             /// </summary>
             [NameInMap("OperateCompliancePacks")]
             [Validation(Required=false)]
             public List<DeleteAggregateCompliancePacksResponseBodyOperateCompliancePacksResultOperateCompliancePacks> OperateCompliancePacks { get; set; }
             public class DeleteAggregateCompliancePacksResponseBodyOperateCompliancePacksResultOperateCompliancePacks : TeaModel {
                 /// <summary>
-                /// The ID of the compliance package.
+                /// <para>The ID of the compliance package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cp-541e626622af0087****</para>
                 /// </summary>
                 [NameInMap("CompliancePackId")]
                 [Validation(Required=false)]
                 public string CompliancePackId { get; set; }
 
                 /// <summary>
-                /// The error code returned.
+                /// <para>The error code returned.</para>
+                /// <list type="bullet">
+                /// <item><description>If the compliance package is deleted, no error code is returned.</description></item>
+                /// <item><description>If the compliance package fails to be deleted, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</description></item>
+                /// </list>
                 /// 
-                /// *   If the compliance package is deleted, no error code is returned.
-                /// *   If the compliance package fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
+                /// <b>Example:</b>
+                /// <para>CompliancePackAlreadyPending</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the request was successful. Valid values:
+                /// <para>Indicates whether the request was successful. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The request was successful.</description></item>
+                /// <item><description>false: The request failed.</description></item>
+                /// </list>
                 /// 
-                /// *   true: The request was successful.
-                /// *   false: The request failed.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -55,7 +66,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6EC7AED1-172F-42AE-9C12-295BC2ADB751</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

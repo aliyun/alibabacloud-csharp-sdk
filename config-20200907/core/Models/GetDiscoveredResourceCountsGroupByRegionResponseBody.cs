@@ -10,30 +10,40 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetDiscoveredResourceCountsGroupByRegionResponseBody : TeaModel {
         /// <summary>
-        /// The statistics on the resources.
+        /// <para>The statistics on the resources.</para>
         /// </summary>
         [NameInMap("DiscoveredResourceCountsSummary")]
         [Validation(Required=false)]
         public List<GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary> DiscoveredResourceCountsSummary { get; set; }
         public class GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary : TeaModel {
             /// <summary>
-            /// The dimension by which statistics are collected.
+            /// <para>The dimension by which statistics are collected.</para>
+            /// <remarks>
+            /// <para> In most cases, the <c>Region</c> parameter instead of the GroupName parameter is returned.</para>
+            /// </remarks>
             /// 
-            /// >  In most cases, the `Region` parameter instead of the GroupName parameter is returned.
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The ID of the region by which statistics are collected.
+            /// <para>The ID of the region by which statistics are collected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The total number of resources.
+            /// <para>The total number of resources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("ResourceCount")]
             [Validation(Required=false)]
@@ -42,7 +52,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>399BD94C-D20C-4D27-88D4-89E8D75C0595</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

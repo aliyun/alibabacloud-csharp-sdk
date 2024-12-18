@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateComplianceSummaryResponseBody : TeaModel {
         /// <summary>
-        /// The compliance statistics.
+        /// <para>The compliance statistics.</para>
         /// </summary>
         [NameInMap("ComplianceSummary")]
         [Validation(Required=false)]
         public GetAggregateComplianceSummaryResponseBodyComplianceSummary ComplianceSummary { get; set; }
         public class GetAggregateComplianceSummaryResponseBodyComplianceSummary : TeaModel {
             /// <summary>
-            /// The summary of compliance statistics from the rule dimension.
+            /// <para>The summary of compliance statistics from the rule dimension.</para>
             /// </summary>
             [NameInMap("ComplianceSummaryByConfigRule")]
             [Validation(Required=false)]
             public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule ComplianceSummaryByConfigRule { get; set; }
             public class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule : TeaModel {
                 /// <summary>
-                /// The time when the compliance statistics were collected. Unit: milliseconds.
+                /// <para>The time when the compliance statistics were collected. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1589853822103</para>
                 /// </summary>
                 [NameInMap("ComplianceSummaryTimestamp")]
                 [Validation(Required=false)]
                 public long? ComplianceSummaryTimestamp { get; set; }
 
                 /// <summary>
-                /// The number of compliant rules.
+                /// <para>The number of compliant rules.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("CompliantCount")]
                 [Validation(Required=false)]
                 public int? CompliantCount { get; set; }
 
                 /// <summary>
-                /// The number of non-compliant rules.
+                /// <para>The number of non-compliant rules.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("NonCompliantCount")]
                 [Validation(Required=false)]
                 public int? NonCompliantCount { get; set; }
 
                 /// <summary>
-                /// The total number of rules.
+                /// <para>The total number of rules.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>9</para>
                 /// </summary>
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
@@ -54,35 +66,47 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The summary of compliance statistics from the resource dimension.
+            /// <para>The summary of compliance statistics from the resource dimension.</para>
             /// </summary>
             [NameInMap("ComplianceSummaryByResource")]
             [Validation(Required=false)]
             public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource ComplianceSummaryByResource { get; set; }
             public class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource : TeaModel {
                 /// <summary>
-                /// The time when the compliance statistics were collected. Unit: milliseconds.
+                /// <para>The time when the compliance statistics were collected. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1589853822103</para>
                 /// </summary>
                 [NameInMap("ComplianceSummaryTimestamp")]
                 [Validation(Required=false)]
                 public long? ComplianceSummaryTimestamp { get; set; }
 
                 /// <summary>
-                /// The number of compliant resources.
+                /// <para>The number of compliant resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("CompliantCount")]
                 [Validation(Required=false)]
                 public int? CompliantCount { get; set; }
 
                 /// <summary>
-                /// The number of non-compliant resources.
+                /// <para>The number of non-compliant resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>11</para>
                 /// </summary>
                 [NameInMap("NonCompliantCount")]
                 [Validation(Required=false)]
                 public int? NonCompliantCount { get; set; }
 
                 /// <summary>
-                /// The total number of resources.
+                /// <para>The total number of resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>31</para>
                 /// </summary>
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
@@ -93,7 +117,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>929B8360-BD57-54FF-96DB-AD1D9B476769</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

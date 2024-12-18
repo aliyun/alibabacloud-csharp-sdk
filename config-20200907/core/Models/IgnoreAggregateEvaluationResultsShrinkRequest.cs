@@ -10,47 +10,52 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class IgnoreAggregateEvaluationResultsShrinkRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-5b6c626622af008f****</para>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cr-7e72626622af0051****</para>
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The date from which the system automatically re-evaluates the ignored incompliant resources.
+        /// <para>The date from which the system automatically re-evaluates the ignored incompliant resources.</para>
+        /// <remarks>
+        /// <para> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</para>
+        /// </remarks>
         /// 
-        /// >  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.
+        /// <b>Example:</b>
+        /// <para>2022-06-01</para>
         /// </summary>
         [NameInMap("IgnoreDate")]
         [Validation(Required=false)]
         public string IgnoreDate { get; set; }
 
         /// <summary>
-        /// The reason why you ignore the resource.
+        /// <para>The reason why you ignore the resource.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
 
         /// <summary>
-        /// The resources to be ignored.
-        /// 
-        /// This parameter is required.
+        /// <para>The resources to be ignored.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

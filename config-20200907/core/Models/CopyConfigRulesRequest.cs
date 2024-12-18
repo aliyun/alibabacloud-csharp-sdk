@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CopyConfigRulesRequest : TeaModel {
         /// <summary>
-        /// The IDs of the destination account groups into which the rules are replicated. Separate multiple account group IDs with commas (,).
+        /// <para>The IDs of the destination account groups into which the rules are replicated. Separate multiple account group IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>If you leave this parameter empty, the compliance packages are replicated into the same account group.</para>
+        /// </remarks>
         /// 
-        /// > If you leave this parameter empty, the compliance packages are replicated into the same account group.
+        /// <b>Example:</b>
+        /// <para>ca-4b4e626622af005d****</para>
         /// </summary>
         [NameInMap("DesAggregatorIds")]
         [Validation(Required=false)]
         public string DesAggregatorIds { get; set; }
 
         /// <summary>
-        /// The ID of the account group to which the rules belong.
+        /// <para>The ID of the account group to which the rules belong.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
+        /// <b>Example:</b>
+        /// <para>ca-24db626622af0060****</para>
         /// </summary>
         [NameInMap("SrcAggregatorId")]
         [Validation(Required=false)]
         public string SrcAggregatorId { get; set; }
 
         /// <summary>
-        /// The rule IDs. Separate multiple rule IDs with commas (,).
+        /// <para>The rule IDs. Separate multiple rule IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cr-4b57626622af0065****,cr-47c1626622af0050****</para>
         /// </summary>
         [NameInMap("SrcConfigRuleIds")]
         [Validation(Required=false)]

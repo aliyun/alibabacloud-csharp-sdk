@@ -10,26 +10,30 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateConfigurationRecorderResponseBody : TeaModel {
         /// <summary>
-        /// The details of the configuration recorder.
+        /// <para>The details of the configuration recorder.</para>
         /// </summary>
         [NameInMap("ConfigurationRecorder")]
         [Validation(Required=false)]
         public UpdateConfigurationRecorderResponseBodyConfigurationRecorder ConfigurationRecorder { get; set; }
         public class UpdateConfigurationRecorderResponseBodyConfigurationRecorder : TeaModel {
             /// <summary>
-            /// The status of the configuration recorder. Valid values:
+            /// <para>The status of the configuration recorder. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>REGISTRABLE: The configuration recorder has not been registered.</description></item>
+            /// <item><description>BUILDING: The configuration recorder is being deployed.</description></item>
+            /// <item><description>REGISTERED: The configuration recorder has been registered.</description></item>
+            /// <item><description>REBUILDING: The configuration recorder is being redeployed.</description></item>
+            /// </list>
             /// 
-            /// *   REGISTRABLE: The configuration recorder has not been registered.
-            /// *   BUILDING: The configuration recorder is being deployed.
-            /// *   REGISTERED: The configuration recorder has been registered.
-            /// *   REBUILDING: The configuration recorder is being redeployed.
+            /// <b>Example:</b>
+            /// <para>REGISTERED</para>
             /// </summary>
             [NameInMap("ConfigurationRecorderStatus")]
             [Validation(Required=false)]
             public string ConfigurationRecorderStatus { get; set; }
 
             /// <summary>
-            /// The types of the resources that are monitored by Cloud Config.
+            /// <para>The types of the resources that are monitored by Cloud Config.</para>
             /// </summary>
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]
@@ -38,7 +42,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2A1D5095-D1F9-56B6-A712-EA495608E79A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

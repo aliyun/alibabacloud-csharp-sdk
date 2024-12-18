@@ -10,40 +10,53 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregatorRequest : TeaModel {
         /// <summary>
-        /// The information about the member accounts in the account group. Example:
+        /// <para>The information about the member accounts in the account group. Example:</para>
+        /// <pre><c>[{
+        ///     &quot;accountId&quot;: 171322098523****,
+        ///     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+        ///                 &quot;accountName&quot;:&quot;Alice&quot;
+        /// }, {
+        ///     &quot;accountId&quot;: 100532098349****,
+        ///     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+        ///                 &quot;accountName&quot;:&quot;Tom&quot;
+        /// }]
+        /// </c></pre>
+        /// <remarks>
+        /// <para> If <c>AggregatorType</c> is set to <c>RD</c> or <c>FOLDER</c>, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</para>
+        /// </remarks>
         /// 
-        ///     [{
-        ///     	"accountId": 171322098523****,
-        ///     	"accountType":"ResourceDirectory",
-        ///                     "accountName":"Alice"
-        ///     }, {
-        ///     	"accountId": 100532098349****,
-        ///     	"accountType":"ResourceDirectory",
-        ///                     "accountName":"Tom"
-        ///     }]
-        /// 
-        /// >  If `AggregatorType` is set to `RD` or `FOLDER`, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("AggregatorAccounts")]
         [Validation(Required=false)]
         public List<CreateAggregatorRequestAggregatorAccounts> AggregatorAccounts { get; set; }
         public class CreateAggregatorRequestAggregatorAccounts : TeaModel {
             /// <summary>
-            /// The member account ID. For more information about how to obtain the ID of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
+            /// <para>The member account ID. For more information about how to obtain the ID of a member account, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>171322098523****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// The name of the member account. For more information about how to obtain the name of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).
+            /// <para>The name of the member account. For more information about how to obtain the name of a member account, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alice</para>
             /// </summary>
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
             /// <summary>
-            /// The type of the member account. Set this parameter to ResourceDirectory.
+            /// <para>The type of the member account. Set this parameter to ResourceDirectory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ResourceDirectory</para>
             /// </summary>
             [NameInMap("AccountType")]
             [Validation(Required=false)]
@@ -52,43 +65,57 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The name of the account group.
+        /// <para>The name of the account group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Test_Group</para>
         /// </summary>
         [NameInMap("AggregatorName")]
         [Validation(Required=false)]
         public string AggregatorName { get; set; }
 
         /// <summary>
-        /// The type of the account group. Valid values:
+        /// <para>The type of the account group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RD: global account group.</description></item>
+        /// <item><description>FOLDER: account group of the folder.</description></item>
+        /// <item><description>CUSTOM (default): custom account group.</description></item>
+        /// </list>
         /// 
-        /// *   RD: global account group.
-        /// *   FOLDER: account group of the folder.
-        /// *   CUSTOM (default): custom account group.
+        /// <b>Example:</b>
+        /// <para>CUSTOM</para>
         /// </summary>
         [NameInMap("AggregatorType")]
         [Validation(Required=false)]
         public string AggregatorType { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The description of the account group.
+        /// <para>The description of the account group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Aggregator description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the folder to which the account group is attached. You must specify this parameter if `AggregatorType` is set to `FOLDER`.
+        /// <para>The ID of the folder to which the account group is attached. You must specify this parameter if <c>AggregatorType</c> is set to <c>FOLDER</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fd-brHdgv****</para>
         /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]

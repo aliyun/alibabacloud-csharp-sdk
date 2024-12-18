@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CopyConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the rules are replicated. Valid values:
+        /// <para>Indicates whether the rules are replicated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("CopyRulesResult")]
         [Validation(Required=false)]
         public bool? CopyRulesResult { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7BD81ECF-3194-5A6B-8719-9FC283167AD4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

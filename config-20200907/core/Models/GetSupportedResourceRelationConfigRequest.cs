@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetSupportedResourceRelationConfigRequest : TeaModel {
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ACS::ECS::Instance</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

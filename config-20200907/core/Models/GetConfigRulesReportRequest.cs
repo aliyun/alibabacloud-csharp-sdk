@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetConfigRulesReportRequest : TeaModel {
         /// <summary>
-        /// The ID of the compliance evaluation report.
+        /// <para>The ID of the compliance evaluation report.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crp-88176457e0d900c9****</para>
         /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]

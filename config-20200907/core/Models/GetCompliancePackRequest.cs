@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetCompliancePackRequest : TeaModel {
         /// <summary>
-        /// The ID of the compliance package.
+        /// <para>The ID of the compliance package.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cp-a8a8626622af0082****</para>
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]

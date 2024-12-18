@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregateRemediationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the remediation template.
+        /// <para>The ID of the remediation template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-909ba2d4716700eb****</para>
         /// </summary>
         [NameInMap("RemediationId")]
         [Validation(Required=false)]
         public string RemediationId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

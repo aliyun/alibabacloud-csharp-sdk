@@ -10,39 +10,48 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateCompliancePacksRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-f632626622af0079****</para>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The status of the one or more compliance packages to be queried. Valid values:
+        /// <para>The status of the one or more compliance packages to be queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ACTIVE: compliance packages that are available for use.</description></item>
+        /// <item><description>CREATING: compliance packages that are being created.</description></item>
+        /// </list>
         /// 
-        /// *   ACTIVE: compliance packages that are available for use.
-        /// *   CREATING: compliance packages that are being created.
+        /// <b>Example:</b>
+        /// <para>ACTIVE</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

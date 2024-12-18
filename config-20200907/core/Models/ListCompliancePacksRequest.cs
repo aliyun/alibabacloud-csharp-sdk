@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListCompliancePacksRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1. Default value: 1</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The status of the compliance package to be queried. Valid values:
+        /// <para>The status of the compliance package to be queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ACTIVE: The compliance package is active.</description></item>
+        /// <item><description>CREATING: The compliance package is being created.</description></item>
+        /// </list>
         /// 
-        /// *   ACTIVE: The compliance package is active.
-        /// *   CREATING: The compliance package is being created.
+        /// <b>Example:</b>
+        /// <para>ACTIVE</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

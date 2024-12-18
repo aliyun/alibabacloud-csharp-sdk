@@ -10,22 +10,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRuleComplianceByPackRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>For information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-04b3fd170e340007****</para>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the compliance package.
+        /// <para>The ID of the compliance package.</para>
+        /// <para>For information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cp-541e626622af0087****</para>
         /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]

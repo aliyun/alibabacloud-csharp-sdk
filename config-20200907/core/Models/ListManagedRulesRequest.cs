@@ -10,43 +10,57 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListManagedRulesRequest : TeaModel {
         /// <summary>
-        /// The keyword of the managed rule.
+        /// <para>The keyword of the managed rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CDN</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <para>Page start from page 1. Default value: 1.</para>
         /// 
-        /// Page start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the resources to be evaluated based on the rule.
+        /// <para>The type of the resources to be evaluated based on the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACS::ECS::Instance</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// The risk level of the managed rule. Valid values:
+        /// <para>The risk level of the managed rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: high</description></item>
+        /// <item><description>2: medium</description></item>
+        /// <item><description>3: low</description></item>
+        /// </list>
         /// 
-        /// *   1: high
-        /// *   2: medium
-        /// *   3: low
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]

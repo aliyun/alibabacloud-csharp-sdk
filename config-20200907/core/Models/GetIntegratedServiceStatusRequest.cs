@@ -10,13 +10,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetIntegratedServiceStatusRequest : TeaModel {
         /// <summary>
-        /// The identity of the cloud service that is integrated with Cloud Config. Valid values:
+        /// <para>The identity of the cloud service that is integrated with Cloud Config. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>eventbridge: EventBridge</description></item>
+        /// <item><description>cms: CloudMonitor</description></item>
+        /// <item><description>bpstudio: Cloud Architect Design Tools</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   eventbridge: EventBridge
-        /// *   cms: CloudMonitor
-        /// *   bpstudio: Cloud Architect Design Tools
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cadt</para>
         /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]

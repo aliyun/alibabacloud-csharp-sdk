@@ -9,10 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveConfigRulesRequest : TeaModel {
+        [NameInMap("CompliancePackId")]
+        [Validation(Required=false)]
+        public string CompliancePackId { get; set; }
+
         /// <summary>
-        /// The rule ID. Separate multiple rule IDs with commas (,).
+        /// <para>The rule ID. Separate multiple rule IDs with commas (,).</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cr-2da35180a8d1008e****,cr-2da35180a8d1008e****</para>
         /// </summary>
         [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]

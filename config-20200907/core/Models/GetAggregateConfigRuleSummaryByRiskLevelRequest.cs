@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRuleSummaryByRiskLevelRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-3a58626622af0005****</para>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]

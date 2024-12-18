@@ -10,9 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateComplianceSummaryRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-a91d626622af0035****</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]

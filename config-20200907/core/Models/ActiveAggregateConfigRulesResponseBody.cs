@@ -10,41 +10,52 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveAggregateConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public ActiveAggregateConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class ActiveAggregateConfigRulesResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// The returned result.
+            /// <para>The returned result.</para>
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
             public List<ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
                 /// <summary>
-                /// The rule ID.
+                /// <para>The rule ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cr-5772ba41209e007b****</para>
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The error code returned.
+                /// <para>The error code returned.</para>
+                /// <list type="bullet">
+                /// <item><description>If the rule is enabled, no error code is returned.</description></item>
+                /// <item><description>If the rule fails to be enabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</description></item>
+                /// </list>
                 /// 
-                /// *   If the rule is enabled, no error code is returned.
-                /// *   If the rule fails to be enabled, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
+                /// <b>Example:</b>
+                /// <para>ConfigRuleNotExists</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// Indicates whether the request was successful. Valid values:
+                /// <para>Indicates whether the request was successful. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The request was successful.</description></item>
+                /// <item><description>false: The request failed.</description></item>
+                /// </list>
                 /// 
-                /// *   true: The request was successful.
-                /// *   false: The request failed.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
@@ -55,7 +66,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6EC7AED1-172F-42AE-9C12-295BC2ADB751</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

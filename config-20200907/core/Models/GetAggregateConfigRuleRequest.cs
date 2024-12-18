@@ -10,22 +10,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-7f00626622af0041****</para>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a> operation to obtain the rule ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html) operation to obtain the rule ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cr-7f7d626622af0041****</para>
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]

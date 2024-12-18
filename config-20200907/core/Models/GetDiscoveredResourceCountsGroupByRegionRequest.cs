@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetDiscoveredResourceCountsGroupByRegionRequest : TeaModel {
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</para>
         /// 
-        /// For more information about how to obtain the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).
+        /// <b>Example:</b>
+        /// <para>ACS::ECS::Instance</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class RevertEvaluationResultsShrinkRequest : TeaModel {
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cr-7e72626622af0051****</para>
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The resources that are to be re-evaluated.
-        /// 
-        /// This parameter is required.
+        /// <para>The resources that are to be re-evaluated.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

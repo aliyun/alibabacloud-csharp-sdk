@@ -10,53 +10,68 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateRemediationExecutionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the account group.
+        /// <para>The ID of the account group.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ca-edd3626622af00b3****</para>
         /// </summary>
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// The rule ID.
+        /// <para>The rule ID.</para>
+        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cr-2792626622af0c21****</para>
         /// </summary>
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// The status of the remediation. Valid values:
+        /// <para>The status of the remediation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Success</description></item>
+        /// <item><description>Failed</description></item>
+        /// </list>
         /// 
-        /// *   Success
-        /// *   Failed
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("ExecutionStatus")]
         [Validation(Required=false)]
         public string ExecutionStatus { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return for a single request. Valid values: 10 to 100.
+        /// <para>The maximum number of entries to return for a single request. Valid values: 10 to 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aVCjqFaSy0Ps6zSMGw09****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the member account in the account group.
+        /// <para>The ID of the member account in the account group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>126672004088****</para>
         /// </summary>
         [NameInMap("ResourceAccountId")]
         [Validation(Required=false)]

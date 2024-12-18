@@ -10,94 +10,119 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateCompliancePackResponseBody : TeaModel {
         /// <summary>
-        /// The details of the compliance package.
+        /// <para>The details of the compliance package.</para>
         /// </summary>
         [NameInMap("CompliancePack")]
         [Validation(Required=false)]
         public GetAggregateCompliancePackResponseBodyCompliancePack CompliancePack { get; set; }
         public class GetAggregateCompliancePackResponseBodyCompliancePack : TeaModel {
             /// <summary>
-            /// The ID of the management account to which the compliance package belongs.
+            /// <para>The ID of the management account to which the compliance package belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100931896542****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// The ID of the account group.
+            /// <para>The ID of the account group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ca-f632626622af0079****</para>
             /// </summary>
             [NameInMap("AggregatorId")]
             [Validation(Required=false)]
             public string AggregatorId { get; set; }
 
             /// <summary>
-            /// The ID of the compliance package.
+            /// <para>The ID of the compliance package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cp-fdc8626622af00f9****</para>
             /// </summary>
             [NameInMap("CompliancePackId")]
             [Validation(Required=false)]
             public string CompliancePackId { get; set; }
 
             /// <summary>
-            /// The name of the compliance package.
+            /// <para>The name of the compliance package.</para>
             /// </summary>
             [NameInMap("CompliancePackName")]
             [Validation(Required=false)]
             public string CompliancePackName { get; set; }
 
             /// <summary>
-            /// The ID of the compliance package template.
+            /// <para>The ID of the compliance package template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ct-5f26ff4e06a300c4****</para>
             /// </summary>
             [NameInMap("CompliancePackTemplateId")]
             [Validation(Required=false)]
             public string CompliancePackTemplateId { get; set; }
 
             /// <summary>
-            /// The rules in the compliance package.
+            /// <para>The rules in the compliance package.</para>
             /// </summary>
             [NameInMap("ConfigRules")]
             [Validation(Required=false)]
             public List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRules> ConfigRules { get; set; }
             public class GetAggregateCompliancePackResponseBodyCompliancePackConfigRules : TeaModel {
                 /// <summary>
-                /// The rule ID.
+                /// <para>The rule ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cr-a260626622af0005****</para>
                 /// </summary>
                 [NameInMap("ConfigRuleId")]
                 [Validation(Required=false)]
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// The name of the rule.
+                /// <para>The name of the rule.</para>
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
                 [Validation(Required=false)]
                 public string ConfigRuleName { get; set; }
 
                 /// <summary>
-                /// The details of the input parameter of the rule.
+                /// <para>The details of the input parameter of the rule.</para>
                 /// </summary>
                 [NameInMap("ConfigRuleParameters")]
                 [Validation(Required=false)]
                 public List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> ConfigRuleParameters { get; set; }
                 public class GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters : TeaModel {
                     /// <summary>
-                    /// The name of the input parameter.
+                    /// <para>The name of the input parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>bandwidth</para>
                     /// </summary>
                     [NameInMap("ParameterName")]
                     [Validation(Required=false)]
                     public string ParameterName { get; set; }
 
                     /// <summary>
-                    /// The value of the input parameter.
+                    /// <para>The value of the input parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
                     /// </summary>
                     [NameInMap("ParameterValue")]
                     [Validation(Required=false)]
                     public string ParameterValue { get; set; }
 
                     /// <summary>
-                    /// Indicates whether the input parameter was required. Valid values:
+                    /// <para>Indicates whether the input parameter was required. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
                     /// 
-                    /// *   true
-                    /// *   false
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("Required")]
                     [Validation(Required=false)]
@@ -106,32 +131,42 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// The description of the rule.
+                /// <para>The description of the rule.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the rule template.
+                /// <para>The ID of the rule template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eip-bandwidth-limit</para>
                 /// </summary>
                 [NameInMap("ManagedRuleIdentifier")]
                 [Validation(Required=false)]
                 public string ManagedRuleIdentifier { get; set; }
 
                 /// <summary>
-                /// The type of the resource evaluated based on the rule. Multiple resource types are separated with commas (,).
+                /// <para>The type of the resource evaluated based on the rule. Multiple resource types are separated with commas (,).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ACS::EIP::EipAddress</para>
                 /// </summary>
                 [NameInMap("ResourceTypesScope")]
                 [Validation(Required=false)]
                 public string ResourceTypesScope { get; set; }
 
                 /// <summary>
-                /// The risk level of the resources that do not comply with the rule. Valid values:
+                /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: high</description></item>
+                /// <item><description>2: medium</description></item>
+                /// <item><description>3: low</description></item>
+                /// </list>
                 /// 
-                /// *   1: high
-                /// *   2: medium
-                /// *   3: low
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
@@ -140,32 +175,39 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The timestamp when the compliance package was created. Unit: milliseconds.
+            /// <para>The timestamp when the compliance package was created. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1624243657000</para>
             /// </summary>
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// The description of the compliance package.
+            /// <para>The description of the compliance package.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
+            /// <para>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: high</description></item>
+            /// <item><description>2: medium</description></item>
+            /// <item><description>3: low</description></item>
+            /// </list>
             /// 
-            /// *   1: high
-            /// *   2: medium
-            /// *   3: low
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// The evaluation scope of the compliance package.
+            /// <para>The evaluation scope of the compliance package.</para>
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
@@ -180,7 +222,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ExcludeResourceGroupIdsScope { get; set; }
 
                 /// <summary>
-                /// The ID of the resource that is not evaluated by using the compliance package.
+                /// <para>The ID of the resource that is not evaluated by using the compliance package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eip-8vbf3x310fn56ijfd****</para>
                 /// </summary>
                 [NameInMap("ExcludeResourceIdsScope")]
                 [Validation(Required=false)]
@@ -201,14 +246,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// The ID of the region whose resources were evaluated by using the compliance package.
+                /// <para>The ID of the region whose resources were evaluated by using the compliance package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionIdsScope")]
                 [Validation(Required=false)]
                 public string RegionIdsScope { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group whose resources are evaluated by using the compliance package.
+                /// <para>The ID of the resource group whose resources are evaluated by using the compliance package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-aekzc7r7rhx****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupIdsScope")]
                 [Validation(Required=false)]
@@ -219,14 +270,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceIdsScope { get; set; }
 
                 /// <summary>
-                /// The tag key of the resource that is evaluated by using the compliance package.
+                /// <para>The tag key of the resource that is evaluated by using the compliance package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS</para>
                 /// </summary>
                 [NameInMap("TagKeyScope")]
                 [Validation(Required=false)]
                 public string TagKeyScope { get; set; }
 
                 /// <summary>
-                /// The tag value of the resource that is evaluated by using the compliance package.
+                /// <para>The tag value of the resource that is evaluated by using the compliance package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("TagValueScope")]
                 [Validation(Required=false)]
@@ -249,17 +306,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// The status of the compliance package. Valid values:
+            /// <para>The status of the compliance package. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ACTIVE: The compliance package was normal.</description></item>
+            /// <item><description>CREATING: The compliance package was being created.</description></item>
+            /// </list>
             /// 
-            /// *   ACTIVE: The compliance package was normal.
-            /// *   CREATING: The compliance package was being created.
+            /// <b>Example:</b>
+            /// <para>ACTIVE</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.
+            /// <para>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</para>
             /// </summary>
             [NameInMap("TemplateContent")]
             [Validation(Required=false)]
@@ -268,7 +329,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6EC7AED1-172F-42AE-9C12-295BC2ADB751</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
