@@ -151,9 +151,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("Reserves")]
         [Validation(Required=false)]
         public List<string> Reserves { get; set; }

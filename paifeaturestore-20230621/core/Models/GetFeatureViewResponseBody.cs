@@ -111,6 +111,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>item_table_mock_1</para>
+        /// </summary>
+        [NameInMap("MockTableName")]
+        [Validation(Required=false)]
+        public string MockTableName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>featureView1</para>
         /// </summary>
         [NameInMap("Name")]
