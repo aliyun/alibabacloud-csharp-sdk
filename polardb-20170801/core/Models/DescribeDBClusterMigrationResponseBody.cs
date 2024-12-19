@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MigrationStatus { get; set; }
 
         /// <summary>
-        /// <para>The port number.</para>
+        /// <para>The endpoints of the ApsaraDB RDS instance.</para>
         /// </summary>
         [NameInMap("RdsEndpointList")]
         [Validation(Required=false)]
@@ -294,6 +294,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Port { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether SSL encryption is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Enabled</b></description></item>
+                /// <item><description><b>Disabled</b></description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
                 /// </summary>
@@ -324,6 +330,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
+            /// <para>The instance type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ReadOnly
             /// Maxscale
@@ -334,6 +342,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CustinsType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rm-************-normal</para>
             /// </summary>
@@ -342,6 +352,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBEndpointId { get; set; }
 
             /// <summary>
+            /// <para>The type of the endpoint. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Normal</b>: the standard endpoint</description></item>
+            /// <item><description><b>ReadWriteSplitting</b>: the read/write splitting endpoint</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
             /// </summary>
@@ -382,6 +398,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceRDSDBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the source database. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PolarDBMySQL</b>: The source database is a PolarDB for MySQL database when the major version of your PolarDB cluster is upgraded.</description></item>
+        /// <item><description><b>RDS</b>: The source database is an ApsaraDB RDS database when data is migrated from ApsaraDB RDS to PolarDB for MySQL.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PolarDBMySQL</para>
         /// </summary>

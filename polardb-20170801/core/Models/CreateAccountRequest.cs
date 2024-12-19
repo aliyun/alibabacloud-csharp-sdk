@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The password of the account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>It must be 8 to 32 characters in length.</description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// <item><description>Special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -87,16 +87,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The type of the account. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b>: standard account</description></item>
-        /// <item><description><b>Super</b>: privileged account</description></item>
+        /// <item><description><b>Super</b>: privileged account.</description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>If you leave this parameter empty, the default value <b>Super</b> is used.</para>
         /// </description></item>
-        /// <item><description><para>You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</para>
+        /// <item><description><para>You can create multiple privileged accounts for a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</para>
         /// </description></item>
-        /// <item><description><para>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</para>
+        /// <item><description><para>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -149,24 +149,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to grant the specified account required permissions on all existing databases in the current cluster and databases that will be further created for the current cluster. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>0 or unspecified</b>: does not grant required permissions.</description></item>
-        /// <item><description><b>1</b>: grants required permissions.</description></item>
-        /// </list>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>The parameter is valid only after you configure the <c>AccountPrivilege</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If you set the parameter to <c>1</c>, the current account is granted to the required permissions on all databases in the current cluster that are specified by the <c>AccountPrivilege</c> parameter.</para>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("PrivForAllDB")]
         [Validation(Required=false)]
         public string PrivForAllDB { get; set; }

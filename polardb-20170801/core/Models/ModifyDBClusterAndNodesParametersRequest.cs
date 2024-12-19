@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("StandbyClusterIdListNeedToSync")]
+        [Validation(Required=false)]
+        public string StandbyClusterIdListNeedToSync { get; set; }
+
     }
 
 }

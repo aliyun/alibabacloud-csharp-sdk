@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string DBEndpointId { get; set; }
 
+            [NameInMap("SSLAutoRotate")]
+            [Validation(Required=false)]
+            public string SSLAutoRotate { get; set; }
+
             /// <summary>
             /// <para>The SSL connection string.</para>
             /// 

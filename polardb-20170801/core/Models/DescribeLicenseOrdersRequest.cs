@@ -84,6 +84,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>Specifies whether to query only virtual orders.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("VirtualOrder")]
         [Validation(Required=false)]
