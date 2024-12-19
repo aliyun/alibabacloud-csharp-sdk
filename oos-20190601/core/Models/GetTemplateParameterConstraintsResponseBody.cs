@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetTemplateParameterConstraintsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The constraints of the parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[
         ///     {
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public Dictionary<string, object> ParameterConstraints { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBEC8072-BEC2-478E-8EAE-E723BA79CF19</para>
         /// </summary>

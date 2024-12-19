@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string AlarmConfigShrink { get; set; }
 
+        /// <summary>
+        /// <para>The source of application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Platform&quot;:&quot;github&quot;,&quot;Owner&quot;:&quot;githubUser&quot;,&quot;RepoName&quot;:&quot;githubUser/repoName&quot;}</para>
+        /// </summary>
         [NameInMap("ApplicationSource")]
         [Validation(Required=false)]
         public string ApplicationSource { get; set; }
@@ -72,7 +78,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service.</para>
+        /// <para>The ID of the Compute Nest service that corresponds to the application template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>service-79538e30e44541b699d8</para>

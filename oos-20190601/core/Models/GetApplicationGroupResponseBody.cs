@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
+            /// <summary>
+            /// <para>The source of application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;Platform&quot;:&quot;github&quot;,&quot;RepoName&quot;:&quot;wenle/springboot-ecs-sourcecode-demo&quot;,&quot;Owner&quot;:&quot;wenle&quot;,&quot;Branch&quot;:&quot;main&quot;,&quot;CommitHash&quot;:&quot;8559ff3ac7568fc7951ff63f841883ee3f06c6fe&quot;,&quot;CommitMessage&quot;:&quot;Init computenest project&quot;}</para>
+            /// </summary>
             [NameInMap("ApplicationSource")]
             [Validation(Required=false)]
             public string ApplicationSource { get; set; }
@@ -121,10 +127,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The operation metadata.</para>
+            /// <para>The hosted O\&amp;M configurations.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;PrometheusConfigMap\&quot;:{\&quot;模板1\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</para>
+            /// <para>{\\&quot;PrometheusConfigMap\\&quot;:{\\&quot;Template 1\\&quot;:{\\&quot;EnablePrometheus\\&quot;:false}}}</para>
             /// </summary>
             [NameInMap("OperationMetadata")]
             [Validation(Required=false)]

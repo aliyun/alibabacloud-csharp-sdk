@@ -5787,11 +5787,7 @@ namespace AlibabaCloud.SDK.Oos20190601
         public GetServiceSettingsResponse GetServiceSettingsWithOptions(GetServiceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5802,7 +5798,7 @@ namespace AlibabaCloud.SDK.Oos20190601
                 Version = "2019-06-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "POST",
+                Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -5829,11 +5825,7 @@ namespace AlibabaCloud.SDK.Oos20190601
         public async Task<GetServiceSettingsResponse> GetServiceSettingsWithOptionsAsync(GetServiceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5844,7 +5836,7 @@ namespace AlibabaCloud.SDK.Oos20190601
                 Version = "2019-06-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "POST",
+                Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
