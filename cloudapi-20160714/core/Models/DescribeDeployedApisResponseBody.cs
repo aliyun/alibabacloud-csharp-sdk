@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ApiId { get; set; }
 
                 /// <summary>
+                /// <para>The HTTP method of the API request.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>POST</para>
                 /// </summary>
@@ -49,6 +51,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ApiName { get; set; }
 
                 /// <summary>
+                /// <para>The request path of the API.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>/trademark/search</para>
                 /// </summary>

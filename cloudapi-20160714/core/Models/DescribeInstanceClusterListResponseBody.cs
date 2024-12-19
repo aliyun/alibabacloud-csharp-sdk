@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceClusterListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The instance cluster list.</para>
+        /// </summary>
         [NameInMap("InstanceClusters")]
         [Validation(Required=false)]
         public DescribeInstanceClusterListResponseBodyInstanceClusters InstanceClusters { get; set; }

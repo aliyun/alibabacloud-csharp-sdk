@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class EnableInstanceAccessControlRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AclId { get; set; }
 
         /// <summary>
+        /// <para>The ACL type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>black: blacklist</description></item>
+        /// <item><description>white: whitelist</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,11 +35,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AclType { get; set; }
 
+        /// <summary>
+        /// <para>The IP version. Valid values: <b>ipv4</b> and <b>ipv6</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv4</para>
+        /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

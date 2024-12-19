@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyLogConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The log type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>log</b>: other logs</description></item>
+        /// <item><description><b>survey</b>: inspection logs</description></item>
+        /// </list>
+        /// <para>Enumeration value:</para>
+        /// <list type="bullet">
+        /// <item><description>PROVIDER</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PROVIDER</para>
         /// </summary>
@@ -22,6 +32,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The name of the Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +43,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SlsLogStore { get; set; }
 
         /// <summary>
+        /// <para>The name of the Log Service project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

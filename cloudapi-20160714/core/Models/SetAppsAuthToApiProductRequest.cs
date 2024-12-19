@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetAppsAuthToApiProductRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the API product.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiProductId { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the applications that you want to authorize.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppIds")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public List<long?> AppIds { get; set; }
 
         /// <summary>
+        /// <para>The time (UTC) when the authorization expires. If this parameter is empty, the authorization does not expire.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-05-31T08:15:39Z</para>
         /// </summary>
@@ -34,6 +38,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AuthValidTime { get; set; }
 
+        /// <summary>
+        /// <para>The description of the authorization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

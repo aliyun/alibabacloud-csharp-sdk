@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>If delete VPC Ip block.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string DeleteVpcIpBlock { get; set; }
 
         /// <summary>
+        /// <para>If enable outbound IPv6 Traffic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string EgressIpv6Enable { get; set; }
 
         /// <summary>
+        /// <para>The HTTPS policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>HTTPS2_TLS1_0</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string HttpsPolicy { get; set; }
 
         /// <summary>
+        /// <para>If enable inbound IPv6 Traffic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string IPV6Enabled { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Instance Name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>apigatewayInstance</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>Custom private CIDR block.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>172.0.0.1/24</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string IntranetSegments { get; set; }
 
         /// <summary>
+        /// <para>Maintainable end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23:00Z</para>
         /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
+        /// <para>Maintainable start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18:00Z</para>
         /// </summary>
@@ -133,6 +150,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
+        /// <para>The token of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</para>
         /// </summary>
@@ -141,6 +160,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the self-calling domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetApiProductsAuthoritiesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2603F41E-77FC-59A3-840E-296578A9BDE0</para>
         /// </summary>

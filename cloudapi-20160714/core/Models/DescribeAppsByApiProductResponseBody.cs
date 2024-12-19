@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The authorization description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test share with nsc qiming</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

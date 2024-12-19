@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisByAppRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the API. The name is used for fuzzy match.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>getPersonInfo</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiName { get; set; }
 
         /// <summary>
+        /// <para>The API ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>b19240592b1b4e74961fb8438ed7550c</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string ApiUid { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public long? AppId { get; set; }
 
         /// <summary>
+        /// <para>The description of the API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The request HTTP method of the API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>POST</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string Method { get; set; }
 
         /// <summary>
+        /// <para>The number of the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request path of the API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/tt</para>
         /// </summary>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<ImportSwaggerResponseBodyFailedApiImportSwaggerFailed> ApiImportSwaggerFailed { get; set; }
             public class ImportSwaggerResponseBodyFailedApiImportSwaggerFailed : TeaModel {
                 /// <summary>
-                /// <para>The error message returned.</para>
+                /// <para>The error message returned when the API is created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api already exists : apiUid ===&gt; 8e274ec61cf6468e83b68371956831cb</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ErrorMsg { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP method of the API.</para>
+                /// <para>The HTTP method configured when the API is created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>post</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string HttpMethod { get; set; }
 
                 /// <summary>
-                /// <para>The request path of the API.</para>
+                /// <para>The request path configured when the API is created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/http/get/mapping</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// <para>The models that failed to be imported based on the Swagger-compliant data imported this time.</para>
+        /// <para>The models that failed to be imported through the Swagger-compliant data this time.</para>
         /// </summary>
         [NameInMap("ModelFailed")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
-        /// <para>The models that were imported based on the Swagger-compliant data imported this time.</para>
+        /// <para>The models that were imported through the Swagger-compliant data this time.</para>
         /// </summary>
         [NameInMap("ModelSuccess")]
         [Validation(Required=false)]
@@ -131,7 +131,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model operation.</para>
+                /// <para>The model operation</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CREATE</para>
                 /// </summary>
                 [NameInMap("ModelOperation")]
                 [Validation(Required=false)]
@@ -162,7 +165,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The APIs that were created based on the Swagger-compliant data imported this time.</para>
+        /// <para>The APIs that are created based on the Swagger-compliant data imported this time.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -173,7 +176,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> ApiImportSwaggerSuccess { get; set; }
             public class ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess : TeaModel {
                 /// <summary>
-                /// <para>Specifies that the operation is CREATE or MODIFY.</para>
+                /// <para>Specifies whether the operation is CREATE or MODIFY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CREATE</para>
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ApiOperation { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the imported API.</para>
+                /// <para>The UID of the successfully imported API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8e274ec61cf6468e83b68371956831cb</para>
@@ -193,7 +196,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string ApiUid { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP method of the API.</para>
+                /// <para>The HTTP method configured when the API is created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>get</para>
@@ -203,7 +206,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string HttpMethod { get; set; }
 
                 /// <summary>
-                /// <para>The request path of the API.</para>
+                /// <para>The request path configured when the API is created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/http/get/mapping</para>

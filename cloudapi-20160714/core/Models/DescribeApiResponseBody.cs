@@ -1063,6 +1063,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
+                [NameInMap("TriggerName")]
+                [Validation(Required=false)]
+                public string TriggerName { get; set; }
+
             }
 
             /// <summary>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeDatasetInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The dataset info.</para>
+        /// </summary>
         [NameInMap("DatasetInfo")]
         [Validation(Required=false)]
         public DescribeDatasetInfoResponseBodyDatasetInfo DatasetInfo { get; set; }

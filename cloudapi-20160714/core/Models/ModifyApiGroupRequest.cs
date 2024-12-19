@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string CompatibleFlags { get; set; }
 
         /// <summary>
+        /// <para>The custom appcode configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</para>
+        /// </summary>
+        [NameInMap("CustomAppCodeConfig")]
+        [Validation(Required=false)]
+        public string CustomAppCodeConfig { get; set; }
+
+        /// <summary>
         /// <para>The custom trace configuration.</para>
         /// 
         /// <b>Example:</b>
@@ -69,6 +79,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>If filter AppCode for backend.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("FilterAppCodeForBackend")]
         [Validation(Required=false)]
         public string FilterAppCodeForBackend { get; set; }
@@ -106,6 +122,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// <para>The RPC mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("RpcPattern")]
         [Validation(Required=false)]
@@ -116,6 +135,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>If support SSE.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

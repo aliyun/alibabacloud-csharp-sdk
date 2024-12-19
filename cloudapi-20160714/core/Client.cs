@@ -792,8 +792,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例关联内网域名解析记录</para>
+        /// <para>Associates an internal domain name resolution with a dedicated instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AssociateInstanceWithPrivateDNSRequest
@@ -850,8 +855,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例关联内网域名解析记录</para>
+        /// <para>Associates an internal domain name resolution with a dedicated instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AssociateInstanceWithPrivateDNSRequest
@@ -908,8 +918,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例关联内网域名解析记录</para>
+        /// <para>Associates an internal domain name resolution with a dedicated instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateInstanceWithPrivateDNSRequest
@@ -926,8 +941,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例关联内网域名解析记录</para>
+        /// <para>Associates an internal domain name resolution with a dedicated instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateInstanceWithPrivateDNSRequest
@@ -2066,6 +2086,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await CreateApiWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建API分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiGroupRequest
         /// </param>
@@ -2123,6 +2148,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<CreateApiGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建API分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiGroupRequest
         /// </param>
@@ -2180,6 +2210,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<CreateApiGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建API分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiGroupRequest
         /// </param>
@@ -2193,6 +2228,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return CreateApiGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建API分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApiGroupRequest
         /// </param>
@@ -3730,6 +3770,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建内网域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntranetDomainRequest
         /// </param>
@@ -3771,6 +3816,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<CreateIntranetDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建内网域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntranetDomainRequest
         /// </param>
@@ -3812,6 +3862,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<CreateIntranetDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建内网域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntranetDomainRequest
         /// </param>
@@ -3825,6 +3880,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return CreateIntranetDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建内网域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntranetDomainRequest
         /// </param>
@@ -4030,6 +4090,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await CreateIpControlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Log Service configuration for an API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLogConfigRequest
         /// </param>
@@ -4044,6 +4109,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSlr))
+            {
+                query["CreateSlr"] = request.CreateSlr;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogType))
             {
                 query["LogType"] = request.LogType;
@@ -4079,6 +4148,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<CreateLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Log Service configuration for an API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLogConfigRequest
         /// </param>
@@ -4093,6 +4167,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSlr))
+            {
+                query["CreateSlr"] = request.CreateSlr;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogType))
             {
                 query["LogType"] = request.LogType;
@@ -4128,6 +4206,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<CreateLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Log Service configuration for an API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLogConfigRequest
         /// </param>
@@ -4141,6 +4224,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return CreateLogConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Simple Log Service configuration for an API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLogConfigRequest
         /// </param>
@@ -4684,8 +4772,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名解析</para>
+        /// <para>Creates an internal domain name resolution and adds a resolution record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePrivateDNSRequest
@@ -4746,8 +4839,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名解析</para>
+        /// <para>Creates an internal domain name resolution and adds a resolution record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePrivateDNSRequest
@@ -4808,8 +4906,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名解析</para>
+        /// <para>Creates an internal domain name resolution and adds a resolution record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePrivateDNSRequest
@@ -4826,8 +4929,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名解析</para>
+        /// <para>Creates an internal domain name resolution and adds a resolution record.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePrivateDNSRequest
@@ -8284,7 +8392,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除内网域名解析</para>
+        /// <para>Deletes an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8338,7 +8446,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除内网域名解析</para>
+        /// <para>Deletes an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8392,7 +8500,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除内网域名解析</para>
+        /// <para>Deletes an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8410,7 +8518,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除内网域名解析</para>
+        /// <para>Deletes an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9122,6 +9230,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await DeployApiWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量下线API任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAbolishApiTaskRequest
         /// </param>
@@ -9163,6 +9276,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeAbolishApiTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量下线API任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAbolishApiTaskRequest
         /// </param>
@@ -9204,6 +9322,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeAbolishApiTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量下线API任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAbolishApiTaskRequest
         /// </param>
@@ -9217,6 +9340,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return DescribeAbolishApiTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量下线API任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAbolishApiTaskRequest
         /// </param>
@@ -19566,6 +19694,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await DescribeIpControlsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogConfigRequest
         /// </param>
@@ -19607,6 +19740,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogConfigRequest
         /// </param>
@@ -19648,6 +19786,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogConfigRequest
         /// </param>
@@ -19661,6 +19804,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return DescribeLogConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogConfigRequest
         /// </param>
@@ -20174,6 +20322,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await DescribePluginApisWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginSchemasRequest
         /// </param>
@@ -20215,6 +20368,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribePluginSchemasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginSchemasRequest
         /// </param>
@@ -20256,6 +20414,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribePluginSchemasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginSchemasRequest
         /// </param>
@@ -20269,6 +20432,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return DescribePluginSchemasWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginSchemasRequest
         /// </param>
@@ -20282,6 +20450,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await DescribePluginSchemasWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginTemplatesRequest
         /// </param>
@@ -20327,6 +20500,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribePluginTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginTemplatesRequest
         /// </param>
@@ -20372,6 +20550,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribePluginTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginTemplatesRequest
         /// </param>
@@ -20385,6 +20568,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return DescribePluginTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询插件模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePluginTemplatesRequest
         /// </param>
@@ -22522,6 +22710,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await DescribeUpdateBackendTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询更新VPC授权的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUpdateVpcInfoTaskRequest
         /// </param>
@@ -22563,6 +22756,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeUpdateVpcInfoTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询更新VPC授权的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUpdateVpcInfoTaskRequest
         /// </param>
@@ -22604,6 +22802,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<DescribeUpdateVpcInfoTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询更新VPC授权的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUpdateVpcInfoTaskRequest
         /// </param>
@@ -22617,6 +22820,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return DescribeUpdateVpcInfoTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询更新VPC授权的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUpdateVpcInfoTaskRequest
         /// </param>
@@ -23384,7 +23592,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例解除的关联内网域名解析记录</para>
+        /// <para>Disassociates an internal domain name resolution from a dedicated instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23442,7 +23650,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例解除的关联内网域名解析记录</para>
+        /// <para>Disassociates an internal domain name resolution from a dedicated instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23500,7 +23708,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例解除的关联内网域名解析记录</para>
+        /// <para>Disassociates an internal domain name resolution from a dedicated instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23518,7 +23726,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专享实例解除的关联内网域名解析记录</para>
+        /// <para>Disassociates an internal domain name resolution from a dedicated instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23712,7 +23920,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启实例的访问控制</para>
+        /// <para>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Specifies the access control policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23770,7 +23978,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启实例的访问控制</para>
+        /// <para>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Specifies the access control policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23828,7 +24036,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启实例的访问控制</para>
+        /// <para>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Specifies the access control policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23846,7 +24054,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启实例的访问控制</para>
+        /// <para>This feature provides instance-level access control capabilities for dedicated API Gateway instances. Specifies the access control policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24464,7 +24672,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网域名解析</para>
+        /// <para>Queries internal domain name resolutions by domain name or resolution type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24514,7 +24722,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网域名解析</para>
+        /// <para>Queries internal domain name resolutions by domain name or resolution type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24564,7 +24772,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网域名解析</para>
+        /// <para>Queries internal domain name resolutions by domain name or resolution type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24582,7 +24790,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网域名解析</para>
+        /// <para>Queries internal domain name resolutions by domain name or resolution type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25621,6 +25829,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["CompatibleFlags"] = request.CompatibleFlags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAppCodeConfig))
+            {
+                query["CustomAppCodeConfig"] = request.CustomAppCodeConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTraceConfig))
             {
                 query["CustomTraceConfig"] = request.CustomTraceConfig;
@@ -25726,6 +25938,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompatibleFlags))
             {
                 query["CompatibleFlags"] = request.CompatibleFlags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAppCodeConfig))
+            {
+                query["CustomAppCodeConfig"] = request.CustomAppCodeConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomTraceConfig))
             {
@@ -25850,6 +26066,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await ModifyApiGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更分组实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyApiGroupInstanceRequest
         /// </param>
@@ -25903,6 +26124,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<ModifyApiGroupInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更分组实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyApiGroupInstanceRequest
         /// </param>
@@ -25956,6 +26182,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<ModifyApiGroupInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更分组实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyApiGroupInstanceRequest
         /// </param>
@@ -25969,6 +26200,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return ModifyApiGroupInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更分组实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyApiGroupInstanceRequest
         /// </param>
@@ -26296,15 +26532,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified application.</para>
+        /// <para>Modifies a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  This operation is intended for API callers.</para>
         /// <list type="bullet">
-        /// <item><description><b>AppName</b> or <b>Description</b> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</description></item>
-        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</description></item>
+        /// <item><description>The QPS limit on this operation is 50 per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26367,15 +26603,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified application.</para>
+        /// <para>Modifies a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  This operation is intended for API callers.</para>
         /// <list type="bullet">
-        /// <item><description><b>AppName</b> or <b>Description</b> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</description></item>
-        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</description></item>
+        /// <item><description>The QPS limit on this operation is 50 per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26438,15 +26674,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified application.</para>
+        /// <para>Modifies a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  This operation is intended for API callers.</para>
         /// <list type="bullet">
-        /// <item><description><b>AppName</b> or <b>Description</b> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</description></item>
-        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</description></item>
+        /// <item><description>The QPS limit on this operation is 50 per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26465,15 +26701,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified application.</para>
+        /// <para>Modifies a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  This operation is intended for API callers.</para>
         /// <list type="bullet">
-        /// <item><description><b>AppName</b> or <b>Description</b> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</description></item>
-        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</description></item>
+        /// <item><description>The QPS limit on this operation is 50 per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27100,7 +27336,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改API网关实例属性</para>
+        /// <para>Modifies the properties of an API Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27192,7 +27428,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改API网关实例属性</para>
+        /// <para>Modifies the properties of an API Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27284,7 +27520,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改API网关实例属性</para>
+        /// <para>Modifies the properties of an API Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27302,7 +27538,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改API网关实例属性</para>
+        /// <para>Modifies the properties of an API Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27978,6 +28214,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await ModifyIpControlPolicyItemWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyLogConfigRequest
         /// </param>
@@ -28027,6 +28268,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<ModifyLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyLogConfigRequest
         /// </param>
@@ -28076,6 +28322,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<ModifyLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyLogConfigRequest
         /// </param>
@@ -28089,6 +28340,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return ModifyLogConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyLogConfigRequest
         /// </param>
@@ -29034,6 +29290,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await ModifyVpcAccessAndUpdateApisWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通API网关服务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenApiGatewayServiceRequest
         /// </param>
@@ -29062,6 +29323,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<OpenApiGatewayServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通API网关服务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenApiGatewayServiceRequest
         /// </param>
@@ -29090,6 +29356,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<OpenApiGatewayServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通API网关服务</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// OpenApiGatewayServiceResponse
         /// </returns>
@@ -29099,6 +29370,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return OpenApiGatewayServiceWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通API网关服务</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// OpenApiGatewayServiceResponse
         /// </returns>
@@ -30976,6 +31252,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await RemoveVpcAccessWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除VPC授权并下线关联API</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveVpcAccessAndAbolishApisRequest
         /// </param>
@@ -31029,6 +31310,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<RemoveVpcAccessAndAbolishApisResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除VPC授权并下线关联API</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveVpcAccessAndAbolishApisRequest
         /// </param>
@@ -31082,6 +31368,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<RemoveVpcAccessAndAbolishApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除VPC授权并下线关联API</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveVpcAccessAndAbolishApisRequest
         /// </param>
@@ -31095,6 +31386,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return RemoveVpcAccessAndAbolishApisWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除VPC授权并下线关联API</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveVpcAccessAndAbolishApisRequest
         /// </param>
@@ -31424,6 +31720,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await ResetAppSecretWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据APP生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByAppRequest
         /// </param>
@@ -31469,6 +31770,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SdkGenerateByAppResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据APP生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByAppRequest
         /// </param>
@@ -31514,6 +31820,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SdkGenerateByAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据APP生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByAppRequest
         /// </param>
@@ -31527,6 +31838,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return SdkGenerateByAppWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据APP生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByAppRequest
         /// </param>
@@ -31676,6 +31992,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await SdkGenerateByAppForRegionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据分组生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByGroupRequest
         /// </param>
@@ -31721,6 +32042,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SdkGenerateByGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据分组生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByGroupRequest
         /// </param>
@@ -31766,6 +32092,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SdkGenerateByGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据分组生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByGroupRequest
         /// </param>
@@ -31779,6 +32110,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return SdkGenerateByGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据分组生成SDK</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SdkGenerateByGroupRequest
         /// </param>
@@ -31930,7 +32266,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给多个API产品添加APP授权</para>
+        /// <para>Grants permissions on API products to an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31994,7 +32330,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给多个API产品添加APP授权</para>
+        /// <para>Grants permissions on API products to an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32058,7 +32394,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给多个API产品添加APP授权</para>
+        /// <para>Grants permissions on API products to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32076,7 +32412,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给多个API产品添加APP授权</para>
+        /// <para>Grants permissions on API products to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32298,7 +32634,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将多个APP授权给API产品</para>
+        /// <para>Authorizes multiple applications to call APIs in an API product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32356,7 +32692,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将多个APP授权给API产品</para>
+        /// <para>Authorizes multiple applications to call APIs in an API product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32414,7 +32750,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将多个APP授权给API产品</para>
+        /// <para>Authorizes multiple applications to call APIs in an API product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32432,7 +32768,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将多个APP授权给API产品</para>
+        /// <para>Authorizes multiple applications to call APIs in an API product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32856,6 +33192,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["CertificatePrivateKey"] = request.CertificatePrivateKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCertSDnPassThrough))
+            {
+                query["ClientCertSDnPassThrough"] = request.ClientCertSDnPassThrough;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
@@ -32867,6 +33207,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslOcspEnable))
+            {
+                query["SslOcspEnable"] = request.SslOcspEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslVerifyDepth))
             {
@@ -32935,6 +33279,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["CertificatePrivateKey"] = request.CertificatePrivateKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCertSDnPassThrough))
+            {
+                query["ClientCertSDnPassThrough"] = request.ClientCertSDnPassThrough;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
@@ -32946,6 +33294,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslOcspEnable))
+            {
+                query["SslOcspEnable"] = request.SslOcspEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslVerifyDepth))
             {
@@ -33176,6 +33528,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await SetDomainWebSocketStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置分组授权AppCode</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGroupAuthAppCodeRequest
         /// </param>
@@ -33221,6 +33578,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SetGroupAuthAppCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置分组授权AppCode</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGroupAuthAppCodeRequest
         /// </param>
@@ -33266,6 +33628,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return TeaModel.ToObject<SetGroupAuthAppCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置分组授权AppCode</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGroupAuthAppCodeRequest
         /// </param>
@@ -33279,6 +33646,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return SetGroupAuthAppCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置分组授权AppCode</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGroupAuthAppCodeRequest
         /// </param>
@@ -34710,7 +35082,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新内网域名解析</para>
+        /// <para>Modifies an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34772,7 +35144,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新内网域名解析</para>
+        /// <para>Modifies an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34834,7 +35206,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新内网域名解析</para>
+        /// <para>Modifies an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34852,7 +35224,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新内网域名解析</para>
+        /// <para>Modifies an internal domain name resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">

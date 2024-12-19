@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyApiGroupInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the API group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>migrate</para>
         /// </summary>
@@ -31,11 +34,15 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>The tag of objects that match the rule. You can specify multiple tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ModifyApiGroupInstanceRequestTag> Tag { get; set; }
         public class ModifyApiGroupInstanceRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +53,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +66,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         }
 
         /// <summary>
+        /// <para>The ID of the instance to which you want to migrate the API group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

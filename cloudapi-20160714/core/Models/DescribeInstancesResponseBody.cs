@@ -291,6 +291,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public class DescribeInstancesResponseBodyInstancesInstanceAttributeInstanceSpecAttributesSpecAttribute : TeaModel {
                         /// <summary>
                         /// <para>The variable name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>SLA</para>
                         /// </summary>
                         [NameInMap("LocalName")]
                         [Validation(Required=false)]
@@ -300,7 +303,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         /// <para>The variable value.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>2500</para>
+                        /// <para>99.95%</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -419,6 +422,19 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 }
 
+                /// <summary>
+                /// <para>The new VPC egress CIDR block.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100.104.253.0/26</para>
+                /// </summary>
+                [NameInMap("NewVpcEgressAddress")]
+                [Validation(Required=false)]
+                public string NewVpcEgressAddress { get; set; }
+
+                /// <summary>
+                /// <para>The private DNS list.</para>
+                /// </summary>
                 [NameInMap("PrivateDnsList")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList PrivateDnsList { get; set; }
@@ -459,6 +475,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public bool? SupportIpv6 { get; set; }
 
+                /// <summary>
+                /// <para>The tags of the instance.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceAttributeTags Tags { get; set; }
@@ -467,10 +486,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     [Validation(Required=false)]
                     public List<DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo> TagInfo { get; set; }
                     public class DescribeInstancesResponseBodyInstancesInstanceAttributeTagsTagInfo : TeaModel {
+                        /// <summary>
+                        /// <para>The tag key of the instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Cookie</para>
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// <para>The tag value of the instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>240</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -551,6 +582,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Multi-Availability Zone 3(b,c,a)</para>
                 /// </summary>
                 [NameInMap("ZoneLocalName")]
                 [Validation(Required=false)]

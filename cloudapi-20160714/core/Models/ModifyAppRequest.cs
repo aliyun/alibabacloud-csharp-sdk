@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyAppRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ID of the app.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public long? AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</para>
-        /// <para>If you do not want to modify the existing value, do not specify this parameter.</para>
+        /// <para>The value must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</para>
+        /// <para>This parameter is required only when you want to modify the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jiedian_pord</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The description of the application. The description can be up to 180 characters in length.</para>
-        /// <para>If you do not want to modify the existing value, do not specify this parameter.</para>
+        /// <para>The description of the app. The description can contain a maximum of 180 characters in length.</para>
+        /// <para>This parameter is required only when you want to modify the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>modidyTest</para>
@@ -42,6 +42,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>扩展信息</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>110461946884</para>
+        /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
@@ -61,8 +67,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public List<ModifyAppRequestTag> Tag { get; set; }
         public class ModifyAppRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
-            /// <para>Valid values of n: <c>[1, 20]</c>.</para>
+            /// <para>The value of the tag.</para>
+            /// <para>N can be an integer from 1 to 20.``</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
             /// <summary>
             /// <para>The value of the tag.</para>
-            /// <para>Valid values of n: <c>[1, 20]</c>.</para>
+            /// <para>N can be an integer from 1 to 20.``</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>

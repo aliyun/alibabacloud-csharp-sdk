@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway finished forwarding the request to the backend service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224969</para>
                 /// </summary>
                 [NameInMap("BackendRequestEnd")]
                 [Validation(Required=false)]
@@ -69,6 +72,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway started to forward the request to the backend service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224969</para>
                 /// </summary>
                 [NameInMap("BackendRequestStart")]
                 [Validation(Required=false)]
@@ -76,6 +82,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway finished receiving the response from the backend service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224989</para>
                 /// </summary>
                 [NameInMap("BackendResponseEnd")]
                 [Validation(Required=false)]
@@ -83,6 +92,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway started to receive the response from the backend service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224989</para>
                 /// </summary>
                 [NameInMap("BackendResponseStart")]
                 [Validation(Required=false)]
@@ -180,6 +192,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway finished receiving the request.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224968</para>
                 /// </summary>
                 [NameInMap("FrontRequestEnd")]
                 [Validation(Required=false)]
@@ -187,6 +202,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway started to receive the request.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224968</para>
                 /// </summary>
                 [NameInMap("FrontRequestStart")]
                 [Validation(Required=false)]
@@ -194,6 +212,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway finished forwarding the response to the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224989</para>
                 /// </summary>
                 [NameInMap("FrontResponseEnd")]
                 [Validation(Required=false)]
@@ -201,6 +222,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                 /// <summary>
                 /// <para>The time when API Gateway started to forward the response to the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1731487224989</para>
                 /// </summary>
                 [NameInMap("FrontResponseStart")]
                 [Validation(Required=false)]

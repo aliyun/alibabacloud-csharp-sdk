@@ -51,6 +51,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string CertificatePrivateKey { get; set; }
 
         /// <summary>
+        /// <para>If pass ssl_client_s_dn of the cert to backend header \&quot;X-Client-S-Dn\&quot;.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
+        [NameInMap("ClientCertSDnPassThrough")]
+        [Validation(Required=false)]
+        public bool? ClientCertSDnPassThrough { get; set; }
+
+        /// <summary>
         /// <para>The custom domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,6 +85,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        /// <summary>
+        /// <para>If enable ssl OCSP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
+        [NameInMap("SslOcspEnable")]
+        [Validation(Required=false)]
+        public bool? SslOcspEnable { get; set; }
 
         /// <summary>
         /// <para>The certificate verification depth.</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class AssociateInstanceWithPrivateDNSRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The internal domain names included in the resolution.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IntranetDomains")]

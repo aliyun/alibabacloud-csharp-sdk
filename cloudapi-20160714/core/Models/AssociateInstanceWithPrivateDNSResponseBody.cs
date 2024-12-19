@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class AssociateInstanceWithPrivateDNSResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>03442A3D-3B7D-434C-8A95-A5FEB999B529</para>
         /// </summary>

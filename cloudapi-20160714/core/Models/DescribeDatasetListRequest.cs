@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>指定规则所适用的对象标签，可设置多个</para>
+        /// <para>Specify the object labels to which the rule applies, and multiple labels can be set</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDatasetListRequestTag> Tag { get; set; }
         public class DescribeDatasetListRequestTag : TeaModel {
             /// <summary>
-            /// <para>标签键</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>标签值</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>

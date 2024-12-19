@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig BackendConfig { get; set; }
                 public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig : TeaModel {
                     /// <summary>
-                    /// <para>The information about the backend service whose type is Service Discovery.</para>
+                    /// <para>The information about the backend service when the backend service is of the Service Discovery type.</para>
                     /// </summary>
                     [NameInMap("DiscoveryConfig")]
                     [Validation(Required=false)]
@@ -166,11 +166,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         [Validation(Required=false)]
                         public string RcType { get; set; }
 
+                        /// <summary>
+                        /// <para>The ZooKeeper configuration.</para>
+                        /// </summary>
                         [NameInMap("ZookeeperConfig")]
                         [Validation(Required=false)]
                         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig ZookeeperConfig { get; set; }
                         public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig : TeaModel {
                             /// <summary>
+                            /// <para>The connection URL of the ZooKeeper server.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para><a href="http://192.168.1.xxx:2181">http://192.168.1.xxx:2181</a></para>
                             /// </summary>
@@ -179,6 +184,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                             public string ConnectString { get; set; }
 
                             /// <summary>
+                            /// <para>The namespace.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>provider</para>
                             /// </summary>
@@ -187,6 +194,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                             public string Namespace { get; set; }
 
                             /// <summary>
+                            /// <para>Service name</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>service</para>
                             /// </summary>
@@ -198,11 +207,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The EDAS configuration.</para>
+                    /// </summary>
                     [NameInMap("EdasConfig")]
                     [Validation(Required=false)]
                     public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig EdasConfig { get; set; }
                     public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig : TeaModel {
                         /// <summary>
+                        /// <para>The EDAS application ID.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>6cd0c599-dxxx-496d-b3d5-6a71c657xxxxx</para>
                         /// </summary>
@@ -211,6 +225,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string EdasAppId { get; set; }
 
                         /// <summary>
+                        /// <para>The ID of the microservices namespace in EDAS.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>cn-hangzhou:edasNacos</para>
                         /// </summary>
@@ -219,6 +235,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string MicroserviceNamespace { get; set; }
 
                         /// <summary>
+                        /// <para>The ID of the microservices namespace in EDAS.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>cn-hangzhou:edasNacos</para>
                         /// </summary>
@@ -227,6 +245,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string MicroserviceNamespaceId { get; set; }
 
                         /// <summary>
+                        /// <para>The name of the microservices namespace in EDAS.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Edas-Nacos</para>
                         /// </summary>
@@ -235,6 +255,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string MicroserviceNamespaceName { get; set; }
 
                         /// <summary>
+                        /// <para>The MSE instance ID.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>mse-cn-jia3n1rxxxx</para>
                         /// </summary>
@@ -243,6 +265,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string MseInstanceId { get; set; }
 
                         /// <summary>
+                        /// <para>The registration type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>EDAS</para>
                         /// </summary>
@@ -251,6 +275,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string RegistryType { get; set; }
 
                         /// <summary>
+                        /// <para>The service name.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>service</para>
                         /// </summary>
@@ -396,10 +422,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         [Validation(Required=false)]
                         public string ServiceName { get; set; }
 
+                        [NameInMap("TriggerName")]
+                        [Validation(Required=false)]
+                        public string TriggerName { get; set; }
+
                     }
 
                     /// <summary>
-                    /// <para>The host of the backend service.</para>
+                    /// <para>The host of the HTTP backend service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://www.host.com">www.host.com</a></para>
@@ -409,21 +439,21 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public string HttpTargetHostName { get; set; }
 
                     /// <summary>
-                    /// <para>The information about the backend service whose type is Mock.</para>
+                    /// <para>The information about the backend service when the backend service is of the Mock type.</para>
                     /// </summary>
                     [NameInMap("MockConfig")]
                     [Validation(Required=false)]
                     public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig MockConfig { get; set; }
                     public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig : TeaModel {
                         /// <summary>
-                        /// <para>The header returned for service mocking.</para>
+                        /// <para>The header in the mocked response.</para>
                         /// </summary>
                         [NameInMap("MockHeaders")]
                         [Validation(Required=false)]
                         public List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> MockHeaders { get; set; }
                         public class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders : TeaModel {
                             /// <summary>
-                            /// <para>The name of the header parameter.</para>
+                            /// <para>The header name.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>test</para>
@@ -433,7 +463,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                             public string HeaderName { get; set; }
 
                             /// <summary>
-                            /// <para>The value of the header parameter.</para>
+                            /// <para>The header value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>123</para>
@@ -445,7 +475,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         }
 
                         /// <summary>
-                        /// <para>The result returned for service mocking.</para>
+                        /// <para>The mocked response.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -455,7 +485,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string MockResult { get; set; }
 
                         /// <summary>
-                        /// <para>The status code that is returned for service mocking.</para>
+                        /// <para>The status code in the mocked response.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>200</para>
@@ -506,6 +536,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public string ServiceAddress { get; set; }
 
                     /// <summary>
+                    /// <para>The timeout period of the backend service, in millisecond.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10000</para>
                     /// </summary>
@@ -524,7 +556,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The information about the virtual private cloud (VPC). This parameter is available only for backend services whose type is VPC.</para>
+                    /// <para>The information about the backend service when the backend service is of the VPC type.</para>
                     /// </summary>
                     [NameInMap("VpcConfig")]
                     [Validation(Required=false)]
@@ -591,7 +623,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                         public string VpcScheme { get; set; }
 
                         /// <summary>
-                        /// <para>The host of the backend service.</para>
+                        /// <para>The host of the VPC backend service.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>openapi.alipan.com</para>

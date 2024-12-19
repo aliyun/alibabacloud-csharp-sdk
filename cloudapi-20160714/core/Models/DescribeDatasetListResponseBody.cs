@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>标签</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeDatasetListResponseBodyDatasetInfoListTags> Tags { get; set; }
             public class DescribeDatasetListResponseBodyDatasetInfoListTags : TeaModel {
                 /// <summary>
-                /// <para>标签的键</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENV</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>标签值</para>
+                /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>

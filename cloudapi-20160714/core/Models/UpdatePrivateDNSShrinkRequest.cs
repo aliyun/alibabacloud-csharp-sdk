@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class UpdatePrivateDNSShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The internal domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string IntranetDomain { get; set; }
 
         /// <summary>
+        /// <para>The resolution records. This parameter is valid only when Type is set to A.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Records")]
@@ -31,6 +33,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The internal domain name resolution type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>VPC: resolution for virtual private cloud (VPC) access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</description></item>
+        /// <item><description>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

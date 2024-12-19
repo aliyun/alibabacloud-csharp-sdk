@@ -74,6 +74,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The custom appcode configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</para>
+        /// </summary>
+        [NameInMap("CustomAppCodeConfig")]
+        [Validation(Required=false)]
+        public string CustomAppCodeConfig { get; set; }
+
+        /// <summary>
         /// <para>The details about the custom domain name.</para>
         /// </summary>
         [NameInMap("CustomDomains")]
