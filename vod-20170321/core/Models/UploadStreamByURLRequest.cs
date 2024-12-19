@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string StreamURL { get; set; }
 
+        [NameInMap("UploadMetadata")]
+        [Validation(Required=false)]
+        public string UploadMetadata { get; set; }
+
         /// <summary>
         /// <para>The user-defined parameter. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</para>
         /// <remarks>
