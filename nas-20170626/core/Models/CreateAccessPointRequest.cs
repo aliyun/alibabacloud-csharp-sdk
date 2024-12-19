@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateAccessPointRequest : TeaModel {
         /// <summary>
         /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</para>
+        /// <para>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</para>
         /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>false (default): The RAM policy is disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.</para>
+        /// <para> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted. For more information about how to configure permissions on access points, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure a policy for the access point</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</para>
+        /// <para>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2838077.html">DeleteFileset</a> operation.</para>
         /// <list type="bullet">
         /// <item><description>true: enables release protection.</description></item>
         /// <item><description>false (default): disables release protection.</description></item>
@@ -73,10 +73,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> CPFS is not supported on the international site.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-099394bd928c****</para>
+        /// <para>bmcpfs-290w65p03ok64ya****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -85,9 +92,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The absolute path of the fileset.</para>
         /// <list type="bullet">
-        /// <item><description>The parent directory of the path that you specify must be an existing directory in the file system.</description></item>
-        /// <item><description>The path must be 2 to 1,024 characters in length.</description></item>
+        /// <item><description>The path must be 2 to 1024 characters in length.</description></item>
         /// <item><description>The path must start and end with a forward slash (/).</description></item>
+        /// <item><description>The fileset path must be a new path and cannot be an existing path. Fileset paths cannot be renamed and cannot be symbolic links.</description></item>
+        /// <item><description>The maximum depth supported by a fileset path is eight levels. The depth of the root directory / is 0 levels. For example, the fileset path /test/aaa/ccc/ has three levels.</description></item>
+        /// <item><description>If the fileset path is a multi-level path, the parent directory must be an existing directory.</description></item>
+        /// <item><description>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset. A fileset path supports only one quota.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -98,14 +108,42 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemPath { get; set; }
 
+        /// <summary>
+        /// <para>The quota information.</para>
+        /// <remarks>
+        /// <para> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("Quota")]
         [Validation(Required=false)]
         public CreateFilesetRequestQuota Quota { get; set; }
         public class CreateFilesetRequestQuota : TeaModel {
+            /// <summary>
+            /// <para>The number of files of the quota. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Minimum value: 100000.</description></item>
+            /// <item><description>Maximum value: 10000000000.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
             [NameInMap("FileCountLimit")]
             [Validation(Required=false)]
             public long? FileCountLimit { get; set; }
 
+            /// <summary>
+            /// <para>The total capacity of the quota. Unit: bytes.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Minimum value: 10737418240 (10 GiB).</description></item>
+            /// <item><description>Maximum value: 1073741824000 (1024000 GiB).</description></item>
+            /// <item><description>Step size: 1073741824 (1 GiB).</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10737418240</para>
+            /// </summary>
             [NameInMap("SizeLimit")]
             [Validation(Required=false)]
             public long? SizeLimit { get; set; }

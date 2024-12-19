@@ -11,10 +11,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class DescribeFilesetsRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> CPFS is not supported on the international site.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-099394bd928c****</para>
+        /// <para>bmcpfs-290w65p03ok64ya****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -33,7 +40,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <item><description>FsetIds: filters filesets by fileset ID.</description></item>
             /// <item><description>FileSystemPath: filters filesets based on the path of a fileset in a CPFS file system.</description></item>
             /// <item><description>Description: filters filesets based on the fileset description.</description></item>
+            /// <item><description>QuotaExists: filters filesets based on whether quotas exist.</description></item>
             /// </list>
+            /// <remarks>
+            /// <para> Only CPFS for LINGJUN V2.7.0 and later support the QuotaExists parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>FsetIds</para>
@@ -45,9 +56,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The filter value. This parameter does not support wildcards.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <c>fset-12345678</c> or <c>fset-12345678,fset-12345679</c>.</description></item>
-            /// <item><description>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1,024 characters in length. The value must be encoded in UTF-8.</description></item>
+            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-3212718ea0ae****</c>.</description></item>
+            /// <item><description>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1024 characters in length. The value must be encoded in UTF-8.</description></item>
             /// <item><description>If Key is set to Description, set Value to a fileset description or a part of the fileset description.</description></item>
+            /// <item><description>If Key is set to QuotaExists, set Value to true or false. If you do not specify the parameter, all filesets are returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

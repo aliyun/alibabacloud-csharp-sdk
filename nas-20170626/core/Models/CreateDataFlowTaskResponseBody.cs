@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The ID of the dataflow task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>taskId-12345678</para>
+        /// <para>task-38aa8e890f45****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

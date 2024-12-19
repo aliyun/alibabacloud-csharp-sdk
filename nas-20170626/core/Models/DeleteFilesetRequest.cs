@@ -24,12 +24,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
+        /// <para>Specifies whether to perform a dry run.</para>
         /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no fileset is deleted.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, a fileset is deleted.</description></item>
+        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, the fileset is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,6 +41,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> CPFS is not supported on the international site.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

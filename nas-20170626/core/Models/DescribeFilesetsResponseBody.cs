@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</para>
+                /// <para>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2838077.html">DeleteFileset</a> operation. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true</description></item>
                 /// <item><description>false</description></item>
@@ -58,10 +58,32 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The usage of the file quantity.</para>
+                /// <remarks>
+                /// <para> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
                 [NameInMap("FileCountUsage")]
                 [Validation(Required=false)]
                 public long? FileCountUsage { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the file system.</para>
+                /// <list type="bullet">
+                /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
+                /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> CPFS is not supported on the international site.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bmcpfs-290w65p03ok64ya****</para>
+                /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
@@ -86,20 +108,52 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string FsetId { get; set; }
 
+                /// <summary>
+                /// <para>The quota information.</para>
+                /// <remarks>
+                /// <para> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Quota")]
                 [Validation(Required=false)]
                 public DescribeFilesetsResponseBodyEntriesEntrieQuota Quota { get; set; }
                 public class DescribeFilesetsResponseBodyEntriesEntrieQuota : TeaModel {
+                    /// <summary>
+                    /// <para>The limit of the file quantity of the quota. Valid values:</para>
+                    /// <para>Minimum value: 10000.</para>
+                    /// <para>Maximum value: 10000000000.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10000</para>
+                    /// </summary>
                     [NameInMap("FileCountLimit")]
                     [Validation(Required=false)]
                     public long? FileCountLimit { get; set; }
 
+                    /// <summary>
+                    /// <para>The limit of the quota capacity. Unit: bytes.</para>
+                    /// <para>Minimum value: 10737418240 (10 GiB).</para>
+                    /// <para>Maximum value: 1073741824000 (1024000 GiB).</para>
+                    /// <para>Step size: 1073741824 (1 GiB).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10737418240</para>
+                    /// </summary>
                     [NameInMap("SizeLimit")]
                     [Validation(Required=false)]
                     public long? SizeLimit { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The capacity usage. Unit: bytes.</para>
+                /// <remarks>
+                /// <para> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
                 [NameInMap("SpaceUsage")]
                 [Validation(Required=false)]
                 public long? SpaceUsage { get; set; }
@@ -139,9 +193,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// 
         /// <summary>
         /// <para>The ID of the file system.</para>
+        /// <list type="bullet">
+        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> CPFS is not supported on the international site.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-099394bd928c****</para>
+        /// <para>bmcpfs-290w65p03ok64ya****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

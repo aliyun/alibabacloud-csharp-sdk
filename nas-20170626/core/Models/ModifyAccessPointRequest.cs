@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class ModifyAccessPointRequest : TeaModel {
         /// <summary>
         /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</para>
+        /// <para>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</para>
         /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
         /// 
         /// <b>Example:</b>

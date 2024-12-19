@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string AccessPointCount { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the automatic snapshot policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sp-extreme-233e6****</para>
+                /// </summary>
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
@@ -523,6 +529,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string ProtocolType { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-2ze37k6jh8ums2fw2****</para>
+                /// </summary>
                 [NameInMap("QuorumVswId")]
                 [Validation(Required=false)]
                 public string QuorumVswId { get; set; }
@@ -644,10 +656,19 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string Version { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the virtual private cloud (VPC).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp1cbv1ljve4j5hlw****</para>
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <para>A collection of vSwitch IDs.</para>
+                /// </summary>
                 [NameInMap("VswIds")]
                 [Validation(Required=false)]
                 public DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds VswIds { get; set; }

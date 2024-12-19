@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>OVERWRITE_EXISTING: forcibly overwrites the existing file.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter does not take effect for CPFS file systems.</para>
+        /// <para> This parameter is required for CPFS for LINGJUN file systems.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,6 +41,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string ConflictPolicy { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically create a directory if no directory exists. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: automatically creates a directory.</description></item>
+        /// <item><description>false (default): does not automatically create a directory.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required if the TaskAction parameter is set to Import.</description></item>
+        /// <item><description>Only CPFS for LINGJUN V2.6.0 and later support this parameter.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("CreateDirIfNotExist")]
         [Validation(Required=false)]
         public bool? CreateDirIfNotExist { get; set; }
@@ -50,7 +66,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dfid-123456</para>
+        /// <para>df-194433a5be31****</para>
         /// </summary>
         [NameInMap("DataFlowId")]
         [Validation(Required=false)]
@@ -73,7 +89,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The directory in which the data flow task is executed.</para>
+        /// <para>The source directory of the data.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The directory must be 1 to 1,023 characters in length.</description></item>
@@ -82,7 +98,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>Only one directory can be listed at a time.</description></item>
         /// <item><description>If the TaskAction parameter is set to Export, the directory must be a relative path within the FileSystemPath.</description></item>
         /// <item><description>If the TaskAction parameter is set to Import, the directory must be a relative path within the SourceStoragePath.</description></item>
+        /// <item><description>If the TaskAction parameter is set to StreamExport, the directory must be a relative path within the FileSystemPath.</description></item>
+        /// <item><description>If the TaskAction parameter is set to StreamImport, the directory must be a relative path within the SourceStoragePath.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> Only CPFS for LINGJUN V2.6.0 and later support StreamImport and StreamExport.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>/path_in_cpfs/</para>
@@ -93,11 +114,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run.</para>
-        /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.</para>
+        /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no data flow task is created and no fee is incurred.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.</description></item>
+        /// <item><description>true: performs a dry run. The system checks the required parameters, request syntax, service limits, and available File Storage NAS (NAS) resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the TaskId parameter.</description></item>
+        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, a data flow task is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,6 +128,25 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>The directory mapped to the data flow task. Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>The directory must start and end with a forward slash (/). The directory cannot be /../.</description></item>
+        /// <item><description>The directory must be 1 to 1,023 characters in length.</description></item>
+        /// <item><description>The directory must be encoded in UTF-8.</description></item>
+        /// <item><description>Only one directory can be listed at a time.</description></item>
+        /// <item><description>If the TaskAction parameter is set to Export, the directory must be a relative path within the SourceStoragePath.</description></item>
+        /// <item><description>If the TaskAction parameter is set to Import, the directory must be a relative path within the FileSystemPath.</description></item>
+        /// <item><description>If the TaskAction parameter is set to StreamExport, the directory must be a relative path within the SourceStoragePath.</description></item>
+        /// <item><description>If the TaskAction parameter is set to StreamImport, the directory must be a relative path within the FileSystemPath.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Only CPFS for LINGJUN V2.6.0 and later support StreamImport and StreamExport.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/path_in_cpfs/</para>
+        /// </summary>
         [NameInMap("DstDirectory")]
         [Validation(Required=false)]
         public string DstDirectory { get; set; }
@@ -137,12 +177,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> CPFS file systems are available only on the China site (aliyun.com).</para>
+        /// <para> CPFS is not supported on the international site.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-12345678</para>
+        /// <para>bmcpfs-290w65p03ok64ya****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -152,7 +192,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>task-xxxx</para>
+        /// <para>task-27aa8e890f45****</para>
         /// </summary>
         [NameInMap("SrcTaskId")]
         [Validation(Required=false)]
@@ -164,11 +204,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description>Import: imports data stored in the source storage to a CPFS file system.</description></item>
         /// <item><description>Export: exports specified data from a CPFS file system to the source storage.</description></item>
-        /// <item><description>Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.</description></item>
-        /// <item><description>Inventory: obtains the inventory list managed by a data flow from the CPFS file system, providing the cache status of inventories in the data flow.</description></item>
+        /// <item><description>StreamImport: batch imports the specified data from the source storage to a CPFS file system.</description></item>
+        /// <item><description>StreamExport: batch exports specified data from a CPFS file system to the source storage.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> CPFS for LINGJUN supports only the Import and Export tasks.</para>
+        /// <para> Only CPFS for LINGJUN V2.6.0 and later support StreamImport and StreamExport.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

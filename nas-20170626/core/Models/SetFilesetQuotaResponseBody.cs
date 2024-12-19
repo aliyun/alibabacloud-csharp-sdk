@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class SetFilesetQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2D69A58F-345C-4FDE-88E4-BF518948****</para>
         /// </summary>

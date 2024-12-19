@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description><para>storage type: Only OSS is supported.</para>
         /// </description></item>
-        /// <item><description><para>account id (optional): the UID of the account of the source storage.</para>
+        /// <item><description><para>account id (optional): the UID of the account of the source storage. This parameter is required when you use OSS buckets across accounts.</para>
         /// </description></item>
         /// <item><description><para>path: the name of the OSS bucket. Limits:</para>
         /// <list type="bullet">
@@ -206,15 +206,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The OSS bucket must be an existing bucket in the region.</para>
-        /// </description></item>
-        /// <item><description><para>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</para>
-        /// </description></item>
-        /// <item><description><para>The account id parameter is optional. This parameter is required when you use OSS buckets across accounts.</para>
-        /// </description></item>
+        /// <item><description>The OSS bucket must be an existing bucket in the region.</description></item>
+        /// <item><description>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

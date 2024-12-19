@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dfid-123456</para>
+        /// <para>df-194433a5be31****</para>
         /// </summary>
         [NameInMap("DataFlowId")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-12345678</para>
+        /// <para>cpfs-099394bd928c****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

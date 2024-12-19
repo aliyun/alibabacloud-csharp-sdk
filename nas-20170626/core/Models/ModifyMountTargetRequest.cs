@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>Inactive: The mount target is unavailable.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Only General-purpose Apsara File Storage NAS (NAS) file systems support changing the mount target status.</para>
+        /// <para> Only General-purpose File Storage NAS (NAS) file systems support changing the mount target status.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

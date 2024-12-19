@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The dataflow ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dfid-123456</para>
+                /// <para>df-194433a5be31****</para>
                 /// </summary>
                 [NameInMap("DataFlowId")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The ID of the file system.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cpfs-12345678</para>
+                /// <para>cpfs-099394bd928c****</para>
                 /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The fileset ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>fset-123456</para>
+                /// <para>fset-1902718ea0ae****</para>
                 /// </summary>
                 [NameInMap("FsetId")]
                 [Validation(Required=false)]

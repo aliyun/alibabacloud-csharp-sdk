@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-12345678</para>
+        /// <para>bmcpfs-290w65p03ok64ya****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The filter value. This parameter does not support wildcards.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to DataFlowIds, set Value to a data flow ID or a part of the data flow ID. You can specify a data flow ID or a group of data flow IDs. You can specify a maximum of 10 data flow IDs. Example: <c>dfid-12345678</c> or <c>dfid-12345678,dfid-12345679</c>.</description></item>
-            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <c>fset-12345678</c> or <c>fset-12345678,fset-12345679</c>.</description></item>
+            /// <item><description>If Key is set to DataFlowIds, set Value to a data flow ID or a part of the data flow ID. You can specify a data flow ID or a group of data flow IDs. You can specify a maximum of 10 data flow IDs. Example: <c>df-194433a5be31****</c> or <c>df-194433a5be31****,df-184433a5be31****</c>.</description></item>
+            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-1242718ea0ae****</c>.</description></item>
             /// <item><description>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value of the parameter must be 1 to 1,024 characters in length.</description></item>
             /// <item><description>If Key is set to SourceStorage, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</description></item>
             /// <item><description>If Key is set to ThroughputList, set Value to the data flow throughput. Combined query is supported.</description></item>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The type of the file system.</para>
-        /// <para>Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.</para>
+        /// <para>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</para>
         /// 
         /// <b>Example:</b>
         /// <para>extreme</para>
