@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The allocation type. Valid values:</para>
+        /// <para>The allocation type of the reserved instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal: queries all reserved instances that belong to the current account.</description></item>
-        /// <item><description>Shared: queries reserved instances that are shared between the main account and linked accounts.</description></item>
+        /// <item><description>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</description></item>
         /// </list>
         /// <para>Default value: Normal.</para>
         /// 
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>The reason why the instance is locked. Valid values:</para>
+        /// <para>The reason why the reserved instance is locked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>financial: You have an overdue payment in your account, or the reserved instance has expired.</description></item>
-        /// <item><description>security: The reserved instance is locked for security reasons.</description></item>
+        /// <item><description>financial: The reserved instance is locked because the account has overdue payments or the service expires.</description></item>
+        /// <item><description>security: The reserved instance is locked due to security reasons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The payment option of the reserved instances. Valid values:</para>
+        /// <para>The payment option of the reserved instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>No Upfront</description></item>
         /// <item><description>Partial Upfront</description></item>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of reserved instance N. Valid values of N: 1 to 100.</para>
+        /// <para>The IDs of reserved instances. You can specify up to 100 IDs of reserved instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ri-bpzhex2ulpzf53****</para>
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scope of the reserved instances. Valid values:</para>
+        /// <para>The scope of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Region</description></item>
-        /// <item><description>Zone</description></item>
+        /// <item><description>Region: regional</description></item>
+        /// <item><description>Zone: zonal</description></item>
         /// </list>
         /// <para>Default value: Region.</para>
         /// 
@@ -158,13 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The status of reserved instance N. Valid values of N: 1 to 100. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Creating</description></item>
-        /// <item><description>Active</description></item>
-        /// <item><description>Expired</description></item>
-        /// <item><description>Updating</description></item>
-        /// </list>
+        /// <para>The statuses of the reserved instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -174,15 +168,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the instances.</para>
+        /// <para>The tags of the reserved instance. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
         public class DescribeReservedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</para>
-            /// <para>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+            /// <remarks>
+            /// <para> If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -192,7 +188,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</para>
+            /// <para>The value of tag N of the reserved instance. The tag value cannot be empty and can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

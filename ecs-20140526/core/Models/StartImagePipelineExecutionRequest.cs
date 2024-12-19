@@ -57,6 +57,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<StartImagePipelineExecutionRequestTag> Tag { get; set; }
+        public class StartImagePipelineExecutionRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <remarks>
         /// <para>This parameter is deprecated.</para>
@@ -64,6 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("TemplateTag")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<StartImagePipelineExecutionRequestTemplateTag> TemplateTag { get; set; }
         public class StartImagePipelineExecutionRequestTemplateTag : TeaModel {
             /// <summary>

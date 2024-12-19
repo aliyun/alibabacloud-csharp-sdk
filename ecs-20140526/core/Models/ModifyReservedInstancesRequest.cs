@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of reserved instances.</para>
+        /// <para>The configurations of the new reserved instances. You can specify up to 100 new reserved instances.</para>
         /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public List<ModifyReservedInstancesRequestConfiguration> Configuration { get; set; }
         public class ModifyReservedInstancesRequestConfiguration : TeaModel {
             /// <summary>
-            /// <para>The number of pay-as-you-go instances of the same instance type that reserved instance N can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.</para>
+            /// <para>The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match. The value of this parameter must be greater than or equal to 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? InstanceAmount { get; set; }
 
             /// <summary>
-            /// <para>The instance type that reserved instance N can match. Valid values of N: 1 to 100.</para>
+            /// <para>The instance types that the new reserved instance can match.</para>
             /// <remarks>
-            /// <para> The applicable instance types are continuously updated. For more information, see the &quot;Attributes&quot; section in <a href="https://help.aliyun.com/document_detail/100370.html">Overview of reserved instances</a>.</para>
+            /// <para> The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The name of reserved instance N. Valid values of N: 1 to 100.</para>
-            /// <para>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the new reserved instance.</para>
+            /// <para>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>testReservedInstanceName</para>
@@ -51,12 +51,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ReservedInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The scope of reserved instance N. Valid values:</para>
+            /// <para>The scope level of the new reserved instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Region: regional</description></item>
-            /// <item><description>Zone: zonal</description></item>
+            /// <item><description>Region</description></item>
+            /// <item><description>Zone</description></item>
             /// </list>
-            /// <para>Valid values of N: 1 to 100.</para>
             /// <para>Default value: Region.</para>
             /// 
             /// <b>Example:</b>
@@ -67,8 +66,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of reserved instance N. Valid values of N: 1 to 100.</para>
-            /// <para>This parameter is required when <c>Scope</c> is set to <c>Zone</c>.</para>
+            /// <para>The zone ID of the new reserved instance.</para>
+            /// <para>This parameter is required when you set <c>Scope</c> to <c>Zone</c>.</para>
             /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeZones</a> operation to query the most recent zone list.</para>
             /// 
             /// <b>Example:</b>
@@ -100,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of reserved instance N. Valid values of N: 1 to 20.</para>
+        /// <para>The IDs of reserved instances that you want to modify. You can specify up to 20 reserved instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

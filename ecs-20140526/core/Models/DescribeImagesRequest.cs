@@ -54,17 +54,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The list of filter conditions used to query resources.</para>
+        /// <para>The filter conditions used to query resources.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeImagesRequestFilter> Filter { get; set; }
         public class DescribeImagesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The key of the filter condition used to query resources. Valid values:</para>
+            /// <para>The key of filter N used to query resources. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set this parameter to <c>CreationStartTime</c>, you can query the resources that were created after the point in time specified by the <c>Filter.N.Value</c> value.</description></item>
-            /// <item><description>If you set this parameter to <c>CreationEndTime</c>, you can query the resources that were created before the point in time as specified by the <c>Filter.N.Value</c> value.</description></item>
+            /// <item><description>If you set this parameter to <c>CreationStartTime</c>, you can query the resources that were created after the point in time specified by <c>Filter.N.Value</c>.</description></item>
+            /// <item><description>If you set this parameter to <c>CreationEndTime</c>, you can query the resources that were created before the point in time specified by <c>Filter.N.Value</c>.</description></item>
+            /// <item><description>If you set this parameter to <c>NetworkType</c>, you can query resources of the specified network type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +76,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of filter N used to query resources. When you specify this parameter, you must also specify <c>Filter.N.Key</c>. Make sure the time is in the <c>yyyy-MM-ddTHH:mmZ</c> format and in UTC.</para>
+            /// <para>The value of filter N used to query resources. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>When <c>Filter.N.Key</c> is set to <c>CreationStartTime</c> or <c>CreationEndTime</c>, the format is <c>yyyy-MM-ddTHH:mmZ</c> in the UTC+0 time zone.</description></item>
+            /// <item><description>When <c>Filter.N.Key</c> is set to <c>NetworkType</c>, the valid values can be <c>vpc</c> or <c>classic</c>.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-05T22:40Z</para>

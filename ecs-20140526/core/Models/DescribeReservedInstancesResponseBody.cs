@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Details about the tags of the reserved instance.</para>
+                /// <para>The tags of the reserved instance.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]

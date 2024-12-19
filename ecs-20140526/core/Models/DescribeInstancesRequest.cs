@@ -36,14 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The additional attributes. Valid values of N: 1 to 20. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>META_OPTIONS: instance metadata.</description></item>
-        /// <item><description>DDH_CLUSTER: dedicated host cluster.</description></item>
-        /// <item><description>NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI.</description></item>
-        /// <item><description>CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance.</description></item>
-        /// <item><description>CURRENT_OS_NVME_SUPPORTED: specifies whether the operating system supports access to disks over the Non-Volatile Memory Express (NVMe) protocol.</description></item>
-        /// </list>
+        /// <para>Additional instance attributes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>META_OPTIONS</para>
@@ -349,9 +342,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -361,9 +354,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

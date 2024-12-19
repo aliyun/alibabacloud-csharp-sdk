@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public long? Size { get; set; }
 
+            [NameInMap("ProvisionedIops")]
+            [Validation(Required=false)]
+            public long? ProvisionedIops { get; set; }
+
         }
 
         [NameInMap("SchedulerOptions")]
