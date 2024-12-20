@@ -115,7 +115,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>是否开启跨可用区转发。（默认开启）</para>
+            /// <para>Indicates whether cross-zone load balancing is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b> (default)</description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

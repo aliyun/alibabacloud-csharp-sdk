@@ -65,6 +65,26 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to enable cross-zone load balancing. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default)</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</para>
+        /// </description></item>
+        /// <item><description><para>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</para>
+        /// </description></item>
+        /// <item><description><para>When cross-zone load balancing is disabled, session persistence cannot be enabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("CrossZoneEnabled")]
         [Validation(Required=false)]
         public bool? CrossZoneEnabled { get; set; }

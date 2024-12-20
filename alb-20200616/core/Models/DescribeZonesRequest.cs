@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The supported language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh-CN</b> (default): Chinese</description></item>
         /// <item><description><b>en-US</b>: English</description></item>

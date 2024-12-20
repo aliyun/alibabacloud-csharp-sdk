@@ -536,6 +536,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public bool? XForwardedForEnabled { get; set; }
 
+                [NameInMap("XForwardedForHostEnabled")]
+                [Validation(Required=false)]
+                public bool? XForwardedForHostEnabled { get; set; }
+
+                [NameInMap("XForwardedForProcessingMode")]
+                [Validation(Required=false)]
+                public string XForwardedForProcessingMode { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the <c>X-Forwarded-Proto</c> header is used to retrieve the listener protocol. Valid values:</para>
                 /// <list type="bullet">

@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forwarding rule. Valid values of N: <b>1</b> to <b>5</b>.</para>
+        /// <para>The forwarding rules.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuleIds")]
