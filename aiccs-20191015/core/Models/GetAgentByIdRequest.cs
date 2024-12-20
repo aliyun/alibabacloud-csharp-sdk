@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAgentByIdRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public long? AgentId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

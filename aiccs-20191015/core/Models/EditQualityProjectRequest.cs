@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class EditQualityProjectRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AnalysisIds")]
         [Validation(Required=false)]
         public List<long?> AnalysisIds { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ChannelTouchType")]
         [Validation(Required=false)]
         public List<int?> ChannelTouchType { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("CheckFreqType")]
         [Validation(Required=false)]
         public int? CheckFreqType { get; set; }
@@ -29,22 +38,37 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public List<long?> GroupList { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ProjectVersion")]
         [Validation(Required=false)]
         public int? ProjectVersion { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ScopeType")]
         [Validation(Required=false)]
         public int? ScopeType { get; set; }

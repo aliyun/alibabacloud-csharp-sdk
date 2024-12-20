@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListRobotCallDialogRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>125165515022^11195613****</para>
+        /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-20 00:00:00</para>
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }

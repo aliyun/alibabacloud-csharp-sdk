@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class EditQualityRuleTagRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AnalysisTypes")]
         [Validation(Required=false)]
         public List<EditQualityRuleTagRequestAnalysisTypes> AnalysisTypes { get; set; }
@@ -23,6 +26,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

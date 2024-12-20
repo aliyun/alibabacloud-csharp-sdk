@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public List<int?> ChannelType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1614600500000</para>
+        /// </summary>
         [NameInMap("CloseTimeEnd")]
         [Validation(Required=false)]
         public long? CloseTimeEnd { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1614600400000</para>
+        /// </summary>
         [NameInMap("CloseTimeStart")]
         [Validation(Required=false)]
         public long? CloseTimeStart { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -41,14 +53,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public List<int?> EvaluationStatus { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1614599400000</para>
+        /// </summary>
         [NameInMap("FirstTimeEnd")]
         [Validation(Required=false)]
         public long? FirstTimeEnd { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1614596400000</para>
+        /// </summary>
         [NameInMap("FirstTimeStart")]
         [Validation(Required=false)]
         public long? FirstTimeStart { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc_xp_pre-cn-***</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -61,6 +87,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public List<string> MemberName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAgentBasisStatusResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public GetAgentBasisStatusResponseBodyData Data { get; set; }
         public class GetAgentBasisStatusResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public int? PageNum { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2000</para>
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
@@ -29,20 +41,36 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public string Rows { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("TotalNum")]
             [Validation(Required=false)]
             public int? TotalNum { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>EE338D98-9BD3-4413-B165</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }

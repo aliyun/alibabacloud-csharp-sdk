@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListDialogRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>130****0000</para>
+        /// </summary>
         [NameInMap("Called")]
         [Validation(Required=false)]
         public string Called { get; set; }
@@ -25,6 +31,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }

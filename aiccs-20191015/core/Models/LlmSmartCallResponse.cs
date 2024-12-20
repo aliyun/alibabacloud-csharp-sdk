@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
-    public class ListOuterOrderedNumbersResponse : TeaModel {
+    public class LlmSmartCallResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public ListOuterOrderedNumbersResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public LlmSmartCallResponseBody Body { get; set; }
 
     }
 
