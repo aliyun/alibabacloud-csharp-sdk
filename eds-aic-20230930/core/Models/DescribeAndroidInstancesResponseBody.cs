@@ -191,6 +191,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string RenderingType { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeAndroidInstancesResponseBodyInstanceModelTags> Tags { get; set; }
+            public class DescribeAndroidInstancesResponseBodyInstanceModelTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>

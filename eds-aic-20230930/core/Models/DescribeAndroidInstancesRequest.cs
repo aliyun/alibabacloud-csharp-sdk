@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string AndroidInstanceName { get; set; }
 
+        [NameInMap("BizRegionId")]
+        [Validation(Required=false)]
+        public string BizRegionId { get; set; }
+
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -80,6 +84,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeAndroidInstancesRequestTag> Tag { get; set; }
+        public class DescribeAndroidInstancesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 
