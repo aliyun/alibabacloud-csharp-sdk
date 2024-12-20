@@ -29,6 +29,48 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
             [Validation(Required=false)]
             public string EventId { get; set; }
 
+            [NameInMap("queryContext")]
+            [Validation(Required=false)]
+            public AiSearchResponseBodyHeaderQueryContext QueryContext { get; set; }
+            public class AiSearchResponseBodyHeaderQueryContext : TeaModel {
+                [NameInMap("originalQuery")]
+                [Validation(Required=false)]
+                public AiSearchResponseBodyHeaderQueryContextOriginalQuery OriginalQuery { get; set; }
+                public class AiSearchResponseBodyHeaderQueryContextOriginalQuery : TeaModel {
+                    [NameInMap("industry")]
+                    [Validation(Required=false)]
+                    public string Industry { get; set; }
+
+                    [NameInMap("page")]
+                    [Validation(Required=false)]
+                    public int? Page { get; set; }
+
+                    [NameInMap("query")]
+                    [Validation(Required=false)]
+                    public string Query { get; set; }
+
+                    [NameInMap("timeRange")]
+                    [Validation(Required=false)]
+                    public string TimeRange { get; set; }
+
+                }
+
+                [NameInMap("rewrite")]
+                [Validation(Required=false)]
+                public AiSearchResponseBodyHeaderQueryContextRewrite Rewrite { get; set; }
+                public class AiSearchResponseBodyHeaderQueryContextRewrite : TeaModel {
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    [NameInMap("timeRange")]
+                    [Validation(Required=false)]
+                    public string TimeRange { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1293</para>

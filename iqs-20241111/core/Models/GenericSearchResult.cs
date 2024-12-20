@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public List<ScorePageItem> PageItems { get; set; }
 
+        [NameInMap("queryContext")]
+        [Validation(Required=false)]
+        public QueryContext QueryContext { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>123456</para>
