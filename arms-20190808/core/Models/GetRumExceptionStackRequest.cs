@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ExceptionThreadId { get; set; }
 
+        [NameInMap("ExtraInfo")]
+        [Validation(Required=false)]
+        public string ExtraInfo { get; set; }
+
         /// <summary>
         /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>

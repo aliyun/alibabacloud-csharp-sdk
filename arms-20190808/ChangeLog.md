@@ -1,3 +1,7 @@
+2024-12-20 Version: 7.3.2
+- Update API GetRumExceptionStack: add param ExtraInfo.
+
+
 2024-12-13 Version: 7.3.1
 - Update API CreateGrafanaWorkspace: add param AccountNumber.
 - Update API CreateGrafanaWorkspace: add param AutoRenew.

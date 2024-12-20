@@ -19474,6 +19474,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["ExceptionThreadId"] = request.ExceptionThreadId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
             {
                 query["Pid"] = request.Pid;
@@ -19540,6 +19544,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExceptionThreadId))
             {
                 query["ExceptionThreadId"] = request.ExceptionThreadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pid))
             {
