@@ -23,9 +23,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("customPrompt")]
+        [Validation(Required=false)]
+        public string CustomPrompt { get; set; }
+
         [NameInMap("dialogue")]
         [Validation(Required=false)]
         public AnalyzeConversationRequestDialogue Dialogue { get; set; }
