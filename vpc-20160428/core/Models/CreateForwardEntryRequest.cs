@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <list type="bullet">
         /// <item><description>The EIP that can be accessed over the Internet when you configure a DNAT entry for an Internet NAT gateway.</description></item>

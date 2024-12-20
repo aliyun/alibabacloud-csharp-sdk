@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The details about the VPC.</para>
+        /// <para>The details of the VPC.</para>
         /// </summary>
         [NameInMap("Vpcs")]
         [Validation(Required=false)]
@@ -126,10 +126,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string DhcpOptionsSetStatus { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the Domain Name System (DNS) feature is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DISABLED</para>
+                /// </summary>
                 [NameInMap("DnsHostnameStatus")]
                 [Validation(Required=false)]
                 public string DnsHostnameStatus { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the IPv6 is enabled.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>false: false</para>
+                /// </description></item>
+                /// <item><description><para>true: true</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("EnabledIpv6")]
                 [Validation(Required=false)]
                 public bool? EnabledIpv6 { get; set; }

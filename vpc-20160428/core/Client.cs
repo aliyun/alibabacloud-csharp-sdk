@@ -1331,7 +1331,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// AddIPv6TranslatorAclListEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated\n")]
+        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated")]
         // Deprecated
         public AddIPv6TranslatorAclListEntryResponse AddIPv6TranslatorAclListEntryWithOptions(AddIPv6TranslatorAclListEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1407,7 +1407,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// AddIPv6TranslatorAclListEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated\n")]
+        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated")]
         // Deprecated
         public async Task<AddIPv6TranslatorAclListEntryResponse> AddIPv6TranslatorAclListEntryWithOptionsAsync(AddIPv6TranslatorAclListEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -1480,7 +1480,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// AddIPv6TranslatorAclListEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated\n")]
+        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated")]
         // Deprecated
         public AddIPv6TranslatorAclListEntryResponse AddIPv6TranslatorAclListEntry(AddIPv6TranslatorAclListEntryRequest request)
         {
@@ -1504,7 +1504,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// AddIPv6TranslatorAclListEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated\n")]
+        [Obsolete("OpenAPI AddIPv6TranslatorAclListEntry is deprecated")]
         // Deprecated
         public async Task<AddIPv6TranslatorAclListEntryResponse> AddIPv6TranslatorAclListEntryAsync(AddIPv6TranslatorAclListEntryRequest request)
         {
@@ -10463,9 +10463,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10533,9 +10541,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11663,6 +11679,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalIp))
             {
                 query["ExternalIp"] = request.ExternalIp;
@@ -11776,6 +11796,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalIp))
             {
@@ -12229,7 +12253,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateGlobalAccelerationInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated\n")]
+        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated")]
         // Deprecated
         public CreateGlobalAccelerationInstanceResponse CreateGlobalAccelerationInstanceWithOptions(CreateGlobalAccelerationInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12323,7 +12347,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateGlobalAccelerationInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated\n")]
+        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated")]
         // Deprecated
         public async Task<CreateGlobalAccelerationInstanceResponse> CreateGlobalAccelerationInstanceWithOptionsAsync(CreateGlobalAccelerationInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12414,7 +12438,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateGlobalAccelerationInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated\n")]
+        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated")]
         // Deprecated
         public CreateGlobalAccelerationInstanceResponse CreateGlobalAccelerationInstance(CreateGlobalAccelerationInstanceRequest request)
         {
@@ -12444,7 +12468,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateGlobalAccelerationInstanceResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated\n")]
+        [Obsolete("OpenAPI CreateGlobalAccelerationInstance is deprecated")]
         // Deprecated
         public async Task<CreateGlobalAccelerationInstanceResponse> CreateGlobalAccelerationInstanceAsync(CreateGlobalAccelerationInstanceRequest request)
         {
@@ -12947,7 +12971,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6Translator is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6Translator is deprecated")]
         // Deprecated
         public CreateIPv6TranslatorResponse CreateIPv6TranslatorWithOptions(CreateIPv6TranslatorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13043,7 +13067,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6Translator is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6Translator is deprecated")]
         // Deprecated
         public async Task<CreateIPv6TranslatorResponse> CreateIPv6TranslatorWithOptionsAsync(CreateIPv6TranslatorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13136,7 +13160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6Translator is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6Translator is deprecated")]
         // Deprecated
         public CreateIPv6TranslatorResponse CreateIPv6Translator(CreateIPv6TranslatorRequest request)
         {
@@ -13160,7 +13184,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6Translator is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6Translator is deprecated")]
         // Deprecated
         public async Task<CreateIPv6TranslatorResponse> CreateIPv6TranslatorAsync(CreateIPv6TranslatorRequest request)
         {
@@ -13187,7 +13211,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public CreateIPv6TranslatorAclListResponse CreateIPv6TranslatorAclListWithOptions(CreateIPv6TranslatorAclListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13259,7 +13283,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public async Task<CreateIPv6TranslatorAclListResponse> CreateIPv6TranslatorAclListWithOptionsAsync(CreateIPv6TranslatorAclListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13328,7 +13352,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public CreateIPv6TranslatorAclListResponse CreateIPv6TranslatorAclList(CreateIPv6TranslatorAclListRequest request)
         {
@@ -13352,7 +13376,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public async Task<CreateIPv6TranslatorAclListResponse> CreateIPv6TranslatorAclListAsync(CreateIPv6TranslatorAclListRequest request)
         {
@@ -13379,7 +13403,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public CreateIPv6TranslatorEntryResponse CreateIPv6TranslatorEntryWithOptions(CreateIPv6TranslatorEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13487,7 +13511,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public async Task<CreateIPv6TranslatorEntryResponse> CreateIPv6TranslatorEntryWithOptionsAsync(CreateIPv6TranslatorEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -13592,7 +13616,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public CreateIPv6TranslatorEntryResponse CreateIPv6TranslatorEntry(CreateIPv6TranslatorEntryRequest request)
         {
@@ -13616,7 +13640,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// CreateIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI CreateIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public async Task<CreateIPv6TranslatorEntryResponse> CreateIPv6TranslatorEntryAsync(CreateIPv6TranslatorEntryRequest request)
         {
@@ -18016,6 +18040,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
                 query["EipAffinity"] = request.EipAffinity;
@@ -18122,6 +18150,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
@@ -27243,7 +27275,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public DeleteIPv6TranslatorAclListResponse DeleteIPv6TranslatorAclListWithOptions(DeleteIPv6TranslatorAclListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27315,7 +27347,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public async Task<DeleteIPv6TranslatorAclListResponse> DeleteIPv6TranslatorAclListWithOptionsAsync(DeleteIPv6TranslatorAclListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27384,7 +27416,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public DeleteIPv6TranslatorAclListResponse DeleteIPv6TranslatorAclList(DeleteIPv6TranslatorAclListRequest request)
         {
@@ -27408,7 +27440,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorAclListResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorAclList is deprecated")]
         // Deprecated
         public async Task<DeleteIPv6TranslatorAclListResponse> DeleteIPv6TranslatorAclListAsync(DeleteIPv6TranslatorAclListRequest request)
         {
@@ -27435,7 +27467,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public DeleteIPv6TranslatorEntryResponse DeleteIPv6TranslatorEntryWithOptions(DeleteIPv6TranslatorEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27511,7 +27543,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public async Task<DeleteIPv6TranslatorEntryResponse> DeleteIPv6TranslatorEntryWithOptionsAsync(DeleteIPv6TranslatorEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -27584,7 +27616,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public DeleteIPv6TranslatorEntryResponse DeleteIPv6TranslatorEntry(DeleteIPv6TranslatorEntryRequest request)
         {
@@ -27608,7 +27640,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DeleteIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI DeleteIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public async Task<DeleteIPv6TranslatorEntryResponse> DeleteIPv6TranslatorEntryAsync(DeleteIPv6TranslatorEntryRequest request)
         {
@@ -38039,9 +38071,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -38117,9 +38157,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -40395,7 +40443,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorAclListsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated")]
         // Deprecated
         public DescribeIPv6TranslatorAclListsResponse DescribeIPv6TranslatorAclListsWithOptions(DescribeIPv6TranslatorAclListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40475,7 +40523,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorAclListsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated")]
         // Deprecated
         public async Task<DescribeIPv6TranslatorAclListsResponse> DescribeIPv6TranslatorAclListsWithOptionsAsync(DescribeIPv6TranslatorAclListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40552,7 +40600,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorAclListsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated")]
         // Deprecated
         public DescribeIPv6TranslatorAclListsResponse DescribeIPv6TranslatorAclLists(DescribeIPv6TranslatorAclListsRequest request)
         {
@@ -40576,7 +40624,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorAclListsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorAclLists is deprecated")]
         // Deprecated
         public async Task<DescribeIPv6TranslatorAclListsResponse> DescribeIPv6TranslatorAclListsAsync(DescribeIPv6TranslatorAclListsRequest request)
         {
@@ -40603,7 +40651,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorEntriesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated")]
         // Deprecated
         public DescribeIPv6TranslatorEntriesResponse DescribeIPv6TranslatorEntriesWithOptions(DescribeIPv6TranslatorEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40723,7 +40771,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorEntriesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated")]
         // Deprecated
         public async Task<DescribeIPv6TranslatorEntriesResponse> DescribeIPv6TranslatorEntriesWithOptionsAsync(DescribeIPv6TranslatorEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40840,7 +40888,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorEntriesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated")]
         // Deprecated
         public DescribeIPv6TranslatorEntriesResponse DescribeIPv6TranslatorEntries(DescribeIPv6TranslatorEntriesRequest request)
         {
@@ -40864,7 +40912,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorEntriesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6TranslatorEntries is deprecated")]
         // Deprecated
         public async Task<DescribeIPv6TranslatorEntriesResponse> DescribeIPv6TranslatorEntriesAsync(DescribeIPv6TranslatorEntriesRequest request)
         {
@@ -40891,7 +40939,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated")]
         // Deprecated
         public DescribeIPv6TranslatorsResponse DescribeIPv6TranslatorsWithOptions(DescribeIPv6TranslatorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -40995,7 +41043,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated")]
         // Deprecated
         public async Task<DescribeIPv6TranslatorsResponse> DescribeIPv6TranslatorsWithOptionsAsync(DescribeIPv6TranslatorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -41096,7 +41144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated")]
         // Deprecated
         public DescribeIPv6TranslatorsResponse DescribeIPv6Translators(DescribeIPv6TranslatorsRequest request)
         {
@@ -41120,7 +41168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeIPv6TranslatorsResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated\n")]
+        [Obsolete("OpenAPI DescribeIPv6Translators is deprecated")]
         // Deprecated
         public async Task<DescribeIPv6TranslatorsResponse> DescribeIPv6TranslatorsAsync(DescribeIPv6TranslatorsRequest request)
         {
@@ -44211,7 +44259,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeRouteTablesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.\n")]
+        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.")]
         // Deprecated
         public DescribeRouteTablesResponse DescribeRouteTablesWithOptions(DescribeRouteTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -44311,7 +44359,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeRouteTablesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.\n")]
+        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.")]
         // Deprecated
         public async Task<DescribeRouteTablesResponse> DescribeRouteTablesWithOptionsAsync(DescribeRouteTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -44408,7 +44456,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeRouteTablesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.\n")]
+        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.")]
         // Deprecated
         public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest request)
         {
@@ -44432,7 +44480,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DescribeRouteTablesResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.\n")]
+        [Obsolete("OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.")]
         // Deprecated
         public async Task<DescribeRouteTablesResponse> DescribeRouteTablesAsync(DescribeRouteTablesRequest request)
         {
@@ -51135,7 +51183,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public DisableNatGatewayEcsMetricResponse DisableNatGatewayEcsMetricWithOptions(DisableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -51195,7 +51243,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public async Task<DisableNatGatewayEcsMetricResponse> DisableNatGatewayEcsMetricWithOptionsAsync(DisableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -51252,7 +51300,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public DisableNatGatewayEcsMetricResponse DisableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request)
         {
@@ -51276,7 +51324,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI DisableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public async Task<DisableNatGatewayEcsMetricResponse> DisableNatGatewayEcsMetricAsync(DisableNatGatewayEcsMetricRequest request)
         {
@@ -52215,7 +52263,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public EnableNatGatewayEcsMetricResponse EnableNatGatewayEcsMetricWithOptions(EnableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -52275,7 +52323,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public async Task<EnableNatGatewayEcsMetricResponse> EnableNatGatewayEcsMetricWithOptionsAsync(EnableNatGatewayEcsMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -52332,7 +52380,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public EnableNatGatewayEcsMetricResponse EnableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request)
         {
@@ -52356,7 +52404,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableNatGatewayEcsMetricResponse
         /// </returns>
-        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated\n")]
+        [Obsolete("OpenAPI EnableNatGatewayEcsMetric is deprecated")]
         // Deprecated
         public async Task<EnableNatGatewayEcsMetricResponse> EnableNatGatewayEcsMetricAsync(EnableNatGatewayEcsMetricRequest request)
         {
@@ -63223,6 +63271,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalIp))
             {
                 query["ExternalIp"] = request.ExternalIp;
@@ -63330,6 +63382,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalIp))
             {
@@ -64333,7 +64389,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorAclAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated")]
         // Deprecated
         public ModifyIPv6TranslatorAclAttributeResponse ModifyIPv6TranslatorAclAttributeWithOptions(ModifyIPv6TranslatorAclAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -64409,7 +64465,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorAclAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated")]
         // Deprecated
         public async Task<ModifyIPv6TranslatorAclAttributeResponse> ModifyIPv6TranslatorAclAttributeWithOptionsAsync(ModifyIPv6TranslatorAclAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -64482,7 +64538,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorAclAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated")]
         // Deprecated
         public ModifyIPv6TranslatorAclAttributeResponse ModifyIPv6TranslatorAclAttribute(ModifyIPv6TranslatorAclAttributeRequest request)
         {
@@ -64506,7 +64562,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorAclAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorAclAttribute is deprecated")]
         // Deprecated
         public async Task<ModifyIPv6TranslatorAclAttributeResponse> ModifyIPv6TranslatorAclAttributeAsync(ModifyIPv6TranslatorAclAttributeRequest request)
         {
@@ -65077,7 +65133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public ModifyIPv6TranslatorEntryResponse ModifyIPv6TranslatorEntryWithOptions(ModifyIPv6TranslatorEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -65185,7 +65241,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public async Task<ModifyIPv6TranslatorEntryResponse> ModifyIPv6TranslatorEntryWithOptionsAsync(ModifyIPv6TranslatorEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -65290,7 +65346,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public ModifyIPv6TranslatorEntryResponse ModifyIPv6TranslatorEntry(ModifyIPv6TranslatorEntryRequest request)
         {
@@ -65314,7 +65370,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ModifyIPv6TranslatorEntryResponse
         /// </returns>
-        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated\n")]
+        [Obsolete("OpenAPI ModifyIPv6TranslatorEntry is deprecated")]
         // Deprecated
         public async Task<ModifyIPv6TranslatorEntryResponse> ModifyIPv6TranslatorEntryAsync(ModifyIPv6TranslatorEntryRequest request)
         {
@@ -68359,6 +68415,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
                 query["EipAffinity"] = request.EipAffinity;
@@ -68458,6 +68518,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
@@ -78748,6 +78812,166 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>连续EIP组转换为公网IP地址池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransformEipSegmentToPublicIpAddressPoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformEipSegmentToPublicIpAddressPoolResponse
+        /// </returns>
+        public TransformEipSegmentToPublicIpAddressPoolResponse TransformEipSegmentToPublicIpAddressPoolWithOptions(TransformEipSegmentToPublicIpAddressPoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransformEipSegmentToPublicIpAddressPool",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransformEipSegmentToPublicIpAddressPoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>连续EIP组转换为公网IP地址池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransformEipSegmentToPublicIpAddressPoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformEipSegmentToPublicIpAddressPoolResponse
+        /// </returns>
+        public async Task<TransformEipSegmentToPublicIpAddressPoolResponse> TransformEipSegmentToPublicIpAddressPoolWithOptionsAsync(TransformEipSegmentToPublicIpAddressPoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransformEipSegmentToPublicIpAddressPool",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransformEipSegmentToPublicIpAddressPoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>连续EIP组转换为公网IP地址池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransformEipSegmentToPublicIpAddressPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformEipSegmentToPublicIpAddressPoolResponse
+        /// </returns>
+        public TransformEipSegmentToPublicIpAddressPoolResponse TransformEipSegmentToPublicIpAddressPool(TransformEipSegmentToPublicIpAddressPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TransformEipSegmentToPublicIpAddressPoolWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>连续EIP组转换为公网IP地址池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransformEipSegmentToPublicIpAddressPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformEipSegmentToPublicIpAddressPoolResponse
+        /// </returns>
+        public async Task<TransformEipSegmentToPublicIpAddressPoolResponse> TransformEipSegmentToPublicIpAddressPoolAsync(TransformEipSegmentToPublicIpAddressPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TransformEipSegmentToPublicIpAddressPoolWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
@@ -81830,7 +82054,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated")]
         // Deprecated
         public UpdateNatGatewayNatTypeResponse UpdateNatGatewayNatTypeWithOptions(UpdateNatGatewayNatTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -81935,7 +82159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated")]
         // Deprecated
         public async Task<UpdateNatGatewayNatTypeResponse> UpdateNatGatewayNatTypeWithOptionsAsync(UpdateNatGatewayNatTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -82037,7 +82261,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated")]
         // Deprecated
         public UpdateNatGatewayNatTypeResponse UpdateNatGatewayNatType(UpdateNatGatewayNatTypeRequest request)
         {
@@ -82078,7 +82302,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// UpdateNatGatewayNatTypeResponse
         /// </returns>
-        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated\n")]
+        [Obsolete("OpenAPI UpdateNatGatewayNatType is deprecated")]
         // Deprecated
         public async Task<UpdateNatGatewayNatTypeResponse> UpdateNatGatewayNatTypeAsync(UpdateNatGatewayNatTypeRequest request)
         {

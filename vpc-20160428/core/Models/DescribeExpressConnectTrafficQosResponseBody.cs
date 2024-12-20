@@ -165,6 +165,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -172,6 +176,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeExpressConnectTrafficQosResponseBodyQosListTags> Tags { get; set; }
+            public class DescribeExpressConnectTrafficQosResponseBodyQosListTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
         }
 
