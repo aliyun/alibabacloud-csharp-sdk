@@ -10,73 +10,93 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GrantCollectionRequest : TeaModel {
         /// <summary>
-        /// The name of the collection.
+        /// <para>The name of the collection.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation to create a vector collection and call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of vector collections.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [CreateCollection](https://help.aliyun.com/document_detail/2401497.html) operation to create a vector collection and call the [ListCollections](https://help.aliyun.com/document_detail/2401503.html) operation to query a list of vector collections.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>document</para>
         /// </summary>
         [NameInMap("Collection")]
         [Validation(Required=false)]
         public string Collection { get; set; }
 
         /// <summary>
-        /// The ID of the instance in reserved storage mode.
+        /// <para>The ID of the instance in reserved storage mode.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the namespace to which you want to grant the vector collection permissions.
+        /// <para>The name of the namespace to which you want to grant the vector collection permissions.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>othernamespace</para>
         /// </summary>
         [NameInMap("GrantToNamespace")]
         [Validation(Required=false)]
         public string GrantToNamespace { get; set; }
 
         /// <summary>
-        /// The type of the permissions that you want to grant. Valid values:
+        /// <para>The type of the permissions that you want to grant. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>rw: the read and write permissions.</description></item>
+        /// <item><description>ro: the read-only permission.</description></item>
+        /// <item><description>none: the delete permission.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   rw: the read and write permissions.
-        /// *   ro: the read-only permission.
-        /// *   none: the delete permission.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rw</para>
         /// </summary>
         [NameInMap("GrantType")]
         [Validation(Required=false)]
         public string GrantType { get; set; }
 
         /// <summary>
-        /// The name of the manager account that has the rds_superuser permission.
+        /// <para>The name of the manager account that has the rds_superuser permission.</para>
+        /// <remarks>
+        /// <para> You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the [CreateAccount](https://help.aliyun.com/document_detail/2361789.html) operation.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testaccount</para>
         /// </summary>
         [NameInMap("ManagerAccount")]
         [Validation(Required=false)]
         public string ManagerAccount { get; set; }
 
         /// <summary>
-        /// The password of the manager account.
+        /// <para>The password of the manager account.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testpassword</para>
         /// </summary>
         [NameInMap("ManagerAccountPassword")]
         [Validation(Required=false)]
         public string ManagerAccountPassword { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [ListNamespaces](https://help.aliyun.com/document_detail/2401502.html) operation to query a list of namespaces.
+        /// <b>Example:</b>
+        /// <para>mynamespace</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -87,9 +107,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

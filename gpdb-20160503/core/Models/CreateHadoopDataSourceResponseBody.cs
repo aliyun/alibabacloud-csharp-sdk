@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateHadoopDataSourceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Data source ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public int? DataSourceId { get; set; }
 
+        /// <summary>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2C125605-266F-41CA-8AC5-3A643D4F42C5</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

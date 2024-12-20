@@ -10,42 +10,68 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpsertChunksRequest : TeaModel {
         /// <summary>
-        /// The name of the document collection.
+        /// <para>Document collection name.</para>
+        /// <remarks>
+        /// <para>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the already created document collections.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [CreateDocumentCollection](https://help.aliyun.com/document_detail/2618448.html) operation to create a document collection and call the [ListDocumentCollections](https://help.aliyun.com/document_detail/2618452.html) operation to query a list of document collections.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>document</para>
         /// </summary>
         [NameInMap("Collection")]
         [Validation(Required=false)]
         public string Collection { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>File name.</para>
+        /// <remarks>
+        /// <para>If a file name is specified and not empty, it will overwrite the data for this file name; if empty, the chunks data will be appended directly to the document collection.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mydoc.txt</para>
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// The name of the namespace. Default value: public.
+        /// <para>Namespace, default is public.</para>
+        /// <remarks>
+        /// <para>You can create it using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [CreateNamespace](https://help.aliyun.com/document_detail/2401495.html) operation to create a namespace and call the [ListNamespaces](https://help.aliyun.com/document_detail/2401502.html) operation to query a list of namespaces.
+        /// <b>Example:</b>
+        /// <para>mynamespace</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The password of the namespace.
+        /// <para>Password corresponding to the namespace.</para>
+        /// <remarks>
+        /// <para>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  This value is specified when you call the [CreateNamespace](https://help.aliyun.com/document_detail/2401495.html) operation.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testpassword</para>
         /// </summary>
         [NameInMap("NamespacePassword")]
         [Validation(Required=false)]
@@ -56,23 +82,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Region ID where the instance is located.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>List of split documents.</para>
+        /// </summary>
         [NameInMap("TextChunks")]
         [Validation(Required=false)]
         public List<UpsertChunksRequestTextChunks> TextChunks { get; set; }
         public class UpsertChunksRequestTextChunks : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>Document content.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Cloud-native data warehouse AnalyticDB PostgreSQL Edition provides a simple, fast, and cost-effective PB-level cloud data warehouse solution.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// <para>Metadata.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;title&quot;:&quot;test&quot;}</para>
+            /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
             public Dictionary<string, object> Metadata { get; set; }

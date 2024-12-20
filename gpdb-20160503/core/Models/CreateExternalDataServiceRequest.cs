@@ -10,39 +10,56 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateExternalDataServiceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>Instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-bp10g78o9807yv9h3</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
+        /// <para>Region ID, you can view available region IDs through the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The description of the service.
+        /// <para>Service description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxf test</para>
         /// </summary>
         [NameInMap("ServiceDescription")]
         [Validation(Required=false)]
         public string ServiceDescription { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Service name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-adbpgss</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The specifications of the service. Unit: compute units (CUs). Valid values:
+        /// <para>Service specification (in CU), value:</para>
+        /// <list type="bullet">
+        /// <item><description>8</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   8
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("ServiceSpec")]
         [Validation(Required=false)]

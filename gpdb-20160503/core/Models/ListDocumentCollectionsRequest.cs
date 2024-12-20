@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDocumentCollectionsRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the namespace. Default value: public.
+        /// <para>The name of the namespace. Default value: public.</para>
+        /// <remarks>
+        /// <para> You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.
+        /// <b>Example:</b>
+        /// <para>mynamespace</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The password of the namespace.
+        /// <para>The password of the namespace.</para>
+        /// <remarks>
+        /// <para> This value is specified when you call the CreateNamespace operation.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  This value is specified when you call the CreateNamespace operation.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testpassword</para>
         /// </summary>
         [NameInMap("NamespacePassword")]
         [Validation(Required=false)]
@@ -45,9 +55,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

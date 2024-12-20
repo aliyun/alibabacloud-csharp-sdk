@@ -10,21 +10,36 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckHadoopNetConnectionResponseBody : TeaModel {
         /// <summary>
-        /// The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks ("") is returned.
+        /// <para>Return message: Returns error information if the connection fails, otherwise returns an empty string (&quot;&quot;).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>connection timeout</para>
         /// </summary>
         [NameInMap("ConnectionMessage")]
         [Validation(Required=false)]
         public string ConnectionMessage { get; set; }
 
         /// <summary>
-        /// The connection status. Valid values: Success and Failed.
+        /// <para>Connection status:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Network connected: Success</para>
+        /// </description></item>
+        /// <item><description><para>Network not connected: Failed</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("ConnectionStatus")]
         [Validation(Required=false)]
         public string ConnectionStatus { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryCollectionDataResponseBody : TeaModel {
         /// <summary>
-        /// The retrieved data.
+        /// <para>Data list.</para>
         /// </summary>
         [NameInMap("Matches")]
         [Validation(Required=false)]
@@ -21,28 +21,34 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<QueryCollectionDataResponseBodyMatchesMatch> Match { get; set; }
             public class QueryCollectionDataResponseBodyMatchesMatch : TeaModel {
                 /// <summary>
-                /// The unique ID of the vector data.
+                /// <para>The unique ID of the vector data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>doca-1234</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The metadata.
+                /// <para>Metadata.</para>
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metadata { get; set; }
 
                 /// <summary>
-                /// The similarity score of the data. It is related to the `l2, ip, or cosine` algorithm that is specified when you create an index.
+                /// <para>The similarity score of this data, which is related to the algorithm <c>(l2/ip/cosine)</c> specified when creating the index.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.12345</para>
                 /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public double? Score { get; set; }
 
                 /// <summary>
-                /// The retrieved vector data.
+                /// <para>List of vector data.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -58,20 +64,45 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
+        /// <summary>
+        /// <para>Detailed information when the request fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.1234</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Status, with the following values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b>: Success.</description></item>
+        /// <item><description><b>fail</b>: Failure.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The total number of entries that match the search conditions. This parameter is returned only when the Offset parameter is not 0.
+        /// <para>Only returned when the Offset is not 0, this value represents the total number of hits for the search criteria.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

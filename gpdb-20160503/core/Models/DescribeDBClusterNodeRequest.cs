@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBClusterNodeRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-bp***************</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The node type. Valid values:
+        /// <para>The node type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>master</b>: coordinator node.</description></item>
+        /// <item><description><b>segment</b>: compute node.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the information about all nodes is returned.</para>
+        /// </remarks>
         /// 
-        /// *   **master**: coordinator node.
-        /// *   **segment**: compute node.
-        /// 
-        /// > If you do not specify this parameter, the information about all nodes is returned.
+        /// <b>Example:</b>
+        /// <para>master</para>
         /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]

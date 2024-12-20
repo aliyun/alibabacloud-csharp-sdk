@@ -10,29 +10,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyDBInstanceSSLRequest : TeaModel {
         /// <summary>
-        /// The encrypted endpoint. By default, the wildcards are used for instances that are hosted on ECS instances. This way, the endpoints that can be resolved to the same IP address are encrypted.
+        /// <para>The encrypted endpoint. By default, the wildcards are used for instances that are hosted on ECS instances. This way, the endpoints that can be resolved to the same IP address are encrypted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxxxx-master.gpdbmaster.singapore.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The status of SSL encryption. Valid values:
+        /// <para>The status of SSL encryption. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: disables SSL encryption.</description></item>
+        /// <item><description>1: enables SSL encryption.</description></item>
+        /// <item><description>2: updates SSL encryption.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   0: disables SSL encryption.
-        /// *   1: enables SSL encryption.
-        /// *   2: updates SSL encryption.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SSLEnabled")]
         [Validation(Required=false)]

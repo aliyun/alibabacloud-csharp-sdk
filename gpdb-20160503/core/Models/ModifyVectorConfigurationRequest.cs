@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyVectorConfigurationRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.
+        /// <b>Example:</b>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -23,13 +27,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable vector engine optimization. Valid values:
+        /// <para>Specifies whether to enable vector engine optimization. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>enabled</b></description></item>
+        /// <item><description><b>disabled</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you <b>do not enable</b> vector engine optimization in mainstream analysis and real-time data warehousing scenarios.</description></item>
+        /// <item><description>We recommend that you <b>enable</b> vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **enabled**
-        /// *   **disabled**
-        /// 
-        /// > *   We recommend that you **do not enable** vector engine optimization in mainstream analysis and real-time data warehousing scenarios.
-        /// > *   We recommend that you **enable** vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("VectorConfigurationStatus")]
         [Validation(Required=false)]

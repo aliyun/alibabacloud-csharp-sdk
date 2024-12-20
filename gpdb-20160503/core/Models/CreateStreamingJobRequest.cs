@@ -10,167 +10,347 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateStreamingJobRequest : TeaModel {
         /// <summary>
-        /// The name of the database account.
+        /// <para>Target database account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-account</para>
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
         public string Account { get; set; }
 
         /// <summary>
-        /// The delivery guarantee setting.
+        /// <para>Delivery guarantee.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   ATLEAST
-        /// *   EXACTLY
+        /// <b>Example:</b>
+        /// <para>ATLEAST / EXACTLY</para>
         /// </summary>
         [NameInMap("Consistency")]
         [Validation(Required=false)]
         public string Consistency { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>Instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-bp10g78o9807yv9h3</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The data source ID.
+        /// <para>Data source ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// The destination fields.
+        /// <para>Target data table mapping field list.</para>
         /// </summary>
         [NameInMap("DestColumns")]
         [Validation(Required=false)]
         public List<string> DestColumns { get; set; }
 
         /// <summary>
-        /// The name of the destination database.
+        /// <para>Target database name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dest-db</para>
         /// </summary>
         [NameInMap("DestDatabase")]
         [Validation(Required=false)]
         public string DestDatabase { get; set; }
 
+        /// <summary>
+        /// <para>Target namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dest-schema</para>
+        /// </summary>
         [NameInMap("DestSchema")]
         [Validation(Required=false)]
         public string DestSchema { get; set; }
 
         /// <summary>
-        /// The name of the destination table.
+        /// <para>Target table name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dest-table</para>
         /// </summary>
         [NameInMap("DestTable")]
         [Validation(Required=false)]
         public string DestTable { get; set; }
 
         /// <summary>
-        /// The number of allowed error rows. Write failures occur when Kafka data does not match the destination table in AnalyticDB for PostgreSQL. If the specified value is exceeded, the job fails.
+        /// <para>When data in Kafka does not match the ADBPG target table, it will cause a write failure. This value is the number of error rows allowed; exceeding this will cause the task to fail.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("ErrorLimitCount")]
         [Validation(Required=false)]
         public long? ErrorLimitCount { get; set; }
 
+        /// <summary>
+        /// <para>FallbackOffset, fallback offset</para>
+        /// <list type="bullet">
+        /// <item><description>The FallbackOffset parameter defines the behavior when the consumer does not request a specific offset or the requested offset exceeds the current Kafka cluster\&quot;s recorded offset information. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EARLIEST /  LATEST</para>
+        /// </summary>
         [NameInMap("FallbackOffset")]
         [Validation(Required=false)]
         public string FallbackOffset { get; set; }
 
+        /// <summary>
+        /// <para>Kafka group name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group_name.</para>
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The YAML configuration file of the job. This parameter must be specified when Mode is set to professional.
+        /// <para>Job configuration file, required for professional mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DATABASE: adbpgss_test
+        /// USER: adbpgss_test
+        /// PASSWORD: adbpgssTest
+        /// HOST: gp-xxx-master.gpdb.rds-aliyun-pre.rds.aliyuncs.com
+        /// PORT: 5432
+        /// KAFKA:
+        ///   INPUT:
+        ///     SOURCE:
+        ///       BROKERS: broker1:9092,broker2:9092,broker3:9092
+        ///       TOPIC: testtopic
+        ///       FALLBACK_OFFSET: earliest
+        ///     KEY:
+        ///       COLUMNS:
+        ///       - NAME: customer_id
+        ///         TYPE: int
+        ///       FORMAT: delimited
+        ///       DELIMITED_OPTION:
+        ///         DELIMITER: \&quot;|\&quot;
+        ///     VALUE:
+        ///       COLUMNS:
+        ///       - TYPE: integer
+        ///         NAME: l_orderkey
+        ///       - TYPE: integer
+        ///         NAME: l_partkey
+        ///       - TYPE: integer
+        ///         NAME: l_suppkey
+        ///       - TYPE: integer
+        ///         NAME: l_linenumber
+        ///       - TYPE: decimal
+        ///         NAME: l_quantity
+        ///       - TYPE: decimal
+        ///         NAME: l_extendedprice
+        ///       - TYPE: decimal
+        ///         NAME: l_discount
+        ///       - TYPE: decimal
+        ///         NAME: l_tax
+        ///       - TYPE: char
+        ///         NAME: l_returnflag
+        ///       - TYPE: char
+        ///         NAME: l_linestatus
+        ///       - TYPE: date
+        ///         NAME: l_shipdate
+        ///       - TYPE: date
+        ///         NAME: l_commitdate
+        ///       - TYPE: date
+        ///         NAME: l_receiptdate
+        ///       - TYPE: text
+        ///         NAME: l_shipinstruct
+        ///       - TYPE: text
+        ///         NAME: l_shipmode
+        ///       - TYPE: text
+        ///         NAME: l_comment
+        ///       FORMAT: delimited
+        ///       DELIMITED_OPTION:
+        ///         DELIMITER: \&quot;|\&quot;
+        ///     ERROR_LIMIT: 10
+        ///   OUTPUT:
+        ///     SCHEMA: adbpgss_test
+        ///     TABLE: write_with_insert_plaintext
+        ///     MODE: MERGE
+        ///     MATCH_COLUMNS:
+        ///     - l_orderkey
+        ///     - l_partkey
+        ///     - l_suppkey
+        ///     UPDATE_COLUMNS:
+        ///     - l_linenumber
+        ///     - l_quantity
+        ///     - l_extendedprice
+        ///     - l_discount
+        ///     - l_tax
+        ///     - l_returnflag
+        ///     - l_linestatus
+        ///     - l_shipdate
+        ///     - l_commitdate
+        ///     - l_receiptdate
+        ///     - l_shipinstruct
+        ///     - l_shipmode
+        ///     - l_comment
+        ///     MAPPING:
+        ///     - EXPRESSION: l_orderkey
+        ///       NAME: l_orderkey
+        ///     - EXPRESSION: l_partkey
+        ///       NAME: l_partkey
+        ///     - EXPRESSION: l_suppkey
+        ///       NAME: l_suppkey
+        ///     - EXPRESSION: l_linenumber
+        ///       NAME: l_linenumber
+        ///     - EXPRESSION: l_quantity
+        ///       NAME: l_quantity
+        ///     - EXPRESSION: l_extendedprice
+        ///       NAME: l_extendedprice
+        ///     - EXPRESSION: l_discount
+        ///       NAME: l_discount
+        ///     - EXPRESSION: l_tax
+        ///       NAME: l_tax
+        ///     - EXPRESSION: l_returnflag
+        ///       NAME: l_returnflag
+        ///     - EXPRESSION: l_linestatus
+        ///       NAME: l_linestatus
+        ///     - EXPRESSION: l_shipdate
+        ///       NAME: l_shipdate
+        ///     - EXPRESSION: l_commitdate
+        ///       NAME: l_commitdate
+        ///     - EXPRESSION: l_receiptdate
+        ///       NAME: l_receiptdate
+        ///     - EXPRESSION: l_shipinstruct
+        ///       NAME: l_shipinstruct
+        ///     - EXPRESSION: l_shipmode
+        ///       NAME: l_shipmode
+        ///     - EXPRESSION: l_comment
+        ///       NAME: l_comment
+        ///   COMMIT:
+        ///     MAX_ROW: 1000
+        ///     MINIMAL_INTERVAL: 1000
+        ///     CONSISTENCY: ATLEAST
+        ///   POLL:
+        ///     BATCHSIZE: 1000
+        ///     TIMEOUT: 1000
+        ///   PROPERTIES:
+        ///     group.id: testgroup</para>
         /// </summary>
         [NameInMap("JobConfig")]
         [Validation(Required=false)]
         public string JobConfig { get; set; }
 
         /// <summary>
-        /// The description of the job.
+        /// <para>Job description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-job</para>
         /// </summary>
         [NameInMap("JobDescription")]
         [Validation(Required=false)]
         public string JobDescription { get; set; }
 
         /// <summary>
-        /// The name of the job.
+        /// <para>Job name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test-job</para>
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
         public string JobName { get; set; }
 
         /// <summary>
-        /// The update condition columns that are used to join the source data and the destination table. Typically, the columns are all the primary key columns of the destination table. If the values of all columns specified by this parameter in different rows are the same, the rows are considered duplicates.
+        /// <para>Match columns, usually all primary key columns of the target table. If all column values in this configuration are the same, the two rows of data are considered duplicates.</para>
         /// </summary>
         [NameInMap("MatchColumns")]
         [Validation(Required=false)]
         public List<string> MatchColumns { get; set; }
 
         /// <summary>
-        /// The configuration mode. Valid values:
+        /// <para>Configuration mode</para>
+        /// <ol>
+        /// <item><description>Basic mode requires specifying some configuration fields</description></item>
+        /// <item><description>Professional mode supports submitting a YAML file</description></item>
+        /// </ol>
         /// 
-        /// 1.  basic: In basic mode, you must configure the configuration parameters.
-        /// 2.  professional: In professional mode, you can submit a YAML configuration file.
+        /// <b>Example:</b>
+        /// <para>basic / professional</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// The password of the database account.
+        /// <para>Target database password.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pwd123</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <para>Region ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to view available region IDs.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The source fields.
+        /// <para>Source data field list.</para>
         /// </summary>
         [NameInMap("SrcColumns")]
         [Validation(Required=false)]
         public List<string> SrcColumns { get; set; }
 
         /// <summary>
-        /// Specifies whether to test the real-time job. Valid values:
+        /// <para>Whether to test the real-time task, values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true
-        /// *   false
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("TryRun")]
         [Validation(Required=false)]
         public bool? TryRun { get; set; }
 
         /// <summary>
-        /// The columns to be updated if a row of data meets the update condition. Typically, the columns are all non-primary key columns of the destination table. When the columns specified by the MatchColumns parameter are used as conditions to join the source data and the destination table, data in columns of the UpdateColumns type is updated if data is matched.
+        /// <para>Update columns, usually all non-primary key columns of the target table. When data is determined to be duplicate through MatchColumns, updating the UpdateColumns column values will result in new data overwriting old data.</para>
         /// </summary>
         [NameInMap("UpdateColumns")]
         [Validation(Required=false)]
         public List<string> UpdateColumns { get; set; }
 
         /// <summary>
-        /// The write mode.
+        /// <para>Write mode.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   insert
-        /// *   update
-        /// *   merge
+        /// <b>Example:</b>
+        /// <para>INSERT/UPDATE/MERGE</para>
         /// </summary>
         [NameInMap("WriteMode")]
         [Validation(Required=false)]

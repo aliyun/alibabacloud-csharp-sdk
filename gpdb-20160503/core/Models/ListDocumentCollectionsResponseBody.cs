@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDocumentCollectionsResponseBody : TeaModel {
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// The queried document collections.
+        /// <para>The queried document collections.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -28,49 +31,70 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<ListDocumentCollectionsResponseBodyItemsCollectionList> CollectionList { get; set; }
             public class ListDocumentCollectionsResponseBodyItemsCollectionList : TeaModel {
                 /// <summary>
-                /// The name of the document collection.
+                /// <para>The name of the document collection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>document</para>
                 /// </summary>
                 [NameInMap("CollectionName")]
                 [Validation(Required=false)]
                 public string CollectionName { get; set; }
 
                 /// <summary>
-                /// The number of vector dimensions.
+                /// <para>The number of vector dimensions.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1536</para>
                 /// </summary>
                 [NameInMap("Dimension")]
                 [Validation(Required=false)]
                 public int? Dimension { get; set; }
 
                 /// <summary>
-                /// The name of the vector algorithm.
+                /// <para>The name of the vector algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>text-embeddding-v1</para>
                 /// </summary>
                 [NameInMap("EmbeddingModel")]
                 [Validation(Required=false)]
                 public string EmbeddingModel { get; set; }
 
                 /// <summary>
-                /// The fields that are used for full-text search. Multiple fields are separated by commas (,).
+                /// <para>The fields that are used for full-text search. Multiple fields are separated by commas (,).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>title</para>
                 /// </summary>
                 [NameInMap("FullTextRetrievalFields")]
                 [Validation(Required=false)]
                 public string FullTextRetrievalFields { get; set; }
 
                 /// <summary>
-                /// The metadata.
+                /// <para>The metadata.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;page\&quot;: \&quot;int\&quot;, \&quot;title\&quot;: \&quot;text\&quot;}</para>
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
                 public string Metadata { get; set; }
 
                 /// <summary>
-                /// The vector similarity algorithm.
+                /// <para>The vector similarity algorithm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cosine</para>
                 /// </summary>
                 [NameInMap("Metrics")]
                 [Validation(Required=false)]
                 public string Metrics { get; set; }
 
                 /// <summary>
-                /// The analyzer that is used for full-text search.
+                /// <para>The analyzer that is used for full-text search.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zh_cn</para>
                 /// </summary>
                 [NameInMap("Parser")]
                 [Validation(Required=false)]
@@ -81,24 +105,34 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b></description></item>
+        /// <item><description><b>fail</b></description></item>
+        /// </list>
         /// 
-        /// *   **success**
-        /// *   **fail**
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

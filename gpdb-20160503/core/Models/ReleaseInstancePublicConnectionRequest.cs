@@ -10,32 +10,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ReleaseInstancePublicConnectionRequest : TeaModel {
         /// <summary>
-        /// The type of the endpoint. Default value: primary. Valid values:
+        /// <para>The type of the endpoint. Default value: primary. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>primary</b>: primary endpoint.</description></item>
+        /// <item><description><b>cluster</b>: cluster endpoint. This type of endpoints can be created only for instances that have multiple coordinator nodes.</description></item>
+        /// </list>
         /// 
-        /// *   **primary**: primary endpoint.
-        /// *   **cluster**: cluster endpoint. This type of endpoints can be created only for instances that have multiple coordinator nodes.
+        /// <b>Example:</b>
+        /// <para>Intranet</para>
         /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public string AddressType { get; set; }
 
         /// <summary>
-        /// The public endpoint of the instance.
+        /// <para>The public endpoint of the instance.</para>
+        /// <para>You can log on to the AnalyticDB for PostgreSQL console and go to the <b>Basic Information</b> page of the instance to view the <b>public endpoint</b> in the <b>Database Connection</b> section.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can log on to the AnalyticDB for PostgreSQL console and go to the **Basic Information** page of the instance to view the **public endpoint** in the **Database Connection** section.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

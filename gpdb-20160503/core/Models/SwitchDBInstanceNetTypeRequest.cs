@@ -10,32 +10,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class SwitchDBInstanceNetTypeRequest : TeaModel {
         /// <summary>
-        /// The prefix of the custom endpoint.
+        /// <para>The prefix of the custom endpoint.</para>
+        /// <list type="bullet">
+        /// <item><description>The prefix can contain lowercase letters, digits, and hyphens (-) and must start with a lowercase letter.</description></item>
+        /// <item><description>The prefix can be up to 30 characters in length.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   The prefix can contain lowercase letters, digits, and hyphens (-) and must start with a lowercase letter.
-        /// *   The prefix can be up to 30 characters in length.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test1234</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The port number.
+        /// <para>The port number.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

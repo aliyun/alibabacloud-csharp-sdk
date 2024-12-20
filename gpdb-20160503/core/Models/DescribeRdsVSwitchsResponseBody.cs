@@ -10,101 +10,138 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeRdsVSwitchsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B0BA251D-6854-5A99-A964-3C**********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details of the vSwitches.
+        /// <para>Details of the vSwitches.</para>
         /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public DescribeRdsVSwitchsResponseBodyVSwitches VSwitches { get; set; }
         public class DescribeRdsVSwitchsResponseBodyVSwitches : TeaModel {
             /// <summary>
-            /// Details of the vSwitch.
+            /// <para>Details of the vSwitch.</para>
             /// </summary>
             [NameInMap("VSwitch")]
             [Validation(Required=false)]
             public List<DescribeRdsVSwitchsResponseBodyVSwitchesVSwitch> VSwitch { get; set; }
             public class DescribeRdsVSwitchsResponseBodyVSwitchesVSwitch : TeaModel {
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("AliUid")]
                 [Validation(Required=false)]
                 public string AliUid { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("Bid")]
                 [Validation(Required=false)]
                 public string Bid { get; set; }
 
                 /// <summary>
-                /// The CIDR block of the vSwitch.
+                /// <para>The CIDR block of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.<b>.</b>.0/24</para>
                 /// </summary>
                 [NameInMap("CidrBlock")]
                 [Validation(Required=false)]
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// Indicates whether the vSwitch is the default vSwitch. Valid values:
+                /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsDefault")]
                 [Validation(Required=false)]
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// <para>The ID of the zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-h</para>
                 /// </summary>
                 [NameInMap("IzNo")]
                 [Validation(Required=false)]
                 public string IzNo { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("RegionNo")]
                 [Validation(Required=false)]
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// The state of the vSwitch. If **Available** is returned, the vSwitch is available.
+                /// <para>The state of the vSwitch. If <b>Available</b> is returned, the vSwitch is available.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// <para>The ID of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bp*******************</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The name of the vSwitch.
+                /// <para>The name of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-name</para>
                 /// </summary>
                 [NameInMap("VSwitchName")]
                 [Validation(Required=false)]

@@ -10,115 +10,205 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryContentShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>Document collection name.</para>
+        /// <remarks>
+        /// <para>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the list of created document collections.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>document</para>
         /// </summary>
         [NameInMap("Collection")]
         [Validation(Required=false)]
         public string Collection { get; set; }
 
+        /// <summary>
+        /// <para>Text content for retrieval.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>What is ADBPG?</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>In image search scenarios, the source file name of the image to be searched.</para>
+        /// <remarks>
+        /// <para>The image file must have a file extension. Currently supported image extensions: bmp, jpg, jpeg, png, tiff.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test.jpg</para>
+        /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
+        /// <summary>
+        /// <para>In image search scenarios, the publicly accessible URL of the image file.</para>
+        /// <remarks>
+        /// <para>The image file must have a file extension. Currently supported image extensions: bmp, jpg, jpeg, png, tiff.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://xx/myImage.jpg">https://xx/myImage.jpg</a></para>
+        /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// The filter condition that is used to query data. Specify the parameter in the WHERE clause format. The parameter is an expression that returns a Boolean value of TRUE or FALSE. The parameter can contain comparison operators, such as Equal To (=), Not Equal To (<> or !=), Greater Than (>), Less Than (<), Greater Than or Equal To (>=), and Less Than or Equal To (<=), logical operators, such as AND, OR, and NOT, and keywords, such as IN, BETWEEN, and LIKE.
+        /// <para>Filter condition for the data to be queried, in SQL WHERE format. It is an expression that returns a boolean value (true or false). The conditions can be simple comparison operators such as equal (=), not equal (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), less than or equal to (&lt;=), or more complex expressions combined with logical operators (AND, OR, NOT), and conditions using keywords like IN, BETWEEN, LIKE, etc.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > 
-        /// 
-        /// *   For more information, see https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/.
+        /// <b>Example:</b>
+        /// <para>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// The two-way retrieval algorithm. This parameter is empty by default, which specifies that scores of vector search and full-text search are directly compared and sorted without additional weighting or adjustments.
+        /// <para>Dual recall algorithm, default is empty (i.e., directly compare and sort the scores of vectors and full text).</para>
+        /// <para>Available values:</para>
+        /// <list type="bullet">
+        /// <item><description>RRF: Reciprocal rank fusion, with a parameter k controlling the fusion effect. See HybridSearchArgs configuration for details;</description></item>
+        /// <item><description>Weight: Weighted ranking, using a parameter alpha to control the weight of vector and full-text scores, then sorting. See HybridSearchArgs configuration for details;</description></item>
+        /// <item><description>Cascaded: Perform full-text retrieval first, then vector retrieval on top of it;</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.
-        /// *   Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.
-        /// *   Cascaded: This algorithm performs first full-text search and then vector search.
+        /// <b>Example:</b>
+        /// <para>RRF</para>
         /// </summary>
         [NameInMap("HybridSearch")]
         [Validation(Required=false)]
         public string HybridSearch { get; set; }
 
         /// <summary>
-        /// The parameters of the two-way retrieval algorithm. The following parameters are supported:
-        /// 
-        /// *   When HybridSearch is set to RRF, the scores are calculated by using the `1/(k+rank_i)` formula. The constant k is a positive integer that is greater than 1.
-        /// 
+        /// <para>The parameters of the two-way retrieval algorithm. The following parameters are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>When HybridSearch is set to RRF, the scores are calculated by using the <c>1/(k+rank_i)</c> formula. The constant k is a positive integer that is greater than 1.</description></item>
+        /// </list>
         /// <!---->
         /// 
-        ///     { 
-        ///        "RRF": {
-        ///         "k": 60
-        ///        }
-        ///     }
-        /// 
-        /// *   When HybridSearch is set to Weight, the scores are calculated by using the `alpha * vector_score + (1-alpha) * text_score` formula. The alpha parameter specifies the proportion of the vector search score and the full-text search score and ranges from 0 to 1. A value of 0 specifies full-text search and a value of 1 specifies vector search.
-        /// 
+        /// <pre><c>{ 
+        ///    &quot;RRF&quot;: {
+        ///     &quot;k&quot;: 60
+        ///    }
+        /// }
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>When HybridSearch is set to Weight, the scores are calculated by using the <c>alpha * vector_score + (1-alpha) * text_score</c> formula. The alpha parameter specifies the proportion of the vector search score and the full-text search score and ranges from 0 to 1. A value of 0 specifies full-text search and a value of 1 specifies vector search.</description></item>
+        /// </list>
         /// <!---->
         /// 
-        ///     { 
-        ///        "Weight": {
-        ///         "alpha": 0.5
-        ///        }
-        ///     }
+        /// <pre><c>{ 
+        ///    &quot;Weight&quot;: {
+        ///     &quot;alpha&quot;: 0.5
+        ///    }
+        /// }
+        /// </c></pre>
         /// </summary>
         [NameInMap("HybridSearchArgs")]
         [Validation(Required=false)]
         public string HybridSearchArgsShrink { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the URL of the document. Default value: false.
+        /// <para>Specifies whether to return the URL of the document. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IncludeFileUrl")]
         [Validation(Required=false)]
         public bool? IncludeFileUrl { get; set; }
 
         /// <summary>
-        /// The metadata fields to be returned. Separate multiple fields with commas (,). This parameter is empty by default.
+        /// <para>The metadata fields to be returned. Separate multiple fields with commas (,). This parameter is empty by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>title,page</para>
         /// </summary>
         [NameInMap("IncludeMetadataFields")]
         [Validation(Required=false)]
         public string IncludeMetadataFields { get; set; }
 
+        /// <summary>
+        /// <para>Whether to return vectors. Default is false.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: Do not return vectors.</description></item>
+        /// <item><description><b>true</b>: Return vectors.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeVector")]
         [Validation(Required=false)]
         public bool? IncludeVector { get; set; }
 
+        /// <summary>
+        /// <para>Similarity algorithm used during retrieval. If this value is empty, the algorithm specified at the time of knowledge base creation is used. It is recommended not to set this unless there is a specific need.</para>
+        /// <remarks>
+        /// <para>Value description:</para>
+        /// <list type="bullet">
+        /// <item><description><b>l2</b>: Euclidean distance.</description></item>
+        /// <item><description><b>ip</b>: Inner product (dot product) distance.</description></item>
+        /// <item><description><b>cosine</b>: Cosine similarity.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cosine</para>
+        /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public string Metrics { get; set; }
 
         /// <summary>
-        /// The name of the namespace. Default value: public.
+        /// <para>Namespace, default is public.</para>
+        /// <remarks>
+        /// <para>You can create a namespace using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list of namespaces using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [CreateNamespace](https://help.aliyun.com/document_detail/2401495.html) operation to create a namespace and call the [ListNamespaces](https://help.aliyun.com/document_detail/2401502.html) operation to query a list of namespaces.
+        /// <b>Example:</b>
+        /// <para>mynamespace</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Password for the namespace.</para>
+        /// <remarks>
+        /// <para>This value is specified in the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testpassword</para>
         /// </summary>
         [NameInMap("NamespacePassword")]
         [Validation(Required=false)]
@@ -129,35 +219,60 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The recall window. If you specify this parameter, the context of the search result is returned. Format: List\\<A, B>. Valid values: -10<=A<=0 and 0<=B<=10.
-        /// 
-        /// > 
-        /// 
-        /// *   We recommend that you specify this parameter if the source document is segmented into large numbers of pieces and you may fail to obtain the context.
-        /// 
-        /// *   The context of the search result is retrieved based on the recall window after the search result is reranked.
+        /// <para>Recall window. When this value is not empty, it adds context to the returned search results. The format is an array of 2 elements: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Recommended when documents are fragmented and retrieval may lose contextual information.</description></item>
+        /// <item><description>Re-ranking takes precedence over windowing, i.e., re-rank first, then apply windowing.</description></item>
+        /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("RecallWindow")]
         [Validation(Required=false)]
         public string RecallWindowShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The region ID where the instance is located.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Re-ranking factor. When this value is not empty, it will re-rank the vector search results. The value range is 1 &lt; RerankFactor &lt;= 5.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Re-ranking is slower when documents are sparsely split.</description></item>
+        /// <item><description>It is recommended that the re-ranked count (TopK * Factor, rounded up) does not exceed 50.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("RerankFactor")]
         [Validation(Required=false)]
         public double? RerankFactor { get; set; }
 
+        /// <summary>
+        /// <para>Set the number of top results to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("TopK")]
         [Validation(Required=false)]
         public int? TopK { get; set; }
 
         /// <summary>
-        /// Specifies whether to use full-text search to implement two-way retrieval. The default value is false, which specifies that only vector search is used.
+        /// <para>Whether to use full-text retrieval (dual recall). Default is false, which means only vector retrieval is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("UseFullTextRetrieval")]
         [Validation(Required=false)]

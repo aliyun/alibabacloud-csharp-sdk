@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListTablesResponseBody : TeaModel {
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the operation. Valid values:
+        /// <para>The status of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b></description></item>
+        /// <item><description><b>fail</b></description></item>
+        /// </list>
         /// 
-        /// *   **success**
-        /// *   **fail**
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The queried tables.
+        /// <para>The queried tables.</para>
         /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]

@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancePlansRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,44 +28,62 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The time that is used to filter plans. If you specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format, the plans that are created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.
+        /// <para>The time that is used to filter plans. If you specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format, the plans that are created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-04-17T23:00Z</para>
         /// </summary>
         [NameInMap("PlanCreateDate")]
         [Validation(Required=false)]
         public string PlanCreateDate { get; set; }
 
         /// <summary>
-        /// The description of the plan.
+        /// <para>The description of the plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is a test plan</para>
         /// </summary>
         [NameInMap("PlanDesc")]
         [Validation(Required=false)]
         public string PlanDesc { get; set; }
 
         /// <summary>
-        /// The plan ID.
+        /// <para>The plan ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/449398.html">DescribeDBInstancePlans</a> operation to query the information about plans, including plan IDs.</para>
+        /// </remarks>
         /// 
-        /// > You can call the [DescribeDBInstancePlans](https://help.aliyun.com/document_detail/449398.html) operation to query the information about plans, including plan IDs.
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("PlanId")]
         [Validation(Required=false)]
         public string PlanId { get; set; }
 
         /// <summary>
-        /// The execution mode of the plan. Valid values:
+        /// <para>The execution mode of the plan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpone</b>: The plan is executed later.</description></item>
+        /// <item><description><b>Regular</b>: The plan is executed periodically.</description></item>
+        /// </list>
         /// 
-        /// *   **Postpone**: The plan is executed later.
-        /// *   **Regular**: The plan is executed periodically.
+        /// <b>Example:</b>
+        /// <para>Regular</para>
         /// </summary>
         [NameInMap("PlanScheduleType")]
         [Validation(Required=false)]
         public string PlanScheduleType { get; set; }
 
         /// <summary>
-        /// The type of the plan. Valid values:
+        /// <para>The type of the plan. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PauseResume</b>: pauses and resumes an instance.</description></item>
+        /// <item><description><b>Resize</b>: scales an instance.</description></item>
+        /// <item><description><b>ModifySpec</b>: changes compute node specifications.</description></item>
+        /// </list>
         /// 
-        /// *   **PauseResume**: pauses and resumes an instance.
-        /// *   **Resize**: scales an instance.
-        /// *   **ModifySpec**: changes compute node specifications.
+        /// <b>Example:</b>
+        /// <para>PauseResume</para>
         /// </summary>
         [NameInMap("PlanType")]
         [Validation(Required=false)]

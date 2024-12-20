@@ -10,21 +10,26 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySQLCollectorPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable or disable SQL collection.
+        /// <para>Specifies whether to enable or disable SQL collection.</para>
+        /// <list type="bullet">
+        /// <item><description>Enable: enables SQL collection.</description></item>
+        /// <item><description>Disabled: disables SQL collection.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Enable: enables SQL collection.
-        /// *   Disabled: disables SQL collection.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Enable</para>
         /// </summary>
         [NameInMap("SQLCollectorStatus")]
         [Validation(Required=false)]

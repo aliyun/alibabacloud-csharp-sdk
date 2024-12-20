@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSecretValueRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,27 +28,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: `acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}`.
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <c>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</c>.</para>
+        /// <remarks>
+        /// <para> You must specify one of the SecretArn and SecretName parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify one of the SecretArn and SecretName parameters.
+        /// <b>Example:</b>
+        /// <para>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</para>
         /// </summary>
         [NameInMap("SecretArn")]
         [Validation(Required=false)]
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// The name of the access credential.
+        /// <para>The name of the access credential.</para>
+        /// <remarks>
+        /// <para> You must specify one of the SecretArn and SecretName parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify one of the SecretArn and SecretName parameters.
+        /// <b>Example:</b>
+        /// <para>testsecret</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]

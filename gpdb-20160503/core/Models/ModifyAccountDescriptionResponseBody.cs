@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyAccountDescriptionResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99BBBD5E-B5D8-4FC8-B8BF-FB1A0A38BBA2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

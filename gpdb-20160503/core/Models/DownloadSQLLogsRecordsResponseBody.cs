@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DownloadSQLLogsRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the download task.
+        /// <para>The ID of the download task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("DownloadId")]
         [Validation(Required=false)]
         public long? DownloadId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7565770E-7C45-462D-BA4A-8A5396F2CAD1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

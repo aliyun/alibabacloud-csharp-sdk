@@ -10,12 +10,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataShareInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The state of data sharing. Valid values:
-        /// 
-        /// *   **opening**
-        /// *   **opened**
-        /// *   **closing**
-        /// *   **closed**
+        /// <para>The state of data sharing. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>opening</b></description></item>
+        /// <item><description><b>opened</b></description></item>
+        /// <item><description><b>closing</b></description></item>
+        /// <item><description><b>closed</b></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -26,51 +27,71 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<DescribeDataShareInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDataShareInstancesResponseBodyItemsDBInstance : TeaModel {
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gp-bp***************</para>
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The resource type of the instance. Valid values:
+                /// <para>The resource type of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Serverless</b>: Serverless mode</description></item>
+                /// <item><description><b>StorageElasic</b>: elastic storage mode</description></item>
+                /// <item><description><b>Classic</b>: reserved storage mode</description></item>
+                /// </list>
                 /// 
-                /// *   **Serverless**: Serverless mode
-                /// *   **StorageElasic**: elastic storage mode
-                /// *   **Classic**: reserved storage mode
+                /// <b>Example:</b>
+                /// <para>Serverless</para>
                 /// </summary>
                 [NameInMap("DBInstanceMode")]
                 [Validation(Required=false)]
                 public string DBInstanceMode { get; set; }
 
                 /// <summary>
-                /// The state of data sharing. Valid values:
+                /// <para>The state of data sharing. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>opening</b>: Data sharing is being enabled.</description></item>
+                /// <item><description><b>opened</b>: Data sharing is enabled.</description></item>
+                /// <item><description><b>closing</b>: Data sharing is being disabled.</description></item>
+                /// <item><description><b>closed</b>: Data sharing is disabled.</description></item>
+                /// </list>
                 /// 
-                /// *   **opening**: Data sharing is being enabled.
-                /// *   **opened**: Data sharing is enabled.
-                /// *   **closing**: Data sharing is being disabled.
-                /// *   **closed**: Data sharing is disabled.
+                /// <b>Example:</b>
+                /// <para>opened</para>
                 /// </summary>
                 [NameInMap("DataShareStatus")]
                 [Validation(Required=false)]
                 public string DataShareStatus { get; set; }
 
                 /// <summary>
-                /// The description of the instance.
+                /// <para>The description of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gp-bp***************</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// <para>The region ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// <para>The zone ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-j</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -81,28 +102,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B4CAF581-2AC7-41AD-8940-D5**********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

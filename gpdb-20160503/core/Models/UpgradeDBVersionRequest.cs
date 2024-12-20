@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpgradeDBVersionRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-wz9kmr708m155j***</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used and does not need to be specified.
+        /// <para>This parameter is no longer used and does not need to be specified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("MajorVersion")]
         [Validation(Required=false)]
         public string MajorVersion { get; set; }
 
         /// <summary>
-        /// The minor version of the instance.
+        /// <para>The minor version of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6.3.6.1-202112012048</para>
         /// </summary>
         [NameInMap("MinorVersion")]
         [Validation(Required=false)]
@@ -37,21 +45,30 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance.
+        /// <para>The region ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used and does not need to be specified.
+        /// <para>This parameter is no longer used and does not need to be specified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("SwitchTime")]
         [Validation(Required=false)]
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used and does not need to be specified.
+        /// <para>This parameter is no longer used and does not need to be specified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("SwitchTimeMode")]
         [Validation(Required=false)]

@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// An invalid parameter. It is no longer returned when you call this operation.
+        /// <para>This parameter is deprecated and will not return a value.</para>
+        /// <para>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the connection address of the instance.</para>
         /// 
-        /// You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the endpoint that is used to connect to the instance.
+        /// <b>Example:</b>
+        /// <para>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>Instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The order ID.
+        /// <para>Order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111111111111</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// An invalid parameter. It is no longer returned when you call this operation.
+        /// <para>This parameter is deprecated and will not return a value.</para>
+        /// <para>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the port number of the instance.</para>
         /// 
-        /// You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/86910.html) operation to query the port number that is used to connect to the instance.
+        /// <b>Example:</b>
+        /// <para>3432</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5414A4E5-4C36-4461-95FC-************</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

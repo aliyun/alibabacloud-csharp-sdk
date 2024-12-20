@@ -10,98 +10,161 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyHadoopDataSourceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>Instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Service description, with a maximum length of 256 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pxf for hdfs data source</para>
+        /// </summary>
         [NameInMap("DataSourceDescription")]
         [Validation(Required=false)]
         public string DataSourceDescription { get; set; }
 
         /// <summary>
-        /// The data source ID.
+        /// <para>The data source ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// The type of the data source. Valid values:
+        /// <para>The type of the data source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>mysql</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>postgresql</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>hdfs</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description>hive</description></item>
+        /// </list>
         /// 
-        /// *   mysql
-        /// 
-        /// - postgresql
-        /// 
-        /// *   hdfs
-        /// 
-        /// - hive
+        /// <b>Example:</b>
+        /// <para>mysql</para>
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
+        /// <summary>
+        /// <para>When HadoopCreateType is Emr, the value of this field is the EMR instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c-1234567</para>
+        /// </summary>
         [NameInMap("EmrInstanceId")]
         [Validation(Required=false)]
         public string EmrInstanceId { get; set; }
 
         /// <summary>
-        /// The content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+        /// <para>The content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("HDFSConf")]
         [Validation(Required=false)]
         public string HDFSConf { get; set; }
 
         /// <summary>
-        /// The content of the Hadoop core-site.xml file.
+        /// <para>The content of the Hadoop core-site.xml file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("HadoopCoreConf")]
         [Validation(Required=false)]
         public string HadoopCoreConf { get; set; }
 
         /// <summary>
-        /// The type of the external service. Valid values:
+        /// <para>The type of the external service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>emr: E-MapReduce (EMR) Hadoop cluster.</description></item>
+        /// <item><description>selfCreate: self-managed Hadoop cluster.</description></item>
+        /// </list>
         /// 
-        /// *   emr: E-MapReduce (EMR) Hadoop cluster.
-        /// *   selfCreate: self-managed Hadoop cluster.
+        /// <b>Example:</b>
+        /// <para>emr</para>
         /// </summary>
         [NameInMap("HadoopCreateType")]
         [Validation(Required=false)]
         public string HadoopCreateType { get; set; }
 
         /// <summary>
-        /// The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.
+        /// <para>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>127.0.0.1 localhost</para>
         /// </summary>
         [NameInMap("HadoopHostsAddress")]
         [Validation(Required=false)]
         public string HadoopHostsAddress { get; set; }
 
         /// <summary>
-        /// The content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.
+        /// <para>The content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("HiveConf")]
         [Validation(Required=false)]
         public string HiveConf { get; set; }
 
         /// <summary>
-        /// The content of the Hadoop mapred-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+        /// <para>The content of the Hadoop mapred-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <?xml version="1.0" ?>
+        /// <!-- Created at 2023-08-15 13:53:28.962 -->
+        /// <configuration>
+        ///     <property>
+        ///         <name>mapreduce.map.speculative</name>
+        ///         <value>true</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>mapreduce.jobhistory.keytab</name>
+        ///         <value></value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("MapReduceConf")]
         [Validation(Required=false)]
         public string MapReduceConf { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+        /// <para>The content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("YarnConf")]
         [Validation(Required=false)]

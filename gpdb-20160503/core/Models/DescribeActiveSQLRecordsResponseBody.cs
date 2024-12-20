@@ -10,97 +10,135 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeActiveSQLRecordsResponseBody : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-bp***************</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The queried SQL records.
+        /// <para>The queried SQL records.</para>
         /// </summary>
         [NameInMap("Queries")]
         [Validation(Required=false)]
         public List<DescribeActiveSQLRecordsResponseBodyQueries> Queries { get; set; }
         public class DescribeActiveSQLRecordsResponseBodyQueries : TeaModel {
             /// <summary>
-            /// The IP address of the client.
+            /// <para>The IP address of the client.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0.0.0</para>
             /// </summary>
             [NameInMap("ClientAddr")]
             [Validation(Required=false)]
             public string ClientAddr { get; set; }
 
             /// <summary>
-            /// The name of the database.
+            /// <para>The name of the database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xg_analyse</para>
             /// </summary>
             [NameInMap("Database")]
             [Validation(Required=false)]
             public string Database { get; set; }
 
             /// <summary>
-            /// The progress ID.
+            /// <para>The progress ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6164</para>
             /// </summary>
             [NameInMap("PID")]
             [Validation(Required=false)]
             public string PID { get; set; }
 
             /// <summary>
-            /// The SQL statement of the query.
+            /// <para>The SQL statement of the query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Select * from t1,t2 where t1.id=t2.id;</para>
             /// </summary>
             [NameInMap("Query")]
             [Validation(Required=false)]
             public string Query { get; set; }
 
             /// <summary>
-            /// The execution duration of the query. Unit: seconds.
+            /// <para>The execution duration of the query. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60s</para>
             /// </summary>
             [NameInMap("QueryDuration")]
             [Validation(Required=false)]
             public string QueryDuration { get; set; }
 
             /// <summary>
-            /// The start time of the query.
+            /// <para>The start time of the query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-05-07T06:59Z</para>
             /// </summary>
             [NameInMap("QueryStart")]
             [Validation(Required=false)]
             public string QueryStart { get; set; }
 
             /// <summary>
-            /// The session ID.
+            /// <para>The session ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6612</para>
             /// </summary>
             [NameInMap("SessionID")]
             [Validation(Required=false)]
             public string SessionID { get; set; }
 
             /// <summary>
-            /// Indicates whether the SQL statement is truncated. Valid values:
+            /// <para>Indicates whether the SQL statement is truncated. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// *   true
-            /// *   false
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("SqlTruncated")]
             [Validation(Required=false)]
             public string SqlTruncated { get; set; }
 
             /// <summary>
-            /// The threshold that is used to truncate the SQL statement.
+            /// <para>The threshold that is used to truncate the SQL statement.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024</para>
             /// </summary>
             [NameInMap("SqlTruncatedThreshold")]
             [Validation(Required=false)]
             public string SqlTruncatedThreshold { get; set; }
 
             /// <summary>
-            /// The status of the asynchronous request. Valid values:
+            /// <para>The status of the asynchronous request. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>running</b></description></item>
+            /// <item><description><b>block</b></description></item>
+            /// </list>
             /// 
-            /// *   **running**
-            /// *   **block**
+            /// <b>Example:</b>
+            /// <para>running</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// The name of the database account.
+            /// <para>The name of the database account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testuser</para>
             /// </summary>
             [NameInMap("User")]
             [Validation(Required=false)]
@@ -108,6 +146,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpsertCollectionDataAsyncResponseBody : TeaModel {
         /// <summary>
-        /// The job ID. It can be used to query the job status or cancel the job.
+        /// <para>The job ID. It can be used to query the job status or cancel the job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>231460f8-75dc-405e-a669-0c5204887e91</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the operation. Valid values:
+        /// <para>The status of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b></description></item>
+        /// <item><description><b>fail</b></description></item>
+        /// </list>
         /// 
-        /// *   **success**
-        /// *   **fail**
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -10,197 +10,292 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the backup set.
+        /// <para>Backup set ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> interface to view the backup set IDs of all backup sets under the target instance.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDataBackups](https://help.aliyun.com/document_detail/210093.html) operation to query the IDs of all backup sets in the instance.
+        /// <b>Example:</b>
+        /// <para>1111111111</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/327176.html).
+        /// <para>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0c593ea1-3bea-11e9-b96b-88**********</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to load a sample dataset after the instance is created. Valid values:
+        /// <para>Whether to load sample datasets after the instance is created. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Load sample datasets.</description></item>
+        /// <item><description><b>false</b>: Do not load sample datasets.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If this parameter is not specified, it defaults to not loading sample datasets.</para>
+        /// </remarks>
         /// 
-        /// *   **true**
-        /// *   **false**
-        /// 
-        /// >  If you do not specify this parameter, no sample dataset is loaded.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("CreateSampleData")]
         [Validation(Required=false)]
         public bool? CreateSampleData { get; set; }
 
         /// <summary>
-        /// The edition of the instance. Valid values:
+        /// <para>Instance series. The value description is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HighAvailability</b>: High availability version.</description></item>
+        /// <item><description><b>Basic</b>: Basic version.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required when creating an instance in the storage elastic mode.</para>
+        /// </remarks>
         /// 
-        /// - **HighAvailability**: High-availability Edition.
-        /// - **Basic**: Basic Edition.
-        /// 
-        /// > This parameter must be specified when you create an instance in elastic storage mode.
+        /// <b>Example:</b>
+        /// <para>HighAvailability</para>
         /// </summary>
         [NameInMap("DBInstanceCategory")]
         [Validation(Required=false)]
         public string DBInstanceCategory { get; set; }
 
         /// <summary>
-        /// The instance type of the instance. For information, see [Instance types](https://help.aliyun.com/document_detail/86942.html).
+        /// <para>Instance type. For more details, see the supplementary description of the DBInstanceClass parameter.</para>
+        /// <remarks>
+        /// <para>This parameter is required when creating a reserved storage mode instance.</para>
+        /// </remarks>
         /// 
-        /// > This parameter must be specified when you create an instance in reserved storage mode.
+        /// <b>Example:</b>
+        /// <para>gpdb.group.segsdx1</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// The description of the instance.
+        /// <para>Instance description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// The number of compute groups. Valid values: 2, 4, 8, 12, 16, 24, 32, 64, 96, and 128.
+        /// <para>Number of compute groups. The values are: 2, 4, 8, 12, 16, 24, 32, 64, 96, 128.</para>
+        /// <remarks>
+        /// <para>This parameter is required when creating a reserved storage mode instance.</para>
+        /// </remarks>
         /// 
-        /// > This parameter must be specified when you create an instance in reserved storage mode.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("DBInstanceGroupCount")]
         [Validation(Required=false)]
         public string DBInstanceGroupCount { get; set; }
 
         /// <summary>
-        /// The resource type of the instance. Valid values:
+        /// <para>Instance resource type. The value description is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>StorageElastic</b>: Storage elastic mode.</description></item>
+        /// <item><description><b>Serverless</b>: Serverless mode.</description></item>
+        /// <item><description><b>Classic</b>: Storage reserved mode.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// - **StorageElastic**: elastic storage mode.
-        /// - **Serverless**: Serverless mode.
-        /// - **Classic**: reserved storage mode.
-        /// 
-        /// > This parameter must be specified.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>StorageElastic</para>
         /// </summary>
         [NameInMap("DBInstanceMode")]
         [Validation(Required=false)]
         public string DBInstanceMode { get; set; }
 
+        /// <summary>
+        /// <para>Deployment mode. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>multiple: Multi-zone deployment.</description></item>
+        /// <item><description>single: Single-zone deployment.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If this parameter is not specified, the default value is single-zone deployment.</description></item>
+        /// <item><description>Currently, only single-zone deployment is supported.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>single</para>
+        /// </summary>
+        [NameInMap("DeployMode")]
+        [Validation(Required=false)]
+        public string DeployMode { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether to enable SSL encryption. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enable SSL encryption.</description></item>
+        /// <item><description><b>false</b> (default): Do not enable SSL encryption.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableSSL")]
         [Validation(Required=false)]
         public bool? EnableSSL { get; set; }
 
         /// <summary>
-        /// The ID of the encryption key.
+        /// <para>Key ID.</para>
+        /// <remarks>
+        /// <para>If the value of the <b>EncryptionType</b> parameter is <b>CloudDisk</b>, you need to specify the encryption key ID within the same region through this parameter; otherwise, it should be empty.</para>
+        /// </remarks>
         /// 
-        /// > If EncryptionType is set to CloudDisk, you must specify an encryption key that resides in the same region as the cloud disk that is specified by EncryptionType. Otherwise, leave this parameter empty.
+        /// <b>Example:</b>
+        /// <para>0d2470df-da7b-4786-b981-88888888****</para>
         /// </summary>
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// The encryption type. Valid values:
+        /// <para>Encryption type. The value description is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NULL</b>: No encryption (default).</description></item>
+        /// <item><description><b>CloudDisk</b>: Enable cloud disk encryption and specify the key through the <b>EncryptionKey</b> parameter.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Once cloud disk encryption is enabled, it cannot be disabled.</para>
+        /// </remarks>
         /// 
-        /// - **NULL** (default): Encryption is disabled.
-        /// - **CloudDisk**: Encryption is enabled on cloud disks, and EncryptionKey is used to specify an encryption key.
-        /// 
-        /// > Disk encryption cannot be disabled after it is enabled.
+        /// <b>Example:</b>
+        /// <para>CloudDisk</para>
         /// </summary>
         [NameInMap("EncryptionType")]
         [Validation(Required=false)]
         public string EncryptionType { get; set; }
 
         /// <summary>
-        /// The database engine of the instance. Set the value to gpdb.
+        /// <para>Database engine, with the value <b>gpdb</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gpdb</para>
         /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
         /// <summary>
-        /// The version of the database engine. Valid values:
+        /// <para>Engine version. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>6.0</b>: Version 6.0.</description></item>
+        /// <item><description><b>7.0</b>: Version 7.0.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// - 6.0
-        /// - 7.0
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// The wait time for the instance that has no traffic to become idle. Minimum value: 60. Default value: 600. Unit: seconds.
+        /// <para>The idle release wait time. When the duration without business traffic reaches the specified time, the instance will enter the idle state. The unit is seconds, with a minimum value of 60, and the default value is 600.</para>
+        /// <remarks>
+        /// <para>This parameter is required only for Serverless auto-scheduling mode instances.</para>
+        /// </remarks>
         /// 
-        /// > This parameter must be specified only when you create an instance in automatic Serverless mode.
+        /// <b>Example:</b>
+        /// <para>600</para>
         /// </summary>
         [NameInMap("IdleTime")]
         [Validation(Required=false)]
         public int? IdleTime { get; set; }
 
         /// <summary>
-        /// The network type of the instance. Set the value to **VPC**.
+        /// <para>Instance network type, with the value <b>VPC</b>.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Only VPC networks are supported in public cloud.</description></item>
+        /// <item><description>If not specified, it defaults to VPC type.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > 
-        /// 
-        /// *   Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.
-        /// 
-        /// *   If you do not specify this parameter, VPC is used.
+        /// <b>Example:</b>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// The specifications of compute nodes.
+        /// <para>Compute node specifications.</para>
+        /// <para>For high-availability versions of the elastic storage mode, the values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2C16G</b></description></item>
+        /// <item><description><b>4C32G</b></description></item>
+        /// <item><description><b>16C128G</b></description></item>
+        /// </list>
+        /// <para>For basic versions of the elastic storage mode, the values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2C8G</b></description></item>
+        /// <item><description><b>4C16G</b></description></item>
+        /// <item><description><b>8C32G</b></description></item>
+        /// <item><description><b>16C64G</b></description></item>
+        /// </list>
+        /// <para>For Serverless mode, the values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>4C16G</b></description></item>
+        /// <item><description><b>8C32G</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required when creating an elastic storage mode instance or a Serverless mode instance.</para>
+        /// </remarks>
         /// 
-        /// Valid values for High-availability Edition instances in elastic storage mode:
-        /// 
-        /// - **2C16G**
-        /// - **4C32G**
-        /// - **16C128G**
-        /// 
-        /// Valid values for Basic Edition instances in elastic storage mode:
-        /// 
-        /// - **2C8G**
-        /// - **4C16G**
-        /// - **8C32G**
-        /// - **16C64G**
-        /// 
-        /// Valid values for instances in Serverless mode:
-        /// 
-        /// - **4C16G**
-        /// - **8C32G**
-        /// 
-        /// > This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.
+        /// <b>Example:</b>
+        /// <para>2C16G</para>
         /// </summary>
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// The amount of coordinator node resources. Valid values:
+        /// <para>Master resources, with the following values: </para>
+        /// <list type="bullet">
+        /// <item><description>2 CU </description></item>
+        /// <item><description>4 CU </description></item>
+        /// <item><description>8 CU </description></item>
+        /// <item><description>16 CU </description></item>
+        /// <item><description>32 CU <remarks>
+        /// <para>Master resources above 8 CU will incur charges.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   2 CU
-        /// *   4 CU
-        /// *   8 CU
-        /// *   16 CU
-        /// *   32 CU
-        /// 
-        /// >  You are charged for coordinator node resources of more than 8 CUs.
+        /// <b>Example:</b>
+        /// <para>8 CU</para>
         /// </summary>
         [NameInMap("MasterCU")]
         [Validation(Required=false)]
         public int? MasterCU { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used.
+        /// <para>This parameter is deprecated and should not be passed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("MasterNodeNum")]
         [Validation(Required=false)]
@@ -211,177 +306,287 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The billing method of the instance. Valid values:
+        /// <para>Billing type. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpaid</b>: Pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: Subscription</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If not specified, it will default to pay-as-you-go.</description></item>
+        /// <item><description>When using the subscription billing model, there may be discounts for purchasing one year or longer at once. It is recommended to choose the billing type according to your needs.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **Postpaid**: pay-as-you-go.
-        /// *   **Prepaid**: subscription.
-        /// 
-        /// > 
-        /// 
-        /// *   If you do not specify this parameter, Postpaid is used.
-        /// 
-        /// *   You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.
+        /// <b>Example:</b>
+        /// <para>Prepaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// The unit of the subscription duration. Valid values:
+        /// <para>Unit of the duration for which resources are purchased. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Month</b>: Month</description></item>
+        /// <item><description><b>Year</b>: Year</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required when creating a subscription-billed instance.</para>
+        /// </remarks>
         /// 
-        /// - **Month**
-        /// - **Year**
-        /// > This parameter must be specified when PayType is set to Prepaid.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used.
+        /// <para>This parameter is deprecated and should not be passed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
+        /// <summary>
+        /// <para>Product type. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>standard</b>: Standard Edition.</description></item>
+        /// <item><description><b>cost-effective</b>: Cost-Effective Edition.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If this parameter is not specified, the default value is Standard Edition.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>standard</para>
+        /// </summary>
         [NameInMap("ProdType")]
         [Validation(Required=false)]
         public string ProdType { get; set; }
 
         /// <summary>
-        /// The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
+        /// <para>Region ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the instance belongs.
+        /// <para>The ID of the enterprise resource group where the instance is located.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The IP address whitelist of the instance.
+        /// <para>IP whitelist.</para>
+        /// <para>127.0.0.1 indicates that no external IP addresses are allowed to access. You can modify the IP whitelist by calling the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> interface after the instance is created.</para>
         /// 
-        /// A value of 127.0.0.1 denies access from any external IP address. You can call the [ModifySecurityIps](https://help.aliyun.com/document_detail/86928.html) operation to modify the IP address whitelist after you create an instance.
+        /// <b>Example:</b>
+        /// <para>127.0.0.1</para>
         /// </summary>
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// The performance level of ESSDs. Valid values:
+        /// <para>ESSD cloud disk performance level. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>pl0</b>: PL0 level.</description></item>
+        /// <item><description><b>pl1</b>: PL1 level.</description></item>
+        /// <item><description><b>pl2</b>: PL2 level.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is effective only if the disk storage type is ESSD cloud disk.</description></item>
+        /// <item><description>If not specified, it defaults to PL1 level.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **pl0**
-        /// *   **pl1**
-        /// *   **pl2**
-        /// 
-        /// > 
-        /// 
-        /// *   This parameter takes effect only when SegStorageType is set to cloud_essd.
-        /// 
-        /// *   If you do not specify this parameter, pl1 is used.
+        /// <b>Example:</b>
+        /// <para>pl1</para>
         /// </summary>
         [NameInMap("SegDiskPerformanceLevel")]
         [Validation(Required=false)]
         public string SegDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// The number of compute nodes.
+        /// <para>The number of compute nodes. The value description is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>For the high-availability version of the storage elastic mode, the value range is 4 to 512, and the value must be a multiple of 4.</description></item>
+        /// <item><description>For the basic version of the storage elastic mode, the value range is 2 to 512, and the value must be a multiple of 2.</description></item>
+        /// <item><description>For the Serverless mode, the value range is 2 to 512, and the value must be a multiple of 2.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required when creating instances in the storage elastic mode or Serverless mode.</para>
+        /// </remarks>
         /// 
-        /// - Valid values for High-availability Edition instances in elastic storage mode: multiples of 4 in the range of 4 to 512.
-        /// - Valid values for Basic Edition instances in elastic storage mode: multiples of 2 in the range of 2 to 512.
-        /// - Valid values for instances in Serverless mode: multiples of 2 in the range of 2 to 512.
-        /// 
-        /// > This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("SegNodeNum")]
         [Validation(Required=false)]
         public string SegNodeNum { get; set; }
 
         /// <summary>
-        /// The disk storage type of the instance. Only enhanced SSDs (ESSDs) are supported. Set the value to cloud_essd.
+        /// <para>Disk storage type, currently only ESSD cloud disks are supported, with the value <b>cloud_essd</b>.</para>
+        /// <remarks>
+        /// <para>This parameter is required when creating an elastic storage mode instance.</para>
+        /// </remarks>
         /// 
-        /// > This parameter must be specified when you create an instance in elastic storage mode.
+        /// <b>Example:</b>
+        /// <para>cloud_essd</para>
         /// </summary>
         [NameInMap("SegStorageType")]
         [Validation(Required=false)]
         public string SegStorageType { get; set; }
 
         /// <summary>
-        /// The type of the Serverless mode. Valid values:
+        /// <para>The mode of the Serverless instance. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Manual</b>: Manual scheduling (default).</description></item>
+        /// <item><description><b>Auto</b>: Auto scheduling.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required only for Serverless mode instances.</para>
+        /// </remarks>
         /// 
-        /// - **Manual** (default): manual scheduling.
-        /// - **Auto**: automatic scheduling.
-        /// 
-        /// > This parameter must be specified only when you create an instance in Serverless mode.
+        /// <b>Example:</b>
+        /// <para>Auto</para>
         /// </summary>
         [NameInMap("ServerlessMode")]
         [Validation(Required=false)]
         public string ServerlessMode { get; set; }
 
         /// <summary>
-        /// The threshold of computing resources. Unit: AnalyticDB compute unit (ACU). Valid values: 8 to 32. The value must be in increments of 8 ACUs. Default value: 32.
+        /// <para>The threshold for computing resources. The value range is 8 to 32, with a step of 8, and the unit is ACU. The default value is 32.</para>
+        /// <remarks>
+        /// <para>This parameter is required only for Serverless auto-scheduling mode instances.</para>
+        /// </remarks>
         /// 
-        /// > This parameter must be specified only when you create an instance in automatic Serverless mode.
+        /// <b>Example:</b>
+        /// <para>32</para>
         /// </summary>
         [NameInMap("ServerlessResource")]
         [Validation(Required=false)]
         public int? ServerlessResource { get; set; }
 
         /// <summary>
-        /// The ID of the source instance.
+        /// <para>ID of the source instance to be cloned.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> interface to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// <b>Example:</b>
+        /// <para>gp-bp***************</para>
         /// </summary>
         [NameInMap("SrcDbInstanceName")]
         [Validation(Required=false)]
         public string SrcDbInstanceName { get; set; }
 
         /// <summary>
-        /// The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.
+        /// <para>VSwitch ID of the standby zone.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required for multi-zone deployment.</description></item>
+        /// <item><description>The VSwitch ID of the standby zone must be in the same zone as the StandbyZoneId.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// >  This parameter must be specified when you create an instance in elastic storage mode.
+        /// <b>Example:</b>
+        /// <para>vsw-bp1cpq8mr64paltkb****</para>
+        /// </summary>
+        [NameInMap("StandbyVSwitchId")]
+        [Validation(Required=false)]
+        public string StandbyVSwitchId { get; set; }
+
+        /// <summary>
+        /// <para>ID of the standby zone.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required for multi-zone deployment.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available zone IDs.</description></item>
+        /// <item><description>The ID of the standby zone must be different from the ID of the primary zone.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-j</para>
+        /// </summary>
+        [NameInMap("StandbyZoneId")]
+        [Validation(Required=false)]
+        public string StandbyZoneId { get; set; }
+
+        /// <summary>
+        /// <para>The size of the storage space, in GB, with a value range of &lt;props=&quot;china&quot;&gt;50<del>8000&lt;props=&quot;intl&quot;&gt;50</del>6000.</para>
+        /// <remarks>
+        /// <para>This parameter is required when creating an instance in the storage elastic mode.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
 
         /// <summary>
-        /// This parameter is no longer used.
+        /// <para>This parameter is deprecated and should not be passed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// <para>The Nth tag. The value of N ranges from 1 to 20.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDBInstanceRequestTag> Tag { get; set; }
         public class CreateDBInstanceRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N. Take note of the following requirements:
+            /// <para>Tag key. The restrictions are as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>It cannot be an empty string.</description></item>
+            /// <item><description>It supports up to 128 characters.</description></item>
+            /// <item><description>It cannot start with <c>aliyun</c> or <c>acs:</c>, and it cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
             /// 
-            /// - The tag key cannot be an empty string.
-            /// - The tag key can be up to 128 characters in length.
-            /// - The tag key cannot start with `aliyun` or `acs:`, and contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N. Take note of the following requirements:
+            /// <para>Tag value. The restrictions are as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>It can be an empty string.</description></item>
+            /// <item><description>It supports up to 128 characters.</description></item>
+            /// <item><description>It cannot start with <c>acs:</c>, and it cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
             /// 
-            /// - The tag key cannot be an empty string.
-            /// - The tag key can be up to 128 characters in length.
-            /// - The tag key cannot start with `aliyun` or `acs:`, and contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -390,62 +595,83 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The subscription duration.
+        /// <para>Duration for which resources are purchased. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>When <b>Period</b> is <b>Month</b>, the value ranges from 1 to 9.</description></item>
+        /// <item><description>When <b>Period</b> is <b>Year</b>, the value ranges from 1 to 3.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required when creating a subscription-billed instance.</para>
+        /// </remarks>
         /// 
-        /// - Valid values when Period is set to Month: 1 to 9.
-        /// - Valid values when Period is set to Year: 1 to 3.
-        /// > This parameter must be specified when PayType is set to Prepaid.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// The VPC ID of the instance.
+        /// <para>VPC ID.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><b>VPCId</b> is required.</description></item>
+        /// <item><description>The region of the <b>VPC</b> must be consistent with <b>RegionId</b>.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > 
-        /// 
-        /// *   **This parameter** must be specified.
-        /// 
-        /// *   The region where the **VPC** resides must be the same as the region that is specified by **RegionId**.
+        /// <b>Example:</b>
+        /// <para>vpc-bp19ame5m1r3oejns****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
 
         /// <summary>
-        /// The vSwitch ID of the instance.
+        /// <para>vSwitch ID.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><b>vSwitchId</b> is required.</description></item>
+        /// <item><description>The availability zone of the <b>vSwitch</b> must be consistent with <b>ZoneId</b>.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// > 
-        /// 
-        /// *   **This parameter** must be specified.
-        /// 
-        /// *   The zone where the **vSwitch** resides must be the same as the zone that is specified by **ZoneId**.
+        /// <b>Example:</b>
+        /// <para>vsw-bp1cpq8mr64paltkb****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable vector search engine optimization. Valid values:
+        /// <para>Whether to enable vector engine optimization. The value description is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>enabled</b>: Enable vector engine optimization.</description></item>
+        /// <item><description><b>disabled</b> (default): Do not enable vector engine optimization.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>For mainstream analysis scenarios, data warehouse scenarios, and real-time data warehouse scenarios, it is recommended to <b>not enable</b> vector engine optimization.</description></item>
+        /// <item><description>For users using the vector analysis engine for AIGC, vector retrieval, and other scenarios, it is recommended to <b>enable</b> vector engine optimization.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// *   **enabled**
-        /// *   **disabled** (default)
-        /// 
-        /// > 
-        /// 
-        /// *   We recommend that you **do not enable** vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.
-        /// 
-        /// *   We recommend that you **enable** vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
+        /// <b>Example:</b>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("VectorConfigurationStatus")]
         [Validation(Required=false)]
         public string VectorConfigurationStatus { get; set; }
 
         /// <summary>
-        /// The zone ID of the read-only instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent zone list.
+        /// <para>Zone ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available zone IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-i</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

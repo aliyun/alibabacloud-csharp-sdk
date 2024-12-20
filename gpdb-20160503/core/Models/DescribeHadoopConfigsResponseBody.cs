@@ -10,24 +10,39 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeHadoopConfigsResponseBody : TeaModel {
         /// <summary>
-        /// The name of the configuration file. Valid values:
+        /// <para>The name of the configuration file. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>hdfs-site</description></item>
+        /// <item><description>core-site</description></item>
+        /// <item><description>yarn-site</description></item>
+        /// <item><description>mapred-site</description></item>
+        /// <item><description>hive-site</description></item>
+        /// </list>
         /// 
-        /// *   hdfs-site
-        /// *   core-site
-        /// *   yarn-site
-        /// *   mapred-site
-        /// *   hive-site
+        /// <b>Example:</b>
+        /// <para>hdfs-site</para>
         /// </summary>
         [NameInMap("ConfigName")]
         [Validation(Required=false)]
         public string ConfigName { get; set; }
 
+        /// <summary>
+        /// <para>The configuration value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <?xml version="1.0"?>
+        /// <configuration>
+        ///     <property>
+        /// </summary>
         [NameInMap("ConfigValue")]
         [Validation(Required=false)]
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

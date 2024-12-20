@@ -10,23 +10,26 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class SetDataShareInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.
-        /// 
-        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<string> InstanceList { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable or disable data sharing. Valid values:
+        /// <para>Specifies whether to enable or disable data sharing. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>add</b>: enables data sharing.</description></item>
+        /// <item><description><b>remove</b>: disables data sharing.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **add**: enables data sharing.
-        /// *   **remove**: disables data sharing.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>add</para>
         /// </summary>
         [NameInMap("OperationType")]
         [Validation(Required=false)]
@@ -37,11 +40,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

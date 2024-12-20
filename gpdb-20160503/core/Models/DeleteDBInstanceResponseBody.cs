@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>65BDA532-28AF-4122-AA39-B3**********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceSupportMaxPerformanceRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-bp***************</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

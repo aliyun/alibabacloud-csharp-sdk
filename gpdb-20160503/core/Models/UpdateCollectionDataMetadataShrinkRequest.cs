@@ -10,57 +10,82 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpdateCollectionDataMetadataShrinkRequest : TeaModel {
         /// <summary>
-        /// The name of the collection.
+        /// <para>Collection name.</para>
+        /// <remarks>
+        /// <para>You can use the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API to view the list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>document</para>
         /// </summary>
         [NameInMap("Collection")]
         [Validation(Required=false)]
         public string Collection { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>Instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</para>
+        /// </remarks>
         /// 
-        /// >  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+        /// <b>Example:</b>
+        /// <para>gp-j788ghhjjxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause. You cannot leave both this parameter and Ids empty.
+        /// <para>Filter condition for the data to be updated, in SQL WHERE format. This field cannot be empty at the same time as the Ids field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>business_value = \&quot;chat_file_1\&quot;</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
         /// <summary>
-        /// The row IDs of the data to be updated. You cannot leave both this parameter and Filter empty.
+        /// <para>ID list of the data to be updated, i.e., the Row.Id specified when uploading the data. This field cannot be empty at the same time as the Filter field.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string IdsShrink { get; set; }
 
         /// <summary>
-        /// The data to be updated, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.
+        /// <para>Data to be updated, in a JSON string of MAP format. The key is the field name, and the value is the new data value.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;title&quot;: &quot;new title&quot;,
+        ///       &quot;content&quot;: &quot;new content&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public string MetadataShrink { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>Namespace.</para>
+        /// <remarks>
+        /// <para>You can use the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API to view the list.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mynamespace</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The password of the namespace.
+        /// <para>Password corresponding to the namespace.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>testpassword</para>
         /// </summary>
         [NameInMap("NamespacePassword")]
         [Validation(Required=false)]
@@ -71,16 +96,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>Region ID where the instance is located.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>ID of the Workspace composed of multiple database instances. This parameter and the DBInstanceId parameter cannot both be empty. When both are specified, this parameter takes precedence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-ws-*****</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

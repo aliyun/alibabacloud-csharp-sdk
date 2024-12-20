@@ -10,39 +10,52 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstancePlanResponseBody : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// <para>This parameter is returned only if the request fails.</para>
         /// 
-        /// This parameter is returned only if the request fails.
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The plan ID.
+        /// <para>The plan ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("PlanId")]
         [Validation(Required=false)]
         public string PlanId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// <para>If the request was successful, <b>success</b> is returned. If the request failed, this parameter is not returned.</para>
         /// 
-        /// If the request was successful, **success** is returned. If the request failed, this parameter is not returned.
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

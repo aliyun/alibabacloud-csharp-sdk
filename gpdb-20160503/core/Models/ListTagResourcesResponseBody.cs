@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The token used to perform the next query.
+        /// <para>The token used to perform the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5414A4E5-4C36-4461-95FC-23757A20B5F8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Details about the instances and tags, including the instance IDs, instance modes, and tag key-value pairs.
+        /// <para>Details about the instances and tags, including the instance IDs, instance modes, and tag key-value pairs.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -35,28 +41,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gp-xxxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The storage mode of the instance.
+                /// <para>The storage mode of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

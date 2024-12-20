@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The token used to perform the next query.
+        /// <para>The token used to perform the next query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -25,16 +28,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of instance N. Valid values of N: 1 to 50.
+        /// <para>The ID of instance N. Valid values of N: 1 to 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -49,42 +57,49 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to instance.
+        /// <para>The resource type. Set the value to instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>instance</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags that are added to instances.
-        /// 
-        /// >  You must specify at least one of the ResourceId and Tag parameters.
+        /// <para>The tags that are added to instances.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the ResourceId and Tag parameters.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N. The key must be 1 to 64 characters in length.
+            /// <para>The key of tag N. The key must be 1 to 64 characters in length.</para>
+            /// <para>You can use <c>Tag.N</c> to query AnalyticDB for PostgreSQL instances that have specific tags added. Tag.N consists of Tag.N.Key and Tag.N.Value.</para>
+            /// <para>Valid values of N: 1 to 20.</para>
+            /// <list type="bullet">
+            /// <item><description>If you specify only <c>Tag.N.Key</c>, all instances that have the tag key added are returned.</description></item>
+            /// <item><description>If you specify only <c>Tag.N.Value</c>, the <c>InvalidParameter.TagValue</c> error message is returned.</description></item>
+            /// <item><description>If you specify multiple tag key-value pairs at a time, the instances that match all the specified tag key-value pairs are returned.</description></item>
+            /// </list>
             /// 
-            /// You can use `Tag.N` to query AnalyticDB for PostgreSQL instances that have specific tags added. Tag.N consists of Tag.N.Key and Tag.N.Value.
-            /// 
-            /// Valid values of N: 1 to 20.
-            /// 
-            /// *   If you specify only `Tag.N.Key`, all instances that have the tag key added are returned.
-            /// *   If you specify only `Tag.N.Value`, the `InvalidParameter.TagValue` error message is returned.
-            /// *   If you specify multiple tag key-value pairs at a time, the instances that match all the specified tag key-value pairs are returned.
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N. The value must be 1 to 128 characters in length.
+            /// <para>The value of tag N. The value must be 1 to 128 characters in length.</para>
+            /// <para>Valid values of N: 1 to 20.</para>
             /// 
-            /// Valid values of N: 1 to 20.
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

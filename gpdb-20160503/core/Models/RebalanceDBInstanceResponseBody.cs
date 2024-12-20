@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RebalanceDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5414A4E5-4C36-4461-95FC-************</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The queried instance.
+        /// <para>The queried instance.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,500 +21,732 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute> DBInstanceAttribute { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute : TeaModel {
                 /// <summary>
-                /// The service availability of the instance. Unit: %.
+                /// <para>Queries the current instance availability status, in percentage (%).</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to instances in the storage reserved mode.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>100.0%</para>
                 /// </summary>
                 [NameInMap("AvailabilityValue")]
                 [Validation(Required=false)]
                 public string AvailabilityValue { get; set; }
 
                 /// <summary>
-                /// The access mode of the instance. Valid values:
+                /// <para>Access mode, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Performance</b>: Standard access mode.</description></item>
+                /// <item><description><b>Safty</b>: High-security access mode.</description></item>
+                /// <item><description><b>LVS</b>: LVS link mode.</description></item>
+                /// </list>
                 /// 
-                /// *   **Performance**: standard mode.
-                /// *   **Safety**: safe mode.
-                /// *   **LVS**: Linux Virtual Server (LVS) mode.
+                /// <b>Example:</b>
+                /// <para>LVS</para>
                 /// </summary>
                 [NameInMap("ConnectionMode")]
                 [Validation(Required=false)]
                 public string ConnectionMode { get; set; }
 
                 /// <summary>
-                /// The endpoint that is used to connect to the instance.
+                /// <para>Instance connection address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gp-bp13ue79qk8y1****-master.gpdb.rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// The number of the minor version.
+                /// <para>Minor version number of the kernel.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mm.v6.3.10.1-202207141918</para>
                 /// </summary>
                 [NameInMap("CoreVersion")]
                 [Validation(Required=false)]
                 public string CoreVersion { get; set; }
 
                 /// <summary>
-                /// The number of CPU cores per compute node.
+                /// <para>Number of CPU cores for the compute node, unit: Core.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("CpuCores")]
                 [Validation(Required=false)]
                 public int? CpuCores { get; set; }
 
                 /// <summary>
-                /// The number of CPU cores per node.
+                /// <para>Number of CPU cores per node.</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to instances in the storage reserved mode.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("CpuCoresPerNode")]
                 [Validation(Required=false)]
                 public int? CpuCoresPerNode { get; set; }
 
                 /// <summary>
-                /// The time when the instance was created.
+                /// <para>Instance creation time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-08-11T09:16:26Z</para>
                 /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// The edition of the instance. Valid values:
+                /// <para>Instance series, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Basic</b>: Basic Edition.</description></item>
+                /// <item><description><b>HighAvailability</b>: High Availability Edition.</description></item>
+                /// </list>
                 /// 
-                /// *   **Basic**: Basic Edition.
-                /// *   **HighAvailability**: High-availability Edition.
+                /// <b>Example:</b>
+                /// <para>HighAvailability</para>
                 /// </summary>
                 [NameInMap("DBInstanceCategory")]
                 [Validation(Required=false)]
                 public string DBInstanceCategory { get; set; }
 
                 /// <summary>
-                /// The instance type of the instance.
+                /// <para>Instance specification.</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to reserved storage mode instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>gpdb.group.segsdx1</para>
                 /// </summary>
                 [NameInMap("DBInstanceClass")]
                 [Validation(Required=false)]
                 public string DBInstanceClass { get; set; }
 
                 /// <summary>
-                /// The instance family of the instance. Valid values:
+                /// <para>Instance family, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>s</b>: Shared type.</description></item>
+                /// <item><description><b>x</b>: General type.</description></item>
+                /// <item><description><b>d</b>: Dedicated package.</description></item>
+                /// <item><description><b>h</b>: Dedicated physical machine.</description></item>
+                /// </list>
                 /// 
-                /// *   **s**: shared.
-                /// *   **x**: general-purpose.
-                /// *   **d**: dedicated.
-                /// *   **h**: dedicated host.
+                /// <b>Example:</b>
+                /// <para>x</para>
                 /// </summary>
                 [NameInMap("DBInstanceClassType")]
                 [Validation(Required=false)]
                 public string DBInstanceClassType { get; set; }
 
                 /// <summary>
-                /// The number of CPU cores.
+                /// <para>Number of CPU cores.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("DBInstanceCpuCores")]
                 [Validation(Required=false)]
                 public int? DBInstanceCpuCores { get; set; }
 
                 /// <summary>
-                /// The description of the instance.
+                /// <para>Instance description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gp-bp13ue79qk8y1****</para>
                 /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
                 /// <summary>
-                /// The maximum disk throughput of the compute group. Unit: Mbit/s.
+                /// <para>Maximum BPS (disk throughput) of the compute group, in Mbps.</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to reserved storage mode instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("DBInstanceDiskMBPS")]
                 [Validation(Required=false)]
                 public long? DBInstanceDiskMBPS { get; set; }
 
                 /// <summary>
-                /// The number of compute groups.
+                /// <para>Number of compute groups.</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to reserved storage mode instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("DBInstanceGroupCount")]
                 [Validation(Required=false)]
                 public string DBInstanceGroupCount { get; set; }
 
                 /// <summary>
-                /// The instance ID.
+                /// <para>Instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gp-bp13ue79qk8y1****</para>
                 /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// The memory capacity per compute node.
+                /// <para>Memory of the compute node.</para>
+                /// <remarks>
+                /// <para>The unit for storage-reserved mode is MB; for Serverless and storage-elastic modes, it is GB.</para>
+                /// </remarks>
                 /// 
-                /// >  The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless mode or elastic storage mode.
+                /// <b>Example:</b>
+                /// <para>16</para>
                 /// </summary>
                 [NameInMap("DBInstanceMemory")]
                 [Validation(Required=false)]
                 public long? DBInstanceMemory { get; set; }
 
                 /// <summary>
-                /// The resource type of the instance. Valid values:
+                /// <para>Instance resource type, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Serverless</b>: Serverless mode.</description></item>
+                /// <item><description><b>StorageElastic</b>: Storage elastic mode.</description></item>
+                /// <item><description><b>Classic</b>: Storage reserved mode.</description></item>
+                /// </list>
                 /// 
-                /// *   **Serverless**: Serverless mode.
-                /// *   **StorageElastic**: elastic storage mode.
-                /// *   **Classic**: reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>StorageElastic</para>
                 /// </summary>
                 [NameInMap("DBInstanceMode")]
                 [Validation(Required=false)]
                 public string DBInstanceMode { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>This parameter is deprecated and will not return any value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
                 public string DBInstanceNetType { get; set; }
 
                 /// <summary>
-                /// The state of the instance. For more information, see the "Additional description of DBInstanceStatus" section of this topic.
+                /// <para>Instance status. For more details, see the supplementary explanation of the DBInstanceStatus parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Running</para>
                 /// </summary>
                 [NameInMap("DBInstanceStatus")]
                 [Validation(Required=false)]
                 public string DBInstanceStatus { get; set; }
 
                 /// <summary>
-                /// The maximum storage capacity per node. Unit: GB.
+                /// <para>Maximum storage space of a single replica, in GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>50</para>
                 /// </summary>
                 [NameInMap("DBInstanceStorage")]
                 [Validation(Required=false)]
                 public long? DBInstanceStorage { get; set; }
 
                 /// <summary>
-                /// The encryption key.
+                /// <para>The deployment mode.</para>
                 /// 
-                /// >  This parameter is returned only for instances that have disk encryption enabled.
+                /// <b>Example:</b>
+                /// <para>single</para>
+                /// </summary>
+                [NameInMap("DeployMode")]
+                [Validation(Required=false)]
+                public string DeployMode { get; set; }
+
+                /// <summary>
+                /// <para>Encryption key.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only for instances with disk encryption enabled.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0d2470df-da7b-4786-b981-************</para>
                 /// </summary>
                 [NameInMap("EncryptionKey")]
                 [Validation(Required=false)]
                 public string EncryptionKey { get; set; }
 
                 /// <summary>
-                /// The encryption type. Valid values:
+                /// <para>Encryption type, with the following value:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CloudDisk</b>: Cloud disk encryption.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter is returned only for instances with cloud disk encryption.</para>
+                /// </remarks>
                 /// 
-                /// *   **CloudDisk**: disk encryption.
-                /// 
-                /// >  This parameter is returned only for instances that have disk encryption enabled.
+                /// <b>Example:</b>
+                /// <para>CloudDisk</para>
                 /// </summary>
                 [NameInMap("EncryptionType")]
                 [Validation(Required=false)]
                 public string EncryptionType { get; set; }
 
                 /// <summary>
-                /// The database engine of the instance.
+                /// <para>Database engine.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gpdb</para>
                 /// </summary>
                 [NameInMap("Engine")]
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// The database engine version of the instance.
+                /// <para>Database version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>6.0</para>
                 /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
 
                 /// <summary>
-                /// The expiration time of the instance. The time is displayed in UTC.
+                /// <para>Instance expiration time (in UTC).</para>
+                /// <remarks>
+                /// <para>The expiration time for pay-as-you-go instances is <c>2999-09-08T16:00:00Z</c>.</para>
+                /// </remarks>
                 /// 
-                /// >  The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
+                /// <b>Example:</b>
+                /// <para>2999-09-08T16:00:00Z</para>
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// The disk type of the compute group. Valid values:
+                /// <para>Compute group machine type, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: SSD</description></item>
+                /// <item><description><b>1</b>: HDD</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter applies only to storage-reserved mode instances.</para>
+                /// </remarks>
                 /// 
-                /// *   **0**: SSD.
-                /// *   **1**: HDD.
-                /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("HostType")]
                 [Validation(Required=false)]
                 public string HostType { get; set; }
 
                 /// <summary>
-                /// The wait period for the instance that has no traffic to become idle. Unit: seconds.
+                /// <para>Idle release waiting time. Unit: seconds.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only for instances in the Serverless automatic scheduling mode.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in Serverless automatic scheduling mode.
+                /// <b>Example:</b>
+                /// <para>600</para>
                 /// </summary>
                 [NameInMap("IdleTime")]
                 [Validation(Required=false)]
                 public int? IdleTime { get; set; }
 
                 /// <summary>
-                /// The network type of the instance. Valid values:
+                /// <para>Instance network type, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Classic</b>: Classic network.</description></item>
+                /// <item><description><b>VPC</b>: VPC network.</description></item>
+                /// </list>
                 /// 
-                /// *   **Classic**: classic network.
-                /// *   **VPC**: VPC.
+                /// <b>Example:</b>
+                /// <para>VPC</para>
                 /// </summary>
                 [NameInMap("InstanceNetworkType")]
                 [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
 
                 /// <summary>
-                /// The lock mode of the instance. Valid values:
+                /// <para>Lock mode, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Unlock</b>: Normal.</description></item>
+                /// <item><description><b>ManualLock</b>: Manually triggered lock.</description></item>
+                /// <item><description><b>LockByExpiration</b>: Automatically locked when the instance expires.</description></item>
+                /// <item><description><b>LockByRestoration</b>: Automatically locked before the instance rolls back.</description></item>
+                /// <item><description><b>LockByDiskQuota</b>: Automatically locked when the instance space is full.</description></item>
+                /// </list>
                 /// 
-                /// *   **Unlock**: The instance is not locked.
-                /// *   **ManualLock**: The instance is manually locked.
-                /// *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-                /// *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
-                /// *   **LockByDiskQuota**: The instance is a read-only instance and is automatically locked when the disk space is full.
+                /// <b>Example:</b>
+                /// <para>Unlock</para>
                 /// </summary>
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>This parameter is deprecated and will not return any value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// The end time of the maintenance window.
+                /// <para>Maintenance end time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>22:00Z</para>
                 /// </summary>
                 [NameInMap("MaintainEndTime")]
                 [Validation(Required=false)]
                 public string MaintainEndTime { get; set; }
 
                 /// <summary>
-                /// The start time of the maintenance window.
+                /// <para>Maintenance start time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>18:00Z</para>
                 /// </summary>
                 [NameInMap("MaintainStartTime")]
                 [Validation(Required=false)]
                 public string MaintainStartTime { get; set; }
 
                 /// <summary>
-                /// The amount of coordinator node resources.
+                /// <para>Master resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("MasterCU")]
                 [Validation(Required=false)]
                 public int? MasterCU { get; set; }
 
                 /// <summary>
-                /// The number of coordinator nodes.
+                /// <para>Number of Master nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("MasterNodeNum")]
                 [Validation(Required=false)]
                 public int? MasterNodeNum { get; set; }
 
                 /// <summary>
-                /// The maximum number of concurrent connections to the instance.
+                /// <para>Maximum number of concurrent connections for the instance.</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to reserved storage mode instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>500</para>
                 /// </summary>
                 [NameInMap("MaxConnections")]
                 [Validation(Required=false)]
                 public int? MaxConnections { get; set; }
 
                 /// <summary>
-                /// The memory capacity per node. The unit of this parameter can be one of the valid values of **MemoryUnit**.
+                /// <para>Memory size per replica, see the <b>MemoryUnit</b> parameter for the unit.</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to instances in the storage reserved mode.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("MemoryPerNode")]
                 [Validation(Required=false)]
                 public int? MemoryPerNode { get; set; }
 
                 /// <summary>
-                /// The memory capacity per compute node.
+                /// <para>Memory size of the compute node.</para>
+                /// <remarks>
+                /// <para>The unit is MB for the storage reserved mode; GB for Serverless and storage elastic modes.</para>
+                /// </remarks>
                 /// 
-                /// >  The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless mode or elastic storage mode.
+                /// <b>Example:</b>
+                /// <para>16</para>
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
                 public long? MemorySize { get; set; }
 
                 /// <summary>
-                /// The unit of the memory capacity.
+                /// <para>Memory unit.</para>
+                /// <remarks>
+                /// <para>This parameter is only applicable to reserved storage mode instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>GB</para>
                 /// </summary>
                 [NameInMap("MemoryUnit")]
                 [Validation(Required=false)]
                 public string MemoryUnit { get; set; }
 
                 /// <summary>
-                /// The minor version of the instance.
+                /// <para>Minor version of the kernel.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>6.3.10.1-202207141918</para>
                 /// </summary>
                 [NameInMap("MinorVersion")]
                 [Validation(Required=false)]
                 public string MinorVersion { get; set; }
 
                 /// <summary>
-                /// The billing method of the instance. Valid values:
+                /// <para>Billing type, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Postpaid</b>: Pay-as-you-go.</description></item>
+                /// <item><description><b>Prepaid</b>: Subscription.</description></item>
+                /// </list>
                 /// 
-                /// *   **Postpaid**: pay-as-you-go.
-                /// *   **Prepaid**: subscription.
+                /// <b>Example:</b>
+                /// <para>Postpaid</para>
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// The port number that is used to connect to the instance.
+                /// <para>Instance port number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5432</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                /// <summary>
+                /// <para>The service type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>standard</para>
+                /// </summary>
                 [NameInMap("ProdType")]
                 [Validation(Required=false)]
                 public string ProdType { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>This parameter has been deprecated and will not return a value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("ReadDelayTime")]
                 [Validation(Required=false)]
                 public string ReadDelayTime { get; set; }
 
                 /// <summary>
-                /// The region ID of the instance.
+                /// <para>Region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the instance belongs.
+                /// <para>ID of the resource group where the instance is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4p****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The running duration of the instance.
+                /// <para>Instance running time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4 days 22:58:55</para>
                 /// </summary>
                 [NameInMap("RunningTime")]
                 [Validation(Required=false)]
                 public string RunningTime { get; set; }
 
                 /// <summary>
-                /// An invalid parameter. It is no longer returned when you call this operation.
+                /// <para>This parameter is deprecated and will not return any value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// The performance level of ESSDs. Only **PL1** is supported.
+                /// <para>Performance Level (PL), currently only <b>PL1</b> is supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PL1</para>
                 /// </summary>
                 [NameInMap("SegDiskPerformanceLevel")]
                 [Validation(Required=false)]
                 public string SegDiskPerformanceLevel { get; set; }
 
                 /// <summary>
-                /// The number of compute nodes.
+                /// <para>Number of Segment nodes.</para>
+                /// <remarks>
+                /// <para>This parameter applies only to instances in the storage elastic mode and Serverless manual scheduling mode.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in elastic storage mode or Serverless manual scheduling mode.
+                /// <b>Example:</b>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("SegNodeNum")]
                 [Validation(Required=false)]
                 public int? SegNodeNum { get; set; }
 
                 /// <summary>
-                /// The number of compute groups.
+                /// <para>Number of compute groups.</para>
+                /// <remarks>
+                /// <para>This parameter applies only to storage-reserved mode instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("SegmentCounts")]
                 [Validation(Required=false)]
                 public int? SegmentCounts { get; set; }
 
                 /// <summary>
-                /// The type of the Serverless mode. Valid values:
+                /// <para>The mode of the Serverless instance, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Manual</b>: Manual scheduling.</description></item>
+                /// <item><description><b>Auto</b>: Automatic scheduling.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter is returned only for Serverless mode instances.</para>
+                /// </remarks>
                 /// 
-                /// *   **Manual**: manual scheduling.
-                /// *   **Auto**: automatic scheduling.
-                /// 
-                /// >  This parameter is returned only for instances in Serverless mode.
+                /// <b>Example:</b>
+                /// <para>Auto</para>
                 /// </summary>
                 [NameInMap("ServerlessMode")]
                 [Validation(Required=false)]
                 public string ServerlessMode { get; set; }
 
                 /// <summary>
-                /// The threshold of computing resources. Unit: AnalyticDB compute units (ACUs).
+                /// <para>Compute resource threshold. Unit: ACU.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only for instances in the Serverless automatic scheduling mode.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in Serverless automatic scheduling mode.
+                /// <b>Example:</b>
+                /// <para>32</para>
                 /// </summary>
                 [NameInMap("ServerlessResource")]
                 [Validation(Required=false)]
                 public int? ServerlessResource { get; set; }
 
                 /// <summary>
-                /// The time when the instance started to run.
+                /// <para>The secondary zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-i</para>
+                /// </summary>
+                [NameInMap("StandbyZoneId")]
+                [Validation(Required=false)]
+                public string StandbyZoneId { get; set; }
+
+                /// <summary>
+                /// <para>The time when the instance started running.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-08-11T09:26:43Z</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// The storage capacity per node. The unit of this parameter can be one of the valid values of **StorageUnit**.
+                /// <para>Storage size per replica, see the <b>StorageUnit</b> parameter for units.</para>
+                /// <remarks>
+                /// <para>This parameter applies only to storage-reserved mode instances.</para>
+                /// </remarks>
                 /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("StoragePerNode")]
                 [Validation(Required=false)]
                 public int? StoragePerNode { get; set; }
 
                 /// <summary>
-                /// The storage capacity of the instance. Unit: GB.
+                /// <para>Storage space size, unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>50</para>
                 /// </summary>
                 [NameInMap("StorageSize")]
                 [Validation(Required=false)]
                 public long? StorageSize { get; set; }
 
                 /// <summary>
-                /// The storage type of the instance. Valid values:
+                /// <para>Storage type, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>cloud_essd</b>: ESSD cloud disk.</description></item>
+                /// <item><description><b>cloud_efficiency</b>: Efficient cloud disk.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter is only applicable to instances in the storage elastic mode.</para>
+                /// </remarks>
                 /// 
-                /// *   **cloud_essd**: enhanced SSD (ESSD).
-                /// *   **cloud_efficiency**: ultra disk.
-                /// 
-                /// >  This parameter is returned only for instances in elastic storage mode.
+                /// <b>Example:</b>
+                /// <para>cloud_essd</para>
                 /// </summary>
                 [NameInMap("StorageType")]
                 [Validation(Required=false)]
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// The unit of the storage capacity. Valid values:
+                /// <para>Storage unit, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>GB SSD</b></description></item>
+                /// <item><description><b>TB SSD</b></description></item>
+                /// <item><description><b>GB HDD</b></description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter is only applicable to instances in the storage reserved mode.</para>
+                /// </remarks>
                 /// 
-                /// *   **GB SSD**
-                /// *   **TB SSD**
-                /// *   **GB HDD**
-                /// 
-                /// >  This parameter is returned only for instances in reserved storage mode.
+                /// <b>Example:</b>
+                /// <para>GB SSD</para>
                 /// </summary>
                 [NameInMap("StorageUnit")]
                 [Validation(Required=false)]
                 public string StorageUnit { get; set; }
 
                 /// <summary>
-                /// Indicates whether the instance supports backup and restoration. Valid values:
+                /// <para>Indicates whether backup recovery is supported, with the following values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: Backup recovery is supported.</description></item>
+                /// <item><description><b>false</b>: Backup recovery is not supported.</description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("SupportRestore")]
                 [Validation(Required=false)]
                 public bool? SupportRestore { get; set; }
 
                 /// <summary>
-                /// The tags that are added to the instance.
+                /// <para>Tag key-value pairs.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -525,14 +757,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag> Tag { get; set; }
                     public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>Tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test-key</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>Tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test-value</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -543,31 +781,44 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 }
 
                 /// <summary>
-                /// The vSwitch ID of the instance.
+                /// <para>vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bp1cpq8mr64paltkb****</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// Indicates whether vector search engine optimization is enabled. Valid values:
+                /// <para>Indicates whether vector engine optimization is enabled. The values are as follows:</para>
+                /// <list type="bullet">
+                /// <item><description><b>enabled</b>: Indicates that vector engine optimization is enabled.</description></item>
+                /// <item><description><b>disabled</b>: Indicates that vector engine optimization is disabled.</description></item>
+                /// </list>
                 /// 
-                /// *   **enabled**
-                /// *   **disabled**
+                /// <b>Example:</b>
+                /// <para>enabled</para>
                 /// </summary>
                 [NameInMap("VectorConfigurationStatus")]
                 [Validation(Required=false)]
                 public string VectorConfigurationStatus { get; set; }
 
                 /// <summary>
-                /// The virtual private cloud (VPC) ID of the instance.
+                /// <para>VPC ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp19ame5m1r3oejns****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The zone ID of the instance.
+                /// <para>Zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-j</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -578,7 +829,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5E6EDEB8-D73E-5F2D-B948-86C8AEB05A68</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

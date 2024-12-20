@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// Details of the regions.
+        /// <para>Details of the regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,14 +21,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// Details of the zones.
+                /// <para>Details of the zones.</para>
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -39,17 +42,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public List<DescribeRegionsResponseBodyRegionsRegionZonesZone> Zone { get; set; }
                     public class DescribeRegionsResponseBodyRegionsRegionZonesZone : TeaModel {
                         /// <summary>
-                        /// Indicates whether Virtual Private Cloud (VPC) is available.
+                        /// <para>Indicates whether Virtual Private Cloud (VPC) is available.</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b>: VPC is available.</description></item>
+                        /// <item><description><b>false</b>: VPC is unavailable.</description></item>
+                        /// </list>
                         /// 
-                        /// *   **true**: VPC is available.
-                        /// *   **false**: VPC is unavailable.
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("VpcEnabled")]
                         [Validation(Required=false)]
                         public bool? VpcEnabled { get; set; }
 
                         /// <summary>
-                        /// The ID of the zone.
+                        /// <para>The ID of the zone.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-hangzhou-c</para>
                         /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
@@ -64,7 +74,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FF8EB261-5447-4B1B-9F14-294CEA008A9F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

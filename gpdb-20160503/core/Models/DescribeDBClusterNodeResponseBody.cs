@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBClusterNodeResponseBody : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-bp***************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// The name of the node.
+        /// <para>The name of the node.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public List<DescribeDBClusterNodeResponseBodyNodes> Nodes { get; set; }
         public class DescribeDBClusterNodeResponseBodyNodes : TeaModel {
             /// <summary>
-            /// The name of the node.
+            /// <para>The name of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>master-10*******</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>87E44B48-B306-4AD3-A63B-C8**********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBResourceManagementModeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource management mode. Valid values:
+        /// <para>The resource management mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>resourceGroup: resource group management.</description></item>
+        /// <item><description>resourceQueue: resource queue management.</description></item>
+        /// </list>
         /// 
-        /// *   resourceGroup: resource group management.
-        /// *   resourceQueue: resource queue management.
+        /// <b>Example:</b>
+        /// <para>resourceGroup</para>
         /// </summary>
         [NameInMap("ResourceManagementMode")]
         [Validation(Required=false)]

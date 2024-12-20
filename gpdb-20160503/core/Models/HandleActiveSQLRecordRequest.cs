@@ -10,29 +10,37 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class HandleActiveSQLRecordRequest : TeaModel {
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>gp-bp***************</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// The type of the operation on the process ID. Valid values:
+        /// <para>The type of the operation on the process ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: cancel.</description></item>
+        /// <item><description><b>1</b>: terminate.</description></item>
+        /// <item><description><b>2</b>: forcefully terminate.</description></item>
+        /// </list>
         /// 
-        /// *   **0**: cancel.
-        /// *   **1**: terminate.
-        /// *   **2**: forcefully terminate.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("OperateType")]
         [Validation(Required=false)]
         public int? OperateType { get; set; }
 
         /// <summary>
-        /// The process IDs. A process ID is a unique identifier of a query.
+        /// <para>The process IDs. A process ID is a unique identifier of a query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>&quot;3003925,3003928&quot;</para>
         /// </summary>
         [NameInMap("Pids")]
         [Validation(Required=false)]

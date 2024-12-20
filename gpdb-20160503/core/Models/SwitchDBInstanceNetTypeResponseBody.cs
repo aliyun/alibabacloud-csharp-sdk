@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class SwitchDBInstanceNetTypeResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FA67B751-2A2D-470C-850B-D6B93699D35C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
