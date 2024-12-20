@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public List<DescribeDomainsResponseBodyDomainsDomain> Domain { get; set; }
             public class DescribeDomainsResponseBodyDomainsDomain : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
+                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
@@ -25,18 +29,34 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>A6B3BB61-69CB-50E0-9DC0-0C1658D44A47</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
