@@ -270,9 +270,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageFeatures Features { get; set; }
                 public class DescribeImagesResponseBodyImagesImageFeatures : TeaModel {
+                    [NameInMap("CpuOnlineDowngrade")]
+                    [Validation(Required=false)]
+                    public string CpuOnlineDowngrade { get; set; }
+
+                    [NameInMap("CpuOnlineUpgrade")]
+                    [Validation(Required=false)]
+                    public string CpuOnlineUpgrade { get; set; }
+
                     [NameInMap("ImdsSupport")]
                     [Validation(Required=false)]
                     public string ImdsSupport { get; set; }
+
+                    [NameInMap("MemoryOnlineDowngrade")]
+                    [Validation(Required=false)]
+                    public string MemoryOnlineDowngrade { get; set; }
+
+                    [NameInMap("MemoryOnlineUpgrade")]
+                    [Validation(Required=false)]
+                    public string MemoryOnlineUpgrade { get; set; }
 
                     /// <summary>
                     /// <para>Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>

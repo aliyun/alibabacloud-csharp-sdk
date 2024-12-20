@@ -1,3 +1,7 @@
+2024-12-20 Version: 4.4.13
+- Update API DescribeImages: update response param.
+
+
 2024-12-19 Version: 4.4.12
 - Update API DescribeInstanceModificationPrice: update response param.
 - Update API DescribePrice: update param DataDisk.
