@@ -39,6 +39,378 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>拓展练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherExpansionPracticeTaskGenerateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherExpansionPracticeTaskGenerateResponse
+        /// </returns>
+        public AITeacherExpansionPracticeTaskGenerateResponse AITeacherExpansionPracticeTaskGenerateWithOptions(AITeacherExpansionPracticeTaskGenerateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeySentences))
+            {
+                body["keySentences"] = request.KeySentences;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWords))
+            {
+                body["keyWords"] = request.KeyWords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LearningObject))
+            {
+                body["learningObject"] = request.LearningObject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextContent))
+            {
+                body["textContent"] = request.TextContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Textbook))
+            {
+                body["textbook"] = request.Textbook;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AITeacherExpansionPracticeTaskGenerate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/generateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AITeacherExpansionPracticeTaskGenerateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherExpansionPracticeTaskGenerateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherExpansionPracticeTaskGenerateResponse
+        /// </returns>
+        public async Task<AITeacherExpansionPracticeTaskGenerateResponse> AITeacherExpansionPracticeTaskGenerateWithOptionsAsync(AITeacherExpansionPracticeTaskGenerateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeySentences))
+            {
+                body["keySentences"] = request.KeySentences;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWords))
+            {
+                body["keyWords"] = request.KeyWords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LearningObject))
+            {
+                body["learningObject"] = request.LearningObject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextContent))
+            {
+                body["textContent"] = request.TextContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Textbook))
+            {
+                body["textbook"] = request.Textbook;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AITeacherExpansionPracticeTaskGenerate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/generateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AITeacherExpansionPracticeTaskGenerateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherExpansionPracticeTaskGenerateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherExpansionPracticeTaskGenerateResponse
+        /// </returns>
+        public AITeacherExpansionPracticeTaskGenerateResponse AITeacherExpansionPracticeTaskGenerate(AITeacherExpansionPracticeTaskGenerateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AITeacherExpansionPracticeTaskGenerateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherExpansionPracticeTaskGenerateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherExpansionPracticeTaskGenerateResponse
+        /// </returns>
+        public async Task<AITeacherExpansionPracticeTaskGenerateResponse> AITeacherExpansionPracticeTaskGenerateAsync(AITeacherExpansionPracticeTaskGenerateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AITeacherExpansionPracticeTaskGenerateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步基础练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherSyncPracticeTaskGenerateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherSyncPracticeTaskGenerateResponse
+        /// </returns>
+        public AITeacherSyncPracticeTaskGenerateResponse AITeacherSyncPracticeTaskGenerateWithOptions(AITeacherSyncPracticeTaskGenerateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeySentences))
+            {
+                body["keySentences"] = request.KeySentences;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWords))
+            {
+                body["keyWords"] = request.KeyWords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LearningObject))
+            {
+                body["learningObject"] = request.LearningObject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextContent))
+            {
+                body["textContent"] = request.TextContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Textbook))
+            {
+                body["textbook"] = request.Textbook;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AITeacherSyncPracticeTaskGenerate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/generateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AITeacherSyncPracticeTaskGenerateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步基础练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherSyncPracticeTaskGenerateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherSyncPracticeTaskGenerateResponse
+        /// </returns>
+        public async Task<AITeacherSyncPracticeTaskGenerateResponse> AITeacherSyncPracticeTaskGenerateWithOptionsAsync(AITeacherSyncPracticeTaskGenerateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeySentences))
+            {
+                body["keySentences"] = request.KeySentences;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWords))
+            {
+                body["keyWords"] = request.KeyWords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LearningObject))
+            {
+                body["learningObject"] = request.LearningObject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextContent))
+            {
+                body["textContent"] = request.TextContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Textbook))
+            {
+                body["textbook"] = request.Textbook;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AITeacherSyncPracticeTaskGenerate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/generateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AITeacherSyncPracticeTaskGenerateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步基础练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherSyncPracticeTaskGenerateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherSyncPracticeTaskGenerateResponse
+        /// </returns>
+        public AITeacherSyncPracticeTaskGenerateResponse AITeacherSyncPracticeTaskGenerate(AITeacherSyncPracticeTaskGenerateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AITeacherSyncPracticeTaskGenerateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步基础练问答对生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AITeacherSyncPracticeTaskGenerateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AITeacherSyncPracticeTaskGenerateResponse
+        /// </returns>
+        public async Task<AITeacherSyncPracticeTaskGenerateResponse> AITeacherSyncPracticeTaskGenerateAsync(AITeacherSyncPracticeTaskGenerateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AITeacherSyncPracticeTaskGenerateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>阿里云控制台/列出阿里云控制台上可使用的服务列表</para>
         /// </summary>
         /// 
