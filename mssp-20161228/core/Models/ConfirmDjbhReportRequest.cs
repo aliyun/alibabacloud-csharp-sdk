@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
-    public class CreateServiceLinkedRoleResponseBody : TeaModel {
+    public class ConfirmDjbhReportRequest : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>Primary key ID of the report.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>592B80F0-7674-56A4-9027-8A0A9ACDBD56</para>
+        /// <para>24563</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? Id { get; set; }
 
     }
 

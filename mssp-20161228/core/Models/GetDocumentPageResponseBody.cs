@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetDocumentPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Interface response code.</para>
+        /// <para>API response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Delivered by.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>luna</para>
             /// </summary>
             [NameInMap("DeliveredBy")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Report name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>季度报告</para>
+            /// <para>month report</para>
             /// </summary>
             [NameInMap("DocumentName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public string DocumentType { get; set; }
 
             /// <summary>
-            /// <para>Document primary key ID.</para>
+            /// <para>Primary key ID of the document.</para>
             /// 
             /// <b>Example:</b>
             /// <para>346409</para>
@@ -65,6 +65,16 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            /// <summary>
+            /// <para>Report status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>uploaded</para>
+            /// </summary>
+            [NameInMap("ReportStatus")]
+            [Validation(Required=false)]
+            public string ReportStatus { get; set; }
 
             /// <summary>
             /// <para>Report generation time.</para>
@@ -89,7 +99,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Prompt message for the response result.</para>
+        /// <para>Prompt message for the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -116,7 +126,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of data items displayed per page.</para>
+            /// <para>Number of items per page in the returned data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -126,7 +136,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of data items found.</para>
+            /// <para>Total number of queried items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3149</para>

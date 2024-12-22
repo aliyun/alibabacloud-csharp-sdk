@@ -8,27 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
-    public class GetDocumentDownloadUrlRequest : TeaModel {
+    public class DeleteDjbhReportRequest : TeaModel {
         /// <summary>
-        /// <para>Document management ID.</para>
+        /// <para>Primary key ID of the report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>175815</para>
+        /// <para>26579</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
-
-        /// <summary>
-        /// <para>Report type.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5</para>
-        /// </summary>
-        [NameInMap("ReportType")]
-        [Validation(Required=false)]
-        public string ReportType { get; set; }
 
     }
 

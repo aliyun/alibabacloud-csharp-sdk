@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>Delivered by.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>luna</para>
         /// </summary>
         [NameInMap("DeliveredBy")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>Document name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>季度报告</para>
+        /// <para>month report</para>
         /// </summary>
         [NameInMap("DocumentName")]
         [Validation(Required=false)]

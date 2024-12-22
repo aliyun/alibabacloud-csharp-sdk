@@ -1,3 +1,10 @@
+2024-12-22 Version: 1.3.0
+- Support API ConfirmDjbhReport.
+- Support API DeleteDjbhReport.
+- Update API GetDocumentDownloadUrl: add param ReportType.
+- Update API GetDocumentPage: update response param.
+
+
 2024-12-17 Version: 1.2.0
 - Support API CreateServiceLinkedRole.
 - Support API DescribeServiceLinkedRole.
