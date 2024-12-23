@@ -9,19 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
 {
     public class SignalCallResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// 请求状态码。  返回OK代表请求成功。 其他错误码，请参见API错误码。
+        /// <para>请求状态码。  返回OK代表请求成功。 其他错误码，请参见API错误码。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// 返回信息描述。
+        /// <para>返回信息描述。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -32,7 +42,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
         public SignalCallResponseBodyModel Model { get; set; }
         public class SignalCallResponseBodyModel : TeaModel {
             /// <summary>
-            /// 任务ID，可以通过此ID查询任务的详情。
+            /// <para>任务ID，可以通过此ID查询任务的详情。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>550E****-<b><b>-</b></b>-****-********0CA0</para>
             /// </summary>
             [NameInMap("CallId")]
             [Validation(Required=false)]
@@ -41,14 +54,20 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
         }
 
         /// <summary>
-        /// 请求ID。
+        /// <para>请求ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D9CB****-<b><b>-</b></b>-****-********9D23</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 请求是否成功，成功：true，失败：false。
+        /// <para>请求是否成功，成功：true，失败：false。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

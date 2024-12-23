@@ -8,21 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
 {
-    public class BackendCallSignalResponseBody : TeaModel {
+    public class VoiceSingleCallResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique receipt ID for the call. You can use this ID to query the details of a single call.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>550e8400-e29b-41d4-a716-446655440000</para>
+        /// <para>&quot;&quot;</para>
         /// </summary>
-        [NameInMap("CallId")]
+        [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
-        public string CallId { get; set; }
+        public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
-        /// <para>The value OK indicates that the request was successful. Other values indicate that the request failed. For more information, see Error codes.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -31,8 +26,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -40,15 +33,25 @@ namespace AlibabaCloud.SDK.Dyvmsapi_intl20211015.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Model { get; set; }
+
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</para>
+        /// <para>D9CB****-<b><b>-</b></b>-****-********9D23</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
