@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("sampleLibrary")]
+        [Validation(Required=false)]
+        public string SampleLibraryShrink { get; set; }
+
     }
 
 }

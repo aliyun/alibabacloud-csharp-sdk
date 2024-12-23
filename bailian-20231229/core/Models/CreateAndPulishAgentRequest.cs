@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             [Validation(Required=false)]
             public CreateAndPulishAgentRequestApplicationConfigRagConfig RagConfig { get; set; }
             public class CreateAndPulishAgentRequestApplicationConfigRagConfig : TeaModel {
+                [NameInMap("answerScope")]
+                [Validation(Required=false)]
+                public string AnswerScope { get; set; }
+
                 [NameInMap("enableCitation")]
                 [Validation(Required=false)]
                 public bool? EnableCitation { get; set; }
@@ -79,9 +83,37 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public bool? EnableSearch { get; set; }
 
+                [NameInMap("enableWebSearch")]
+                [Validation(Required=false)]
+                public bool? EnableWebSearch { get; set; }
+
+                [NameInMap("fixedReplyDetail")]
+                [Validation(Required=false)]
+                public string FixedReplyDetail { get; set; }
+
                 [NameInMap("knowledgeBaseCodeList")]
                 [Validation(Required=false)]
                 public List<string> KnowledgeBaseCodeList { get; set; }
+
+                [NameInMap("promptStrategy")]
+                [Validation(Required=false)]
+                public string PromptStrategy { get; set; }
+
+                [NameInMap("ragRejectType")]
+                [Validation(Required=false)]
+                public string RagRejectType { get; set; }
+
+                [NameInMap("rejectFilterPrompt")]
+                [Validation(Required=false)]
+                public string RejectFilterPrompt { get; set; }
+
+                [NameInMap("rejectFilterType")]
+                [Validation(Required=false)]
+                public string RejectFilterType { get; set; }
+
+                [NameInMap("retrieveMaxLength")]
+                [Validation(Required=false)]
+                public int? RetrieveMaxLength { get; set; }
 
                 [NameInMap("topK")]
                 [Validation(Required=false)]
@@ -132,6 +164,24 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("sampleLibrary")]
+        [Validation(Required=false)]
+        public CreateAndPulishAgentRequestSampleLibrary SampleLibrary { get; set; }
+        public class CreateAndPulishAgentRequestSampleLibrary : TeaModel {
+            [NameInMap("enableSample")]
+            [Validation(Required=false)]
+            public bool? EnableSample { get; set; }
+
+            [NameInMap("sampleLibraryIdList")]
+            [Validation(Required=false)]
+            public List<string> SampleLibraryIdList { get; set; }
+
+            [NameInMap("topK")]
+            [Validation(Required=false)]
+            public int? TopK { get; set; }
+
+        }
 
     }
 

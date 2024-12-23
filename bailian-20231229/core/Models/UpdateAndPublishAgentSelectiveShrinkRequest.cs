@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class UpdateAndPublishAgentShrinkRequest : TeaModel {
+    public class UpdateAndPublishAgentSelectiveShrinkRequest : TeaModel {
         [NameInMap("applicationConfig")]
         [Validation(Required=false)]
         public string ApplicationConfigShrink { get; set; }

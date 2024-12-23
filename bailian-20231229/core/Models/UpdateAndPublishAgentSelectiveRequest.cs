@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class UpdateAndPublishAgentRequest : TeaModel {
+    public class UpdateAndPublishAgentSelectiveRequest : TeaModel {
         [NameInMap("applicationConfig")]
         [Validation(Required=false)]
-        public UpdateAndPublishAgentRequestApplicationConfig ApplicationConfig { get; set; }
-        public class UpdateAndPublishAgentRequestApplicationConfig : TeaModel {
+        public UpdateAndPublishAgentSelectiveRequestApplicationConfig ApplicationConfig { get; set; }
+        public class UpdateAndPublishAgentSelectiveRequestApplicationConfig : TeaModel {
             [NameInMap("historyConfig")]
             [Validation(Required=false)]
-            public UpdateAndPublishAgentRequestApplicationConfigHistoryConfig HistoryConfig { get; set; }
-            public class UpdateAndPublishAgentRequestApplicationConfigHistoryConfig : TeaModel {
+            public UpdateAndPublishAgentSelectiveRequestApplicationConfigHistoryConfig HistoryConfig { get; set; }
+            public class UpdateAndPublishAgentSelectiveRequestApplicationConfigHistoryConfig : TeaModel {
                 [NameInMap("enableAdbRecord")]
                 [Validation(Required=false)]
                 public bool? EnableAdbRecord { get; set; }
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             [NameInMap("longTermMemory")]
             [Validation(Required=false)]
-            public UpdateAndPublishAgentRequestApplicationConfigLongTermMemory LongTermMemory { get; set; }
-            public class UpdateAndPublishAgentRequestApplicationConfigLongTermMemory : TeaModel {
+            public UpdateAndPublishAgentSelectiveRequestApplicationConfigLongTermMemory LongTermMemory { get; set; }
+            public class UpdateAndPublishAgentSelectiveRequestApplicationConfigLongTermMemory : TeaModel {
                 [NameInMap("enable")]
                 [Validation(Required=false)]
                 public bool? Enable { get; set; }
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             [NameInMap("parameters")]
             [Validation(Required=false)]
-            public UpdateAndPublishAgentRequestApplicationConfigParameters Parameters { get; set; }
-            public class UpdateAndPublishAgentRequestApplicationConfigParameters : TeaModel {
+            public UpdateAndPublishAgentSelectiveRequestApplicationConfigParameters Parameters { get; set; }
+            public class UpdateAndPublishAgentSelectiveRequestApplicationConfigParameters : TeaModel {
                 [NameInMap("dialogRound")]
                 [Validation(Required=false)]
                 public int? DialogRound { get; set; }
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             [NameInMap("ragConfig")]
             [Validation(Required=false)]
-            public UpdateAndPublishAgentRequestApplicationConfigRagConfig RagConfig { get; set; }
-            public class UpdateAndPublishAgentRequestApplicationConfigRagConfig : TeaModel {
+            public UpdateAndPublishAgentSelectiveRequestApplicationConfigRagConfig RagConfig { get; set; }
+            public class UpdateAndPublishAgentSelectiveRequestApplicationConfigRagConfig : TeaModel {
                 [NameInMap("answerScope")]
                 [Validation(Required=false)]
                 public string AnswerScope { get; set; }
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
                 [NameInMap("enableWebSearch")]
                 [Validation(Required=false)]
-                public bool? EnableWebSearch { get; set; }
+                public string EnableWebSearch { get; set; }
 
                 [NameInMap("fixedReplyDetail")]
                 [Validation(Required=false)]
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             [NameInMap("security")]
             [Validation(Required=false)]
-            public UpdateAndPublishAgentRequestApplicationConfigSecurity Security { get; set; }
-            public class UpdateAndPublishAgentRequestApplicationConfigSecurity : TeaModel {
+            public UpdateAndPublishAgentSelectiveRequestApplicationConfigSecurity Security { get; set; }
+            public class UpdateAndPublishAgentSelectiveRequestApplicationConfigSecurity : TeaModel {
                 [NameInMap("processingStrategy")]
                 [Validation(Required=false)]
                 public string ProcessingStrategy { get; set; }
@@ -133,8 +133,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             [NameInMap("tools")]
             [Validation(Required=false)]
-            public List<UpdateAndPublishAgentRequestApplicationConfigTools> Tools { get; set; }
-            public class UpdateAndPublishAgentRequestApplicationConfigTools : TeaModel {
+            public List<UpdateAndPublishAgentSelectiveRequestApplicationConfigTools> Tools { get; set; }
+            public class UpdateAndPublishAgentSelectiveRequestApplicationConfigTools : TeaModel {
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -143,8 +143,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             [NameInMap("workFlows")]
             [Validation(Required=false)]
-            public List<UpdateAndPublishAgentRequestApplicationConfigWorkFlows> WorkFlows { get; set; }
-            public class UpdateAndPublishAgentRequestApplicationConfigWorkFlows : TeaModel {
+            public List<UpdateAndPublishAgentSelectiveRequestApplicationConfigWorkFlows> WorkFlows { get; set; }
+            public class UpdateAndPublishAgentSelectiveRequestApplicationConfigWorkFlows : TeaModel {
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -167,8 +167,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         [NameInMap("sampleLibrary")]
         [Validation(Required=false)]
-        public UpdateAndPublishAgentRequestSampleLibrary SampleLibrary { get; set; }
-        public class UpdateAndPublishAgentRequestSampleLibrary : TeaModel {
+        public UpdateAndPublishAgentSelectiveRequestSampleLibrary SampleLibrary { get; set; }
+        public class UpdateAndPublishAgentSelectiveRequestSampleLibrary : TeaModel {
             [NameInMap("enableSample")]
             [Validation(Required=false)]
             public bool? EnableSample { get; set; }
