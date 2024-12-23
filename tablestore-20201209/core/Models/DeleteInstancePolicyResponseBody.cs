@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class CreateInstanceResponseBody : TeaModel {
+    public class DeleteInstancePolicyResponseBody : TeaModel {
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// <para>The request ID, which can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>39871ED2-62C0-578F-A32E-B88072D5582F</para>
+        /// <para>3104C83E-6E82-57FB-BB88-8C64CCFDEF89</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class TagResourcesResponseBody : TeaModel {
+    public class UpdateInstanceElasticVCUUpperLimitResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID, which can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>44FDC379-4443-560E-B652-9F7476D8854F</para>
+        /// <para>B37BBA04-D827-55C8-B901-5264B904E8C6</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
-    public class ListInstancesRequest : TeaModel {
+    public class ListInstancesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The name of the instance. Fuzzy search is supported.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// </summary>
         [NameInMap("InstanceNameList")]
         [Validation(Required=false)]
-        public List<string> InstanceNameList { get; set; }
+        public string InstanceNameListShrink { get; set; }
 
         /// <summary>
         /// <para>The maximum number of instances that you want to return. Valid values: 0 to 200. If you do not configure this parameter or set this parameter to 0, the default value of 100 is used.</para>
