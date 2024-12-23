@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DeleteApiTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -22,6 +22,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>Whether the call was successful: - true: Call succeeded - false: Call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

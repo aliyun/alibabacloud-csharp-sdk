@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class RunClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The service configurations. Number of elements in the array: 1 to 1,000.</para>
+        /// <para>The application configurations. Number of elements in the array: 1 to 1000.</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
         /// <summary>
-        /// <para>The list of services. Number of elements in the array: 1 to 100.</para>
+        /// <para>The services. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Applications")]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The basic attributes of all ECS instances in the cluster.</para>
+        /// <para>The attributes of all ECS instances.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
         [Validation(Required=false)]
@@ -177,14 +177,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SecurityMode { get; set; }
 
         /// <summary>
-        /// <para>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</para>
+        /// <para>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</para>
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. Number of elements in the array: 0 to 20.</para>
+        /// <para>The tags. Number of elements in the array: 0 to 20.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

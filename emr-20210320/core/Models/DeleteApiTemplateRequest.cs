@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DeleteApiTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>接口名。</para>
+        /// <para>Interface name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>Region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>资源组ID。</para>
+        /// <para>Resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>集群模板id。</para>
+        /// <para>Cluster template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

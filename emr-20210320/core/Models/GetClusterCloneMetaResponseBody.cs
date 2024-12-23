@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public bool? ExistCloneConfig { get; set; }
 
             /// <summary>
-            /// <para>The attributes of all ECS instances.</para>
+            /// <para>The node attributes.</para>
             /// </summary>
             [NameInMap("NodeAttributes")]
             [Validation(Required=false)]
@@ -226,6 +226,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     [Validation(Required=false)]
                     public int? MaxCapacity { get; set; }
 
+                    /// <summary>
+                    /// <para>The maximum number of nodes that you can configure based on your business requirements.</para>
+                    /// </summary>
                     [NameInMap("MaxOnDemandCapacity")]
                     [Validation(Required=false)]
                     public int? MaxOnDemandCapacity { get; set; }
@@ -262,6 +265,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public string ScalingPolicyId { get; set; }
 
+                /// <summary>
+                /// <para>The type of the auto scaling policy.</para>
+                /// </summary>
                 [NameInMap("ScalingPolicyType")]
                 [Validation(Required=false)]
                 public string ScalingPolicyType { get; set; }
@@ -361,7 +367,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public SubscriptionConfig SubscriptionConfig { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

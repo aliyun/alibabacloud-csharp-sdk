@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListScriptsRequest : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>一次获取的最大记录数。取值范围：1~100。</para>
+        /// <para>The maximum number of records to retrieve at once.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>标记当前开始读取的位置，置空表示从头开始。</para>
+        /// <para>Marks the current position to start reading from.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dd6b1b2a-5837-5237-abe4-ff0c89568980</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,11 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>集群脚本类型。</para>
+        /// <para>Type of cluster script. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>BOOTSTRAP: Bootstrap script.</description></item>
+        /// <item><description>NORMAL: Regular cluster script.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListScriptsResponseBody : TeaModel {
         /// <summary>
-        /// <para>本次请求所返回的最大记录条数。</para>
+        /// <para>The maximum number of records returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>返回读取到的数据位置，空代表数据已经读取完毕。</para>
+        /// <para>The position of the data read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dd6b1b2a-5837-5237-abe4-ff0c89568982</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scripts.</para>
+        /// <para>List of scripts.</para>
         /// </summary>
         [NameInMap("Scripts")]
         [Validation(Required=false)]
         public List<ListScriptsResponseBodyScripts> Scripts { get; set; }
         public class ListScriptsResponseBodyScripts : TeaModel {
             /// <summary>
-            /// <para>The name of the API operation.</para>
+            /// <para>API name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ListScripts</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The time when the system finishes the running of the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.</para>
+            /// <para>End execution time. This value is returned only when <c>ScriptType</c> is <c>NORMAL</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639715635819</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The policy that is used to handle execution failures of the script. Valid values:</para>
+            /// <para>Execution failure strategy. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>FAILED_CONTINUE</description></item>
-            /// <item><description>FAILED_BLOCK</description></item>
+            /// <item><description>FAILED_CONTINUE: Continue after failure.</description></item>
+            /// <item><description>FAILED_BLOCK: Block after failure.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ExecutionFailStrategy { get; set; }
 
             /// <summary>
-            /// <para>The time based on which the system runs the script. Valid values:</para>
+            /// <para>Execution timing. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>BEFORE_INSTALL</description></item>
-            /// <item><description>AFTER_STARTED</description></item>
+            /// <item><description>BEFORE_INSTALL: Before application installation.</description></item>
+            /// <item><description>AFTER_STARTED: After application startup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,11 +95,11 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ExecutionMoment { get; set; }
 
             /// <summary>
-            /// <para>The status of the script. This parameter is returned only if the <c>ScriptType</c> parameter is set to <c>NORMAL</c>. Valid values:</para>
+            /// <para>Script execution state. This value is returned only when <c>ScriptType</c> is <c>NORMAL</c>. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>SCRIPT_COMPLETED</description></item>
-            /// <item><description>SCRIPT_SUBMISSION_FAILED</description></item>
-            /// <item><description>SCRIPT_RUNNING</description></item>
+            /// <item><description>SCRIPT_COMPLETED: Script executed successfully.</description></item>
+            /// <item><description>SCRIPT_SUBMISSION_FAILED: Script execution failed.</description></item>
+            /// <item><description>SCRIPT_RUNNING: Script is running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ExecutionState { get; set; }
 
             /// <summary>
-            /// <para>The time when the script was last modified.</para>
+            /// <para>Time of the last update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639714634819</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The node selector.</para>
+            /// <para>Node selector.</para>
             /// </summary>
             [NameInMap("NodeSelector")]
             [Validation(Required=false)]
             public NodeSelector NodeSelector { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>Region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The runtime parameters of the script.</para>
+            /// <para>Script execution parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--mode=client -h -p</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ScriptArgs { get; set; }
 
             /// <summary>
-            /// <para>The script ID.</para>
+            /// <para>Script ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs-bf25219d103043a0820613e32781****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>The name of the script.</para>
+            /// <para>Script name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>check_env</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// <para>The path in which the script is stored.</para>
+            /// <para>Script path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://bucket1/check_evn.sh</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ScriptPath { get; set; }
 
             /// <summary>
-            /// <para>The time when the system starts to run the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.</para>
+            /// <para>Start execution time. This value is returned only when <c>ScriptType</c> is <c>NORMAL</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639714634000</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>本次请求条件下的数据总量。</para>
+        /// <para>The total amount of data under the conditions of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

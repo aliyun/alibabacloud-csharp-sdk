@@ -9172,7 +9172,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9230,7 +9230,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9288,7 +9288,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9306,7 +9306,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bootstrap actions or common scripts of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10065,7 +10065,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10212,7 +10212,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10359,7 +10359,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10382,7 +10382,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11060,6 +11060,138 @@ namespace AlibabaCloud.SDK.Emr20210320
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateApplicationConfigsWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAttributeResponse
+        /// </returns>
+        public UpdateClusterAttributeResponse UpdateClusterAttributeWithOptions(UpdateClusterAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateClusterAttribute",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateClusterAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAttributeResponse
+        /// </returns>
+        public async Task<UpdateClusterAttributeResponse> UpdateClusterAttributeWithOptionsAsync(UpdateClusterAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateClusterAttribute",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateClusterAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAttributeResponse
+        /// </returns>
+        public UpdateClusterAttributeResponse UpdateClusterAttribute(UpdateClusterAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateClusterAttributeWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAttributeResponse
+        /// </returns>
+        public async Task<UpdateClusterAttributeResponse> UpdateClusterAttributeAsync(UpdateClusterAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateClusterAttributeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

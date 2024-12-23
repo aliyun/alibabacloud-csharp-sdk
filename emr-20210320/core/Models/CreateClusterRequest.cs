@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The service configurations. Number of elements in the array: 1 to 1000.</para>
+        /// <para>The application configurations. Number of elements in the array: 1 to 1000.</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
@@ -91,6 +91,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DeployMode { get; set; }
 
         /// <summary>
+        /// <para>The cluster description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Emr cluster for ETL</para>
         /// </summary>
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The attributes of all ECS instances. The basic attributes of all ECS instances in the cluster.</para>
+        /// <para>The attributes of all ECS instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</para>
+        /// <para>The EMR version. You can query available E-MapReduce (EMR) versions in the EMR console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -179,14 +181,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SecurityMode { get; set; }
 
         /// <summary>
-        /// <para>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</para>
+        /// <para>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</para>
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. Number of elements in the array: 0 to 20.</para>
+        /// <para>The tags. Number of elements in the array: 0 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>

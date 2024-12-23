@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DecreaseNodesRequest : TeaModel {
+        /// <summary>
+        /// <para>The cooldown interval between two batches.</para>
+        /// </summary>
         [NameInMap("BatchInterval")]
         [Validation(Required=false)]
         public int? BatchInterval { get; set; }
 
+        /// <summary>
+        /// <para>The number of nodes to be removed in a single batch.</para>
+        /// </summary>
         [NameInMap("BatchSize")]
         [Validation(Required=false)]
         public int? BatchSize { get; set; }
