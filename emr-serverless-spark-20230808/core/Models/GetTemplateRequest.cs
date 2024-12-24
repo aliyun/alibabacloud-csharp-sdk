@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The template type.</para>
+        /// <list type="bullet">
+        /// <item><description>TASK</description></item>
+        /// <item><description>SESSION</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>TASK</para>
         /// </summary>

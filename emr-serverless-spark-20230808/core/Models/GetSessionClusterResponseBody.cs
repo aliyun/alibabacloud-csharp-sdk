@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetSessionClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -19,15 +19,23 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The session.</para>
+        /// </summary>
         [NameInMap("sessionCluster")]
         [Validation(Required=false)]
         public GetSessionClusterResponseBodySessionCluster SessionCluster { get; set; }
         public class GetSessionClusterResponseBodySessionCluster : TeaModel {
+            /// <summary>
+            /// <para>The Spark configurations.</para>
+            /// </summary>
             [NameInMap("applicationConfigs")]
             [Validation(Required=false)]
             public List<GetSessionClusterResponseBodySessionClusterApplicationConfigs> ApplicationConfigs { get; set; }
             public class GetSessionClusterResponseBodySessionClusterApplicationConfigs : TeaModel {
                 /// <summary>
+                /// <para>The name of the configuration file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>spark-defaults.conf</para>
                 /// </summary>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigFileName { get; set; }
 
                 /// <summary>
+                /// <para>The key of the configuration.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>spark.app.name</para>
                 /// </summary>
@@ -44,6 +54,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigItemKey { get; set; }
 
                 /// <summary>
+                /// <para>The configuration value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -53,11 +65,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            /// <summary>
+            /// <para>The automatic startup configurations.</para>
+            /// </summary>
             [NameInMap("autoStartConfiguration")]
             [Validation(Required=false)]
             public GetSessionClusterResponseBodySessionClusterAutoStartConfiguration AutoStartConfiguration { get; set; }
             public class GetSessionClusterResponseBodySessionClusterAutoStartConfiguration : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether automatic startup is enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -67,11 +84,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            /// <summary>
+            /// <para>The automatic termination configurations.</para>
+            /// </summary>
             [NameInMap("autoStopConfiguration")]
             [Validation(Required=false)]
             public GetSessionClusterResponseBodySessionClusterAutoStopConfiguration AutoStopConfiguration { get; set; }
             public class GetSessionClusterResponseBodySessionClusterAutoStopConfiguration : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether automatic termination is enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -80,6 +102,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
+                /// <para>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
+            /// <para>The version of the Spark engine.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>esr-2.2(Java Runtime)</para>
             /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
+            /// <para>The domain name to which the Spark UI of the session belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>your.domain.com</para>
             /// </summary>
@@ -105,11 +133,19 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>The internal endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</para>
+            /// </summary>
             [NameInMap("domainInner")]
             [Validation(Required=false)]
             public string DomainInner { get; set; }
 
             /// <summary>
+            /// <para>The ID of the job that is associated with the session.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TSK-xxxxxxxx</para>
             /// </summary>
@@ -118,6 +154,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DraftId { get; set; }
 
             /// <summary>
+            /// <para>The environment ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>env-cpv569tlhtgndjl86t40</para>
             /// </summary>
@@ -126,6 +164,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EnvId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Fusion engine is used for acceleration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -133,11 +173,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
 
+            /// <summary>
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-09-01 06:23:01</para>
+            /// </summary>
             [NameInMap("gmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The type of the job. This parameter is required and cannot be modified after the deployment is created. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SQLSCRIPT</description></item>
+            /// <item><description>JAR</description></item>
+            /// <item><description>PYTHON</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SQL</para>
             /// </summary>
@@ -146,6 +199,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Kind { get; set; }
 
             /// <summary>
+            /// <para>The name of the session.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -154,7 +209,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>作业实例名称。</para>
+            /// <para>The queue name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jobName</para>
@@ -164,15 +219,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueName { get; set; }
 
             /// <summary>
+            /// <para>The version of E-MapReduce (EMR) Serverless Spark.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>esr-2.2（Java Runtime）</para>
+            /// <para>esr-2.2(Java Runtime)</para>
             /// </summary>
             [NameInMap("releaseVersion")]
             [Validation(Required=false)]
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>交互式作业会话id。</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234abcd-12ab-34cd-56ef-1234567890ab</para>
@@ -181,12 +238,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string SessionClusterId { get; set; }
 
+            /// <summary>
+            /// <para>The start time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-09-01 06:23:01</para>
+            /// </summary>
             [NameInMap("startTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>作业状态。</para>
+            /// <para>The job status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -195,11 +258,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// <para>The reason of the job status change.</para>
+            /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public GetSessionClusterResponseBodySessionClusterStateChangeReason StateChangeReason { get; set; }
             public class GetSessionClusterResponseBodySessionClusterStateChangeReason : TeaModel {
                 /// <summary>
+                /// <para>The status change code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1000000</para>
                 /// </summary>
@@ -208,6 +276,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Code { get; set; }
 
                 /// <summary>
+                /// <para>The status change message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ok</para>
                 /// </summary>
@@ -218,7 +288,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>任务实例ID。</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jr-231231</para>
@@ -228,6 +298,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the account that is used to create the session.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user1</para>
             /// </summary>
@@ -236,6 +308,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserName { get; set; }
 
             /// <summary>
+            /// <para>The Spark UI of the session.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://spark-ui/link">https://spark-ui/link</a></para>
             /// </summary>
@@ -244,7 +318,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string WebUI { get; set; }
 
             /// <summary>
-            /// <para>工作空间id。</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>w-1234abcd</para>

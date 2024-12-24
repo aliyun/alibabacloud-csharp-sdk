@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>A pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of sessions.</para>
+        /// <para>The sessions.</para>
         /// </summary>
         [NameInMap("sessionClusters")]
         [Validation(Required=false)]
@@ -135,15 +135,30 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The version of the Spark engine.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</para>
             /// </summary>
             [NameInMap("displayReleaseVersion")]
             [Validation(Required=false)]
             public string DisplayReleaseVersion { get; set; }
 
+            /// <summary>
+            /// <para>The public endpoint of the Thrift server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>emr-spark-gateway-cn-hangzhou.data.aliyun.com</para>
+            /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>The internal endpoint of the Thrift server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</para>
+            /// </summary>
             [NameInMap("domainInner")]
             [Validation(Required=false)]
             public string DomainInner { get; set; }
@@ -168,6 +183,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
 
+            /// <summary>
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1732267598000</para>
+            /// </summary>
             [NameInMap("gmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
@@ -228,12 +249,25 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string SessionClusterId { get; set; }
 
+            /// <summary>
+            /// <para>The start time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1732267598000</para>
+            /// </summary>
             [NameInMap("startTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
             /// <summary>
             /// <para>The status of the session.</para>
+            /// <list type="bullet">
+            /// <item><description>Starting</description></item>
+            /// <item><description>Running</description></item>
+            /// <item><description>Stopping</description></item>
+            /// <item><description>Stopped</description></item>
+            /// <item><description>Error</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>

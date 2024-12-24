@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetSqlStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

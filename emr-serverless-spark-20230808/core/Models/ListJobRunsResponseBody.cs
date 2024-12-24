@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListJobRunsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Spark jobs.</para>
+        /// <para>The Spark jobs.</para>
         /// </summary>
         [NameInMap("jobRuns")]
         [Validation(Required=false)]
@@ -55,10 +55,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2.059</para>
+            /// </summary>
             [NameInMap("cuHours")]
             [Validation(Required=false)]
             public long? CuHours { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</para>
+            /// </summary>
             [NameInMap("displayReleaseVersion")]
             [Validation(Required=false)]
             public string DisplayReleaseVersion { get; set; }
@@ -83,6 +91,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public int? ExecutionTimeoutSeconds { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("fusion")]
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
@@ -111,6 +123,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public RunLog Log { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>33030784</para>
+            /// </summary>
             [NameInMap("mbSeconds")]
             [Validation(Required=false)]
             public long? MbSeconds { get; set; }
@@ -185,12 +201,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The tags of the job.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>8236</para>
+            /// </summary>
             [NameInMap("vcoreSeconds")]
             [Validation(Required=false)]
             public long? VcoreSeconds { get; set; }
