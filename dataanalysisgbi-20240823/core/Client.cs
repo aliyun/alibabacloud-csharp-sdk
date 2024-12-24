@@ -39,6 +39,148 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量删除当前指定业务空间下的同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteSynonymsResponse
+        /// </returns>
+        public BatchDeleteSynonymsResponse BatchDeleteSynonymsWithOptions(BatchDeleteSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymIdKeys))
+            {
+                body["synonymIdKeys"] = request.SynonymIdKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/batchDelete/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteSynonymsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除当前指定业务空间下的同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteSynonymsResponse
+        /// </returns>
+        public async Task<BatchDeleteSynonymsResponse> BatchDeleteSynonymsWithOptionsAsync(BatchDeleteSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymIdKeys))
+            {
+                body["synonymIdKeys"] = request.SynonymIdKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/batchDelete/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteSynonymsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除当前指定业务空间下的同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteSynonymsResponse
+        /// </returns>
+        public BatchDeleteSynonymsResponse BatchDeleteSynonyms(BatchDeleteSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchDeleteSynonymsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除当前指定业务空间下的同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteSynonymsResponse
+        /// </returns>
+        public async Task<BatchDeleteSynonymsResponse> BatchDeleteSynonymsAsync(BatchDeleteSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchDeleteSynonymsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>取消关联的数据源授权</para>
         /// </summary>
         /// 
@@ -165,6 +307,156 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CancelDatasourceAuthorizationWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在指定的业务空间下创建新的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBusinessLogicResponse
+        /// </returns>
+        public CreateBusinessLogicResponse CreateBusinessLogicWithOptions(CreateBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/create/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBusinessLogicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在指定的业务空间下创建新的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBusinessLogicResponse
+        /// </returns>
+        public async Task<CreateBusinessLogicResponse> CreateBusinessLogicWithOptionsAsync(CreateBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/create/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBusinessLogicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在指定的业务空间下创建新的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBusinessLogicResponse
+        /// </returns>
+        public CreateBusinessLogicResponse CreateBusinessLogic(CreateBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateBusinessLogicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在指定的业务空间下创建新的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBusinessLogicResponse
+        /// </returns>
+        public async Task<CreateBusinessLogicResponse> CreateBusinessLogicAsync(CreateBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateBusinessLogicWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -343,6 +635,164 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>在当前指定的业务空间下面，新建同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynonymsResponse
+        /// </returns>
+        public CreateSynonymsResponse CreateSynonymsWithOptions(CreateSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Columns))
+            {
+                body["columns"] = request.Columns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Word))
+            {
+                body["word"] = request.Word;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordSynonyms))
+            {
+                body["wordSynonyms"] = request.WordSynonyms;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/create/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSynonymsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在当前指定的业务空间下面，新建同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynonymsResponse
+        /// </returns>
+        public async Task<CreateSynonymsResponse> CreateSynonymsWithOptionsAsync(CreateSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Columns))
+            {
+                body["columns"] = request.Columns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Word))
+            {
+                body["word"] = request.Word;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordSynonyms))
+            {
+                body["wordSynonyms"] = request.WordSynonyms;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/create/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSynonymsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在当前指定的业务空间下面，新建同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynonymsResponse
+        /// </returns>
+        public CreateSynonymsResponse CreateSynonyms(CreateSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSynonymsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在当前指定的业务空间下面，新建同义词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSynonymsResponse
+        /// </returns>
+        public async Task<CreateSynonymsResponse> CreateSynonymsAsync(CreateSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSynonymsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>在指定的业务空间创建虚拟数据源</para>
         /// </summary>
         /// 
@@ -501,6 +951,432 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBusinessLogicResponse
+        /// </returns>
+        public DeleteBusinessLogicResponse DeleteBusinessLogicWithOptions(DeleteBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLogicIdKeys))
+            {
+                body["businessLogicIdKeys"] = request.BusinessLogicIdKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/delete/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteBusinessLogicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBusinessLogicResponse
+        /// </returns>
+        public async Task<DeleteBusinessLogicResponse> DeleteBusinessLogicWithOptionsAsync(DeleteBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLogicIdKeys))
+            {
+                body["businessLogicIdKeys"] = request.BusinessLogicIdKeys;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/delete/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteBusinessLogicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBusinessLogicResponse
+        /// </returns>
+        public DeleteBusinessLogicResponse DeleteBusinessLogic(DeleteBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteBusinessLogicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBusinessLogicResponse
+        /// </returns>
+        public async Task<DeleteBusinessLogicResponse> DeleteBusinessLogicAsync(DeleteBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteBusinessLogicWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从当前所指定的业务空间中，删除所指定的列</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteColumnResponse
+        /// </returns>
+        public DeleteColumnResponse DeleteColumnWithOptions(DeleteColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/delete/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteColumnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从当前所指定的业务空间中，删除所指定的列</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteColumnResponse
+        /// </returns>
+        public async Task<DeleteColumnResponse> DeleteColumnWithOptionsAsync(DeleteColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/delete/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteColumnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从当前所指定的业务空间中，删除所指定的列</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteColumnResponse
+        /// </returns>
+        public DeleteColumnResponse DeleteColumn(DeleteColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteColumnWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从当前所指定的业务空间中，删除所指定的列</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteColumnResponse
+        /// </returns>
+        public async Task<DeleteColumnResponse> DeleteColumnAsync(DeleteColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteColumnWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将当前指定数据表从指定业务空间管控中删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSelectedTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSelectedTableResponse
+        /// </returns>
+        public DeleteSelectedTableResponse DeleteSelectedTableWithOptions(DeleteSelectedTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSelectedTable",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/delete/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSelectedTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将当前指定数据表从指定业务空间管控中删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSelectedTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSelectedTableResponse
+        /// </returns>
+        public async Task<DeleteSelectedTableResponse> DeleteSelectedTableWithOptionsAsync(DeleteSelectedTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSelectedTable",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/delete/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSelectedTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将当前指定数据表从指定业务空间管控中删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSelectedTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSelectedTableResponse
+        /// </returns>
+        public DeleteSelectedTableResponse DeleteSelectedTable(DeleteSelectedTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSelectedTableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将当前指定数据表从指定业务空间管控中删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSelectedTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSelectedTableResponse
+        /// </returns>
+        public async Task<DeleteSelectedTableResponse> DeleteSelectedTableAsync(DeleteSelectedTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSelectedTableWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除指定业务空间下面的虚拟数据源实例</para>
         /// </summary>
         /// 
@@ -639,6 +1515,764 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteVirtualDatasourceInstanceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的企业知识名词解释列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessLogicResponse
+        /// </returns>
+        public ListBusinessLogicResponse ListBusinessLogicWithOptions(ListBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBusinessLogicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的企业知识名词解释列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessLogicResponse
+        /// </returns>
+        public async Task<ListBusinessLogicResponse> ListBusinessLogicWithOptionsAsync(ListBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBusinessLogicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的企业知识名词解释列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessLogicResponse
+        /// </returns>
+        public ListBusinessLogicResponse ListBusinessLogic(ListBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListBusinessLogicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的企业知识名词解释列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessLogicResponse
+        /// </returns>
+        public async Task<ListBusinessLogicResponse> ListBusinessLogicAsync(ListBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListBusinessLogicWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间，指定表下面的列信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListColumnResponse
+        /// </returns>
+        public ListColumnResponse ListColumnWithOptions(ListColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListColumnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间，指定表下面的列信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListColumnResponse
+        /// </returns>
+        public async Task<ListColumnResponse> ListColumnWithOptionsAsync(ListColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListColumnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间，指定表下面的列信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListColumnResponse
+        /// </returns>
+        public ListColumnResponse ListColumn(ListColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListColumnWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间，指定表下面的列信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListColumnResponse
+        /// </returns>
+        public async Task<ListColumnResponse> ListColumnAsync(ListColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListColumnWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间，指定表、列下的枚举值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnumMappingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnumMappingResponse
+        /// </returns>
+        public ListEnumMappingResponse ListEnumMappingWithOptions(ListEnumMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnumMapping",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/mapping",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnumMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间，指定表、列下的枚举值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnumMappingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnumMappingResponse
+        /// </returns>
+        public async Task<ListEnumMappingResponse> ListEnumMappingWithOptionsAsync(ListEnumMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnumMapping",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/mapping",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnumMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间，指定表、列下的枚举值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnumMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnumMappingResponse
+        /// </returns>
+        public ListEnumMappingResponse ListEnumMapping(ListEnumMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListEnumMappingWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间，指定表、列下的枚举值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnumMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnumMappingResponse
+        /// </returns>
+        public async Task<ListEnumMappingResponse> ListEnumMappingAsync(ListEnumMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListEnumMappingWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间处于以关联状态的数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSelectedTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSelectedTablesResponse
+        /// </returns>
+        public ListSelectedTablesResponse ListSelectedTablesWithOptions(ListSelectedTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSelectedTables",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/datasource/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSelectedTablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间处于以关联状态的数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSelectedTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSelectedTablesResponse
+        /// </returns>
+        public async Task<ListSelectedTablesResponse> ListSelectedTablesWithOptionsAsync(ListSelectedTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSelectedTables",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/datasource/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSelectedTablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间处于以关联状态的数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSelectedTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSelectedTablesResponse
+        /// </returns>
+        public ListSelectedTablesResponse ListSelectedTables(ListSelectedTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSelectedTablesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前业务空间处于以关联状态的数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSelectedTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSelectedTablesResponse
+        /// </returns>
+        public async Task<ListSelectedTablesResponse> ListSelectedTablesAsync(ListSelectedTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSelectedTablesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的同义词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSynonymsResponse
+        /// </returns>
+        public ListSynonymsResponse ListSynonymsWithOptions(ListSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSynonymsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的同义词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSynonymsResponse
+        /// </returns>
+        public async Task<ListSynonymsResponse> ListSynonymsWithOptionsAsync(ListSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/list/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSynonymsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的同义词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSynonymsResponse
+        /// </returns>
+        public ListSynonymsResponse ListSynonyms(ListSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSynonymsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前指定业务空间下的同义词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSynonymsResponse
+        /// </returns>
+        public async Task<ListSynonymsResponse> ListSynonymsAsync(ListSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSynonymsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -789,6 +2423,298 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListVirtualDatasourceInstanceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将指定数据表的数据列恢复到初始话状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverColumnResponse
+        /// </returns>
+        public RecoverColumnResponse RecoverColumnWithOptions(RecoverColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/recover/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverColumnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将指定数据表的数据列恢复到初始话状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverColumnResponse
+        /// </returns>
+        public async Task<RecoverColumnResponse> RecoverColumnWithOptionsAsync(RecoverColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/recover/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverColumnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将指定数据表的数据列恢复到初始话状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverColumnResponse
+        /// </returns>
+        public RecoverColumnResponse RecoverColumn(RecoverColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RecoverColumnWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将指定数据表的数据列恢复到初始话状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverColumnResponse
+        /// </returns>
+        public async Task<RecoverColumnResponse> RecoverColumnAsync(RecoverColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RecoverColumnWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从远程数据库刷新当前所关联的数据表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResyncTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResyncTableResponse
+        /// </returns>
+        public ResyncTableResponse ResyncTableWithOptions(ResyncTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResyncTable",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/refresh/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResyncTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从远程数据库刷新当前所关联的数据表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResyncTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResyncTableResponse
+        /// </returns>
+        public async Task<ResyncTableResponse> ResyncTableWithOptionsAsync(ResyncTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResyncTable",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/refresh/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResyncTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从远程数据库刷新当前所关联的数据表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResyncTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResyncTableResponse
+        /// </returns>
+        public ResyncTableResponse ResyncTable(ResyncTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ResyncTableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从远程数据库刷新当前所关联的数据表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResyncTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResyncTableResponse
+        /// </returns>
+        public async Task<ResyncTableResponse> ResyncTableAsync(ResyncTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ResyncTableWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1251,6 +3177,860 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SyncRemoteTablesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBusinessLogicResponse
+        /// </returns>
+        public UpdateBusinessLogicResponse UpdateBusinessLogicWithOptions(UpdateBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLogicIdKey))
+            {
+                body["businessLogicIdKey"] = request.BusinessLogicIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBusinessLogicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBusinessLogicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBusinessLogicResponse
+        /// </returns>
+        public async Task<UpdateBusinessLogicResponse> UpdateBusinessLogicWithOptionsAsync(UpdateBusinessLogicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLogicIdKey))
+            {
+                body["businessLogicIdKey"] = request.BusinessLogicIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBusinessLogic",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/logic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBusinessLogicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBusinessLogicResponse
+        /// </returns>
+        public UpdateBusinessLogicResponse UpdateBusinessLogic(UpdateBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateBusinessLogicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间下所指定的业务逻辑解释</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBusinessLogicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBusinessLogicResponse
+        /// </returns>
+        public async Task<UpdateBusinessLogicResponse> UpdateBusinessLogicAsync(UpdateBusinessLogicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateBusinessLogicWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间中，指定列的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateColumnResponse
+        /// </returns>
+        public UpdateColumnResponse UpdateColumnWithOptions(UpdateColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChineseName))
+            {
+                body["chineseName"] = request.ChineseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnumType))
+            {
+                body["enumType"] = request.EnumType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnumValues))
+            {
+                body["enumValues"] = request.EnumValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeMax))
+            {
+                body["rangeMax"] = request.RangeMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeMin))
+            {
+                body["rangeMin"] = request.RangeMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Samples))
+            {
+                body["samples"] = request.Samples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateColumnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间中，指定列的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateColumnRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateColumnResponse
+        /// </returns>
+        public async Task<UpdateColumnResponse> UpdateColumnWithOptionsAsync(UpdateColumnRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChineseName))
+            {
+                body["chineseName"] = request.ChineseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnumType))
+            {
+                body["enumType"] = request.EnumType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnumValues))
+            {
+                body["enumValues"] = request.EnumValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeMax))
+            {
+                body["rangeMax"] = request.RangeMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeMin))
+            {
+                body["rangeMin"] = request.RangeMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Samples))
+            {
+                body["samples"] = request.Samples;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateColumn",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/column",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateColumnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间中，指定列的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateColumnResponse
+        /// </returns>
+        public UpdateColumnResponse UpdateColumn(UpdateColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateColumnWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间中，指定列的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateColumnResponse
+        /// </returns>
+        public async Task<UpdateColumnResponse> UpdateColumnAsync(UpdateColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateColumnWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间指定列下的枚举值信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnumMappingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnumMappingResponse
+        /// </returns>
+        public UpdateEnumMappingResponse UpdateEnumMappingWithOptions(UpdateEnumMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnumMapping))
+            {
+                body["enumMapping"] = request.EnumMapping;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEnumMapping",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/mapping",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEnumMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间指定列下的枚举值信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnumMappingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnumMappingResponse
+        /// </returns>
+        public async Task<UpdateEnumMappingResponse> UpdateEnumMappingWithOptionsAsync(UpdateEnumMappingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnIdKey))
+            {
+                body["columnIdKey"] = request.ColumnIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnumMapping))
+            {
+                body["enumMapping"] = request.EnumMapping;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEnumMapping",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/mapping",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEnumMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间指定列下的枚举值信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnumMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnumMappingResponse
+        /// </returns>
+        public UpdateEnumMappingResponse UpdateEnumMapping(UpdateEnumMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateEnumMappingWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前指定业务空间指定列下的枚举值信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnumMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnumMappingResponse
+        /// </returns>
+        public async Task<UpdateEnumMappingResponse> UpdateEnumMappingAsync(UpdateEnumMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateEnumMappingWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前业务空间指定的同义词信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsResponse
+        /// </returns>
+        public UpdateSynonymsResponse UpdateSynonymsWithOptions(UpdateSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Columns))
+            {
+                body["columns"] = request.Columns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymIdKey))
+            {
+                body["synonymIdKey"] = request.SynonymIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Word))
+            {
+                body["word"] = request.Word;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordSynonyms))
+            {
+                body["wordSynonyms"] = request.WordSynonyms;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSynonymsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前业务空间指定的同义词信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsResponse
+        /// </returns>
+        public async Task<UpdateSynonymsResponse> UpdateSynonymsWithOptionsAsync(UpdateSynonymsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Columns))
+            {
+                body["columns"] = request.Columns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynonymIdKey))
+            {
+                body["synonymIdKey"] = request.SynonymIdKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Word))
+            {
+                body["word"] = request.Word;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordSynonyms))
+            {
+                body["wordSynonyms"] = request.WordSynonyms;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSynonyms",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/synonyms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSynonymsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前业务空间指定的同义词信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsResponse
+        /// </returns>
+        public UpdateSynonymsResponse UpdateSynonyms(UpdateSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSynonymsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前业务空间指定的同义词信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsResponse
+        /// </returns>
+        public async Task<UpdateSynonymsResponse> UpdateSynonymsAsync(UpdateSynonymsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSynonymsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前所指定的数据表的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableInfoResponse
+        /// </returns>
+        public UpdateTableInfoResponse UpdateTableInfoWithOptions(UpdateTableInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForeignKeys))
+            {
+                body["foreignKeys"] = request.ForeignKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryKey))
+            {
+                body["primaryKey"] = request.PrimaryKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTableInfo",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTableInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前所指定的数据表的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableInfoResponse
+        /// </returns>
+        public async Task<UpdateTableInfoResponse> UpdateTableInfoWithOptionsAsync(UpdateTableInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForeignKeys))
+            {
+                body["foreignKeys"] = request.ForeignKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryKey))
+            {
+                body["primaryKey"] = request.PrimaryKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
+            {
+                body["tableIdKey"] = request.TableIdKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTableInfo",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/update/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTableInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前所指定的数据表的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableInfoResponse
+        /// </returns>
+        public UpdateTableInfoResponse UpdateTableInfo(UpdateTableInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateTableInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改当前所指定的数据表的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableInfoResponse
+        /// </returns>
+        public async Task<UpdateTableInfoResponse> UpdateTableInfoAsync(UpdateTableInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateTableInfoWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
