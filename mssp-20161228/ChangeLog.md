@@ -1,3 +1,6 @@
+2024-12-24 Version: 1.3.1
+- Generated csharp 2016-12-28 for mssp.
+
 2024-12-22 Version: 1.3.0
 - Support API ConfirmDjbhReport.
 - Support API DeleteDjbhReport.
