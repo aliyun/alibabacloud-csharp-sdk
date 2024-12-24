@@ -899,5 +899,137 @@ namespace AlibabaCloud.SDK.Httpdns20160201
             return await ListDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>刷新域名缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RefreshResolveCacheRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshResolveCacheResponse
+        /// </returns>
+        public RefreshResolveCacheResponse RefreshResolveCacheWithOptions(RefreshResolveCacheRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RefreshResolveCacheShrinkRequest request = new RefreshResolveCacheShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Domains))
+            {
+                request.DomainsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Domains, "Domains", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainsShrink))
+            {
+                query["Domains"] = request.DomainsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshResolveCache",
+                Version = "2016-02-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshResolveCacheResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>刷新域名缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RefreshResolveCacheRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshResolveCacheResponse
+        /// </returns>
+        public async Task<RefreshResolveCacheResponse> RefreshResolveCacheWithOptionsAsync(RefreshResolveCacheRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RefreshResolveCacheShrinkRequest request = new RefreshResolveCacheShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Domains))
+            {
+                request.DomainsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Domains, "Domains", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainsShrink))
+            {
+                query["Domains"] = request.DomainsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshResolveCache",
+                Version = "2016-02-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshResolveCacheResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>刷新域名缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshResolveCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshResolveCacheResponse
+        /// </returns>
+        public RefreshResolveCacheResponse RefreshResolveCache(RefreshResolveCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RefreshResolveCacheWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>刷新域名缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshResolveCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshResolveCacheResponse
+        /// </returns>
+        public async Task<RefreshResolveCacheResponse> RefreshResolveCacheAsync(RefreshResolveCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RefreshResolveCacheWithOptionsAsync(request, runtime);
+        }
+
     }
 }
