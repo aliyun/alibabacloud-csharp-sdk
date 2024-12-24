@@ -41,6 +41,40 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public int? LockRoom { get; set; }
 
+            [NameInMap("MoziConfOpenRecordSetting")]
+            [Validation(Required=false)]
+            public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfOpenRecordSetting MoziConfOpenRecordSetting { get; set; }
+            public class UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfOpenRecordSetting : TeaModel {
+                [NameInMap("IsFollowHost")]
+                [Validation(Required=false)]
+                public bool? IsFollowHost { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>grid</para>
+                /// </summary>
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("RecordAutoStart")]
+                [Validation(Required=false)]
+                public int? RecordAutoStart { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("RecordAutoStartType")]
+                [Validation(Required=false)]
+                public int? RecordAutoStartType { get; set; }
+
+            }
+
             [NameInMap("MoziConfVirtualExtraSetting")]
             [Validation(Required=false)]
             public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting MoziConfVirtualExtraSetting { get; set; }
@@ -88,6 +122,36 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [NameInMap("MinutesOwnerUserId")]
                 [Validation(Required=false)]
                 public string MinutesOwnerUserId { get; set; }
+
+                [NameInMap("MoziConfExtensionAppSettings")]
+                [Validation(Required=false)]
+                public List<UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSettingMoziConfExtensionAppSettings> MoziConfExtensionAppSettings { get; set; }
+                public class UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSettingMoziConfExtensionAppSettings : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
+                    [NameInMap("AutoOpenMode")]
+                    [Validation(Required=false)]
+                    public int? AutoOpenMode { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xxxx</para>
+                    /// </summary>
+                    [NameInMap("CoolAppCode")]
+                    [Validation(Required=false)]
+                    public string CoolAppCode { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xxx</para>
+                    /// </summary>
+                    [NameInMap("ExtensionAppBizData")]
+                    [Validation(Required=false)]
+                    public string ExtensionAppBizData { get; set; }
+
+                }
 
                 [NameInMap("PushAllMeetingRecords")]
                 [Validation(Required=false)]

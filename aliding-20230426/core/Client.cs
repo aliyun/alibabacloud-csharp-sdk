@@ -7638,6 +7638,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleConfSettingModel))
+            {
+                request.ScheduleConfSettingModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleConfSettingModel, "ScheduleConfSettingModel", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
             {
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
@@ -7646,6 +7650,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConfSettingModelShrink))
+            {
+                body["ScheduleConfSettingModel"] = request.ScheduleConfSettingModelShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -7717,6 +7725,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleConfSettingModel))
+            {
+                request.ScheduleConfSettingModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleConfSettingModel, "ScheduleConfSettingModel", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
             {
                 request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
@@ -7725,6 +7737,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleConfSettingModelShrink))
+            {
+                body["ScheduleConfSettingModel"] = request.ScheduleConfSettingModelShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -21131,6 +21147,202 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>委托权限获取组织或者互联网公开文档内容taskId</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetOrgOrWebOpenDocContentTaskIdRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetOrgOrWebOpenDocContentTaskIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgOrWebOpenDocContentTaskIdResponse
+        /// </returns>
+        public GetOrgOrWebOpenDocContentTaskIdResponse GetOrgOrWebOpenDocContentTaskIdWithOptions(GetOrgOrWebOpenDocContentTaskIdRequest tmpReq, GetOrgOrWebOpenDocContentTaskIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetOrgOrWebOpenDocContentTaskIdShrinkRequest request = new GetOrgOrWebOpenDocContentTaskIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetOrgOrWebOpenDocContentTaskIdShrinkHeaders headers = new GetOrgOrWebOpenDocContentTaskIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DentryUuid))
+            {
+                body["DentryUuid"] = request.DentryUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateCp))
+            {
+                body["GenerateCp"] = request.GenerateCp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFormat))
+            {
+                body["TargetFormat"] = request.TargetFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOrgOrWebOpenDocContentTaskId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v2/documents/getOrgOrWebOpenDocContentTaskId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOrgOrWebOpenDocContentTaskIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>委托权限获取组织或者互联网公开文档内容taskId</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetOrgOrWebOpenDocContentTaskIdRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetOrgOrWebOpenDocContentTaskIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgOrWebOpenDocContentTaskIdResponse
+        /// </returns>
+        public async Task<GetOrgOrWebOpenDocContentTaskIdResponse> GetOrgOrWebOpenDocContentTaskIdWithOptionsAsync(GetOrgOrWebOpenDocContentTaskIdRequest tmpReq, GetOrgOrWebOpenDocContentTaskIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetOrgOrWebOpenDocContentTaskIdShrinkRequest request = new GetOrgOrWebOpenDocContentTaskIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetOrgOrWebOpenDocContentTaskIdShrinkHeaders headers = new GetOrgOrWebOpenDocContentTaskIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DentryUuid))
+            {
+                body["DentryUuid"] = request.DentryUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateCp))
+            {
+                body["GenerateCp"] = request.GenerateCp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFormat))
+            {
+                body["TargetFormat"] = request.TargetFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOrgOrWebOpenDocContentTaskId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v2/documents/getOrgOrWebOpenDocContentTaskId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOrgOrWebOpenDocContentTaskIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>委托权限获取组织或者互联网公开文档内容taskId</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrgOrWebOpenDocContentTaskIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgOrWebOpenDocContentTaskIdResponse
+        /// </returns>
+        public GetOrgOrWebOpenDocContentTaskIdResponse GetOrgOrWebOpenDocContentTaskId(GetOrgOrWebOpenDocContentTaskIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetOrgOrWebOpenDocContentTaskIdHeaders headers = new GetOrgOrWebOpenDocContentTaskIdHeaders();
+            return GetOrgOrWebOpenDocContentTaskIdWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>委托权限获取组织或者互联网公开文档内容taskId</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrgOrWebOpenDocContentTaskIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrgOrWebOpenDocContentTaskIdResponse
+        /// </returns>
+        public async Task<GetOrgOrWebOpenDocContentTaskIdResponse> GetOrgOrWebOpenDocContentTaskIdAsync(GetOrgOrWebOpenDocContentTaskIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetOrgOrWebOpenDocContentTaskIdHeaders headers = new GetOrgOrWebOpenDocContentTaskIdHeaders();
+            return await GetOrgOrWebOpenDocContentTaskIdWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取流程定义</para>
         /// </summary>
         /// 
@@ -30531,6 +30743,202 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             QueryConferenceInfoHeaders headers = new QueryConferenceInfoHeaders();
             return await QueryConferenceInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据会议码查询视频会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryConferenceInfoByRoomCodeRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// QueryConferenceInfoByRoomCodeHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConferenceInfoByRoomCodeResponse
+        /// </returns>
+        public QueryConferenceInfoByRoomCodeResponse QueryConferenceInfoByRoomCodeWithOptions(QueryConferenceInfoByRoomCodeRequest tmpReq, QueryConferenceInfoByRoomCodeHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryConferenceInfoByRoomCodeShrinkRequest request = new QueryConferenceInfoByRoomCodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            QueryConferenceInfoByRoomCodeShrinkHeaders headers = new QueryConferenceInfoByRoomCodeShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCode))
+            {
+                body["roomCode"] = request.RoomCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryConferenceInfoByRoomCode",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/queryConferenceInfoByRoomCode",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryConferenceInfoByRoomCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据会议码查询视频会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryConferenceInfoByRoomCodeRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// QueryConferenceInfoByRoomCodeHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConferenceInfoByRoomCodeResponse
+        /// </returns>
+        public async Task<QueryConferenceInfoByRoomCodeResponse> QueryConferenceInfoByRoomCodeWithOptionsAsync(QueryConferenceInfoByRoomCodeRequest tmpReq, QueryConferenceInfoByRoomCodeHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryConferenceInfoByRoomCodeShrinkRequest request = new QueryConferenceInfoByRoomCodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            QueryConferenceInfoByRoomCodeShrinkHeaders headers = new QueryConferenceInfoByRoomCodeShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCode))
+            {
+                body["roomCode"] = request.RoomCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryConferenceInfoByRoomCode",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/queryConferenceInfoByRoomCode",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryConferenceInfoByRoomCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据会议码查询视频会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryConferenceInfoByRoomCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConferenceInfoByRoomCodeResponse
+        /// </returns>
+        public QueryConferenceInfoByRoomCodeResponse QueryConferenceInfoByRoomCode(QueryConferenceInfoByRoomCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryConferenceInfoByRoomCodeHeaders headers = new QueryConferenceInfoByRoomCodeHeaders();
+            return QueryConferenceInfoByRoomCodeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据会议码查询视频会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryConferenceInfoByRoomCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConferenceInfoByRoomCodeResponse
+        /// </returns>
+        public async Task<QueryConferenceInfoByRoomCodeResponse> QueryConferenceInfoByRoomCodeAsync(QueryConferenceInfoByRoomCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryConferenceInfoByRoomCodeHeaders headers = new QueryConferenceInfoByRoomCodeHeaders();
+            return await QueryConferenceInfoByRoomCodeWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        [NameInMap("ScheduleConfSettingModel")]
+        [Validation(Required=false)]
+        public string ScheduleConfSettingModelShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
