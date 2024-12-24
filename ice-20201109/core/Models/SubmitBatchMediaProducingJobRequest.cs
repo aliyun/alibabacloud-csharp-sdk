@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputConfig { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html?spm=a2c4g.439285.0.i1#section-urj-v3f-0s1">UserData</a>.</para>
+        /// <para>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

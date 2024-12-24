@@ -19,6 +19,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("IndexInfo")]
+        [Validation(Required=false)]
+        public List<QuerySearchLibResponseBodyIndexInfo> IndexInfo { get; set; }
+        public class QuerySearchLibResponseBodyIndexInfo : TeaModel {
+            [NameInMap("IndexReadiness")]
+            [Validation(Required=false)]
+            public string IndexReadiness { get; set; }
+
+            [NameInMap("IndexStatus")]
+            [Validation(Required=false)]
+            public string IndexStatus { get; set; }
+
+            [NameInMap("IndexType")]
+            [Validation(Required=false)]
+            public string IndexType { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

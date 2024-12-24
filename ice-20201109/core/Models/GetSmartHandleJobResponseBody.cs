@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string MediaId { get; set; }
 
+            [NameInMap("MediaUrl")]
+            [Validation(Required=false)]
+            public string MediaUrl { get; set; }
+
             /// <summary>
             /// <para>The token usage. This parameter is returned only for keyword-based text generation jobs.</para>
             /// 

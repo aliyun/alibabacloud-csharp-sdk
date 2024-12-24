@@ -36,6 +36,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<ListSearchLibResponseBodySearchLibInfoList> SearchLibInfoList { get; set; }
         public class ListSearchLibResponseBodySearchLibInfoList : TeaModel {
+            [NameInMap("IndexInfo")]
+            [Validation(Required=false)]
+            public List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> IndexInfo { get; set; }
+            public class ListSearchLibResponseBodySearchLibInfoListIndexInfo : TeaModel {
+                [NameInMap("IndexReadiness")]
+                [Validation(Required=false)]
+                public string IndexReadiness { get; set; }
+
+                [NameInMap("IndexStatus")]
+                [Validation(Required=false)]
+                public string IndexStatus { get; set; }
+
+                [NameInMap("IndexType")]
+                [Validation(Required=false)]
+                public string IndexType { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The search library.</para>
             /// 
