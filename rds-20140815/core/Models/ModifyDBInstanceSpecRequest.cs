@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? ColdDataEnabled { get; set; }
 
+        [NameInMap("CompressionMode")]
+        [Validation(Required=false)]
+        public string CompressionMode { get; set; }
+
         /// <summary>
         /// <para>The new instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.</para>
         /// <remarks>

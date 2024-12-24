@@ -56799,6 +56799,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["ColdDataEnabled"] = request.ColdDataEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionMode))
+            {
+                query["CompressionMode"] = request.CompressionMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
                 query["DBInstanceClass"] = request.DBInstanceClass;
@@ -56987,6 +56991,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColdDataEnabled))
             {
                 query["ColdDataEnabled"] = request.ColdDataEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompressionMode))
+            {
+                query["CompressionMode"] = request.CompressionMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {

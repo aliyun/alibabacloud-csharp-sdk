@@ -181,6 +181,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Collation { get; set; }
 
+                [NameInMap("CompressionMode")]
+                [Validation(Required=false)]
+                public string CompressionMode { get; set; }
+
+                [NameInMap("CompressionRatio")]
+                [Validation(Required=false)]
+                public string CompressionRatio { get; set; }
+
                 /// <summary>
                 /// <para>The connection mode of the instance. Valid values:</para>
                 /// <list type="bullet">
@@ -1081,6 +1089,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("SuperPermissionMode")]
                 [Validation(Required=false)]
                 public string SuperPermissionMode { get; set; }
+
+                [NameInMap("SupportCompression")]
+                [Validation(Required=false)]
+                public bool? SupportCompression { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the temporary instance that is attached to the primary instance.</para>
