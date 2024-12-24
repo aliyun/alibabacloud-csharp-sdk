@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Pod { get; set; }
 
+        [NameInMap("showPod")]
+        [Validation(Required=false)]
+        public int? ShowPod { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1725797727754</para>

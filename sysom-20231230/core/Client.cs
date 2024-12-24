@@ -355,6 +355,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["pod"] = request.Pod;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPod))
+            {
+                query["showPod"] = request.ShowPod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
@@ -420,6 +424,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pod))
             {
                 query["pod"] = request.Pod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPod))
+            {
+                query["showPod"] = request.ShowPod;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
