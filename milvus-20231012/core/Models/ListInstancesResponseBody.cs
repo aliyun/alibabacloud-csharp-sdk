@@ -161,6 +161,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public string InstanceStatus { get; set; }
 
+            [NameInMap("NodeType")]
+            [Validation(Required=false)]
+            public string NodeType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>

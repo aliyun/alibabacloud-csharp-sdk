@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                     [Validation(Required=false)]
                     public int? CuNum { get; set; }
 
+                    [NameInMap("CuRatio")]
+                    [Validation(Required=false)]
+                    public int? CuRatio { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -250,6 +254,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public int? QueryNodeReplica { get; set; }
 
             }
+
+            [NameInMap("NodeType")]
+            [Validation(Required=false)]
+            public string NodeType { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
