@@ -1,3 +1,7 @@
+2024-12-25 Version: 6.6.0
+- Support API DeleteEip.
+
+
 2024-12-10 Version: 6.5.1
 - Update API GetBucketAcl: update param BucketName.
 
