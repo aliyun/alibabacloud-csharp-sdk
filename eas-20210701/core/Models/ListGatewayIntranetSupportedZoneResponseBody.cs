@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGatewayIntranetSupportedZoneResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The zones that are supported by the region.</para>
+        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<string> Zones { get; set; }

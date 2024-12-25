@@ -121,6 +121,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? Replicas { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable HTTP to HTTPS redirection.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

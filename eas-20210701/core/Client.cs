@@ -4973,6 +4973,108 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取群组端点列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGroupEndpointsResponse
+        /// </returns>
+        public DescribeGroupEndpointsResponse DescribeGroupEndpointsWithOptions(string ClusterId, string GroupName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGroupEndpoints",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GroupName) + "/endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGroupEndpointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取群组端点列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGroupEndpointsResponse
+        /// </returns>
+        public async Task<DescribeGroupEndpointsResponse> DescribeGroupEndpointsWithOptionsAsync(string ClusterId, string GroupName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGroupEndpoints",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GroupName) + "/endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGroupEndpointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取群组端点列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeGroupEndpointsResponse
+        /// </returns>
+        public DescribeGroupEndpointsResponse DescribeGroupEndpoints(string ClusterId, string GroupName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeGroupEndpointsWithOptions(ClusterId, GroupName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取群组端点列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeGroupEndpointsResponse
+        /// </returns>
+        public async Task<DescribeGroupEndpointsResponse> DescribeGroupEndpointsAsync(string ClusterId, string GroupName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeGroupEndpointsWithOptionsAsync(ClusterId, GroupName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
@@ -5683,6 +5785,108 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeServiceDiagnosisWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务端点列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceEndpointsResponse
+        /// </returns>
+        public DescribeServiceEndpointsResponse DescribeServiceEndpointsWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServiceEndpoints",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServiceEndpointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务端点列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceEndpointsResponse
+        /// </returns>
+        public async Task<DescribeServiceEndpointsResponse> DescribeServiceEndpointsWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServiceEndpoints",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServiceEndpointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务端点列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeServiceEndpointsResponse
+        /// </returns>
+        public DescribeServiceEndpointsResponse DescribeServiceEndpoints(string ClusterId, string ServiceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeServiceEndpointsWithOptions(ClusterId, ServiceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务端点列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeServiceEndpointsResponse
+        /// </returns>
+        public async Task<DescribeServiceEndpointsResponse> DescribeServiceEndpointsAsync(string ClusterId, string ServiceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeServiceEndpointsWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7547,7 +7751,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网支持的可用区</para>
+        /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7583,7 +7787,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网支持的可用区</para>
+        /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7619,7 +7823,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网支持的可用区</para>
+        /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7634,7 +7838,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关内网支持的可用区</para>
+        /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
         /// <returns>
