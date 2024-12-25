@@ -8,24 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class ListRenderingInstancesRequest : TeaModel {
+    public class ModifyRenderingInstanceRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
         /// </summary>
@@ -41,9 +27,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RenderingSpec { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
-        public int? StorageSize { get; set; }
+        public string StorageSize { get; set; }
 
     }
 

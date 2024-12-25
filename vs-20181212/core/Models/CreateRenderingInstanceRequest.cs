@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         }
 
+        [NameInMap("InstanceBillingCycle")]
+        [Validation(Required=false)]
+        public string InstanceBillingCycle { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RenderingSpec")]
         [Validation(Required=false)]
         public string RenderingSpec { get; set; }
+
+        [NameInMap("StorageSize")]
+        [Validation(Required=false)]
+        public string StorageSize { get; set; }
 
     }
 

@@ -3271,146 +3271,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         }
 
         /// <param name="request">
-        /// CreateClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateClusterResponse
-        /// </returns>
-        public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternalPorts))
-            {
-                query["InternalPorts"] = request.InternalPorts;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainTime))
-            {
-                query["MaintainTime"] = request.MaintainTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
-            {
-                query["SecurityGroupId"] = request.SecurityGroupId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// CreateClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateClusterResponse
-        /// </returns>
-        public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternalPorts))
-            {
-                query["InternalPorts"] = request.InternalPorts;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainTime))
-            {
-                query["MaintainTime"] = request.MaintainTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
-            {
-                query["SecurityGroupId"] = request.SecurityGroupId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// CreateClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateClusterResponse
-        /// </returns>
-        public CreateClusterResponse CreateCluster(CreateClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateClusterWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// CreateClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateClusterResponse
-        /// </returns>
-        public async Task<CreateClusterResponse> CreateClusterAsync(CreateClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateClusterWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
         /// CreateDeviceRequest
         /// </param>
         /// <param name="runtime">
@@ -4344,6 +4204,134 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRenderingDataPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRenderingDataPackageResponse
+        /// </returns>
+        public CreateRenderingDataPackageResponse CreateRenderingDataPackageWithOptions(CreateRenderingDataPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRenderingDataPackage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRenderingDataPackageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRenderingDataPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRenderingDataPackageResponse
+        /// </returns>
+        public async Task<CreateRenderingDataPackageResponse> CreateRenderingDataPackageWithOptionsAsync(CreateRenderingDataPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRenderingDataPackage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRenderingDataPackageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRenderingDataPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRenderingDataPackageResponse
+        /// </returns>
+        public CreateRenderingDataPackageResponse CreateRenderingDataPackage(CreateRenderingDataPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRenderingDataPackageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRenderingDataPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRenderingDataPackageResponse
+        /// </returns>
+        public async Task<CreateRenderingDataPackageResponse> CreateRenderingDataPackageAsync(CreateRenderingDataPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRenderingDataPackageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>申请云渲染资源实例</para>
         /// </summary>
         /// 
@@ -4375,6 +4363,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["ClientInfo"] = request.ClientInfoShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
@@ -4394,6 +4386,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingSpec))
             {
                 query["RenderingSpec"] = request.RenderingSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
+            {
+                query["StorageSize"] = request.StorageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4447,6 +4443,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["ClientInfo"] = request.ClientInfoShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
@@ -4466,6 +4466,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingSpec))
             {
                 query["RenderingSpec"] = request.RenderingSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
+            {
+                query["StorageSize"] = request.StorageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5144,114 +5148,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudAppWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DeleteClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteClusterResponse
-        /// </returns>
-        public DeleteClusterResponse DeleteClusterWithOptions(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DeleteClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteClusterResponse
-        /// </returns>
-        public async Task<DeleteClusterResponse> DeleteClusterWithOptionsAsync(DeleteClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DeleteClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteClusterResponse
-        /// </returns>
-        public DeleteClusterResponse DeleteCluster(DeleteClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteClusterWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DeleteClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteClusterResponse
-        /// </returns>
-        public async Task<DeleteClusterResponse> DeleteClusterAsync(DeleteClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteClusterWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -6752,502 +6648,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccountStatWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterResponse
-        /// </returns>
-        public DescribeClusterResponse DescribeClusterWithOptions(DescribeClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeClusterResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterResponse
-        /// </returns>
-        public async Task<DescribeClusterResponse> DescribeClusterWithOptionsAsync(DescribeClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeClusterResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterResponse
-        /// </returns>
-        public DescribeClusterResponse DescribeCluster(DescribeClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeClusterWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterResponse
-        /// </returns>
-        public async Task<DescribeClusterResponse> DescribeClusterAsync(DescribeClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeClusterWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeClusterDevicesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterDevicesResponse
-        /// </returns>
-        public DescribeClusterDevicesResponse DescribeClusterDevicesWithOptions(DescribeClusterDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EdgeNodeName))
-            {
-                query["EdgeNodeName"] = request.EdgeNodeName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
-            {
-                query["Platform"] = request.Platform;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Specification))
-            {
-                query["Specification"] = request.Specification;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeClusterDevices",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeClusterDevicesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeClusterDevicesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterDevicesResponse
-        /// </returns>
-        public async Task<DescribeClusterDevicesResponse> DescribeClusterDevicesWithOptionsAsync(DescribeClusterDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EdgeNodeName))
-            {
-                query["EdgeNodeName"] = request.EdgeNodeName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
-            {
-                query["Platform"] = request.Platform;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Specification))
-            {
-                query["Specification"] = request.Specification;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeClusterDevices",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeClusterDevicesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeClusterDevicesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterDevicesResponse
-        /// </returns>
-        public DescribeClusterDevicesResponse DescribeClusterDevices(DescribeClusterDevicesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeClusterDevicesWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeClusterDevicesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClusterDevicesResponse
-        /// </returns>
-        public async Task<DescribeClusterDevicesResponse> DescribeClusterDevicesAsync(DescribeClusterDevicesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeClusterDevicesWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeClustersRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClustersResponse
-        /// </returns>
-        public DescribeClustersResponse DescribeClustersWithOptions(DescribeClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeClusters",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeClustersResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeClustersRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClustersResponse
-        /// </returns>
-        public async Task<DescribeClustersResponse> DescribeClustersWithOptionsAsync(DescribeClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeClusters",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeClustersResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeClustersRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClustersResponse
-        /// </returns>
-        public DescribeClustersResponse DescribeClusters(DescribeClustersRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeClustersWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeClustersRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeClustersResponse
-        /// </returns>
-        public async Task<DescribeClustersResponse> DescribeClustersAsync(DescribeClustersRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeClustersWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeContainerInstanceIdRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeContainerInstanceIdResponse
-        /// </returns>
-        public DescribeContainerInstanceIdResponse DescribeContainerInstanceIdWithOptions(DescribeContainerInstanceIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
-            {
-                query["NodeName"] = request.NodeName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodIndex))
-            {
-                query["PodIndex"] = request.PodIndex;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeContainerInstanceId",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeContainerInstanceIdResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeContainerInstanceIdRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeContainerInstanceIdResponse
-        /// </returns>
-        public async Task<DescribeContainerInstanceIdResponse> DescribeContainerInstanceIdWithOptionsAsync(DescribeContainerInstanceIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
-            {
-                query["NodeName"] = request.NodeName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodIndex))
-            {
-                query["PodIndex"] = request.PodIndex;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeContainerInstanceId",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeContainerInstanceIdResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeContainerInstanceIdRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeContainerInstanceIdResponse
-        /// </returns>
-        public DescribeContainerInstanceIdResponse DescribeContainerInstanceId(DescribeContainerInstanceIdRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeContainerInstanceIdWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeContainerInstanceIdRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeContainerInstanceIdResponse
-        /// </returns>
-        public async Task<DescribeContainerInstanceIdResponse> DescribeContainerInstanceIdAsync(DescribeContainerInstanceIdRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeContainerInstanceIdWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -10728,122 +10128,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTemplatesWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeUserDevicesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeUserDevicesResponse
-        /// </returns>
-        public DescribeUserDevicesResponse DescribeUserDevicesWithOptions(DescribeUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsInstanceIds))
-            {
-                query["EnsInstanceIds"] = request.EnsInstanceIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerName))
-            {
-                query["ServerName"] = request.ServerName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeUserDevices",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeUserDevicesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeUserDevicesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeUserDevicesResponse
-        /// </returns>
-        public async Task<DescribeUserDevicesResponse> DescribeUserDevicesWithOptionsAsync(DescribeUserDevicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsInstanceIds))
-            {
-                query["EnsInstanceIds"] = request.EnsInstanceIds;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerName))
-            {
-                query["ServerName"] = request.ServerName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeUserDevices",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeUserDevicesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// DescribeUserDevicesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeUserDevicesResponse
-        /// </returns>
-        public DescribeUserDevicesResponse DescribeUserDevices(DescribeUserDevicesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeUserDevicesWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// DescribeUserDevicesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeUserDevicesResponse
-        /// </returns>
-        public async Task<DescribeUserDevicesResponse> DescribeUserDevicesAsync(DescribeUserDevicesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeUserDevicesWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -16656,6 +15940,142 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>变配云渲染资源实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingInstanceResponse
+        /// </returns>
+        public ModifyRenderingInstanceResponse ModifyRenderingInstanceWithOptions(ModifyRenderingInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingSpec))
+            {
+                query["RenderingSpec"] = request.RenderingSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
+            {
+                query["StorageSize"] = request.StorageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRenderingInstance",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRenderingInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配云渲染资源实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingInstanceResponse
+        /// </returns>
+        public async Task<ModifyRenderingInstanceResponse> ModifyRenderingInstanceWithOptionsAsync(ModifyRenderingInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingSpec))
+            {
+                query["RenderingSpec"] = request.RenderingSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
+            {
+                query["StorageSize"] = request.StorageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRenderingInstance",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRenderingInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配云渲染资源实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingInstanceResponse
+        /// </returns>
+        public ModifyRenderingInstanceResponse ModifyRenderingInstance(ModifyRenderingInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyRenderingInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配云渲染资源实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingInstanceResponse
+        /// </returns>
+        public async Task<ModifyRenderingInstanceResponse> ModifyRenderingInstanceAsync(ModifyRenderingInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyRenderingInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改云渲染实例限速带宽</para>
         /// </summary>
         /// 
@@ -17370,6 +16790,126 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebootRenderingInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseRenderingDataPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseRenderingDataPackageResponse
+        /// </returns>
+        public ReleaseRenderingDataPackageResponse ReleaseRenderingDataPackageWithOptions(ReleaseRenderingDataPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataPackageId))
+            {
+                query["DataPackageId"] = request.DataPackageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseRenderingDataPackage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseRenderingDataPackageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseRenderingDataPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseRenderingDataPackageResponse
+        /// </returns>
+        public async Task<ReleaseRenderingDataPackageResponse> ReleaseRenderingDataPackageWithOptionsAsync(ReleaseRenderingDataPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataPackageId))
+            {
+                query["DataPackageId"] = request.DataPackageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseRenderingDataPackage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseRenderingDataPackageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseRenderingDataPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseRenderingDataPackageResponse
+        /// </returns>
+        public ReleaseRenderingDataPackageResponse ReleaseRenderingDataPackage(ReleaseRenderingDataPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReleaseRenderingDataPackageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放云渲染数据包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseRenderingDataPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseRenderingDataPackageResponse
+        /// </returns>
+        public async Task<ReleaseRenderingDataPackageResponse> ReleaseRenderingDataPackageAsync(ReleaseRenderingDataPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReleaseRenderingDataPackageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -20818,162 +20358,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCloudAppInfoWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// UpdateClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateClusterResponse
-        /// </returns>
-        public UpdateClusterResponse UpdateClusterWithOptions(UpdateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
-            {
-                query["EffectiveTime"] = request.EffectiveTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternalPorts))
-            {
-                query["InternalPorts"] = request.InternalPorts;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainTime))
-            {
-                query["MaintainTime"] = request.MaintainTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
-            {
-                query["SecurityGroupId"] = request.SecurityGroupId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateClusterResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// UpdateClusterRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateClusterResponse
-        /// </returns>
-        public async Task<UpdateClusterResponse> UpdateClusterWithOptionsAsync(UpdateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
-            {
-                query["ClusterId"] = request.ClusterId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
-            {
-                query["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
-            {
-                query["EffectiveTime"] = request.EffectiveTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternalPorts))
-            {
-                query["InternalPorts"] = request.InternalPorts;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaintainTime))
-            {
-                query["MaintainTime"] = request.MaintainTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
-            {
-                query["SecurityGroupId"] = request.SecurityGroupId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateCluster",
-                Version = "2018-12-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateClusterResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// UpdateClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateClusterResponse
-        /// </returns>
-        public UpdateClusterResponse UpdateCluster(UpdateClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateClusterWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// UpdateClusterRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UpdateClusterResponse
-        /// </returns>
-        public async Task<UpdateClusterResponse> UpdateClusterAsync(UpdateClusterRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateClusterWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

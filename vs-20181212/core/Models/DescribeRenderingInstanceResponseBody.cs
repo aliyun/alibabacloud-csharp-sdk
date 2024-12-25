@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
 
+        [NameInMap("RenderingSpec")]
+        [Validation(Required=false)]
+        public string RenderingSpec { get; set; }
+
         [NameInMap("RenderingStatus")]
         [Validation(Required=false)]
         public DescribeRenderingInstanceResponseBodyRenderingStatus RenderingStatus { get; set; }
@@ -168,6 +172,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("StorageSize")]
+        [Validation(Required=false)]
+        public int? StorageSize { get; set; }
 
         [NameInMap("SystemInfo")]
         [Validation(Required=false)]

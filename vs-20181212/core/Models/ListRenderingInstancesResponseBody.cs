@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string RenderingSpec { get; set; }
 
+            [NameInMap("StorageSize")]
+            [Validation(Required=false)]
+            public int? StorageSize { get; set; }
+
         }
 
         /// <summary>

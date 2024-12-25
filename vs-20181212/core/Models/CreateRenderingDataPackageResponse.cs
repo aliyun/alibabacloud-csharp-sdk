@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class DeleteClusterResponse : TeaModel {
+    public class CreateRenderingDataPackageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteClusterResponseBody Body { get; set; }
+        public CreateRenderingDataPackageResponseBody Body { get; set; }
 
     }
 
