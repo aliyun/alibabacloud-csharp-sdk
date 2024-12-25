@@ -201,6 +201,184 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建外呼会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDialogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDialogResponse
+        /// </returns>
+        public CreateDialogResponse CreateDialogWithOptions(string workspaceId, CreateDialogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLibrary))
+            {
+                body["enableLibrary"] = request.EnableLibrary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                body["metaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayCode))
+            {
+                body["playCode"] = request.PlayCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QaLibraryList))
+            {
+                body["qaLibraryList"] = request.QaLibraryList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelfDirected))
+            {
+                body["selfDirected"] = request.SelfDirected;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDialog",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/dialog/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDialogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建外呼会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDialogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDialogResponse
+        /// </returns>
+        public async Task<CreateDialogResponse> CreateDialogWithOptionsAsync(string workspaceId, CreateDialogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLibrary))
+            {
+                body["enableLibrary"] = request.EnableLibrary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                body["metaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlayCode))
+            {
+                body["playCode"] = request.PlayCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QaLibraryList))
+            {
+                body["qaLibraryList"] = request.QaLibraryList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelfDirected))
+            {
+                body["selfDirected"] = request.SelfDirected;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDialog",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/dialog/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDialogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建外呼会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDialogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDialogResponse
+        /// </returns>
+        public CreateDialogResponse CreateDialog(string workspaceId, CreateDialogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDialogWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建外呼会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDialogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDialogResponse
+        /// </returns>
+        public async Task<CreateDialogResponse> CreateDialogAsync(string workspaceId, CreateDialogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDialogWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建财报总结任务</para>
         /// </summary>
         /// 
@@ -1571,6 +1749,152 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>根据文档解析问答QA</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenDocQaResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenDocQaResultResponse
+        /// </returns>
+        public GenDocQaResultResponse GenDocQaResultWithOptions(string workspaceId, GenDocQaResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["docId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LibraryId))
+            {
+                body["libraryId"] = request.LibraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenDocQaResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/qa/parse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenDocQaResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据文档解析问答QA</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenDocQaResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenDocQaResultResponse
+        /// </returns>
+        public async Task<GenDocQaResultResponse> GenDocQaResultWithOptionsAsync(string workspaceId, GenDocQaResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["docId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LibraryId))
+            {
+                body["libraryId"] = request.LibraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenDocQaResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/qa/parse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenDocQaResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据文档解析问答QA</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenDocQaResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenDocQaResultResponse
+        /// </returns>
+        public GenDocQaResultResponse GenDocQaResult(string workspaceId, GenDocQaResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GenDocQaResultWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据文档解析问答QA</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenDocQaResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenDocQaResultResponse
+        /// </returns>
+        public async Task<GenDocQaResultResponse> GenDocQaResultAsync(string workspaceId, GenDocQaResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GenDocQaResultWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取app配置</para>
         /// </summary>
         /// 
@@ -1669,6 +1993,144 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetAppConfigWithOptionsAsync(workspaceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取问答结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatQuestionRespRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatQuestionRespResponse
+        /// </returns>
+        public GetChatQuestionRespResponse GetChatQuestionRespWithOptions(string workspaceId, GetChatQuestionRespRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                body["batchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatQuestionResp",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/chat/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatQuestionRespResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取问答结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatQuestionRespRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatQuestionRespResponse
+        /// </returns>
+        public async Task<GetChatQuestionRespResponse> GetChatQuestionRespWithOptionsAsync(string workspaceId, GetChatQuestionRespRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                body["batchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatQuestionResp",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/chat/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatQuestionRespResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取问答结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatQuestionRespRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatQuestionRespResponse
+        /// </returns>
+        public GetChatQuestionRespResponse GetChatQuestionResp(string workspaceId, GetChatQuestionRespRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetChatQuestionRespWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取问答结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatQuestionRespRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatQuestionRespResponse
+        /// </returns>
+        public async Task<GetChatQuestionRespResponse> GetChatQuestionRespAsync(string workspaceId, GetChatQuestionRespRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetChatQuestionRespWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3815,6 +4277,192 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>实时对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RealTimeDialogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RealTimeDialogResponse
+        /// </returns>
+        public RealTimeDialogResponse RealTimeDialogWithOptions(string workspaceId, RealTimeDialogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Analysis))
+            {
+                body["analysis"] = request.Analysis;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["bizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationModel))
+            {
+                body["conversationModel"] = request.ConversationModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogMemoryTurns))
+            {
+                body["dialogMemoryTurns"] = request.DialogMemoryTurns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                body["metaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recommend))
+            {
+                body["recommend"] = request.Recommend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RealTimeDialog",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/realtime/dialog/chat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RealTimeDialogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RealTimeDialogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RealTimeDialogResponse
+        /// </returns>
+        public async Task<RealTimeDialogResponse> RealTimeDialogWithOptionsAsync(string workspaceId, RealTimeDialogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Analysis))
+            {
+                body["analysis"] = request.Analysis;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["bizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationModel))
+            {
+                body["conversationModel"] = request.ConversationModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogMemoryTurns))
+            {
+                body["dialogMemoryTurns"] = request.DialogMemoryTurns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                body["metaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recommend))
+            {
+                body["recommend"] = request.Recommend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RealTimeDialog",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/realtime/dialog/chat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RealTimeDialogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RealTimeDialogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RealTimeDialogResponse
+        /// </returns>
+        public RealTimeDialogResponse RealTimeDialog(string workspaceId, RealTimeDialogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RealTimeDialogWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RealTimeDialogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RealTimeDialogResponse
+        /// </returns>
+        public async Task<RealTimeDialogResponse> RealTimeDialogAsync(string workspaceId, RealTimeDialogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RealTimeDialogWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>重建任务</para>
         /// </summary>
         /// 
@@ -4729,6 +5377,176 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>提交问题列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitChatQuestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitChatQuestionResponse
+        /// </returns>
+        public SubmitChatQuestionResponse SubmitChatQuestionWithOptions(string workspaceId, SubmitChatQuestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtService))
+            {
+                body["gmtService"] = request.GmtService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveScriptContent))
+            {
+                body["liveScriptContent"] = request.LiveScriptContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenSmallTalk))
+            {
+                body["openSmallTalk"] = request.OpenSmallTalk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuestionList))
+            {
+                body["questionList"] = request.QuestionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitChatQuestion",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/chat/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitChatQuestionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交问题列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitChatQuestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitChatQuestionResponse
+        /// </returns>
+        public async Task<SubmitChatQuestionResponse> SubmitChatQuestionWithOptionsAsync(string workspaceId, SubmitChatQuestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtService))
+            {
+                body["gmtService"] = request.GmtService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveScriptContent))
+            {
+                body["liveScriptContent"] = request.LiveScriptContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenSmallTalk))
+            {
+                body["openSmallTalk"] = request.OpenSmallTalk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuestionList))
+            {
+                body["questionList"] = request.QuestionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitChatQuestion",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/chat/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitChatQuestionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交问题列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitChatQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitChatQuestionResponse
+        /// </returns>
+        public SubmitChatQuestionResponse SubmitChatQuestion(string workspaceId, SubmitChatQuestionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitChatQuestionWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交问题列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitChatQuestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitChatQuestionResponse
+        /// </returns>
+        public async Task<SubmitChatQuestionResponse> SubmitChatQuestionAsync(string workspaceId, SubmitChatQuestionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitChatQuestionWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新文档</para>
         /// </summary>
         /// 
@@ -5033,6 +5851,152 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateLibraryWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新QA问答库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateQaLibraryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQaLibraryResponse
+        /// </returns>
+        public UpdateQaLibraryResponse UpdateQaLibraryWithOptions(string workspaceId, UpdateQaLibraryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParseQaResults))
+            {
+                body["parseQaResults"] = request.ParseQaResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QaLibraryId))
+            {
+                body["qaLibraryId"] = request.QaLibraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateQaLibrary",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/qa/upload",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateQaLibraryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新QA问答库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateQaLibraryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQaLibraryResponse
+        /// </returns>
+        public async Task<UpdateQaLibraryResponse> UpdateQaLibraryWithOptionsAsync(string workspaceId, UpdateQaLibraryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParseQaResults))
+            {
+                body["parseQaResults"] = request.ParseQaResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QaLibraryId))
+            {
+                body["qaLibraryId"] = request.QaLibraryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateQaLibrary",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/qa/upload",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateQaLibraryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新QA问答库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateQaLibraryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQaLibraryResponse
+        /// </returns>
+        public UpdateQaLibraryResponse UpdateQaLibrary(string workspaceId, UpdateQaLibraryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateQaLibraryWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新QA问答库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateQaLibraryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateQaLibraryResponse
+        /// </returns>
+        public async Task<UpdateQaLibraryResponse> UpdateQaLibraryAsync(string workspaceId, UpdateQaLibraryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateQaLibraryWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

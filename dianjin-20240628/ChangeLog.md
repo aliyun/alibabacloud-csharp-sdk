@@ -1,3 +1,12 @@
+2024-12-25 Version: 1.7.0
+- Support API CreateDialog.
+- Support API GenDocQaResult.
+- Support API GetChatQuestionResp.
+- Support API RealTimeDialog.
+- Support API SubmitChatQuestion.
+- Support API UpdateQaLibrary.
+
+
 2024-12-20 Version: 1.6.6
 - Generated csharp 2024-06-28 for DianJin.
 
