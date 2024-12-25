@@ -10,29 +10,34 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateDomainExtensionRequest : TeaModel {
         /// <summary>
-        /// The domain name to be created.
+        /// <para>The domain name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>*.example1.com</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The frontend port of the HTTPS listener.
+        /// <para>The frontend port that is used by the HTTPS listener of the SLB instance.</para>
+        /// <para>Valid values: <b>1 to 65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Value range:** 1 to 65535**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>443</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The ID of the SLB instance.
+        /// <para>The ID of the SLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1o94dp5i6earrxxxxxx</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -47,9 +52,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the SLB instance belongs.
+        /// <para>The region ID of the Server Load Balancer (SLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -64,7 +71,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the certificate used by the domain name.
+        /// <para>The ID of the certificate used by the domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123157xxxxxxx_166f820xxxxxx_1714763408_709981xxxx</para>
         /// </summary>
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]

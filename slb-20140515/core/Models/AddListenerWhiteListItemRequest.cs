@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class AddListenerWhiteListItemRequest : TeaModel {
         /// <summary>
-        /// The frontend port that is used by the CLB instance.
+        /// <para>The frontend port that is used by the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The frontend protocol that is used by the CLB instance.
+        /// <para>The frontend protocol that is used by the CLB instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required when listeners that use different protocols listen on the same port.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when listeners that use different protocols listen on the same port.
+        /// <b>Example:</b>
+        /// <para>https</para>
         /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// <para>The ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1o94dp5i6ea*******</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -45,9 +53,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Classic Load Balancer (CLB) instance is created.
+        /// <para>The ID of the region where the Classic Load Balancer (CLB) instance is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -62,15 +72,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The IP addresses or CIDR blocks that you want to add to the whitelist.
+        /// <para>The IP addresses or CIDR blocks that you want to add to the whitelist.</para>
+        /// <para>This parameter takes effect when the <b>AccessControlStatus</b> parameter of the listener is set to <b>open_white_list</b>.</para>
+        /// <para>Separate multiple IP addresses or CIDR blocks with commas (,).</para>
+        /// <para>You cannot enter <b>0.0.0.0</b> or <b>0.0.0.0/0</b>. To disable access control, you can call the <a href="https://help.aliyun.com/document_detail/27599.html">SetListenerAccessControlStatus</a> operation to set the value of the <b>AccessControlStatus</b> parameter to <b>close</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter takes effect when the **AccessControlStatus** parameter of the listener is set to **open_white_list**.
-        /// 
-        /// Separate multiple IP addresses or CIDR blocks with commas (,).
-        /// 
-        /// You cannot enter **0.0.0.0** or **0.0.0.0/0**. To disable access control, you can call the [SetListenerAccessControlStatus](https://help.aliyun.com/document_detail/27599.html) operation to set the value of the **AccessControlStatus** parameter to **close**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("SourceItems")]
         [Validation(Required=false)]

@@ -18,11 +18,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Classic Load Balancer (CLB) instance is created.
+        /// <para>The ID of the region where the Classic Load Balancer (CLB) instance is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,9 +38,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the TLS policy.
+        /// <para>The ID of the TLS policy.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tls-bp1lp2076qx4ebridp******</para>
         /// </summary>
         [NameInMap("TLSCipherPolicyId")]
         [Validation(Required=false)]

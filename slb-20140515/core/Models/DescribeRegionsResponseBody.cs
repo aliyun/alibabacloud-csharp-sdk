@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The list of regions.
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Beijing)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The endpoint of the region.
+                /// <para>The endpoint of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>slb.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

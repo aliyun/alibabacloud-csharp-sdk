@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetDomainExtensionAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>149A2470-F010-4437-BF68-343D5099C19D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

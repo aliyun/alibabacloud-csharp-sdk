@@ -10,35 +10,48 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class RemoveBackendServersRequest : TeaModel {
         /// <summary>
-        /// The backend servers to be removed.
+        /// <para>The backend servers that you want to remove.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>ServerId</b>: The IDs of the backend servers. Set the value to a string. This parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para><b>Type</b>: the type of the backend server. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ecs</b> (default): Elastic Compute Service (ECS) instance</description></item>
+        /// <item><description><b>eni</b>: elastic network interface (ENI)</description></item>
+        /// <item><description><b>eci</b>: elastic container instance</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Weight</b>: the weight of the backend server. Valid values: <b>0</b> to <b>100</b>. Set the value to an integer.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>You can specify at most 20 backend servers in each call. Examples:</para>
+        /// <list type="bullet">
+        /// <item><description>Remove ECS instances:</description></item>
+        /// </list>
+        /// <para><c>[{&quot;ServerId&quot;:&quot;i-bp1fq61enf4loa5i****&quot;, &quot;Type&quot;: &quot;ecs&quot;,&quot;Weight&quot;:&quot;100&quot;}]</c></para>
+        /// <list type="bullet">
+        /// <item><description>Remove ENIs:</description></item>
+        /// </list>
+        /// <para><c>[{&quot;ServerId&quot;:&quot;eni-2ze1sdp5****&quot;,&quot;Type&quot;: &quot;eni&quot;,&quot;Weight&quot;:&quot;100&quot;}]</c></para>
+        /// <list type="bullet">
+        /// <item><description>Remove elastic container instances:</description></item>
+        /// </list>
+        /// <para><c>[{&quot;ServerId&quot;:&quot;eci-2ze1sdp5****&quot;,&quot;Type&quot;: &quot;eci&quot;,&quot;Weight&quot;:&quot;100&quot;}]</c></para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **ServerId**: The IDs of the backend servers. Set the value to a string. This parameter is required.
-        /// 
-        /// *   **Type**: The type of the backend server. Valid values:
-        /// 
-        ///     *   **ecs** (default): an Elastic Compute Service (ECS) instance
-        /// 
-        ///     <!---->
-        /// 
-        ///     *   **eni**: an elastic network interface (ENI)
-        /// 
-        /// *   **Weight**: the weight of the backend server. Valid values: **0** to **100**. Set the value to an integer.
-        /// 
-        /// You can remove at most 20 backend servers in each call. Examples:
-        /// 
-        /// *   Remove an ECS instance: `[{"ServerId":"i-bp1fq61enf4loa5i****", "Type": "ecs","Weight":"100"}]`
-        /// *   Remove an ENI: `[{"ServerId":"eni-2ze1sdp5****","Type": "eni","Weight":"100"}]`
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;ServerId&quot;:&quot;i-bp1fq61enf4loa5i****&quot;, &quot;Type&quot;: &quot;ecs&quot;,&quot;Weight&quot;:&quot;100&quot;}]</para>
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public string BackendServers { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// <para>The ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp15lbk8uja8rvm4a****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -53,7 +66,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the CLB instance is deployed.
+        /// <para>The ID of the region where the CLB instance is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

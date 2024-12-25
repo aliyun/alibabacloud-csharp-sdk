@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeDomainExtensionAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The domain name.
+        /// <para>The domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The ID of the additional certificate.
+        /// <para>The ID of the additional certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>de-bp1rp7ta1****</para>
         /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
         public string DomainExtensionId { get; set; }
 
         /// <summary>
-        /// The frontend port of the HTTPS listener that is configured for the SLB instance. Valid values: **1** to **65535**.
+        /// <para>The frontend port of the HTTPS listener that is configured for the SLB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>443</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The ID of the SLB instance.
+        /// <para>The ID of the SLB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-bp1o94dp5i6*****earr9g6d1l</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>48C1B671-C6DB-4DDE-9B30-10557E36CDE0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the server certificate that is used by the domain name.
+        /// <para>The ID of the server certificate used by the domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>231579085529123_166f82******_1714763408_709981430</para>
         /// </summary>
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]

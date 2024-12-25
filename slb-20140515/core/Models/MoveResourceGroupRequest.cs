@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group to which you want to move the resource.
+        /// <para>The ID of the resource group to which you want to move the resource.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-aek2rpsek5h****</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -27,25 +29,32 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Classic Load Balancer (CLB) instance.
+        /// <para>The region ID of the Classic Load Balancer (CLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aek2dmxj56z****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The resource ID.
+        /// <para>The resource ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-uf6ghek7ds2btzt65****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -60,20 +69,26 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>loadbalancer</b>: a CLB instance</description></item>
+        /// <item><description><b>certificate</b>: a certificate</description></item>
+        /// <item><description><b>acl</b>: an access control list (ACL)</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **loadbalancer**: a CLB instance
-        /// *   **certificate**: a certificate
-        /// *   **acl**: an access control list (ACL)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>loadbalancer</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The AccessKey ID provided by Alibaba Cloud.
+        /// <para>The AccessKey ID provided by Alibaba Cloud.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LTAI5tPmFGUpmyWwD8gp****</para>
         /// </summary>
         [NameInMap("access_key_id")]
         [Validation(Required=false)]

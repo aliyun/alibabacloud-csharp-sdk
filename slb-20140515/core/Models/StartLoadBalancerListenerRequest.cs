@@ -10,29 +10,36 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class StartLoadBalancerListenerRequest : TeaModel {
         /// <summary>
-        /// The listener port of the SLB instance.
+        /// <para>The frontend port that is used by the CLB instance.</para>
+        /// <para>Valid values: <b>1 to 65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values: **1 to 65535**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The protocol used by the listener of the SLB instance.
+        /// <para>The frontend protocol that is used by the CLB instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required if the same port is used by listeners of different protocols.</para>
+        /// </remarks>
         /// 
-        /// >  If different listeners use the same port, you must specify this parameter.
+        /// <b>Example:</b>
+        /// <para>https</para>
         /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// The ID of the SLB instance.
+        /// <para>The CLB instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp13jaf5qli5*********</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -47,9 +54,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region where the SLB instance is deployed.
+        /// <para>The region where the CLB instance is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can retrieve the region ID by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

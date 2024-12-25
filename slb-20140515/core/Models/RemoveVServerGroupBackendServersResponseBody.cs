@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class RemoveVServerGroupBackendServersResponseBody : TeaModel {
         /// <summary>
-        /// The list of backend servers.
+        /// <para>The backend servers.</para>
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
@@ -21,31 +21,45 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer> BackendServer { get; set; }
             public class RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer : TeaModel {
                 /// <summary>
-                /// The port that is used by the backend server.
+                /// <para>The port that is used by the backend server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>80</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The ID of the ECS instance or ENI.
+                /// <para>The ID of the backend server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vm-230</para>
                 /// </summary>
                 [NameInMap("ServerId")]
                 [Validation(Required=false)]
                 public string ServerId { get; set; }
 
                 /// <summary>
-                /// The type of backend server. Valid values:
+                /// <para>The type of the backend server. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ecs</b> (default): ECS instance</description></item>
+                /// <item><description><b>eni</b>: ENI</description></item>
+                /// <item><description><b>eci</b>: elastic container instance</description></item>
+                /// </list>
                 /// 
-                /// *   **ecs**: an ECS instance
-                /// *   **eni**: an ENI
+                /// <b>Example:</b>
+                /// <para>ecs</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The weight of the backend server.
+                /// <para>The weight of the backend server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -56,14 +70,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the vServer group.
+        /// <para>The ID of the vServer group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rsp-cige6j****</para>
         /// </summary>
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]

@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, it indicates that no subsequent query is to be sent.</description></item>
+        /// <item><description>If a value of <b>NextToken</b> is returned, the value is the token that is used for the subsequent query.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, it indicates that no subsequent query is to be sent.
-        /// *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DE65F6B7-7566-4802-9007-96F2494AC512</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details about the resource to which the tags are added.
+        /// <para>The resources to which the tags are added.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -38,28 +45,40 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// The ID of the resource.
+                /// <para>The resource ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>lb-bp16qjewdsunr4****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// The resource type.
+                /// <para>The resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>instance</para>
                 /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceJoshua</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateTLSCipherPolicyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D7A8875F-373A-5F48-8484-25B07A61F2AF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the policy.
+        /// <para>The ID of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tls-bp14bb1e7dll4f****</para>
         /// </summary>
         [NameInMap("TLSCipherPolicyId")]
         [Validation(Required=false)]

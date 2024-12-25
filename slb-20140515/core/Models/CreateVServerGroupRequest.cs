@@ -10,39 +10,61 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateVServerGroupRequest : TeaModel {
         /// <summary>
-        /// The list of backend servers to be added.
+        /// <para>The backend servers that you want to add. Configure the following parameters:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>ServerId</b>:  required. The ID of the backend server. Specify the ID in a string. You can specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. If you set ServerId to the ID of an ENI or an elastic container instance, you must configure the Type parameter.</para>
+        /// </description></item>
+        /// <item><description><para><b>Weight</b>: the weight of the backend server. Valid values: 0 to 100. Default value: 100. If you set the weight of a backend server to 0, no requests are forwarded to the backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>Description</b>: optional. The description of the backend server. Specify the description in a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para><b>Type</b>: the type of the backend server. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ecs (default)</b>: ECS instance</description></item>
+        /// <item><description><b>eni</b>: ENI.</description></item>
+        /// <item><description><b>eni</b>: elastic container instance.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can specify ENIs and elastic container instances as backend servers only for high-performance SLB instances.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><b>ServerIp</b>: The IP address of the ECS instance or ENI.</description></item>
+        /// <item><description><b>Port</b>: the backend port.</description></item>
+        /// </list>
+        /// <para>Examples:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Add an ECS instance:</para>
+        /// <para><c>[{ &quot;ServerId&quot;: &quot;i-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;ecs&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</c></para>
+        /// </description></item>
+        /// <item><description><para>Add an ENI:</para>
+        /// <para><c> [{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</c></para>
+        /// </description></item>
+        /// <item><description><para>Add an ENI with multiple IP addresses:</para>
+        /// <para> <c>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; },{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;``172.166.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; }]</c></para>
+        /// </description></item>
+        /// <item><description><para>Add an elastic container instance:</para>
+        /// <para><c> [{ &quot;ServerId&quot;: &quot;eci-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eci&quot;, &quot;ServerIp&quot;: &quot;``192.168.**.**``&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-114&quot; }]</c></para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can add only running backend servers to SLB instances. You can specify at most 20 backend servers.</para>
+        /// </remarks>
         /// 
-        /// The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.
-        /// 
-        /// *   **ServerId**: Required. Specify the ID of an Elastic Compute Service (ECS) instance or an Elastic Network Interface (ENI). This parameter must be of the STRING type.
-        /// 
-        /// *   **Port**: Required. Specify the port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1** to **65535**.
-        /// 
-        /// *   **Weight**: Required. Specify the weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0** to **100**.
-        /// 
-        /// *   **Description**: Optional. Specify the description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).
-        /// 
-        /// *   **Type**: Specify the type of the backend server. This parameter must be of the STRING type. Valid values:
-        /// 
-        ///     *   **ecs**: an ECS instance. This is the default value.
-        ///     *   **eni**: an ENI.
-        /// 
-        /// *   **ServerIp**: The IP address of the ECS instance or ENI.
-        /// 
-        /// Examples:
-        /// 
-        /// *   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `
-        /// *   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }] `
-        /// *   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }] `
+        /// <b>Example:</b>
+        /// <para>[{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;<c>192.168.**.**</c>&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-112&quot; },{ &quot;ServerId&quot;: &quot;eni-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;eni&quot;, &quot;ServerIp&quot;: &quot;<c>172.166.**.**</c>&quot;, &quot;Port&quot;:&quot;80&quot;,&quot;Description&quot;:&quot;test-113&quot; }]</para>
         /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public string BackendServers { get; set; }
 
         /// <summary>
-        /// The ID of the Server Load Balancer (SLB) instance.
+        /// <para>The ID of the Server Load Balancer (SLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1qjwo61pqz3ahl******</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -57,9 +79,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the SLB instance is deployed.
+        /// <para>The ID of the region where the SLB instance is deployed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -74,24 +98,29 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVServerGroupRequestTag> Tag { get; set; }
         public class CreateVServerGroupRequestTag : TeaModel {
             /// <summary>
-            /// 资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。
+            /// <para>The key of tag N. Valid values of N: <b>1 to 20</b>. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
-            /// 最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// 资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。
-            /// 最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+            /// <para>The tag value. Valid values of N: <b>1 to 20</b>. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -100,9 +129,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The name of the vServer group.
+        /// <para>The name of the vServer group.</para>
+        /// <para>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</para>
         /// 
-        /// The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).
+        /// <b>Example:</b>
+        /// <para>Group1</para>
         /// </summary>
         [NameInMap("VServerGroupName")]
         [Validation(Required=false)]

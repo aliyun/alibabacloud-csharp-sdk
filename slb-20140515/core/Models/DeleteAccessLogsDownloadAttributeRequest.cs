@@ -10,20 +10,26 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DeleteAccessLogsDownloadAttributeRequest : TeaModel {
         /// <summary>
-        /// The CLB instance ID.
+        /// <para>The CLB instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-uf68ps3rekbljmdb0****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The access log forwarding rule. Parameters:
+        /// <para>The access log forwarding rule. Parameters:</para>
+        /// <list type="bullet">
+        /// <item><description><b>LogProject</b>: the name of the project of Log Service.</description></item>
+        /// <item><description><b>LogStore</b>: the name of the Logstore of Log Service.</description></item>
+        /// <item><description><b>LoadBalancerId</b>: the ID of the CLB instance.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **LogProject**: the name of the project of Log Service.
-        /// *   **LogStore**: the name of the Logstore of Log Service.
-        /// *   **LoadBalancerId**: the ID of the CLB instance.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;logProject&quot;:&quot;my-project&quot;, &quot;LogStore&quot;:&quot;my-log-store&quot;, &quot;LoadBalancerId&quot;:&quot;lb-uf68ps3rekbljmdb0****&quot;}]</para>
         /// </summary>
         [NameInMap("LogsDownloadAttributes")]
         [Validation(Required=false)]
@@ -38,9 +44,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the CLB instance.
+        /// <para>The region ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -55,7 +63,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.
+        /// <para>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

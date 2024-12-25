@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DeleteMasterSlaveServerGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the active/standby server group to be deleted.
+        /// <para>The primary/secondary server group ID.</para>
+        /// <remarks>
+        /// <para> You cannot delete a primary/secondary server group that is in use.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  An active/standby server group in use cannot be deleted.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rsp-cige6*****</para>
         /// </summary>
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
@@ -29,9 +32,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.
+        /// <para>The region ID of the Server Load Balancer (SLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

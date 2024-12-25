@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DeleteDomainExtensionRequest : TeaModel {
         /// <summary>
-        /// The ID of the additional domain name that you want to delete.
+        /// <para>The ID of the additional domain name that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>de-bp1rp7ta1****</para>
         /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
@@ -27,9 +29,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the Server Load Balancer (SLB) instance.
+        /// <para>The region ID of the Server Load Balancer (SLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

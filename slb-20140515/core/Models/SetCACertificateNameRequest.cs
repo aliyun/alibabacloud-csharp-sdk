@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetCACertificateNameRequest : TeaModel {
         /// <summary>
-        /// The ID of the CA certificate.
+        /// <para>The ID of the CA certificate.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>139a0******-cn-east-hangzhou-01</para>
         /// </summary>
         [NameInMap("CACertificateId")]
         [Validation(Required=false)]
         public string CACertificateId { get; set; }
 
         /// <summary>
-        /// The name of the CA certificate.
+        /// <para>The CA certificate name.</para>
+        /// <para>The name must be 1 to 80 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 1 to 80 characters in length and start with an English letter or a Chinese character. It can contain numbers, underscores (_), periods (.), and hyphens (-).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>mycacert02</para>
         /// </summary>
         [NameInMap("CACertificateName")]
         [Validation(Required=false)]
@@ -38,11 +41,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region to which the CA certificate belongs.
+        /// <para>The region of the CA certificate.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// To query the region ID, call [DescribeRegions](https://help.aliyun.com/document_detail/27584.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

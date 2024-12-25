@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAccessLogsDownloadAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The configuration of the access log.
+        /// <para>The configuration of the access log.</para>
         /// </summary>
         [NameInMap("LogsDownloadAttributes")]
         [Validation(Required=false)]
@@ -21,35 +21,50 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributesLogsDownloadAttribute> LogsDownloadAttribute { get; set; }
             public class DescribeAccessLogsDownloadAttributeResponseBodyLogsDownloadAttributesLogsDownloadAttribute : TeaModel {
                 /// <summary>
-                /// The CLB instance ID.
+                /// <para>The CLB instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>lb-bp1b6c719dfa08ex*****</para>
                 /// </summary>
                 [NameInMap("LoadBalancerId")]
                 [Validation(Required=false)]
                 public string LoadBalancerId { get; set; }
 
                 /// <summary>
-                /// The name of the Log Service project.
+                /// <para>The name of the Log Service project.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-log-project</para>
                 /// </summary>
                 [NameInMap("LogProject")]
                 [Validation(Required=false)]
                 public string LogProject { get; set; }
 
                 /// <summary>
-                /// The name of the Logstore.
+                /// <para>The name of the Logstore.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-log-store</para>
                 /// </summary>
                 [NameInMap("LogStore")]
                 [Validation(Required=false)]
                 public string LogStore { get; set; }
 
                 /// <summary>
-                /// The type of access log. Only **layer7** is returned, which indicates Layer 7 access logs.
+                /// <para>The type of access log. Only <b>layer7</b> is returned, which indicates Layer 7 access logs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>layer7</para>
                 /// </summary>
                 [NameInMap("LogType")]
                 [Validation(Required=false)]
                 public string LogType { get; set; }
 
                 /// <summary>
-                /// The region ID of the CLB instance.
+                /// <para>The region ID of the CLB instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -60,28 +75,40 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8B9DB03B-ED39-5DB8-9C9F-1ED5F548D61E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

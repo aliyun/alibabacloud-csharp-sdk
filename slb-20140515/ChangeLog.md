@@ -1,3 +1,12 @@
+2024-12-25 Version: 2.0.9
+- Update API CreateLoadBalancer: update param AutoPay.
+- Update API CreateLoadBalancer: update param Duration.
+- Update API CreateLoadBalancer: update param PayType.
+- Update API CreateLoadBalancer: update param PricingCycle.
+- Update API CreateLoadBalancerHTTPListener: update param StickySession.
+- Update API CreateLoadBalancerHTTPSListener: update param StickySession.
+
+
 2024-05-30 Version: 2.0.8
 - Generated csharp 2014-05-15 for Slb.
 

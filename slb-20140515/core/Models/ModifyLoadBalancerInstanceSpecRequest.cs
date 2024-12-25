@@ -10,41 +10,51 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ModifyLoadBalancerInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable automatic payment. Valid values:
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: automatically completes the payment.</description></item>
+        /// <item><description><b>false</b> (default): If you select this option, you must complete the payment in the Order Center.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter takes effect only for subscription instances.</para>
+        /// </remarks>
         /// 
-        /// *   **true**: automatically completes the payment.
-        /// *   **false** (default): If you select this option, you must complete the payment in the Order Center.
-        /// 
-        /// > This parameter takes effect only for subscription instances.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// <para>The ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1b6c719df*********</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The specification of the CLB instance. Valid values:
+        /// <para>The specification of the CLB instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>slb.s1.small</b></description></item>
+        /// <item><description><b>slb.s2.small</b></description></item>
+        /// <item><description><b>slb.s2.medium</b></description></item>
+        /// <item><description><b>slb.s3.small</b></description></item>
+        /// <item><description><b>slb.s3.medium</b></description></item>
+        /// <item><description><b>slb.s3.large</b></description></item>
+        /// </list>
+        /// <para>The specifications available vary by region. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/85931.html">High-performance CLB instance</a>.</para>
+        /// <remarks>
+        /// <para>When you switch a shared-resource CLB instance to a high-performance CLB instance, your service may be interrupted for 10 to 30 seconds. We recommend that you modify the specification during off-peak hours or use Alibaba Cloud DNS to schedule your workloads to another CLB instance before you modify the specification.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **slb.s1.small**
-        /// *   **slb.s2.small**
-        /// *   **slb.s2.medium**
-        /// *   **slb.s3.small**
-        /// *   **slb.s3.medium**
-        /// *   **slb.s3.large**
-        /// 
-        /// The specifications available vary by region. For more information about the specifications, see [High-performance CLB instance](https://help.aliyun.com/document_detail/85931.html).
-        /// 
-        /// > When you switch a shared-resource CLB instance to a high-performance CLB instance, your service may be interrupted for 10 to 30 seconds. We recommend that you modify the specification during off-peak hours or use Alibaba Cloud DNS to schedule your workloads to another CLB instance before you modify the specification.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>slb.s2.small</para>
         /// </summary>
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
@@ -59,9 +69,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the CLB instance.
+        /// <para>The region ID of the CLB instance.</para>
+        /// <para>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation.</para>
         /// 
-        /// You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

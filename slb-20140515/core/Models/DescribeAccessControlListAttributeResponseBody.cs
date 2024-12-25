@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAccessControlListAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The IP entries that you want to remove from the network ACL. Valid values:
-        /// 
-        /// *   **entry**: the IP address or CIDR block that you want to remove from the network ACL. Separate multiple IP addresses or CIDR blocks with commas (,).
-        /// *   **comment**: the description of the network ACL.
+        /// <para>The information about the access control policy.</para>
         /// </summary>
         [NameInMap("AclEntrys")]
         [Validation(Required=false)]
@@ -24,14 +21,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry> AclEntry { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry : TeaModel {
                 /// <summary>
-                /// The description of the ACL entry.
+                /// <para>The remarks of the ACL entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("AclEntryComment")]
                 [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
 
                 /// <summary>
-                /// The IP address specified in the ACL entry.
+                /// <para>The IP entry in the ACL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.0.1</para>
                 /// </summary>
                 [NameInMap("AclEntryIP")]
                 [Validation(Required=false)]
@@ -42,35 +45,47 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The ID of the network ACL.
+        /// <para>The ACL ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acl-bp1ut10zzvh1y8dfs****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of each ACL must be unique within a region. Fuzzy match is supported.
+        /// <para>The ACL name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>doctest</para>
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
         public string AclName { get; set; }
 
         /// <summary>
-        /// The IP version. Valid values: **ipv4** and **ipv6**.
+        /// <para>The IP version. Valid values: <b>ipv4</b> and <b>ipv6</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv4</para>
         /// </summary>
         [NameInMap("AddressIPVersion")]
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }
 
         /// <summary>
-        /// The time when the ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+        /// <para>The time when the ACL was created. The time follows the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-08-31T02:49:05Z</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// The listeners that are associated with the network ACL.
+        /// <para>The listeners with which the ACL is associated.</para>
         /// </summary>
         [NameInMap("RelatedListeners")]
         [Validation(Required=false)]
@@ -81,31 +96,44 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener> RelatedListener { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener : TeaModel {
                 /// <summary>
-                /// The type of ACL. Valid values:
+                /// <para>The type of ACL. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>black</b></description></item>
+                /// <item><description><b>white</b></description></item>
+                /// </list>
                 /// 
-                /// *   **black**
-                /// *   **white**
+                /// <b>Example:</b>
+                /// <para>white</para>
                 /// </summary>
                 [NameInMap("AclType")]
                 [Validation(Required=false)]
                 public string AclType { get; set; }
 
                 /// <summary>
-                /// The frontend port of the listener with which the ACL is associated.
+                /// <para>The frontend port of the listener with which the ACL is associated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>443</para>
                 /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
                 public int? ListenerPort { get; set; }
 
                 /// <summary>
-                /// The CLB instance ID.
+                /// <para>The CLB instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>lb-bp1qpzldlm38bnexl****</para>
                 /// </summary>
                 [NameInMap("LoadBalancerId")]
                 [Validation(Required=false)]
                 public string LoadBalancerId { get; set; }
 
                 /// <summary>
-                /// The type of protocol that the associated listener uses.
+                /// <para>The type of protocol that the associated listener uses.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>https</para>
                 /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
@@ -116,21 +144,27 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C9906A1D-86F7-4C9C-A369-54DA42EF206A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmz3jksig****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags added to the ACL.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -141,14 +175,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeAccessControlListAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -159,7 +199,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The total number of access control entries.
+        /// <para>The total number of ACL entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("TotalAclEntry")]
         [Validation(Required=false)]

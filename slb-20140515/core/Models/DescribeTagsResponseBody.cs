@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeTagsResponseBody : TeaModel {
         /// <summary>
-        /// The number of the returned page. Minimum value: 1. Default value: 1.
+        /// <para>The number of the returned page. Minimum value: 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// Default value: 50. Maximum value: 100.
+        /// <para>The number of entries returned per page. Default value: 50. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>365F4154-92F6-4AE4-92F8-7FF34B540710</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of tags.
+        /// <para>The tags that are queried.</para>
         /// </summary>
         [NameInMap("TagSets")]
         [Validation(Required=false)]
@@ -42,21 +51,30 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeTagsResponseBodyTagSetsTagSet> TagSet { get; set; }
             public class DescribeTagsResponseBodyTagSetsTagSet : TeaModel {
                 /// <summary>
-                /// The number of instances to which the tag is added.
+                /// <para>The number of instances to which the tag is added.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("InstanceCount")]
                 [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>api</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -67,7 +85,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The number of instances returned.
+        /// <para>The number of instances returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

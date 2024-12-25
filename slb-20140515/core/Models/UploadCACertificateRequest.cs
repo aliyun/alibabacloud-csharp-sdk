@@ -10,20 +10,21 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class UploadCACertificateRequest : TeaModel {
         /// <summary>
-        /// The name of this action.
+        /// <para>The information about the CA certificate.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Value: **UploadCACertificate**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("CACertificate")]
         [Validation(Required=false)]
         public string CACertificate { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the CA certificate belongs.
+        /// <para>The CA certificate name.</para>
         /// 
-        /// To query the region ID, call [DescribeRegions](https://help.aliyun.com/document_detail/27584.html).
+        /// <b>Example:</b>
+        /// <para>mycacert01</para>
         /// </summary>
         [NameInMap("CACertificateName")]
         [Validation(Required=false)]
@@ -38,16 +39,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region id.
+        /// <para>The region of the CA certificates.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The content of the CA certificate to be uploaded.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-atstuj3rto*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -62,25 +69,30 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UploadCACertificate</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<UploadCACertificateRequestTag> Tag { get; set; }
         public class UploadCACertificateRequestTag : TeaModel {
             /// <summary>
-            /// The tag key. You can specify at most 20 tag keys.
+            /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.
+            /// <para>The tag value. Valid values of N: <b>1 to 20</b>. The tag value can be an empty string. The tag value must be 1 to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
-            /// The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

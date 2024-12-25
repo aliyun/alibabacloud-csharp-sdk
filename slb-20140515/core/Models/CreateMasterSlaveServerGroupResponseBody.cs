@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateMasterSlaveServerGroupResponseBody : TeaModel {
         /// <summary>
-        /// The backend servers in the primary/secondary server group.
+        /// <para>The backend servers in the primary/secondary server group.</para>
         /// </summary>
         [NameInMap("MasterSlaveBackendServers")]
         [Validation(Required=false)]
@@ -21,47 +21,66 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer> MasterSlaveBackendServer { get; set; }
             public class CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer : TeaModel {
                 /// <summary>
-                /// The description of the primary/secondary server group.
+                /// <para>The description of the primary/secondary server group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-112</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The port that is used by the backend server.
+                /// <para>The port that is used by the backend server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>82</para>
                 /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// The ID of the ECS instance or ENI that is added.
+                /// <para>The ID of the backend server that you want to add.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp1fq61enf4loa5i****</para>
                 /// </summary>
                 [NameInMap("ServerId")]
                 [Validation(Required=false)]
                 public string ServerId { get; set; }
 
                 /// <summary>
-                /// The type of the backend server.
+                /// <para>The type of backend server.</para>
+                /// <para>Valid values: <b>Master</b> and <b>Slave</b>.</para>
                 /// 
-                /// Valid values: **Master** and **Slave**.
+                /// <b>Example:</b>
+                /// <para>Master</para>
                 /// </summary>
                 [NameInMap("ServerType")]
                 [Validation(Required=false)]
                 public string ServerType { get; set; }
 
                 /// <summary>
-                /// The service type of the backend server. Valid values:
+                /// <para>The type of backend server. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ecs</b>: ECS instance</description></item>
+                /// <item><description><b>eni</b>: ENI</description></item>
+                /// <item><description><b>eci</b>: elastic container instance</description></item>
+                /// </list>
                 /// 
-                /// *   **ecs**
-                /// *   **eni**
+                /// <b>Example:</b>
+                /// <para>ecs</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The weight of the backend server.
+                /// <para>The weight of the backend server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -72,14 +91,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The primary/secondary server group ID.
+        /// <para>The ID of the active/standby server group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rsp-bp19au4******</para>
         /// </summary>
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
         public string MasterSlaveServerGroupId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7CA4DB76-4D32-523B-822E-5C9494613D46</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

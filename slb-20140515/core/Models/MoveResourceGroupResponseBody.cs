@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class MoveResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18CAE30A-79CF-544C-86DB-EB36C739642E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

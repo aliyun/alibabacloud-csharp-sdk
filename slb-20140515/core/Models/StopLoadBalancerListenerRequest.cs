@@ -10,29 +10,36 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class StopLoadBalancerListenerRequest : TeaModel {
         /// <summary>
-        /// The frontend listening port used by the listener.
+        /// <para>The frontend port that is used by the CLB instance.</para>
+        /// <para>Valid values: <b>1 to 65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Value range: **1 to 65535**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The frontend listening protocol used by the SLB instance.
+        /// <para>The frontend protocol that is used by the CLB instance.</para>
+        /// <remarks>
+        /// <para>This parameter is required if the same port is used by listeners of different protocols.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when listeners with different protocols use the same port.
+        /// <b>Example:</b>
+        /// <para>https</para>
         /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// The ID of the SLB instance to which the listener belongs.
+        /// <para>The CLB instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp13jaf5qli5xmg******</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -47,9 +54,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the SLB instance belongs.
+        /// <para>The ID of the region to which the SLB instance belongs.</para>
+        /// <para>To query the region ID, refer to the list of  <a href="https://help.aliyun.com/document_detail/40654.html">regions and zones</a> or call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a>.</para>
         /// 
-        /// To query the region ID, refer to the list of [regions and zones](https://help.aliyun.com/document_detail/40654.html) or call [DescribeRegions](https://help.aliyun.com/document_detail/25609.html).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

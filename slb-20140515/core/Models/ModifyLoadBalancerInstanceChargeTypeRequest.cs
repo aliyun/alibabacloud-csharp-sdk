@@ -10,50 +10,62 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ModifyLoadBalancerInstanceChargeTypeRequest : TeaModel {
         /// <summary>
-        /// The maximum bandwidth of the Internet-facing CLB instance that is billed on a pay-by-bandwidth basis.
+        /// <para>The maximum bandwidth of the Internet-facing CLB instance that is billed on a pay-by-bandwidth basis.</para>
+        /// <para>You do not need to set this parameter. The metering method of Internet data transfer for pay-by-LCU instances supports only pay-by-traffic.</para>
         /// 
-        /// You do not need to set this parameter. The metering method of Internet data transfer for pay-by-LCU instances supports only pay-by-traffic.
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The metering method of the instance after the change.
+        /// <para>The metering method of the instance after the change.</para>
+        /// <para>Valid value: <b>PayByCLCU</b>. Only pay-by-LCU is supported.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid value: **PayByCLCU**. Only pay-by-LCU is supported.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>PayByCLCU</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// The metering method of Internet data transfer after the change.
+        /// <para>The metering method of Internet data transfer after the change.</para>
+        /// <para>Valid value: <b>paybytraffic</b>.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the value of the <b>InstanceChargeType</b> parameter is set to <b>PayByCLCU</b>, only pay-by-data-transfer is supported.</description></item>
+        /// <item><description>When you change the metering method, the new metering method takes effect at 00:00:00 the next day.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
-        /// Valid value: **paybytraffic**.
-        /// 
-        /// > *   If the value of the **InstanceChargeType** parameter is set to **PayByCLCU**, only pay-by-data-transfer is supported.
-        /// >*   When you change the metering method, the new metering method takes effect at 00:00:00 the next day.
+        /// <b>Example:</b>
+        /// <para>paybytraffic</para>
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// <para>The ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1b3jus5hpenznuu****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// The specification of the CLB instance.
+        /// <para>The specification of the CLB instance.</para>
+        /// <para>You do not need to set this parameter. For pay-as-you-go CLB instances, you can only change the metering method from pay-by-specification to pay-by-LCU. You cannot change the metering method from pay-by-LCU to pay-by-specification.</para>
         /// 
-        /// You do not need to set this parameter. For pay-as-you-go CLB instances, you can only change the metering method from pay-by-specification to pay-by-LCU. You cannot change the metering method from pay-by-LCU to pay-by-specification.
+        /// <b>Example:</b>
+        /// <para>slb.s1.small</para>
         /// </summary>
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
@@ -68,11 +80,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the CLB instance.
+        /// <para>The region ID of the CLB instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

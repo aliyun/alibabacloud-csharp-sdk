@@ -18,9 +18,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.
+        /// <para>The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -35,11 +37,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the VServer group to be deleted.
+        /// <para>The ID of the VServer group to be deleted.</para>
+        /// <remarks>
+        /// <para> If the VServer group is in use, it cannot be deleted.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If the VServer group is in use, it cannot be deleted.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rsp-cige6j*****</para>
         /// </summary>
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]

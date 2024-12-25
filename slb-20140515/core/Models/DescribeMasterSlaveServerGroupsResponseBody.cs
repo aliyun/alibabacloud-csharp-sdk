@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeMasterSlaveServerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The primary/secondary server groups.
+        /// <para>The primary/secondary server groups.</para>
         /// </summary>
         [NameInMap("MasterSlaveServerGroups")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup> MasterSlaveServerGroup { get; set; }
             public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup : TeaModel {
                 /// <summary>
-                /// The associated resources.
+                /// <para>The associated resources.</para>
                 /// </summary>
                 [NameInMap("AssociatedObjects")]
                 [Validation(Required=false)]
                 public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects AssociatedObjects { get; set; }
                 public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects : TeaModel {
                     /// <summary>
-                    /// The listeners.
+                    /// <para>The listeners.</para>
                     /// </summary>
                     [NameInMap("Listeners")]
                     [Validation(Required=false)]
@@ -39,14 +39,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener> Listener { get; set; }
                         public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener : TeaModel {
                             /// <summary>
-                            /// The listener port.
+                            /// <para>The listener port.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>80</para>
                             /// </summary>
                             [NameInMap("Port")]
                             [Validation(Required=false)]
                             public int? Port { get; set; }
 
                             /// <summary>
-                            /// The listener protocol.
+                            /// <para>The listener protocol.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>tcp</para>
                             /// </summary>
                             [NameInMap("Protocol")]
                             [Validation(Required=false)]
@@ -59,28 +65,37 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 }
 
                 /// <summary>
-                /// The time when the CLB instance was created. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format.
+                /// <para>The time when the CLB instance was created. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-12-02T02:49:05Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the primary/secondary server group.
+                /// <para>The ID of the primary/secondary server group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rsp-0bfuc******</para>
                 /// </summary>
                 [NameInMap("MasterSlaveServerGroupId")]
                 [Validation(Required=false)]
                 public string MasterSlaveServerGroupId { get; set; }
 
                 /// <summary>
-                /// The name of the primary/secondary server group.
+                /// <para>The name of the primary/secondary server group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Group3</para>
                 /// </summary>
                 [NameInMap("MasterSlaveServerGroupName")]
                 [Validation(Required=false)]
                 public string MasterSlaveServerGroupName { get; set; }
 
                 /// <summary>
-                /// The tags to add to the resource.
+                /// <para>The tags to add to the resource.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -91,14 +106,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag> Tag { get; set; }
                     public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag key.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test_slb_yaochi_tag_key-0</para>
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>000098dab00323fb</para>
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -113,7 +134,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

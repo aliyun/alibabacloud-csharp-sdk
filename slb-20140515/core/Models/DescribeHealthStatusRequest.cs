@@ -10,27 +10,34 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeHealthStatusRequest : TeaModel {
         /// <summary>
-        /// The frontend port that is used by the CLB instance.
+        /// <para>The frontend port that is used by the SLB instance. Valid values: <b>1 to 65535</b>.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the health status of all ports is returned.</para>
+        /// </remarks>
         /// 
-        /// Valid values: **1 to 65535**.
-        /// 
-        /// >  If you do not specify this parameter, the health status of all ports is returned.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The frontend protocol that is used by the CLB instance.
+        /// <para>The frontend protocol that is used by the SLB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>https</para>
         /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// The ID of the Classic Load Balancer (CLB) instance.
+        /// <para>The ID of the Classic Load Balancer (CLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1qjwo61pqz3ah****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -45,7 +52,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the CLB instance is deployed.
+        /// <para>The region ID of the SLB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

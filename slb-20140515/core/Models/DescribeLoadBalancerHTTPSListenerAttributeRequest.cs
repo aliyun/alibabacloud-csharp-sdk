@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeLoadBalancerHTTPSListenerAttributeRequest : TeaModel {
         /// <summary>
-        /// The frontend port that is used by the CLB instance.
+        /// <para>The frontend port that is used by the CLB instance.</para>
+        /// <para>Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values: **1** to **65535**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The CLB instance ID.
+        /// <para>The CLB instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1mxu5r8lau****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -38,7 +41,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region ID of the CLB instance.
+        /// <para>The region ID of the CLB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

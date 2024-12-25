@@ -10,31 +10,44 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeHighDefinationMonitorResponseBody : TeaModel {
         /// <summary>
-        /// The name of the Log Service project.
+        /// <para>The name of the Log Service project.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-project</para>
         /// </summary>
         [NameInMap("LogProject")]
         [Validation(Required=false)]
         public string LogProject { get; set; }
 
         /// <summary>
-        /// The name of the Logstore.
+        /// <para>The name of the Logstore.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-log-store</para>
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]
         public string LogStore { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2F398FF5-B349-5C01-8638-8E9A0BF1DBE6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the call is successful. Valid values:
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

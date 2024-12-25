@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeVServerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of backend servers.
+        /// <para>The backend servers.</para>
         /// </summary>
         [NameInMap("VServerGroups")]
         [Validation(Required=false)]
@@ -28,14 +31,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup> VServerGroup { get; set; }
             public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup : TeaModel {
                 /// <summary>
-                /// The items associated with the server groups.
+                /// <para>The associated resources.</para>
                 /// </summary>
                 [NameInMap("AssociatedObjects")]
                 [Validation(Required=false)]
                 public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects AssociatedObjects { get; set; }
                 public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects : TeaModel {
                     /// <summary>
-                    /// The list of listeners.
+                    /// <para>The listeners.</para>
                     /// </summary>
                     [NameInMap("Listeners")]
                     [Validation(Required=false)]
@@ -46,14 +49,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener> Listener { get; set; }
                         public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener : TeaModel {
                             /// <summary>
-                            /// The listening port.
+                            /// <para>The listener port.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>80</para>
                             /// </summary>
                             [NameInMap("Port")]
                             [Validation(Required=false)]
                             public int? Port { get; set; }
 
                             /// <summary>
-                            /// The listening protocol. Valid values: **tcp**, **udp**, **http**, and **https**.
+                            /// <para>The listener protocol. Valid values: <b>tcp</b>, <b>udp</b>, <b>http</b>, and <b>https</b>.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>tcp</para>
                             /// </summary>
                             [NameInMap("Protocol")]
                             [Validation(Required=false)]
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     }
 
                     /// <summary>
-                    /// The list of forwarding rules.
+                    /// <para>The forwarding rules.</para>
                     /// </summary>
                     [NameInMap("Rules")]
                     [Validation(Required=false)]
@@ -75,28 +84,40 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule> Rule { get; set; }
                         public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule : TeaModel {
                             /// <summary>
-                            /// The requested domain name.
+                            /// <para>The requested domain name.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para><a href="http://www.example.com">www.example.com</a></para>
                             /// </summary>
                             [NameInMap("Domain")]
                             [Validation(Required=false)]
                             public string Domain { get; set; }
 
                             /// <summary>
-                            /// The ID of the forwarding rule.
+                            /// <para>The ID of the forwarding rule.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>rule-a3x3pg1yohq3lq****</para>
                             /// </summary>
                             [NameInMap("RuleId")]
                             [Validation(Required=false)]
                             public string RuleId { get; set; }
 
                             /// <summary>
-                            /// The name of the forwarding rule.
+                            /// <para>The name of the forwarding rule.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>test</para>
                             /// </summary>
                             [NameInMap("RuleName")]
                             [Validation(Required=false)]
                             public string RuleName { get; set; }
 
                             /// <summary>
-                            /// The request path.
+                            /// <para>The request URL.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>/example</para>
                             /// </summary>
                             [NameInMap("Url")]
                             [Validation(Required=false)]
@@ -109,23 +130,28 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 }
 
                 /// <summary>
-                /// The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+                /// <para>The time when the CLB instance was created. The time follows the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-08-31T02:49:05Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The number of servers. 
+                /// <para>The number of servers.</para>
+                /// <para>This parameter is unavailable by default. To use this parameter, submit a ticket or contact your account manager.</para>
                 /// 
-                /// >  The feature corresponding to this parameter is not available by default. If you want to use this feature, [submit a ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex).
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ServerCount")]
                 [Validation(Required=false)]
                 public long? ServerCount { get; set; }
 
                 /// <summary>
-                /// The tags.
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -136,14 +162,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag> Tag { get; set; }
                     public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag keys of the resource.
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -154,14 +186,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 }
 
                 /// <summary>
-                /// The ID of the server group.
+                /// <para>The server group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rsp-0bfuc*****</para>
                 /// </summary>
                 [NameInMap("VServerGroupId")]
                 [Validation(Required=false)]
                 public string VServerGroupId { get; set; }
 
                 /// <summary>
-                /// The name of the server group.
+                /// <para>The server group name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Group3</para>
                 /// </summary>
                 [NameInMap("VServerGroupName")]
                 [Validation(Required=false)]

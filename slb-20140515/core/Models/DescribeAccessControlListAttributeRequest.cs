@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAccessControlListAttributeRequest : TeaModel {
         /// <summary>
-        /// The remarks of the ACL entry.
+        /// <para>The remarks of the ACL entry.</para>
         /// 
-        /// It must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AclEntryComment")]
         [Validation(Required=false)]
         public string AclEntryComment { get; set; }
 
         /// <summary>
-        /// The ID of the ACL.
+        /// <para>The ID of the ACL that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>acl-bp1ut10zzvh1y8dfs****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -36,23 +39,32 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The page number.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The time when the network ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+        /// <para>The region ID of the ACL.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

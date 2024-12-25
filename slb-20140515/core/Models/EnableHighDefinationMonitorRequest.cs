@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class EnableHighDefinationMonitorRequest : TeaModel {
         /// <summary>
-        /// The name of the project of Log Service. The name must be 4 to 63 characters in length, and can contain digits and lowercase letters. It must start and end with a digit or a letter.
+        /// <para>The name of the project of Log Service. The name must be 4 to 63 characters in length, and can contain digits and lowercase letters. It must start and end with a digit or a letter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>my-project</para>
         /// </summary>
         [NameInMap("LogProject")]
         [Validation(Required=false)]
         public string LogProject { get; set; }
 
         /// <summary>
-        /// The name of the Logstore of Log Service. The name must be 2 to 64 characters in length and can contain digits, lowercase letters, hyphens (-) and underscores (_). It must start and end with a digit or a letter.
+        /// <para>The name of the Logstore of Log Service. The name must be 2 to 64 characters in length and can contain digits, lowercase letters, hyphens (-) and underscores (_). It must start and end with a digit or a letter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>my-log-store</para>
         /// </summary>
         [NameInMap("LogStore")]
         [Validation(Required=false)]
@@ -36,11 +40,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+        /// <para>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -55,7 +60,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags of the logs. The tags must be key-value pairs that are contained in a JSON dictionary.
+        /// <para>The tags of the logs. The tags must be key-value pairs that are contained in a JSON dictionary.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

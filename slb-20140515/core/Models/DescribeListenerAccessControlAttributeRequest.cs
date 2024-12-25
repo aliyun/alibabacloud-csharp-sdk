@@ -10,29 +10,36 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeListenerAccessControlAttributeRequest : TeaModel {
         /// <summary>
-        /// The frontend port that is used by the CLB instance.
+        /// <para>The frontend port that is used by the CLB instance.</para>
+        /// <para>Valid values: <b>1 to 65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Valid values: **1 to 65535**.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The frontend protocol that is used by the CLB instance.
+        /// <para>The frontend protocol that is used by the CLB instance.</para>
+        /// <remarks>
+        /// <para>This parameter is required if the same port is specified for listeners of different protocols.</para>
+        /// </remarks>
         /// 
-        /// > This parameter is required if the same port is specified for listeners of different protocols.
+        /// <b>Example:</b>
+        /// <para>https</para>
         /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// The CLB instance ID.
+        /// <para>The CLB instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-8vb86hxixo8lvsja8****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -47,9 +54,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region where the Classic Load Balancer (CLB) instance is created.
+        /// <para>The region where the Classic Load Balancer (CLB) instance is created.</para>
+        /// <para>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</para>
         /// 
-        /// You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

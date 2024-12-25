@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetDomainExtensionAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the domain name that is associated with the additional certificate to be replaced.
+        /// <para>The ID of the domain name that is associated with the additional certificate to be replaced.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>de-bp1rp7ta*****</para>
         /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
@@ -27,9 +29,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the SLB instance is created.
+        /// <para>The region ID of the Server Load Balancer (SLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -44,7 +48,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the new certificate.
+        /// <para>The ID of the new certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1231579xxxxxxxx_166f8204689_1714763408_709981xxx</para>
         /// </summary>
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]

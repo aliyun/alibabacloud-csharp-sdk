@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateLoadBalancerUDPListenerResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>06F00FBB-3D9E-4CCE-9D43-1A6946A75556</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

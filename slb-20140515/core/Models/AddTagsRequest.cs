@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class AddTagsRequest : TeaModel {
         /// <summary>
-        /// The name of this action.
+        /// <para>The ID of the Server Load Balancer (SLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Value: **AddTags**
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1kuzyb******</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -29,9 +29,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the SLB instance belongs.
+        /// <para>The ID of the region to which the SLB instance belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -46,9 +48,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the SLB instance belongs.
+        /// <para>The list of tags that need to be added.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;TagKey&quot;:&quot;Key1&quot;,&quot;TagValue&quot;:&quot;Value1&quot;},{&quot;TagKey&quot;:&quot;Key2&quot;,&quot;TagValue&quot;:&quot;Value2&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

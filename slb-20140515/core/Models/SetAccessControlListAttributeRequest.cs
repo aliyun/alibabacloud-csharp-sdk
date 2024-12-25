@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetAccessControlListAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the network ACL.
+        /// <para>The ACL ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>acl-bp1l0kk4gxce43k******</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The new name of the network ACL. The name must be 1 to 80 characters in length, and can contain only letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of the network ACL must be unique within each region.
+        /// <para>The ACL name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("AclName")]
         [Validation(Required=false)]
@@ -36,11 +40,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the network ACL is created.
+        /// <para>The region ID of the ACL.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

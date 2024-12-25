@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetAccessControlListAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>988CB45E-1643-48C0-87B4-928DDF77EA49</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

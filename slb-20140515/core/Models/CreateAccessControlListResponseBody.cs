@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateAccessControlListResponseBody : TeaModel {
         /// <summary>
-        /// The IP version. Valid values: **ipv4** and **ipv6**.
+        /// <para>The IP version. Valid values: <b>ipv4</b> and <b>ipv6</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acl-rj9xpxzcwxrukois****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group to which the ACL belongs.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>988CB45E-1643-48C0-87B4-928DDF77EA49</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

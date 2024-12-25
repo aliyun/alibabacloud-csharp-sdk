@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeTagsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether the tag is DistinctKey.
+        /// <para>Specifies whether the tags contain distinct keys.</para>
+        /// <para>Valid values: true and false.</para>
         /// 
-        /// Valid values: **true and false**.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DistinctKey")]
         [Validation(Required=false)]
         public bool? DistinctKey { get; set; }
 
         /// <summary>
-        /// The ID of the SLB instance.
+        /// <para>The SLB instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-bp1kuzybm******</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -34,23 +39,31 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Minimum value: 1. Default value: 1.
+        /// <para>The number of the page to return. Minimum value: 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 50. Maximum value: 100.
+        /// <para>The number of entries to return on each page. Default value: 50. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+        /// <para>The region ID of the Server Load Balancer (SLB) instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -65,7 +78,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The tags that you want to query.
+        /// <para>The tags that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;TagKey&quot;:&quot;Key1&quot;,&quot;TagValue&quot;:&quot;Value1&quot;},{&quot;TagKey&quot;:&quot;Key2&quot;,&quot;TagValue&quot;:&quot;Value2&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

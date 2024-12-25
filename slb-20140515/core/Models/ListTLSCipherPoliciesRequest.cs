@@ -10,34 +10,48 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ListTLSCipherPoliciesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the information about the associated listeners. Valid values:
+        /// <para>Specifies whether to return the information about the associated listeners. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: returns the information about the associated listeners.</description></item>
+        /// <item><description><b>false</b> (default): does not return the information about the associated listeners.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: returns the information about the associated listeners.
-        /// *   **false** (default): does not return the information about the associated listeners.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IncludeListener")]
         [Validation(Required=false)]
         public bool? IncludeListener { get; set; }
 
         /// <summary>
-        /// The maximum number of TLS policies to be queried in this call. Valid values: **1** to **100**. If you do not set this parameter, the default value **20** is used.
+        /// <para>The maximum number of TLS policies to be queried in this call. Valid values: <b>1</b> to <b>100</b>. If you do not set this parameter, the default value <b>20</b> is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxItems")]
         [Validation(Required=false)]
         public int? MaxItems { get; set; }
 
         /// <summary>
-        /// The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.
+        /// <para>The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TLSPolicy-test****</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
+        /// <item><description>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</description></item>
+        /// </list>
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -52,11 +66,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+        /// <para>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -71,7 +86,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the TLS policy.
+        /// <para>The ID of the TLS policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tls-bp17elso1h323r****</para>
         /// </summary>
         [NameInMap("TLSCipherPolicyId")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeServerCertificatesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>365F4154-92F6-4AE4-92F8-7FF34B540710</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of server certificates.
+        /// <para>The server certificates.</para>
         /// </summary>
         [NameInMap("ServerCertificates")]
         [Validation(Required=false)]
@@ -28,101 +31,141 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate> ServerCertificate { get; set; }
             public class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate : TeaModel {
                 /// <summary>
-                /// The ID of the server certificate from Alibaba Cloud Certificate Management Service.
+                /// <para>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7309********_15d97e7709a_71445759hr_789289731</para>
                 /// </summary>
                 [NameInMap("AliCloudCertificateId")]
                 [Validation(Required=false)]
                 public string AliCloudCertificateId { get; set; }
 
                 /// <summary>
-                /// The name of the server certificate from Alibaba Cloud Certificate Management Service.
+                /// <para>The name of the server certificate from Alibaba Cloud Certificate Management Service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testcertkey</para>
                 /// </summary>
                 [NameInMap("AliCloudCertificateName")]
                 [Validation(Required=false)]
                 public string AliCloudCertificateName { get; set; }
 
                 /// <summary>
-                /// The domain name of the certificate. The domain name is specified in the `CommonName` field.
+                /// <para>The domain name of the server certificate. The domain name is specified in the <c>CommonName</c> field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://www.example.com">www.example.com</a></para>
                 /// </summary>
                 [NameInMap("CommonName")]
                 [Validation(Required=false)]
                 public string CommonName { get; set; }
 
                 /// <summary>
-                /// The time when the server certificate is uploaded.
+                /// <para>The time when the server certificate was uploaded.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-08-31T02:49:05Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The timestamp generated when the server certificate is uploaded.
+                /// <para>The timestamp when the server certificate was uploaded.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1504147745000</para>
                 /// </summary>
                 [NameInMap("CreateTimeStamp")]
                 [Validation(Required=false)]
                 public long? CreateTimeStamp { get; set; }
 
                 /// <summary>
-                /// The expiration time.
+                /// <para>The time when the server certificate expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-01-26T23:59:59Z</para>
                 /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// The timestamp that indicates when the certificate expires.
+                /// <para>The timestamp when the server certificate expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>15041477450</para>
                 /// </summary>
                 [NameInMap("ExpireTimeStamp")]
                 [Validation(Required=false)]
                 public long? ExpireTimeStamp { get; set; }
 
                 /// <summary>
-                /// The fingerprint of the server certificate.
+                /// <para>The fingerprint of the server certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>68:08:1a:f8:2c:97:69:a3:a1:e6:16:41:4b:ca:4f:5d:ee:a5:ef:0d</para>
                 /// </summary>
                 [NameInMap("Fingerprint")]
                 [Validation(Required=false)]
                 public string Fingerprint { get; set; }
 
                 /// <summary>
-                /// Indicates whether the server certificate is from Alibaba Cloud Certificate Management Service. Valid values:
+                /// <para>Indicates whether the server certificate is from Alibaba Cloud Certificate Management Service. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **1**: yes
-                /// *   **0**: no
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("IsAliCloudCertificate")]
                 [Validation(Required=false)]
                 public int? IsAliCloudCertificate { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the server certificate is created.
+                /// <para>The region ID of the server certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group.
+                /// <para>The resource group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-atstuj3rtop****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The ID of the server certificate.
+                /// <para>The server certificate ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123157********_166f8204689_1714763408_709981430-cn-east-hangzhou-02</para>
                 /// </summary>
                 [NameInMap("ServerCertificateId")]
                 [Validation(Required=false)]
                 public string ServerCertificateId { get; set; }
 
                 /// <summary>
-                /// The name of the server certificate.
+                /// <para>The name of the server certificate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>slb</para>
                 /// </summary>
                 [NameInMap("ServerCertificateName")]
                 [Validation(Required=false)]
                 public string ServerCertificateName { get; set; }
 
                 /// <summary>
-                /// The list of alternative domain names of the server certificate. The alternative domain names are specified in the `Subject Alternative Name` field of the server certificate.
+                /// <para>The alternative domain names of the server certificate. The alternative domain names are specified in the Subject Alternative Name field of the server certificate.</para>
                 /// </summary>
                 [NameInMap("SubjectAlternativeNames")]
                 [Validation(Required=false)]
@@ -135,7 +178,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 }
 
                 /// <summary>
-                /// The tags.
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -146,14 +189,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     public List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag> Tag { get; set; }
                     public class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag : TeaModel {
                         /// <summary>
-                        /// The tag keys of the resource.
+                        /// <para>The tag keys of the resource.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>test</para>
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// The tag value.
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]

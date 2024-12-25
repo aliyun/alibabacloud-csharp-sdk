@@ -10,40 +10,53 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class ModifyLoadBalancerInternetSpecRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically pay the subscription fee of the Internet-facing CLB instance. Valid values:
+        /// <para>Specifies whether to automatically pay the subscription fee of the Internet-facing CLB instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables automatic payments. This is the default value.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. You must complete the payment in Order Center.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: enables automatic payments. This is the default value.
-        /// *   **false**: disables automatic payment. You must complete the payment in Order Center.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth of the Internet-facing CLB instance that uses the pay-by-bandwidth metering method. Unit: Mbit/s.
+        /// <para>The maximum bandwidth of the Internet-facing CLB instance that uses the pay-by-bandwidth metering method. Unit: Mbit/s.</para>
+        /// <para>Valid values: <b>1 to 5000</b>. The maximum bandwidth varies based on the region where the CLB instance is created.****</para>
+        /// <remarks>
+        /// <para> You do not need to specify this parameter if you set <b>InternetChargeType</b> to <b>paybytraffic</b> (pay-by-data-transfer).</para>
+        /// </remarks>
         /// 
-        /// Valid values: **1 to 5000**. The maximum bandwidth varies based on the region where the CLB instance is created.****
-        /// 
-        /// >  You do not need to specify this parameter if you set **InternetChargeType** to **paybytraffic** (pay-by-data-transfer).
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// The metering method of the Internet-facing CLB instance. Valid values:
+        /// <para>The metering method of the Internet-facing CLB instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>paybybandwidth</b>: pay-by-bandwidth</description></item>
+        /// <item><description><b>paybytraffic</b>: pay-by-data-transfer</description></item>
+        /// </list>
         /// 
-        /// *   **paybybandwidth**: pay-by-bandwidth
-        /// *   **paybytraffic**: pay-by-data-transfer
+        /// <b>Example:</b>
+        /// <para>paybytraffic</para>
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// <para>The ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1b6c719dfa08ex******</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -58,9 +71,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the CLB instance is deployed.
+        /// <para>The ID of the region where the CLB instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

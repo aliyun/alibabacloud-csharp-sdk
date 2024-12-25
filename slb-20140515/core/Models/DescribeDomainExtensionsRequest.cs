@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeDomainExtensionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the additional certificate.
+        /// <para>The ID of the additional certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>de-bp1rp7ta1****</para>
         /// </summary>
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
         public string DomainExtensionId { get; set; }
 
         /// <summary>
-        /// The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: **1 to 65535**.
+        /// <para>The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: <b>1 to 65535</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>443</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// <para>The ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-bp1b6c719dfa08ex****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -43,9 +50,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the CLB instance is deployed.
+        /// <para>The ID of the region where the CLB instance is deployed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

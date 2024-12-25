@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// The zones and the supported resources.
+        /// <para>The zones and the supported resources.</para>
         /// </summary>
         [NameInMap("AvailableResources")]
         [Validation(Required=false)]
@@ -21,21 +21,27 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource> AvailableResource { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource : TeaModel {
                 /// <summary>
-                /// The primary zone.
+                /// <para>The primary zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai-a</para>
                 /// </summary>
                 [NameInMap("MasterZoneId")]
                 [Validation(Required=false)]
                 public string MasterZoneId { get; set; }
 
                 /// <summary>
-                /// The secondary zone.
+                /// <para>The secondary zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai-b</para>
                 /// </summary>
                 [NameInMap("SlaveZoneId")]
                 [Validation(Required=false)]
                 public string SlaveZoneId { get; set; }
 
                 /// <summary>
-                /// The supported resources.
+                /// <para>The supported resources.</para>
                 /// </summary>
                 [NameInMap("SupportResources")]
                 [Validation(Required=false)]
@@ -46,18 +52,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     public List<DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource> SupportResource { get; set; }
                     public class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource : TeaModel {
                         /// <summary>
-                        /// The type of the IP address.
+                        /// <para>The type of the IP address.</para>
+                        /// <para>Valid values: <b>ipv4 and ipv6</b>.</para>
                         /// 
-                        /// Valid values: **ipv4 and ipv6**.
+                        /// <b>Example:</b>
+                        /// <para>ipv4</para>
                         /// </summary>
                         [NameInMap("AddressIPVersion")]
                         [Validation(Required=false)]
                         public string AddressIPVersion { get; set; }
 
                         /// <summary>
-                        /// The network type.
+                        /// <para>The network type.</para>
+                        /// <para>Valid values: <b>vpc, classic-internet, and classic-intranet</b>.</para>
                         /// 
-                        /// Valid values: **vpc, classic-internet, and classic-intranet**.
+                        /// <b>Example:</b>
+                        /// <para>classic_internet</para>
                         /// </summary>
                         [NameInMap("AddressType")]
                         [Validation(Required=false)]
@@ -72,7 +82,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>173B0EEA-22ED-4EE2-91F9-3A1CDDFFBBBA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

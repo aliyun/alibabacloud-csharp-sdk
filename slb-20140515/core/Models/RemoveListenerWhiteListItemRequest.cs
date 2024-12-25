@@ -10,27 +10,35 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class RemoveListenerWhiteListItemRequest : TeaModel {
         /// <summary>
-        /// The listening port.
+        /// <para>The listening port.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// The frontend protocol that is used by the CLB instance.
+        /// <para>The frontend protocol that is used by the CLB instance.</para>
+        /// <remarks>
+        /// <para> This parameter is required when listeners that use different protocols listen on the same port.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is required when listeners that use different protocols listen on the same port.
+        /// <b>Example:</b>
+        /// <para>https</para>
         /// </summary>
         [NameInMap("ListenerProtocol")]
         [Validation(Required=false)]
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// The ID of the CLB instance.
+        /// <para>The ID of the CLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lb-8vb86hxixo8lvsja8****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -45,9 +53,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The region where the Classic Load Balancer (CLB) instance is created.
+        /// <para>The region where the Classic Load Balancer (CLB) instance is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -62,11 +72,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The list of IP addresses or CIDR blocks that you want to remove from the whitelist. Separate multiple IP addresses or CIDR blocks with commas (,).
+        /// <para>The list of IP addresses or CIDR blocks that you want to remove from the whitelist. Separate multiple IP addresses or CIDR blocks with commas (,).</para>
+        /// <remarks>
+        /// <para> If all IP addresses are removed from the whitelist, the listener does not forward requests.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If all IP addresses are removed from the whitelist, the listener does not forward requests.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("SourceItems")]
         [Validation(Required=false)]
