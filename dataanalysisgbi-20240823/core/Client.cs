@@ -2739,6 +2739,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRole))
+            {
+                body["dataRole"] = request.DataRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateSqlOnly))
             {
                 body["generateSqlOnly"] = request.GenerateSqlOnly;
@@ -2754,6 +2758,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecificationType))
             {
                 body["specificationType"] = request.SpecificationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserParams))
+            {
+                body["userParams"] = request.UserParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2797,6 +2805,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRole))
+            {
+                body["dataRole"] = request.DataRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateSqlOnly))
             {
                 body["generateSqlOnly"] = request.GenerateSqlOnly;
@@ -2812,6 +2824,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecificationType))
             {
                 body["specificationType"] = request.SpecificationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserParams))
+            {
+                body["userParams"] = request.UserParams;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2869,6 +2885,322 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RunDataAnalysisWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对结构化结果进行分析、可视化信息生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDataResultAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDataResultAnalysisResponse
+        /// </returns>
+        public RunDataResultAnalysisResponse RunDataResultAnalysisWithOptions(RunDataResultAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisMode))
+            {
+                body["analysisMode"] = request.AnalysisMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlData))
+            {
+                body["sqlData"] = request.SqlData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDataResultAnalysis",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/runDataResultAnalysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunDataResultAnalysisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对结构化结果进行分析、可视化信息生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDataResultAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDataResultAnalysisResponse
+        /// </returns>
+        public async Task<RunDataResultAnalysisResponse> RunDataResultAnalysisWithOptionsAsync(RunDataResultAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisMode))
+            {
+                body["analysisMode"] = request.AnalysisMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlData))
+            {
+                body["sqlData"] = request.SqlData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDataResultAnalysis",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/runDataResultAnalysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunDataResultAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对结构化结果进行分析、可视化信息生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDataResultAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDataResultAnalysisResponse
+        /// </returns>
+        public RunDataResultAnalysisResponse RunDataResultAnalysis(RunDataResultAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunDataResultAnalysisWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对结构化结果进行分析、可视化信息生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDataResultAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDataResultAnalysisResponse
+        /// </returns>
+        public async Task<RunDataResultAnalysisResponse> RunDataResultAnalysisAsync(RunDataResultAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunDataResultAnalysisWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行sql生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSqlGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSqlGenerationResponse
+        /// </returns>
+        public RunSqlGenerationResponse RunSqlGenerationWithOptions(RunSqlGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecificationType))
+            {
+                body["specificationType"] = request.SpecificationType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSqlGeneration",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/runSqlGeneration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSqlGenerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行sql生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSqlGenerationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSqlGenerationResponse
+        /// </returns>
+        public async Task<RunSqlGenerationResponse> RunSqlGenerationWithOptionsAsync(RunSqlGenerationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecificationType))
+            {
+                body["specificationType"] = request.SpecificationType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSqlGeneration",
+                Version = "2024-08-23",
+                Protocol = "HTTPS",
+                Pathname = "/gbi/runSqlGeneration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSqlGenerationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行sql生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSqlGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSqlGenerationResponse
+        /// </returns>
+        public RunSqlGenerationResponse RunSqlGeneration(RunSqlGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunSqlGenerationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行sql生成</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSqlGenerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSqlGenerationResponse
+        /// </returns>
+        public async Task<RunSqlGenerationResponse> RunSqlGenerationAsync(RunSqlGenerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunSqlGenerationWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

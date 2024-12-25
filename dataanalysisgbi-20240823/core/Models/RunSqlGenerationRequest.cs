@@ -8,19 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
 {
-    public class RunDataAnalysisRequest : TeaModel {
-        [NameInMap("dataRole")]
-        [Validation(Required=false)]
-        public List<string> DataRole { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("generateSqlOnly")]
-        [Validation(Required=false)]
-        public bool? GenerateSqlOnly { get; set; }
-
+    public class RunSqlGenerationRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -30,7 +18,7 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>sessionID</para>
+        /// <para>d5eced84-fd25-43ee-a245-adb4e4a8c3be</para>
         /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]
@@ -44,9 +32,15 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
         [Validation(Required=false)]
         public string SpecificationType { get; set; }
 
-        [NameInMap("userParams")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>llm-2v3934xtp49esw64</para>
+        /// </summary>
+        [NameInMap("workspaceId")]
         [Validation(Required=false)]
-        public Dictionary<string, object> UserParams { get; set; }
+        public string WorkspaceId { get; set; }
 
     }
 
