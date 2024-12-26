@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class VerifySendMessageRequest : TeaModel {
         /// <summary>
+        /// <para>The message body.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The message key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string MessageKey { get; set; }
 
         /// <summary>
+        /// <para>The message tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xx</para>
         /// </summary>

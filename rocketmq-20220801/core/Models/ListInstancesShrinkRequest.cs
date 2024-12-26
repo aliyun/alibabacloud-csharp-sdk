@@ -67,6 +67,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string SeriesCodesShrink { get; set; }
 
         /// <summary>
+        /// <para>The storage encryption key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxxx</para>
+        /// </summary>
+        [NameInMap("storageSecretKey")]
+        [Validation(Required=false)]
+        public string StorageSecretKey { get; set; }
+
+        /// <summary>
         /// <para>The tags that are used to filter instances.</para>
         /// 
         /// <b>Example:</b>

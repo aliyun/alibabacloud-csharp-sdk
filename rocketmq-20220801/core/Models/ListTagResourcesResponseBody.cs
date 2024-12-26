@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Topic.NotFound</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Return result</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyData Data { get; set; }
         public class ListTagResourcesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The position from which the next query starts.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>d09e2b63e1b12d905b7080ff70</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string NextToken { get; set; }
 
             /// <summary>
+            /// <para>Request ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>F00C6A70-C782-5DD6-9D11-0CFC710100C7</para>
             /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
+            /// <summary>
+            /// <para>Resource tag relationships.</para>
+            /// </summary>
             [NameInMap("tagResources")]
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyDataTagResources> TagResources { get; set; }
             public class ListTagResourcesResponseBodyDataTagResources : TeaModel {
                 /// <summary>
+                /// <para>UID of the resource owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1876441048322426</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public long? AliUid { get; set; }
 
                 /// <summary>
+                /// <para>Tag category.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>Resource ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rmq-cn-pe334n08h08</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
+                /// <para>Resource type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>instance</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
+                /// <para>Visibility scope.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>public</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Scope { get; set; }
 
                 /// <summary>
+                /// <para>Tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>key</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
+                /// <para>Tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
                 /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
+        /// <para>Dynamic error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>
         /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>instanceId</para>
         /// </summary>
@@ -118,6 +148,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -126,6 +158,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The topic already exists.</para>
         /// </summary>
@@ -134,6 +168,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F00C6A70-C782-5DD6-9D11-0CFC710100C7</para>
         /// </summary>
@@ -142,6 +178,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the operation was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

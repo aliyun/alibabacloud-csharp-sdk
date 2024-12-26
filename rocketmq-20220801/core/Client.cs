@@ -39,6 +39,136 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDisasterRecoveryItemRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisasterRecoveryItemResponse
+        /// </returns>
+        public AddDisasterRecoveryItemResponse AddDisasterRecoveryItemWithOptions(string planId, AddDisasterRecoveryItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topics))
+            {
+                body["topics"] = request.Topics;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDisasterRecoveryItem",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId) + "/items",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDisasterRecoveryItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDisasterRecoveryItemRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisasterRecoveryItemResponse
+        /// </returns>
+        public async Task<AddDisasterRecoveryItemResponse> AddDisasterRecoveryItemWithOptionsAsync(string planId, AddDisasterRecoveryItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topics))
+            {
+                body["topics"] = request.Topics;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDisasterRecoveryItem",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId) + "/items",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDisasterRecoveryItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDisasterRecoveryItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisasterRecoveryItemResponse
+        /// </returns>
+        public AddDisasterRecoveryItemResponse AddDisasterRecoveryItem(string planId, AddDisasterRecoveryItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddDisasterRecoveryItemWithOptions(planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDisasterRecoveryItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisasterRecoveryItemResponse
+        /// </returns>
+        public async Task<AddDisasterRecoveryItemResponse> AddDisasterRecoveryItemAsync(string planId, AddDisasterRecoveryItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddDisasterRecoveryItemWithOptionsAsync(planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</para>
         /// </summary>
         /// 
@@ -228,6 +358,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["deliveryOrderType"] = request.DeliveryOrderType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReceiveTps))
+            {
+                body["maxReceiveTps"] = request.MaxReceiveTps;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
@@ -288,6 +422,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryOrderType))
             {
                 body["deliveryOrderType"] = request.DeliveryOrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReceiveTps))
+            {
+                body["maxReceiveTps"] = request.MaxReceiveTps;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
@@ -641,7 +779,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl用户</para>
+        /// <para>Creates an account that is used to access an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -691,7 +829,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl用户</para>
+        /// <para>Creates an account that is used to access an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -741,7 +879,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl用户</para>
+        /// <para>Creates an account that is used to access an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -760,7 +898,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl用户</para>
+        /// <para>Creates an account that is used to access an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -779,7 +917,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl数据</para>
+        /// <para>Creates an access control list (ACL) in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -841,7 +979,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl数据</para>
+        /// <para>Creates an access control list (ACL) in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -903,7 +1041,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl数据</para>
+        /// <para>Creates an access control list (ACL) in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -922,7 +1060,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制acl数据</para>
+        /// <para>Creates an access control list (ACL) in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -941,7 +1079,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制ip白名单</para>
+        /// <para>Creates an IP address whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -987,7 +1125,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制ip白名单</para>
+        /// <para>Creates an IP address whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1033,7 +1171,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制ip白名单</para>
+        /// <para>Creates an IP address whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1052,7 +1190,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建访问控制ip白名单</para>
+        /// <para>Creates an IP address whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1091,6 +1229,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
+            {
+                body["maxSendTps"] = request.MaxSendTps;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
                 body["messageType"] = request.MessageType;
@@ -1141,6 +1283,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
+            {
+                body["maxSendTps"] = request.MaxSendTps;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
                 body["messageType"] = request.MessageType;
@@ -1343,7 +1489,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消消费组订阅关系</para>
+        /// <para>Deletes the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1397,7 +1543,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消消费组订阅关系</para>
+        /// <para>Deletes the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1451,7 +1597,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消消费组订阅关系</para>
+        /// <para>Deletes the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1470,7 +1616,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消消费组订阅关系</para>
+        /// <para>Deletes the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1635,7 +1781,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl用户</para>
+        /// <para>Delete access control ACL user</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1671,7 +1817,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl用户</para>
+        /// <para>Delete access control ACL user</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1707,7 +1853,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl用户</para>
+        /// <para>Delete access control ACL user</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1722,7 +1868,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl用户</para>
+        /// <para>Delete access control ACL user</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1737,7 +1883,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Deletes the permissions of a specific account of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1787,7 +1933,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Deletes the permissions of a specific account of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1837,7 +1983,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Deletes the permissions of a specific account of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1856,7 +2002,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Deletes the permissions of a specific account of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1875,7 +2021,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制ip白名单</para>
+        /// <para>Deletes a specific IP address whitelist from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1921,7 +2067,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制ip白名单</para>
+        /// <para>Deletes a specific IP address whitelist from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1967,7 +2113,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制ip白名单</para>
+        /// <para>Deletes a specific IP address whitelist from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1986,7 +2132,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制ip白名单</para>
+        /// <para>Deletes a specific IP address whitelist from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2257,7 +2403,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组堆积信息</para>
+        /// <para>Query Consumer Group Backlog Information</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2293,7 +2439,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组堆积信息</para>
+        /// <para>Query Consumer Group Backlog Information</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2329,7 +2475,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组堆积信息</para>
+        /// <para>Query Consumer Group Backlog Information</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2344,7 +2490,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组堆积信息</para>
+        /// <para>Query Consumer Group Backlog Information</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2359,7 +2505,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// <para>Queries the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2395,7 +2541,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// <para>Queries the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2431,7 +2577,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// <para>Queries the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2446,7 +2592,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费组订阅关系列表客户端分布</para>
+        /// <para>Queries the subscriptions of a consumer group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2461,7 +2607,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者堆栈信息</para>
+        /// <para>Queries the stack information about a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2507,7 +2653,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者堆栈信息</para>
+        /// <para>Queries the stack information about a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2553,7 +2699,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者堆栈信息</para>
+        /// <para>Queries the stack information about a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2572,7 +2718,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者堆栈信息</para>
+        /// <para>Queries the stack information about a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2721,7 +2867,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例账号</para>
+        /// <para>Obtains the account used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2767,7 +2913,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例账号</para>
+        /// <para>Obtains the account used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2813,7 +2959,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例账号</para>
+        /// <para>Obtains the account used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2832,7 +2978,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例账号</para>
+        /// <para>Obtains the account used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2851,7 +2997,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息详情</para>
+        /// <para>Obtains the details of a specific message.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2887,7 +3033,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息详情</para>
+        /// <para>Obtains the details of a specific message.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2923,7 +3069,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息详情</para>
+        /// <para>Obtains the details of a specific message.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2938,7 +3084,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息详情</para>
+        /// <para>Obtains the details of a specific message.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3055,7 +3201,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹查询</para>
+        /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3091,7 +3237,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹查询</para>
+        /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3127,7 +3273,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹查询</para>
+        /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3142,7 +3288,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹查询</para>
+        /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3637,7 +3783,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl用户列表</para>
+        /// <para>Queries the accounts that are used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3699,7 +3845,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl用户列表</para>
+        /// <para>Queries the accounts that are used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3761,7 +3907,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl用户列表</para>
+        /// <para>Queries the accounts that are used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3780,7 +3926,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl用户列表</para>
+        /// <para>Queries the accounts that are used to access a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3799,7 +3945,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl数据列表</para>
+        /// <para>Queries the access control lists (ACLs) of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3853,7 +3999,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl数据列表</para>
+        /// <para>Queries the access control lists (ACLs) of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3907,7 +4053,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl数据列表</para>
+        /// <para>Queries the access control lists (ACLs) of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3926,7 +4072,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>访问控制acl数据列表</para>
+        /// <para>Queries the access control lists (ACLs) of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3945,7 +4091,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询访问控制ip白名单列表</para>
+        /// <para>Queries the IP address whitelists of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3999,7 +4145,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询访问控制ip白名单列表</para>
+        /// <para>Queries the IP address whitelists of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4053,7 +4199,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询访问控制ip白名单列表</para>
+        /// <para>Queries the IP address whitelists of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4072,7 +4218,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询访问控制ip白名单列表</para>
+        /// <para>Queries the IP address whitelists of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4143,6 +4289,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeriesCodesShrink))
             {
                 query["seriesCodes"] = request.SeriesCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSecretKey))
+            {
+                query["storageSecretKey"] = request.StorageSecretKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
@@ -4223,6 +4373,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["seriesCodes"] = request.SeriesCodesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSecretKey))
+            {
+                query["storageSecretKey"] = request.StorageSecretKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["tags"] = request.Tags;
@@ -4301,7 +4455,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息列表</para>
+        /// <para>Queries the list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4371,7 +4525,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息列表</para>
+        /// <para>Queries the list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4441,7 +4595,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息列表</para>
+        /// <para>Queries the list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4460,7 +4614,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息列表</para>
+        /// <para>Queries the list of messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4581,7 +4735,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可见的资源标签关系</para>
+        /// <para>Query visible resource tag relationships</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4647,7 +4801,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可见的资源标签关系</para>
+        /// <para>Query visible resource tag relationships</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4713,7 +4867,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可见的资源标签关系</para>
+        /// <para>Query visible resource tag relationships</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4732,7 +4886,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可见的资源标签关系</para>
+        /// <para>Query visible resource tag relationships</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5019,7 +5173,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹消息列表</para>
+        /// <para>Queries the message traces of a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5089,7 +5243,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹消息列表</para>
+        /// <para>Queries the message traces of a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5159,7 +5313,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹消息列表</para>
+        /// <para>Queries the message traces of a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5178,7 +5332,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轨迹消息列表</para>
+        /// <para>Queries the message traces of a specific topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5335,7 +5489,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// <para>Creates resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5393,7 +5547,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// <para>Creates resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5451,7 +5605,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// <para>Creates resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5470,7 +5624,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建标签资源关系（用户标签）</para>
+        /// <para>Creates resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5489,7 +5643,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户删除标签资源关系</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5551,7 +5705,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户删除标签资源关系</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5613,7 +5767,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户删除标签资源关系</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5632,7 +5786,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户删除标签资源关系</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5685,6 +5839,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryOrderType))
             {
                 body["deliveryOrderType"] = request.DeliveryOrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReceiveTps))
+            {
+                body["maxReceiveTps"] = request.MaxReceiveTps;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
@@ -5746,6 +5904,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryOrderType))
             {
                 body["deliveryOrderType"] = request.DeliveryOrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReceiveTps))
+            {
+                body["maxReceiveTps"] = request.MaxReceiveTps;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
@@ -6015,7 +6177,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制acl用户</para>
+        /// <para>Updates the information about a specific account in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6065,7 +6227,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制acl用户</para>
+        /// <para>Updates the information about a specific account in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6115,7 +6277,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制acl用户</para>
+        /// <para>Updates the information about a specific account in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6134,7 +6296,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制acl用户</para>
+        /// <para>Updates the information about a specific account in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6153,7 +6315,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Updates the permissions on the resources of a specific instance for a specific user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6215,7 +6377,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Updates the permissions on the resources of a specific instance for a specific user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6277,7 +6439,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Updates the permissions on the resources of a specific instance for a specific user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6296,7 +6458,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制acl数据</para>
+        /// <para>Updates the permissions on the resources of a specific instance for a specific user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6335,6 +6497,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
+            {
+                body["maxSendTps"] = request.MaxSendTps;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
@@ -6381,6 +6547,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
+            {
+                body["maxSendTps"] = request.MaxSendTps;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
@@ -6445,7 +6615,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消费验证</para>
+        /// <para>Verifies the consumption status of a message in a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6495,7 +6665,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消费验证</para>
+        /// <para>Verifies the consumption status of a message in a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6545,7 +6715,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消费验证</para>
+        /// <para>Verifies the consumption status of a message in a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6564,7 +6734,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消费验证</para>
+        /// <para>Verifies the consumption status of a message in a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6583,7 +6753,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6637,7 +6807,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6691,7 +6861,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6710,7 +6880,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Verifies the message sending feature of a specific topic on a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

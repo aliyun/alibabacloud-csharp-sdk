@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set PaymentType to Subscription.</para>
+        /// <para>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set paymentType to Subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enable</description></item>
-        /// <item><description>false: disable</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The commodity code.</para>
+        /// <para>The commodity code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ons_rmqpost_public_intl: pay-as-you-go</description></item>
         /// <item><description>ons_rmqsub_public_intl: subscription</description></item>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         /// <summary>
         /// <para>The name of the instance that you want to create.</para>
-        /// <para>If you do not configure this parameter, the instance ID is used as the instance name.</para>
+        /// <para>If you leave this parameter empty, the instance ID is used as the instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-72u3048uxxx</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The network configurations.</para>
+        /// <para>The information about the network.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("networkInfo")]
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <para>The billing method of Internet usage.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>payByBandwidth: pay-by-bandwidth. If Internet access is enabled for an instance, specify this value for the parameter.</description></item>
-                /// <item><description>payByTraffic: pay-by-traffic. If Internet access is enabled for an instance, specify this value for the parameter.</description></item>
-                /// <item><description>uninvolved: No billing method is involved. If Internet access is disabled for an instance, specify this value for the parameter.</description></item>
+                /// <item><description>payByBandwidth: pay-by-bandwidth. This value is valid only if you enable Internet access.</description></item>
+                /// <item><description>payByTraffic: pay-by-traffic. This value is valid only if you enable Internet access.</description></item>
+                /// <item><description>uninvolved: No billing method is involved. This value is valid only if you disable Internet access.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <item><description>enable</description></item>
                 /// <item><description>disable</description></item>
                 /// </list>
-                /// <para>By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fee</a>.</para>
+                /// <para>By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fees</a>.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -124,15 +124,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string InternetSpec { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
-                /// <para>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the instance.</para>
+                /// <para>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</para>
                 /// <list type="bullet">
                 /// <item><description>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
-                /// <item><description>If configure an IP address whitlist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
+                /// <item><description>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("ipWhitelist")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public List<string> IpWhitelist { get; set; }
 
             }
@@ -158,9 +161,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The ID of the vSwitch with which you want to associate the instance, If there are multiple vSwitchs, please concatenate them using the &quot;|&quot; character.</para>
+                /// <para>The ID of the vSwitch with which the instance is associated. If you want to specify multiple vSwitches, separate the vSwitches with vertical bars (|).</para>
                 /// <remarks>
-                /// <para> After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.</para>
+                /// <para> After you create an ApsaraMQ for RocketMQ instance, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.</para>
+                /// </remarks>
+                /// <remarks>
+                /// <para> We recommend that you configure vSwitches instead of this parameter.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -173,6 +179,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
                 /// <summary>
                 /// <para>The vSwitches.</para>
+                /// <remarks>
+                /// <para> After you create an ApsaraMQ for RocketMQ instance, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.</para>
+                /// </remarks>
+                /// <remarks>
+                /// <para> This parameter is required. We recommend that you configure this parameter instead of vSwitchId.</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("vSwitches")]
                 [Validation(Required=false)]
@@ -191,9 +203,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the VPC in which you want to deploy the instance.</para>
+                /// <para>The ID of the VPC with which the instance to be created is associated.</para>
                 /// <remarks>
-                /// <para> After an ApsaraMQ for RocketMQ instance is created, you cannot change the VPC in which the instance is deployed. If you want to change the VPC in which the instance is deployed, you must release the instance and create a new instance.</para>
+                /// <para> After you create an ApsaraMQ for RocketMQ instance, you cannot change the VPC with which the instance is associated. If you want to change the VPC with which the instance is associated, you must release the instance and create a new instance.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -226,7 +238,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. This parameter takes effect only if you set PaymentType to Subscription.</para>
+        /// <para>The subscription duration of the instance. This parameter takes effect only if you set paymentType to Subscription.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Monthly subscription: 1, 2, 3, 4, 5, and 6</description></item>
@@ -266,10 +278,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// <para>Specifies whether to enable the elastic TPS feature for the instance.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enable</description></item>
-            /// <item><description>false: disable</description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
-            /// <para>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fees</a>.</para>
+            /// <para>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fees</a>.</para>
             /// <remarks>
             /// <para> The elastic TPS feature is supported only by instances of specific editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</para>
             /// </remarks>
@@ -319,7 +331,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public int? MessageRetentionTime { get; set; }
 
             /// <summary>
-            /// <para>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For information about computing specification limits, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</para>
+            /// <para>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -330,8 +342,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string MsgProcessSpec { get; set; }
 
             /// <summary>
-            /// <para>The proportion of message sending TPS to the messaging TPS on the instance.</para>
-            /// <para>For example, you create an instance whose peak messaging TPS is specified as 1,000 and the proportion of message sending TPS is specified as 0.8. In this case, the peak message sending TPS is 800 and the peak message receiving TPS is 200 on the instance.</para>
+            /// <para>The ratio of the message sending TPS to the messaging TPS of the instance.</para>
+            /// <para>For example, if the maximum messaging TPS of an instance is 1,000 and the ratio of the message sending TPS to the messaging TPS of the instance is 0.8, the maximum message sending TPS of the instance is 800 and the maximum message receiving TPS is 200.</para>
             /// <para>Valid values: 0 to 1. Default value: 0.5.</para>
             /// 
             /// <b>Example:</b>
@@ -340,6 +352,26 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("sendReceiveRatio")]
             [Validation(Required=false)]
             public float? SendReceiveRatio { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether storage encryption is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("storageEncryption")]
+            [Validation(Required=false)]
+            public bool? StorageEncryption { get; set; }
+
+            /// <summary>
+            /// <para>The storage encryption key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
+            [NameInMap("storageSecretKey")]
+            [Validation(Required=false)]
+            public string StorageSecretKey { get; set; }
 
         }
 
@@ -354,7 +386,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzy6pist7uuna</para>
@@ -364,7 +396,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The primary edition of the instance. For information about the differences between primary edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</para>
+        /// <para>The primary edition of the instance. For information about the differences among primary edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>standard: Standard Edition</description></item>
@@ -372,7 +404,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <item><description>professional: Professional Edition</description></item>
         /// </list>
         /// <remarks>
-        /// <para> After an instance is created, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, Enterprise Platinum Edition. For example, you can upgrade an instance of Standard Edition to Professional Edition, but cannot downgrade an instance of Professional Edition to Standard Edition.</para>
+        /// <para> After you create an instance, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, Enterprise Platinum Edition. For example, you can upgrade an instance from Standard Edition to Professional Edition, but you cannot downgrade an instance from Professional Edition to Standard Edition.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -395,17 +427,23 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</para>
+        /// <para>The sub-category edition of the instance. For information about the differences among sub-category edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cluster_ha: High-availability Cluster Edition</description></item>
+        /// <item><description>cluster_ha: Cluster High-availability Edition</description></item>
         /// <item><description>single_node: Standalone Edition</description></item>
-        /// <item><description>serverless: Serverless Edition</description></item>
+        /// <item><description>serverless: serverless</description></item>
         /// </list>
-        /// <para>If you set seriesCode to ultimate, you can set this parameter to only cluster_ha.</para>
+        /// <para>If you set seriesCode to ultimate, you can set this parameter only to cluster_ha.</para>
         /// <remarks>
-        /// <para> After an instance is created, you cannot change the sub-category edition of the instance.</para>
+        /// <para> After you create an instance, you cannot change the sub-category edition of the instance.</para>
         /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>serverless: serverless</description></item>
+        /// <item><description>cluster_ha: Cluster High-availability Edition</description></item>
+        /// <item><description>single_node: Standalone Edition</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

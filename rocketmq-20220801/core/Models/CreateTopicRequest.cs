@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateTopicRequest : TeaModel {
+        [NameInMap("maxSendTps")]
+        [Validation(Required=false)]
+        public long? MaxSendTps { get; set; }
+
         /// <summary>
         /// <para>The type of messages in the topic that you want to create.</para>
         /// <para>Valid values:</para>

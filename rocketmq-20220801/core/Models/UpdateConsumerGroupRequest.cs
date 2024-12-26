@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string DeliveryOrderType { get; set; }
 
+        [NameInMap("maxReceiveTps")]
+        [Validation(Required=false)]
+        public long? MaxReceiveTps { get; set; }
+
         /// <summary>
         /// <para>The new remarks on the consumer group.</para>
         /// 

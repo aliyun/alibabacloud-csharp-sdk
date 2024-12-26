@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("maxSendTps")]
+            [Validation(Required=false)]
+            public long? MaxSendTps { get; set; }
+
             /// <summary>
             /// <para>The message type of the topic.</para>
             /// <para>Valid values:</para>

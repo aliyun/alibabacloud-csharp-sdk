@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListInstanceIpWhitelistRequest : TeaModel {
         /// <summary>
+        /// <para>IP whitelist.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string IpWhitelist { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

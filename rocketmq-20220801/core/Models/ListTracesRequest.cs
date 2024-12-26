@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListTracesRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The message ID.</para>
+        /// <para>This parameter is required if you set queryType to MESSAGE_ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0100163E0EC1F1965C04C7906700000000</para>
         /// </summary>
@@ -28,6 +32,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string MessageId { get; set; }
 
         /// <summary>
+        /// <para>The message key.</para>
+        /// <para>This parameter is required if you set queryType to MESSAGE_ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>order_ceating</para>
         /// </summary>
@@ -36,6 +43,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string MessageKey { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +54,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +65,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The query type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MESSAGE_ID</description></item>
+        /// <item><description>MESSAGE_KEY</description></item>
+        /// <item><description>TOPIC</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +82,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string QueryType { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

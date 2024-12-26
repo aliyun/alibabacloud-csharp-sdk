@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetTraceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidConsumerGroupId</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTraceResponseBodyData Data { get; set; }
         public class GetTraceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Broker trace info.</para>
+            /// </summary>
             [NameInMap("brokerInfo")]
             [Validation(Required=false)]
             public GetTraceResponseBodyDataBrokerInfo BrokerInfo { get; set; }
             public class GetTraceResponseBodyDataBrokerInfo : TeaModel {
                 /// <summary>
+                /// <para>Delay status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
                 /// </summary>
@@ -33,11 +43,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string DelayStatus { get; set; }
 
+                /// <summary>
+                /// <para>Operation list.</para>
+                /// </summary>
                 [NameInMap("operations")]
                 [Validation(Required=false)]
                 public List<GetTraceResponseBodyDataBrokerInfoOperations> Operations { get; set; }
                 public class GetTraceResponseBodyDataBrokerInfoOperations : TeaModel {
                     /// <summary>
+                    /// <para>Operation time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
                     /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string OperateTime { get; set; }
 
                     /// <summary>
+                    /// <para>Operation type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ADD</para>
                     /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
+                /// <para>Preset delivery time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
                 /// </summary>
@@ -65,11 +84,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             }
 
+            /// <summary>
+            /// <para>Consumer trace info.</para>
+            /// </summary>
             [NameInMap("consumerInfos")]
             [Validation(Required=false)]
             public List<GetTraceResponseBodyDataConsumerInfos> ConsumerInfos { get; set; }
             public class GetTraceResponseBodyDataConsumerInfos : TeaModel {
                 /// <summary>
+                /// <para>Consume status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
                 /// </summary>
@@ -78,6 +102,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string ConsumeStatus { get; set; }
 
                 /// <summary>
+                /// <para>The consumer group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>GID_inspector_group</para>
                 /// </summary>
@@ -85,11 +111,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string ConsumerGroupId { get; set; }
 
+                /// <summary>
+                /// <para>Dead letter info.</para>
+                /// </summary>
                 [NameInMap("deadLetterInfo")]
                 [Validation(Required=false)]
                 public GetTraceResponseBodyDataConsumerInfosDeadLetterInfo DeadLetterInfo { get; set; }
                 public class GetTraceResponseBodyDataConsumerInfosDeadLetterInfo : TeaModel {
                     /// <summary>
+                    /// <para>MessageId.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>7F000001001F7A4F0F29463F0376047D</para>
                     /// </summary>
@@ -98,6 +129,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string MessageId { get; set; }
 
                     /// <summary>
+                    /// <para>Arrival time in the dead letter queue.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
                     /// </summary>
@@ -106,6 +139,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ToDlqTime { get; set; }
 
                     /// <summary>
+                    /// <para>The topic name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Register_Sync</para>
                     /// </summary>
@@ -116,6 +151,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
+                /// <para>Whether it is a dead letter message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -123,11 +160,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public bool? DeadMessage { get; set; }
 
+                /// <summary>
+                /// <para>Consumer record list.</para>
+                /// </summary>
                 [NameInMap("records")]
                 [Validation(Required=false)]
                 public List<GetTraceResponseBodyDataConsumerInfosRecords> Records { get; set; }
                 public class GetTraceResponseBodyDataConsumerInfosRecords : TeaModel {
                     /// <summary>
+                    /// <para>Client host.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>xx.xx.xx.xx</para>
                     /// </summary>
@@ -136,6 +178,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ClientHost { get; set; }
 
                     /// <summary>
+                    /// <para>Consume status.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>SUCCESS</para>
                     /// </summary>
@@ -144,6 +188,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ConsumeStatus { get; set; }
 
                     /// <summary>
+                    /// <para>Whether to consume fifo.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -151,11 +197,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     [Validation(Required=false)]
                     public bool? FifoEnable { get; set; }
 
+                    /// <summary>
+                    /// <para>Operation list.</para>
+                    /// </summary>
                     [NameInMap("operations")]
                     [Validation(Required=false)]
                     public List<GetTraceResponseBodyDataConsumerInfosRecordsOperations> Operations { get; set; }
                     public class GetTraceResponseBodyDataConsumerInfosRecordsOperations : TeaModel {
                         /// <summary>
+                        /// <para>Whether it is a dead letter message.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -164,6 +215,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                         public bool? DeadMessage { get; set; }
 
                         /// <summary>
+                        /// <para>Invisible time, milliseconds.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
                         /// </summary>
@@ -172,6 +225,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                         public long? InvisibleTime { get; set; }
 
                         /// <summary>
+                        /// <para>Operation time.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>2023-03-22 12:17:08</para>
                         /// </summary>
@@ -180,6 +235,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                         public string OperateTime { get; set; }
 
                         /// <summary>
+                        /// <para>Operation type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>ADD</para>
                         /// </summary>
@@ -200,6 +257,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string PopCk { get; set; }
 
                     /// <summary>
+                    /// <para>Consumer name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -212,6 +271,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rmq-cn-7e22ody****</para>
             /// </summary>
@@ -219,11 +280,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The message information.</para>
+            /// </summary>
             [NameInMap("messageInfo")]
             [Validation(Required=false)]
             public GetTraceResponseBodyDataMessageInfo MessageInfo { get; set; }
             public class GetTraceResponseBodyDataMessageInfo : TeaModel {
                 /// <summary>
+                /// <para>Message body.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
                 /// </summary>
@@ -232,6 +298,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Body { get; set; }
 
                 /// <summary>
+                /// <para>Message born host.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>x.x.x.x</para>
                 /// </summary>
@@ -240,6 +308,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string BornHost { get; set; }
 
                 /// <summary>
+                /// <para>Message born time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
                 /// </summary>
@@ -248,6 +318,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string BornTime { get; set; }
 
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rmq-cn-u0t2ygjq505</para>
                 /// </summary>
@@ -256,6 +328,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Message grpup.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
                 /// </summary>
@@ -264,6 +338,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageGroup { get; set; }
 
                 /// <summary>
+                /// <para>The message ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0A79275A00207A4F0F2916C92F9A0B94</para>
                 /// </summary>
@@ -271,11 +347,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string MessageId { get; set; }
 
+                /// <summary>
+                /// <para>Message keys.</para>
+                /// </summary>
                 [NameInMap("messageKeys")]
                 [Validation(Required=false)]
                 public List<string> MessageKeys { get; set; }
 
                 /// <summary>
+                /// <para>Message tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
                 /// </summary>
@@ -284,6 +365,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageTag { get; set; }
 
                 /// <summary>
+                /// <para>Message type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
                 /// </summary>
@@ -292,6 +375,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageType { get; set; }
 
                 /// <summary>
+                /// <para>The region ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
                 /// </summary>
@@ -300,14 +385,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
-                [NameInMap("setted")]
-                [Validation(Required=false)]
-                public bool? Setted { get; set; }
-
-                /// <summary>
+                /// <para>Message store host.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>x.x.x.x</para>
                 /// </summary>
@@ -316,6 +395,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StoreHost { get; set; }
 
                 /// <summary>
+                /// <para>Message store time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-22 12:17:08</para>
                 /// </summary>
@@ -324,6 +405,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StoreTime { get; set; }
 
                 /// <summary>
+                /// <para>The topic name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Topic_normal_inspector</para>
                 /// </summary>
@@ -332,6 +415,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string TopicName { get; set; }
 
                 /// <summary>
+                /// <para>Message transaction id.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
                 /// </summary>
@@ -339,21 +424,32 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string TransactionId { get; set; }
 
+                /// <summary>
+                /// <para>Message user properties.</para>
+                /// </summary>
                 [NameInMap("userProperties")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> UserProperties { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>Producer trace info.</para>
+            /// </summary>
             [NameInMap("producerInfo")]
             [Validation(Required=false)]
             public GetTraceResponseBodyDataProducerInfo ProducerInfo { get; set; }
             public class GetTraceResponseBodyDataProducerInfo : TeaModel {
+                /// <summary>
+                /// <para>Producer record list.</para>
+                /// </summary>
                 [NameInMap("records")]
                 [Validation(Required=false)]
                 public List<GetTraceResponseBodyDataProducerInfoRecords> Records { get; set; }
                 public class GetTraceResponseBodyDataProducerInfoRecords : TeaModel {
                     /// <summary>
+                    /// <para>Arrive time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
                     /// </summary>
@@ -362,6 +458,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ArriveTime { get; set; }
 
                     /// <summary>
+                    /// <para>Client host.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>xx.xx.xx.xx</para>
                     /// </summary>
@@ -370,6 +468,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ClientHost { get; set; }
 
                     /// <summary>
+                    /// <para>Dead-letter queue message ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0A79275A00207A4F0F2916C92F9A0B94</para>
                     /// </summary>
@@ -378,6 +478,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string DlqOriginMessageId { get; set; }
 
                     /// <summary>
+                    /// <para>Dead-letter queue topic.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test_topic</para>
                     /// </summary>
@@ -386,6 +488,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string DlqOriginTopic { get; set; }
 
                     /// <summary>
+                    /// <para>Message source.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>CONSOLE</para>
                     /// </summary>
@@ -394,6 +498,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string MessageSource { get; set; }
 
                     /// <summary>
+                    /// <para>Producer duration.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
                     /// </summary>
@@ -402,6 +508,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public long? ProduceDuration { get; set; }
 
                     /// <summary>
+                    /// <para>Producer status.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>SUCCESS</para>
                     /// </summary>
@@ -410,6 +518,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ProduceStatus { get; set; }
 
                     /// <summary>
+                    /// <para>Producer time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2023-03-22 12:17:08</para>
                     /// </summary>
@@ -418,6 +528,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string ProduceTime { get; set; }
 
                     /// <summary>
+                    /// <para>Producer name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
                     /// </summary>
@@ -430,6 +542,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -438,6 +552,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The topic name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>topic_test</para>
             /// </summary>
@@ -448,6 +564,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
+        /// <para>The dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>
         /// </summary>
@@ -456,6 +574,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>instanceId</para>
         /// </summary>
@@ -464,6 +584,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -472,6 +594,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The instance cannot be found.</para>
         /// </summary>
@@ -480,6 +604,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7779A8FC-1BCD-5A1D-A603-C4A9BD8ADC49</para>
         /// </summary>
@@ -488,6 +614,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

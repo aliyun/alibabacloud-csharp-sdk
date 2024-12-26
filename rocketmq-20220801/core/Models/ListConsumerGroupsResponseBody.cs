@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("maxReceiveTps")]
+                [Validation(Required=false)]
+                public long? MaxReceiveTps { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the region in which the instance resides.</para>
                 /// 

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class VerifyConsumeMessageRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the consumer group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

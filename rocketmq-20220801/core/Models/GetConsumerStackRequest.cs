@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetConsumerStackRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

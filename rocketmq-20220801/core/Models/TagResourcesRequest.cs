@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource IDs, in the JSON format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The type of resource.</para>
+        /// <para>Set this parameter to <b>instance</b>. The value of this parameter cannot be changed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +44,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>tag, in JSON format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

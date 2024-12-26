@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The instance status.</para>
+                /// <para>The status of the instance.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>RELEASED</description></item>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateTopicRequest : TeaModel {
+        [NameInMap("maxSendTps")]
+        [Validation(Required=false)]
+        public long? MaxSendTps { get; set; }
+
         /// <summary>
         /// <para>The new remarks on the topic.</para>
         /// 

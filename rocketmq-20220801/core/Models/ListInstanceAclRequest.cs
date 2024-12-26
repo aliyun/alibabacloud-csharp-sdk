@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListInstanceAclRequest : TeaModel {
         /// <summary>
+        /// <para>The condition that you specify to filter the ACLs. If you do not specify this parameter, all ACLs are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CID-TEST</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

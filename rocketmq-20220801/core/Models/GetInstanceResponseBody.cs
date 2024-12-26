@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public class GetInstanceResponseBodyDataExtConfig : TeaModel {
                 /// <summary>
                 /// <para>The authentication type of the instance.</para>
-                /// <para>Valid values:</para>
+                /// <para>Valid value:</para>
                 /// <list type="bullet">
                 /// <item><description>default: intelligent authentication</description></item>
                 /// </list>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public int? FlowOutBandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The metering method for Internet usage.</para>
+                /// <para>The metering method of Internet usage.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>PayByTraffic: pay-by-traffic</description></item>
@@ -214,13 +214,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string FlowOutType { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the Internet access feature.</para>
+                /// <para>Indicates whether Internet access is enabled.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>enable</description></item>
                 /// <item><description>disable</description></item>
                 /// </list>
-                /// <para>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fee</a>.</para>
+                /// <para>By default, you can access ApsaraMQ for RocketMQ instances in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fees</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enable</para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public GetInstanceResponseBodyDataNetworkInfo NetworkInfo { get; set; }
             public class GetInstanceResponseBodyDataNetworkInfo : TeaModel {
                 /// <summary>
-                /// <para>The information about endpoints.</para>
+                /// <para>The endpoints.</para>
                 /// </summary>
                 [NameInMap("endpoints")]
                 [Validation(Required=false)]
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     /// <para>Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>TCP_VPC: VPC endpoint</description></item>
-                    /// <item><description>TCP_INTERNET:public endpoint</description></item>
+                    /// <item><description>TCP_INTERNET: public endpoint</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// <para>The billing method of the instance.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+            /// <item><description>PayAsYouGo</description></item>
             /// <item><description>Subscription</description></item>
             /// </list>
             /// 
@@ -624,6 +624,26 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [NameInMap("sendReceiveRatio")]
                 [Validation(Required=false)]
                 public float? SendReceiveRatio { get; set; }
+
+                /// <summary>
+                /// <para>Indicates whether storage encryption is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("storageEncryption")]
+                [Validation(Required=false)]
+                public bool? StorageEncryption { get; set; }
+
+                /// <summary>
+                /// <para>The storage encryption key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxxxx</para>
+                /// </summary>
+                [NameInMap("storageSecretKey")]
+                [Validation(Required=false)]
+                public string StorageSecretKey { get; set; }
 
                 /// <summary>
                 /// <para>Specifies whether to enable the elastic TPS feature for the instance.</para>
