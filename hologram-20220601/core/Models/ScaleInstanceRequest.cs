@@ -53,6 +53,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? Cpu { get; set; }
 
+        /// <summary>
+        /// <para>是否开启ServerlessComputing</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("enableServerlessComputing")]
         [Validation(Required=false)]
         public bool? EnableServerlessComputing { get; set; }

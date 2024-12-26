@@ -596,6 +596,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("StorageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
+
             /// <summary>
             /// <para>The reason for the suspension.</para>
             /// <para>Valid values:</para>

@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <item><description>false</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the User Center to pay for the order.</para>
+        /// <para> The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the Expenses and Costs console to pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable monthly auto-renewal. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <item><description>PostPaid: pay-as-you-go</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is invalid for shared instances. Shared instances have fixed specifications and are pay-as-you-go instances.</para>
+        /// <para> This parameter is invalid for Hologres Shared Cluster instances. Hologres Shared Cluster instances have fixed specifications and are pay-as-you-go instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The infrequent access (IA) storage space of the instance. Unit: GB.</para>
         /// <remarks>
-        /// <para>This parameter is invalid for pay-as-you-go instances.</para>
+        /// <para> This parameter is invalid for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,12 +74,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The instance specifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>8-core 32 GB (number of compute nodes: 1)</description></item>
-        /// <item><description>16-core 64 GB (number of compute nodes: 1)</description></item>
-        /// <item><description>32-core 128 GB (number of compute nodes: 2)</description></item>
-        /// <item><description>64-core 256 GB (number of compute nodes: 4)</description></item>
-        /// <item><description>96-core 384 GB (number of compute nodes: 6)</description></item>
-        /// <item><description>128-core 512 GB (number of compute nodes: 8)</description></item>
+        /// <item><description>8-core 32GB (number of compute nodes: 1)</description></item>
+        /// <item><description>32-core 128GB (number of compute nodes: 2)</description></item>
+        /// <item><description>64-core 256GB (number of compute nodes: 4)</description></item>
+        /// <item><description>96-core 384GB (number of compute nodes: 6)</description></item>
+        /// <item><description>128-core 512GB (number of compute nodes: 8)</description></item>
         /// <item><description>Others</description></item>
         /// </list>
         /// <remarks>
@@ -87,11 +86,11 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <list type="bullet">
         /// <item><description><para>Set this parameter to the number of cores.</para>
         /// </description></item>
-        /// <item><description><para>If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.</para>
+        /// <item><description><para>If you want to set this parameter to specifications with more than 1,024 GB, you must submit a ticket.</para>
         /// </description></item>
-        /// <item><description><para>If you want to purchase a shared instance, you do not need to configure this parameter.</para>
+        /// <item><description><para>This parameter is invalid for Hologres Shared Cluster instances.</para>
         /// </description></item>
-        /// <item><description><para>The specifications of 8-core 32 GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</para>
+        /// <item><description><para>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -105,7 +104,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The validity period of the instance that you want to purchase. For example, you can specify a validity period of two months.</para>
         /// <remarks>
-        /// <para>You do not need to configure this parameter for pay-as-you-go instances.</para>
+        /// <para> You do not need to configure this parameter for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -115,6 +114,17 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? Duration { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the Serverless Computing feature.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("enableServerlessComputing")]
         [Validation(Required=false)]
         public bool? EnableServerlessComputing { get; set; }
@@ -122,7 +132,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The number of gateways. Valid values: 2 to 50.</para>
         /// <remarks>
-        /// <para>This parameter is required only for virtual warehouse instances.</para>
+        /// <para> This parameter is required only for virtual warehouse instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -132,12 +142,18 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? GatewayCount { get; set; }
 
+        /// <summary>
+        /// <para>The initial database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>chatbot</para>
+        /// </summary>
         [NameInMap("initialDatabases")]
         [Validation(Required=false)]
         public string InitialDatabases { get; set; }
 
         /// <summary>
-        /// <para>The name of the Hologres instance that you want to purchase. The name must be 2 to 64 characters in length.</para>
+        /// <para>The name of the instance. The name must be 2 to 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,12 +164,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance. Valid values:</para>
+        /// <para>The category of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Standard: general-purpose instance</description></item>
         /// <item><description>Follower: read-only secondary instance</description></item>
         /// <item><description>Warehouse: virtual warehouse instance</description></item>
-        /// <item><description>Shared: shared instance</description></item>
+        /// <item><description>Shared: Hologres Shared Cluster instance</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -167,7 +183,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The ID of the primary instance. This parameter is required for read-only secondary instances.</para>
         /// <remarks>
-        /// <para>The primary instance and secondary instances must meet the following requirements:</para>
+        /// <para> The primary and secondary instances must meet the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>The primary instance is in the Running state.</para>
@@ -178,7 +194,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// </description></item>
         /// <item><description><para>Less than 10 secondary instances are associated with the primary instance.</para>
         /// </description></item>
-        /// <item><description><para>The primary and secondary instances belong to the same Alibaba Cloud account.</para>
+        /// <item><description><para>The primary instance and secondary instances belong to the same Alibaba Cloud account.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -202,7 +218,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// </description></item>
         /// <item><description><para>This parameter can only be set to Hour for pay-as-you-go instances.</para>
         /// </description></item>
-        /// <item><description><para>By default, this parameter is set to Hour for shared instances.</para>
+        /// <item><description><para>By default, this parameter is set to Hour for Hologres Shared Cluster instances.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -214,7 +230,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can go to the <a href="https://api.aliyun.com/product/Hologram">OpenAPI Explorer</a> or the Usage notes section to view the ID of the region.</para>
+        /// <para>The ID of the region. You can obtain region IDs in <a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/endpoints">Endpoints</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -225,7 +241,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group. If you do not specify this parameter, the default resource group of the account is used.</para>
+        /// <para>The ID of the resource group. If you do not specify this parameter, the default resource group of the account is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -237,7 +253,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The standard storage space of the instance. Unit: GB.</para>
         /// <remarks>
-        /// <para>This parameter is invalid for pay-as-you-go instances.</para>
+        /// <para> This parameter is invalid for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -248,7 +264,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the instance resides.</para>
+        /// <para>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -270,7 +286,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone. For more information about how to obtain the ID of the zone, see the Usage notes section.</para>
+        /// <para>The ID of the zone. For more information, see the &quot;Operation description&quot; section in this topic.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
