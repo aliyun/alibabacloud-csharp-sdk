@@ -121,22 +121,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to <c>single_eni</c>.</para>
+        /// <para>Specifies whether to enable elastic IP addresses. This parameter is valid only if the ConnectionType parameter is set to <c>single_eni</c>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>
@@ -283,11 +272,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to <c>single_eni</c>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>enterprise</description></item>
-        /// <item><description>normal</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>enterprise</para>

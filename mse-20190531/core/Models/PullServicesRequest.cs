@@ -44,6 +44,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("SourceId")]
+        [Validation(Required=false)]
+        public long? SourceId { get; set; }
+
+        /// <summary>
         /// <para>The type of the service source.</para>
         /// 
         /// <b>Example:</b>

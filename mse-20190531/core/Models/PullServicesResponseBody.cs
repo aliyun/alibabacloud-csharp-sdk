@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string SourceId { get; set; }
 
+                [NameInMap("SourceIdList")]
+                [Validation(Required=false)]
+                public List<long?> SourceIdList { get; set; }
+
                 /// <summary>
                 /// <para>The type of the service source.</para>
                 /// 

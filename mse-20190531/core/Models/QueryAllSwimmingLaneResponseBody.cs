@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<QueryAllSwimmingLaneResponseBodyData> Data { get; set; }
         public class QueryAllSwimmingLaneResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public string Enable { get; set; }
+
             [NameInMap("EntryRules")]
             [Validation(Required=false)]
             public List<QueryAllSwimmingLaneResponseBodyDataEntryRules> EntryRules { get; set; }

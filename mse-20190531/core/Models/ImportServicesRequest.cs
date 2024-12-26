@@ -119,6 +119,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("SourceId")]
+        [Validation(Required=false)]
+        public long? SourceId { get; set; }
+
+        /// <summary>
         /// <para>The service source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MSE: MSE Nacos instance</description></item>

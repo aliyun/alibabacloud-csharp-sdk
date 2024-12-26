@@ -1,3 +1,12 @@
+2024-12-26 Version: 6.15.1
+- Update API GetApplicationInstanceList: update param AppName.
+- Update API GetServiceListPage: update param AppName.
+- Update API ImportServices: add param SourceId.
+- Update API PullServices: add param SourceId.
+- Update API PullServices: update response param.
+- Update API QueryAllSwimmingLane: update response param.
+
+
 2024-12-09 Version: 6.15.0
 - Support API CreateNamespace.
 - Support API ListNamespaces.
