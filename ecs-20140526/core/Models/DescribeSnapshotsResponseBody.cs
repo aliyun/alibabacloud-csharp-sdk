@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +32,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -110,7 +114,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the snapshot is encrypted.</para>
+                /// <para>Indicates whether the snapshot was encrypted. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -355,9 +363,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The status of the snapshot. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>progressing</description></item>
-                /// <item><description>accomplished</description></item>
-                /// <item><description>failed</description></item>
+                /// <item><description>progressing: The snapshot is being created.</description></item>
+                /// <item><description>accomplished: The snapshot is created.</description></item>
+                /// <item><description>failed: The snapshot failed to be created.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -403,12 +411,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the snapshot was used to create images or disks. Valid values:</para>
+                /// <para>Indicates whether the snapshot was used to create images or cloud disks. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>image</description></item>
-                /// <item><description>disk</description></item>
-                /// <item><description>image_disk</description></item>
-                /// <item><description>none</description></item>
+                /// <item><description>image: The snapshot was used to create custom images.</description></item>
+                /// <item><description>disk: The snapshot was used to create cloud disks.</description></item>
+                /// <item><description>image_disk: The snapshot was used to create custom images and data disks.</description></item>
+                /// <item><description>none: The snapshot was not used to create custom images or cloud disks.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ISP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to modify bandwidth configurations.</para>
+        /// <para>The ID of the instance for which you want to modify network configurations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

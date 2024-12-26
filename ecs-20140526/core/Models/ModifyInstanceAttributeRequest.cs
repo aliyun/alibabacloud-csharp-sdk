@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ModifyInstanceAttributeRequestCpuOptions CpuOptions { get; set; }
         public class ModifyInstanceAttributeRequestCpuOptions : TeaModel {
+            [NameInMap("Core")]
+            [Validation(Required=false)]
+            public int? Core { get; set; }
+
+            [NameInMap("ThreadsPerCore")]
+            [Validation(Required=false)]
+            public int? ThreadsPerCore { get; set; }
+
             /// <summary>
             /// <para>The CPU topology type of the instance. Valid values:</para>
             /// <list type="bullet">

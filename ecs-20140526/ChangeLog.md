@@ -1,3 +1,9 @@
+2024-12-26 Version: 5.0.0
+- Update API DescribeImages: update response param.
+- Update API ModifyInstanceAttribute: add param CpuOptions.Core.
+- Update API ModifyInstanceAttribute: add param CpuOptions.ThreadsPerCore.
+
+
 2024-12-20 Version: 4.4.13
 - Update API DescribeImages: update response param.
 

@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                         [NameInMap("Encrypted")]
                         [Validation(Required=false)]
-                        public string Encrypted { get; set; }
+                        public bool? Encrypted { get; set; }
 
                         /// <summary>
                         /// <para>The format of the image.</para>
