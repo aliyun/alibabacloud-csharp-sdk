@@ -1,3 +1,15 @@
+2024-12-26 Version: 9.2.0
+- Support API CreateRCNodePool.
+- Support API DeleteRCNodePool.
+- Support API DescribeRCNodePool.
+- Update API DescribeRCClusters: add param Profile.
+- Update API DescribeRCClusters: update response param.
+- Update API DescribeRCDeploymentSets: update param PageNumber.
+- Update API DescribeRCDeploymentSets: update param PageSize.
+- Update API RunRCInstances: add param CreateExtraParam.
+- Update API RunRCInstances: add param SupportCase.
+
+
 2024-12-24 Version: 9.1.0
 - Support API AssociateEipAddressWithRCInstance.
 - Support API SyncRCSecurityGroup.

@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("Profile")]
+            [Validation(Required=false)]
+            public string Profile { get; set; }
+
             /// <summary>
             /// <para>The cluster status. Valid values:</para>
             /// <list type="bullet">

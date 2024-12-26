@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CreateExtraParam")]
+        [Validation(Required=false)]
+        public string CreateExtraParam { get; set; }
+
         [NameInMap("CreateMode")]
         [Validation(Required=false)]
         public string CreateMode { get; set; }
@@ -267,6 +271,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
+
+        [NameInMap("SupportCase")]
+        [Validation(Required=false)]
+        public string SupportCase { get; set; }
 
         /// <summary>
         /// <para>The specification of the system disk.</para>

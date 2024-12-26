@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCClustersRequest : TeaModel {
+        [NameInMap("Profile")]
+        [Validation(Required=false)]
+        public string Profile { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 
