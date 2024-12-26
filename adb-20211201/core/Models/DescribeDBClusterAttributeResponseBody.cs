@@ -520,6 +520,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public bool? UserENIStatus { get; set; }
 
+                [NameInMap("UserENIVSwitchOptions")]
+                [Validation(Required=false)]
+                public string UserENIVSwitchOptions { get; set; }
+
+                [NameInMap("UserENIVpcId")]
+                [Validation(Required=false)]
+                public string UserENIVpcId { get; set; }
+
+                [NameInMap("UserENIZoneOptions")]
+                [Validation(Required=false)]
+                public string UserENIZoneOptions { get; set; }
+
                 /// <summary>
                 /// <para>The virtual private cloud (VPC) ID of the cluster.</para>
                 /// 
