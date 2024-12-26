@@ -1,3 +1,6 @@
+2024-12-26 Version: 1.0.2
+- Generated csharp 2024-06-24 for SchedulerX3.
+
 2024-12-17 Version: 1.0.1
 - Update API CreateJob: add param ExecutorBlockStrategy.
 - Update API CreateJob: update param TimeType.
