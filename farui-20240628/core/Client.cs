@@ -845,5 +845,433 @@ namespace AlibabaCloud.SDK.FaRui20240628
             return await RunLegalAdviceConsultationWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>案例检索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunSearchCaseFullTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchCaseFullTextResponse
+        /// </returns>
+        public RunSearchCaseFullTextResponse RunSearchCaseFullTextWithOptions(string workspaceId, RunSearchCaseFullTextRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunSearchCaseFullTextShrinkRequest request = new RunSearchCaseFullTextShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterCondition))
+            {
+                request.FilterConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterCondition, "filterCondition", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PageParam))
+            {
+                request.PageParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PageParam, "pageParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryKeywords))
+            {
+                request.QueryKeywordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryKeywords, "queryKeywords", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SortKeyAndDirection))
+            {
+                request.SortKeyAndDirectionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SortKeyAndDirection, "sortKeyAndDirection", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Thread))
+            {
+                request.ThreadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Thread, "thread", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterConditionShrink))
+            {
+                body["filterCondition"] = request.FilterConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageParamShrink))
+            {
+                body["pageParam"] = request.PageParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeywordsShrink))
+            {
+                body["queryKeywords"] = request.QueryKeywordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortKeyAndDirectionShrink))
+            {
+                body["sortKeyAndDirection"] = request.SortKeyAndDirectionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadShrink))
+            {
+                body["thread"] = request.ThreadShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSearchCaseFullText",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/search/case/fulltext",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSearchCaseFullTextResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>案例检索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunSearchCaseFullTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchCaseFullTextResponse
+        /// </returns>
+        public async Task<RunSearchCaseFullTextResponse> RunSearchCaseFullTextWithOptionsAsync(string workspaceId, RunSearchCaseFullTextRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunSearchCaseFullTextShrinkRequest request = new RunSearchCaseFullTextShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterCondition))
+            {
+                request.FilterConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterCondition, "filterCondition", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PageParam))
+            {
+                request.PageParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PageParam, "pageParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryKeywords))
+            {
+                request.QueryKeywordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryKeywords, "queryKeywords", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SortKeyAndDirection))
+            {
+                request.SortKeyAndDirectionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SortKeyAndDirection, "sortKeyAndDirection", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Thread))
+            {
+                request.ThreadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Thread, "thread", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterConditionShrink))
+            {
+                body["filterCondition"] = request.FilterConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageParamShrink))
+            {
+                body["pageParam"] = request.PageParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeywordsShrink))
+            {
+                body["queryKeywords"] = request.QueryKeywordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortKeyAndDirectionShrink))
+            {
+                body["sortKeyAndDirection"] = request.SortKeyAndDirectionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadShrink))
+            {
+                body["thread"] = request.ThreadShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSearchCaseFullText",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/search/case/fulltext",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSearchCaseFullTextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>案例检索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSearchCaseFullTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchCaseFullTextResponse
+        /// </returns>
+        public RunSearchCaseFullTextResponse RunSearchCaseFullText(string workspaceId, RunSearchCaseFullTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunSearchCaseFullTextWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>案例检索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSearchCaseFullTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchCaseFullTextResponse
+        /// </returns>
+        public async Task<RunSearchCaseFullTextResponse> RunSearchCaseFullTextAsync(string workspaceId, RunSearchCaseFullTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunSearchCaseFullTextWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法规搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunSearchLawQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchLawQueryResponse
+        /// </returns>
+        public RunSearchLawQueryResponse RunSearchLawQueryWithOptions(string workspaceId, RunSearchLawQueryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunSearchLawQueryShrinkRequest request = new RunSearchLawQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterCondition))
+            {
+                request.FilterConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterCondition, "filterCondition", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PageParam))
+            {
+                request.PageParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PageParam, "pageParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryKeywords))
+            {
+                request.QueryKeywordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryKeywords, "queryKeywords", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Thread))
+            {
+                request.ThreadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Thread, "thread", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterConditionShrink))
+            {
+                body["filterCondition"] = request.FilterConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageParamShrink))
+            {
+                body["pageParam"] = request.PageParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeywordsShrink))
+            {
+                body["queryKeywords"] = request.QueryKeywordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadShrink))
+            {
+                body["thread"] = request.ThreadShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSearchLawQuery",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/search/law/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSearchLawQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法规搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunSearchLawQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchLawQueryResponse
+        /// </returns>
+        public async Task<RunSearchLawQueryResponse> RunSearchLawQueryWithOptionsAsync(string workspaceId, RunSearchLawQueryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunSearchLawQueryShrinkRequest request = new RunSearchLawQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterCondition))
+            {
+                request.FilterConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterCondition, "filterCondition", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PageParam))
+            {
+                request.PageParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PageParam, "pageParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryKeywords))
+            {
+                request.QueryKeywordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryKeywords, "queryKeywords", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Thread))
+            {
+                request.ThreadShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Thread, "thread", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterConditionShrink))
+            {
+                body["filterCondition"] = request.FilterConditionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageParamShrink))
+            {
+                body["pageParam"] = request.PageParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeywordsShrink))
+            {
+                body["queryKeywords"] = request.QueryKeywordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadShrink))
+            {
+                body["thread"] = request.ThreadShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSearchLawQuery",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/farui/search/law/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSearchLawQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法规搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSearchLawQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchLawQueryResponse
+        /// </returns>
+        public RunSearchLawQueryResponse RunSearchLawQuery(string workspaceId, RunSearchLawQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunSearchLawQueryWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>法规搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSearchLawQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSearchLawQueryResponse
+        /// </returns>
+        public async Task<RunSearchLawQueryResponse> RunSearchLawQueryAsync(string workspaceId, RunSearchLawQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunSearchLawQueryWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
     }
 }
