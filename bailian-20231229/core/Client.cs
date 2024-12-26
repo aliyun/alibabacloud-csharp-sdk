@@ -208,6 +208,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 body["CategoryId"] = request.CategoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
+            {
+                body["CategoryType"] = request.CategoryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaseId))
             {
                 body["LeaseId"] = request.LeaseId;
@@ -284,6 +288,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
                 body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
+            {
+                body["CategoryType"] = request.CategoryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaseId))
             {
@@ -413,6 +421,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
+            {
+                body["CategoryType"] = request.CategoryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 body["FileName"] = request.FileName;
@@ -477,6 +489,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
+            {
+                body["CategoryType"] = request.CategoryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 body["FileName"] = request.FileName;

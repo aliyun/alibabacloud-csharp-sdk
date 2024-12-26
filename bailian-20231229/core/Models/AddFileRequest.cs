@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string CategoryId { get; set; }
 
+        [NameInMap("CategoryType")]
+        [Validation(Required=false)]
+        public string CategoryType { get; set; }
+
         /// <summary>
         /// <para>The lease ID, which corresponds to the <c>FileUploadLeaseId</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation.</para>
         /// <para>This parameter is required.</para>

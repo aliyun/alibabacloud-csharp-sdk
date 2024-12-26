@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ApplyFileUploadLeaseRequest : TeaModel {
+        [NameInMap("CategoryType")]
+        [Validation(Required=false)]
+        public string CategoryType { get; set; }
+
         /// <summary>
         /// <para>The name of the uploaded document, including the extension. Supported formats: pdf, doc, docx, md, txt, ppt, and pptx. The document name must be 4 to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
