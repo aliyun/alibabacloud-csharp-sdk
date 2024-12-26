@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterAndNodesParametersRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can set this parameter to modify the parameters of a specified node or of the cluster. Separate multiple node IDs with commas (,).</para>
+        /// <para>The IDs of nodes. You can specify this parameter, or leave this parameter empty. Separate multiple node IDs with commas (,).</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, only the cluster parameters are modified.</para>
+        /// <para> If you do not specify this parameter, only the cluster parameters are modified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parameter template that is used for the instance.</para>
+        /// <para>The ID of the parameter template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcpg-**************</para>
@@ -119,6 +119,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The secondary clusters in the GDN to which the parameter settings are synchronized.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gdn-<b><b><b><b><b>,gdn-</b></b></b></b></b></para>
+        /// </summary>
         [NameInMap("StandbyClusterIdListNeedToSync")]
         [Validation(Required=false)]
         public string StandbyClusterIdListNeedToSync { get; set; }

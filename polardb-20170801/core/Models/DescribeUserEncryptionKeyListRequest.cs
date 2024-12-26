@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-************</para>

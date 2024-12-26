@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧取消任务</para>
+        /// <para>Cancels O\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧取消任务</para>
+        /// <para>Cancels O\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧取消任务</para>
+        /// <para>Cancels O\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧取消任务</para>
+        /// <para>Cancels O\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2391,6 +2391,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["StorageAutoScale"] = request.StorageAutoScale;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageEncryption))
+            {
+                query["StorageEncryption"] = request.StorageEncryption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageEncryptionKey))
+            {
+                query["StorageEncryptionKey"] = request.StorageEncryptionKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePayType))
             {
                 query["StoragePayType"] = request.StoragePayType;
@@ -2652,6 +2660,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageAutoScale))
             {
                 query["StorageAutoScale"] = request.StorageAutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageEncryption))
+            {
+                query["StorageEncryption"] = request.StorageEncryption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageEncryptionKey))
+            {
+                query["StorageEncryptionKey"] = request.StorageEncryptionKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePayType))
             {
@@ -19690,7 +19706,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧修改任务</para>
+        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19764,7 +19780,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧修改任务</para>
+        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19838,7 +19854,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧修改任务</para>
+        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19856,7 +19872,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧修改任务</para>
+        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

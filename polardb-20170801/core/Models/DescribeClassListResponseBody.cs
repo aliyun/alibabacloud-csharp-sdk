@@ -62,6 +62,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Cpu { get; set; }
 
+            /// <summary>
+            /// <para>The maximum ESSD storage capacity. Unit: TB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>64</para>
+            /// </summary>
             [NameInMap("EssdMaxStorageCapacity")]
             [Validation(Required=false)]
             public string EssdMaxStorageCapacity { get; set; }
@@ -136,6 +142,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Pl3MaxIOPS { get; set; }
 
+            /// <summary>
+            /// <para>The maximum PSL4/PSL5 storage capacity. Unit: TB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>500</para>
+            /// </summary>
             [NameInMap("PolarStoreMaxStorageCapacity")]
             [Validation(Required=false)]
             public string PolarStoreMaxStorageCapacity { get; set; }

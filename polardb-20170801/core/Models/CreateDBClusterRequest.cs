@@ -686,6 +686,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string StorageAutoScale { get; set; }
 
+        [NameInMap("StorageEncryption")]
+        [Validation(Required=false)]
+        public bool? StorageEncryption { get; set; }
+
+        [NameInMap("StorageEncryptionKey")]
+        [Validation(Required=false)]
+        public string StorageEncryptionKey { get; set; }
+
         /// <summary>
         /// <para>The storage billing type, with valid values as follows:</para>
         /// <list type="bullet">
