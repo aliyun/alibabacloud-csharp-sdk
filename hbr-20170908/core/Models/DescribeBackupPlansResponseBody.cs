@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether a backup plan is automatically created based on tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("CreatedByTag")]
                 [Validation(Required=false)]
                 public bool? CreatedByTag { get; set; }
@@ -222,6 +228,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
 
+                /// <summary>
+                /// <para>The matched tag rules.</para>
+                /// </summary>
                 [NameInMap("HitTags")]
                 [Validation(Required=false)]
                 public DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTags HitTags { get; set; }
@@ -230,14 +239,36 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     [Validation(Required=false)]
                     public List<DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag> HitTag { get; set; }
                     public class DescribeBackupPlansResponseBodyBackupPlansBackupPlanHitTagsHitTag : TeaModel {
+                        /// <summary>
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>type</para>
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// <para>The tag-based matching rule. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>EQUAL</b>: Both the tag key and tag value are matched.</description></item>
+                        /// <item><description><b>NOT</b>: The tag key is matched and the tag value is not matched.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>EQUAL</para>
+                        /// </summary>
                         [NameInMap("Operator")]
                         [Validation(Required=false)]
                         public string Operator { get; set; }
 
+                        /// <summary>
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

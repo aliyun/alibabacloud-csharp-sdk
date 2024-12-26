@@ -94,6 +94,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? ActualItems { get; set; }
 
                 /// <summary>
+                /// <para>Time to archive</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1640334062</para>
                 /// </summary>
@@ -192,6 +194,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ErrorFile { get; set; }
 
                 /// <summary>
+                /// <para>Backup paths not included in the backup job.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[\&quot;/test/example_cn-hangzhou_7.txt\&quot;, \&quot;/test/example_cn-hangzhou_1.txt\&quot;, \&quot;/test/example_cn-hangzhou_3.txt\&quot;, \&quot;/test/example_cn-hangzhou_9.txt\&quot;, \&quot;/test/example_cn-hangzhou_6.txt\&quot;]</para>
                 /// </summary>
@@ -220,6 +224,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string FileSystemId { get; set; }
 
                 /// <summary>
+                /// <para>Backup paths included in the backup job.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[\&quot;/test/example_cn-huhehaote_3.txt\&quot;, \&quot;/test/example_cn-huhehaote_9.txt\&quot;, \&quot;/test/example_cn-huhehaote_5.txt\&quot;, \&quot;/test/example_cn-huhehaote_1.txt\&quot;, \&quot;/test/example_cn-huhehaote_7.txt\&quot;]</para>
                 /// </summary>
@@ -380,6 +386,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string SnapshotId { get; set; }
 
                 /// <summary>
+                /// <para>Parent snapshot HASH value before archiving.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qwer***</para>
                 /// </summary>
@@ -388,6 +396,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string SourceParentSnapshotHash { get; set; }
 
                 /// <summary>
+                /// <para>Snapshot HASH value before archiving</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qwer***</para>
                 /// </summary>
@@ -436,6 +446,13 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>Storage type. Values: </para>
+                /// <list type="bullet">
+                /// <item><description><b>Standard</b>: Standard. </description></item>
+                /// <item><description><b>Archive</b>: Archive. </description></item>
+                /// <item><description><b>ColdArchive</b>: Cold Archive.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>STANDARD</para>
                 /// </summary>
@@ -464,6 +481,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? UpdatedTime { get; set; }
 
                 /// <summary>
+                /// <para>Whether to use local NAS.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>

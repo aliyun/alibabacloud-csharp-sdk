@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 99. Default value: 10.\`</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CrossAccountUserId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ECS instances. You can specify a maximum of 20 ECS instances.</para>
+        /// <para>The IDs of Elastic Compute Service (ECS) instances. You can specify a maximum of 20 ECS instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-0xi5wj5*****v3j3bh2gj5&quot;]</para>

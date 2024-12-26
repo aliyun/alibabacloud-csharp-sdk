@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-*********************</para>
         /// </summary>
@@ -54,6 +56,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Tag information. Supports up to 20 tags.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6a745bceffb042959b3b5206d6f12ad1</para>
         /// </summary>
@@ -62,6 +66,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public List<DescribeVaultsRequestTag> Tag { get; set; }
         public class DescribeVaultsRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>key1</para>
             /// </summary>
@@ -70,6 +76,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The Value of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value1</para>
             /// </summary>
@@ -80,6 +88,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
+        /// <para>Backup vault ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v-*********************</para>
         /// </summary>
@@ -88,6 +98,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultId { get; set; }
 
         /// <summary>
+        /// <para>The region ID to which the backup vault belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -96,6 +108,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
+        /// <para>Backup repository type. The values are as follows: </para>
+        /// <list type="bullet">
+        /// <item><description><b>STANDARD</b>: Represents a standard repository, which can be used for ECS file backups, OSS backups, NAS backups, etc. </description></item>
+        /// <item><description><b>OTS_BACKUP</b>: Represents a TableStore repository, which is only used for TableStore backups, and TableStore must use this type of repository.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
         /// </summary>

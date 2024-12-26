@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteClientRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-000************f3h</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acf************kwy</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the backup vault.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v-000************gs3</para>
         /// </summary>

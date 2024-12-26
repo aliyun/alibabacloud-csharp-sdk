@@ -294,6 +294,26 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     [Validation(Required=false)]
                     public bool? DoCopy { get; set; }
 
+                    /// <summary>
+                    /// <para>ECS instance information, including ECS instance name, instance type, etc.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{
+                    ///   &quot;i-xxxxxxxx&quot;: {
+                    ///     &quot;hostName&quot;: &quot;test&quot;,
+                    ///     &quot;instanceName&quot;: &quot;test&quot;,
+                    ///     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
+                    ///     &quot;osType&quot;: &quot;linux&quot;,
+                    ///     &quot;diskIds&quot;: [
+                    ///       &quot;d-xxxxxxxx01&quot;,
+                    ///       &quot;d-xxxxxxxx02&quot;
+                    ///     ],
+                    ///     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
+                    ///     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
+                    ///     &quot;platform&quot;: &quot;Rocky Linux&quot;
+                    ///   }
+                    /// }</para>
+                    /// </summary>
                     [NameInMap("InstanceInfos")]
                     [Validation(Required=false)]
                     public Dictionary<string, object> InstanceInfos { get; set; }
@@ -362,6 +382,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
                 /// <summary>
                 /// <para>The identifier of the cluster that is backed up in the container backup job. This parameter is returned only if the value of SourceType is CONTAINER. If the cluster is a Container Service for Kubernetes (ACK) cluster, the value of this parameter is the ACK cluster ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>c83**************************b76</para>
                 /// </summary>
                 [NameInMap("Identifier")]
                 [Validation(Required=false)]

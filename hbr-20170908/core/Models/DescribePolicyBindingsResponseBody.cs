@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribePolicyBindingsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code, 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The number of results per query.</para>
+        /// <para>Range: 10~100. Default: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Description of the return message. A successful response usually returns \&quot;successful\&quot;, while an error will return a corresponding error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The token required to fetch the next page of policy and data source bindings.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a</para>
         /// </summary>
@@ -42,28 +51,28 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The association between the backup policy and data sources.</para>
+        /// <para>List of bound policies.</para>
         /// </summary>
         [NameInMap("PolicyBindings")]
         [Validation(Required=false)]
         public List<DescribePolicyBindingsResponseBodyPolicyBindings> PolicyBindings { get; set; }
         public class DescribePolicyBindingsResponseBodyPolicyBindings : TeaModel {
             /// <summary>
-            /// <para>The advanced options.</para>
+            /// <para>Advanced options.</para>
             /// </summary>
             [NameInMap("AdvancedOptions")]
             [Validation(Required=false)]
             public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions AdvancedOptions { get; set; }
             public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptions : TeaModel {
                 /// <summary>
-                /// <para>The advanced options for large-scale file system backup.</para>
+                /// <para>Advanced options for large-scale file system backup.</para>
                 /// </summary>
                 [NameInMap("CommonFileSystemDetail")]
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail CommonFileSystemDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonFileSystemDetail : TeaModel {
                     /// <summary>
-                    /// <para>The size of backup shards (the number of files).</para>
+                    /// <para>Backup shard size (number of files).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100000</para>
@@ -73,10 +82,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public long? FetchSliceSize { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the system performs full backup if incremental backup fails. Valid values:</para>
+                    /// <para>Whether to switch to a full backup when an incremental backup fails. Values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b>: The system performs full backup if incremental backup fails.</description></item>
-                    /// <item><description><b>false</b>: The system does not perform full backup if incremental backup fails.</description></item>
+                    /// <item><description><b>true</b>: Switch to full backup on failure.</description></item>
+                    /// <item><description><b>false</b>: Do not switch to full backup on failure.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -89,14 +98,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>The advanced options for on-premises NAS backup.</para>
+                /// <para>Advanced options for local NAS.</para>
                 /// </summary>
                 [NameInMap("CommonNasDetail")]
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonNasDetail CommonNasDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsCommonNasDetail : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the Cloud Backup client.</para>
+                    /// <para>Backup client ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>c-0001eg6mcvjs93f46s2d</para>
@@ -106,7 +115,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string ClientId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the client group.</para>
+                    /// <para>Client group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cl-000gkcofngi04j6k680a</para>
@@ -116,7 +125,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string ClusterId { get; set; }
 
                     /// <summary>
-                    /// <para>The size of backup shards (the number of files).</para>
+                    /// <para>Backup slice size (number of files).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100000</para>
@@ -126,10 +135,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public long? FetchSliceSize { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the system performs full backup if incremental backup fails. Valid values:</para>
+                    /// <para>Whether to switch to a full backup when an incremental backup fails. Values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b>: The system performs full backup if incremental backup fails.</description></item>
-                    /// <item><description><b>false</b>: The system does not perform full backup if incremental backup fails.</description></item>
+                    /// <item><description><b>true</b>: Switch to full backup on failure.</description></item>
+                    /// <item><description><b>false</b>: Do not switch to full backup on failure.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -142,17 +151,17 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>The advanced options for file backup.</para>
+                /// <para>Advanced options for file backup.</para>
                 /// </summary>
                 [NameInMap("FileDetail")]
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsFileDetail FileDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsFileDetail : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether an advanced policy is used. Valid values:</para>
+                    /// <para>Whether to use advanced policies. Values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b></description></item>
+                    /// <item><description><b>true</b>: Use.</description></item>
+                    /// <item><description><b>false</b>: Do not use.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -163,10 +172,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? AdvPolicy { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the Volume Shadow Copy Service (VSS) feature is enabled. Valid values:</para>
+                    /// <para>Whether to enable VSS (Windows) functionality. Values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b>: The feature is enabled.</description></item>
-                    /// <item><description><b>false</b>: The feature is disabled.</description></item>
+                    /// <item><description><b>true</b>: Enable.</description></item>
+                    /// <item><description><b>false</b>: Disable.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -179,14 +188,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>The advanced options for OSS backup.</para>
+                /// <para>Advanced options for OSS backup.</para>
                 /// </summary>
                 [NameInMap("OssDetail")]
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail OssDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsOssDetail : TeaModel {
                     /// <summary>
-                    /// <para>不在任务统计和失败文件列表中提示归档型对象</para>
+                    /// <para>Do not prompt for archive-type objects in the task statistics and failed file list.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -196,11 +205,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? IgnoreArchiveObject { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</para>
+                    /// <para>Whether to delete the inventory file after the backup. This is only effective when using an OSS inventory. Supported values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>NO_CLEANUP</b>: Inventory lists are not deleted.</description></item>
-                    /// <item><description><b>DELETE_CURRENT</b>: The current inventory list is deleted.</description></item>
-                    /// <item><description><b>DELETE_CURRENT_AND_PREVIOUS</b>: All inventory lists are deleted.</description></item>
+                    /// <item><description><b>NO_CLEANUP</b>: Do not delete.</description></item>
+                    /// <item><description><b>DELETE_CURRENT</b>: Delete the current file.</description></item>
+                    /// <item><description><b>DELETE_CURRENT_AND_PREVIOUS</b>: Delete all files.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -211,10 +220,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string InventoryCleanupPolicy { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the OSS inventory. If this parameter is not empty, the OSS inventory is used for performance optimization.</para>
+                    /// <para>The name of the OSS inventory. If this value is not empty, the OSS inventory will be used for performance optimization.</para>
                     /// <list type="bullet">
-                    /// <item><description>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.</description></item>
-                    /// <item><description>A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</description></item>
+                    /// <item><description>It is recommended to use an inventory for backing up more than 100 million OSS objects to improve incremental performance. Storage costs for the inventory files are charged separately by the OSS service.</description></item>
+                    /// <item><description>The generation of the OSS inventory file takes time, and the backup may fail before the inventory file is generated. You can wait for the next cycle to execute.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -227,14 +236,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>The advanced options for ECS instance backup.</para>
+                /// <para>Advanced options for full machine backup.</para>
                 /// </summary>
                 [NameInMap("UdmDetail")]
                 [Validation(Required=false)]
                 public DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsUdmDetail UdmDetail { get; set; }
                 public class DescribePolicyBindingsResponseBodyPolicyBindingsAdvancedOptionsUdmDetail : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether application consistency is enabled. You can enable application consistency only if all disks are ESSDs.</para>
+                    /// <para>是否创建应用一致性。仅云盘类型全部为ESSD时，支持创建快照应用一致性。</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -244,7 +253,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? AppConsistent { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the custom KMS key in the destination region. If this parameter is not empty and geo-replication is enabled, the key is used for encrypted geo-replication.</para>
+                    /// <para>The custom KMS key ID in the destination region. When this field is not empty and cross-region replication is enabled, the specified key will be used for encrypting the cross-region replication.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4ed37b1e-da51-4187-aceb-9db4f9b7148b</para>
@@ -254,14 +263,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string DestinationKmsKeyId { get; set; }
 
                     /// <summary>
-                    /// <para>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</para>
+                    /// <para>List of disk IDs that need protection. This value is empty when protecting all disks.</para>
                     /// </summary>
                     [NameInMap("DiskIdList")]
                     [Validation(Required=false)]
                     public List<string> DiskIdList { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter indicates whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</para>
+                    /// <para>This parameter is required when <b>AppConsistent</b> is <b>true</b>. It indicates whether to use the Linux FsFreeze mechanism to ensure the file system is in a read-only consistent state before creating an application-consistent snapshot. The default value is true.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -271,12 +280,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? EnableFsFreeze { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter indicates whether application-consistent snapshots are created. Valid values:</para>
+                    /// <para>This parameter is required when <b>AppConsistent</b> is <b>true</b>. It determines whether to set an application-consistent snapshot:</para>
                     /// <list type="bullet">
-                    /// <item><description>true: Application-consistent snapshots are created.</description></item>
-                    /// <item><description>false: File system-consistent snapshots are created.</description></item>
+                    /// <item><description><b>true</b>: Create an application-consistent snapshot</description></item>
+                    /// <item><description><b>false</b>: Create a file system-consistent snapshot</description></item>
                     /// </list>
-                    /// <para>Default value: true.</para>
+                    /// <para>The default value is true.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -286,14 +295,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? EnableWriters { get; set; }
 
                     /// <summary>
-                    /// <para>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</para>
+                    /// <para>List of disk IDs that do not need protection. This parameter is ignored if DiskIdList is not empty.</para>
                     /// </summary>
                     [NameInMap("ExcludeDiskIdList")]
                     [Validation(Required=false)]
                     public List<string> ExcludeDiskIdList { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter indicates the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</para>
+                    /// <para>This parameter is required when <b>AppConsistent</b> is <b>true</b>. It specifies the path of the unfreeze script to be executed after creating an application-consistent snapshot.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/tmp/postscript.sh</para>
@@ -303,7 +312,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string PostScriptPath { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter indicates the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</para>
+                    /// <para>This parameter is required when <b>AppConsistent</b> is <b>true</b>. It specifies the path of the freeze script to be executed before creating an application-consistent snapshot.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/tmp/prescript.sh</para>
@@ -313,7 +322,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string PreScriptPath { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter indicates the name of the RAM role that is required to create application-consistent snapshots.</para>
+                    /// <para>This parameter is required when <b>AppConsistent</b> is <b>true</b>. It specifies the RAM role name needed for creating an application-consistent snapshot.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AliyunECSInstanceForHbrRole</para>
@@ -323,7 +332,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string RamRoleName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether a snapshot-consistent group is created. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</para>
+                    /// <para>Indicates whether to create a snapshot consistency group. Only supported when all disk types are ESSD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -333,7 +342,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? SnapshotGroup { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is required only if you set the <b>AppConsistent</b> parameter to <b>true</b>. This parameter indicates the I/O freeze timeout period. Default value: 30. Unit: seconds.</para>
+                    /// <para>This parameter is required when <b>AppConsistent</b> is <b>true</b>. It specifies the IO freeze timeout duration. The default value is 30 seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -347,7 +356,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the resource is automatically associated with the related resource tag in the backup policy.</para>
+            /// <para>Whether the resource is automatically associated through the backup policy resource tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -357,7 +366,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public bool? CreatedByTag { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>Creation time. UNIX timestamp, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1661399570</para>
@@ -367,7 +376,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+            /// <para>The name of the role created in the RAM of the original account for cross-account backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hbrcrossrole</para>
@@ -377,10 +386,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string CrossAccountRoleName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</para>
+            /// <para>Cross-account backup type. Supported values: </para>
             /// <list type="bullet">
-            /// <item><description>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</description></item>
-            /// <item><description>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</description></item>
+            /// <item><description>SELF_ACCOUNT: Backup within the same account</description></item>
+            /// <item><description>CROSS_ACCOUNT: Cross-account backup</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -391,7 +400,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string CrossAccountType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+            /// <para>The ID of the original account for cross-account backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1480************</para>
@@ -401,7 +410,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? CrossAccountUserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source.</para>
+            /// <para>Data source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-8vb************5ly</para>
@@ -411,10 +420,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the backup policy is enabled for the data source. Valid values:</para>
+            /// <para>策略是否对该数据源生效。</para>
             /// <list type="bullet">
-            /// <item><description>true: The backup policy is disabled.</description></item>
-            /// <item><description>false: The backup policy is enabled.</description></item>
+            /// <item><description>true：暂停</description></item>
+            /// <item><description>false：未暂停</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -425,7 +434,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+            /// <para>This parameter is required only when <b>SourceType</b> is <b>ECS_FILE</b> or <b>File</b>. It specifies the file types that should not be backed up, and all files of these types will be excluded. Supports up to 255 characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
@@ -435,14 +444,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Exclude { get; set; }
 
             /// <summary>
-            /// <para>The matched tag rules.</para>
+            /// <para>Hit tag rules.</para>
             /// </summary>
             [NameInMap("HitTags")]
             [Validation(Required=false)]
             public List<DescribePolicyBindingsResponseBodyPolicyBindingsHitTags> HitTags { get; set; }
             public class DescribePolicyBindingsResponseBodyPolicyBindingsHitTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>Tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -452,10 +461,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag-based matching rule.</para>
+                /// <para>Tag matching rule.</para>
                 /// <list type="bullet">
-                /// <item><description><b>EQUAL</b>: Both the tag key and tag value are matched.</description></item>
-                /// <item><description><b>NOT</b>: The tag key is matched and the tag value is not matched.</description></item>
+                /// <item><description><b>EQUAL</b>: Matches both the tag key and tag value.</description></item>
+                /// <item><description><b>NOT</b>: Matches the tag key but not the tag value.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -466,7 +475,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>Tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>prod</para>
@@ -478,7 +487,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+            /// <para>This parameter is required only when <b>SourceType</b> is <b>ECS_FILE</b> or <b>File</b>. It specifies the file types to be backed up, and all files of these types will be backed up. Supports up to 255 characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
@@ -488,7 +497,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Include { get; set; }
 
             /// <summary>
-            /// <para>The description of the association.</para>
+            /// <para>Bound policy description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>po-000<b><b><b><b><b><b>eslc-i-uf6</b></b></b></b></b></b>y5g</para>
@@ -498,7 +507,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string PolicyBindingDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the association.</para>
+            /// <para>Bound policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pd-000************slc</para>
@@ -508,7 +517,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string PolicyBindingId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup policy.</para>
+            /// <para>Policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>po-000************56y</para>
@@ -519,8 +528,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>If the SourceType parameter is set to <b>OSS</b>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</description></item>
-            /// <item><description>If the SourceType parameter is set to <b>ECS_FILE</b> or <b>File</b>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</description></item>
+            /// <item><description>When <b>SourceType</b> is <b>OSS</b>, it indicates the prefix to be backed up. If not specified, it means backing up the entire root directory of the Bucket.</description></item>
+            /// <item><description>When <b>SourceType</b> is <b>ECS_FILE</b> or <b>File</b>, it indicates the file directory to be backed up. If not specified, it means backing up all directories.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -531,9 +540,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The type of the data source. Valid values:</para>
+            /// <para>Data source type, with the value range:</para>
             /// <list type="bullet">
-            /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
+            /// <item><description><b>UDM_ECS</b>: indicates ECS full machine backup</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -544,11 +553,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the throttling rules. Format: <c>{start}{end}{bandwidth}</c>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</para>
+            /// <para>This parameter is required only when <b>SourceType</b> is <b>ECS_FILE</b> or <b>File</b>. It specifies the backup traffic control. The format is <c>{start}{end}{bandwidth}</c>. Multiple traffic control configurations are separated by commas, and the configured times must not overlap.</para>
             /// <list type="bullet">
-            /// <item><description><b>start</b>: the start hour.</description></item>
-            /// <item><description><b>end</b>: the end hour.</description></item>
-            /// <item><description><b>bandwidth</b>: the bandwidth. Unit: KB/s.</description></item>
+            /// <item><description><b>start</b>: Start hour.</description></item>
+            /// <item><description><b>end</b>: End hour.</description></item>
+            /// <item><description><b>bandwidth</b>: Limit rate, in KB/s.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -559,7 +568,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string SpeedLimit { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup policy was updated. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>Update time. UNIX timestamp, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1653611573</para>
@@ -571,6 +580,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5225929A-4EBD-55EE-9FE1-4A130E582A76</para>
         /// </summary>
@@ -579,6 +590,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description>true: Success</description></item>
+        /// <item><description>false: Failure</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -587,6 +604,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>38</para>
         /// </summary>

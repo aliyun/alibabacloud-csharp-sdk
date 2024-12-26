@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeVaultReplicationRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The access token.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01W3ZZOQ</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the backup vault.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-00030j3c******sn</para>

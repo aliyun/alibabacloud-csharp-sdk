@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class ExecutePolicyV2Request : TeaModel {
         /// <summary>
+        /// <para>Data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i-bp1************dtv</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
+        /// <para>Policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string PolicyId { get; set; }
 
         /// <summary>
+        /// <para>Rule ID, limited to executing rules of <b>RuleType</b> <b>BACKUP</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RuleId { get; set; }
 
         /// <summary>
+        /// <para>Data source type, with the value range as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>UDM_ECS</b>: Represents ECS full machine backup.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>UDM_ECS</para>
         /// </summary>

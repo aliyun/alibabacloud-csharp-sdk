@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
-    public class CreateBackupPlanResponseBody : TeaModel {
+    public class DeleteAirEcsInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code, 200 indicates success.</para>
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Description of the return message, usually returns \&quot;successful\&quot; upon success, and corresponding error messages in case of failure.</para>
+        /// <para>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -30,30 +30,20 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Backup plan ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>plan-*********************</para>
-        /// </summary>
-        [NameInMap("PlanId")]
-        [Validation(Required=false)]
-        public string PlanId { get; set; }
-
-        /// <summary>
-        /// <para>Request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// <para>33AA3AAE-89E1-5D3A-A51D-0C0A80850F68</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Success.</description></item>
-        /// <item><description>false: Failure.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,6 +52,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>t-*********************</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

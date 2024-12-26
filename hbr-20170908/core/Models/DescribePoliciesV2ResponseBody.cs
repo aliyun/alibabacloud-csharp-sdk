@@ -148,15 +148,30 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TAG</b>. It defines the data source filtering rule.</para>
+                /// </summary>
                 [NameInMap("DataSourceFilters")]
                 [Validation(Required=false)]
                 public List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters> DataSourceFilters { get; set; }
                 public class DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters : TeaModel {
+                    /// <summary>
+                    /// <para>Deprecated.</para>
+                    /// </summary>
                     [NameInMap("DataSourceIds")]
                     [Validation(Required=false)]
                     public List<string> DataSourceIds { get; set; }
 
                     /// <summary>
+                    /// <para>Data source type. The value range is as follows: </para>
+                    /// <list type="bullet">
+                    /// <item><description><b>UDM_ECS</b>: Indicates ECS server backup. </description></item>
+                    /// <item><description><b>OSS</b>: Indicates OSS backup. </description></item>
+                    /// <item><description><b>NAS</b>: Indicates Alibaba Cloud NAS backup. </description></item>
+                    /// <item><description><b>ECS_FILE</b>: Indicates ECS file backup. </description></item>
+                    /// <item><description><b>OTS</b>: Indicates Tablestore backup.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>UDM_ECS</para>
                     /// </summary>
@@ -166,6 +181,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
                 }
 
+                /// <summary>
+                /// <para>This parameter is returned only if the <b>PolicyType</b> is <b>UDM_ECS_ONLY</b>. This parameter indicates whether the immutable backup feature is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("Immutable")]
                 [Validation(Required=false)]
                 public bool? Immutable { get; set; }
@@ -291,11 +312,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string Schedule { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TAG</b>. It defines the resource tag filtering rule.</para>
+                /// </summary>
                 [NameInMap("TagFilters")]
                 [Validation(Required=false)]
                 public List<DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters> TagFilters { get; set; }
                 public class DescribePoliciesV2ResponseBodyPoliciesRulesTagFilters : TeaModel {
                     /// <summary>
+                    /// <para>Tag key</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>env</para>
                     /// </summary>
@@ -304,6 +330,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string Key { get; set; }
 
                     /// <summary>
+                    /// <para>Tag matching rules, supporting: - <b>EQUAL</b>: Matches both the tag key and tag value. - <b>NOT</b>: Matches the tag key but not the tag value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>EQUAL</para>
                     /// </summary>
@@ -312,6 +340,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public string Operator { get; set; }
 
                     /// <summary>
+                    /// <para>Tag value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>prod</para>
                     /// </summary>

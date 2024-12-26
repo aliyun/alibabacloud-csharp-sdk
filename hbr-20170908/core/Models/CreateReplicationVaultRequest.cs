@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HBR_PRIVATE</b>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</description></item>
+        /// <item><description><b>KMS</b>: The source data is encrypted by using Key Management Service (KMS).</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>HBR_PRIVATE</para>
         /// </summary>
@@ -28,6 +34,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string EncryptType { get; set; }
 
         /// <summary>
+        /// <para>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alias/test</para>
         /// </summary>
@@ -94,7 +102,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage class of the backup vault. Valid value: <b>STANDARD</b>, which indicates standard storage.</para>
+        /// <para>The storage type of the backup vault. Valid value: <b>STANDARD</b>, which indicates standard storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>

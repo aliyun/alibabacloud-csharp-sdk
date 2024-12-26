@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Disabled { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
         /// </summary>
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Exclude { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
         /// </summary>
@@ -79,6 +83,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string PolicyId { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>If the SourceType parameter is set to <b>OSS</b>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</description></item>
+        /// <item><description>If the SourceType parameter is set to <b>ECS_FILE</b> or <b>File</b>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>backup/</para>
         /// </summary>
@@ -101,6 +110,13 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the throttling rules. Format: <c>{start}{end}{bandwidth}</c>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</para>
+        /// <list type="bullet">
+        /// <item><description><b>start</b>: the start hour.</description></item>
+        /// <item><description><b>end</b>: the end hour.</description></item>
+        /// <item><description><b>bandwidth</b>: the bandwidth. Unit: KB/s.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0:24:5120</para>
         /// </summary>

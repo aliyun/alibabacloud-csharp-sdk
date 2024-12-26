@@ -65,15 +65,30 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public string BackupType { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>TAG</b>. This parameter specifies the data source filter rule.</para>
+            /// </summary>
             [NameInMap("DataSourceFilters")]
             [Validation(Required=false)]
             public List<CreatePolicyV2RequestRulesDataSourceFilters> DataSourceFilters { get; set; }
             public class CreatePolicyV2RequestRulesDataSourceFilters : TeaModel {
+                /// <summary>
+                /// <para>This parameter is deprecated.</para>
+                /// </summary>
                 [NameInMap("DataSourceIds")]
                 [Validation(Required=false)]
                 public List<string> DataSourceIds { get; set; }
 
                 /// <summary>
+                /// <para>The type of the data source. Valid value:</para>
+                /// <list type="bullet">
+                /// <item><description><b>UDM_ECS</b>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>UDM_ECS_ONLY</b>.</description></item>
+                /// <item><description><b>OSS</b>: Object Storage Service (OSS) bucket This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// <item><description><b>NAS</b>: File Storage NAS (NAS) file system This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// <item><description><b>ECS_FILE</b>: ECS file This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// <item><description><b>OTS</b>: Tablestore instance This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>UDM_ECS</para>
                 /// </summary>
@@ -83,6 +98,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
             }
 
+            /// <summary>
+            /// <para>This parameter is required only if the <b>PolicyType</b> parameter is set to <b>UDM_ECS_ONLY</b>. This parameter specifies whether to enable the immutable backup feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Immutable")]
             [Validation(Required=false)]
             public bool? Immutable { get; set; }
@@ -200,11 +221,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public string Schedule { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>TAG</b>. This parameter specifies the resource tag filter rule.</para>
+            /// </summary>
             [NameInMap("TagFilters")]
             [Validation(Required=false)]
             public List<CreatePolicyV2RequestRulesTagFilters> TagFilters { get; set; }
             public class CreatePolicyV2RequestRulesTagFilters : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
                 /// </summary>
@@ -213,6 +239,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag-based matching rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>EQUAL</b>: Both the tag key and tag value are matched.</description></item>
+                /// <item><description><b>NOT</b>: The tag key is matched and the tag value is not matched.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>EQUAL</para>
                 /// </summary>
@@ -221,6 +253,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Operator { get; set; }
 
                 /// <summary>
+                /// <para>The tag value. If you leave this parameter empty, the value is any value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>prod</para>
                 /// </summary>
@@ -231,6 +265,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
+            /// <para>This parameter is required only if the RuleType parameter is set to BACKUP. The ID of the backup vault.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v-0001************aseg</para>
             /// </summary>

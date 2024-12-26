@@ -137,12 +137,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>The advanced options for OSS backup.</para>
+                /// <para>The advanced options for Object Storage Service (OSS) backup.</para>
                 /// </summary>
                 [NameInMap("OssDetail")]
                 [Validation(Required=false)]
                 public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail OssDetail { get; set; }
                 public class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsOssDetail : TeaModel {
+                    /// <summary>
+                    /// <para>Do not prompt for archival type objects in task statistics and failed file lists.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("IgnoreArchiveObject")]
                     [Validation(Required=false)]
                     public bool? IgnoreArchiveObject { get; set; }
@@ -327,7 +333,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <list type="bullet">
             /// <item><description><b>UDM_ECS</b>: the ID of the Elastic Compute Service (ECS) instance</description></item>
             /// <item><description><b>OSS</b>: the name of the Object Storage Service (OSS) bucket</description></item>
-            /// <item><description><b>NAS</b>: the ID of the Apsara File Storage NAS (NAS) file system</description></item>
+            /// <item><description><b>NAS</b>: the ID of the File Storage NAS (NAS) file system</description></item>
             /// <item><description><b>COMMON_NAS</b>: the ID of the on-premises NAS file system</description></item>
             /// <item><description><b>ECS_FILE</b>: the ID of the ECS instance</description></item>
             /// <item><description><b>File</b>: the ID of the Cloud Backup client</description></item>
@@ -356,7 +362,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Disabled { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b>, <b>File</b>, <b>NAS</b>, <b>COMMON_NAS</b>, or <b>COMMON_FILE_SYSTEM</b>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
@@ -366,7 +372,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Exclude { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b> or <b>File</b>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</para>
+            /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>ECS_FILE</b>, <b>File</b>, <b>NAS</b>, <b>COMMON_NAS</b>, or <b>COMMON_FILE_SYSTEM</b>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<em>.doc\&quot;,\&quot;</em>.xltm\&quot;]</para>
@@ -388,7 +394,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <list type="bullet">
             /// <item><description>If the SourceType parameter is set to <b>OSS</b>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</description></item>
-            /// <item><description>If the SourceType parameter is set to <b>ECS_FILE</b> or <b>File</b>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</description></item>
+            /// <item><description>If the SourceType parameter is set to <b>ECS_FILE</b> or <b>File</b>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths are backed up.</description></item>
+            /// <item><description>This parameter is required if the SourceType parameter is set to <b>COMMON_FILE_SYSTEM</b>. This parameter specifies the path to be backed up. To back up the /src path, enter [&quot;/src&quot;]. To back up the root path, enter [&quot;/&quot;].</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

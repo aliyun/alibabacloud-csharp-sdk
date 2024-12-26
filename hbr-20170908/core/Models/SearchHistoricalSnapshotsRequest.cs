@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <item><description>VaultId: specifies the ID of the backup vault. This field is required.</description></item>
         /// <item><description>InstanceId: specifies the ID of the Elastic Compute Service (ECS) instance. If the SourceType parameter is set to ECS_FILE, this field is required.</description></item>
         /// <item><description>Bucket: specifies the name of the Object Storage Service (OSS) bucket. If the SourceType parameter is set to OSS, this field is required.</description></item>
-        /// <item><description>FileSystemId: specifies the ID of the Apsara File Storage NAS (NAS) file system. If the SourceType parameter is set to NAS, this field is required.</description></item>
+        /// <item><description>FileSystemId: specifies the ID of the File Storage NAS (NAS) file system. If the SourceType parameter is set to NAS, this field is required.</description></item>
         /// <item><description>CreateTime: specifies the time when the NAS file system was created. If the SourceType parameter is set to NAS, this field is required.</description></item>
         /// <item><description>CompleteTime: specifies the time when the backup snapshot was completed.</description></item>
         /// <item><description>PlanId: the ID of a backup plan.</description></item>

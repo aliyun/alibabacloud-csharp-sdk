@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Exclude { get; set; }
 
+        /// <summary>
+        /// <para>Details of restoration to local.</para>
+        /// </summary>
         [NameInMap("FailbackDetail")]
         [Validation(Required=false)]
         public Dictionary<string, object> FailbackDetail { get; set; }
@@ -77,6 +80,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public bool? InitiatedByAck { get; set; }
 
+        /// <summary>
+        /// <para>Parameters for restoring a task</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;includes\&quot;:[],\&quot;excludes\&quot;:[],\&quot;conflictPolicy\&quot;:\&quot;OVERWRITE_EXISTING\&quot;}</para>
+        /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public string Options { get; set; }
