@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>ecs.c7.large</para>
+        /// </summary>
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("IsSpot")]

@@ -6459,6 +6459,152 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取服务监控签名地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceSignedUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceSignedUrlResponse
+        /// </returns>
+        public DescribeServiceSignedUrlResponse DescribeServiceSignedUrlWithOptions(string ClusterId, string ServiceName, DescribeServiceSignedUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expire))
+            {
+                query["Expire"] = request.Expire;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Internal))
+            {
+                query["Internal"] = request.Internal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServiceSignedUrl",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/signed_url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServiceSignedUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务监控签名地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceSignedUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceSignedUrlResponse
+        /// </returns>
+        public async Task<DescribeServiceSignedUrlResponse> DescribeServiceSignedUrlWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceSignedUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expire))
+            {
+                query["Expire"] = request.Expire;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Internal))
+            {
+                query["Internal"] = request.Internal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServiceSignedUrl",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/signed_url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServiceSignedUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务监控签名地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceSignedUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceSignedUrlResponse
+        /// </returns>
+        public DescribeServiceSignedUrlResponse DescribeServiceSignedUrl(string ClusterId, string ServiceName, DescribeServiceSignedUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeServiceSignedUrlWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务监控签名地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceSignedUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceSignedUrlResponse
+        /// </returns>
+        public async Task<DescribeServiceSignedUrlResponse> DescribeServiceSignedUrlAsync(string ClusterId, string ServiceName, DescribeServiceSignedUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeServiceSignedUrlWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the historical prices of preemptible instances. For more information about preemptible instances, see Create and use preemptible instances.</para>
         /// </summary>
         /// 
