@@ -39,6 +39,438 @@ namespace AlibabaCloud.SDK.AIMath20241114
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>聊天消息API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatMessageResponse
+        /// </returns>
+        public ChatMessageResponse ChatMessageWithOptions(ChatMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatMessage",
+                Version = "2024-11-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>聊天消息API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatMessageResponse
+        /// </returns>
+        public async Task<ChatMessageResponse> ChatMessageWithOptionsAsync(ChatMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatMessage",
+                Version = "2024-11-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>聊天消息API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatMessageResponse
+        /// </returns>
+        public ChatMessageResponse ChatMessage(ChatMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChatMessageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>聊天消息API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatMessageResponse
+        /// </returns>
+        public async Task<ChatMessageResponse> ChatMessageAsync(ChatMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChatMessageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建试题相应的对话。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationResponse
+        /// </returns>
+        public CreateConversationResponse CreateConversationWithOptions(CreateConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseAnalysis))
+            {
+                body["ExerciseAnalysis"] = request.ExerciseAnalysis;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseAnswer))
+            {
+                body["ExerciseAnswer"] = request.ExerciseAnswer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseContent))
+            {
+                body["ExerciseContent"] = request.ExerciseContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseType))
+            {
+                body["ExerciseType"] = request.ExerciseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterBizId))
+            {
+                body["OuterBizId"] = request.OuterBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConversation",
+                Version = "2024-11-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建试题相应的对话。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationResponse
+        /// </returns>
+        public async Task<CreateConversationResponse> CreateConversationWithOptionsAsync(CreateConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseAnalysis))
+            {
+                body["ExerciseAnalysis"] = request.ExerciseAnalysis;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseAnswer))
+            {
+                body["ExerciseAnswer"] = request.ExerciseAnswer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseContent))
+            {
+                body["ExerciseContent"] = request.ExerciseContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseType))
+            {
+                body["ExerciseType"] = request.ExerciseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterBizId))
+            {
+                body["OuterBizId"] = request.OuterBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConversation",
+                Version = "2024-11-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建试题相应的对话。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationResponse
+        /// </returns>
+        public CreateConversationResponse CreateConversation(CreateConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateConversationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建试题相应的对话。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConversationResponse
+        /// </returns>
+        public async Task<CreateConversationResponse> CreateConversationAsync(CreateConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateConversationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建关联的对话，输入试题code即可开启对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRelatedConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRelatedConversationResponse
+        /// </returns>
+        public CreateRelatedConversationResponse CreateRelatedConversationWithOptions(CreateRelatedConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseCode))
+            {
+                body["ExerciseCode"] = request.ExerciseCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterBizId))
+            {
+                body["OuterBizId"] = request.OuterBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRelatedConversation",
+                Version = "2024-11-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRelatedConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建关联的对话，输入试题code即可开启对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRelatedConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRelatedConversationResponse
+        /// </returns>
+        public async Task<CreateRelatedConversationResponse> CreateRelatedConversationWithOptionsAsync(CreateRelatedConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExerciseCode))
+            {
+                body["ExerciseCode"] = request.ExerciseCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterBizId))
+            {
+                body["OuterBizId"] = request.OuterBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRelatedConversation",
+                Version = "2024-11-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRelatedConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建关联的对话，输入试题code即可开启对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRelatedConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRelatedConversationResponse
+        /// </returns>
+        public CreateRelatedConversationResponse CreateRelatedConversation(CreateRelatedConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRelatedConversationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建关联的对话，输入试题code即可开启对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRelatedConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRelatedConversationResponse
+        /// </returns>
+        public async Task<CreateRelatedConversationResponse> CreateRelatedConversationAsync(CreateRelatedConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRelatedConversationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>生成解题分析</para>
         /// </summary>
         /// 
