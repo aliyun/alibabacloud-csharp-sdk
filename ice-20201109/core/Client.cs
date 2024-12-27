@@ -29313,6 +29313,154 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>提交高燃混剪任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitScreenMediaHighlightsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitScreenMediaHighlightsJobResponse
+        /// </returns>
+        public SubmitScreenMediaHighlightsJobResponse SubmitScreenMediaHighlightsJobWithOptions(SubmitScreenMediaHighlightsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitScreenMediaHighlightsJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitScreenMediaHighlightsJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交高燃混剪任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitScreenMediaHighlightsJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitScreenMediaHighlightsJobResponse
+        /// </returns>
+        public async Task<SubmitScreenMediaHighlightsJobResponse> SubmitScreenMediaHighlightsJobWithOptionsAsync(SubmitScreenMediaHighlightsJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitScreenMediaHighlightsJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitScreenMediaHighlightsJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交高燃混剪任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitScreenMediaHighlightsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitScreenMediaHighlightsJobResponse
+        /// </returns>
+        public SubmitScreenMediaHighlightsJobResponse SubmitScreenMediaHighlightsJob(SubmitScreenMediaHighlightsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitScreenMediaHighlightsJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交高燃混剪任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitScreenMediaHighlightsJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitScreenMediaHighlightsJobResponse
+        /// </returns>
+        public async Task<SubmitScreenMediaHighlightsJobResponse> SubmitScreenMediaHighlightsJobAsync(SubmitScreenMediaHighlightsJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitScreenMediaHighlightsJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Submits a smart tagging job.</para>
         /// </summary>
         /// 
