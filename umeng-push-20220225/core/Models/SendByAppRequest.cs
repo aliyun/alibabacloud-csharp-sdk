@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("HarmonyPayload")]
+        [Validation(Required=false)]
+        public HarmonyPayload HarmonyPayload { get; set; }
+
         [NameInMap("IosPayload")]
         [Validation(Required=false)]
         public IosPayload IosPayload { get; set; }

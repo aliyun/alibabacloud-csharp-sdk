@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string ChannelFcm { get; set; }
 
+        [NameInMap("harmonyChannelCategory")]
+        [Validation(Required=false)]
+        public string HarmonyChannelCategory { get; set; }
+
         [NameInMap("huaweiChannelCategory")]
         [Validation(Required=false)]
         public string HuaweiChannelCategory { get; set; }

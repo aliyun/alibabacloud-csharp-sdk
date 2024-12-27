@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 {
     public class Policy : TeaModel {
+        [NameInMap("channelStrategy")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> ChannelStrategy { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>yyyy-MM-dd HH:mm:ss</para>
