@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 检查商业化状态
-         *
-         * @param request CheckCommercialStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckCommercialStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查商业化状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommercialStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommercialStatusResponse
+        /// </returns>
         public CheckCommercialStatusResponse CheckCommercialStatusWithOptions(CheckCommercialStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -75,13 +83,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<CheckCommercialStatusResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 检查商业化状态
-         *
-         * @param request CheckCommercialStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckCommercialStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查商业化状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommercialStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommercialStatusResponse
+        /// </returns>
         public async Task<CheckCommercialStatusResponse> CheckCommercialStatusWithOptionsAsync(CheckCommercialStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -113,37 +129,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<CheckCommercialStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 检查商业化状态
-         *
-         * @param request CheckCommercialStatusRequest
-         * @return CheckCommercialStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查商业化状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommercialStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommercialStatusResponse
+        /// </returns>
         public CheckCommercialStatusResponse CheckCommercialStatus(CheckCommercialStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckCommercialStatusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 检查商业化状态
-         *
-         * @param request CheckCommercialStatusRequest
-         * @return CheckCommercialStatusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查商业化状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCommercialStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCommercialStatusResponse
+        /// </returns>
         public async Task<CheckCommercialStatusResponse> CheckCommercialStatusAsync(CheckCommercialStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckCommercialStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request GetTagKeyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTagKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagKeyResponse
+        /// </returns>
         public GetTagKeyResponse GetTagKeyWithOptions(GetTagKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -187,13 +223,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<GetTagKeyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request GetTagKeyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTagKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagKeyResponse
+        /// </returns>
         public async Task<GetTagKeyResponse> GetTagKeyWithOptionsAsync(GetTagKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -237,37 +281,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<GetTagKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request GetTagKeyRequest
-         * @return GetTagKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagKeyResponse
+        /// </returns>
         public GetTagKeyResponse GetTagKey(GetTagKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTagKeyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries tag keys.
-         *
-         * @param request GetTagKeyRequest
-         * @return GetTagKeyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagKeyResponse
+        /// </returns>
         public async Task<GetTagKeyResponse> GetTagKeyAsync(GetTagKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTagKeyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the tag values that correspond to a tag key.
-         *
-         * @param request GetTagValRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTagValResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values that correspond to a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagValRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagValResponse
+        /// </returns>
         public GetTagValResponse GetTagValWithOptions(GetTagValRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -315,13 +379,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<GetTagValResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tag values that correspond to a tag key.
-         *
-         * @param request GetTagValRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTagValResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values that correspond to a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagValRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagValResponse
+        /// </returns>
         public async Task<GetTagValResponse> GetTagValWithOptionsAsync(GetTagValRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -369,37 +441,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<GetTagValResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tag values that correspond to a tag key.
-         *
-         * @param request GetTagValRequest
-         * @return GetTagValResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values that correspond to a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagValRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagValResponse
+        /// </returns>
         public GetTagValResponse GetTagVal(GetTagValRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTagValWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the tag values that correspond to a tag key.
-         *
-         * @param request GetTagValRequest
-         * @return GetTagValResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values that correspond to a tag key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTagValRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTagValResponse
+        /// </returns>
         public async Task<GetTagValResponse> GetTagValAsync(GetTagValRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTagValWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a trace.
-         *
-         * @param request GetTraceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a trace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public GetTraceResponse GetTraceWithOptions(GetTraceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -407,6 +499,14 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
             {
                 query["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -435,13 +535,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<GetTraceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a trace.
-         *
-         * @param request GetTraceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a trace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public async Task<GetTraceResponse> GetTraceWithOptionsAsync(GetTraceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -449,6 +557,14 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
             {
                 query["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -477,37 +593,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<GetTraceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the details of a trace.
-         *
-         * @param request GetTraceRequest
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a trace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public GetTraceResponse GetTrace(GetTraceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTraceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of a trace.
-         *
-         * @param request GetTraceRequest
-         * @return GetTraceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a trace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTraceResponse
+        /// </returns>
         public async Task<GetTraceResponse> GetTraceAsync(GetTraceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTraceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the IP addresses of an application.
-         *
-         * @param request ListIpOrHostsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIpOrHostsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses or hostnames in trace data. You can obtain all IP addresses of an application or in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpOrHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpOrHostsResponse
+        /// </returns>
         public ListIpOrHostsResponse ListIpOrHostsWithOptions(ListIpOrHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -547,13 +683,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<ListIpOrHostsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IP addresses of an application.
-         *
-         * @param request ListIpOrHostsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListIpOrHostsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses or hostnames in trace data. You can obtain all IP addresses of an application or in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpOrHostsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpOrHostsResponse
+        /// </returns>
         public async Task<ListIpOrHostsResponse> ListIpOrHostsWithOptionsAsync(ListIpOrHostsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -593,37 +737,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<ListIpOrHostsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the IP addresses of an application.
-         *
-         * @param request ListIpOrHostsRequest
-         * @return ListIpOrHostsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses or hostnames in trace data. You can obtain all IP addresses of an application or in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpOrHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpOrHostsResponse
+        /// </returns>
         public ListIpOrHostsResponse ListIpOrHosts(ListIpOrHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListIpOrHostsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the IP addresses of an application.
-         *
-         * @param request ListIpOrHostsRequest
-         * @return ListIpOrHostsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses or hostnames in trace data. You can obtain all IP addresses of an application or in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpOrHostsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpOrHostsResponse
+        /// </returns>
         public async Task<ListIpOrHostsResponse> ListIpOrHostsAsync(ListIpOrHostsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListIpOrHostsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries applications.
-         *
-         * @param request ListServicesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListServicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServicesResponse
+        /// </returns>
         public ListServicesResponse ListServicesWithOptions(ListServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -655,13 +819,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<ListServicesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries applications.
-         *
-         * @param request ListServicesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListServicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServicesResponse
+        /// </returns>
         public async Task<ListServicesResponse> ListServicesWithOptionsAsync(ListServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -693,37 +865,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<ListServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries applications.
-         *
-         * @param request ListServicesRequest
-         * @return ListServicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServicesResponse
+        /// </returns>
         public ListServicesResponse ListServices(ListServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListServicesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries applications.
-         *
-         * @param request ListServicesRequest
-         * @return ListServicesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServicesResponse
+        /// </returns>
         public async Task<ListServicesResponse> ListServicesAsync(ListServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListServicesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all span names in a specified region or all span names of a microservice.
-         *
-         * @param request ListSpanNamesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSpanNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all span names in a specified region or all span names of a microservice.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpanNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpanNamesResponse
+        /// </returns>
         public ListSpanNamesResponse ListSpanNamesWithOptions(ListSpanNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -763,13 +955,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<ListSpanNamesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all span names in a specified region or all span names of a microservice.
-         *
-         * @param request ListSpanNamesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListSpanNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all span names in a specified region or all span names of a microservice.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpanNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpanNamesResponse
+        /// </returns>
         public async Task<ListSpanNamesResponse> ListSpanNamesWithOptionsAsync(ListSpanNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -809,37 +1009,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<ListSpanNamesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries all span names in a specified region or all span names of a microservice.
-         *
-         * @param request ListSpanNamesRequest
-         * @return ListSpanNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all span names in a specified region or all span names of a microservice.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpanNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpanNamesResponse
+        /// </returns>
         public ListSpanNamesResponse ListSpanNames(ListSpanNamesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSpanNamesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all span names in a specified region or all span names of a microservice.
-         *
-         * @param request ListSpanNamesRequest
-         * @return ListSpanNamesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all span names in a specified region or all span names of a microservice.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpanNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpanNamesResponse
+        /// </returns>
         public async Task<ListSpanNamesResponse> ListSpanNamesAsync(ListSpanNamesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSpanNamesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 开通xtrace和对应的sls
-         *
-         * @param request OpenXtraceServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OpenXtraceServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Managed Service for OpenTelemetry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenXtraceServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenXtraceServiceResponse
+        /// </returns>
         public OpenXtraceServiceResponse OpenXtraceServiceWithOptions(OpenXtraceServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -867,13 +1087,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<OpenXtraceServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 开通xtrace和对应的sls
-         *
-         * @param request OpenXtraceServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OpenXtraceServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Managed Service for OpenTelemetry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenXtraceServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenXtraceServiceResponse
+        /// </returns>
         public async Task<OpenXtraceServiceResponse> OpenXtraceServiceWithOptionsAsync(OpenXtraceServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -901,37 +1129,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<OpenXtraceServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 开通xtrace和对应的sls
-         *
-         * @param request OpenXtraceServiceRequest
-         * @return OpenXtraceServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Managed Service for OpenTelemetry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenXtraceServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenXtraceServiceResponse
+        /// </returns>
         public OpenXtraceServiceResponse OpenXtraceService(OpenXtraceServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return OpenXtraceServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 开通xtrace和对应的sls
-         *
-         * @param request OpenXtraceServiceRequest
-         * @return OpenXtraceServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates Managed Service for OpenTelemetry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenXtraceServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenXtraceServiceResponse
+        /// </returns>
         public async Task<OpenXtraceServiceResponse> OpenXtraceServiceAsync(OpenXtraceServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenXtraceServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries a metric.
-         *
-         * @param request QueryMetricRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMetricResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a metric.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMetricRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMetricResponse
+        /// </returns>
         public QueryMetricResponse QueryMetricWithOptions(QueryMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -999,13 +1247,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<QueryMetricResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a metric.
-         *
-         * @param request QueryMetricRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMetricResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a metric.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMetricRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMetricResponse
+        /// </returns>
         public async Task<QueryMetricResponse> QueryMetricWithOptionsAsync(QueryMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1073,37 +1329,57 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<QueryMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries a metric.
-         *
-         * @param request QueryMetricRequest
-         * @return QueryMetricResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a metric.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMetricRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMetricResponse
+        /// </returns>
         public QueryMetricResponse QueryMetric(QueryMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryMetricWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a metric.
-         *
-         * @param request QueryMetricRequest
-         * @return QueryMetricResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a metric.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMetricRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMetricResponse
+        /// </returns>
         public async Task<QueryMetricResponse> QueryMetricAsync(QueryMetricRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryMetricWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries traces by time, application name, IP address, span name, and tag.
-         *
-         * @param request SearchTracesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traces by time, application name, IP address, span name, and tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchTracesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchTracesResponse
+        /// </returns>
         public SearchTracesResponse SearchTracesWithOptions(SearchTracesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1152,6 +1428,10 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusCode))
+            {
+                query["StatusCode"] = request.StatusCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -1175,13 +1455,21 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<SearchTracesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries traces by time, application name, IP address, span name, and tag.
-         *
-         * @param request SearchTracesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traces by time, application name, IP address, span name, and tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchTracesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchTracesResponse
+        /// </returns>
         public async Task<SearchTracesResponse> SearchTracesWithOptionsAsync(SearchTracesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1230,6 +1518,10 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusCode))
+            {
+                query["StatusCode"] = request.StatusCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -1253,24 +1545,36 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return TeaModel.ToObject<SearchTracesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries traces by time, application name, IP address, span name, and tag.
-         *
-         * @param request SearchTracesRequest
-         * @return SearchTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traces by time, application name, IP address, span name, and tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchTracesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchTracesResponse
+        /// </returns>
         public SearchTracesResponse SearchTraces(SearchTracesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchTracesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries traces by time, application name, IP address, span name, and tag.
-         *
-         * @param request SearchTracesRequest
-         * @return SearchTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traces by time, application name, IP address, span name, and tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchTracesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchTracesResponse
+        /// </returns>
         public async Task<SearchTracesResponse> SearchTracesAsync(SearchTracesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

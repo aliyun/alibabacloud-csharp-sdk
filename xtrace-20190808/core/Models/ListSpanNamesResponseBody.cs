@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
     public class ListSpanNamesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The span names.
+        /// <para>The span names.</para>
         /// </summary>
         [NameInMap("SpanNames")]
         [Validation(Required=false)]

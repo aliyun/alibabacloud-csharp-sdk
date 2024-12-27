@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 {
     public class ListIpOrHostsResponseBody : TeaModel {
         /// <summary>
-        /// The IP addresses.
+        /// <para>The IP addresses.</para>
         /// </summary>
         [NameInMap("IpNames")]
         [Validation(Required=false)]
@@ -23,7 +23,10 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1E2B6A4C-6B83-4062-8B6F-AEEC1FC4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
