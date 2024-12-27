@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
     public class UpdateHanaRetentionSettingRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the SAP HANA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cl-00024vyjj******srrq</para>
@@ -73,6 +74,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
         /// <summary>
         /// <para>The ID of the backup vault.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-000fb0v2ly******k6</para>

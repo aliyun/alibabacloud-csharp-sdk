@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
     public class StartHanaDatabaseAsyncRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the SAP HANA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cl-000a9ipe******sme</para>
@@ -32,6 +33,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
         /// <summary>
         /// <para>The ID of the backup vault.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-0000hrh******vhr3i</para>
