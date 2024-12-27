@@ -615,6 +615,1334 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>进行拓展练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueResponse
+        /// </returns>
+        public ExecuteAITeacherExpansionDialogueResponse ExecuteAITeacherExpansionDialogueWithOptions(ExecuteAITeacherExpansionDialogueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherExpansionDialogue",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/executeExpansionTraining",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherExpansionDialogueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行拓展练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherExpansionDialogueResponse> ExecuteAITeacherExpansionDialogueWithOptionsAsync(ExecuteAITeacherExpansionDialogueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherExpansionDialogue",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/executeExpansionTraining",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherExpansionDialogueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行拓展练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueResponse
+        /// </returns>
+        public ExecuteAITeacherExpansionDialogueResponse ExecuteAITeacherExpansionDialogue(ExecuteAITeacherExpansionDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteAITeacherExpansionDialogueWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行拓展练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherExpansionDialogueResponse> ExecuteAITeacherExpansionDialogueAsync(ExecuteAITeacherExpansionDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteAITeacherExpansionDialogueWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练根据上下文进行润色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRefineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueRefineResponse
+        /// </returns>
+        public ExecuteAITeacherExpansionDialogueRefineResponse ExecuteAITeacherExpansionDialogueRefineWithOptions(ExecuteAITeacherExpansionDialogueRefineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherExpansionDialogueRefine",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/refineByContext",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherExpansionDialogueRefineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练根据上下文进行润色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRefineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueRefineResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherExpansionDialogueRefineResponse> ExecuteAITeacherExpansionDialogueRefineWithOptionsAsync(ExecuteAITeacherExpansionDialogueRefineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherExpansionDialogueRefine",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/refineByContext",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherExpansionDialogueRefineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练根据上下文进行润色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRefineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueRefineResponse
+        /// </returns>
+        public ExecuteAITeacherExpansionDialogueRefineResponse ExecuteAITeacherExpansionDialogueRefine(ExecuteAITeacherExpansionDialogueRefineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteAITeacherExpansionDialogueRefineWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练根据上下文进行润色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueRefineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueRefineResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherExpansionDialogueRefineResponse> ExecuteAITeacherExpansionDialogueRefineAsync(ExecuteAITeacherExpansionDialogueRefineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteAITeacherExpansionDialogueRefineWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueTranslateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueTranslateResponse
+        /// </returns>
+        public ExecuteAITeacherExpansionDialogueTranslateResponse ExecuteAITeacherExpansionDialogueTranslateWithOptions(ExecuteAITeacherExpansionDialogueTranslateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherExpansionDialogueTranslate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/translate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherExpansionDialogueTranslateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueTranslateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueTranslateResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherExpansionDialogueTranslateResponse> ExecuteAITeacherExpansionDialogueTranslateWithOptionsAsync(ExecuteAITeacherExpansionDialogueTranslateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherExpansionDialogueTranslate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/translate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherExpansionDialogueTranslateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueTranslateResponse
+        /// </returns>
+        public ExecuteAITeacherExpansionDialogueTranslateResponse ExecuteAITeacherExpansionDialogueTranslate(ExecuteAITeacherExpansionDialogueTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteAITeacherExpansionDialogueTranslateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherExpansionDialogueTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherExpansionDialogueTranslateResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherExpansionDialogueTranslateResponse> ExecuteAITeacherExpansionDialogueTranslateAsync(ExecuteAITeacherExpansionDialogueTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteAITeacherExpansionDialogueTranslateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语法检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherGrammarCheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherGrammarCheckResponse
+        /// </returns>
+        public ExecuteAITeacherGrammarCheckResponse ExecuteAITeacherGrammarCheckWithOptions(ExecuteAITeacherGrammarCheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherGrammarCheck",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/common/grammarChecking",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherGrammarCheckResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语法检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherGrammarCheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherGrammarCheckResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherGrammarCheckResponse> ExecuteAITeacherGrammarCheckWithOptionsAsync(ExecuteAITeacherGrammarCheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherGrammarCheck",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/common/grammarChecking",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherGrammarCheckResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语法检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherGrammarCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherGrammarCheckResponse
+        /// </returns>
+        public ExecuteAITeacherGrammarCheckResponse ExecuteAITeacherGrammarCheck(ExecuteAITeacherGrammarCheckRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteAITeacherGrammarCheckWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语法检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherGrammarCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherGrammarCheckResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherGrammarCheckResponse> ExecuteAITeacherGrammarCheckAsync(ExecuteAITeacherGrammarCheckRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteAITeacherGrammarCheckWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行同步练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueResponse
+        /// </returns>
+        public ExecuteAITeacherSyncDialogueResponse ExecuteAITeacherSyncDialogueWithOptions(ExecuteAITeacherSyncDialogueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherSyncDialogue",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/executeSyncTraining",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherSyncDialogueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行同步练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherSyncDialogueResponse> ExecuteAITeacherSyncDialogueWithOptionsAsync(ExecuteAITeacherSyncDialogueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherSyncDialogue",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/executeSyncTraining",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherSyncDialogueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行同步练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueResponse
+        /// </returns>
+        public ExecuteAITeacherSyncDialogueResponse ExecuteAITeacherSyncDialogue(ExecuteAITeacherSyncDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteAITeacherSyncDialogueWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行同步练对话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherSyncDialogueResponse> ExecuteAITeacherSyncDialogueAsync(ExecuteAITeacherSyncDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteAITeacherSyncDialogueWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueTranslateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueTranslateResponse
+        /// </returns>
+        public ExecuteAITeacherSyncDialogueTranslateResponse ExecuteAITeacherSyncDialogueTranslateWithOptions(ExecuteAITeacherSyncDialogueTranslateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherSyncDialogueTranslate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/translate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherSyncDialogueTranslateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueTranslateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueTranslateResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherSyncDialogueTranslateResponse> ExecuteAITeacherSyncDialogueTranslateWithOptionsAsync(ExecuteAITeacherSyncDialogueTranslateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAITeacherSyncDialogueTranslate",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/translate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAITeacherSyncDialogueTranslateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueTranslateResponse
+        /// </returns>
+        public ExecuteAITeacherSyncDialogueTranslateResponse ExecuteAITeacherSyncDialogueTranslate(ExecuteAITeacherSyncDialogueTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteAITeacherSyncDialogueTranslateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练语境翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAITeacherSyncDialogueTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAITeacherSyncDialogueTranslateResponse
+        /// </returns>
+        public async Task<ExecuteAITeacherSyncDialogueTranslateResponse> ExecuteAITeacherSyncDialogueTranslateAsync(ExecuteAITeacherSyncDialogueTranslateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteAITeacherSyncDialogueTranslateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherExpansionDialogueSuggestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherExpansionDialogueSuggestionResponse
+        /// </returns>
+        public GetAITeacherExpansionDialogueSuggestionResponse GetAITeacherExpansionDialogueSuggestionWithOptions(GetAITeacherExpansionDialogueSuggestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAITeacherExpansionDialogueSuggestion",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/suggestion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAITeacherExpansionDialogueSuggestionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherExpansionDialogueSuggestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherExpansionDialogueSuggestionResponse
+        /// </returns>
+        public async Task<GetAITeacherExpansionDialogueSuggestionResponse> GetAITeacherExpansionDialogueSuggestionWithOptionsAsync(GetAITeacherExpansionDialogueSuggestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Background))
+            {
+                body["background"] = request.Background;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleInfo))
+            {
+                body["roleInfo"] = request.RoleInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartSentence))
+            {
+                body["startSentence"] = request.StartSentence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAITeacherExpansionDialogueSuggestion",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/expansionPractice/suggestion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAITeacherExpansionDialogueSuggestionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherExpansionDialogueSuggestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherExpansionDialogueSuggestionResponse
+        /// </returns>
+        public GetAITeacherExpansionDialogueSuggestionResponse GetAITeacherExpansionDialogueSuggestion(GetAITeacherExpansionDialogueSuggestionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAITeacherExpansionDialogueSuggestionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拓展练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherExpansionDialogueSuggestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherExpansionDialogueSuggestionResponse
+        /// </returns>
+        public async Task<GetAITeacherExpansionDialogueSuggestionResponse> GetAITeacherExpansionDialogueSuggestionAsync(GetAITeacherExpansionDialogueSuggestionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAITeacherExpansionDialogueSuggestionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherSyncDialogueSuggestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherSyncDialogueSuggestionResponse
+        /// </returns>
+        public GetAITeacherSyncDialogueSuggestionResponse GetAITeacherSyncDialogueSuggestionWithOptions(GetAITeacherSyncDialogueSuggestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAITeacherSyncDialogueSuggestion",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/suggestion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAITeacherSyncDialogueSuggestionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherSyncDialogueSuggestionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherSyncDialogueSuggestionResponse
+        /// </returns>
+        public async Task<GetAITeacherSyncDialogueSuggestionResponse> GetAITeacherSyncDialogueSuggestionWithOptionsAsync(GetAITeacherSyncDialogueSuggestionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueTasks))
+            {
+                body["dialogueTasks"] = request.DialogueTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageCode))
+            {
+                body["languageCode"] = request.LanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAITeacherSyncDialogueSuggestion",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiteacher/syncPractice/suggestion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAITeacherSyncDialogueSuggestionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherSyncDialogueSuggestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherSyncDialogueSuggestionResponse
+        /// </returns>
+        public GetAITeacherSyncDialogueSuggestionResponse GetAITeacherSyncDialogueSuggestion(GetAITeacherSyncDialogueSuggestionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAITeacherSyncDialogueSuggestionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步练小助手</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAITeacherSyncDialogueSuggestionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAITeacherSyncDialogueSuggestionResponse
+        /// </returns>
+        public async Task<GetAITeacherSyncDialogueSuggestionResponse> GetAITeacherSyncDialogueSuggestionAsync(GetAITeacherSyncDialogueSuggestionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAITeacherSyncDialogueSuggestionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>个性化文生图/基于一个预训练模型创建图片推理任务</para>
         /// </summary>
         /// 
