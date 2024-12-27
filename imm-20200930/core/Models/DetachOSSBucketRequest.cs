@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetachOSSBucketRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The OSS bucket that you want to unbind.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>examplebucket</para>
         /// </summary>
         [NameInMap("OSSBucket")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetOSSBucketAttachmentRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The name of the OSS bucket.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>examplebucket</para>
         /// </summary>
         [NameInMap("OSSBucket")]
         [Validation(Required=false)]

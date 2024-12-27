@@ -69,10 +69,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>IncrementalScanning</para>
+        /// </summary>
         [NameInMap("Phase")]
         [Validation(Required=false)]
         public string Phase { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AliyunIMMBatchTriggerRole</para>
+        /// </summary>
         [NameInMap("ServiceRole")]
         [Validation(Required=false)]
         public string ServiceRole { get; set; }

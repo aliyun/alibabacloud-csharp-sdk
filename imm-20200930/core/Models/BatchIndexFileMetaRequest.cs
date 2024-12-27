@@ -10,25 +10,37 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class BatchIndexFileMetaRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-dataset</para>
         /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The objects in Object Storage Service (OSS). Specify OSS objects by using a JSON array. You can specify up to 100 objects in an array.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]
         public List<InputFile> Files { get; set; }
 
+        /// <summary>
+        /// <para>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</para>
+        /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

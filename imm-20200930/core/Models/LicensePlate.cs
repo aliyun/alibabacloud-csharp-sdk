@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public double? Confidence { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>川A0123</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }

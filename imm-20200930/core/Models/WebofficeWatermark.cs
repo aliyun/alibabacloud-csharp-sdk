@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class WebofficeWatermark : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rgba(192, 192, 192, 0.6)</para>
+        /// </summary>
         [NameInMap("FillStyle")]
         [Validation(Required=false)]
         public string FillStyle { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>bold 20px Serif</para>
+        /// </summary>
         [NameInMap("Font")]
         [Validation(Required=false)]
         public string Font { get; set; }

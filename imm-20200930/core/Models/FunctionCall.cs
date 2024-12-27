@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Arguments { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

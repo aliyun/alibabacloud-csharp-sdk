@@ -41,13 +41,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 图片打马赛克算子
-         *
-         * @param tmpReq AddImageMosaicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddImageMosaicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds mosaics, Gaussian blurs, or solid color shapes to blur one or more areas of an image for privacy protection and saves the output image to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>The operation accepts JPG and PNG images with a maximum side length of 30,000 pixels and a total of up to 250 million pixels.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AddImageMosaicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddImageMosaicResponse
+        /// </returns>
         public AddImageMosaicResponse AddImageMosaicWithOptions(AddImageMosaicRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -109,13 +126,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<AddImageMosaicResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 图片打马赛克算子
-         *
-         * @param tmpReq AddImageMosaicRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddImageMosaicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds mosaics, Gaussian blurs, or solid color shapes to blur one or more areas of an image for privacy protection and saves the output image to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>The operation accepts JPG and PNG images with a maximum side length of 30,000 pixels and a total of up to 250 million pixels.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AddImageMosaicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddImageMosaicResponse
+        /// </returns>
         public async Task<AddImageMosaicResponse> AddImageMosaicWithOptionsAsync(AddImageMosaicRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -177,37 +211,75 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<AddImageMosaicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 图片打马赛克算子
-         *
-         * @param request AddImageMosaicRequest
-         * @return AddImageMosaicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds mosaics, Gaussian blurs, or solid color shapes to blur one or more areas of an image for privacy protection and saves the output image to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>The operation accepts JPG and PNG images with a maximum side length of 30,000 pixels and a total of up to 250 million pixels.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddImageMosaicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddImageMosaicResponse
+        /// </returns>
         public AddImageMosaicResponse AddImageMosaic(AddImageMosaicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddImageMosaicWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 图片打马赛克算子
-         *
-         * @param request AddImageMosaicRequest
-         * @return AddImageMosaicResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds mosaics, Gaussian blurs, or solid color shapes to blur one or more areas of an image for privacy protection and saves the output image to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>The operation accepts JPG and PNG images with a maximum side length of 30,000 pixels and a total of up to 250 million pixels.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddImageMosaicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddImageMosaicResponse
+        /// </returns>
         public async Task<AddImageMosaicResponse> AddImageMosaicAsync(AddImageMosaicRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddImageMosaicWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 为故事新增文件
-         *
-         * @param tmpReq AddStoryFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds objects to a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddStoryFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddStoryFilesResponse
+        /// </returns>
         public AddStoryFilesResponse AddStoryFilesWithOptions(AddStoryFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -253,13 +325,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<AddStoryFilesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 为故事新增文件
-         *
-         * @param tmpReq AddStoryFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds objects to a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddStoryFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddStoryFilesResponse
+        /// </returns>
         public async Task<AddStoryFilesResponse> AddStoryFilesWithOptionsAsync(AddStoryFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -305,37 +385,66 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<AddStoryFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 为故事新增文件
-         *
-         * @param request AddStoryFilesRequest
-         * @return AddStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds objects to a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddStoryFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddStoryFilesResponse
+        /// </returns>
         public AddStoryFilesResponse AddStoryFiles(AddStoryFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddStoryFilesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 为故事新增文件
-         *
-         * @param request AddStoryFilesRequest
-         * @return AddStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds objects to a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddStoryFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddStoryFilesResponse
+        /// </returns>
         public async Task<AddStoryFilesResponse> AddStoryFilesAsync(AddStoryFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddStoryFilesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 绑定ossbucket
-         *
-         * @param request AttachOSSBucketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AttachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an Object Storage Service (OSS) bucket to the specified project. The binding enables you to use IMM features by using the x-oss-process parameter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>To use data processing capabilities of IMM based on the x-oss-process parameter, you must bind an OSS bucket to an IMM project. For more information, see <a href="https://help.aliyun.com/document_detail/2391270.html">x-oss-process</a>.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachOSSBucketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachOSSBucketResponse
+        /// </returns>
         public AttachOSSBucketResponse AttachOSSBucketWithOptions(AttachOSSBucketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -371,13 +480,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<AttachOSSBucketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 绑定ossbucket
-         *
-         * @param request AttachOSSBucketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AttachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an Object Storage Service (OSS) bucket to the specified project. The binding enables you to use IMM features by using the x-oss-process parameter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>To use data processing capabilities of IMM based on the x-oss-process parameter, you must bind an OSS bucket to an IMM project. For more information, see <a href="https://help.aliyun.com/document_detail/2391270.html">x-oss-process</a>.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachOSSBucketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachOSSBucketResponse
+        /// </returns>
         public async Task<AttachOSSBucketResponse> AttachOSSBucketWithOptionsAsync(AttachOSSBucketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -413,37 +539,87 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<AttachOSSBucketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 绑定ossbucket
-         *
-         * @param request AttachOSSBucketRequest
-         * @return AttachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an Object Storage Service (OSS) bucket to the specified project. The binding enables you to use IMM features by using the x-oss-process parameter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>To use data processing capabilities of IMM based on the x-oss-process parameter, you must bind an OSS bucket to an IMM project. For more information, see <a href="https://help.aliyun.com/document_detail/2391270.html">x-oss-process</a>.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachOSSBucketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachOSSBucketResponse
+        /// </returns>
         public AttachOSSBucketResponse AttachOSSBucket(AttachOSSBucketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AttachOSSBucketWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 绑定ossbucket
-         *
-         * @param request AttachOSSBucketRequest
-         * @return AttachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds an Object Storage Service (OSS) bucket to the specified project. The binding enables you to use IMM features by using the x-oss-process parameter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>To use data processing capabilities of IMM based on the x-oss-process parameter, you must bind an OSS bucket to an IMM project. For more information, see <a href="https://help.aliyun.com/document_detail/2391270.html">x-oss-process</a>.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachOSSBucketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachOSSBucketResponse
+        /// </returns>
         public async Task<AttachOSSBucketResponse> AttachOSSBucketAsync(AttachOSSBucketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AttachOSSBucketWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量删除文件元信息
-         *
-         * @param tmpReq BatchDeleteFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchDeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the metadata of multiple files from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete the metadata of a file from a dataset, the file stored in Object Storage Service (OSS) or Photo and Drive Service is <b>not</b> deleted. If you want to delete the file, use the operations provided by OSS or Photo and Drive Service.</description></item>
+        /// <item><description>Metadata deletion affects existing face groups and stories but does not affect existing spatiotemporal groups.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchDeleteFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteFileMetaResponse
+        /// </returns>
         public BatchDeleteFileMetaResponse BatchDeleteFileMetaWithOptions(BatchDeleteFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -485,13 +661,33 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchDeleteFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量删除文件元信息
-         *
-         * @param tmpReq BatchDeleteFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchDeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the metadata of multiple files from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete the metadata of a file from a dataset, the file stored in Object Storage Service (OSS) or Photo and Drive Service is <b>not</b> deleted. If you want to delete the file, use the operations provided by OSS or Photo and Drive Service.</description></item>
+        /// <item><description>Metadata deletion affects existing face groups and stories but does not affect existing spatiotemporal groups.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchDeleteFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteFileMetaResponse
+        /// </returns>
         public async Task<BatchDeleteFileMetaResponse> BatchDeleteFileMetaWithOptionsAsync(BatchDeleteFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -533,37 +729,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchDeleteFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量删除文件元信息
-         *
-         * @param request BatchDeleteFileMetaRequest
-         * @return BatchDeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the metadata of multiple files from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete the metadata of a file from a dataset, the file stored in Object Storage Service (OSS) or Photo and Drive Service is <b>not</b> deleted. If you want to delete the file, use the operations provided by OSS or Photo and Drive Service.</description></item>
+        /// <item><description>Metadata deletion affects existing face groups and stories but does not affect existing spatiotemporal groups.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteFileMetaResponse
+        /// </returns>
         public BatchDeleteFileMetaResponse BatchDeleteFileMeta(BatchDeleteFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchDeleteFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量删除文件元信息
-         *
-         * @param request BatchDeleteFileMetaRequest
-         * @return BatchDeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the metadata of multiple files from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete the metadata of a file from a dataset, the file stored in Object Storage Service (OSS) or Photo and Drive Service is <b>not</b> deleted. If you want to delete the file, use the operations provided by OSS or Photo and Drive Service.</description></item>
+        /// <item><description>Metadata deletion affects existing face groups and stories but does not affect existing spatiotemporal groups.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteFileMetaResponse
+        /// </returns>
         public async Task<BatchDeleteFileMetaResponse> BatchDeleteFileMetaAsync(BatchDeleteFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchDeleteFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量获取分组信息
-         *
-         * @param tmpReq BatchGetFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchGetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFigureClusterResponse
+        /// </returns>
         public BatchGetFigureClusterResponse BatchGetFigureClusterWithOptions(BatchGetFigureClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -605,13 +845,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchGetFigureClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量获取分组信息
-         *
-         * @param tmpReq BatchGetFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchGetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFigureClusterResponse
+        /// </returns>
         public async Task<BatchGetFigureClusterResponse> BatchGetFigureClusterWithOptionsAsync(BatchGetFigureClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -653,37 +901,66 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchGetFigureClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量获取分组信息
-         *
-         * @param request BatchGetFigureClusterRequest
-         * @return BatchGetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFigureClusterResponse
+        /// </returns>
         public BatchGetFigureClusterResponse BatchGetFigureCluster(BatchGetFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchGetFigureClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量获取分组信息
-         *
-         * @param request BatchGetFigureClusterRequest
-         * @return BatchGetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFigureClusterResponse
+        /// </returns>
         public async Task<BatchGetFigureClusterResponse> BatchGetFigureClusterAsync(BatchGetFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchGetFigureClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量获取文件元信息
-         *
-         * @param tmpReq BatchGetFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchGetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFileMetaResponse
+        /// </returns>
         public BatchGetFileMetaResponse BatchGetFileMetaWithOptions(BatchGetFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -733,13 +1010,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchGetFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量获取文件元信息
-         *
-         * @param tmpReq BatchGetFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchGetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFileMetaResponse
+        /// </returns>
         public async Task<BatchGetFileMetaResponse> BatchGetFileMetaWithOptionsAsync(BatchGetFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -789,37 +1083,85 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchGetFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量获取文件元信息
-         *
-         * @param request BatchGetFileMetaRequest
-         * @return BatchGetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFileMetaResponse
+        /// </returns>
         public BatchGetFileMetaResponse BatchGetFileMeta(BatchGetFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchGetFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量获取文件元信息
-         *
-         * @param request BatchGetFileMetaRequest
-         * @return BatchGetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of multiple objects or files in the specified dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, feel free to join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetFileMetaResponse
+        /// </returns>
         public async Task<BatchGetFileMetaResponse> BatchGetFileMetaAsync(BatchGetFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchGetFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量索引文件元信息
-         *
-         * @param tmpReq BatchIndexFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchIndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indexes metadata of multiple objects into the specified dataset. The process involves data processing operations such as label detection, face detection, and location detection. Metadata indexing helps meet diverse data retrieval requirements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Data processing operations supported for metadata processing vary with workflow templates. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>Metadata indexing poses limits on the total number and size of objects. For more information about these limits, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>. For more information about how to create</description></item>
+        /// <item><description>Metadata indexing is available in specific regions. For information about regions that support metadata indexing, see the &quot;Data management and indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchIndexFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchIndexFileMetaResponse
+        /// </returns>
         public BatchIndexFileMetaResponse BatchIndexFileMetaWithOptions(BatchIndexFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -873,13 +1215,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchIndexFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量索引文件元信息
-         *
-         * @param tmpReq BatchIndexFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchIndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indexes metadata of multiple objects into the specified dataset. The process involves data processing operations such as label detection, face detection, and location detection. Metadata indexing helps meet diverse data retrieval requirements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Data processing operations supported for metadata processing vary with workflow templates. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>Metadata indexing poses limits on the total number and size of objects. For more information about these limits, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>. For more information about how to create</description></item>
+        /// <item><description>Metadata indexing is available in specific regions. For information about regions that support metadata indexing, see the &quot;Data management and indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchIndexFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchIndexFileMetaResponse
+        /// </returns>
         public async Task<BatchIndexFileMetaResponse> BatchIndexFileMetaWithOptionsAsync(BatchIndexFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -933,37 +1293,85 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchIndexFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量索引文件元信息
-         *
-         * @param request BatchIndexFileMetaRequest
-         * @return BatchIndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indexes metadata of multiple objects into the specified dataset. The process involves data processing operations such as label detection, face detection, and location detection. Metadata indexing helps meet diverse data retrieval requirements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Data processing operations supported for metadata processing vary with workflow templates. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>Metadata indexing poses limits on the total number and size of objects. For more information about these limits, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>. For more information about how to create</description></item>
+        /// <item><description>Metadata indexing is available in specific regions. For information about regions that support metadata indexing, see the &quot;Data management and indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchIndexFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchIndexFileMetaResponse
+        /// </returns>
         public BatchIndexFileMetaResponse BatchIndexFileMeta(BatchIndexFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchIndexFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量索引文件元信息
-         *
-         * @param request BatchIndexFileMetaRequest
-         * @return BatchIndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Indexes metadata of multiple objects into the specified dataset. The process involves data processing operations such as label detection, face detection, and location detection. Metadata indexing helps meet diverse data retrieval requirements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Data processing operations supported for metadata processing vary with workflow templates. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>Metadata indexing poses limits on the total number and size of objects. For more information about these limits, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>. For more information about how to create</description></item>
+        /// <item><description>Metadata indexing is available in specific regions. For information about regions that support metadata indexing, see the &quot;Data management and indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchIndexFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchIndexFileMetaResponse
+        /// </returns>
         public async Task<BatchIndexFileMetaResponse> BatchIndexFileMetaAsync(BatchIndexFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchIndexFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量更新文件元信息
-         *
-         * @param tmpReq BatchUpdateFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchUpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates some metadata items of files indexed into a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata fields such as CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchUpdateFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileMetaResponse
+        /// </returns>
         public BatchUpdateFileMetaResponse BatchUpdateFileMetaWithOptions(BatchUpdateFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1005,13 +1413,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchUpdateFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量更新文件元信息
-         *
-         * @param tmpReq BatchUpdateFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchUpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates some metadata items of files indexed into a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata fields such as CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchUpdateFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileMetaResponse
+        /// </returns>
         public async Task<BatchUpdateFileMetaResponse> BatchUpdateFileMetaWithOptionsAsync(BatchUpdateFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1053,37 +1477,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<BatchUpdateFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量更新文件元信息
-         *
-         * @param request BatchUpdateFileMetaRequest
-         * @return BatchUpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates some metadata items of files indexed into a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata fields such as CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileMetaResponse
+        /// </returns>
         public BatchUpdateFileMetaResponse BatchUpdateFileMeta(BatchUpdateFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchUpdateFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量更新文件元信息
-         *
-         * @param request BatchUpdateFileMetaRequest
-         * @return BatchUpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates some metadata items of files indexed into a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata fields such as CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileMetaResponse
+        /// </returns>
         public async Task<BatchUpdateFileMetaResponse> BatchUpdateFileMetaAsync(BatchUpdateFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchUpdateFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param tmpReq CompareImageFacesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CompareImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compares the similarity of the largest faces in two images. The largest face refers to the largest face frame in an image after face detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For the input image, only the face with the largest face frame in the image is used for face comparison. The face frame detection result is consistent with the responses of the <a href="https://help.aliyun.com/document_detail/478213.html">DetectImageFaces</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CompareImageFacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareImageFacesResponse
+        /// </returns>
         public CompareImageFacesResponse CompareImageFacesWithOptions(CompareImageFacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1129,13 +1597,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CompareImageFacesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param tmpReq CompareImageFacesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CompareImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compares the similarity of the largest faces in two images. The largest face refers to the largest face frame in an image after face detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For the input image, only the face with the largest face frame in the image is used for face comparison. The face frame detection result is consistent with the responses of the <a href="https://help.aliyun.com/document_detail/478213.html">DetectImageFaces</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CompareImageFacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareImageFacesResponse
+        /// </returns>
         public async Task<CompareImageFacesResponse> CompareImageFacesWithOptionsAsync(CompareImageFacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1181,37 +1665,424 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CompareImageFacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param request CompareImageFacesRequest
-         * @return CompareImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compares the similarity of the largest faces in two images. The largest face refers to the largest face frame in an image after face detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For the input image, only the face with the largest face frame in the image is used for face comparison. The face frame detection result is consistent with the responses of the <a href="https://help.aliyun.com/document_detail/478213.html">DetectImageFaces</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompareImageFacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareImageFacesResponse
+        /// </returns>
         public CompareImageFacesResponse CompareImageFaces(CompareImageFacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CompareImageFacesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param request CompareImageFacesRequest
-         * @return CompareImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compares the similarity of the largest faces in two images. The largest face refers to the largest face frame in an image after face detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For the input image, only the face with the largest face frame in the image is used for face comparison. The face frame detection result is consistent with the responses of the <a href="https://help.aliyun.com/document_detail/478213.html">DetectImageFaces</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompareImageFacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareImageFacesResponse
+        /// </returns>
         public async Task<CompareImageFacesResponse> CompareImageFacesAsync(CompareImageFacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CompareImageFacesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建查看压缩包内文件列表任务
-         *
-         * @param tmpReq CreateArchiveFileInspectionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateArchiveFileInspectionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI 助手二期，问答API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ContextualAnswerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualAnswerResponse
+        /// </returns>
+        public ContextualAnswerResponse ContextualAnswerWithOptions(ContextualAnswerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ContextualAnswerShrinkRequest request = new ContextualAnswerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Files))
+            {
+                request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
+            {
+                body["Files"] = request.FilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ContextualAnswer",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ContextualAnswerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI 助手二期，问答API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ContextualAnswerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualAnswerResponse
+        /// </returns>
+        public async Task<ContextualAnswerResponse> ContextualAnswerWithOptionsAsync(ContextualAnswerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ContextualAnswerShrinkRequest request = new ContextualAnswerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Files))
+            {
+                request.FilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Files, "Files", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
+            {
+                body["Files"] = request.FilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ContextualAnswer",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ContextualAnswerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI 助手二期，问答API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContextualAnswerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualAnswerResponse
+        /// </returns>
+        public ContextualAnswerResponse ContextualAnswer(ContextualAnswerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ContextualAnswerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI 助手二期，问答API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContextualAnswerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualAnswerResponse
+        /// </returns>
+        public async Task<ContextualAnswerResponse> ContextualAnswerAsync(ContextualAnswerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ContextualAnswerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI助手二期，检索API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ContextualRetrievalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualRetrievalResponse
+        /// </returns>
+        public ContextualRetrievalResponse ContextualRetrievalWithOptions(ContextualRetrievalRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ContextualRetrievalShrinkRequest request = new ContextualRetrievalShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SmartClusterIds))
+            {
+                request.SmartClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SmartClusterIds, "SmartClusterIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallOnly))
+            {
+                query["RecallOnly"] = request.RecallOnly;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartClusterIdsShrink))
+            {
+                body["SmartClusterIds"] = request.SmartClusterIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ContextualRetrieval",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ContextualRetrievalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI助手二期，检索API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ContextualRetrievalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualRetrievalResponse
+        /// </returns>
+        public async Task<ContextualRetrievalResponse> ContextualRetrievalWithOptionsAsync(ContextualRetrievalRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ContextualRetrievalShrinkRequest request = new ContextualRetrievalShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SmartClusterIds))
+            {
+                request.SmartClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SmartClusterIds, "SmartClusterIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallOnly))
+            {
+                query["RecallOnly"] = request.RecallOnly;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartClusterIdsShrink))
+            {
+                body["SmartClusterIds"] = request.SmartClusterIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ContextualRetrieval",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ContextualRetrievalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI助手二期，检索API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContextualRetrievalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualRetrievalResponse
+        /// </returns>
+        public ContextualRetrievalResponse ContextualRetrieval(ContextualRetrievalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ContextualRetrievalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AI助手二期，检索API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContextualRetrievalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContextualRetrievalResponse
+        /// </returns>
+        public async Task<ContextualRetrievalResponse> ContextualRetrievalAsync(ContextualRetrievalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ContextualRetrievalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an archive file inspection task to preview the files in a package without decompressing the package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk chat group (ID: 31690030817) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateArchiveFileInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArchiveFileInspectionTaskResponse
+        /// </returns>
         public CreateArchiveFileInspectionTaskResponse CreateArchiveFileInspectionTaskWithOptions(CreateArchiveFileInspectionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1269,13 +2140,36 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateArchiveFileInspectionTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建查看压缩包内文件列表任务
-         *
-         * @param tmpReq CreateArchiveFileInspectionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateArchiveFileInspectionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an archive file inspection task to preview the files in a package without decompressing the package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk chat group (ID: 31690030817) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateArchiveFileInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArchiveFileInspectionTaskResponse
+        /// </returns>
         public async Task<CreateArchiveFileInspectionTaskResponse> CreateArchiveFileInspectionTaskWithOptionsAsync(CreateArchiveFileInspectionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1333,37 +2227,92 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateArchiveFileInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建查看压缩包内文件列表任务
-         *
-         * @param request CreateArchiveFileInspectionTaskRequest
-         * @return CreateArchiveFileInspectionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an archive file inspection task to preview the files in a package without decompressing the package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk chat group (ID: 31690030817) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateArchiveFileInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArchiveFileInspectionTaskResponse
+        /// </returns>
         public CreateArchiveFileInspectionTaskResponse CreateArchiveFileInspectionTask(CreateArchiveFileInspectionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateArchiveFileInspectionTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建查看压缩包内文件列表任务
-         *
-         * @param request CreateArchiveFileInspectionTaskRequest
-         * @return CreateArchiveFileInspectionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an archive file inspection task to preview the files in a package without decompressing the package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk chat group (ID: 31690030817) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateArchiveFileInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArchiveFileInspectionTaskResponse
+        /// </returns>
         public async Task<CreateArchiveFileInspectionTaskResponse> CreateArchiveFileInspectionTaskAsync(CreateArchiveFileInspectionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateArchiveFileInspectionTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param tmpReq CreateBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a batch processing task to perform a data processing operation, such as transcoding or format conversion, on multiple existing files at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a batch processing task to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchResponse
+        /// </returns>
         public CreateBatchResponse CreateBatchWithOptions(CreateBatchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1429,13 +2378,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param tmpReq CreateBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a batch processing task to perform a data processing operation, such as transcoding or format conversion, on multiple existing files at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a batch processing task to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchResponse
+        /// </returns>
         public async Task<CreateBatchResponse> CreateBatchWithOptionsAsync(CreateBatchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1501,37 +2463,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param request CreateBatchRequest
-         * @return CreateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a batch processing task to perform a data processing operation, such as transcoding or format conversion, on multiple existing files at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a batch processing task to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchResponse
+        /// </returns>
         public CreateBatchResponse CreateBatch(CreateBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param request CreateBatchRequest
-         * @return CreateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a batch processing task to perform a data processing operation, such as transcoding or format conversion, on multiple existing files at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a batch processing task to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchResponse
+        /// </returns>
         public async Task<CreateBatchResponse> CreateBatchAsync(CreateBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
-         *
-         * @param request CreateBindingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// Before you create a binding relationship, make sure that the project and the dataset that you want to use exist.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
+        /// <para> The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
+        /// After you create a binding relationship between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are added to the OSS bucket, IMM constantly tracks and scans the objects and updates the index. For objects whose index is created in this way, you can call the <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> operation to query, manage, and collect statistics from the objects.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBindingResponse
+        /// </returns>
         public CreateBindingResponse CreateBindingWithOptions(CreateBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1567,13 +2573,35 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateBindingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
-         *
-         * @param request CreateBindingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// Before you create a binding relationship, make sure that the project and the dataset that you want to use exist.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
+        /// <para> The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
+        /// After you create a binding relationship between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are added to the OSS bucket, IMM constantly tracks and scans the objects and updates the index. For objects whose index is created in this way, you can call the <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> operation to query, manage, and collect statistics from the objects.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBindingResponse
+        /// </returns>
         public async Task<CreateBindingResponse> CreateBindingWithOptionsAsync(CreateBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1609,37 +2637,96 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateBindingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
-         *
-         * @param request CreateBindingRequest
-         * @return CreateBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// Before you create a binding relationship, make sure that the project and the dataset that you want to use exist.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
+        /// <para> The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
+        /// After you create a binding relationship between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are added to the OSS bucket, IMM constantly tracks and scans the objects and updates the index. For objects whose index is created in this way, you can call the <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> operation to query, manage, and collect statistics from the objects.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBindingResponse
+        /// </returns>
         public CreateBindingResponse CreateBinding(CreateBindingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateBindingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建一个绑定任务，将 IMM 的数据集和 OSS Bucket 进行绑定，自动对其文件进行索引。
-         *
-         * @param request CreateBindingRequest
-         * @return CreateBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a binding relationship between a dataset and an Object Storage Service (OSS) bucket. This allows for the automatic synchronization of incremental and full data and indexing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// Before you create a binding relationship, make sure that the project and the dataset that you want to use exist.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.<remarks>
+        /// <para> The CreateBinding operation works by using the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that is specified when you created the project or dataset.
+        /// After you create a binding relationship between a dataset and an OSS bucket, IMM scans the existing objects in the bucket and extracts metadata based on the scanning result. Then, IMM creates an index from the extracted metadata. If new objects are added to the OSS bucket, IMM constantly tracks and scans the objects and updates the index. For objects whose index is created in this way, you can call the <a href="https://help.aliyun.com/document_detail/478175.html">SimpleQuery</a> operation to query, manage, and collect statistics from the objects.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBindingResponse
+        /// </returns>
         public async Task<CreateBindingResponse> CreateBindingAsync(CreateBindingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBindingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建点云压缩任务
-         *
-         * @param tmpReq CreateCompressPointCloudTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCompressPointCloudTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compresses point cloud data (PCD) in Object Storage Service (OSS) to reduce the amount of data transferred over networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only Point Cloud Data (PCD) files.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCompressPointCloudTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompressPointCloudTaskResponse
+        /// </returns>
         public CreateCompressPointCloudTaskResponse CreateCompressPointCloudTaskWithOptions(CreateCompressPointCloudTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1737,13 +2824,32 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateCompressPointCloudTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建点云压缩任务
-         *
-         * @param tmpReq CreateCompressPointCloudTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCompressPointCloudTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compresses point cloud data (PCD) in Object Storage Service (OSS) to reduce the amount of data transferred over networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only Point Cloud Data (PCD) files.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCompressPointCloudTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompressPointCloudTaskResponse
+        /// </returns>
         public async Task<CreateCompressPointCloudTaskResponse> CreateCompressPointCloudTaskWithOptionsAsync(CreateCompressPointCloudTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1841,37 +2947,87 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateCompressPointCloudTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建点云压缩任务
-         *
-         * @param request CreateCompressPointCloudTaskRequest
-         * @return CreateCompressPointCloudTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compresses point cloud data (PCD) in Object Storage Service (OSS) to reduce the amount of data transferred over networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only Point Cloud Data (PCD) files.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCompressPointCloudTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompressPointCloudTaskResponse
+        /// </returns>
         public CreateCompressPointCloudTaskResponse CreateCompressPointCloudTask(CreateCompressPointCloudTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCompressPointCloudTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建点云压缩任务
-         *
-         * @param request CreateCompressPointCloudTaskRequest
-         * @return CreateCompressPointCloudTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Compresses point cloud data (PCD) in Object Storage Service (OSS) to reduce the amount of data transferred over networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation supports only Point Cloud Data (PCD) files.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCompressPointCloudTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompressPointCloudTaskResponse
+        /// </returns>
         public async Task<CreateCompressPointCloudTaskResponse> CreateCompressPointCloudTaskAsync(CreateCompressPointCloudTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCompressPointCloudTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建自定义故事
-         *
-         * @param tmpReq CreateCustomizedStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCustomizedStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story based on the specified images and videos.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCustomizedStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomizedStoryResponse
+        /// </returns>
         public CreateCustomizedStoryResponse CreateCustomizedStoryWithOptions(CreateCustomizedStoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1941,13 +3097,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateCustomizedStoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建自定义故事
-         *
-         * @param tmpReq CreateCustomizedStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateCustomizedStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story based on the specified images and videos.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCustomizedStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomizedStoryResponse
+        /// </returns>
         public async Task<CreateCustomizedStoryResponse> CreateCustomizedStoryWithOptionsAsync(CreateCustomizedStoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2017,37 +3189,83 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateCustomizedStoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建自定义故事
-         *
-         * @param request CreateCustomizedStoryRequest
-         * @return CreateCustomizedStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story based on the specified images and videos.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCustomizedStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomizedStoryResponse
+        /// </returns>
         public CreateCustomizedStoryResponse CreateCustomizedStory(CreateCustomizedStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCustomizedStoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建自定义故事
-         *
-         * @param request CreateCustomizedStoryRequest
-         * @return CreateCustomizedStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story based on the specified images and videos.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCustomizedStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomizedStoryResponse
+        /// </returns>
         public async Task<CreateCustomizedStoryResponse> CreateCustomizedStoryAsync(CreateCustomizedStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCustomizedStoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建数据集
-         *
-         * @param request CreateDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>A dataset name must be unique within the same project.</description></item>
+        /// <item><description>A project has an upper limit on the number of datasets that can be created in the project. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the dataset limit of the project.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata. Metadata indexing enhances <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval efficiency and statistics collection</a>, and enables intelligent data management.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetResponse
+        /// </returns>
         public CreateDatasetResponse CreateDatasetWithOptions(CreateDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2107,13 +3325,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateDatasetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据集
-         *
-         * @param request CreateDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>A dataset name must be unique within the same project.</description></item>
+        /// <item><description>A project has an upper limit on the number of datasets that can be created in the project. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the dataset limit of the project.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata. Metadata indexing enhances <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval efficiency and statistics collection</a>, and enables intelligent data management.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetResponse
+        /// </returns>
         public async Task<CreateDatasetResponse> CreateDatasetWithOptionsAsync(CreateDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2173,37 +3409,87 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateDatasetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据集
-         *
-         * @param request CreateDatasetRequest
-         * @return CreateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>A dataset name must be unique within the same project.</description></item>
+        /// <item><description>A project has an upper limit on the number of datasets that can be created in the project. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the dataset limit of the project.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata. Metadata indexing enhances <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval efficiency and statistics collection</a>, and enables intelligent data management.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetResponse
+        /// </returns>
         public CreateDatasetResponse CreateDataset(CreateDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDatasetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建数据集
-         *
-         * @param request CreateDatasetRequest
-         * @return CreateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>A dataset name must be unique within the same project.</description></item>
+        /// <item><description>A project has an upper limit on the number of datasets that can be created in the project. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the dataset limit of the project.</description></item>
+        /// <item><description>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata. Metadata indexing enhances <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval efficiency and statistics collection</a>, and enables intelligent data management.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetResponse
+        /// </returns>
         public async Task<CreateDatasetResponse> CreateDatasetAsync(CreateDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDatasetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 提取盲水印
-         *
-         * @param tmpReq CreateDecodeBlindWatermarkTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDecodeBlindWatermarkTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decodes the blind watermark in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDecodeBlindWatermarkTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDecodeBlindWatermarkTaskResponse
+        /// </returns>
         public CreateDecodeBlindWatermarkTaskResponse CreateDecodeBlindWatermarkTaskWithOptions(CreateDecodeBlindWatermarkTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2269,13 +3555,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateDecodeBlindWatermarkTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 提取盲水印
-         *
-         * @param tmpReq CreateDecodeBlindWatermarkTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDecodeBlindWatermarkTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decodes the blind watermark in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDecodeBlindWatermarkTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDecodeBlindWatermarkTaskResponse
+        /// </returns>
         public async Task<CreateDecodeBlindWatermarkTaskResponse> CreateDecodeBlindWatermarkTaskWithOptionsAsync(CreateDecodeBlindWatermarkTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2341,37 +3645,86 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateDecodeBlindWatermarkTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 提取盲水印
-         *
-         * @param request CreateDecodeBlindWatermarkTaskRequest
-         * @return CreateDecodeBlindWatermarkTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decodes the blind watermark in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDecodeBlindWatermarkTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDecodeBlindWatermarkTaskResponse
+        /// </returns>
         public CreateDecodeBlindWatermarkTaskResponse CreateDecodeBlindWatermarkTask(CreateDecodeBlindWatermarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDecodeBlindWatermarkTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 提取盲水印
-         *
-         * @param request CreateDecodeBlindWatermarkTaskRequest
-         * @return CreateDecodeBlindWatermarkTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decodes the blind watermark in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDecodeBlindWatermarkTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDecodeBlindWatermarkTaskResponse
+        /// </returns>
         public async Task<CreateDecodeBlindWatermarkTaskResponse> CreateDecodeBlindWatermarkTaskAsync(CreateDecodeBlindWatermarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDecodeBlindWatermarkTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 以脸搜图
-         *
-         * @param tmpReq CreateFacesSearchingTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFacesSearchingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches the dataset for the specified number of images most similar to the specified image or face and returns face IDs and boundaries in descending order of similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFacesSearchingTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFacesSearchingTaskResponse
+        /// </returns>
         public CreateFacesSearchingTaskResponse CreateFacesSearchingTaskWithOptions(CreateFacesSearchingTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2429,13 +3782,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFacesSearchingTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 以脸搜图
-         *
-         * @param tmpReq CreateFacesSearchingTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFacesSearchingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches the dataset for the specified number of images most similar to the specified image or face and returns face IDs and boundaries in descending order of similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFacesSearchingTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFacesSearchingTaskResponse
+        /// </returns>
         public async Task<CreateFacesSearchingTaskResponse> CreateFacesSearchingTaskWithOptionsAsync(CreateFacesSearchingTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2493,37 +3863,89 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFacesSearchingTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 以脸搜图
-         *
-         * @param request CreateFacesSearchingTaskRequest
-         * @return CreateFacesSearchingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches the dataset for the specified number of images most similar to the specified image or face and returns face IDs and boundaries in descending order of similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFacesSearchingTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFacesSearchingTaskResponse
+        /// </returns>
         public CreateFacesSearchingTaskResponse CreateFacesSearchingTask(CreateFacesSearchingTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFacesSearchingTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 以脸搜图
-         *
-         * @param request CreateFacesSearchingTaskRequest
-         * @return CreateFacesSearchingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches the dataset for the specified number of images most similar to the specified image or face and returns face IDs and boundaries in descending order of similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFacesSearchingTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFacesSearchingTaskResponse
+        /// </returns>
         public async Task<CreateFacesSearchingTaskResponse> CreateFacesSearchingTaskAsync(CreateFacesSearchingTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFacesSearchingTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 聚类
-         *
-         * @param tmpReq CreateFigureClusteringTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFigureClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a face clustering task to cluster faces of different persons in images by person based on the intelligent algorithms.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the CreateBinding operation or manually by calling the IndexFileMeta or BatchIndexFileMeta operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset. You can regularly call this operation to process incremental files.
+        /// After the clustering task is completed, you can call the GetFigureCluster or BatchGetFigureCluster  operation to query information about a specific cluster. You can also call the QueryFigureClusters operation to query all face clusters of the specified dataset.</description></item>
+        /// <item><description>Removing image information from the dataset causes changes to face clusters. When images that contain all faces in a cluster are removed, the cluster is deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFigureClusteringTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClusteringTaskResponse
+        /// </returns>
         public CreateFigureClusteringTaskResponse CreateFigureClusteringTaskWithOptions(CreateFigureClusteringTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2577,13 +3999,35 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFigureClusteringTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 聚类
-         *
-         * @param tmpReq CreateFigureClusteringTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFigureClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a face clustering task to cluster faces of different persons in images by person based on the intelligent algorithms.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the CreateBinding operation or manually by calling the IndexFileMeta or BatchIndexFileMeta operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset. You can regularly call this operation to process incremental files.
+        /// After the clustering task is completed, you can call the GetFigureCluster or BatchGetFigureCluster  operation to query information about a specific cluster. You can also call the QueryFigureClusters operation to query all face clusters of the specified dataset.</description></item>
+        /// <item><description>Removing image information from the dataset causes changes to face clusters. When images that contain all faces in a cluster are removed, the cluster is deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFigureClusteringTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClusteringTaskResponse
+        /// </returns>
         public async Task<CreateFigureClusteringTaskResponse> CreateFigureClusteringTaskWithOptionsAsync(CreateFigureClusteringTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2637,37 +4081,95 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFigureClusteringTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 聚类
-         *
-         * @param request CreateFigureClusteringTaskRequest
-         * @return CreateFigureClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a face clustering task to cluster faces of different persons in images by person based on the intelligent algorithms.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the CreateBinding operation or manually by calling the IndexFileMeta or BatchIndexFileMeta operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset. You can regularly call this operation to process incremental files.
+        /// After the clustering task is completed, you can call the GetFigureCluster or BatchGetFigureCluster  operation to query information about a specific cluster. You can also call the QueryFigureClusters operation to query all face clusters of the specified dataset.</description></item>
+        /// <item><description>Removing image information from the dataset causes changes to face clusters. When images that contain all faces in a cluster are removed, the cluster is deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFigureClusteringTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClusteringTaskResponse
+        /// </returns>
         public CreateFigureClusteringTaskResponse CreateFigureClusteringTask(CreateFigureClusteringTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFigureClusteringTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 聚类
-         *
-         * @param request CreateFigureClusteringTaskRequest
-         * @return CreateFigureClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a face clustering task to cluster faces of different persons in images by person based on the intelligent algorithms.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the CreateBinding operation or manually by calling the IndexFileMeta or BatchIndexFileMeta operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset. You can regularly call this operation to process incremental files.
+        /// After the clustering task is completed, you can call the GetFigureCluster or BatchGetFigureCluster  operation to query information about a specific cluster. You can also call the QueryFigureClusters operation to query all face clusters of the specified dataset.</description></item>
+        /// <item><description>Removing image information from the dataset causes changes to face clusters. When images that contain all faces in a cluster are removed, the cluster is deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFigureClusteringTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClusteringTaskResponse
+        /// </returns>
         public async Task<CreateFigureClusteringTaskResponse> CreateFigureClusteringTaskAsync(CreateFigureClusteringTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFigureClusteringTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 合并聚类
-         *
-         * @param tmpReq CreateFigureClustersMergingTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFigureClustersMergingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Merges two or more face clustering groups into one face clustering group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>If you merge unrelated groups, the feature values of the target groups are affected. As a result, the incremental data may be inaccurately grouped when you create a face clustering task.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFigureClustersMergingTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClustersMergingTaskResponse
+        /// </returns>
         public CreateFigureClustersMergingTaskResponse CreateFigureClustersMergingTaskWithOptions(CreateFigureClustersMergingTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2737,13 +4239,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFigureClustersMergingTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 合并聚类
-         *
-         * @param tmpReq CreateFigureClustersMergingTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFigureClustersMergingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Merges two or more face clustering groups into one face clustering group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>If you merge unrelated groups, the feature values of the target groups are affected. As a result, the incremental data may be inaccurately grouped when you create a face clustering task.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFigureClustersMergingTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClustersMergingTaskResponse
+        /// </returns>
         public async Task<CreateFigureClustersMergingTaskResponse> CreateFigureClustersMergingTaskWithOptionsAsync(CreateFigureClustersMergingTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2813,37 +4333,94 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFigureClustersMergingTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 合并聚类
-         *
-         * @param request CreateFigureClustersMergingTaskRequest
-         * @return CreateFigureClustersMergingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Merges two or more face clustering groups into one face clustering group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>If you merge unrelated groups, the feature values of the target groups are affected. As a result, the incremental data may be inaccurately grouped when you create a face clustering task.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFigureClustersMergingTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClustersMergingTaskResponse
+        /// </returns>
         public CreateFigureClustersMergingTaskResponse CreateFigureClustersMergingTask(CreateFigureClustersMergingTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFigureClustersMergingTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 合并聚类
-         *
-         * @param request CreateFigureClustersMergingTaskRequest
-         * @return CreateFigureClustersMergingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Merges two or more face clustering groups into one face clustering group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>If you merge unrelated groups, the feature values of the target groups are affected. As a result, the incremental data may be inaccurately grouped when you create a face clustering task.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFigureClustersMergingTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFigureClustersMergingTaskResponse
+        /// </returns>
         public async Task<CreateFigureClustersMergingTaskResponse> CreateFigureClustersMergingTaskAsync(CreateFigureClustersMergingTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFigureClustersMergingTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 压缩/打包下载API
-         *
-         * @param tmpReq CreateFileCompressionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileCompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file packing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.
+        ///  The operation supports file packing only. Compression support will be added later.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>A call to the operation can pack up to 80,000 objects into a package.</description></item>
+        /// <item><description>The total size of all objects to be packed into a package cannot exceed 200 GB.</description></item>
+        /// <item><description>The operation can pack only Standard objects in Object Storage Service (OSS). To pack an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFileCompressionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileCompressionTaskResponse
+        /// </returns>
         public CreateFileCompressionTaskResponse CreateFileCompressionTaskWithOptions(CreateFileCompressionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2913,13 +4490,38 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFileCompressionTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 压缩/打包下载API
-         *
-         * @param tmpReq CreateFileCompressionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileCompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file packing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.
+        ///  The operation supports file packing only. Compression support will be added later.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>A call to the operation can pack up to 80,000 objects into a package.</description></item>
+        /// <item><description>The total size of all objects to be packed into a package cannot exceed 200 GB.</description></item>
+        /// <item><description>The operation can pack only Standard objects in Object Storage Service (OSS). To pack an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFileCompressionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileCompressionTaskResponse
+        /// </returns>
         public async Task<CreateFileCompressionTaskResponse> CreateFileCompressionTaskWithOptionsAsync(CreateFileCompressionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2989,37 +4591,107 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFileCompressionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 压缩/打包下载API
-         *
-         * @param request CreateFileCompressionTaskRequest
-         * @return CreateFileCompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file packing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.
+        ///  The operation supports file packing only. Compression support will be added later.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>A call to the operation can pack up to 80,000 objects into a package.</description></item>
+        /// <item><description>The total size of all objects to be packed into a package cannot exceed 200 GB.</description></item>
+        /// <item><description>The operation can pack only Standard objects in Object Storage Service (OSS). To pack an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileCompressionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileCompressionTaskResponse
+        /// </returns>
         public CreateFileCompressionTaskResponse CreateFileCompressionTask(CreateFileCompressionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFileCompressionTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 压缩/打包下载API
-         *
-         * @param request CreateFileCompressionTaskRequest
-         * @return CreateFileCompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file packing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.
+        ///  The operation supports file packing only. Compression support will be added later.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>A call to the operation can pack up to 80,000 objects into a package.</description></item>
+        /// <item><description>The total size of all objects to be packed into a package cannot exceed 200 GB.</description></item>
+        /// <item><description>The operation can pack only Standard objects in Object Storage Service (OSS). To pack an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileCompressionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileCompressionTaskResponse
+        /// </returns>
         public async Task<CreateFileCompressionTaskResponse> CreateFileCompressionTaskAsync(CreateFileCompressionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFileCompressionTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 在线解压API
-         *
-         * @param tmpReq CreateFileUncompressionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileUncompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the specified files from a ZIP, RAR, or 7z package to the specified directory or decompresses the entire package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>The operation extracts files in streams to the specified directory. If the file extraction task is interrupted by a corrupt file, files that have been extracted are not deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFileUncompressionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileUncompressionTaskResponse
+        /// </returns>
         public CreateFileUncompressionTaskResponse CreateFileUncompressionTaskWithOptions(CreateFileUncompressionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3089,13 +4761,37 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFileUncompressionTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 在线解压API
-         *
-         * @param tmpReq CreateFileUncompressionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateFileUncompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the specified files from a ZIP, RAR, or 7z package to the specified directory or decompresses the entire package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>The operation extracts files in streams to the specified directory. If the file extraction task is interrupted by a corrupt file, files that have been extracted are not deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFileUncompressionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileUncompressionTaskResponse
+        /// </returns>
         public async Task<CreateFileUncompressionTaskResponse> CreateFileUncompressionTaskWithOptionsAsync(CreateFileUncompressionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3165,37 +4861,114 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateFileUncompressionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 在线解压API
-         *
-         * @param request CreateFileUncompressionTaskRequest
-         * @return CreateFileUncompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the specified files from a ZIP, RAR, or 7z package to the specified directory or decompresses the entire package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>The operation extracts files in streams to the specified directory. If the file extraction task is interrupted by a corrupt file, files that have been extracted are not deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileUncompressionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileUncompressionTaskResponse
+        /// </returns>
         public CreateFileUncompressionTaskResponse CreateFileUncompressionTask(CreateFileUncompressionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFileUncompressionTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 在线解压API
-         *
-         * @param request CreateFileUncompressionTaskRequest
-         * @return CreateFileUncompressionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the specified files from a ZIP, RAR, or 7z package to the specified directory or decompresses the entire package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>The operation supports a package that contains up to 80,000 files.</description></item>
+        /// <item><description>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</description></item>
+        /// <item><description>The operation extracts files in streams to the specified directory. If the file extraction task is interrupted by a corrupt file, files that have been extracted are not deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFileUncompressionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFileUncompressionTaskResponse
+        /// </returns>
         public async Task<CreateFileUncompressionTaskResponse> CreateFileUncompressionTaskAsync(CreateFileUncompressionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFileUncompressionTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建图片检测
-         *
-         * @param tmpReq CreateImageModerationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image moderation task to ensure image content compliance. You can call this operation to identify inappropriate content, such as pornography, violence, terrorism, politically sensitive content, undesirable scenes, unauthorized logos, and non-compliant ads.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The image for which you want to create a content moderation task must meet the following requirements:<list type="bullet">
+        /// <item><description>The image URL supports the HTTP and HTTPS protocols.</description></item>
+        /// <item><description>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WebP</description></item>
+        /// <item><description>The image size is limited to 20 MB for synchronous and asynchronous calls, with a maximum height or width of 30,000 pixels. The total number of pixels cannot exceed 250 million. GIF images are limited to 4,194,304 pixels, with a maximum height or width of 30,000 pixels.</description></item>
+        /// <item><description>The image download time is limited to 3 seconds. If the download takes longer, a timeout error occurs.</description></item>
+        /// <item><description>To ensure effective moderation, we recommend that you submit an image with dimensions of at least 256 × 256 pixels.</description></item>
+        /// <item><description>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is stored in a stable and reliable service. We recommend that you store images on Alibaba Cloud Object Storage Service (OSS) or cache them on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478241.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.<remarks>
+        /// <para> The detection result is sent as an asynchronous notification. The Suggestion field of the notification can have one of the following values:</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance categories. For more information, see Content moderation results.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is finished, another asynchronous notification is sent to inform you about the review result. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateImageModerationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageModerationTaskResponse
+        /// </returns>
         public CreateImageModerationTaskResponse CreateImageModerationTaskWithOptions(CreateImageModerationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3273,13 +5046,46 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateImageModerationTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建图片检测
-         *
-         * @param tmpReq CreateImageModerationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image moderation task to ensure image content compliance. You can call this operation to identify inappropriate content, such as pornography, violence, terrorism, politically sensitive content, undesirable scenes, unauthorized logos, and non-compliant ads.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The image for which you want to create a content moderation task must meet the following requirements:<list type="bullet">
+        /// <item><description>The image URL supports the HTTP and HTTPS protocols.</description></item>
+        /// <item><description>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WebP</description></item>
+        /// <item><description>The image size is limited to 20 MB for synchronous and asynchronous calls, with a maximum height or width of 30,000 pixels. The total number of pixels cannot exceed 250 million. GIF images are limited to 4,194,304 pixels, with a maximum height or width of 30,000 pixels.</description></item>
+        /// <item><description>The image download time is limited to 3 seconds. If the download takes longer, a timeout error occurs.</description></item>
+        /// <item><description>To ensure effective moderation, we recommend that you submit an image with dimensions of at least 256 × 256 pixels.</description></item>
+        /// <item><description>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is stored in a stable and reliable service. We recommend that you store images on Alibaba Cloud Object Storage Service (OSS) or cache them on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478241.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.<remarks>
+        /// <para> The detection result is sent as an asynchronous notification. The Suggestion field of the notification can have one of the following values:</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance categories. For more information, see Content moderation results.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is finished, another asynchronous notification is sent to inform you about the review result. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateImageModerationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageModerationTaskResponse
+        /// </returns>
         public async Task<CreateImageModerationTaskResponse> CreateImageModerationTaskWithOptionsAsync(CreateImageModerationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3357,37 +5163,117 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateImageModerationTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建图片检测
-         *
-         * @param request CreateImageModerationTaskRequest
-         * @return CreateImageModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image moderation task to ensure image content compliance. You can call this operation to identify inappropriate content, such as pornography, violence, terrorism, politically sensitive content, undesirable scenes, unauthorized logos, and non-compliant ads.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The image for which you want to create a content moderation task must meet the following requirements:<list type="bullet">
+        /// <item><description>The image URL supports the HTTP and HTTPS protocols.</description></item>
+        /// <item><description>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WebP</description></item>
+        /// <item><description>The image size is limited to 20 MB for synchronous and asynchronous calls, with a maximum height or width of 30,000 pixels. The total number of pixels cannot exceed 250 million. GIF images are limited to 4,194,304 pixels, with a maximum height or width of 30,000 pixels.</description></item>
+        /// <item><description>The image download time is limited to 3 seconds. If the download takes longer, a timeout error occurs.</description></item>
+        /// <item><description>To ensure effective moderation, we recommend that you submit an image with dimensions of at least 256 × 256 pixels.</description></item>
+        /// <item><description>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is stored in a stable and reliable service. We recommend that you store images on Alibaba Cloud Object Storage Service (OSS) or cache them on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478241.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.<remarks>
+        /// <para> The detection result is sent as an asynchronous notification. The Suggestion field of the notification can have one of the following values:</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance categories. For more information, see Content moderation results.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is finished, another asynchronous notification is sent to inform you about the review result. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateImageModerationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageModerationTaskResponse
+        /// </returns>
         public CreateImageModerationTaskResponse CreateImageModerationTask(CreateImageModerationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateImageModerationTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建图片检测
-         *
-         * @param request CreateImageModerationTaskRequest
-         * @return CreateImageModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image moderation task to ensure image content compliance. You can call this operation to identify inappropriate content, such as pornography, violence, terrorism, politically sensitive content, undesirable scenes, unauthorized logos, and non-compliant ads.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The image for which you want to create a content moderation task must meet the following requirements:<list type="bullet">
+        /// <item><description>The image URL supports the HTTP and HTTPS protocols.</description></item>
+        /// <item><description>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WebP</description></item>
+        /// <item><description>The image size is limited to 20 MB for synchronous and asynchronous calls, with a maximum height or width of 30,000 pixels. The total number of pixels cannot exceed 250 million. GIF images are limited to 4,194,304 pixels, with a maximum height or width of 30,000 pixels.</description></item>
+        /// <item><description>The image download time is limited to 3 seconds. If the download takes longer, a timeout error occurs.</description></item>
+        /// <item><description>To ensure effective moderation, we recommend that you submit an image with dimensions of at least 256 × 256 pixels.</description></item>
+        /// <item><description>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is stored in a stable and reliable service. We recommend that you store images on Alibaba Cloud Object Storage Service (OSS) or cache them on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478241.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.<remarks>
+        /// <para> The detection result is sent as an asynchronous notification. The Suggestion field of the notification can have one of the following values:</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance categories. For more information, see Content moderation results.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is finished, another asynchronous notification is sent to inform you about the review result. &gt;</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateImageModerationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageModerationTaskResponse
+        /// </returns>
         public async Task<CreateImageModerationTaskResponse> CreateImageModerationTaskAsync(CreateImageModerationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateImageModerationTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 图片拼接
-         *
-         * @param tmpReq CreateImageSplicingTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageSplicingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image splicing task. You can call this operation to splice multiple images into one based on a given rule and save the final image into an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateImageSplicingTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageSplicingTaskResponse
+        /// </returns>
         public CreateImageSplicingTaskResponse CreateImageSplicingTaskWithOptions(CreateImageSplicingTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3489,13 +5375,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateImageSplicingTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 图片拼接
-         *
-         * @param tmpReq CreateImageSplicingTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageSplicingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image splicing task. You can call this operation to splice multiple images into one based on a given rule and save the final image into an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateImageSplicingTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageSplicingTaskResponse
+        /// </returns>
         public async Task<CreateImageSplicingTaskResponse> CreateImageSplicingTaskWithOptionsAsync(CreateImageSplicingTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3597,37 +5501,87 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateImageSplicingTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 图片拼接
-         *
-         * @param request CreateImageSplicingTaskRequest
-         * @return CreateImageSplicingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image splicing task. You can call this operation to splice multiple images into one based on a given rule and save the final image into an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateImageSplicingTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageSplicingTaskResponse
+        /// </returns>
         public CreateImageSplicingTaskResponse CreateImageSplicingTask(CreateImageSplicingTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateImageSplicingTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 图片拼接
-         *
-         * @param request CreateImageSplicingTaskRequest
-         * @return CreateImageSplicingTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image splicing task. You can call this operation to splice multiple images into one based on a given rule and save the final image into an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateImageSplicingTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageSplicingTaskResponse
+        /// </returns>
         public async Task<CreateImageSplicingTaskResponse> CreateImageSplicingTaskAsync(CreateImageSplicingTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateImageSplicingTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 图片转PDF
-         *
-         * @param tmpReq CreateImageToPDFTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageToPDFTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts multiple images into one single PDF file and stores the PDF file to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can specify up to 100 images in a call to the operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateImageToPDFTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageToPDFTaskResponse
+        /// </returns>
         public CreateImageToPDFTaskResponse CreateImageToPDFTaskWithOptions(CreateImageToPDFTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3697,13 +5651,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateImageToPDFTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 图片转PDF
-         *
-         * @param tmpReq CreateImageToPDFTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageToPDFTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts multiple images into one single PDF file and stores the PDF file to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can specify up to 100 images in a call to the operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateImageToPDFTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageToPDFTaskResponse
+        /// </returns>
         public async Task<CreateImageToPDFTaskResponse> CreateImageToPDFTaskWithOptionsAsync(CreateImageToPDFTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3773,37 +5745,91 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateImageToPDFTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 图片转PDF
-         *
-         * @param request CreateImageToPDFTaskRequest
-         * @return CreateImageToPDFTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts multiple images into one single PDF file and stores the PDF file to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can specify up to 100 images in a call to the operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateImageToPDFTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageToPDFTaskResponse
+        /// </returns>
         public CreateImageToPDFTaskResponse CreateImageToPDFTask(CreateImageToPDFTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateImageToPDFTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 图片转PDF
-         *
-         * @param request CreateImageToPDFTaskRequest
-         * @return CreateImageToPDFTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts multiple images into one single PDF file and stores the PDF file to the specified path in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can specify up to 100 images in a call to the operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateImageToPDFTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageToPDFTaskResponse
+        /// </returns>
         public async Task<CreateImageToPDFTaskResponse> CreateImageToPDFTaskAsync(CreateImageToPDFTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateImageToPDFTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建时空聚类任务
-         *
-         * @param tmpReq CreateLocationDateClusteringTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLocationDateClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a spatiotemporal clustering task to cluster photos and videos based on geolocation and time information. Spatiotemporal clustering allows you to group photos and videos taken during a travel or at different places by their spatial and temporal similarity. Based on spatiotemporal clustering, you can develop media capabilities such as media file categorization, photo collections, and image and video-based stories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After a spatiotemporal clustering task is complete, you can call the <a href="https://help.aliyun.com/document_detail/478189.html">QueryLocationDateClusters</a> operation to query the spatiotemporal clustering result.</description></item>
+        /// <item><description>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete a spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateLocationDateClusteringTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLocationDateClusteringTaskResponse
+        /// </returns>
         public CreateLocationDateClusteringTaskResponse CreateLocationDateClusteringTaskWithOptions(CreateLocationDateClusteringTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3873,13 +5899,35 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateLocationDateClusteringTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建时空聚类任务
-         *
-         * @param tmpReq CreateLocationDateClusteringTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateLocationDateClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a spatiotemporal clustering task to cluster photos and videos based on geolocation and time information. Spatiotemporal clustering allows you to group photos and videos taken during a travel or at different places by their spatial and temporal similarity. Based on spatiotemporal clustering, you can develop media capabilities such as media file categorization, photo collections, and image and video-based stories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After a spatiotemporal clustering task is complete, you can call the <a href="https://help.aliyun.com/document_detail/478189.html">QueryLocationDateClusters</a> operation to query the spatiotemporal clustering result.</description></item>
+        /// <item><description>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete a spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateLocationDateClusteringTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLocationDateClusteringTaskResponse
+        /// </returns>
         public async Task<CreateLocationDateClusteringTaskResponse> CreateLocationDateClusteringTaskWithOptionsAsync(CreateLocationDateClusteringTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -3949,37 +5997,100 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateLocationDateClusteringTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建时空聚类任务
-         *
-         * @param request CreateLocationDateClusteringTaskRequest
-         * @return CreateLocationDateClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a spatiotemporal clustering task to cluster photos and videos based on geolocation and time information. Spatiotemporal clustering allows you to group photos and videos taken during a travel or at different places by their spatial and temporal similarity. Based on spatiotemporal clustering, you can develop media capabilities such as media file categorization, photo collections, and image and video-based stories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After a spatiotemporal clustering task is complete, you can call the <a href="https://help.aliyun.com/document_detail/478189.html">QueryLocationDateClusters</a> operation to query the spatiotemporal clustering result.</description></item>
+        /// <item><description>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete a spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLocationDateClusteringTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLocationDateClusteringTaskResponse
+        /// </returns>
         public CreateLocationDateClusteringTaskResponse CreateLocationDateClusteringTask(CreateLocationDateClusteringTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateLocationDateClusteringTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建时空聚类任务
-         *
-         * @param request CreateLocationDateClusteringTaskRequest
-         * @return CreateLocationDateClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a spatiotemporal clustering task to cluster photos and videos based on geolocation and time information. Spatiotemporal clustering allows you to group photos and videos taken during a travel or at different places by their spatial and temporal similarity. Based on spatiotemporal clustering, you can develop media capabilities such as media file categorization, photo collections, and image and video-based stories.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After a spatiotemporal clustering task is complete, you can call the <a href="https://help.aliyun.com/document_detail/478189.html">QueryLocationDateClusters</a> operation to query the spatiotemporal clustering result.</description></item>
+        /// <item><description>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete a spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateLocationDateClusteringTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLocationDateClusteringTaskResponse
+        /// </returns>
         public async Task<CreateLocationDateClusteringTaskResponse> CreateLocationDateClusteringTaskAsync(CreateLocationDateClusteringTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLocationDateClusteringTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建转码服务
-         *
-         * @param tmpReq CreateMediaConvertTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMediaConvertTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of video, audio, or subtitle streams that you want to process.</description></item>
+        /// <item><description>When you use this operation to execute a media merging task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the merged media data.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.
+        /// **<hr>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaConvertTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaConvertTaskResponse
+        /// </returns>
         public CreateMediaConvertTaskResponse CreateMediaConvertTaskWithOptions(CreateMediaConvertTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4057,13 +6168,36 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateMediaConvertTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建转码服务
-         *
-         * @param tmpReq CreateMediaConvertTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMediaConvertTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of video, audio, or subtitle streams that you want to process.</description></item>
+        /// <item><description>When you use this operation to execute a media merging task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the merged media data.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.
+        /// **<hr>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaConvertTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaConvertTaskResponse
+        /// </returns>
         public async Task<CreateMediaConvertTaskResponse> CreateMediaConvertTaskWithOptionsAsync(CreateMediaConvertTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4141,37 +6275,118 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateMediaConvertTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建转码服务
-         *
-         * @param request CreateMediaConvertTaskRequest
-         * @return CreateMediaConvertTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of video, audio, or subtitle streams that you want to process.</description></item>
+        /// <item><description>When you use this operation to execute a media merging task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the merged media data.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.
+        /// **<hr>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaConvertTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaConvertTaskResponse
+        /// </returns>
         public CreateMediaConvertTaskResponse CreateMediaConvertTask(CreateMediaConvertTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateMediaConvertTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建转码服务
-         *
-         * @param request CreateMediaConvertTaskRequest
-         * @return CreateMediaConvertTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of video, audio, or subtitle streams that you want to process.</description></item>
+        /// <item><description>When you use this operation to execute a media merging task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the merged media data.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.
+        /// **<hr>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaConvertTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaConvertTaskResponse
+        /// </returns>
         public async Task<CreateMediaConvertTaskResponse> CreateMediaConvertTaskAsync(CreateMediaConvertTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMediaConvertTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建文档转换任务
-         *
-         * @param tmpReq CreateOfficeConversionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateOfficeConversionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document format conversion task to convert the format of a document stored in an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</description></item>
+        /// <item><description>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</description></item>
+        /// <item><description>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</description></item>
+        /// <item><description>PDF documents: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports the following output formats:<list type="bullet">
+        /// <item><description>Image files: png and jpg</description></item>
+        /// <item><description>Text files: txt</description></item>
+        /// <item><description>PDF files: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each input document can be up to 200 MB in size.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
+        /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateOfficeConversionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeConversionTaskResponse
+        /// </returns>
         public CreateOfficeConversionTaskResponse CreateOfficeConversionTaskWithOptions(CreateOfficeConversionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4184,6 +6399,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
             {
                 request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
@@ -4318,9 +6537,15 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["UserData"] = request.UserData;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                body["Sources"] = request.SourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4337,13 +6562,52 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateOfficeConversionTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建文档转换任务
-         *
-         * @param tmpReq CreateOfficeConversionTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateOfficeConversionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document format conversion task to convert the format of a document stored in an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</description></item>
+        /// <item><description>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</description></item>
+        /// <item><description>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</description></item>
+        /// <item><description>PDF documents: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports the following output formats:<list type="bullet">
+        /// <item><description>Image files: png and jpg</description></item>
+        /// <item><description>Text files: txt</description></item>
+        /// <item><description>PDF files: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each input document can be up to 200 MB in size.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
+        /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateOfficeConversionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeConversionTaskResponse
+        /// </returns>
         public async Task<CreateOfficeConversionTaskResponse> CreateOfficeConversionTaskWithOptionsAsync(CreateOfficeConversionTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4356,6 +6620,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
             {
                 request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Sources))
+            {
+                request.SourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Sources, "Sources", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
@@ -4490,9 +6758,15 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["UserData"] = request.UserData;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcesShrink))
+            {
+                body["Sources"] = request.SourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4509,37 +6783,134 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateOfficeConversionTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建文档转换任务
-         *
-         * @param request CreateOfficeConversionTaskRequest
-         * @return CreateOfficeConversionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document format conversion task to convert the format of a document stored in an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</description></item>
+        /// <item><description>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</description></item>
+        /// <item><description>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</description></item>
+        /// <item><description>PDF documents: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports the following output formats:<list type="bullet">
+        /// <item><description>Image files: png and jpg</description></item>
+        /// <item><description>Text files: txt</description></item>
+        /// <item><description>PDF files: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each input document can be up to 200 MB in size.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
+        /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOfficeConversionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeConversionTaskResponse
+        /// </returns>
         public CreateOfficeConversionTaskResponse CreateOfficeConversionTask(CreateOfficeConversionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateOfficeConversionTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建文档转换任务
-         *
-         * @param request CreateOfficeConversionTaskRequest
-         * @return CreateOfficeConversionTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a document format conversion task to convert the format of a document stored in an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</description></item>
+        /// <item><description>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</description></item>
+        /// <item><description>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</description></item>
+        /// <item><description>PDF documents: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports the following output formats:<list type="bullet">
+        /// <item><description>Image files: png and jpg</description></item>
+        /// <item><description>Text files: txt</description></item>
+        /// <item><description>PDF files: pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each input document can be up to 200 MB in size.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
+        /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOfficeConversionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeConversionTaskResponse
+        /// </returns>
         public async Task<CreateOfficeConversionTaskResponse> CreateOfficeConversionTaskAsync(CreateOfficeConversionTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateOfficeConversionTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建项目
-         *
-         * @param tmpReq CreateProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The name of a project must be unique in a region.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can create up to 100 projects in a region. If you want to request a quota increase to create more projects, submit a ticket or join the DingTalk chat group (ID: 88490020073).</description></item>
+        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources in the project. For more information, see the following links:<list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
         public CreateProjectResponse CreateProjectWithOptions(CreateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4613,13 +6984,36 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateProjectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建项目
-         *
-         * @param tmpReq CreateProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The name of a project must be unique in a region.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can create up to 100 projects in a region. If you want to request a quota increase to create more projects, submit a ticket or join the DingTalk chat group (ID: 88490020073).</description></item>
+        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources in the project. For more information, see the following links:<list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
         public async Task<CreateProjectResponse> CreateProjectWithOptionsAsync(CreateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4693,37 +7087,101 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建项目
-         *
-         * @param request CreateProjectRequest
-         * @return CreateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The name of a project must be unique in a region.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can create up to 100 projects in a region. If you want to request a quota increase to create more projects, submit a ticket or join the DingTalk chat group (ID: 88490020073).</description></item>
+        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources in the project. For more information, see the following links:<list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
         public CreateProjectResponse CreateProject(CreateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateProjectWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建项目
-         *
-         * @param request CreateProjectRequest
-         * @return CreateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The name of a project must be unique in a region.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can create up to 100 projects in a region. If you want to request a quota increase to create more projects, submit a ticket or join the DingTalk chat group (ID: 88490020073).</description></item>
+        /// <item><description>After you create a project, you can create other Intelligent Media Management (IMM) resources in the project. For more information, see the following links:<list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
         public async Task<CreateProjectResponse> CreateProjectAsync(CreateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateProjectWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建相似图片聚类任务
-         *
-         * @param tmpReq CreateSimilarImageClusteringTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSimilarImageClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clusters images indexed into a dataset by similarity. Image clustering is suitable for image deduplication and selection. For example, you can use image clustering to filter photos in your album that are taken in continuous shooting mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note that</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After clustering is completed, you can call the <a href="https://help.aliyun.com/document_detail/611304.html">QuerySimilarImageClusters</a> operation to query image clustering results.</description></item>
+        /// <item><description>An image cluster contains at lest two images. Removing similar images from the dataset affects existing image clusters. If image deletion reduces the number of images in a cluster to less than 2, the cluster is automatically deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSimilarImageClusteringTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimilarImageClusteringTaskResponse
+        /// </returns>
         public CreateSimilarImageClusteringTaskResponse CreateSimilarImageClusteringTaskWithOptions(CreateSimilarImageClusteringTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4777,13 +7235,35 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateSimilarImageClusteringTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建相似图片聚类任务
-         *
-         * @param tmpReq CreateSimilarImageClusteringTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateSimilarImageClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clusters images indexed into a dataset by similarity. Image clustering is suitable for image deduplication and selection. For example, you can use image clustering to filter photos in your album that are taken in continuous shooting mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note that</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After clustering is completed, you can call the <a href="https://help.aliyun.com/document_detail/611304.html">QuerySimilarImageClusters</a> operation to query image clustering results.</description></item>
+        /// <item><description>An image cluster contains at lest two images. Removing similar images from the dataset affects existing image clusters. If image deletion reduces the number of images in a cluster to less than 2, the cluster is automatically deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSimilarImageClusteringTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimilarImageClusteringTaskResponse
+        /// </returns>
         public async Task<CreateSimilarImageClusteringTaskResponse> CreateSimilarImageClusteringTaskWithOptionsAsync(CreateSimilarImageClusteringTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4837,37 +7317,94 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateSimilarImageClusteringTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建相似图片聚类任务
-         *
-         * @param request CreateSimilarImageClusteringTaskRequest
-         * @return CreateSimilarImageClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clusters images indexed into a dataset by similarity. Image clustering is suitable for image deduplication and selection. For example, you can use image clustering to filter photos in your album that are taken in continuous shooting mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note that</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After clustering is completed, you can call the <a href="https://help.aliyun.com/document_detail/611304.html">QuerySimilarImageClusters</a> operation to query image clustering results.</description></item>
+        /// <item><description>An image cluster contains at lest two images. Removing similar images from the dataset affects existing image clusters. If image deletion reduces the number of images in a cluster to less than 2, the cluster is automatically deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSimilarImageClusteringTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimilarImageClusteringTaskResponse
+        /// </returns>
         public CreateSimilarImageClusteringTaskResponse CreateSimilarImageClusteringTask(CreateSimilarImageClusteringTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSimilarImageClusteringTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建相似图片聚类任务
-         *
-         * @param request CreateSimilarImageClusteringTaskRequest
-         * @return CreateSimilarImageClusteringTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clusters images indexed into a dataset by similarity. Image clustering is suitable for image deduplication and selection. For example, you can use image clustering to filter photos in your album that are taken in continuous shooting mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note that</b> Asynchronous processing does not guarantee timely task completion.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</description></item>
+        /// <item><description>After clustering is completed, you can call the <a href="https://help.aliyun.com/document_detail/611304.html">QuerySimilarImageClusters</a> operation to query image clustering results.</description></item>
+        /// <item><description>An image cluster contains at lest two images. Removing similar images from the dataset affects existing image clusters. If image deletion reduces the number of images in a cluster to less than 2, the cluster is automatically deleted.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSimilarImageClusteringTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSimilarImageClusteringTaskResponse
+        /// </returns>
         public async Task<CreateSimilarImageClusteringTaskResponse> CreateSimilarImageClusteringTaskAsync(CreateSimilarImageClusteringTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSimilarImageClusteringTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建一个 Story
-         *
-         * @param tmpReq CreateStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateStoryResponse
+        /// </returns>
         public CreateStoryResponse CreateStoryWithOptions(CreateStoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4979,13 +7516,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateStoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建一个 Story
-         *
-         * @param tmpReq CreateStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateStoryResponse
+        /// </returns>
         public async Task<CreateStoryResponse> CreateStoryWithOptionsAsync(CreateStoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5097,37 +7651,80 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateStoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建一个 Story
-         *
-         * @param request CreateStoryRequest
-         * @return CreateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateStoryResponse
+        /// </returns>
         public CreateStoryResponse CreateStory(CreateStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateStoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建一个 Story
-         *
-         * @param request CreateStoryRequest
-         * @return CreateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateStoryResponse
+        /// </returns>
         public async Task<CreateStoryResponse> CreateStoryAsync(CreateStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateStoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param tmpReq CreateTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a trigger. A trigger can trigger Intelligent Media Management (IMM) based on events such as events in Object Storage Service (OSS) to process files, such as images, videos, and documents based on data processing templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a trigger to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTriggerResponse
+        /// </returns>
         public CreateTriggerResponse CreateTriggerWithOptions(CreateTriggerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5193,13 +7790,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateTriggerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param tmpReq CreateTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a trigger. A trigger can trigger Intelligent Media Management (IMM) based on events such as events in Object Storage Service (OSS) to process files, such as images, videos, and documents based on data processing templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a trigger to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTriggerResponse
+        /// </returns>
         public async Task<CreateTriggerResponse> CreateTriggerWithOptionsAsync(CreateTriggerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5265,37 +7875,80 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param request CreateTriggerRequest
-         * @return CreateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a trigger. A trigger can trigger Intelligent Media Management (IMM) based on events such as events in Object Storage Service (OSS) to process files, such as images, videos, and documents based on data processing templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a trigger to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTriggerResponse
+        /// </returns>
         public CreateTriggerResponse CreateTrigger(CreateTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTriggerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建数据接入
-         *
-         * @param request CreateTriggerRequest
-         * @return CreateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a trigger. A trigger can trigger Intelligent Media Management (IMM) based on events such as events in Object Storage Service (OSS) to process files, such as images, videos, and documents based on data processing templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to create a trigger to process data in <a href="https://help.aliyun.com/document_detail/99372.html">OSS</a>, make sure that you have bound the dataset to the OSS bucket where the data is stored. For more information about how to bind a dataset to a bucket, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTriggerResponse
+        /// </returns>
         public async Task<CreateTriggerResponse> CreateTriggerAsync(CreateTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTriggerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 检测视频中的内容
-         *
-         * @param tmpReq CreateVideoLabelClassificationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVideoLabelClassificationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the scene, object, and event tag information of video content. Scene information includes categories such as natural landscapes, life scenes, and disaster scenes. Event information includes categories such as talent shows, office events, performances, and production events. Object information includes categories such as tableware, electronic products, furniture, and transportation. Video tag detection supports more than 30 tag categories and thousands of tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2747104.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>For more information about video label detection, see <a href="https://help.aliyun.com/document_detail/477189.html">Video label detection</a>.</description></item>
+        /// <item><description>This operation supports multiple video formats, such as MP4, MPEG-TS, MKV, MOV, AVI, FLV, and M3U8.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateVideoLabelClassificationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoLabelClassificationTaskResponse
+        /// </returns>
         public CreateVideoLabelClassificationTaskResponse CreateVideoLabelClassificationTaskWithOptions(CreateVideoLabelClassificationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5357,13 +8010,34 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateVideoLabelClassificationTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测视频中的内容
-         *
-         * @param tmpReq CreateVideoLabelClassificationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVideoLabelClassificationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the scene, object, and event tag information of video content. Scene information includes categories such as natural landscapes, life scenes, and disaster scenes. Event information includes categories such as talent shows, office events, performances, and production events. Object information includes categories such as tableware, electronic products, furniture, and transportation. Video tag detection supports more than 30 tag categories and thousands of tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2747104.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>For more information about video label detection, see <a href="https://help.aliyun.com/document_detail/477189.html">Video label detection</a>.</description></item>
+        /// <item><description>This operation supports multiple video formats, such as MP4, MPEG-TS, MKV, MOV, AVI, FLV, and M3U8.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateVideoLabelClassificationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoLabelClassificationTaskResponse
+        /// </returns>
         public async Task<CreateVideoLabelClassificationTaskResponse> CreateVideoLabelClassificationTaskWithOptionsAsync(CreateVideoLabelClassificationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5425,37 +8099,105 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateVideoLabelClassificationTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测视频中的内容
-         *
-         * @param request CreateVideoLabelClassificationTaskRequest
-         * @return CreateVideoLabelClassificationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the scene, object, and event tag information of video content. Scene information includes categories such as natural landscapes, life scenes, and disaster scenes. Event information includes categories such as talent shows, office events, performances, and production events. Object information includes categories such as tableware, electronic products, furniture, and transportation. Video tag detection supports more than 30 tag categories and thousands of tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2747104.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>For more information about video label detection, see <a href="https://help.aliyun.com/document_detail/477189.html">Video label detection</a>.</description></item>
+        /// <item><description>This operation supports multiple video formats, such as MP4, MPEG-TS, MKV, MOV, AVI, FLV, and M3U8.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVideoLabelClassificationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoLabelClassificationTaskResponse
+        /// </returns>
         public CreateVideoLabelClassificationTaskResponse CreateVideoLabelClassificationTask(CreateVideoLabelClassificationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVideoLabelClassificationTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 检测视频中的内容
-         *
-         * @param request CreateVideoLabelClassificationTaskRequest
-         * @return CreateVideoLabelClassificationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the scene, object, and event tag information of video content. Scene information includes categories such as natural landscapes, life scenes, and disaster scenes. Event information includes categories such as talent shows, office events, performances, and production events. Object information includes categories such as tableware, electronic products, furniture, and transportation. Video tag detection supports more than 30 tag categories and thousands of tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2747104.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.
+        /// **
+        /// <b>Note</b> Asynchronous processing does not guarantee timely task completion.</description></item>
+        /// <item><description>For more information about video label detection, see <a href="https://help.aliyun.com/document_detail/477189.html">Video label detection</a>.</description></item>
+        /// <item><description>This operation supports multiple video formats, such as MP4, MPEG-TS, MKV, MOV, AVI, FLV, and M3U8.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVideoLabelClassificationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoLabelClassificationTaskResponse
+        /// </returns>
         public async Task<CreateVideoLabelClassificationTaskResponse> CreateVideoLabelClassificationTaskAsync(CreateVideoLabelClassificationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVideoLabelClassificationTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建视频检测
-         *
-         * @param tmpReq CreateVideoModerationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVideoModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risky or non-compliant content from videos. You can use this operation in scenarios such as intelligent pornography detection, terrorist content and political bias detection, ad violation detection, and logo detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
+        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The following video frame requirements apply:<list type="bullet">
+        /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
+        /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
+        /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
+        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateVideoModerationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoModerationTaskResponse
+        /// </returns>
         public CreateVideoModerationTaskResponse CreateVideoModerationTaskWithOptions(CreateVideoModerationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5533,13 +8275,43 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateVideoModerationTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建视频检测
-         *
-         * @param tmpReq CreateVideoModerationTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateVideoModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risky or non-compliant content from videos. You can use this operation in scenarios such as intelligent pornography detection, terrorist content and political bias detection, ad violation detection, and logo detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
+        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The following video frame requirements apply:<list type="bullet">
+        /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
+        /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
+        /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
+        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateVideoModerationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoModerationTaskResponse
+        /// </returns>
         public async Task<CreateVideoModerationTaskResponse> CreateVideoModerationTaskWithOptionsAsync(CreateVideoModerationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5617,37 +8389,109 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<CreateVideoModerationTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建视频检测
-         *
-         * @param request CreateVideoModerationTaskRequest
-         * @return CreateVideoModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risky or non-compliant content from videos. You can use this operation in scenarios such as intelligent pornography detection, terrorist content and political bias detection, ad violation detection, and logo detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
+        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The following video frame requirements apply:<list type="bullet">
+        /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
+        /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
+        /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
+        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVideoModerationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoModerationTaskResponse
+        /// </returns>
         public CreateVideoModerationTaskResponse CreateVideoModerationTask(CreateVideoModerationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateVideoModerationTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建视频检测
-         *
-         * @param request CreateVideoModerationTaskRequest
-         * @return CreateVideoModerationTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risky or non-compliant content from videos. You can use this operation in scenarios such as intelligent pornography detection, terrorist content and political bias detection, ad violation detection, and logo detection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
+        /// <item><description>pass: No non-compliant content is found.</description></item>
+        /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
+        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The following video frame requirements apply:<list type="bullet">
+        /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
+        /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
+        /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
+        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVideoModerationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoModerationTaskResponse
+        /// </returns>
         public async Task<CreateVideoModerationTaskResponse> CreateVideoModerationTaskAsync(CreateVideoModerationTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVideoModerationTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can delete only a batch processing task that is in one of the following states: Ready, Failed, Suspended, and Succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a batch processing task, you can call the <a href="https://help.aliyun.com/document_detail/479922.html">GetBatch</a> operation to query the task status. This ensures a successful deletion.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBatchResponse
+        /// </returns>
         public DeleteBatchResponse DeleteBatchWithOptions(DeleteBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5679,13 +8523,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can delete only a batch processing task that is in one of the following states: Ready, Failed, Suspended, and Succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a batch processing task, you can call the <a href="https://help.aliyun.com/document_detail/479922.html">GetBatch</a> operation to query the task status. This ensures a successful deletion.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBatchResponse
+        /// </returns>
         public async Task<DeleteBatchResponse> DeleteBatchWithOptionsAsync(DeleteBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5717,37 +8577,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteBatchRequest
-         * @return DeleteBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can delete only a batch processing task that is in one of the following states: Ready, Failed, Suspended, and Succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a batch processing task, you can call the <a href="https://help.aliyun.com/document_detail/479922.html">GetBatch</a> operation to query the task status. This ensures a successful deletion.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBatchResponse
+        /// </returns>
         public DeleteBatchResponse DeleteBatch(DeleteBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteBatchRequest
-         * @return DeleteBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can delete only a batch processing task that is in one of the following states: Ready, Failed, Suspended, and Succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a batch processing task, you can call the <a href="https://help.aliyun.com/document_detail/479922.html">GetBatch</a> operation to query the task status. This ensures a successful deletion.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBatchResponse
+        /// </returns>
         public async Task<DeleteBatchResponse> DeleteBatchAsync(DeleteBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除绑定
-         *
-         * @param request DeleteBindingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the binding between a dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>If you delete a binding, new changes in the OSS bucket are not synchronized to the dataset. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBindingResponse
+        /// </returns>
         public DeleteBindingResponse DeleteBindingWithOptions(DeleteBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5783,13 +8687,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteBindingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除绑定
-         *
-         * @param request DeleteBindingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the binding between a dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>If you delete a binding, new changes in the OSS bucket are not synchronized to the dataset. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBindingResponse
+        /// </returns>
         public async Task<DeleteBindingResponse> DeleteBindingWithOptionsAsync(DeleteBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5825,37 +8745,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteBindingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除绑定
-         *
-         * @param request DeleteBindingRequest
-         * @return DeleteBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the binding between a dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>If you delete a binding, new changes in the OSS bucket are not synchronized to the dataset. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBindingResponse
+        /// </returns>
         public DeleteBindingResponse DeleteBinding(DeleteBindingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteBindingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除绑定
-         *
-         * @param request DeleteBindingRequest
-         * @return DeleteBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the binding between a dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>If you delete a binding, new changes in the OSS bucket are not synchronized to the dataset. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBindingResponse
+        /// </returns>
         public async Task<DeleteBindingResponse> DeleteBindingAsync(DeleteBindingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBindingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除媒体集
-         *
-         * @param request DeleteDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a dataset, make sure that you have deleted all indexes in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you <a href="https://help.aliyun.com/document_detail/478160.html">delete a dataset</a>, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <c>Cleanup</c> parameter to <c>true</c>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/478166.html">Create a metadata index</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetResponse
+        /// </returns>
         public DeleteDatasetResponse DeleteDatasetWithOptions(DeleteDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5887,13 +8851,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteDatasetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除媒体集
-         *
-         * @param request DeleteDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a dataset, make sure that you have deleted all indexes in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you <a href="https://help.aliyun.com/document_detail/478160.html">delete a dataset</a>, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <c>Cleanup</c> parameter to <c>true</c>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/478166.html">Create a metadata index</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetResponse
+        /// </returns>
         public async Task<DeleteDatasetResponse> DeleteDatasetWithOptionsAsync(DeleteDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5925,37 +8905,85 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteDatasetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除媒体集
-         *
-         * @param request DeleteDatasetRequest
-         * @return DeleteDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a dataset, make sure that you have deleted all indexes in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you <a href="https://help.aliyun.com/document_detail/478160.html">delete a dataset</a>, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <c>Cleanup</c> parameter to <c>true</c>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/478166.html">Create a metadata index</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetResponse
+        /// </returns>
         public DeleteDatasetResponse DeleteDataset(DeleteDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDatasetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除媒体集
-         *
-         * @param request DeleteDatasetRequest
-         * @return DeleteDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a dataset, make sure that you have deleted all indexes in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you <a href="https://help.aliyun.com/document_detail/478160.html">delete a dataset</a>, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <c>Cleanup</c> parameter to <c>true</c>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/478166.html">Create a metadata index</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetResponse
+        /// </returns>
         public async Task<DeleteDatasetResponse> DeleteDatasetAsync(DeleteDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDatasetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除文件元信息
-         *
-         * @param request DeleteFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the metadata of a file from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>The objects stored in Object Storage Service (OSS) or Photo and Drive Service are <b>not</b> deleted if you delete metadata from a dataset. If you want to delete the file, call the corresponding operations of OSS and Photo and Drive Service.</description></item>
+        /// <item><description>When you delete file metadata, the corresponding face clustering group information and story (if any) are changed, but the spatiotemporal clustering is not changed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileMetaResponse
+        /// </returns>
         public DeleteFileMetaResponse DeleteFileMetaWithOptions(DeleteFileMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5991,13 +9019,33 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除文件元信息
-         *
-         * @param request DeleteFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the metadata of a file from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>The objects stored in Object Storage Service (OSS) or Photo and Drive Service are <b>not</b> deleted if you delete metadata from a dataset. If you want to delete the file, call the corresponding operations of OSS and Photo and Drive Service.</description></item>
+        /// <item><description>When you delete file metadata, the corresponding face clustering group information and story (if any) are changed, but the spatiotemporal clustering is not changed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileMetaResponse
+        /// </returns>
         public async Task<DeleteFileMetaResponse> DeleteFileMetaWithOptionsAsync(DeleteFileMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6033,37 +9081,90 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除文件元信息
-         *
-         * @param request DeleteFileMetaRequest
-         * @return DeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the metadata of a file from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>The objects stored in Object Storage Service (OSS) or Photo and Drive Service are <b>not</b> deleted if you delete metadata from a dataset. If you want to delete the file, call the corresponding operations of OSS and Photo and Drive Service.</description></item>
+        /// <item><description>When you delete file metadata, the corresponding face clustering group information and story (if any) are changed, but the spatiotemporal clustering is not changed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileMetaResponse
+        /// </returns>
         public DeleteFileMetaResponse DeleteFileMeta(DeleteFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除文件元信息
-         *
-         * @param request DeleteFileMetaRequest
-         * @return DeleteFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes the metadata of a file from a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>The objects stored in Object Storage Service (OSS) or Photo and Drive Service are <b>not</b> deleted if you delete metadata from a dataset. If you want to delete the file, call the corresponding operations of OSS and Photo and Drive Service.</description></item>
+        /// <item><description>When you delete file metadata, the corresponding face clustering group information and story (if any) are changed, but the spatiotemporal clustering is not changed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileMetaResponse
+        /// </returns>
         public async Task<DeleteFileMetaResponse> DeleteFileMetaAsync(DeleteFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除时空聚类
-         *
-         * @param request DeleteLocationDateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// <item><description>A successful deletion is returned regardless of whether a spatiotemporal clustering group ID exists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLocationDateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLocationDateClusterResponse
+        /// </returns>
         public DeleteLocationDateClusterResponse DeleteLocationDateClusterWithOptions(DeleteLocationDateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6101,13 +9202,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteLocationDateClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除时空聚类
-         *
-         * @param request DeleteLocationDateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// <item><description>A successful deletion is returned regardless of whether a spatiotemporal clustering group ID exists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLocationDateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLocationDateClusterResponse
+        /// </returns>
         public async Task<DeleteLocationDateClusterResponse> DeleteLocationDateClusterWithOptionsAsync(DeleteLocationDateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6145,37 +9263,83 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteLocationDateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除时空聚类
-         *
-         * @param request DeleteLocationDateClusterRequest
-         * @return DeleteLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// <item><description>A successful deletion is returned regardless of whether a spatiotemporal clustering group ID exists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLocationDateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLocationDateClusterResponse
+        /// </returns>
         public DeleteLocationDateClusterResponse DeleteLocationDateCluster(DeleteLocationDateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteLocationDateClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除时空聚类
-         *
-         * @param request DeleteLocationDateClusterRequest
-         * @return DeleteLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// <item><description>A successful deletion is returned regardless of whether a spatiotemporal clustering group ID exists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLocationDateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLocationDateClusterResponse
+        /// </returns>
         public async Task<DeleteLocationDateClusterResponse> DeleteLocationDateClusterAsync(DeleteLocationDateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteLocationDateClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除项目
-         *
-         * @param request DeleteProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>After a project is deleted, all resources used by the project are recycled, and all related data is lost and cannot be recovered.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
         public DeleteProjectResponse DeleteProjectWithOptions(DeleteProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6203,13 +9367,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteProjectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除项目
-         *
-         * @param request DeleteProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>After a project is deleted, all resources used by the project are recycled, and all related data is lost and cannot be recovered.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
         public async Task<DeleteProjectResponse> DeleteProjectWithOptionsAsync(DeleteProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6237,37 +9417,82 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除项目
-         *
-         * @param request DeleteProjectRequest
-         * @return DeleteProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>After a project is deleted, all resources used by the project are recycled, and all related data is lost and cannot be recovered.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
         public DeleteProjectResponse DeleteProject(DeleteProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteProjectWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除项目
-         *
-         * @param request DeleteProjectRequest
-         * @return DeleteProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>After a project is deleted, all resources used by the project are recycled, and all related data is lost and cannot be recovered.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
         public async Task<DeleteProjectResponse> DeleteProjectAsync(DeleteProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteProjectWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除一个 Story
-         *
-         * @param request DeleteStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStoryResponse
+        /// </returns>
         public DeleteStoryResponse DeleteStoryWithOptions(DeleteStoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6303,13 +9528,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteStoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除一个 Story
-         *
-         * @param request DeleteStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStoryResponse
+        /// </returns>
         public async Task<DeleteStoryResponse> DeleteStoryWithOptionsAsync(DeleteStoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6345,37 +9587,80 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteStoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除一个 Story
-         *
-         * @param request DeleteStoryRequest
-         * @return DeleteStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStoryResponse
+        /// </returns>
         public DeleteStoryResponse DeleteStory(DeleteStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteStoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除一个 Story
-         *
-         * @param request DeleteStoryRequest
-         * @return DeleteStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStoryResponse
+        /// </returns>
         public async Task<DeleteStoryResponse> DeleteStoryAsync(DeleteStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteStoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete a trigger only if the trigger is in one of the following states: Ready, Failed, Suspended, and Succeeded. You cannot delete a trigger that is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTriggerResponse
+        /// </returns>
         public DeleteTriggerResponse DeleteTriggerWithOptions(DeleteTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6407,13 +9692,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteTriggerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete a trigger only if the trigger is in one of the following states: Ready, Failed, Suspended, and Succeeded. You cannot delete a trigger that is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTriggerResponse
+        /// </returns>
         public async Task<DeleteTriggerResponse> DeleteTriggerWithOptionsAsync(DeleteTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6445,37 +9743,75 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DeleteTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteTriggerRequest
-         * @return DeleteTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete a trigger only if the trigger is in one of the following states: Ready, Failed, Suspended, and Succeeded. You cannot delete a trigger that is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTriggerResponse
+        /// </returns>
         public DeleteTriggerResponse DeleteTrigger(DeleteTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTriggerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除数据接入实例
-         *
-         * @param request DeleteTriggerRequest
-         * @return DeleteTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete a trigger only if the trigger is in one of the following states: Ready, Failed, Suspended, and Succeeded. You cannot delete a trigger that is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTriggerResponse
+        /// </returns>
         public async Task<DeleteTriggerResponse> DeleteTriggerAsync(DeleteTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTriggerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 解绑ossbucket
-         *
-         * @param request DetachOSSBucketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds an Object Storage Service (OSS) bucket from the corresponding project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that the project is bound to a bucket. For more information, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachOSSBucketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachOSSBucketResponse
+        /// </returns>
         public DetachOSSBucketResponse DetachOSSBucketWithOptions(DetachOSSBucketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6503,13 +9839,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetachOSSBucketResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 解绑ossbucket
-         *
-         * @param request DetachOSSBucketRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds an Object Storage Service (OSS) bucket from the corresponding project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that the project is bound to a bucket. For more information, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachOSSBucketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachOSSBucketResponse
+        /// </returns>
         public async Task<DetachOSSBucketResponse> DetachOSSBucketWithOptionsAsync(DetachOSSBucketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6537,37 +9889,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetachOSSBucketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 解绑ossbucket
-         *
-         * @param request DetachOSSBucketRequest
-         * @return DetachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds an Object Storage Service (OSS) bucket from the corresponding project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that the project is bound to a bucket. For more information, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachOSSBucketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachOSSBucketResponse
+        /// </returns>
         public DetachOSSBucketResponse DetachOSSBucket(DetachOSSBucketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachOSSBucketWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 解绑ossbucket
-         *
-         * @param request DetachOSSBucketRequest
-         * @return DetachOSSBucketResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds an Object Storage Service (OSS) bucket from the corresponding project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that the project is bound to a bucket. For more information, see <a href="https://help.aliyun.com/document_detail/478206.html">AttachOSSBucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachOSSBucketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachOSSBucketResponse
+        /// </returns>
         public async Task<DetachOSSBucketResponse> DetachOSSBucketAsync(DetachOSSBucketRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachOSSBucketWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 人体检测算子
-         *
-         * @param tmpReq DetectImageBodiesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageBodiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects human body information, such as the confidence level and body bounding box, in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageBodiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageBodiesResponse
+        /// </returns>
         public DetectImageBodiesResponse DetectImageBodiesWithOptions(DetectImageBodiesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6613,13 +10009,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageBodiesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 人体检测算子
-         *
-         * @param tmpReq DetectImageBodiesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageBodiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects human body information, such as the confidence level and body bounding box, in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageBodiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageBodiesResponse
+        /// </returns>
         public async Task<DetectImageBodiesResponse> DetectImageBodiesWithOptionsAsync(DetectImageBodiesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6665,37 +10077,78 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageBodiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 人体检测算子
-         *
-         * @param request DetectImageBodiesRequest
-         * @return DetectImageBodiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects human body information, such as the confidence level and body bounding box, in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageBodiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageBodiesResponse
+        /// </returns>
         public DetectImageBodiesResponse DetectImageBodies(DetectImageBodiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageBodiesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 人体检测算子
-         *
-         * @param request DetectImageBodiesRequest
-         * @return DetectImageBodiesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects human body information, such as the confidence level and body bounding box, in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageBodiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageBodiesResponse
+        /// </returns>
         public async Task<DetectImageBodiesResponse> DetectImageBodiesAsync(DetectImageBodiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageBodiesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 检测图片中车辆信息
-         *
-         * @param tmpReq DetectImageCarsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageCarsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the outline data, attributes, and license plate information of vehicles in an image. The vehicle attributes include the vehicle color (CarColor) and vehicle type (CarType). The license plate information includes the recognition content (Content) and plate frame (Boundary).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageCarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCarsResponse
+        /// </returns>
         public DetectImageCarsResponse DetectImageCarsWithOptions(DetectImageCarsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6737,13 +10190,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageCarsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测图片中车辆信息
-         *
-         * @param tmpReq DetectImageCarsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageCarsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the outline data, attributes, and license plate information of vehicles in an image. The vehicle attributes include the vehicle color (CarColor) and vehicle type (CarType). The license plate information includes the recognition content (Content) and plate frame (Boundary).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageCarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCarsResponse
+        /// </returns>
         public async Task<DetectImageCarsResponse> DetectImageCarsWithOptionsAsync(DetectImageCarsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6785,37 +10251,72 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageCarsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测图片中车辆信息
-         *
-         * @param request DetectImageCarsRequest
-         * @return DetectImageCarsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the outline data, attributes, and license plate information of vehicles in an image. The vehicle attributes include the vehicle color (CarColor) and vehicle type (CarType). The license plate information includes the recognition content (Content) and plate frame (Boundary).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageCarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCarsResponse
+        /// </returns>
         public DetectImageCarsResponse DetectImageCars(DetectImageCarsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageCarsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 检测图片中车辆信息
-         *
-         * @param request DetectImageCarsRequest
-         * @return DetectImageCarsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the outline data, attributes, and license plate information of vehicles in an image. The vehicle attributes include the vehicle color (CarColor) and vehicle type (CarType). The license plate information includes the recognition content (Content) and plate frame (Boundary).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageCarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCarsResponse
+        /// </returns>
         public async Task<DetectImageCarsResponse> DetectImageCarsAsync(DetectImageCarsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageCarsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取图片二维码检测
-         *
-         * @param tmpReq DetectImageCodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageCodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects barcodes and QR codes in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageCodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCodesResponse
+        /// </returns>
         public DetectImageCodesResponse DetectImageCodesWithOptions(DetectImageCodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6857,13 +10358,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageCodesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片二维码检测
-         *
-         * @param tmpReq DetectImageCodesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageCodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects barcodes and QR codes in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageCodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCodesResponse
+        /// </returns>
         public async Task<DetectImageCodesResponse> DetectImageCodesWithOptionsAsync(DetectImageCodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6905,37 +10419,67 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageCodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片二维码检测
-         *
-         * @param request DetectImageCodesRequest
-         * @return DetectImageCodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects barcodes and QR codes in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageCodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCodesResponse
+        /// </returns>
         public DetectImageCodesResponse DetectImageCodes(DetectImageCodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageCodesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取图片二维码检测
-         *
-         * @param request DetectImageCodesRequest
-         * @return DetectImageCodesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects barcodes and QR codes in an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageCodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCodesResponse
+        /// </returns>
         public async Task<DetectImageCodesResponse> DetectImageCodesAsync(DetectImageCodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageCodesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取图片裁剪信息
-         *
-         * @param tmpReq DetectImageCroppingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageCroppingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the cropping area that produces the optimal visual effect based on a given image ratio by using AI model capabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageCroppingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCroppingResponse
+        /// </returns>
         public DetectImageCroppingResponse DetectImageCroppingWithOptions(DetectImageCroppingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6981,13 +10525,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageCroppingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片裁剪信息
-         *
-         * @param tmpReq DetectImageCroppingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageCroppingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the cropping area that produces the optimal visual effect based on a given image ratio by using AI model capabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageCroppingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCroppingResponse
+        /// </returns>
         public async Task<DetectImageCroppingResponse> DetectImageCroppingWithOptionsAsync(DetectImageCroppingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7033,37 +10585,65 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageCroppingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片裁剪信息
-         *
-         * @param request DetectImageCroppingRequest
-         * @return DetectImageCroppingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the cropping area that produces the optimal visual effect based on a given image ratio by using AI model capabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectImageCroppingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCroppingResponse
+        /// </returns>
         public DetectImageCroppingResponse DetectImageCropping(DetectImageCroppingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageCroppingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取图片裁剪信息
-         *
-         * @param request DetectImageCroppingRequest
-         * @return DetectImageCroppingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects the cropping area that produces the optimal visual effect based on a given image ratio by using AI model capabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectImageCroppingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageCroppingResponse
+        /// </returns>
         public async Task<DetectImageCroppingResponse> DetectImageCroppingAsync(DetectImageCroppingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageCroppingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取图片人脸信息
-         *
-         * @param tmpReq DetectImageFacesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects faces from an image, including face boundary information, attributes, and quality. The boundary information includes the distance from the y-coordinate of the vertex to the top edge (Top), distance from the x-coordinate of the vertex to the left edge (Left), height (Height), and width (Width). Face attributes include the age (Age), age standard deviation (AgeSD), gender (Gender), emotion (Emotion), mouth opening (Mouth), beard (Beard), hat wearing (Hat), mask wearing (Mask), glasses wearing (Glasses), head orientation (HeadPose), attractiveness (Attractive), and confidence levels for preceding attributes. Quality information includes the face quality score (FaceQuality) and face resolution (Sharpness).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageFacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageFacesResponse
+        /// </returns>
         public DetectImageFacesResponse DetectImageFacesWithOptions(DetectImageFacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7105,13 +10685,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageFacesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片人脸信息
-         *
-         * @param tmpReq DetectImageFacesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects faces from an image, including face boundary information, attributes, and quality. The boundary information includes the distance from the y-coordinate of the vertex to the top edge (Top), distance from the x-coordinate of the vertex to the left edge (Left), height (Height), and width (Width). Face attributes include the age (Age), age standard deviation (AgeSD), gender (Gender), emotion (Emotion), mouth opening (Mouth), beard (Beard), hat wearing (Hat), mask wearing (Mask), glasses wearing (Glasses), head orientation (HeadPose), attractiveness (Attractive), and confidence levels for preceding attributes. Quality information includes the face quality score (FaceQuality) and face resolution (Sharpness).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageFacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageFacesResponse
+        /// </returns>
         public async Task<DetectImageFacesResponse> DetectImageFacesWithOptionsAsync(DetectImageFacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7153,37 +10749,83 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageFacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片人脸信息
-         *
-         * @param request DetectImageFacesRequest
-         * @return DetectImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects faces from an image, including face boundary information, attributes, and quality. The boundary information includes the distance from the y-coordinate of the vertex to the top edge (Top), distance from the x-coordinate of the vertex to the left edge (Left), height (Height), and width (Width). Face attributes include the age (Age), age standard deviation (AgeSD), gender (Gender), emotion (Emotion), mouth opening (Mouth), beard (Beard), hat wearing (Hat), mask wearing (Mask), glasses wearing (Glasses), head orientation (HeadPose), attractiveness (Attractive), and confidence levels for preceding attributes. Quality information includes the face quality score (FaceQuality) and face resolution (Sharpness).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageFacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageFacesResponse
+        /// </returns>
         public DetectImageFacesResponse DetectImageFaces(DetectImageFacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageFacesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取图片人脸信息
-         *
-         * @param request DetectImageFacesRequest
-         * @return DetectImageFacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects faces from an image, including face boundary information, attributes, and quality. The boundary information includes the distance from the y-coordinate of the vertex to the top edge (Top), distance from the x-coordinate of the vertex to the left edge (Left), height (Height), and width (Width). Face attributes include the age (Age), age standard deviation (AgeSD), gender (Gender), emotion (Emotion), mouth opening (Mouth), beard (Beard), hat wearing (Hat), mask wearing (Mask), glasses wearing (Glasses), head orientation (HeadPose), attractiveness (Attractive), and confidence levels for preceding attributes. Quality information includes the face quality score (FaceQuality) and face resolution (Sharpness).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageFacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageFacesResponse
+        /// </returns>
         public async Task<DetectImageFacesResponse> DetectImageFacesAsync(DetectImageFacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageFacesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 检测图像中的内容
-         *
-         * @param tmpReq DetectImageLabelsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageLabelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects scene, object, and event information in an image. Scene information includes natural landscapes, daily life, and disasters. Event information includes talent shows, office events, performances, and production events. Object information includes tableware, electronics, furniture, and transportation. The DetectImageLabels operation supports more than 30 different categories and thousands of labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For more information about the features of this operation, see <a href="https://help.aliyun.com/document_detail/477179.html">Image label detection</a>.</description></item>
+        /// <item><description>For more information about the input images supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageLabelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageLabelsResponse
+        /// </returns>
         public DetectImageLabelsResponse DetectImageLabelsWithOptions(DetectImageLabelsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7229,13 +10871,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageLabelsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测图像中的内容
-         *
-         * @param tmpReq DetectImageLabelsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageLabelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects scene, object, and event information in an image. Scene information includes natural landscapes, daily life, and disasters. Event information includes talent shows, office events, performances, and production events. Object information includes tableware, electronics, furniture, and transportation. The DetectImageLabels operation supports more than 30 different categories and thousands of labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For more information about the features of this operation, see <a href="https://help.aliyun.com/document_detail/477179.html">Image label detection</a>.</description></item>
+        /// <item><description>For more information about the input images supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageLabelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageLabelsResponse
+        /// </returns>
         public async Task<DetectImageLabelsResponse> DetectImageLabelsWithOptionsAsync(DetectImageLabelsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7281,37 +10941,86 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageLabelsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测图像中的内容
-         *
-         * @param request DetectImageLabelsRequest
-         * @return DetectImageLabelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects scene, object, and event information in an image. Scene information includes natural landscapes, daily life, and disasters. Event information includes talent shows, office events, performances, and production events. Object information includes tableware, electronics, furniture, and transportation. The DetectImageLabels operation supports more than 30 different categories and thousands of labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For more information about the features of this operation, see <a href="https://help.aliyun.com/document_detail/477179.html">Image label detection</a>.</description></item>
+        /// <item><description>For more information about the input images supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageLabelsResponse
+        /// </returns>
         public DetectImageLabelsResponse DetectImageLabels(DetectImageLabelsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageLabelsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 检测图像中的内容
-         *
-         * @param request DetectImageLabelsRequest
-         * @return DetectImageLabelsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects scene, object, and event information in an image. Scene information includes natural landscapes, daily life, and disasters. Event information includes talent shows, office events, performances, and production events. Object information includes tableware, electronics, furniture, and transportation. The DetectImageLabels operation supports more than 30 different categories and thousands of labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>For more information about the features of this operation, see <a href="https://help.aliyun.com/document_detail/477179.html">Image label detection</a>.</description></item>
+        /// <item><description>For more information about the input images supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageLabelsResponse
+        /// </returns>
         public async Task<DetectImageLabelsResponse> DetectImageLabelsAsync(DetectImageLabelsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageLabelsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取图片打分
-         *
-         * @param tmpReq DetectImageScoreRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageScoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calculates the aesthetics quality score of an image based on metrics such as the composition, brightness, contrast, color, and resolution. The operation returns a score within the range from 0 to 1. A higher score indicates better image quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageScoreRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageScoreResponse
+        /// </returns>
         public DetectImageScoreResponse DetectImageScoreWithOptions(DetectImageScoreRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7353,13 +11062,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageScoreResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片打分
-         *
-         * @param tmpReq DetectImageScoreRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageScoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calculates the aesthetics quality score of an image based on metrics such as the composition, brightness, contrast, color, and resolution. The operation returns a score within the range from 0 to 1. A higher score indicates better image quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageScoreRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageScoreResponse
+        /// </returns>
         public async Task<DetectImageScoreResponse> DetectImageScoreWithOptionsAsync(DetectImageScoreRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7401,37 +11127,86 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageScoreResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片打分
-         *
-         * @param request DetectImageScoreRequest
-         * @return DetectImageScoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calculates the aesthetics quality score of an image based on metrics such as the composition, brightness, contrast, color, and resolution. The operation returns a score within the range from 0 to 1. A higher score indicates better image quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageScoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageScoreResponse
+        /// </returns>
         public DetectImageScoreResponse DetectImageScore(DetectImageScoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageScoreWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取图片打分
-         *
-         * @param request DetectImageScoreRequest
-         * @return DetectImageScoreResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calculates the aesthetics quality score of an image based on metrics such as the composition, brightness, contrast, color, and resolution. The operation returns a score within the range from 0 to 1. A higher score indicates better image quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageScoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageScoreResponse
+        /// </returns>
         public async Task<DetectImageScoreResponse> DetectImageScoreAsync(DetectImageScoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageScoreWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 进行图片光学字符检测
-         *
-         * @param tmpReq DetectImageTextsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageTextsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recognizes and extracts text content from an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The size of the image cannot exceed 20 MB.</description></item>
+        /// <item><description>The shortest side of the image is not less than 20 px, and the longest side is not more than 30,000 px.</description></item>
+        /// <item><description>The aspect ratio of the image is less than 1:2.</description></item>
+        /// <item><description>We recommend that you do not use an image that is smaller than 15 px × 15 px in size. Otherwise, the recognition rate is low.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageTextsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageTextsResponse
+        /// </returns>
         public DetectImageTextsResponse DetectImageTextsWithOptions(DetectImageTextsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7473,13 +11248,32 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageTextsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 进行图片光学字符检测
-         *
-         * @param tmpReq DetectImageTextsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectImageTextsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recognizes and extracts text content from an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The size of the image cannot exceed 20 MB.</description></item>
+        /// <item><description>The shortest side of the image is not less than 20 px, and the longest side is not more than 30,000 px.</description></item>
+        /// <item><description>The aspect ratio of the image is less than 1:2.</description></item>
+        /// <item><description>We recommend that you do not use an image that is smaller than 15 px × 15 px in size. Otherwise, the recognition rate is low.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectImageTextsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageTextsResponse
+        /// </returns>
         public async Task<DetectImageTextsResponse> DetectImageTextsWithOptionsAsync(DetectImageTextsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7521,37 +11315,87 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectImageTextsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 进行图片光学字符检测
-         *
-         * @param request DetectImageTextsRequest
-         * @return DetectImageTextsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recognizes and extracts text content from an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The size of the image cannot exceed 20 MB.</description></item>
+        /// <item><description>The shortest side of the image is not less than 20 px, and the longest side is not more than 30,000 px.</description></item>
+        /// <item><description>The aspect ratio of the image is less than 1:2.</description></item>
+        /// <item><description>We recommend that you do not use an image that is smaller than 15 px × 15 px in size. Otherwise, the recognition rate is low.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageTextsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageTextsResponse
+        /// </returns>
         public DetectImageTextsResponse DetectImageTexts(DetectImageTextsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectImageTextsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 进行图片光学字符检测
-         *
-         * @param request DetectImageTextsRequest
-         * @return DetectImageTextsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recognizes and extracts text content from an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The size of the image cannot exceed 20 MB.</description></item>
+        /// <item><description>The shortest side of the image is not less than 20 px, and the longest side is not more than 30,000 px.</description></item>
+        /// <item><description>The aspect ratio of the image is less than 1:2.</description></item>
+        /// <item><description>We recommend that you do not use an image that is smaller than 15 px × 15 px in size. Otherwise, the recognition rate is low.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectImageTextsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectImageTextsResponse
+        /// </returns>
         public async Task<DetectImageTextsResponse> DetectImageTextsAsync(DetectImageTextsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectImageTextsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取媒体文件信息
-         *
-         * @param tmpReq DetectMediaMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectMediaMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectMediaMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectMediaMetaResponse
+        /// </returns>
         public DetectMediaMetaResponse DetectMediaMetaWithOptions(DetectMediaMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7593,13 +11437,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectMediaMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取媒体文件信息
-         *
-         * @param tmpReq DetectMediaMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectMediaMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetectMediaMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectMediaMetaResponse
+        /// </returns>
         public async Task<DetectMediaMetaResponse> DetectMediaMetaWithOptionsAsync(DetectMediaMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7641,37 +11501,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectMediaMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取媒体文件信息
-         *
-         * @param request DetectMediaMetaRequest
-         * @return DetectMediaMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectMediaMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectMediaMetaResponse
+        /// </returns>
         public DetectMediaMetaResponse DetectMediaMeta(DetectMediaMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectMediaMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取媒体文件信息
-         *
-         * @param request DetectMediaMetaRequest
-         * @return DetectMediaMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries media metadata, including the media format and stream information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectMediaMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectMediaMetaResponse
+        /// </returns>
         public async Task<DetectMediaMetaResponse> DetectMediaMetaAsync(DetectMediaMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectMediaMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 检测文本
-         *
-         * @param request DetectTextAnomalyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectTextAnomalyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects whether specified text contains anomalies, such as pornography, advertisements, excessive junk content, politically sensitive content, and abuse.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <remarks>
+        /// <para> The text compliance detection feature only supports Chinese characters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectTextAnomalyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTextAnomalyResponse
+        /// </returns>
         public DetectTextAnomalyResponse DetectTextAnomalyWithOptions(DetectTextAnomalyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7703,13 +11607,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectTextAnomalyResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测文本
-         *
-         * @param request DetectTextAnomalyRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DetectTextAnomalyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects whether specified text contains anomalies, such as pornography, advertisements, excessive junk content, politically sensitive content, and abuse.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <remarks>
+        /// <para> The text compliance detection feature only supports Chinese characters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectTextAnomalyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTextAnomalyResponse
+        /// </returns>
         public async Task<DetectTextAnomalyResponse> DetectTextAnomalyWithOptionsAsync(DetectTextAnomalyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7741,37 +11661,85 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<DetectTextAnomalyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 检测文本
-         *
-         * @param request DetectTextAnomalyRequest
-         * @return DetectTextAnomalyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects whether specified text contains anomalies, such as pornography, advertisements, excessive junk content, politically sensitive content, and abuse.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <remarks>
+        /// <para> The text compliance detection feature only supports Chinese characters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectTextAnomalyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTextAnomalyResponse
+        /// </returns>
         public DetectTextAnomalyResponse DetectTextAnomaly(DetectTextAnomalyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetectTextAnomalyWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 检测文本
-         *
-         * @param request DetectTextAnomalyRequest
-         * @return DetectTextAnomalyResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects whether specified text contains anomalies, such as pornography, advertisements, excessive junk content, politically sensitive content, and abuse.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <remarks>
+        /// <para> The text compliance detection feature only supports Chinese characters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetectTextAnomalyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTextAnomalyResponse
+        /// </returns>
         public async Task<DetectTextAnomalyResponse> DetectTextAnomalyAsync(DetectTextAnomalyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetectTextAnomalyWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 嵌入图片盲水印算子
-         *
-         * @param request EncodeBlindWatermarkRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EncodeBlindWatermarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Embeds specific textual information into an image as watermarks. These watermarks are visually imperceptible and do not affect the aesthetics of the image or the integrity of the original data. The watermarks can be extracted by using the CreateDecodeBlindWatermarkTask operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>You can embed only text as blind watermarks to an image.</description></item>
+        /// <item><description>The format of the output image is the same as that of the input image.</description></item>
+        /// <item><description>The watermarks can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>Pure black and white images and images with low resolution (roughly less than 200 px × 200 px,) are not supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EncodeBlindWatermarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncodeBlindWatermarkResponse
+        /// </returns>
         public EncodeBlindWatermarkResponse EncodeBlindWatermarkWithOptions(EncodeBlindWatermarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7819,13 +11787,33 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<EncodeBlindWatermarkResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 嵌入图片盲水印算子
-         *
-         * @param request EncodeBlindWatermarkRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EncodeBlindWatermarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Embeds specific textual information into an image as watermarks. These watermarks are visually imperceptible and do not affect the aesthetics of the image or the integrity of the original data. The watermarks can be extracted by using the CreateDecodeBlindWatermarkTask operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>You can embed only text as blind watermarks to an image.</description></item>
+        /// <item><description>The format of the output image is the same as that of the input image.</description></item>
+        /// <item><description>The watermarks can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>Pure black and white images and images with low resolution (roughly less than 200 px × 200 px,) are not supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EncodeBlindWatermarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncodeBlindWatermarkResponse
+        /// </returns>
         public async Task<EncodeBlindWatermarkResponse> EncodeBlindWatermarkWithOptionsAsync(EncodeBlindWatermarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7873,37 +11861,94 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<EncodeBlindWatermarkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 嵌入图片盲水印算子
-         *
-         * @param request EncodeBlindWatermarkRequest
-         * @return EncodeBlindWatermarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Embeds specific textual information into an image as watermarks. These watermarks are visually imperceptible and do not affect the aesthetics of the image or the integrity of the original data. The watermarks can be extracted by using the CreateDecodeBlindWatermarkTask operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>You can embed only text as blind watermarks to an image.</description></item>
+        /// <item><description>The format of the output image is the same as that of the input image.</description></item>
+        /// <item><description>The watermarks can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>Pure black and white images and images with low resolution (roughly less than 200 px × 200 px,) are not supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EncodeBlindWatermarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncodeBlindWatermarkResponse
+        /// </returns>
         public EncodeBlindWatermarkResponse EncodeBlindWatermark(EncodeBlindWatermarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EncodeBlindWatermarkWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 嵌入图片盲水印算子
-         *
-         * @param request EncodeBlindWatermarkRequest
-         * @return EncodeBlindWatermarkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Embeds specific textual information into an image as watermarks. These watermarks are visually imperceptible and do not affect the aesthetics of the image or the integrity of the original data. The watermarks can be extracted by using the CreateDecodeBlindWatermarkTask operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>You can embed only text as blind watermarks to an image.</description></item>
+        /// <item><description>The format of the output image is the same as that of the input image.</description></item>
+        /// <item><description>The watermarks can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>Pure black and white images and images with low resolution (roughly less than 200 px × 200 px,) are not supported.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EncodeBlindWatermarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EncodeBlindWatermarkResponse
+        /// </returns>
         public async Task<EncodeBlindWatermarkResponse> EncodeBlindWatermarkAsync(EncodeBlindWatermarkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EncodeBlindWatermarkWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 提取文档中的文本
-         *
-         * @param tmpReq ExtractDocumentTextRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ExtractDocumentTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the text from the document body.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>The following document formats are supported: Word, Excel, PPT, PDF, and TXT.</description></item>
+        /// <item><description>The document cannot exceed 200 MB in size. The size of the extracted text cannot exceed 2 MB in size (approximately 1.2 million letters).<remarks>
+        /// <para> If the format of the document is complex or the document body is too large, a timeout error may occur. In this case, we recommend that you call the CreateOfficeConversionTask operation to convert the document to the TXT format before you call the ExtractDocumentText operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ExtractDocumentTextRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExtractDocumentTextResponse
+        /// </returns>
         public ExtractDocumentTextResponse ExtractDocumentTextWithOptions(ExtractDocumentTextRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7949,13 +11994,34 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ExtractDocumentTextResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 提取文档中的文本
-         *
-         * @param tmpReq ExtractDocumentTextRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ExtractDocumentTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the text from the document body.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>The following document formats are supported: Word, Excel, PPT, PDF, and TXT.</description></item>
+        /// <item><description>The document cannot exceed 200 MB in size. The size of the extracted text cannot exceed 2 MB in size (approximately 1.2 million letters).<remarks>
+        /// <para> If the format of the document is complex or the document body is too large, a timeout error may occur. In this case, we recommend that you call the CreateOfficeConversionTask operation to convert the document to the TXT format before you call the ExtractDocumentText operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ExtractDocumentTextRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExtractDocumentTextResponse
+        /// </returns>
         public async Task<ExtractDocumentTextResponse> ExtractDocumentTextWithOptionsAsync(ExtractDocumentTextRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8001,37 +12067,93 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ExtractDocumentTextResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 提取文档中的文本
-         *
-         * @param request ExtractDocumentTextRequest
-         * @return ExtractDocumentTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the text from the document body.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>The following document formats are supported: Word, Excel, PPT, PDF, and TXT.</description></item>
+        /// <item><description>The document cannot exceed 200 MB in size. The size of the extracted text cannot exceed 2 MB in size (approximately 1.2 million letters).<remarks>
+        /// <para> If the format of the document is complex or the document body is too large, a timeout error may occur. In this case, we recommend that you call the CreateOfficeConversionTask operation to convert the document to the TXT format before you call the ExtractDocumentText operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExtractDocumentTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExtractDocumentTextResponse
+        /// </returns>
         public ExtractDocumentTextResponse ExtractDocumentText(ExtractDocumentTextRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExtractDocumentTextWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 提取文档中的文本
-         *
-         * @param request ExtractDocumentTextRequest
-         * @return ExtractDocumentTextResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the text from the document body.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478273.html">Project management</a>.<a href="~~478152~~"></a></description></item>
+        /// <item><description>The following document formats are supported: Word, Excel, PPT, PDF, and TXT.</description></item>
+        /// <item><description>The document cannot exceed 200 MB in size. The size of the extracted text cannot exceed 2 MB in size (approximately 1.2 million letters).<remarks>
+        /// <para> If the format of the document is complex or the document body is too large, a timeout error may occur. In this case, we recommend that you call the CreateOfficeConversionTask operation to convert the document to the TXT format before you call the ExtractDocumentText operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExtractDocumentTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExtractDocumentTextResponse
+        /// </returns>
         public async Task<ExtractDocumentTextResponse> ExtractDocumentTextAsync(ExtractDocumentTextRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExtractDocumentTextWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 对 Dataset 内的元数据进行模糊搜索。
-         *
-         * @param tmpReq FuzzyQueryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FuzzyQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, text, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
+        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// FuzzyQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuzzyQueryResponse
+        /// </returns>
         public FuzzyQueryResponse FuzzyQueryWithOptions(FuzzyQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8093,13 +12215,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<FuzzyQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 对 Dataset 内的元数据进行模糊搜索。
-         *
-         * @param tmpReq FuzzyQueryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FuzzyQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, text, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
+        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// FuzzyQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuzzyQueryResponse
+        /// </returns>
         public async Task<FuzzyQueryResponse> FuzzyQueryWithOptionsAsync(FuzzyQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8161,37 +12301,90 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<FuzzyQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 对 Dataset 内的元数据进行模糊搜索。
-         *
-         * @param request FuzzyQueryRequest
-         * @return FuzzyQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, text, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
+        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FuzzyQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuzzyQueryResponse
+        /// </returns>
         public FuzzyQueryResponse FuzzyQuery(FuzzyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FuzzyQueryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 对 Dataset 内的元数据进行模糊搜索。
-         *
-         * @param request FuzzyQueryRequest
-         * @return FuzzyQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the extracted file metadata, including the file name, labels, path, custom tags, text, and other fields. If the value of a metadata field of a file matches the specified string, the metadata of the file is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</description></item>
+        /// <item><description>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FuzzyQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuzzyQueryResponse
+        /// </returns>
         public async Task<FuzzyQueryResponse> FuzzyQueryAsync(FuzzyQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FuzzyQueryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建实时转码任务
-         *
-         * @param tmpReq GenerateVideoPlaylistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateVideoPlaylistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a live transcoding playlist and converts video files into M3U8 files. After a playlist is generated, the videos in the playlist are immediately played and the video files are transcoded based on the playback progress. Compared with offline transcoding, online transcoding significantly reduces the time spent in waiting for the videos to be transcoded and reduces transcoding and storage costs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project Management</a>.</description></item>
+        /// <item><description>By default, you can call this operation to process only one video, audio, or subtitle track. You can specify the number of the video, audio, or subtitle tracks that you want to process.</description></item>
+        /// <item><description>You can call this operation to generate a media playlist and a master playlist. For more information, see the parameter description.</description></item>
+        /// <item><description>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to obtain the transcoding task result.</description></item>
+        /// <item><description>For information about the feature description of this operation, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateVideoPlaylistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateVideoPlaylistResponse
+        /// </returns>
         public GenerateVideoPlaylistResponse GenerateVideoPlaylistWithOptions(GenerateVideoPlaylistRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8285,13 +12478,34 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GenerateVideoPlaylistResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建实时转码任务
-         *
-         * @param tmpReq GenerateVideoPlaylistRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateVideoPlaylistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a live transcoding playlist and converts video files into M3U8 files. After a playlist is generated, the videos in the playlist are immediately played and the video files are transcoded based on the playback progress. Compared with offline transcoding, online transcoding significantly reduces the time spent in waiting for the videos to be transcoded and reduces transcoding and storage costs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project Management</a>.</description></item>
+        /// <item><description>By default, you can call this operation to process only one video, audio, or subtitle track. You can specify the number of the video, audio, or subtitle tracks that you want to process.</description></item>
+        /// <item><description>You can call this operation to generate a media playlist and a master playlist. For more information, see the parameter description.</description></item>
+        /// <item><description>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to obtain the transcoding task result.</description></item>
+        /// <item><description>For information about the feature description of this operation, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateVideoPlaylistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateVideoPlaylistResponse
+        /// </returns>
         public async Task<GenerateVideoPlaylistResponse> GenerateVideoPlaylistWithOptionsAsync(GenerateVideoPlaylistRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8385,37 +12599,106 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GenerateVideoPlaylistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建实时转码任务
-         *
-         * @param request GenerateVideoPlaylistRequest
-         * @return GenerateVideoPlaylistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a live transcoding playlist and converts video files into M3U8 files. After a playlist is generated, the videos in the playlist are immediately played and the video files are transcoded based on the playback progress. Compared with offline transcoding, online transcoding significantly reduces the time spent in waiting for the videos to be transcoded and reduces transcoding and storage costs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project Management</a>.</description></item>
+        /// <item><description>By default, you can call this operation to process only one video, audio, or subtitle track. You can specify the number of the video, audio, or subtitle tracks that you want to process.</description></item>
+        /// <item><description>You can call this operation to generate a media playlist and a master playlist. For more information, see the parameter description.</description></item>
+        /// <item><description>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to obtain the transcoding task result.</description></item>
+        /// <item><description>For information about the feature description of this operation, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateVideoPlaylistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateVideoPlaylistResponse
+        /// </returns>
         public GenerateVideoPlaylistResponse GenerateVideoPlaylist(GenerateVideoPlaylistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateVideoPlaylistWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建实时转码任务
-         *
-         * @param request GenerateVideoPlaylistRequest
-         * @return GenerateVideoPlaylistResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a live transcoding playlist and converts video files into M3U8 files. After a playlist is generated, the videos in the playlist are immediately played and the video files are transcoded based on the playback progress. Compared with offline transcoding, online transcoding significantly reduces the time spent in waiting for the videos to be transcoded and reduces transcoding and storage costs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the project that you want to use is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project Management</a>.</description></item>
+        /// <item><description>By default, you can call this operation to process only one video, audio, or subtitle track. You can specify the number of the video, audio, or subtitle tracks that you want to process.</description></item>
+        /// <item><description>You can call this operation to generate a media playlist and a master playlist. For more information, see the parameter description.</description></item>
+        /// <item><description>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to obtain the transcoding task result.</description></item>
+        /// <item><description>For information about the feature description of this operation, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</description></item>
+        /// <item><description>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateVideoPlaylistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateVideoPlaylistResponse
+        /// </returns>
         public async Task<GenerateVideoPlaylistResponse> GenerateVideoPlaylistAsync(GenerateVideoPlaylistRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateVideoPlaylistWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取文档预览编辑凭证
-         *
-         * @param tmpReq GenerateWebofficeTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an access token for document preview or editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
+        /// <item><description>The returned expiration time is in UTC.</description></item>
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
+        /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
+        /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
+        /// <item><description>PDF files: .pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
+        /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
+        /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateWebofficeTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebofficeTokenResponse
+        /// </returns>
         public GenerateWebofficeTokenResponse GenerateWebofficeTokenWithOptions(GenerateWebofficeTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8525,13 +12808,44 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GenerateWebofficeTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档预览编辑凭证
-         *
-         * @param tmpReq GenerateWebofficeTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GenerateWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an access token for document preview or editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
+        /// <item><description>The returned expiration time is in UTC.</description></item>
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
+        /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
+        /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
+        /// <item><description>PDF files: .pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
+        /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
+        /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateWebofficeTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebofficeTokenResponse
+        /// </returns>
         public async Task<GenerateWebofficeTokenResponse> GenerateWebofficeTokenWithOptionsAsync(GenerateWebofficeTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8641,37 +12955,103 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GenerateWebofficeTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文档预览编辑凭证
-         *
-         * @param request GenerateWebofficeTokenRequest
-         * @return GenerateWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an access token for document preview or editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
+        /// <item><description>The returned expiration time is in UTC.</description></item>
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
+        /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
+        /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
+        /// <item><description>PDF files: .pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
+        /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
+        /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateWebofficeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebofficeTokenResponse
+        /// </returns>
         public GenerateWebofficeTokenResponse GenerateWebofficeToken(GenerateWebofficeTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GenerateWebofficeTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取文档预览编辑凭证
-         *
-         * @param request GenerateWebofficeTokenRequest
-         * @return GenerateWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an access token for document preview or editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
+        /// <item><description>The returned expiration time is in UTC.</description></item>
+        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
+        /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
+        /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
+        /// <item><description>PDF files: .pdf</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
+        /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
+        /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateWebofficeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebofficeTokenResponse
+        /// </returns>
         public async Task<GenerateWebofficeTokenResponse> GenerateWebofficeTokenAsync(GenerateWebofficeTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateWebofficeTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchResponse
+        /// </returns>
         public GetBatchResponse GetBatchWithOptions(GetBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8703,13 +13083,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchResponse
+        /// </returns>
         public async Task<GetBatchResponse> GetBatchWithOptionsAsync(GetBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8741,37 +13129,65 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetBatchRequest
-         * @return GetBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchResponse
+        /// </returns>
         public GetBatchResponse GetBatch(GetBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetBatchRequest
-         * @return GetBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchResponse
+        /// </returns>
         public async Task<GetBatchResponse> GetBatchAsync(GetBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取一个绑定任务的运行详情。
-         *
-         * @param request GetBindingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBindingResponse
+        /// </returns>
         public GetBindingResponse GetBindingWithOptions(GetBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8807,13 +13223,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetBindingResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取一个绑定任务的运行详情。
-         *
-         * @param request GetBindingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBindingResponse
+        /// </returns>
         public async Task<GetBindingResponse> GetBindingWithOptionsAsync(GetBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8849,39 +13281,78 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetBindingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取一个绑定任务的运行详情。
-         *
-         * @param request GetBindingRequest
-         * @return GetBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBindingResponse
+        /// </returns>
         public GetBindingResponse GetBinding(GetBindingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetBindingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取一个绑定任务的运行详情。
-         *
-         * @param request GetBindingRequest
-         * @return GetBindingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the binding relationship between a specific dataset and an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the binding relationship that you want to query exists. For information about how to create a binding relationship, see <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBindingResponse
+        /// </returns>
         public async Task<GetBindingResponse> GetBindingAsync(GetBindingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBindingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI GetDRMLicense is deprecated
-         *
-         * @summary drmlicense获取
-         *
-         * @param request GetDRMLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDRMLicenseResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDRMLicense is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>drmlicense获取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDRMLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDRMLicenseResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetDRMLicense is deprecated")]
         // Deprecated
         public GetDRMLicenseResponse GetDRMLicenseWithOptions(GetDRMLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8926,15 +13397,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDRMLicenseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI GetDRMLicense is deprecated
-         *
-         * @summary drmlicense获取
-         *
-         * @param request GetDRMLicenseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDRMLicenseResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDRMLicense is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>drmlicense获取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDRMLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDRMLicenseResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetDRMLicense is deprecated")]
         // Deprecated
         public async Task<GetDRMLicenseResponse> GetDRMLicenseWithOptionsAsync(GetDRMLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -8979,14 +13461,23 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDRMLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI GetDRMLicense is deprecated
-         *
-         * @summary drmlicense获取
-         *
-         * @param request GetDRMLicenseRequest
-         * @return GetDRMLicenseResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDRMLicense is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>drmlicense获取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDRMLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDRMLicenseResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetDRMLicense is deprecated")]
         // Deprecated
         public GetDRMLicenseResponse GetDRMLicense(GetDRMLicenseRequest request)
         {
@@ -8994,14 +13485,23 @@ namespace AlibabaCloud.SDK.Imm20200930
             return GetDRMLicenseWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI GetDRMLicense is deprecated
-         *
-         * @summary drmlicense获取
-         *
-         * @param request GetDRMLicenseRequest
-         * @return GetDRMLicenseResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDRMLicense is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>drmlicense获取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDRMLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDRMLicenseResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetDRMLicense is deprecated")]
         // Deprecated
         public async Task<GetDRMLicenseResponse> GetDRMLicenseAsync(GetDRMLicenseRequest request)
         {
@@ -9009,13 +13509,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return await GetDRMLicenseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取媒体集信息
-         *
-         * @param request GetDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResponse
+        /// </returns>
         public GetDatasetResponse GetDatasetWithOptions(GetDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9051,13 +13567,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDatasetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取媒体集信息
-         *
-         * @param request GetDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResponse
+        /// </returns>
         public async Task<GetDatasetResponse> GetDatasetWithOptionsAsync(GetDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9093,37 +13625,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDatasetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取媒体集信息
-         *
-         * @param request GetDatasetRequest
-         * @return GetDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResponse
+        /// </returns>
         public GetDatasetResponse GetDataset(GetDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDatasetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取媒体集信息
-         *
-         * @param request GetDatasetRequest
-         * @return GetDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>The GetDataset operation supports real-time retrieval of file statistics. You can specify WithStatistics to enable real-time retrieval of file statistics.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResponse
+        /// </returns>
         public async Task<GetDatasetResponse> GetDatasetAsync(GetDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDatasetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取提取水印的结果
-         *
-         * @param request GetDecodeBlindWatermarkResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDecodeBlindWatermarkResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDecodeBlindWatermarkResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDecodeBlindWatermarkResultResponse
+        /// </returns>
         public GetDecodeBlindWatermarkResultResponse GetDecodeBlindWatermarkResultWithOptions(GetDecodeBlindWatermarkResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9159,13 +13735,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDecodeBlindWatermarkResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取提取水印的结果
-         *
-         * @param request GetDecodeBlindWatermarkResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDecodeBlindWatermarkResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDecodeBlindWatermarkResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDecodeBlindWatermarkResultResponse
+        /// </returns>
         public async Task<GetDecodeBlindWatermarkResultResponse> GetDecodeBlindWatermarkResultWithOptionsAsync(GetDecodeBlindWatermarkResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9201,37 +13793,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetDecodeBlindWatermarkResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取提取水印的结果
-         *
-         * @param request GetDecodeBlindWatermarkResultRequest
-         * @return GetDecodeBlindWatermarkResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDecodeBlindWatermarkResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDecodeBlindWatermarkResultResponse
+        /// </returns>
         public GetDecodeBlindWatermarkResultResponse GetDecodeBlindWatermarkResult(GetDecodeBlindWatermarkResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDecodeBlindWatermarkResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取提取水印的结果
-         *
-         * @param request GetDecodeBlindWatermarkResultRequest
-         * @return GetDecodeBlindWatermarkResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the result of an invisible watermark parsing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDecodeBlindWatermarkResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDecodeBlindWatermarkResultResponse
+        /// </returns>
         public async Task<GetDecodeBlindWatermarkResultResponse> GetDecodeBlindWatermarkResultAsync(GetDecodeBlindWatermarkResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDecodeBlindWatermarkResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取聚类
-         *
-         * @param request GetFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFigureClusterResponse
+        /// </returns>
         public GetFigureClusterResponse GetFigureClusterWithOptions(GetFigureClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9267,13 +13903,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetFigureClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取聚类
-         *
-         * @param request GetFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFigureClusterResponse
+        /// </returns>
         public async Task<GetFigureClusterResponse> GetFigureClusterWithOptionsAsync(GetFigureClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9309,37 +13961,82 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetFigureClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取聚类
-         *
-         * @param request GetFigureClusterRequest
-         * @return GetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFigureClusterResponse
+        /// </returns>
         public GetFigureClusterResponse GetFigureCluster(GetFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetFigureClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取聚类
-         *
-         * @param request GetFigureClusterRequest
-         * @return GetFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains basic information about face clustering, including the creation time, number of images, and cover.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFigureClusterResponse
+        /// </returns>
         public async Task<GetFigureClusterResponse> GetFigureClusterAsync(GetFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetFigureClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取文件元信息
-         *
-         * @param tmpReq GetFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileMetaResponse
+        /// </returns>
         public GetFileMetaResponse GetFileMetaWithOptions(GetFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9385,13 +14082,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文件元信息
-         *
-         * @param tmpReq GetFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileMetaResponse
+        /// </returns>
         public async Task<GetFileMetaResponse> GetFileMetaWithOptionsAsync(GetFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -9437,37 +14151,75 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取文件元信息
-         *
-         * @param request GetFileMetaRequest
-         * @return GetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileMetaResponse
+        /// </returns>
         public GetFileMetaResponse GetFileMeta(GetFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取文件元信息
-         *
-         * @param request GetFileMetaRequest
-         * @return GetFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata of a file whose metadata is indexed into the dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileMetaResponse
+        /// </returns>
         public async Task<GetFileMetaResponse> GetFileMetaAsync(GetFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取图片审核任务结果
-         *
-         * @param request GetImageModerationResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an image compliance detection task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageModerationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageModerationResultResponse
+        /// </returns>
         public GetImageModerationResultResponse GetImageModerationResultWithOptions(GetImageModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9503,13 +14255,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetImageModerationResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片审核任务结果
-         *
-         * @param request GetImageModerationResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an image compliance detection task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageModerationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageModerationResultResponse
+        /// </returns>
         public async Task<GetImageModerationResultResponse> GetImageModerationResultWithOptionsAsync(GetImageModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9545,37 +14305,65 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetImageModerationResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片审核任务结果
-         *
-         * @param request GetImageModerationResultRequest
-         * @return GetImageModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an image compliance detection task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageModerationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageModerationResultResponse
+        /// </returns>
         public GetImageModerationResultResponse GetImageModerationResult(GetImageModerationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetImageModerationResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取图片审核任务结果
-         *
-         * @param request GetImageModerationResultRequest
-         * @return GetImageModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries an image compliance detection task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageModerationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageModerationResultResponse
+        /// </returns>
         public async Task<GetImageModerationResultResponse> GetImageModerationResultAsync(GetImageModerationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetImageModerationResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取绑定的ossbucket
-         *
-         * @param request GetOSSBucketAttachmentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOSSBucketAttachmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the name of the project bound to an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that <a href="https://help.aliyun.com/document_detail/478206.html">the project whose name you want to query is bound to the specified OSS bucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetOSSBucketAttachmentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOSSBucketAttachmentResponse
+        /// </returns>
         public GetOSSBucketAttachmentResponse GetOSSBucketAttachmentWithOptions(GetOSSBucketAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9603,13 +14391,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetOSSBucketAttachmentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取绑定的ossbucket
-         *
-         * @param request GetOSSBucketAttachmentRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOSSBucketAttachmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the name of the project bound to an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that <a href="https://help.aliyun.com/document_detail/478206.html">the project whose name you want to query is bound to the specified OSS bucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetOSSBucketAttachmentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOSSBucketAttachmentResponse
+        /// </returns>
         public async Task<GetOSSBucketAttachmentResponse> GetOSSBucketAttachmentWithOptionsAsync(GetOSSBucketAttachmentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9637,37 +14441,78 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetOSSBucketAttachmentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取绑定的ossbucket
-         *
-         * @param request GetOSSBucketAttachmentRequest
-         * @return GetOSSBucketAttachmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the name of the project bound to an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that <a href="https://help.aliyun.com/document_detail/478206.html">the project whose name you want to query is bound to the specified OSS bucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetOSSBucketAttachmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOSSBucketAttachmentResponse
+        /// </returns>
         public GetOSSBucketAttachmentResponse GetOSSBucketAttachment(GetOSSBucketAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOSSBucketAttachmentWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取绑定的ossbucket
-         *
-         * @param request GetOSSBucketAttachmentRequest
-         * @return GetOSSBucketAttachmentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the name of the project bound to an Object Storage Service (OSS) bucket.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  <b>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</b></para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that <a href="https://help.aliyun.com/document_detail/478206.html">the project whose name you want to query is bound to the specified OSS bucket</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetOSSBucketAttachmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOSSBucketAttachmentResponse
+        /// </returns>
         public async Task<GetOSSBucketAttachmentResponse> GetOSSBucketAttachmentAsync(GetOSSBucketAttachmentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetOSSBucketAttachmentWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取项目信息
-         *
-         * @param request GetProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, datasets, and file statistics of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, you can enable the real-time retrieval of file statistics based on your business requirements. For more information, see the &quot;Request parameters&quot; section of this topic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
         public GetProjectResponse GetProjectWithOptions(GetProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9699,13 +14544,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetProjectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取项目信息
-         *
-         * @param request GetProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, datasets, and file statistics of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, you can enable the real-time retrieval of file statistics based on your business requirements. For more information, see the &quot;Request parameters&quot; section of this topic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
         public async Task<GetProjectResponse> GetProjectWithOptionsAsync(GetProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9737,37 +14595,76 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取项目信息
-         *
-         * @param request GetProjectRequest
-         * @return GetProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, datasets, and file statistics of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, you can enable the real-time retrieval of file statistics based on your business requirements. For more information, see the &quot;Request parameters&quot; section of this topic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
         public GetProjectResponse GetProject(GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetProjectWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取项目信息
-         *
-         * @param request GetProjectRequest
-         * @return GetProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, datasets, and file statistics of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, you can enable the real-time retrieval of file statistics based on your business requirements. For more information, see the &quot;Request parameters&quot; section of this topic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
         public async Task<GetProjectResponse> GetProjectAsync(GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetProjectWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 返回一个 Story 的详细信息
-         *
-         * @param request GetStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStoryResponse
+        /// </returns>
         public GetStoryResponse GetStoryWithOptions(GetStoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9803,13 +14700,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetStoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 返回一个 Story 的详细信息
-         *
-         * @param request GetStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStoryResponse
+        /// </returns>
         public async Task<GetStoryResponse> GetStoryWithOptionsAsync(GetStoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9845,37 +14759,80 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetStoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 返回一个 Story 的详细信息
-         *
-         * @param request GetStoryRequest
-         * @return GetStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStoryResponse
+        /// </returns>
         public GetStoryResponse GetStory(GetStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetStoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 返回一个 Story 的详细信息
-         *
-         * @param request GetStoryRequest
-         * @return GetStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a story.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStoryResponse
+        /// </returns>
         public async Task<GetStoryResponse> GetStoryAsync(GetStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetStoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取任务信息
-         *
-         * @param request GetTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an asynchronous task. Intelligent Media Management (IMM) has multiple asynchronous data processing capabilities, each of which has its own operation for creating tasks. For example, you can call the CreateFigureClusteringTask operation to create a face clustering task and the CreateFileCompressionTask operation to create a file compression task. The GetTask operation is a general operation. You can call this operation to query information about asynchronous tasks by task ID or type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public GetTaskResponse GetTaskWithOptions(GetTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9915,13 +14872,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取任务信息
-         *
-         * @param request GetTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an asynchronous task. Intelligent Media Management (IMM) has multiple asynchronous data processing capabilities, each of which has its own operation for creating tasks. For example, you can call the CreateFigureClusteringTask operation to create a face clustering task and the CreateFileCompressionTask operation to create a file compression task. The GetTask operation is a general operation. You can call this operation to query information about asynchronous tasks by task ID or type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public async Task<GetTaskResponse> GetTaskWithOptionsAsync(GetTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9961,37 +14931,67 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取任务信息
-         *
-         * @param request GetTaskRequest
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an asynchronous task. Intelligent Media Management (IMM) has multiple asynchronous data processing capabilities, each of which has its own operation for creating tasks. For example, you can call the CreateFigureClusteringTask operation to create a face clustering task and the CreateFileCompressionTask operation to create a file compression task. The GetTask operation is a general operation. You can call this operation to query information about asynchronous tasks by task ID or type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public GetTaskResponse GetTask(GetTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取任务信息
-         *
-         * @param request GetTaskRequest
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about an asynchronous task. Intelligent Media Management (IMM) has multiple asynchronous data processing capabilities, each of which has its own operation for creating tasks. For example, you can call the CreateFigureClusteringTask operation to create a face clustering task and the CreateFileCompressionTask operation to create a file compression task. The GetTask operation is a general operation. You can call this operation to query information about asynchronous tasks by task ID or type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public async Task<GetTaskResponse> GetTaskAsync(GetTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a trigger.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTriggerResponse
+        /// </returns>
         public GetTriggerResponse GetTriggerWithOptions(GetTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10023,13 +15023,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetTriggerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a trigger.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTriggerResponse
+        /// </returns>
         public async Task<GetTriggerResponse> GetTriggerWithOptionsAsync(GetTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10061,37 +15069,65 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetTriggerRequest
-         * @return GetTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a trigger.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTriggerResponse
+        /// </returns>
         public GetTriggerResponse GetTrigger(GetTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTriggerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取数据接入实例
-         *
-         * @param request GetTriggerRequest
-         * @return GetTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a trigger.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTriggerResponse
+        /// </returns>
         public async Task<GetTriggerResponse> GetTriggerAsync(GetTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTriggerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取视频标签检测任务结果
-         *
-         * @param request GetVideoLabelClassificationResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetVideoLabelClassificationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the results of a video label detection task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that a <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created on Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a video label detection task is created and the <c>TaskId</c> of the task is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoLabelClassificationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoLabelClassificationResultResponse
+        /// </returns>
         public GetVideoLabelClassificationResultResponse GetVideoLabelClassificationResultWithOptions(GetVideoLabelClassificationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10127,13 +15163,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetVideoLabelClassificationResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取视频标签检测任务结果
-         *
-         * @param request GetVideoLabelClassificationResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetVideoLabelClassificationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the results of a video label detection task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that a <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created on Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a video label detection task is created and the <c>TaskId</c> of the task is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoLabelClassificationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoLabelClassificationResultResponse
+        /// </returns>
         public async Task<GetVideoLabelClassificationResultResponse> GetVideoLabelClassificationResultWithOptionsAsync(GetVideoLabelClassificationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10169,37 +15221,73 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetVideoLabelClassificationResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取视频标签检测任务结果
-         *
-         * @param request GetVideoLabelClassificationResultRequest
-         * @return GetVideoLabelClassificationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the results of a video label detection task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that a <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created on Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a video label detection task is created and the <c>TaskId</c> of the task is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoLabelClassificationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoLabelClassificationResultResponse
+        /// </returns>
         public GetVideoLabelClassificationResultResponse GetVideoLabelClassificationResult(GetVideoLabelClassificationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetVideoLabelClassificationResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取视频标签检测任务结果
-         *
-         * @param request GetVideoLabelClassificationResultRequest
-         * @return GetVideoLabelClassificationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the results of a video label detection task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that a <a href="https://help.aliyun.com/document_detail/478273.html">project</a> is created on Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a video label detection task is created and the <c>TaskId</c> of the task is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/478223.html">CreateVideoLabelClassificationTask</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoLabelClassificationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoLabelClassificationResultResponse
+        /// </returns>
         public async Task<GetVideoLabelClassificationResultResponse> GetVideoLabelClassificationResultAsync(GetVideoLabelClassificationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVideoLabelClassificationResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取视频审核任务结果
-         *
-         * @param request GetVideoModerationResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetVideoModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频审核任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoModerationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoModerationResultResponse
+        /// </returns>
         public GetVideoModerationResultResponse GetVideoModerationResultWithOptions(GetVideoModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10235,13 +15323,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetVideoModerationResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取视频审核任务结果
-         *
-         * @param request GetVideoModerationResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetVideoModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频审核任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoModerationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoModerationResultResponse
+        /// </returns>
         public async Task<GetVideoModerationResultResponse> GetVideoModerationResultWithOptionsAsync(GetVideoModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10277,37 +15373,71 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<GetVideoModerationResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取视频审核任务结果
-         *
-         * @param request GetVideoModerationResultRequest
-         * @return GetVideoModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频审核任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoModerationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoModerationResultResponse
+        /// </returns>
         public GetVideoModerationResultResponse GetVideoModerationResult(GetVideoModerationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetVideoModerationResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取视频审核任务结果
-         *
-         * @param request GetVideoModerationResultRequest
-         * @return GetVideoModerationResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频审核任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoModerationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoModerationResultResponse
+        /// </returns>
         public async Task<GetVideoModerationResultResponse> GetVideoModerationResultAsync(GetVideoModerationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVideoModerationResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 添加文件元信息
-         *
-         * @param tmpReq IndexFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return IndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index from metadata extracted by using techniques such as label recognition, face detection, and location detection from input files. You can retrieve data from the same dataset by using multiple methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create indexes from metadata, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>For information about the limits on the maximum number and size of index files that you can create, see the &quot;Limits on datasets&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic. For information about how to create a dataset, see the &quot;CreateDataset&quot; topic.</description></item>
+        /// <item><description>For information about the regions in which you can create index files from metadata, see the &quot;Datasets and indexes&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// <item><description>After you create an index from metadata, you can try <a href="https://help.aliyun.com/document_detail/478175.html">simple query</a> to retrieve data. For information about other query capabilities, see <a href="https://help.aliyun.com/document_detail/2402363.html">Query and statistics</a>. You can also <a href="https://help.aliyun.com/document_detail/478180.html">create a face clustering task</a> to group faces. For information about other clustering capabilities, see <a href="https://help.aliyun.com/document_detail/2402365.html">Intelligent management</a>.
+        /// **
+        /// <b>Usage notes</b></description></item>
+        /// <item><description>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/2743997.html">Simple Message Service</a> for task completion notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// IndexFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IndexFileMetaResponse
+        /// </returns>
         public IndexFileMetaResponse IndexFileMetaWithOptions(IndexFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10361,13 +15491,35 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<IndexFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 添加文件元信息
-         *
-         * @param tmpReq IndexFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return IndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index from metadata extracted by using techniques such as label recognition, face detection, and location detection from input files. You can retrieve data from the same dataset by using multiple methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create indexes from metadata, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>For information about the limits on the maximum number and size of index files that you can create, see the &quot;Limits on datasets&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic. For information about how to create a dataset, see the &quot;CreateDataset&quot; topic.</description></item>
+        /// <item><description>For information about the regions in which you can create index files from metadata, see the &quot;Datasets and indexes&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// <item><description>After you create an index from metadata, you can try <a href="https://help.aliyun.com/document_detail/478175.html">simple query</a> to retrieve data. For information about other query capabilities, see <a href="https://help.aliyun.com/document_detail/2402363.html">Query and statistics</a>. You can also <a href="https://help.aliyun.com/document_detail/478180.html">create a face clustering task</a> to group faces. For information about other clustering capabilities, see <a href="https://help.aliyun.com/document_detail/2402365.html">Intelligent management</a>.
+        /// **
+        /// <b>Usage notes</b></description></item>
+        /// <item><description>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/2743997.html">Simple Message Service</a> for task completion notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// IndexFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IndexFileMetaResponse
+        /// </returns>
         public async Task<IndexFileMetaResponse> IndexFileMetaWithOptionsAsync(IndexFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10421,37 +15573,85 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<IndexFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 添加文件元信息
-         *
-         * @param request IndexFileMetaRequest
-         * @return IndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index from metadata extracted by using techniques such as label recognition, face detection, and location detection from input files. You can retrieve data from the same dataset by using multiple methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create indexes from metadata, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>For information about the limits on the maximum number and size of index files that you can create, see the &quot;Limits on datasets&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic. For information about how to create a dataset, see the &quot;CreateDataset&quot; topic.</description></item>
+        /// <item><description>For information about the regions in which you can create index files from metadata, see the &quot;Datasets and indexes&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// <item><description>After you create an index from metadata, you can try <a href="https://help.aliyun.com/document_detail/478175.html">simple query</a> to retrieve data. For information about other query capabilities, see <a href="https://help.aliyun.com/document_detail/2402363.html">Query and statistics</a>. You can also <a href="https://help.aliyun.com/document_detail/478180.html">create a face clustering task</a> to group faces. For information about other clustering capabilities, see <a href="https://help.aliyun.com/document_detail/2402365.html">Intelligent management</a>.
+        /// **
+        /// <b>Usage notes</b></description></item>
+        /// <item><description>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/2743997.html">Simple Message Service</a> for task completion notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// IndexFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IndexFileMetaResponse
+        /// </returns>
         public IndexFileMetaResponse IndexFileMeta(IndexFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return IndexFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 添加文件元信息
-         *
-         * @param request IndexFileMetaRequest
-         * @return IndexFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an index from metadata extracted by using techniques such as label recognition, face detection, and location detection from input files. You can retrieve data from the same dataset by using multiple methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>For information about how to create indexes from metadata, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</description></item>
+        /// <item><description>For information about the limits on the maximum number and size of index files that you can create, see the &quot;Limits on datasets&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic. For information about how to create a dataset, see the &quot;CreateDataset&quot; topic.</description></item>
+        /// <item><description>For information about the regions in which you can create index files from metadata, see the &quot;Datasets and indexes&quot; section of the <a href="https://help.aliyun.com/document_detail/475569.html">Limits</a> topic.</description></item>
+        /// <item><description>After you create an index from metadata, you can try <a href="https://help.aliyun.com/document_detail/478175.html">simple query</a> to retrieve data. For information about other query capabilities, see <a href="https://help.aliyun.com/document_detail/2402363.html">Query and statistics</a>. You can also <a href="https://help.aliyun.com/document_detail/478180.html">create a face clustering task</a> to group faces. For information about other clustering capabilities, see <a href="https://help.aliyun.com/document_detail/2402365.html">Intelligent management</a>.
+        /// **
+        /// <b>Usage notes</b></description></item>
+        /// <item><description>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/2743997.html">Simple Message Service</a> for task completion notifications.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// IndexFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IndexFileMetaResponse
+        /// </returns>
         public async Task<IndexFileMetaResponse> IndexFileMetaAsync(IndexFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await IndexFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListBatchesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListBatchesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries batch processing tasks. You can query batch processing tasks based on conditions such task tags and status. The results can be sorted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchesResponse
+        /// </returns>
         public ListBatchesResponse ListBatchesWithOptions(ListBatchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10503,13 +15703,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListBatchesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListBatchesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListBatchesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries batch processing tasks. You can query batch processing tasks based on conditions such task tags and status. The results can be sorted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchesResponse
+        /// </returns>
         public async Task<ListBatchesResponse> ListBatchesWithOptionsAsync(ListBatchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10561,37 +15769,62 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListBatchesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListBatchesRequest
-         * @return ListBatchesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries batch processing tasks. You can query batch processing tasks based on conditions such task tags and status. The results can be sorted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchesResponse
+        /// </returns>
         public ListBatchesResponse ListBatches(ListBatchesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListBatchesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListBatchesRequest
-         * @return ListBatchesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries batch processing tasks. You can query batch processing tasks based on conditions such task tags and status. The results can be sorted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBatchesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBatchesResponse
+        /// </returns>
         public async Task<ListBatchesResponse> ListBatchesAsync(ListBatchesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListBatchesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 列出绑定
-         *
-         * @param request ListBindingsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListBindingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries bindings between a dataset and Object Storage Service (OSS) buckets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListBindingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingsResponse
+        /// </returns>
         public ListBindingsResponse ListBindingsWithOptions(ListBindingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10631,13 +15864,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListBindingsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出绑定
-         *
-         * @param request ListBindingsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListBindingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries bindings between a dataset and Object Storage Service (OSS) buckets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListBindingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingsResponse
+        /// </returns>
         public async Task<ListBindingsResponse> ListBindingsWithOptionsAsync(ListBindingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10677,37 +15923,67 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListBindingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出绑定
-         *
-         * @param request ListBindingsRequest
-         * @return ListBindingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries bindings between a dataset and Object Storage Service (OSS) buckets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListBindingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingsResponse
+        /// </returns>
         public ListBindingsResponse ListBindings(ListBindingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListBindingsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 列出绑定
-         *
-         * @param request ListBindingsRequest
-         * @return ListBindingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries bindings between a dataset and Object Storage Service (OSS) buckets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListBindingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingsResponse
+        /// </returns>
         public async Task<ListBindingsResponse> ListBindingsAsync(ListBindingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListBindingsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 列出媒体集列表
-         *
-         * @param request ListDatasetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDatasetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetsResponse
+        /// </returns>
         public ListDatasetsResponse ListDatasetsWithOptions(ListDatasetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10747,13 +16023,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListDatasetsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出媒体集列表
-         *
-         * @param request ListDatasetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDatasetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetsResponse
+        /// </returns>
         public async Task<ListDatasetsResponse> ListDatasetsWithOptionsAsync(ListDatasetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10793,37 +16077,62 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListDatasetsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出媒体集列表
-         *
-         * @param request ListDatasetsRequest
-         * @return ListDatasetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetsResponse
+        /// </returns>
         public ListDatasetsResponse ListDatasets(ListDatasetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDatasetsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 列出媒体集列表
-         *
-         * @param request ListDatasetsRequest
-         * @return ListDatasetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of datasets. You can query the list by dataset prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetsResponse
+        /// </returns>
         public async Task<ListDatasetsResponse> ListDatasetsAsync(ListDatasetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDatasetsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取项目列表
-         *
-         * @param tmpReq ListProjectsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries projects. You can call this operation to query the basic information, datasets, and file statistics of multiple projects at the same time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ListProjects operation supports pagination. When you call this operation, you must specify the token that is obtained from the previous query as the value of NextToken. You must also specify MaxResults to limit the number of entries to return.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public ListProjectsResponse ListProjectsWithOptions(ListProjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10869,13 +16178,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListProjectsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取项目列表
-         *
-         * @param tmpReq ListProjectsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries projects. You can call this operation to query the basic information, datasets, and file statistics of multiple projects at the same time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ListProjects operation supports pagination. When you call this operation, you must specify the token that is obtained from the previous query as the value of NextToken. You must also specify MaxResults to limit the number of entries to return.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public async Task<ListProjectsResponse> ListProjectsWithOptionsAsync(ListProjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -10921,37 +16243,67 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListProjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取项目列表
-         *
-         * @param request ListProjectsRequest
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries projects. You can call this operation to query the basic information, datasets, and file statistics of multiple projects at the same time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ListProjects operation supports pagination. When you call this operation, you must specify the token that is obtained from the previous query as the value of NextToken. You must also specify MaxResults to limit the number of entries to return.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public ListProjectsResponse ListProjects(ListProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProjectsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取项目列表
-         *
-         * @param request ListProjectsRequest
-         * @return ListProjectsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries projects. You can call this operation to query the basic information, datasets, and file statistics of multiple projects at the same time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ListProjects operation supports pagination. When you call this operation, you must specify the token that is obtained from the previous query as the value of NextToken. You must also specify MaxResults to limit the number of entries to return.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
         public async Task<ListProjectsResponse> ListProjectsAsync(ListProjectsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProjectsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取地区列表
-         *
-         * @param request ListRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where Intelligent Media Management (IMM) is available and the supported languages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public ListRegionsResponse ListRegionsWithOptions(ListRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10979,13 +16331,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取地区列表
-         *
-         * @param request ListRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where Intelligent Media Management (IMM) is available and the supported languages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public async Task<ListRegionsResponse> ListRegionsWithOptionsAsync(ListRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11013,37 +16373,62 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取地区列表
-         *
-         * @param request ListRegionsRequest
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where Intelligent Media Management (IMM) is available and the supported languages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public ListRegionsResponse ListRegions(ListRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取地区列表
-         *
-         * @param request ListRegionsRequest
-         * @return ListRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where Intelligent Media Management (IMM) is available and the supported languages.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionsResponse
+        /// </returns>
         public async Task<ListRegionsResponse> ListRegionsAsync(ListRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取任务信息列表
-         *
-         * @param tmpReq ListTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tasks based on specific conditions, such as by time range and by tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public ListTasksResponse ListTasksWithOptions(ListTasksRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11125,13 +16510,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListTasksResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取任务信息列表
-         *
-         * @param tmpReq ListTasksRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tasks based on specific conditions, such as by time range and by tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public async Task<ListTasksResponse> ListTasksWithOptionsAsync(ListTasksRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11213,37 +16611,67 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取任务信息列表
-         *
-         * @param request ListTasksRequest
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tasks based on specific conditions, such as by time range and by tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public ListTasksResponse ListTasks(ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTasksWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取任务信息列表
-         *
-         * @param request ListTasksRequest
-         * @return ListTasksResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tasks based on specific conditions, such as by time range and by tag.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
         public async Task<ListTasksResponse> ListTasksAsync(ListTasksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTasksWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListTriggersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTriggersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries triggers by tag or status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTriggersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTriggersResponse
+        /// </returns>
         public ListTriggersResponse ListTriggersWithOptions(ListTriggersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11295,13 +16723,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListTriggersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListTriggersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTriggersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries triggers by tag or status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTriggersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTriggersResponse
+        /// </returns>
         public async Task<ListTriggersResponse> ListTriggersWithOptionsAsync(ListTriggersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11353,37 +16789,65 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ListTriggersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListTriggersRequest
-         * @return ListTriggersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries triggers by tag or status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTriggersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTriggersResponse
+        /// </returns>
         public ListTriggersResponse ListTriggers(ListTriggersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTriggersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 列出数据接入实例
-         *
-         * @param request ListTriggersRequest
-         * @return ListTriggersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries triggers by tag or status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTriggersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTriggersResponse
+        /// </returns>
         public async Task<ListTriggersResponse> ListTriggersAsync(ListTriggersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTriggersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询聚类分组
-         *
-         * @param tmpReq QueryFigureClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryFigureClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face groups based on given conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryFigureClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFigureClustersResponse
+        /// </returns>
         public QueryFigureClustersResponse QueryFigureClustersWithOptions(QueryFigureClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11457,13 +16921,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QueryFigureClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询聚类分组
-         *
-         * @param tmpReq QueryFigureClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryFigureClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face groups based on given conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryFigureClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFigureClustersResponse
+        /// </returns>
         public async Task<QueryFigureClustersResponse> QueryFigureClustersWithOptionsAsync(QueryFigureClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11537,37 +17017,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QueryFigureClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询聚类分组
-         *
-         * @param request QueryFigureClustersRequest
-         * @return QueryFigureClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face groups based on given conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryFigureClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFigureClustersResponse
+        /// </returns>
         public QueryFigureClustersResponse QueryFigureClusters(QueryFigureClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryFigureClustersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询聚类分组
-         *
-         * @param request QueryFigureClustersRequest
-         * @return QueryFigureClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face groups based on given conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that a face clustering task is created to group all faces in a dataset. For information about how to create a face clustering task, see <a href="~~CreateFigureClusteringTask~~">CreateFigureClusteringTask</a>. For information about how to create a dataset, see <a href="~~CreateDataset~~">CreateDataset</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryFigureClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFigureClustersResponse
+        /// </returns>
         public async Task<QueryFigureClustersResponse> QueryFigureClustersAsync(QueryFigureClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryFigureClustersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查找时空分组
-         *
-         * @param tmpReq QueryLocationDateClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryLocationDateClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of spatiotemporal clustering groups. Multiple conditions are supported. For more information, see the request parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryLocationDateClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLocationDateClustersResponse
+        /// </returns>
         public QueryLocationDateClustersResponse QueryLocationDateClustersWithOptions(QueryLocationDateClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11677,13 +17201,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QueryLocationDateClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查找时空分组
-         *
-         * @param tmpReq QueryLocationDateClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryLocationDateClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of spatiotemporal clustering groups. Multiple conditions are supported. For more information, see the request parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryLocationDateClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLocationDateClustersResponse
+        /// </returns>
         public async Task<QueryLocationDateClustersResponse> QueryLocationDateClustersWithOptionsAsync(QueryLocationDateClustersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -11793,37 +17333,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QueryLocationDateClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查找时空分组
-         *
-         * @param request QueryLocationDateClustersRequest
-         * @return QueryLocationDateClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of spatiotemporal clustering groups. Multiple conditions are supported. For more information, see the request parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryLocationDateClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLocationDateClustersResponse
+        /// </returns>
         public QueryLocationDateClustersResponse QueryLocationDateClusters(QueryLocationDateClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryLocationDateClustersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查找时空分组
-         *
-         * @param request QueryLocationDateClustersRequest
-         * @return QueryLocationDateClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of spatiotemporal clustering groups. Multiple conditions are supported. For more information, see the request parameters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to perform spatiotemporal clustering.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryLocationDateClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLocationDateClustersResponse
+        /// </returns>
         public async Task<QueryLocationDateClustersResponse> QueryLocationDateClustersAsync(QueryLocationDateClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryLocationDateClustersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查找相似图片分组
-         *
-         * @param request QuerySimilarImageClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QuerySimilarImageClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of similar image clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/611302.html">CreateSimilarImageClusteringTask</a> operation to cluster similar images in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySimilarImageClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySimilarImageClustersResponse
+        /// </returns>
         public QuerySimilarImageClustersResponse QuerySimilarImageClustersWithOptions(QuerySimilarImageClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11875,13 +17459,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QuerySimilarImageClustersResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查找相似图片分组
-         *
-         * @param request QuerySimilarImageClustersRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QuerySimilarImageClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of similar image clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/611302.html">CreateSimilarImageClusteringTask</a> operation to cluster similar images in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySimilarImageClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySimilarImageClustersResponse
+        /// </returns>
         public async Task<QuerySimilarImageClustersResponse> QuerySimilarImageClustersWithOptionsAsync(QuerySimilarImageClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11933,37 +17533,82 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QuerySimilarImageClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查找相似图片分组
-         *
-         * @param request QuerySimilarImageClustersRequest
-         * @return QuerySimilarImageClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of similar image clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/611302.html">CreateSimilarImageClusteringTask</a> operation to cluster similar images in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySimilarImageClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySimilarImageClustersResponse
+        /// </returns>
         public QuerySimilarImageClustersResponse QuerySimilarImageClusters(QuerySimilarImageClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QuerySimilarImageClustersWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查找相似图片分组
-         *
-         * @param request QuerySimilarImageClustersRequest
-         * @return QuerySimilarImageClustersResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the list of similar image clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/611302.html">CreateSimilarImageClusteringTask</a> operation to cluster similar images in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySimilarImageClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySimilarImageClustersResponse
+        /// </returns>
         public async Task<QuerySimilarImageClustersResponse> QuerySimilarImageClustersAsync(QuerySimilarImageClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QuerySimilarImageClustersWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查找 Story
-         *
-         * @param tmpReq QueryStoriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryStoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries stories based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryStoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStoriesResponse
+        /// </returns>
         public QueryStoriesResponse QueryStoriesWithOptions(QueryStoriesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12069,13 +17714,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QueryStoriesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查找 Story
-         *
-         * @param tmpReq QueryStoriesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryStoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries stories based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryStoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStoriesResponse
+        /// </returns>
         public async Task<QueryStoriesResponse> QueryStoriesWithOptionsAsync(QueryStoriesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12181,37 +17843,89 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<QueryStoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查找 Story
-         *
-         * @param request QueryStoriesRequest
-         * @return QueryStoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries stories based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryStoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStoriesResponse
+        /// </returns>
         public QueryStoriesResponse QueryStories(QueryStoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryStoriesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查找 Story
-         *
-         * @param request QueryStoriesRequest
-         * @return QueryStoriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries stories based on the specified conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478193.html">CreateStory</a> or <a href="https://help.aliyun.com/document_detail/478196.html">CreateCustomizedStory</a> operation to create a story.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryStoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStoriesResponse
+        /// </returns>
         public async Task<QueryStoriesResponse> QueryStoriesAsync(QueryStoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryStoriesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 刷新文档预览编辑凭证
-         *
-         * @param tmpReq RefreshWebofficeTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefreshWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes the access credential of WebOffice. The access credential of WebOffice is valid for 30 minutes. After the credential expires, you cannot access Weboffice. To access Weboffice again, call this operation to obtain a new credential. The new credential is also valid for 30 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2639703.html">WebOffice billing</a>.</description></item>
+        /// <item><description>The access token returned by this operation is valid for 30 minutes. After the access token expires, you cannot use it to access the document.</description></item>
+        /// <item><description>The refresh token returned by this operation is valid for one day. You need to use the refresh token for the next call to the operation before the refresh token expires. After the validity period elapses, the refresh token is invalid.</description></item>
+        /// <item><description>The returned expiration time is displayed in UTC.<remarks>
+        /// <para> An access token is used to actually access a document, whereas a refresh token is used to avoid repeated access configurations.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RefreshWebofficeTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshWebofficeTokenResponse
+        /// </returns>
         public RefreshWebofficeTokenResponse RefreshWebofficeTokenWithOptions(RefreshWebofficeTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12257,13 +17971,35 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<RefreshWebofficeTokenResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 刷新文档预览编辑凭证
-         *
-         * @param tmpReq RefreshWebofficeTokenRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RefreshWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes the access credential of WebOffice. The access credential of WebOffice is valid for 30 minutes. After the credential expires, you cannot access Weboffice. To access Weboffice again, call this operation to obtain a new credential. The new credential is also valid for 30 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2639703.html">WebOffice billing</a>.</description></item>
+        /// <item><description>The access token returned by this operation is valid for 30 minutes. After the access token expires, you cannot use it to access the document.</description></item>
+        /// <item><description>The refresh token returned by this operation is valid for one day. You need to use the refresh token for the next call to the operation before the refresh token expires. After the validity period elapses, the refresh token is invalid.</description></item>
+        /// <item><description>The returned expiration time is displayed in UTC.<remarks>
+        /// <para> An access token is used to actually access a document, whereas a refresh token is used to avoid repeated access configurations.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RefreshWebofficeTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshWebofficeTokenResponse
+        /// </returns>
         public async Task<RefreshWebofficeTokenResponse> RefreshWebofficeTokenWithOptionsAsync(RefreshWebofficeTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12309,37 +18045,85 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<RefreshWebofficeTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 刷新文档预览编辑凭证
-         *
-         * @param request RefreshWebofficeTokenRequest
-         * @return RefreshWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes the access credential of WebOffice. The access credential of WebOffice is valid for 30 minutes. After the credential expires, you cannot access Weboffice. To access Weboffice again, call this operation to obtain a new credential. The new credential is also valid for 30 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2639703.html">WebOffice billing</a>.</description></item>
+        /// <item><description>The access token returned by this operation is valid for 30 minutes. After the access token expires, you cannot use it to access the document.</description></item>
+        /// <item><description>The refresh token returned by this operation is valid for one day. You need to use the refresh token for the next call to the operation before the refresh token expires. After the validity period elapses, the refresh token is invalid.</description></item>
+        /// <item><description>The returned expiration time is displayed in UTC.<remarks>
+        /// <para> An access token is used to actually access a document, whereas a refresh token is used to avoid repeated access configurations.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefreshWebofficeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshWebofficeTokenResponse
+        /// </returns>
         public RefreshWebofficeTokenResponse RefreshWebofficeToken(RefreshWebofficeTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RefreshWebofficeTokenWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 刷新文档预览编辑凭证
-         *
-         * @param request RefreshWebofficeTokenRequest
-         * @return RefreshWebofficeTokenResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes the access credential of WebOffice. The access credential of WebOffice is valid for 30 minutes. After the credential expires, you cannot access Weboffice. To access Weboffice again, call this operation to obtain a new credential. The new credential is also valid for 30 minutes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</para>
+        /// <list type="bullet">
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2639703.html">WebOffice billing</a>.</description></item>
+        /// <item><description>The access token returned by this operation is valid for 30 minutes. After the access token expires, you cannot use it to access the document.</description></item>
+        /// <item><description>The refresh token returned by this operation is valid for one day. You need to use the refresh token for the next call to the operation before the refresh token expires. After the validity period elapses, the refresh token is invalid.</description></item>
+        /// <item><description>The returned expiration time is displayed in UTC.<remarks>
+        /// <para> An access token is used to actually access a document, whereas a refresh token is used to avoid repeated access configurations.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RefreshWebofficeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshWebofficeTokenResponse
+        /// </returns>
         public async Task<RefreshWebofficeTokenResponse> RefreshWebofficeTokenAsync(RefreshWebofficeTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RefreshWebofficeTokenWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 为故事移除文件
-         *
-         * @param tmpReq RemoveStoryFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes files from a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveStoryFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveStoryFilesResponse
+        /// </returns>
         public RemoveStoryFilesResponse RemoveStoryFilesWithOptions(RemoveStoryFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12385,13 +18169,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<RemoveStoryFilesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 为故事移除文件
-         *
-         * @param tmpReq RemoveStoryFilesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes files from a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveStoryFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveStoryFilesResponse
+        /// </returns>
         public async Task<RemoveStoryFilesResponse> RemoveStoryFilesWithOptionsAsync(RemoveStoryFilesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12437,37 +18229,62 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<RemoveStoryFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 为故事移除文件
-         *
-         * @param request RemoveStoryFilesRequest
-         * @return RemoveStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes files from a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveStoryFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveStoryFilesResponse
+        /// </returns>
         public RemoveStoryFilesResponse RemoveStoryFiles(RemoveStoryFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveStoryFilesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 为故事移除文件
-         *
-         * @param request RemoveStoryFilesRequest
-         * @return RemoveStoryFilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes files from a story.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveStoryFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveStoryFilesResponse
+        /// </returns>
         public async Task<RemoveStoryFilesResponse> RemoveStoryFilesAsync(RemoveStoryFilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveStoryFilesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a batch processing task that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume a batch processing task only when the task is in the Suspended or Failed state. A batch processing task continues to provide services after you resume the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeBatchResponse
+        /// </returns>
         public ResumeBatchResponse ResumeBatchWithOptions(ResumeBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12499,13 +18316,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ResumeBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a batch processing task that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume a batch processing task only when the task is in the Suspended or Failed state. A batch processing task continues to provide services after you resume the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeBatchResponse
+        /// </returns>
         public async Task<ResumeBatchResponse> ResumeBatchWithOptionsAsync(ResumeBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12537,37 +18367,72 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ResumeBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeBatchRequest
-         * @return ResumeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a batch processing task that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume a batch processing task only when the task is in the Suspended or Failed state. A batch processing task continues to provide services after you resume the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeBatchResponse
+        /// </returns>
         public ResumeBatchResponse ResumeBatch(ResumeBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResumeBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeBatchRequest
-         * @return ResumeBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a batch processing task that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume a batch processing task only when the task is in the Suspended or Failed state. A batch processing task continues to provide services after you resume the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeBatchResponse
+        /// </returns>
         public async Task<ResumeBatchResponse> ResumeBatchAsync(ResumeBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResumeBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a trigger that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume only a trigger that is in the Suspended or Failed state. After you resume a trigger, the trigger continues to provide services as expected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTriggerResponse
+        /// </returns>
         public ResumeTriggerResponse ResumeTriggerWithOptions(ResumeTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12599,13 +18464,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ResumeTriggerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ResumeTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a trigger that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume only a trigger that is in the Suspended or Failed state. After you resume a trigger, the trigger continues to provide services as expected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTriggerResponse
+        /// </returns>
         public async Task<ResumeTriggerResponse> ResumeTriggerWithOptionsAsync(ResumeTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12637,37 +18515,75 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<ResumeTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeTriggerRequest
-         * @return ResumeTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a trigger that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume only a trigger that is in the Suspended or Failed state. After you resume a trigger, the trigger continues to provide services as expected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTriggerResponse
+        /// </returns>
         public ResumeTriggerResponse ResumeTrigger(ResumeTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResumeTriggerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 恢复一个挂起的数据接入任务
-         *
-         * @param request ResumeTriggerRequest
-         * @return ResumeTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a trigger that is in the Suspended or Failed state.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can resume only a trigger that is in the Suspended or Failed state. After you resume a trigger, the trigger continues to provide services as expected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTriggerResponse
+        /// </returns>
         public async Task<ResumeTriggerResponse> ResumeTriggerAsync(ResumeTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResumeTriggerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param tmpReq SearchImageFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchImageFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters that contain a specific face in an image. Each face cluster contains information such as bounding boxes and similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have created a face clustering task by calling the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchImageFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageFigureClusterResponse
+        /// </returns>
         public SearchImageFigureClusterResponse SearchImageFigureClusterWithOptions(SearchImageFigureClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12713,13 +18629,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SearchImageFigureClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param tmpReq SearchImageFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchImageFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters that contain a specific face in an image. Each face cluster contains information such as bounding boxes and similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have created a face clustering task by calling the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchImageFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageFigureClusterResponse
+        /// </returns>
         public async Task<SearchImageFigureClusterResponse> SearchImageFigureClusterWithOptionsAsync(SearchImageFigureClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12765,37 +18697,97 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SearchImageFigureClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param request SearchImageFigureClusterRequest
-         * @return SearchImageFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters that contain a specific face in an image. Each face cluster contains information such as bounding boxes and similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have created a face clustering task by calling the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchImageFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageFigureClusterResponse
+        /// </returns>
         public SearchImageFigureClusterResponse SearchImageFigureCluster(SearchImageFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchImageFigureClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 以脸搜分组
-         *
-         * @param request SearchImageFigureClusterRequest
-         * @return SearchImageFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries face clusters that contain a specific face in an image. Each face cluster contains information such as bounding boxes and similarity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have created a face clustering task by calling the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchImageFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageFigureClusterResponse
+        /// </returns>
         public async Task<SearchImageFigureClusterResponse> SearchImageFigureClusterAsync(SearchImageFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchImageFigureClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 通过输入自然语言文字，对 Dataset 内的元数据进行查询与统计分析
-         *
-         * @param tmpReq SemanticQueryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SemanticQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).**** Each time you call this operation, you are charged for semantic understanding and query fees.</description></item>
+        /// <item><description>Before you call this operation, make sure that the file that you want to use is indexed into the dataset that you use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</description></item>
+        /// <item><description>The response provided in this example is for reference only. The categories and content of metadata vary based on configurations of <a href="https://help.aliyun.com/document_detail/466304.html">workflow templates</a>. If you have questions, search for and join the DingTalk group numbered 21714099.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Each time you call this operation, up to 1,000 metadata files are returned.</description></item>
+        /// <item><description>Pagination is not supported.</description></item>
+        /// <item><description>The natural language processing capability may not always produce completely accurate results.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage methods</h3>
+        /// <para>You can query files within a dataset by using natural language keywords. Key information supported for understanding includes labels (Labels.LabelName), time (ProduceTime), and location (Address.AddressLine). For example, if you use <c>2023 Hangzhou scenery</c> as the query criterion, the operation intelligently breaks the query criterion down into the following sub-criteria, and returns the files that meet all the sub-criteria:</para>
+        /// <list type="bullet">
+        /// <item><description>ProduceTime: 00:00 on January 1, 2023 to 00:00 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: <c>Hangzhou</c></description></item>
+        /// <item><description>Labels.LabelName: <c>scenery</c>.
+        /// When you call this operation, you can configure a <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that includes the <c>ImageEmbeddingExtraction</c> operator. This allows the operation to return image content when the query you input matches the image content, thereby achieving intelligent image retrieval.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SemanticQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SemanticQueryResponse
+        /// </returns>
         public SemanticQueryResponse SemanticQueryWithOptions(SemanticQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12804,10 +18796,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MediaTypes))
             {
                 request.MediaTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MediaTypes, "MediaTypes", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SmartClusterIds))
-            {
-                request.SmartClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SmartClusterIds, "SmartClusterIds", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
             {
@@ -12837,10 +18825,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartClusterIdsShrink))
-            {
-                query["SmartClusterIds"] = request.SmartClusterIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
             {
@@ -12865,13 +18849,45 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SemanticQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过输入自然语言文字，对 Dataset 内的元数据进行查询与统计分析
-         *
-         * @param tmpReq SemanticQueryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SemanticQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).**** Each time you call this operation, you are charged for semantic understanding and query fees.</description></item>
+        /// <item><description>Before you call this operation, make sure that the file that you want to use is indexed into the dataset that you use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</description></item>
+        /// <item><description>The response provided in this example is for reference only. The categories and content of metadata vary based on configurations of <a href="https://help.aliyun.com/document_detail/466304.html">workflow templates</a>. If you have questions, search for and join the DingTalk group numbered 21714099.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Each time you call this operation, up to 1,000 metadata files are returned.</description></item>
+        /// <item><description>Pagination is not supported.</description></item>
+        /// <item><description>The natural language processing capability may not always produce completely accurate results.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage methods</h3>
+        /// <para>You can query files within a dataset by using natural language keywords. Key information supported for understanding includes labels (Labels.LabelName), time (ProduceTime), and location (Address.AddressLine). For example, if you use <c>2023 Hangzhou scenery</c> as the query criterion, the operation intelligently breaks the query criterion down into the following sub-criteria, and returns the files that meet all the sub-criteria:</para>
+        /// <list type="bullet">
+        /// <item><description>ProduceTime: 00:00 on January 1, 2023 to 00:00 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: <c>Hangzhou</c></description></item>
+        /// <item><description>Labels.LabelName: <c>scenery</c>.
+        /// When you call this operation, you can configure a <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that includes the <c>ImageEmbeddingExtraction</c> operator. This allows the operation to return image content when the query you input matches the image content, thereby achieving intelligent image retrieval.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SemanticQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SemanticQueryResponse
+        /// </returns>
         public async Task<SemanticQueryResponse> SemanticQueryWithOptionsAsync(SemanticQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -12880,10 +18896,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MediaTypes))
             {
                 request.MediaTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MediaTypes, "MediaTypes", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SmartClusterIds))
-            {
-                request.SmartClusterIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SmartClusterIds, "SmartClusterIds", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WithFields))
             {
@@ -12914,10 +18926,6 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["Query"] = request.Query;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartClusterIdsShrink))
-            {
-                query["SmartClusterIds"] = request.SmartClusterIdsShrink;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
             {
                 query["WithFields"] = request.WithFieldsShrink;
@@ -12941,37 +18949,213 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SemanticQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过输入自然语言文字，对 Dataset 内的元数据进行查询与统计分析
-         *
-         * @param request SemanticQueryRequest
-         * @return SemanticQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).**** Each time you call this operation, you are charged for semantic understanding and query fees.</description></item>
+        /// <item><description>Before you call this operation, make sure that the file that you want to use is indexed into the dataset that you use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</description></item>
+        /// <item><description>The response provided in this example is for reference only. The categories and content of metadata vary based on configurations of <a href="https://help.aliyun.com/document_detail/466304.html">workflow templates</a>. If you have questions, search for and join the DingTalk group numbered 21714099.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Each time you call this operation, up to 1,000 metadata files are returned.</description></item>
+        /// <item><description>Pagination is not supported.</description></item>
+        /// <item><description>The natural language processing capability may not always produce completely accurate results.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage methods</h3>
+        /// <para>You can query files within a dataset by using natural language keywords. Key information supported for understanding includes labels (Labels.LabelName), time (ProduceTime), and location (Address.AddressLine). For example, if you use <c>2023 Hangzhou scenery</c> as the query criterion, the operation intelligently breaks the query criterion down into the following sub-criteria, and returns the files that meet all the sub-criteria:</para>
+        /// <list type="bullet">
+        /// <item><description>ProduceTime: 00:00 on January 1, 2023 to 00:00 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: <c>Hangzhou</c></description></item>
+        /// <item><description>Labels.LabelName: <c>scenery</c>.
+        /// When you call this operation, you can configure a <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that includes the <c>ImageEmbeddingExtraction</c> operator. This allows the operation to return image content when the query you input matches the image content, thereby achieving intelligent image retrieval.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SemanticQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SemanticQueryResponse
+        /// </returns>
         public SemanticQueryResponse SemanticQuery(SemanticQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SemanticQueryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 通过输入自然语言文字，对 Dataset 内的元数据进行查询与统计分析
-         *
-         * @param request SemanticQueryRequest
-         * @return SemanticQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries metadata in a dataset by inputting natural language.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).**** Each time you call this operation, you are charged for semantic understanding and query fees.</description></item>
+        /// <item><description>Before you call this operation, make sure that the file that you want to use is indexed into the dataset that you use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</description></item>
+        /// <item><description>The response provided in this example is for reference only. The categories and content of metadata vary based on configurations of <a href="https://help.aliyun.com/document_detail/466304.html">workflow templates</a>. If you have questions, search for and join the DingTalk group numbered 21714099.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Each time you call this operation, up to 1,000 metadata files are returned.</description></item>
+        /// <item><description>Pagination is not supported.</description></item>
+        /// <item><description>The natural language processing capability may not always produce completely accurate results.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage methods</h3>
+        /// <para>You can query files within a dataset by using natural language keywords. Key information supported for understanding includes labels (Labels.LabelName), time (ProduceTime), and location (Address.AddressLine). For example, if you use <c>2023 Hangzhou scenery</c> as the query criterion, the operation intelligently breaks the query criterion down into the following sub-criteria, and returns the files that meet all the sub-criteria:</para>
+        /// <list type="bullet">
+        /// <item><description>ProduceTime: 00:00 on January 1, 2023 to 00:00 on December 31, 2023.</description></item>
+        /// <item><description>Address.AddressLine: <c>Hangzhou</c></description></item>
+        /// <item><description>Labels.LabelName: <c>scenery</c>.
+        /// When you call this operation, you can configure a <a href="https://help.aliyun.com/document_detail/466304.html">workflow template</a> that includes the <c>ImageEmbeddingExtraction</c> operator. This allows the operation to return image content when the query you input matches the image content, thereby achieving intelligent image retrieval.``</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SemanticQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SemanticQueryResponse
+        /// </returns>
         public async Task<SemanticQueryResponse> SemanticQueryAsync(SemanticQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SemanticQueryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 通过 JSON 结构的查询语言，对 Dataset 内的元数据进行查询与统计分析。
-         *
-         * @param tmpReq SimpleQueryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SimpleQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <b>Limits</b></description></item>
+        /// <item><description>Each query returns information about up to 100 files.</description></item>
+        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
+        /// <item><description>A subquery supports up to 100 conditions.</description></item>
+        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
+        /// <b>Example query conditions</b></description></item>
+        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///   &quot;Value&quot;:&quot;1000&quot;,
+        ///   &quot;Operation&quot;:&quot;gt&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }</description></item>
+        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
+        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;: [
+        ///     {
+        ///       &quot;Field&quot;: &quot;URI&quot;,
+        ///       &quot;Value&quot;: &quot;oss://examplebucket/path/&quot;,
+        ///       &quot;Operation&quot;: &quot;prefix&quot;
+        ///     },
+        ///     {
+        ///       &quot;Field&quot;: &quot;Size&quot;,
+        ///       &quot;Value&quot;: &quot;1048576&quot;,
+        ///       &quot;Operation&quot;: &quot;gt&quot;
+        ///     },
+        ///     {
+        ///       &quot;SubQueries&quot;: [
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;TV&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         },
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         }
+        ///       ],
+        ///       &quot;Operation&quot;: &quot;or&quot;
+        ///     }
+        ///   ],
+        ///   &quot;Operation&quot;: &quot;and&quot;
+        /// }
+        ///         
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
+        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
+        /// {
+        ///     &quot;Operation&quot;: &quot;not&quot;,
+        ///     &quot;SubQueries&quot;: [{
+        ///         &quot;Operation&quot;: &quot;nested&quot;,
+        ///         &quot;SubQueries&quot;: [{
+        ///             &quot;Operation&quot;: &quot;and&quot;,
+        ///             &quot;SubQueries&quot;: [{
+        ///                 &quot;Field&quot;: &quot;Figures.Age&quot;,
+        ///                 &quot;Operation&quot;: &quot;gt&quot;,
+        ///                 &quot;Value&quot;: &quot;36&quot;
+        ///             }, {
+        ///                 &quot;Field&quot;: &quot;Figures.Gender&quot;,
+        ///                 &quot;Operation&quot;: &quot;eq&quot;,
+        ///                 &quot;Value&quot;: &quot;male&quot;
+        ///             }]
+        ///         }]
+        ///     }]
+        /// }</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }
+        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SimpleQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimpleQueryResponse
+        /// </returns>
         public SimpleQueryResponse SimpleQueryWithOptions(SimpleQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13049,13 +19233,129 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SimpleQueryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过 JSON 结构的查询语言，对 Dataset 内的元数据进行查询与统计分析。
-         *
-         * @param tmpReq SimpleQueryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SimpleQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <b>Limits</b></description></item>
+        /// <item><description>Each query returns information about up to 100 files.</description></item>
+        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
+        /// <item><description>A subquery supports up to 100 conditions.</description></item>
+        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
+        /// <b>Example query conditions</b></description></item>
+        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///   &quot;Value&quot;:&quot;1000&quot;,
+        ///   &quot;Operation&quot;:&quot;gt&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }</description></item>
+        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
+        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;: [
+        ///     {
+        ///       &quot;Field&quot;: &quot;URI&quot;,
+        ///       &quot;Value&quot;: &quot;oss://examplebucket/path/&quot;,
+        ///       &quot;Operation&quot;: &quot;prefix&quot;
+        ///     },
+        ///     {
+        ///       &quot;Field&quot;: &quot;Size&quot;,
+        ///       &quot;Value&quot;: &quot;1048576&quot;,
+        ///       &quot;Operation&quot;: &quot;gt&quot;
+        ///     },
+        ///     {
+        ///       &quot;SubQueries&quot;: [
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;TV&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         },
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         }
+        ///       ],
+        ///       &quot;Operation&quot;: &quot;or&quot;
+        ///     }
+        ///   ],
+        ///   &quot;Operation&quot;: &quot;and&quot;
+        /// }
+        ///         
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
+        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
+        /// {
+        ///     &quot;Operation&quot;: &quot;not&quot;,
+        ///     &quot;SubQueries&quot;: [{
+        ///         &quot;Operation&quot;: &quot;nested&quot;,
+        ///         &quot;SubQueries&quot;: [{
+        ///             &quot;Operation&quot;: &quot;and&quot;,
+        ///             &quot;SubQueries&quot;: [{
+        ///                 &quot;Field&quot;: &quot;Figures.Age&quot;,
+        ///                 &quot;Operation&quot;: &quot;gt&quot;,
+        ///                 &quot;Value&quot;: &quot;36&quot;
+        ///             }, {
+        ///                 &quot;Field&quot;: &quot;Figures.Gender&quot;,
+        ///                 &quot;Operation&quot;: &quot;eq&quot;,
+        ///                 &quot;Value&quot;: &quot;male&quot;
+        ///             }]
+        ///         }]
+        ///     }]
+        /// }</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }
+        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SimpleQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimpleQueryResponse
+        /// </returns>
         public async Task<SimpleQueryResponse> SimpleQueryWithOptionsAsync(SimpleQueryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13133,37 +19433,278 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SimpleQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 通过 JSON 结构的查询语言，对 Dataset 内的元数据进行查询与统计分析。
-         *
-         * @param request SimpleQueryRequest
-         * @return SimpleQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <b>Limits</b></description></item>
+        /// <item><description>Each query returns information about up to 100 files.</description></item>
+        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
+        /// <item><description>A subquery supports up to 100 conditions.</description></item>
+        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
+        /// <b>Example query conditions</b></description></item>
+        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///   &quot;Value&quot;:&quot;1000&quot;,
+        ///   &quot;Operation&quot;:&quot;gt&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }</description></item>
+        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
+        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;: [
+        ///     {
+        ///       &quot;Field&quot;: &quot;URI&quot;,
+        ///       &quot;Value&quot;: &quot;oss://examplebucket/path/&quot;,
+        ///       &quot;Operation&quot;: &quot;prefix&quot;
+        ///     },
+        ///     {
+        ///       &quot;Field&quot;: &quot;Size&quot;,
+        ///       &quot;Value&quot;: &quot;1048576&quot;,
+        ///       &quot;Operation&quot;: &quot;gt&quot;
+        ///     },
+        ///     {
+        ///       &quot;SubQueries&quot;: [
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;TV&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         },
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         }
+        ///       ],
+        ///       &quot;Operation&quot;: &quot;or&quot;
+        ///     }
+        ///   ],
+        ///   &quot;Operation&quot;: &quot;and&quot;
+        /// }
+        ///         
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
+        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
+        /// {
+        ///     &quot;Operation&quot;: &quot;not&quot;,
+        ///     &quot;SubQueries&quot;: [{
+        ///         &quot;Operation&quot;: &quot;nested&quot;,
+        ///         &quot;SubQueries&quot;: [{
+        ///             &quot;Operation&quot;: &quot;and&quot;,
+        ///             &quot;SubQueries&quot;: [{
+        ///                 &quot;Field&quot;: &quot;Figures.Age&quot;,
+        ///                 &quot;Operation&quot;: &quot;gt&quot;,
+        ///                 &quot;Value&quot;: &quot;36&quot;
+        ///             }, {
+        ///                 &quot;Field&quot;: &quot;Figures.Gender&quot;,
+        ///                 &quot;Operation&quot;: &quot;eq&quot;,
+        ///                 &quot;Value&quot;: &quot;male&quot;
+        ///             }]
+        ///         }]
+        ///     }]
+        /// }</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }
+        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SimpleQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimpleQueryResponse
+        /// </returns>
         public SimpleQueryResponse SimpleQuery(SimpleQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SimpleQueryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 通过 JSON 结构的查询语言，对 Dataset 内的元数据进行查询与统计分析。
-         *
-         * @param request SimpleQueryRequest
-         * @return SimpleQueryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries files in a dataset by performing a simple query operation. The operation supports logical expressions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</description></item>
+        /// <item><description>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 31690030817) and share your questions with us.
+        /// <b>Limits</b></description></item>
+        /// <item><description>Each query returns information about up to 100 files.</description></item>
+        /// <item><description>Each query returns up to 2,000 aggregations.</description></item>
+        /// <item><description>A subquery supports up to 100 conditions.</description></item>
+        /// <item><description>A subquery can have a maximum nesting depth of 5 levels.
+        /// <b>Example query conditions</b></description></item>
+        /// <item><description>Retrieve JPEG images larger than 1,000 pixels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;ImageWidth&quot;,
+        ///   &quot;Value&quot;:&quot;1000&quot;,
+        ///   &quot;Operation&quot;:&quot;gt&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }</description></item>
+        /// <item><description>Search <c>oss://examplebucket/path/</c> for objects that have the <c>TV</c> or <c>Stereo</c> label and are larger than 10 MB in size:<remarks>
+        /// <para> This query requires matching files to have the <c>TV</c> or <c>Stereo</c> label. The two labels are specified as separate objects in the <c>Labels</c> fields.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <pre><c>{
+        ///   &quot;SubQueries&quot;: [
+        ///     {
+        ///       &quot;Field&quot;: &quot;URI&quot;,
+        ///       &quot;Value&quot;: &quot;oss://examplebucket/path/&quot;,
+        ///       &quot;Operation&quot;: &quot;prefix&quot;
+        ///     },
+        ///     {
+        ///       &quot;Field&quot;: &quot;Size&quot;,
+        ///       &quot;Value&quot;: &quot;1048576&quot;,
+        ///       &quot;Operation&quot;: &quot;gt&quot;
+        ///     },
+        ///     {
+        ///       &quot;SubQueries&quot;: [
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;TV&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         },
+        ///         {
+        ///           &quot;Field&quot;: &quot;Labels.LabelName&quot;,
+        ///           &quot;Value&quot;: &quot;Stereo&quot;,
+        ///           &quot;Operation&quot;: &quot;eq&quot;
+        ///         }
+        ///       ],
+        ///       &quot;Operation&quot;: &quot;or&quot;
+        ///     }
+        ///   ],
+        ///   &quot;Operation&quot;: &quot;and&quot;
+        /// }
+        ///         
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Exclude images that contain a face of a male over the age of 36:<remarks>
+        /// <para> In this example query, an image will be excluded from the query results if it contains a face of a male over the age of 36. This query is different from excluding an image that contains a male face or a face of a person over the age of 36. In this query, you need to use the <c>nested</c> operator to specify that the conditions are met on the same element.
+        /// {
+        ///     &quot;Operation&quot;: &quot;not&quot;,
+        ///     &quot;SubQueries&quot;: [{
+        ///         &quot;Operation&quot;: &quot;nested&quot;,
+        ///         &quot;SubQueries&quot;: [{
+        ///             &quot;Operation&quot;: &quot;and&quot;,
+        ///             &quot;SubQueries&quot;: [{
+        ///                 &quot;Field&quot;: &quot;Figures.Age&quot;,
+        ///                 &quot;Operation&quot;: &quot;gt&quot;,
+        ///                 &quot;Value&quot;: &quot;36&quot;
+        ///             }, {
+        ///                 &quot;Field&quot;: &quot;Figures.Gender&quot;,
+        ///                 &quot;Operation&quot;: &quot;eq&quot;,
+        ///                 &quot;Value&quot;: &quot;male&quot;
+        ///             }]
+        ///         }]
+        ///     }]
+        /// }</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>Query JPEG images that have both custom labels and system labels:<!---->
+        /// {
+        ///   &quot;SubQueries&quot;:[
+        /// {
+        ///   &quot;Field&quot;:&quot;ContentType&quot;,
+        ///   &quot;Value&quot;: &quot;image/jpeg&quot;,
+        ///   &quot;Operation&quot;:&quot;eq&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;CustomLabels.test&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// },<br>{
+        ///   &quot;Field&quot;:&quot;Labels.LabelName&quot;,
+        ///   &quot;Operation&quot;:&quot;exist&quot;
+        /// }
+        ///   ],
+        ///   &quot;Operation&quot;:&quot;and&quot;
+        /// }
+        /// You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SimpleQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimpleQueryResponse
+        /// </returns>
         public async Task<SimpleQueryResponse> SimpleQueryAsync(SimpleQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SimpleQueryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can suspend a batch processing task that is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume a batch processing task that is suspended.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendBatchResponse
+        /// </returns>
         public SuspendBatchResponse SuspendBatchWithOptions(SuspendBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13195,13 +19736,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SuspendBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can suspend a batch processing task that is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume a batch processing task that is suspended.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendBatchResponse
+        /// </returns>
         public async Task<SuspendBatchResponse> SuspendBatchWithOptionsAsync(SuspendBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13233,37 +19787,72 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SuspendBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendBatchRequest
-         * @return SuspendBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can suspend a batch processing task that is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume a batch processing task that is suspended.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendBatchResponse
+        /// </returns>
         public SuspendBatchResponse SuspendBatch(SuspendBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SuspendBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendBatchRequest
-         * @return SuspendBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a batch processing task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can suspend a batch processing task that is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume a batch processing task that is suspended.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendBatchResponse
+        /// </returns>
         public async Task<SuspendBatchResponse> SuspendBatchAsync(SuspendBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SuspendBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a running trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation can be used to suspend a trigger only in the Running state. If you want to resume a suspended trigger, call the <a href="https://help.aliyun.com/document_detail/479919.html">ResumeTrigger</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTriggerResponse
+        /// </returns>
         public SuspendTriggerResponse SuspendTriggerWithOptions(SuspendTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13295,13 +19884,26 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SuspendTriggerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SuspendTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a running trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation can be used to suspend a trigger only in the Running state. If you want to resume a suspended trigger, call the <a href="https://help.aliyun.com/document_detail/479919.html">ResumeTrigger</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTriggerResponse
+        /// </returns>
         public async Task<SuspendTriggerResponse> SuspendTriggerWithOptionsAsync(SuspendTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13333,37 +19935,75 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<SuspendTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendTriggerRequest
-         * @return SuspendTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a running trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation can be used to suspend a trigger only in the Running state. If you want to resume a suspended trigger, call the <a href="https://help.aliyun.com/document_detail/479919.html">ResumeTrigger</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTriggerResponse
+        /// </returns>
         public SuspendTriggerResponse SuspendTrigger(SuspendTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SuspendTriggerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 挂起一个数据接入任务
-         *
-         * @param request SuspendTriggerRequest
-         * @return SuspendTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends a running trigger.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The operation can be used to suspend a trigger only in the Running state. If you want to resume a suspended trigger, call the <a href="https://help.aliyun.com/document_detail/479919.html">ResumeTrigger</a> operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTriggerResponse
+        /// </returns>
         public async Task<SuspendTriggerResponse> SuspendTriggerAsync(SuspendTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SuspendTriggerWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param tmpReq UpdateBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a batch processing task, including the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a batch processing task that is in the Ready or Failed state. The update operation does not change the status of the batch processing task.</para>
+        /// <list type="bullet">
+        /// <item><description>If you update a batch processing task that is in progress, the task is not automatically resumed after the update is complete. You must call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchResponse
+        /// </returns>
         public UpdateBatchResponse UpdateBatchWithOptions(UpdateBatchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13421,13 +20061,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param tmpReq UpdateBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a batch processing task, including the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a batch processing task that is in the Ready or Failed state. The update operation does not change the status of the batch processing task.</para>
+        /// <list type="bullet">
+        /// <item><description>If you update a batch processing task that is in progress, the task is not automatically resumed after the update is complete. You must call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchResponse
+        /// </returns>
         public async Task<UpdateBatchResponse> UpdateBatchWithOptionsAsync(UpdateBatchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13485,37 +20141,73 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param request UpdateBatchRequest
-         * @return UpdateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a batch processing task, including the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a batch processing task that is in the Ready or Failed state. The update operation does not change the status of the batch processing task.</para>
+        /// <list type="bullet">
+        /// <item><description>If you update a batch processing task that is in progress, the task is not automatically resumed after the update is complete. You must call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchResponse
+        /// </returns>
         public UpdateBatchResponse UpdateBatch(UpdateBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param request UpdateBatchRequest
-         * @return UpdateBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a batch processing task, including the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a batch processing task that is in the Ready or Failed state. The update operation does not change the status of the batch processing task.</para>
+        /// <list type="bullet">
+        /// <item><description>If you update a batch processing task that is in progress, the task is not automatically resumed after the update is complete. You must call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume the task.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchResponse
+        /// </returns>
         public async Task<UpdateBatchResponse> UpdateBatchAsync(UpdateBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateBatchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新媒体集
-         *
-         * @param request UpdateDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新媒体集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetResponse
+        /// </returns>
         public UpdateDatasetResponse UpdateDatasetWithOptions(UpdateDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13575,13 +20267,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateDatasetResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新媒体集
-         *
-         * @param request UpdateDatasetRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新媒体集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetResponse
+        /// </returns>
         public async Task<UpdateDatasetResponse> UpdateDatasetWithOptionsAsync(UpdateDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13641,37 +20341,67 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateDatasetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新媒体集
-         *
-         * @param request UpdateDatasetRequest
-         * @return UpdateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新媒体集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetResponse
+        /// </returns>
         public UpdateDatasetResponse UpdateDataset(UpdateDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateDatasetWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新媒体集
-         *
-         * @param request UpdateDatasetRequest
-         * @return UpdateDatasetResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新媒体集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDatasetResponse
+        /// </returns>
         public async Task<UpdateDatasetResponse> UpdateDatasetAsync(UpdateDatasetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDatasetWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新聚类
-         *
-         * @param tmpReq UpdateFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a face cluster, such as the cluster name and labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>The operation updates only the cover image, cluster name, and tags.</description></item>
+        /// <item><description>After the operation is successful, you can call the <a href="https://help.aliyun.com/document_detail/478182.html">GetFigureCluster</a> or <a href="https://help.aliyun.com/document_detail/2248450.html">BatchGetFigureCluster</a> operation to query the updated cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFigureClusterResponse
+        /// </returns>
         public UpdateFigureClusterResponse UpdateFigureClusterWithOptions(UpdateFigureClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13713,13 +20443,31 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateFigureClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新聚类
-         *
-         * @param tmpReq UpdateFigureClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a face cluster, such as the cluster name and labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>The operation updates only the cover image, cluster name, and tags.</description></item>
+        /// <item><description>After the operation is successful, you can call the <a href="https://help.aliyun.com/document_detail/478182.html">GetFigureCluster</a> or <a href="https://help.aliyun.com/document_detail/2248450.html">BatchGetFigureCluster</a> operation to query the updated cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateFigureClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFigureClusterResponse
+        /// </returns>
         public async Task<UpdateFigureClusterResponse> UpdateFigureClusterWithOptionsAsync(UpdateFigureClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13761,37 +20509,85 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateFigureClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新聚类
-         *
-         * @param request UpdateFigureClusterRequest
-         * @return UpdateFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a face cluster, such as the cluster name and labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>The operation updates only the cover image, cluster name, and tags.</description></item>
+        /// <item><description>After the operation is successful, you can call the <a href="https://help.aliyun.com/document_detail/478182.html">GetFigureCluster</a> or <a href="https://help.aliyun.com/document_detail/2248450.html">BatchGetFigureCluster</a> operation to query the updated cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFigureClusterResponse
+        /// </returns>
         public UpdateFigureClusterResponse UpdateFigureCluster(UpdateFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateFigureClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新聚类
-         *
-         * @param request UpdateFigureClusterRequest
-         * @return UpdateFigureClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a face cluster, such as the cluster name and labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</description></item>
+        /// <item><description>The operation updates only the cover image, cluster name, and tags.</description></item>
+        /// <item><description>After the operation is successful, you can call the <a href="https://help.aliyun.com/document_detail/478182.html">GetFigureCluster</a> or <a href="https://help.aliyun.com/document_detail/2248450.html">BatchGetFigureCluster</a> operation to query the updated cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFigureClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFigureClusterResponse
+        /// </returns>
         public async Task<UpdateFigureClusterResponse> UpdateFigureClusterAsync(UpdateFigureClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFigureClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新文件元信息
-         *
-         * @param tmpReq UpdateFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the partial metadata of the indexed files in a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata specified by CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFileMetaResponse
+        /// </returns>
         public UpdateFileMetaResponse UpdateFileMetaWithOptions(UpdateFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13833,13 +20629,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateFileMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新文件元信息
-         *
-         * @param tmpReq UpdateFileMetaRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the partial metadata of the indexed files in a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata specified by CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateFileMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFileMetaResponse
+        /// </returns>
         public async Task<UpdateFileMetaResponse> UpdateFileMetaWithOptionsAsync(UpdateFileMetaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13881,37 +20693,81 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateFileMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新文件元信息
-         *
-         * @param request UpdateFileMetaRequest
-         * @return UpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the partial metadata of the indexed files in a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata specified by CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFileMetaResponse
+        /// </returns>
         public UpdateFileMetaResponse UpdateFileMeta(UpdateFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateFileMetaWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新文件元信息
-         *
-         * @param request UpdateFileMetaRequest
-         * @return UpdateFileMetaResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the partial metadata of the indexed files in a dataset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot call this operation to update all metadata. You can update only metadata specified by CustomLabels, CustomId, and Figures. For more information, see the &quot;Request parameters&quot; section of this topic.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFileMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFileMetaResponse
+        /// </returns>
         public async Task<UpdateFileMetaResponse> UpdateFileMetaAsync(UpdateFileMetaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFileMetaWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新时空聚类
-         *
-         * @param tmpReq UpdateLocationDateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to create spatiotemporal clusters in the project.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateLocationDateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocationDateClusterResponse
+        /// </returns>
         public UpdateLocationDateClusterResponse UpdateLocationDateClusterWithOptions(UpdateLocationDateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -13965,13 +20821,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateLocationDateClusterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新时空聚类
-         *
-         * @param tmpReq UpdateLocationDateClusterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to create spatiotemporal clusters in the project.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateLocationDateClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocationDateClusterResponse
+        /// </returns>
         public async Task<UpdateLocationDateClusterResponse> UpdateLocationDateClusterWithOptionsAsync(UpdateLocationDateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14025,37 +20897,82 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateLocationDateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新时空聚类
-         *
-         * @param request UpdateLocationDateClusterRequest
-         * @return UpdateLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to create spatiotemporal clusters in the project.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLocationDateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocationDateClusterResponse
+        /// </returns>
         public UpdateLocationDateClusterResponse UpdateLocationDateCluster(UpdateLocationDateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateLocationDateClusterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新时空聚类
-         *
-         * @param request UpdateLocationDateClusterRequest
-         * @return UpdateLocationDateClusterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a spatiotemporal cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478188.html">CreateLocationDateClusteringTask</a> operation to create spatiotemporal clusters in the project.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLocationDateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocationDateClusterResponse
+        /// </returns>
         public async Task<UpdateLocationDateClusterResponse> UpdateLocationDateClusterAsync(UpdateLocationDateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateLocationDateClusterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新项目
-         *
-         * @param tmpReq UpdateProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that the project exists. For information about how to create a project, see &quot;CreateProject&quot;.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, you need to specify only the parameters that you want to update. The parameters that you do not specify remain unchanged after you call this operation.</description></item>
+        /// <item><description>Wait for up to 5 minutes for the update to take effect.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
         public UpdateProjectResponse UpdateProjectWithOptions(UpdateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14129,13 +21046,30 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateProjectResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新项目
-         *
-         * @param tmpReq UpdateProjectRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that the project exists. For information about how to create a project, see &quot;CreateProject&quot;.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, you need to specify only the parameters that you want to update. The parameters that you do not specify remain unchanged after you call this operation.</description></item>
+        /// <item><description>Wait for up to 5 minutes for the update to take effect.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
         public async Task<UpdateProjectResponse> UpdateProjectWithOptionsAsync(UpdateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14209,37 +21143,75 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新项目
-         *
-         * @param request UpdateProjectRequest
-         * @return UpdateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that the project exists. For information about how to create a project, see &quot;CreateProject&quot;.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, you need to specify only the parameters that you want to update. The parameters that you do not specify remain unchanged after you call this operation.</description></item>
+        /// <item><description>Wait for up to 5 minutes for the update to take effect.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
         public UpdateProjectResponse UpdateProject(UpdateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateProjectWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新项目
-         *
-         * @param request UpdateProjectRequest
-         * @return UpdateProjectResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that the project exists. For information about how to create a project, see &quot;CreateProject&quot;.</para>
+        /// <list type="bullet">
+        /// <item><description>When you call this operation, you need to specify only the parameters that you want to update. The parameters that you do not specify remain unchanged after you call this operation.</description></item>
+        /// <item><description>Wait for up to 5 minutes for the update to take effect.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
         public async Task<UpdateProjectResponse> UpdateProjectAsync(UpdateProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateProjectWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新故事
-         *
-         * @param tmpReq UpdateStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a story, such as the story name and cover image.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateStoryResponse
+        /// </returns>
         public UpdateStoryResponse UpdateStoryWithOptions(UpdateStoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14301,13 +21273,21 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateStoryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新故事
-         *
-         * @param tmpReq UpdateStoryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a story, such as the story name and cover image.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateStoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateStoryResponse
+        /// </returns>
         public async Task<UpdateStoryResponse> UpdateStoryWithOptionsAsync(UpdateStoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14369,37 +21349,65 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateStoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新故事
-         *
-         * @param request UpdateStoryRequest
-         * @return UpdateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a story, such as the story name and cover image.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateStoryResponse
+        /// </returns>
         public UpdateStoryResponse UpdateStory(UpdateStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateStoryWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新故事
-         *
-         * @param request UpdateStoryRequest
-         * @return UpdateStoryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a story, such as the story name and cover image.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateStoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateStoryResponse
+        /// </returns>
         public async Task<UpdateStoryResponse> UpdateStoryAsync(UpdateStoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateStoryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param tmpReq UpdateTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a trigger, such as the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a trigger that is in the Ready or Failed state. The update operation does not change the trigger status.</para>
+        /// <list type="bullet">
+        /// <item><description>After you update a trigger, the uncompleted tasks under the original trigger are no longer executed. You can call the <a href="https://help.aliyun.com/document_detail/479916.html">ResumeTrigger</a> operation to resume the execution of the trigger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTriggerResponse
+        /// </returns>
         public UpdateTriggerResponse UpdateTriggerWithOptions(UpdateTriggerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14457,13 +21465,29 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateTriggerResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param tmpReq UpdateTriggerRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a trigger, such as the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a trigger that is in the Ready or Failed state. The update operation does not change the trigger status.</para>
+        /// <list type="bullet">
+        /// <item><description>After you update a trigger, the uncompleted tasks under the original trigger are no longer executed. You can call the <a href="https://help.aliyun.com/document_detail/479916.html">ResumeTrigger</a> operation to resume the execution of the trigger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateTriggerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTriggerResponse
+        /// </returns>
         public async Task<UpdateTriggerResponse> UpdateTriggerWithOptionsAsync(UpdateTriggerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -14521,24 +21545,52 @@ namespace AlibabaCloud.SDK.Imm20200930
             return TeaModel.ToObject<UpdateTriggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param request UpdateTriggerRequest
-         * @return UpdateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a trigger, such as the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a trigger that is in the Ready or Failed state. The update operation does not change the trigger status.</para>
+        /// <list type="bullet">
+        /// <item><description>After you update a trigger, the uncompleted tasks under the original trigger are no longer executed. You can call the <a href="https://help.aliyun.com/document_detail/479916.html">ResumeTrigger</a> operation to resume the execution of the trigger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTriggerResponse
+        /// </returns>
         public UpdateTriggerResponse UpdateTrigger(UpdateTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTriggerWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新数据接入实例
-         *
-         * @param request UpdateTriggerRequest
-         * @return UpdateTriggerResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates information about a trigger, such as the input data source, data processing settings, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can update only a trigger that is in the Ready or Failed state. The update operation does not change the trigger status.</para>
+        /// <list type="bullet">
+        /// <item><description>After you update a trigger, the uncompleted tasks under the original trigger are no longer executed. You can call the <a href="https://help.aliyun.com/document_detail/479916.html">ResumeTrigger</a> operation to resume the execution of the trigger.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateTriggerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTriggerResponse
+        /// </returns>
         public async Task<UpdateTriggerResponse> UpdateTriggerAsync(UpdateTriggerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

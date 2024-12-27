@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Dataset Dataset { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>45234D4A-A3E3-4B23-AACA-8D897514****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

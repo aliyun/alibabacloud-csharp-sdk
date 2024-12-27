@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Field { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eq / gt / gte / lt / lte / match / prefix / and / or / not</para>
+        /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }

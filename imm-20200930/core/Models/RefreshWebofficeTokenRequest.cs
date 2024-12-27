@@ -10,25 +10,38 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class RefreshWebofficeTokenRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99d1b8b478b641c1b3372f5bd6********</para>
         /// </summary>
         [NameInMap("AccessToken")]
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
+        /// <para>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>immtest</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a730ae0d7c6a487d87c661d199********</para>
         /// </summary>
         [NameInMap("RefreshToken")]
         [Validation(Required=false)]

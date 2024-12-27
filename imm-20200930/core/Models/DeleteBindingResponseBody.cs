@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DeleteBindingResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACDFE467-C817-4B36-951A-6EB5A592****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

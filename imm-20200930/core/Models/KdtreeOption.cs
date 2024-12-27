@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public int? CompressionLevel { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>draco</para>
+        /// </summary>
         [NameInMap("LibraryName")]
         [Validation(Required=false)]
         public string LibraryName { get; set; }

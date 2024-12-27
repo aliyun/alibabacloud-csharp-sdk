@@ -10,21 +10,35 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetFileMetaRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-dataset</para>
         /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The URI of the file. Make sure that the file is indexed****.</para>
+        /// <para>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
+        /// <para>Specify the URI of the file in Photo and Drive Service in the pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://test-bucket/test-object</para>
         /// </summary>
         [NameInMap("URI")]
         [Validation(Required=false)]

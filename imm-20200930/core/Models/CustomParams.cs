@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CustomParams : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Normalize</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
