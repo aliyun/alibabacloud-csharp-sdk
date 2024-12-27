@@ -12483,6 +12483,278 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>书籍导读接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookIntroductionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookIntroductionResponse
+        /// </returns>
+        public RunBookIntroductionResponse RunBookIntroductionWithOptions(RunBookIntroductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunBookIntroduction",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunBookIntroductionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>书籍导读接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookIntroductionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookIntroductionResponse
+        /// </returns>
+        public async Task<RunBookIntroductionResponse> RunBookIntroductionWithOptionsAsync(RunBookIntroductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunBookIntroduction",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunBookIntroductionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>书籍导读接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookIntroductionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookIntroductionResponse
+        /// </returns>
+        public RunBookIntroductionResponse RunBookIntroduction(RunBookIntroductionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunBookIntroductionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>书籍导读接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookIntroductionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookIntroductionResponse
+        /// </returns>
+        public async Task<RunBookIntroductionResponse> RunBookIntroductionAsync(RunBookIntroductionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunBookIntroductionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>书籍智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookSmartCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookSmartCardResponse
+        /// </returns>
+        public RunBookSmartCardResponse RunBookSmartCardWithOptions(RunBookSmartCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunBookSmartCard",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunBookSmartCardResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>书籍智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookSmartCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookSmartCardResponse
+        /// </returns>
+        public async Task<RunBookSmartCardResponse> RunBookSmartCardWithOptionsAsync(RunBookSmartCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunBookSmartCard",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunBookSmartCardResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>书籍智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookSmartCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookSmartCardResponse
+        /// </returns>
+        public RunBookSmartCardResponse RunBookSmartCard(RunBookSmartCardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunBookSmartCardWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>书籍智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookSmartCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookSmartCardResponse
+        /// </returns>
+        public async Task<RunBookSmartCardResponse> RunBookSmartCardAsync(RunBookSmartCardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunBookSmartCardWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>内容续写</para>
         /// </summary>
         /// 
@@ -13443,6 +13715,142 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RunDocQaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocSmartCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocSmartCardResponse
+        /// </returns>
+        public RunDocSmartCardResponse RunDocSmartCardWithOptions(RunDocSmartCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDocSmartCard",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunDocSmartCardResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocSmartCardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocSmartCardResponse
+        /// </returns>
+        public async Task<RunDocSmartCardResponse> RunDocSmartCardWithOptionsAsync(RunDocSmartCardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDocSmartCard",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunDocSmartCardResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocSmartCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocSmartCardResponse
+        /// </returns>
+        public RunDocSmartCardResponse RunDocSmartCard(RunDocSmartCardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunDocSmartCardWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档智能卡片接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocSmartCardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocSmartCardResponse
+        /// </returns>
+        public async Task<RunDocSmartCardResponse> RunDocSmartCardAsync(RunDocSmartCardRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunDocSmartCardWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18467,6 +18875,154 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateMaterialDocumentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读上传书籍</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadBookResponse
+        /// </returns>
+        public UploadBookResponse UploadBookWithOptions(UploadBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadBookShrinkRequest request = new UploadBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Docs))
+            {
+                request.DocsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Docs, "Docs", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocsShrink))
+            {
+                body["Docs"] = request.DocsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadBook",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadBookResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读上传书籍</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadBookRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadBookResponse
+        /// </returns>
+        public async Task<UploadBookResponse> UploadBookWithOptionsAsync(UploadBookRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadBookShrinkRequest request = new UploadBookShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Docs))
+            {
+                request.DocsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Docs, "Docs", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocsShrink))
+            {
+                body["Docs"] = request.DocsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadBook",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadBookResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读上传书籍</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadBookResponse
+        /// </returns>
+        public UploadBookResponse UploadBook(UploadBookRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UploadBookWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读上传书籍</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadBookRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadBookResponse
+        /// </returns>
+        public async Task<UploadBookResponse> UploadBookAsync(UploadBookRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UploadBookWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
