@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class QueryAuditLogResponseBody : TeaModel {
+    public class ListDataSourceResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>78C1AA2D-9201-599E-A0BA-6FC462E57A95</para>
+        /// <para>7FC9A6A6-****-5CED-B*****E891E4075</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -19,8 +19,40 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public List<QueryAuditLogResponseBodyResult> Result { get; set; }
-        public class QueryAuditLogResponseBodyResult : TeaModel {
+        public List<ListDataSourceResponseBodyResult> Result { get; set; }
+        public class ListDataSourceResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>281*****-485******-8</para>
+            /// </summary>
+            [NameInMap("CreatorId")]
+            [Validation(Required=false)]
+            public string CreatorId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>system</para>
+            /// </summary>
+            [NameInMap("CreatorName")]
+            [Validation(Required=false)]
+            public string CreatorName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>7FC9A6A6-****-5CED-B*****E891E4075</para>
+            /// </summary>
+            [NameInMap("DatasourceId")]
+            [Validation(Required=false)]
+            public string DatasourceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>odps</para>
+            /// </summary>
+            [NameInMap("DsType")]
+            [Validation(Required=false)]
+            public string DsType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-04-16 13:17:39</para>
@@ -31,51 +63,27 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>wukaibis</para>
+            /// <para>2024-08-15 10:06:31</para>
             /// </summary>
-            [NameInMap("OperatorAccountName")]
+            [NameInMap("GmtModified")]
             [Validation(Required=false)]
-            public string OperatorAccountName { get; set; }
+            public string GmtModified { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>buc_344078</para>
+            /// <para>dataphin</para>
             /// </summary>
-            [NameInMap("OperatorName")]
+            [NameInMap("ParentDsType")]
             [Validation(Required=false)]
-            public string OperatorName { get; set; }
+            public string ParentDsType { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>CREATE</para>
+            /// <para>0327</para>
             /// </summary>
-            [NameInMap("OperatorType")]
+            [NameInMap("ShowName")]
             [Validation(Required=false)]
-            public string OperatorType { get; set; }
-
-            [NameInMap("TargetId")]
-            [Validation(Required=false)]
-            public string TargetId { get; set; }
-
-            [NameInMap("TargetName")]
-            [Validation(Required=false)]
-            public string TargetName { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>USER</para>
-            /// </summary>
-            [NameInMap("TargetType")]
-            [Validation(Required=false)]
-            public string TargetType { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>87c6b145-090c-43e1-9426-8f93be23****</para>
-            /// </summary>
-            [NameInMap("WorkspaceId")]
-            [Validation(Required=false)]
-            public string WorkspaceId { get; set; }
+            public string ShowName { get; set; }
 
         }
 

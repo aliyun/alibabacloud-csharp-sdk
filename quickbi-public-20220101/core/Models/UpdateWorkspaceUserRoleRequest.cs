@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateWorkspaceUserRoleRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>25</para>
         /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public long? RoleId { get; set; }
+
+        [NameInMap("RoleIds")]
+        [Validation(Required=false)]
+        public string RoleIds { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

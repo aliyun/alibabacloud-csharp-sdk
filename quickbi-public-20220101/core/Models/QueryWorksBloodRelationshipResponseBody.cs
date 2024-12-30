@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public int? ComponentType { get; set; }
 
+            [NameInMap("ComponentTypeCnName")]
+            [Validation(Required=false)]
+            public string ComponentTypeCnName { get; set; }
+
             /// <summary>
             /// <para>The type of the image component.</para>
             /// 
@@ -127,6 +131,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public string DataType { get; set; }
+
+                [NameInMap("Expression")]
+                [Validation(Required=false)]
+                public string Expression { get; set; }
 
                 /// <summary>
                 /// <para>The type of the field. Valid values:</para>
