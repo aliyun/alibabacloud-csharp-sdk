@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceManagerResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceManagerResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The status of manual bypass. Valid values:</para>
         /// <list type="bullet">

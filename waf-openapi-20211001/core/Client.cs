@@ -9331,9 +9331,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["RuleId"] = request.RuleId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
             {
                 query["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9397,9 +9405,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["RuleId"] = request.RuleId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
             {
                 query["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10323,6 +10339,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                query["TemplateIds"] = request.TemplateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
@@ -10404,6 +10428,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                query["TemplateIds"] = request.TemplateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
@@ -21846,7 +21878,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21916,7 +21948,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21986,7 +22018,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22004,7 +22036,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL and Transport Layer Security (TLS) settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23511,6 +23543,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleStatus))
             {
                 query["RuleStatus"] = request.RuleStatus;
@@ -23560,6 +23600,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleStatus))
             {
@@ -25534,7 +25582,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances with Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25589,7 +25637,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances with Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25644,7 +25692,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances with Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25667,7 +25715,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</para>
+        /// <para>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances with Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

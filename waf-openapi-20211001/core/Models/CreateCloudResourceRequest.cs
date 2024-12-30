@@ -365,14 +365,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tags to add to the resource.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateCloudResourceRequestTag> Tag { get; set; }
         public class CreateCloudResourceRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TagKey1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TagValue1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

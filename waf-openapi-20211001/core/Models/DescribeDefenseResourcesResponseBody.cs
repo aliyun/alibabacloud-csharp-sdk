@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The protected objects.</para>
+        /// <para>An array of protected objects.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<DescribeDefenseResourcesResponseBodyResources> Resources { get; set; }
         public class DescribeDefenseResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The status of the tracking cookie.</para>
+            /// <para>跟踪cookie开关状态。</para>
             /// <list type="bullet">
-            /// <item><description><b>0:</b> disabled.</description></item>
-            /// <item><description><b>1:</b> enabled.</description></item>
+            /// <item><description><para><b>0</b>：表示关闭。</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>：表示开启。</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwCookieStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute in the tracking cookie.</para>
+            /// <para>跟踪cookie的secure属性状态。</para>
             /// <list type="bullet">
-            /// <item><description><b>0:</b> disabled.</description></item>
-            /// <item><description><b>1:</b> enabled.</description></item>
+            /// <item><description><para><b>0</b>：表示关闭。</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>：表示开启。</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,10 +59,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwSecureStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute in the slider CAPTCHA cookie.</para>
+            /// <para>滑块cookie的secure属性状态。</para>
             /// <list type="bullet">
-            /// <item><description><b>0:</b> disabled.</description></item>
-            /// <item><description><b>1:</b> enabled.</description></item>
+            /// <item><description><para><b>0</b>：表示关闭。</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>：表示开启。</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwV3SecureStatus { get; set; }
 
             /// <summary>
-            /// <para>The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF headers are used as the originating IP addresses of clients.</para>
+            /// <para>An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.</para>
             /// </summary>
             [NameInMap("CustomHeaders")]
             [Validation(Required=false)]
@@ -86,14 +92,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The details of the protected object. Different key-value pairs indicate different attributes of the protected object.</para>
+            /// <para>The description of the protected object. Different key-value pairs in a map indicate different properties of the protected object.</para>
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public Dictionary<string, object> Detail { get; set; }
 
             /// <summary>
-            /// <para>The time when the protected object was created. Unit: milliseconds.</para>
+            /// <para>The creation time of the protected object. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652149203187</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the protected object was modified. Unit: milliseconds.</para>
+            /// <para>The most recent modification time of the protected object. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665633032000</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
+            /// <para>多账号统一管理场景中防护对象资产归属账号。</para>
             /// 
             /// <b>Example:</b>
             /// <para>135*********46</para>
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>The pattern in which the protected object is protected.</para>
+            /// <para>The protection pattern.</para>
             /// 
             /// <b>Example:</b>
             /// <para>domain</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceGroup { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud resource group.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm***q</para>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceOrigin { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the X-Forwarded-For (XFF) proxy is enabled.</para>
+            /// <para>Indicates whether the X-Forwarded-For (XFF) header is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

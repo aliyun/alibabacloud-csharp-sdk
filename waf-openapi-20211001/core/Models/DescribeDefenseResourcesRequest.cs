@@ -80,16 +80,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The tags of the resources that you want to query. You can specify up to 20 tags.</para>
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDefenseResourcesRequestTag> Tag { get; set; }
         public class DescribeDefenseResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>Tagkey1</para>
             /// </summary>
@@ -98,8 +93,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>TagValue1</para>
             /// </summary>

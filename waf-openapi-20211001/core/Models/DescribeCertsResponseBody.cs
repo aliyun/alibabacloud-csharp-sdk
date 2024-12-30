@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeCertsResponseBodyCerts> Certs { get; set; }
         public class DescribeCertsResponseBodyCerts : TeaModel {
             /// <summary>
-            /// <para>The time when the certificate becomes valid.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1976256736582</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AfterDate { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate expires.</para>
+            /// <para>The effective time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1976256836582</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BeforeDate { get; set; }
 
             /// <summary>
-            /// <para>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</para>
+            /// <para>The globally unique ID of the certificate. The value follows a &quot;\<Certificate ID>-ap-southeast-1&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-ap-southeast-1.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1234567-cn-hangzhou</para>
+            /// <para>123-ap-southeast-1</para>
             /// </summary>
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The domain name that is added to WAF.</para>
+            /// <para>The domain that is supported by the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>

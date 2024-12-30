@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
+        [NameInMap("RuleName")]
+        [Validation(Required=false)]
+        public string RuleName { get; set; }
+
         /// <summary>
         /// <para>The type of the protection rule. Valid values:</para>
         /// <list type="bullet">
@@ -95,6 +99,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public string RuleType { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
 
     }
 

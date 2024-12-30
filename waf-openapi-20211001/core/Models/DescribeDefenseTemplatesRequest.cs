@@ -144,6 +144,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
+        [NameInMap("TemplateIds")]
+        [Validation(Required=false)]
+        public string TemplateIds { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
         /// <summary>
         /// <para>The type of the protection template. Valid values:</para>
         /// <list type="bullet">

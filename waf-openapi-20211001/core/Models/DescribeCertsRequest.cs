@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
