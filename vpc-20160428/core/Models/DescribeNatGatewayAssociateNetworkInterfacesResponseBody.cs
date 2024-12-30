@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20</para>

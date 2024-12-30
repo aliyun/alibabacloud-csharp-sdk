@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeFailoverTestJobsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of entries on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -98,6 +100,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>The beginning of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T14:00:00Z</para>
             /// </summary>
@@ -123,6 +127,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The end of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T15:00:00Z</para>
             /// </summary>
@@ -143,6 +149,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
@@ -151,6 +163,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
@@ -159,6 +173,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

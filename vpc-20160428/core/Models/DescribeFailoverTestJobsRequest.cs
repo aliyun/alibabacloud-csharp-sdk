@@ -74,6 +74,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the value of <b>NextToken</b> is not returned, it indicates that no next query is to be sent.</description></item>
+        /// <item><description>If a value of <b>NextToken</b> is returned, the value is the token that is used for the subsequent query.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>

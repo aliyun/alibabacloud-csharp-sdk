@@ -12722,7 +12722,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可靠物理专线</para>
+        /// <para>Creates Express Connect circuits in high reliability mode. This improves the stability of multiple Express Connect circuits and prevents service interruptions caused by single points of failures (SPOFs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12820,7 +12820,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可靠物理专线</para>
+        /// <para>Creates Express Connect circuits in high reliability mode. This improves the stability of multiple Express Connect circuits and prevents service interruptions caused by single points of failures (SPOFs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12918,7 +12918,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可靠物理专线</para>
+        /// <para>Creates Express Connect circuits in high reliability mode. This improves the stability of multiple Express Connect circuits and prevents service interruptions caused by single points of failures (SPOFs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12936,7 +12936,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可靠物理专线</para>
+        /// <para>Creates Express Connect circuits in high reliability mode. This improves the stability of multiple Express Connect circuits and prevents service interruptions caused by single points of failures (SPOFs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25442,7 +25442,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高速通道Qos队列</para>
+        /// <para>Deletes a quality of service (QoS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25512,7 +25512,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高速通道Qos队列</para>
+        /// <para>Deletes a quality of service (QoS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25582,7 +25582,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高速通道Qos队列</para>
+        /// <para>Deletes a quality of service (QoS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25600,7 +25600,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高速通道Qos队列</para>
+        /// <para>Deletes a quality of service (QoS) queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38018,7 +38018,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos</para>
+        /// <para>Queries the quality of service (QoS) policies of Express Connect. The response can be displayed by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38104,7 +38104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos</para>
+        /// <para>Queries the quality of service (QoS) policies of Express Connect. The response can be displayed by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38190,7 +38190,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos</para>
+        /// <para>Queries the quality of service (QoS) policies of Express Connect. The response can be displayed by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38208,7 +38208,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos</para>
+        /// <para>Queries the quality of service (QoS) policies of Express Connect. The response can be displayed by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38226,7 +38226,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos队列</para>
+        /// <para>Queries the information about the quality of service (QoS) queues of the Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38300,7 +38300,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos队列</para>
+        /// <para>Queries the information about the quality of service (QoS) queues of the Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38374,7 +38374,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos队列</para>
+        /// <para>Queries the information about the quality of service (QoS) queues of the Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38392,7 +38392,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高速通道Qos队列</para>
+        /// <para>Queries the information about the quality of service (QoS) queues of the Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77780,7 +77780,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束故障演练任务</para>
+        /// <para>Terminates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77846,7 +77846,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束故障演练任务</para>
+        /// <para>Terminates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77912,7 +77912,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束故障演练任务</para>
+        /// <para>Terminates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77930,7 +77930,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束故障演练任务</para>
+        /// <para>Terminates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81100,7 +81100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新故障演练任务</para>
+        /// <para>Updates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81186,7 +81186,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新故障演练任务</para>
+        /// <para>Updates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81272,7 +81272,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新故障演练任务</para>
+        /// <para>Updates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81290,7 +81290,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新故障演练任务</para>
+        /// <para>Updates a failover test.</para>
         /// </summary>
         /// 
         /// <param name="request">

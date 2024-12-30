@@ -1,3 +1,7 @@
+2024-12-30 Version: 6.11.1
+- Update API DescribeNatGatewayAssociateNetworkInterfaces: update response param.
+
+
 2024-12-20 Version: 6.11.0
 - Support API TransformEipSegmentToPublicIpAddressPool.
 - Update API CreateExpressConnectTrafficQos: add param ResourceGroupId.

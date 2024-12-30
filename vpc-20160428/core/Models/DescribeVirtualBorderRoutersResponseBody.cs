@@ -426,6 +426,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string EcrId { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the Alibaba Cloud account (primary account)  to which the ECR belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192732132151xxxx</para>
+                /// </summary>
                 [NameInMap("EcrOwnerId")]
                 [Validation(Required=false)]
                 public string EcrOwnerId { get; set; }
