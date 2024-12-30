@@ -527,9 +527,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>The severity levels of CVEs that can be automatically patched. Separate multiple levels with commas (,). Example: <c>asap,later</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>asap</c>: high severity.</description></item>
-                /// <item><description><c>later</c>: medium severity.</description></item>
-                /// <item><description><c>nntf</c>: low severity.</description></item>
+                /// <item><description><c>asap</c>: high</description></item>
+                /// <item><description><c>later</c>: medium</description></item>
+                /// <item><description><c>nntf</c>: low</description></item>
                 /// </list>
                 /// <para>If <c>auto_vul_fix</c> is set to true, the default value of this parameter is <c>asap</c>.</para>
                 /// 
@@ -1220,7 +1220,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>cloud</c>: basic disk.</description></item>
             /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
             /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-            /// <item><description><c>cloud_essd</c>: Enterprise SSD (ESSD).</description></item>
+            /// <item><description><c>cloud_essd</c>: ESSD.</description></item>
             /// <item><description><c>cloud_auto</c>: ESSD AutoPL disk.</description></item>
             /// <item><description><c>cloud_essd_entry</c>: ESSD Entry disk.</description></item>
             /// </list>

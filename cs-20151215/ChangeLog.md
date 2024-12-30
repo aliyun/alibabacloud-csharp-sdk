@@ -1,3 +1,9 @@
+2024-12-30 Version: 4.8.6
+- Update API ListOperationPlans: update response param.
+- Update API ModifyClusterTags: add param body.
+- Update API ModifyClusterTags: update param body.
+
+
 2024-12-13 Version: 4.8.5
 - Update API GetClusterDiagnosisCheckItems: add param language.
 - Update API GetClusterDiagnosisResult: add param language.

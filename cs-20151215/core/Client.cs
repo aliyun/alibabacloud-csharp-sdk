@@ -10410,9 +10410,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>****Only Alibaba Cloud accounts can call this API operation.</description></item>
-        /// </list>
+        /// <para>You can call this operation only by using an Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10467,9 +10465,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>****Only Alibaba Cloud accounts can call this API operation.</description></item>
-        /// </list>
+        /// <para>You can call this operation only by using an Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10524,9 +10520,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>****Only Alibaba Cloud accounts can call this API operation.</description></item>
-        /// </list>
+        /// <para>You can call this operation only by using an Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10550,9 +10544,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>****Only Alibaba Cloud accounts can call this API operation.</description></item>
-        /// </list>
+        /// <para>You can call this operation only by using an Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">

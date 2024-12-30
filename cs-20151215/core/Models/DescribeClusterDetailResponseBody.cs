@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public DescribeClusterDetailResponseBodyControlPlaneConfig ControlPlaneConfig { get; set; }
         public class DescribeClusterDetailResponseBodyControlPlaneConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether auto-renewal is enabled for the node.</para>
+            /// <para>Indicates whether auto-renewal is enabled for the nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal duration for the node.</para>
+            /// <para>The auto-renewal duration for the nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the node.</para>
+            /// <para>The instance types of the nodes.</para>
             /// </summary>
             [NameInMap("instance_types")]
             [Validation(Required=false)]
@@ -641,7 +641,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string SubnetCidr { get; set; }
 
         /// <summary>
-        /// <para>The resource tags of the cluster.</para>
+        /// <para>The resource labels of the cluster.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

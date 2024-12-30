@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string TargetType { get; set; }
 
+            [NameInMap("task_id")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
             /// <summary>
             /// <para>The plan type. Valid values:</para>
             /// <list type="bullet">

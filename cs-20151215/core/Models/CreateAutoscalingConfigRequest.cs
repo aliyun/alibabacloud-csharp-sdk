@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MinReplicaCount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode. For more information about the swift mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling mode</a>. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode. For more information about the swift mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling mode</a>. Default value: false Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: deletes the corresponding Kubernetes node objects after nodes are removed in swift mode. We recommend that you do not set the value to true because data inconsistency may occur in Kubernetes objects.</description></item>
         /// <item><description><c>false</c>: retains the corresponding Kubernetes node objects after nodes are removed in swift mode.</description></item>
