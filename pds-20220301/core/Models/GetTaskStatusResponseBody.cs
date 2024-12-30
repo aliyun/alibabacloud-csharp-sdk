@@ -10,51 +10,46 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetTaskStatusResponseBody : TeaModel {
         /// <summary>
-        /// The state of the task.
+        /// <para>The state of the task.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>running</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <para>: The task is</para>
+        /// <!-- -->
         /// 
-        /// *   running
+        /// <para>running</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>.</para>
+        /// </description></item>
+        /// <item><description><para>failed</para>
+        /// <!-- -->
         /// 
-        ///     : The task is
+        /// <para>: The task</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>fails</para>
+        /// <!-- -->
         /// 
-        ///     running
+        /// <para>.</para>
+        /// </description></item>
+        /// <item><description><para>succeeded</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <para>: The task is</para>
+        /// <!-- -->
         /// 
-        ///     .
+        /// <para>successful</para>
+        /// <!-- -->
         /// 
-        /// *   failed
+        /// <para>.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        ///     : The task
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     fails
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
-        /// 
-        /// *   succeeded
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     : The task is
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     successful
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     .
+        /// <b>Example:</b>
+        /// <para>running</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

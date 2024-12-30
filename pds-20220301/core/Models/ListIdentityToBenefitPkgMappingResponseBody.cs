@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListIdentityToBenefitPkgMappingResponseBody : TeaModel {
         /// <summary>
-        /// The information about the benefit packages that are associated with an entity.
+        /// <para>The information about the benefit packages that are associated with an entity.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]

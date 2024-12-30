@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetUploadUrlRequest : TeaModel {
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The file ID.
+        /// <para>The file ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>5d5b846942cf94fa72324c14a4bda34e81da635d</para>
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
         /// <summary>
-        /// The information about the file parts.
-        /// 
-        /// This parameter is required.
+        /// <para>The information about the file parts.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("part_info_list")]
         [Validation(Required=false)]
@@ -45,21 +48,24 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
+            /// <para>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</para>
             /// </summary>
             [NameInMap("parallel_sha1_ctx")]
             [Validation(Required=false)]
             public GetUploadUrlRequestPartInfoListParallelSha1Ctx ParallelSha1Ctx { get; set; }
             public class GetUploadUrlRequestPartInfoListParallelSha1Ctx : TeaModel {
                 /// <summary>
-                /// The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
+                /// <para>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</para>
                 /// </summary>
                 [NameInMap("h")]
                 [Validation(Required=false)]
                 public List<long?> H { get; set; }
 
                 /// <summary>
-                /// The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.
+                /// <para>The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10240</para>
                 /// </summary>
                 [NameInMap("part_offset")]
                 [Validation(Required=false)]
@@ -82,7 +88,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             }
 
             /// <summary>
-            /// The serial number of a part.
+            /// <para>The serial number of a part.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("part_number")]
             [Validation(Required=false)]
@@ -91,16 +100,21 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         }
 
         /// <summary>
-        /// The share ID.
+        /// <para>The share ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7JQX1FswpQ8</para>
         /// </summary>
         [NameInMap("share_id")]
         [Validation(Required=false)]
         public string ShareId { get; set; }
 
         /// <summary>
-        /// The ID of the upload task.
+        /// <para>The ID of the upload task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10166D06127B413BA1EC8ABB1144D111</para>
         /// </summary>
         [NameInMap("upload_id")]
         [Validation(Required=false)]

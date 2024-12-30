@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? ExpireTime { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
         [NameInMap("permission")]
         [Validation(Required=false)]
         public Permission Permission { get; set; }

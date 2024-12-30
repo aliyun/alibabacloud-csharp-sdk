@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListIdentityRoleRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("identity")]
         [Validation(Required=false)]

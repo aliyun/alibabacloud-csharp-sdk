@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetLinkInfoByUserIdResponseBody : TeaModel {
         /// <summary>
-        /// The information about the users.
+        /// <para>The information about the users.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]

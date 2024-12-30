@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<Story> Items { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJ***</para>
+        /// </summary>
         [NameInMap("next_marker")]
         [Validation(Required=false)]
         public string NextMarker { get; set; }

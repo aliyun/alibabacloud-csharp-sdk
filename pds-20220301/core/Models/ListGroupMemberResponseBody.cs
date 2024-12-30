@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListGroupMemberResponseBody : TeaModel {
         /// <summary>
-        /// The information about the groups.
+        /// <para>The information about the groups.</para>
         /// </summary>
         [NameInMap("group_items")]
         [Validation(Required=false)]
         public List<Group> GroupItems { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhM1</para>
         /// </summary>
         [NameInMap("next_marker")]
         [Validation(Required=false)]
         public string NextMarker { get; set; }
 
         /// <summary>
-        /// The information about the users.
+        /// <para>The information about the users.</para>
         /// </summary>
         [NameInMap("user_items")]
         [Validation(Required=false)]

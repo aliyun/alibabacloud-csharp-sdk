@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class UpdateFacegroupResponseBody : TeaModel {
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The group ID.
+        /// <para>The group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group-abc</para>
         /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]

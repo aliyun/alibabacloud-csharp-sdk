@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<string> FileIdList { get; set; }
 
+        [NameInMap("office_editable")]
+        [Validation(Required=false)]
+        public bool? OfficeEditable { get; set; }
+
         [NameInMap("preview_count")]
         [Validation(Required=false)]
         public long? PreviewCount { get; set; }

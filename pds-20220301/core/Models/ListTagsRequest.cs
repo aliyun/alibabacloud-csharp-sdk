@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListTagsRequest : TeaModel {
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The method that is used to generate the thumbnail of an image.
+        /// <para>The method that is used to generate the thumbnail of an image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image/resize,w_200</para>
         /// </summary>
         [NameInMap("image_thumbnail_process")]
         [Validation(Required=false)]
         public string ImageThumbnailProcess { get; set; }
 
         /// <summary>
-        /// The method that is used to generate the thumbnail of a video.
+        /// <para>The method that is used to generate the thumbnail of a video.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</para>
         /// </summary>
         [NameInMap("video_thumbnail_process")]
         [Validation(Required=false)]

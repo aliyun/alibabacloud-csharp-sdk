@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class SearchAddressGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The location-based groups.
+        /// <para>The location-based groups.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]

@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string Extra { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>130***</para>
         /// </summary>
         [NameInMap("identity")]
         [Validation(Required=false)]
         public string Identity { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mobile</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

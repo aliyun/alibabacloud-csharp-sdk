@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetShareLinkByAnonymousRequest : TeaModel {
         /// <summary>
-        /// The share ID.
+        /// <para>The share ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7JQX1FswpQ8</para>
         /// </summary>
         [NameInMap("share_id")]
         [Validation(Required=false)]

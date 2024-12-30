@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class UserTag : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

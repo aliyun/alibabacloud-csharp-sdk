@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class VideoMediaMetadata : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1080</para>
+        /// </summary>
         [NameInMap("height")]
         [Validation(Required=false)]
         public long? Height { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<VideoMediaVideoStream> VideoMediaVideoStream { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1920</para>
+        /// </summary>
         [NameInMap("width")]
         [Validation(Required=false)]
         public long? Width { get; set; }

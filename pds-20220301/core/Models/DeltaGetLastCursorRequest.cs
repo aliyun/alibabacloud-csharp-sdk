@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class DeltaGetLastCursorRequest : TeaModel {
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The ID of the root file of the synced folder.
+        /// <para>The ID of the root file of the synced folder.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>622fb09598ae66777c7040109a16f49381f6abe1</para>
         /// </summary>
         [NameInMap("sync_root_id")]
         [Validation(Required=false)]

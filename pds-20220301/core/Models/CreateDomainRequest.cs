@@ -10,51 +10,71 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// The description of the domain.
+        /// <para>domain 描述</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>你好企业网盘开发环境</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the domain.
+        /// <para>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>你好企业网盘</para>
         /// </summary>
         [NameInMap("domain_name")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.
+        /// <para>https</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("init_drive_enable")]
         [Validation(Required=false)]
         public bool? InitDriveEnable { get; set; }
 
         /// <summary>
-        /// The size of the default drive. Unit: bytes. You must specify init_drive_size if you set init_drive_enable to true. Default value: 0. A value of 0 specifies that the size of the default drive is 0 bytes and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to 0. A value of -1 specifies that the size is unlimited.
+        /// <para>http</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1073741824</para>
         /// </summary>
         [NameInMap("init_drive_size")]
         [Validation(Required=false)]
         public long? InitDriveSize { get; set; }
 
         /// <summary>
-        /// The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.
+        /// <para>Create domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bj1</para>
         /// </summary>
         [NameInMap("parent_domain_id")]
         [Validation(Required=false)]
         public string ParentDomainId { get; set; }
 
         /// <summary>
-        /// The total storage quota for all drives in the domain. A value of 0 specifies that the quota is unlimited.
+        /// <para>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1099511627776</para>
         /// </summary>
         [NameInMap("size_quota")]
         [Validation(Required=false)]
         public long? SizeQuota { get; set; }
 
         /// <summary>
-        /// The largest number of users that can be created in the domain. A value of 0 specifies that the number is unlimited.
+        /// <para>The information about the domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("user_count_quota")]
         [Validation(Required=false)]

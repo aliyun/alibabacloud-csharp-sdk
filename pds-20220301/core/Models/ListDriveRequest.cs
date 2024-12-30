@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListDriveRequest : TeaModel {
         /// <summary>
-        /// The maximum number of results to return. Valid values: 1 to 100. Default value: 100.
+        /// <para>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</para>
         /// </summary>
         [NameInMap("marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
         /// <summary>
-        /// The owner of the drive. If this parameter is not specified, all drives are returned.
+        /// <para>The owner of the drive. If this parameter is not specified, all drives are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c9b7a5aa04d14ae3867fdc886fa01da4</para>
         /// </summary>
         [NameInMap("owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// The type of the owner. Valid values:
+        /// <para>The type of the owner. Valid values:</para>
+        /// <para>user and group.</para>
+        /// <para>By default, drives of all owner types are returned.</para>
         /// 
-        /// user and group.
-        /// 
-        /// By default, drives of all owner types are returned.
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("owner_type")]
         [Validation(Required=false)]

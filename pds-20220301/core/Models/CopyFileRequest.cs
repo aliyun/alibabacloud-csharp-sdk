@@ -10,46 +10,62 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CopyFileRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically rename the file if the file name already exists in the destination folder. Default value: false.
+        /// <para>Specifies whether to automatically rename the file if the file name already exists in the destination folder. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("auto_rename")]
         [Validation(Required=false)]
         public bool? AutoRename { get; set; }
 
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The file ID or folder ID.
+        /// <para>The file ID or folder ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>4221bf6e6ab43c255edc4463bf3a6f5f5d317406</para>
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
         /// <summary>
-        /// The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.
+        /// <para>The share ID. If you want to manage a file by using a share link, carry the <c>x-share-token</c> header for authentication in the request and specify share_id. In this case, <c>drive_id</c> is invalid. Otherwise, use an <c>AccessKey pair</c> or <c>access token</c> for authentication and specify <c>drive_id</c>. You must specify one of <c>share_id</c> and <c>drive_id</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7JQX1FswpQ8</para>
         /// </summary>
         [NameInMap("share_id")]
         [Validation(Required=false)]
         public string ShareId { get; set; }
 
         /// <summary>
-        /// The ID of the drive to which you want to copy the file or folder. Default value: the value of drive_id.
+        /// <para>The ID of the drive to which you want to copy the file or folder. Default value: the value of drive_id.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("to_drive_id")]
         [Validation(Required=false)]
         public string ToDriveId { get; set; }
 
         /// <summary>
-        /// The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.
+        /// <para>The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>6520943DC261</para>
         /// </summary>
         [NameInMap("to_parent_file_id")]
         [Validation(Required=false)]

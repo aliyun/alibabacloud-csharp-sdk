@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetAsyncTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the asynchronous task.
+        /// <para>The ID of the asynchronous task.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>000e89fb-cf8f-11e9-8ab4-b6e980803a3b</para>
         /// </summary>
         [NameInMap("async_task_id")]
         [Validation(Required=false)]

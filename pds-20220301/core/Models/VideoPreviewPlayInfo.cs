@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class VideoPreviewPlayInfo : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>live_transcoding</para>
+        /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }

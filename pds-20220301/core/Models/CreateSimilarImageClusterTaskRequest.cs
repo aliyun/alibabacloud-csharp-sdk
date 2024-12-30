@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CreateSimilarImageClusterTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]

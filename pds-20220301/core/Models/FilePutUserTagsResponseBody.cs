@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class FilePutUserTagsResponseBody : TeaModel {
         /// <summary>
-        /// The file ID.
+        /// <para>The file ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9520943DC264</para>
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]

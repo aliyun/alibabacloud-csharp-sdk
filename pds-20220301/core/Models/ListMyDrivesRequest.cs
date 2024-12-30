@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListMyDrivesRequest : TeaModel {
         /// <summary>
-        /// The maximum number of results to return. Default value: 100. Valid values: 1 to 100.
+        /// <para>The maximum number of results to return. Default value: 100. Valid values: 1 to 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</para>
         /// </summary>
         [NameInMap("marker")]
         [Validation(Required=false)]

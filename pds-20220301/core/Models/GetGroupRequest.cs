@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetGroupRequest : TeaModel {
         /// <summary>
-        /// The group ID.
+        /// <para>The group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2e43ec8427dd45f19431b7504649a1b1</para>
         /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]

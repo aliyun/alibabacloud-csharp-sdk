@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class FileListPermissionRequest : TeaModel {
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The file ID.
+        /// <para>The file ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4221bf6e6ab43a255edc4463bffa6f5f5d317401</para>
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]

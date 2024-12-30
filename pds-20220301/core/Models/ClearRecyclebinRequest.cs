@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ClearRecyclebinRequest : TeaModel {
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]

@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CsiGetFileInfoRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9520943DC264</para>
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("url_expire_sec")]
         [Validation(Required=false)]
         public int? UrlExpireSec { get; set; }

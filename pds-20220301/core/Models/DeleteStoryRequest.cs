@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class DeleteStoryRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9132e0d8-fe92-4e56-86c3-f5f112308003</para>
         /// </summary>
         [NameInMap("story_id")]
         [Validation(Required=false)]

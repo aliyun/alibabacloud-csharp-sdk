@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Identity { get; set; }
 
+        [NameInMap("last_login_time")]
+        [Validation(Required=false)]
+        public long? LastLoginTime { get; set; }
+
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }

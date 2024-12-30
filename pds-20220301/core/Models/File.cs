@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class File : TeaModel {
+        [NameInMap("action_list")]
+        [Validation(Required=false)]
+        public List<string> ActionList { get; set; }
+
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public bool? Hidden { get; set; }
 
+        [NameInMap("id_path")]
+        [Validation(Required=false)]
+        public string IdPath { get; set; }
+
         [NameInMap("image_media_metadata")]
         [Validation(Required=false)]
         public ImageMediaMetadata ImageMediaMetadata { get; set; }
@@ -80,6 +88,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("name_path")]
+        [Validation(Required=false)]
+        public string NamePath { get; set; }
 
         [NameInMap("parent_file_id")]
         [Validation(Required=false)]

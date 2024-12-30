@@ -10,45 +10,55 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class UpdateRevisionRequest : TeaModel {
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The file ID.
+        /// <para>The file ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9520943DC264</para>
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
         /// <summary>
-        /// Specifies whether to permanently retain a version.
+        /// <para>Specifies whether to permanently retain a version.</para>
+        /// <para>By default, this parameter is not specified, which indicates that you do not modify the permanent retention configuration of the version.</para>
         /// 
-        /// By default, this parameter is not specified, which indicates that you do not modify the permanent retention configuration of the version.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("keep_forever")]
         [Validation(Required=false)]
         public bool? KeepForever { get; set; }
 
         /// <summary>
-        /// The description of the version. The description can be up to 1,024 characters in length.
+        /// <para>The description of the version. The description can be up to 1,024 characters in length.</para>
+        /// <para>By default, this parameter is not specified, which indicates that you do not modify the description of the version.</para>
         /// 
-        /// By default, this parameter is not specified, which indicates that you do not modify the description of the version.
+        /// <b>Example:</b>
+        /// <para>aaa</para>
         /// </summary>
         [NameInMap("revision_description")]
         [Validation(Required=false)]
         public string RevisionDescription { get; set; }
 
         /// <summary>
-        /// The version ID.
+        /// <para>The version ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>40CB7794C929</para>
         /// </summary>
         [NameInMap("revision_id")]
         [Validation(Required=false)]

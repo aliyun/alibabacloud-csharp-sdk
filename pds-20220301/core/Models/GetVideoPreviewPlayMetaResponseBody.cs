@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetVideoPreviewPlayMetaResponseBody : TeaModel {
         /// <summary>
-        /// The domain ID.
+        /// <para>The domain ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bj1</para>
         /// </summary>
         [NameInMap("domain_id")]
         [Validation(Required=false)]
         public string DomainId { get; set; }
 
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
         public string DriveId { get; set; }
 
         /// <summary>
-        /// The file ID.
+        /// <para>The file ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fileid1</para>
         /// </summary>
         [NameInMap("file_id")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
         /// <summary>
-        /// The share ID.
+        /// <para>The share ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7JQX1FswpQ8</para>
         /// </summary>
         [NameInMap("share_id")]
         [Validation(Required=false)]
         public string ShareId { get; set; }
 
         /// <summary>
-        /// The preview metadata of the video.
+        /// <para>The preview metadata of the video.</para>
         /// </summary>
         [NameInMap("video_preview_play_meta")]
         [Validation(Required=false)]

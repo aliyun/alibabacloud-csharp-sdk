@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetDomainRequest : TeaModel {
         /// <summary>
-        /// The ID of the domain.
+        /// <para>The ID of the domain.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>bj1</para>
         /// </summary>
         [NameInMap("domain_id")]
         [Validation(Required=false)]
@@ -23,7 +25,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string Fields { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the used quota of the domain. Default value: false. If the quota of the domain is greater than 0 and you set this parameter to true, the used quota of the domain is returned.
+        /// <para>Specifies whether to return the used quota of the domain. Default value: false. If the quota of the domain is greater than 0 and you set this parameter to true, the used quota of the domain is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("get_quota_used")]
         [Validation(Required=false)]

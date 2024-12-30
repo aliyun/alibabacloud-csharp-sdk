@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class DeltaGetLastCursorResponseBody : TeaModel {
         /// <summary>
-        /// The latest cursor of incremental information in the specified drive or synced folder.
+        /// <para>The latest cursor of incremental information in the specified drive or synced folder.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</para>
         /// </summary>
         [NameInMap("cursor")]
         [Validation(Required=false)]

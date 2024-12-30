@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class GetShareLinkTokenRequest : TeaModel {
         /// <summary>
-        /// The validity period of the token. Valid values: (0,7200]. Default value: 7200. Unit: seconds.
+        /// <para>The validity period of the token. Valid values: (0,7200]. Default value: 7200. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7200</para>
         /// </summary>
         [NameInMap("expire_sec")]
         [Validation(Required=false)]
         public int? ExpireSec { get; set; }
 
         /// <summary>
-        /// The share ID.
+        /// <para>The share ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>7JQX1FswpQ8</para>
         /// </summary>
         [NameInMap("share_id")]
         [Validation(Required=false)]
         public string ShareId { get; set; }
 
         /// <summary>
-        /// The access code.
+        /// <para>The access code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abcF123x</para>
         /// </summary>
         [NameInMap("share_pwd")]
         [Validation(Required=false)]

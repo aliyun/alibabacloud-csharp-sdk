@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class InvestigateFileRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("drive_file_ids")]
         [Validation(Required=false)]
         public List<InvestigateFileRequestDriveFileIds> DriveFileIds { get; set; }
         public class InvestigateFileRequestDriveFileIds : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("drive_id")]
             [Validation(Required=false)]
             public string DriveId { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9520943DC264</para>
             /// </summary>
             [NameInMap("file_id")]
             [Validation(Required=false)]

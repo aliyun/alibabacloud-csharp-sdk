@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListTagsResponseBody : TeaModel {
         /// <summary>
-        /// The information about the tags.
+        /// <para>The information about the tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

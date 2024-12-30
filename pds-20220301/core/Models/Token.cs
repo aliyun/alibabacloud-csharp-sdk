@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string DefaultDriveId { get; set; }
 
+        [NameInMap("default_sbox_drive_id")]
+        [Validation(Required=false)]
+        public string DefaultSboxDriveId { get; set; }
+
         [NameInMap("device_id")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("domain_id")]
         [Validation(Required=false)]
         public string DomainId { get; set; }
+
+        [NameInMap("exist_link")]
+        [Validation(Required=false)]
+        public List<LinkInfo> ExistLink { get; set; }
 
         [NameInMap("expire_time")]
         [Validation(Required=false)]
@@ -45,9 +53,21 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public bool? IsFirstLogin { get; set; }
 
+        [NameInMap("need_link")]
+        [Validation(Required=false)]
+        public bool? NeedLink { get; set; }
+
+        [NameInMap("need_rp_verify")]
+        [Validation(Required=false)]
+        public bool? NeedRpVerify { get; set; }
+
         [NameInMap("nick_name")]
         [Validation(Required=false)]
         public string NickName { get; set; }
+
+        [NameInMap("pin_setup")]
+        [Validation(Required=false)]
+        public bool? PinSetup { get; set; }
 
         [NameInMap("refresh_token")]
         [Validation(Required=false)]
@@ -57,6 +77,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Role { get; set; }
 
+        [NameInMap("state")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -64,6 +88,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("token_type")]
         [Validation(Required=false)]
         public string TokenType { get; set; }
+
+        [NameInMap("user_data")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> UserData { get; set; }
 
         [NameInMap("user_id")]
         [Validation(Required=false)]

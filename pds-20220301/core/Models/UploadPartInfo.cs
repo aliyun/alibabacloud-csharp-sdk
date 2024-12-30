@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class UploadPartInfo : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0CC175B9C0F1B6A831C399E269772661</para>
+        /// </summary>
         [NameInMap("etag")]
         [Validation(Required=false)]
         public string Etag { get; set; }
@@ -46,18 +50,25 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("part_number")]
         [Validation(Required=false)]
         public int? PartNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
         [NameInMap("part_size")]
         [Validation(Required=false)]
         public long? PartSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("upload_url")]
         [Validation(Required=false)]

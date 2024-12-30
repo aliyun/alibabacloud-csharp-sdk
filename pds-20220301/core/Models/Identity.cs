@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string IdentityId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>IT_User</para>
+        /// </summary>
         [NameInMap("identity_type")]
         [Validation(Required=false)]
         public string IdentityType { get; set; }

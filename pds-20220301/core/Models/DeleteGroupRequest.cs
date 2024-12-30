@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class DeleteGroupRequest : TeaModel {
         /// <summary>
-        /// The group ID.
+        /// <para>The group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>g123</para>
         /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]

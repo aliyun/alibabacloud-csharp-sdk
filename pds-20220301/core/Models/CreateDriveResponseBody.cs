@@ -22,14 +22,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The domain ID.
+        /// <para>The domain ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bj1</para>
         /// </summary>
         [NameInMap("domain_id")]
         [Validation(Required=false)]
         public string DomainId { get; set; }
 
         /// <summary>
-        /// The drive ID.
+        /// <para>The drive ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("drive_id")]
         [Validation(Required=false)]
