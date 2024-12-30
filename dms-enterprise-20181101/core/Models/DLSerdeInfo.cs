@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         [NameInMap("SerdeType")]
         [Validation(Required=false)]
-        public string SerdeType { get; set; }
+        public int? SerdeType { get; set; }
 
         [NameInMap("SerializationLib")]
         [Validation(Required=false)]

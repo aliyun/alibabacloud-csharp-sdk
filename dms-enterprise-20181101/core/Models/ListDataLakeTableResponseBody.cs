@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ListDataLakeDatabaseResponseBody : TeaModel {
-        [NameInMap("DatabaseList")]
-        [Validation(Required=false)]
-        public List<DLDatabase> DatabaseList { get; set; }
-
+    public class ListDataLakeTableResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>400</para>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -29,17 +25,25 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>NesLoKLEdIZrKhDT7I2gS****</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</para>
+        /// <para>3D3FB827-E667-50DB-AD59-C83F8237FECB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TableList")]
+        [Validation(Required=false)]
+        public List<DLTable> TableList { get; set; }
 
     }
 

@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ListDataLakeDatabaseResponseBody : TeaModel {
-        [NameInMap("DatabaseList")]
-        [Validation(Required=false)]
-        public List<DLDatabase> DatabaseList { get; set; }
-
+    public class CreateDataLakeTableResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>400</para>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -29,17 +25,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</para>
+        /// <para>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -52,6 +40,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Table")]
+        [Validation(Required=false)]
+        public DLTable Table { get; set; }
 
     }
 

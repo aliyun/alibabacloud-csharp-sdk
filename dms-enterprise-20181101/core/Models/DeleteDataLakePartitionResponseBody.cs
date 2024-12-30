@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ListDataLakeDatabaseResponseBody : TeaModel {
-        [NameInMap("DatabaseList")]
-        [Validation(Required=false)]
-        public List<DLDatabase> DatabaseList { get; set; }
-
+    public class DeleteDataLakePartitionResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>400</para>
+        /// <para>UnknownError</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -29,17 +25,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</para>
+        /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -43,13 +43,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         [NameInMap("TablebaseInfoList")]
         [Validation(Required=false)]
-        public ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList TablebaseInfoList { get; set; }
-        public class ListDataLakeTablebaseInfoResponseBodyTablebaseInfoList : TeaModel {
-            [NameInMap("TablebaseInfo")]
-            [Validation(Required=false)]
-            public List<DLTablebaseInfo> TablebaseInfo { get; set; }
-
-        }
+        public List<DLTablebaseInfo> TablebaseInfoList { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -11,13 +11,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class ListDataLakeCatalogResponseBody : TeaModel {
         [NameInMap("CataLogList")]
         [Validation(Required=false)]
-        public ListDataLakeCatalogResponseBodyCataLogList CataLogList { get; set; }
-        public class ListDataLakeCatalogResponseBodyCataLogList : TeaModel {
-            [NameInMap("Catalog")]
-            [Validation(Required=false)]
-            public List<DLCatalog> Catalog { get; set; }
-
-        }
+        public List<DLCatalog> CataLogList { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
