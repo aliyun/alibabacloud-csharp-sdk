@@ -275,6 +275,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Step { get; set; }
 
+            [NameInMap("SummaryReturnType")]
+            [Validation(Required=false)]
+            public string SummaryReturnType { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<RunStepByStepWritingRequestWritingConfigTags> Tags { get; set; }
