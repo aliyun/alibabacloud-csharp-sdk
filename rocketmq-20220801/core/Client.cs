@@ -1635,6 +1635,108 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除容灾计划</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDisasterRecoveryPlanResponse
+        /// </returns>
+        public DeleteDisasterRecoveryPlanResponse DeleteDisasterRecoveryPlanWithOptions(string planId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDisasterRecoveryPlan",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDisasterRecoveryPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除容灾计划</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDisasterRecoveryPlanResponse
+        /// </returns>
+        public async Task<DeleteDisasterRecoveryPlanResponse> DeleteDisasterRecoveryPlanWithOptionsAsync(string planId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDisasterRecoveryPlan",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDisasterRecoveryPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除容灾计划</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDisasterRecoveryPlanResponse
+        /// </returns>
+        public DeleteDisasterRecoveryPlanResponse DeleteDisasterRecoveryPlan(string planId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDisasterRecoveryPlanWithOptions(planId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除容灾计划</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDisasterRecoveryPlanResponse
+        /// </returns>
+        public async Task<DeleteDisasterRecoveryPlanResponse> DeleteDisasterRecoveryPlanAsync(string planId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDisasterRecoveryPlanWithOptionsAsync(planId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
         /// </summary>
         /// 
@@ -4633,6 +4735,144 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询监控项列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetricMetaRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetricMetaResponse
+        /// </returns>
+        public ListMetricMetaResponse ListMetricMetaWithOptions(ListMetricMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetricMeta",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/monitor/metrics/meta",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetricMetaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控项列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetricMetaRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetricMetaResponse
+        /// </returns>
+        public async Task<ListMetricMetaResponse> ListMetricMetaWithOptionsAsync(ListMetricMetaRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetricMeta",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/monitor/metrics/meta",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetricMetaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控项列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetricMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetricMetaResponse
+        /// </returns>
+        public ListMetricMetaResponse ListMetricMeta(ListMetricMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMetricMetaWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控项列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetricMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetricMetaResponse
+        /// </returns>
+        public async Task<ListMetricMetaResponse> ListMetricMetaAsync(ListMetricMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMetricMetaWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries regions in which ApsaraMQ for RocketMQ is available.</para>
         /// </summary>
         /// 
@@ -5485,6 +5725,210 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ResetConsumeOffsetWithOptionsAsync(instanceId, consumerGroupId, topicName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDisasterRecoveryItemResponse
+        /// </returns>
+        public StartDisasterRecoveryItemResponse StartDisasterRecoveryItemWithOptions(string planId, string itemId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartDisasterRecoveryItem",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(itemId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartDisasterRecoveryItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartDisasterRecoveryItemResponse
+        /// </returns>
+        public async Task<StartDisasterRecoveryItemResponse> StartDisasterRecoveryItemWithOptionsAsync(string planId, string itemId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartDisasterRecoveryItem",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(itemId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartDisasterRecoveryItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StartDisasterRecoveryItemResponse
+        /// </returns>
+        public StartDisasterRecoveryItemResponse StartDisasterRecoveryItem(string planId, string itemId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StartDisasterRecoveryItemResponse
+        /// </returns>
+        public async Task<StartDisasterRecoveryItemResponse> StartDisasterRecoveryItemAsync(string planId, string itemId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartDisasterRecoveryItemWithOptionsAsync(planId, itemId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDisasterRecoveryItemResponse
+        /// </returns>
+        public StopDisasterRecoveryItemResponse StopDisasterRecoveryItemWithOptions(string planId, string itemId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDisasterRecoveryItem",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(itemId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDisasterRecoveryItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDisasterRecoveryItemResponse
+        /// </returns>
+        public async Task<StopDisasterRecoveryItemResponse> StopDisasterRecoveryItemWithOptionsAsync(string planId, string itemId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDisasterRecoveryItem",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/disaster_recovery/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId) + "/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(itemId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDisasterRecoveryItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopDisasterRecoveryItemResponse
+        /// </returns>
+        public StopDisasterRecoveryItemResponse StopDisasterRecoveryItem(string planId, string itemId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停用容灾计划条目</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopDisasterRecoveryItemResponse
+        /// </returns>
+        public async Task<StopDisasterRecoveryItemResponse> StopDisasterRecoveryItemAsync(string planId, string itemId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopDisasterRecoveryItemWithOptionsAsync(planId, itemId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
