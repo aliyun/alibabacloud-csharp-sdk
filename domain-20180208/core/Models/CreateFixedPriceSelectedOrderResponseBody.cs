@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("DomainBlockTrade")]
+            [Validation(Required=false)]
+            public List<string> DomainBlockTrade { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>31199295f2074ce895645d386cb22c36</para>
