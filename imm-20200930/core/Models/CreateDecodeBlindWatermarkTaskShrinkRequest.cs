@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateDecodeBlindWatermarkTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The quality of the output image.
-        /// The higher the quality, the larger the image size and the higher the watermark resolution quality.</para>
+        /// <para>The quality of the output image. This parameter is also available in the earlier DecodeBlindWatermark operation.</para>
+        /// <para>Higher image quality indicates a larger image size and higher watermark resolution quality.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public int? ImageQuality { get; set; }
 
         /// <summary>
-        /// <para>The watermark algorithm model.Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</para>
-        /// <para>If this parameter is left empty, the DecodeBlindWatermark operation is called. Otherwise, the CreateDecodeBlindWatermarkTask operation is called.</para>
+        /// <para>The watermark algorithm model. This parameter is also available in the earlier DecodeBlindWatermark operation. Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</para>
+        /// <para>If this parameter is left empty, the CreateDecodeBlindWatermarkTask operation is called. Otherwise, the earlier DecodeBlindWatermark operation is called.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFT</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the image before the blind watermark is added. </para>
+        /// <para>The OSS URI of the image before the blind watermark is added. This parameter is also available in the earlier DecodeBlindWatermark operation.</para>
         /// <para>Do not specify this parameter when you set the Model parameter to DWT or DWT_IBG.</para>
         /// <para>Specify the OSS URI in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format, where <c>&lt;bucket&gt;</c> is the name of the bucket in the same region as the current project and <c>&lt;object&gt;</c> is the path of the object with the extension included.</para>
         /// 
@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <remarks>
+        /// <para> The project specified in the request must match the one in the EncodeBlindWatermark request to encode the blind watermark.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,8 +87,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string StrengthLevel { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the output image.
-        /// Specify the OSS URI in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format, where <c>&lt;bucket&gt;</c> is the name of the bucket in the same region as the current project and <c>&lt;object&gt;</c> is the path of the object with the extension included.</para>
+        /// <para>The OSS URI of the output image. This parameter is also available in the earlier DecodeBlindWatermark operation.</para>
+        /// <para>Specify the OSS URI in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format, where <c>&lt;bucket&gt;</c> is the name of the bucket in the same region as the current project and <c>&lt;object&gt;</c> is the path of the object with the extension included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://target/targetobject.jpg</para>

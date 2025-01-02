@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Answer Answer { get; set; }
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>22F081FB-90D7-525A-BFE4-D28DC906A28F</para>

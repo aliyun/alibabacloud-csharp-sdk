@@ -3472,10 +3472,14 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>The region and project specified in the request to decode a blind watermark must match those in the <a href="https://help.aliyun.com/document_detail/2743655.html">EncodeBlindWatermark</a> request to encode the blind watermark.</description></item>
         /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is compatible with its earlier version DecodeBlindWatermark.</description></item>
         /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
@@ -3562,10 +3566,14 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>The region and project specified in the request to decode a blind watermark must match those in the <a href="https://help.aliyun.com/document_detail/2743655.html">EncodeBlindWatermark</a> request to encode the blind watermark.</description></item>
         /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is compatible with its earlier version DecodeBlindWatermark.</description></item>
         /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
@@ -3652,10 +3660,14 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>The region and project specified in the request to decode a blind watermark must match those in the <a href="https://help.aliyun.com/document_detail/2743655.html">EncodeBlindWatermark</a> request to encode the blind watermark.</description></item>
         /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is compatible with its earlier version DecodeBlindWatermark.</description></item>
         /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
@@ -3680,10 +3692,14 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</description></item>
+        /// <item><description>The region and project specified in the request to decode a blind watermark must match those in the <a href="https://help.aliyun.com/document_detail/2743655.html">EncodeBlindWatermark</a> request to encode the blind watermark.</description></item>
         /// <item><description>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</description></item>
+        /// <item><description>This operation is compatible with its earlier version DecodeBlindWatermark.</description></item>
         /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
@@ -6366,7 +6382,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// </list>
         /// </description></item>
         /// <item><description>Each input document can be up to 200 MB in size.</description></item>
-        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document contains too much or complex content, the conversion may time out.</description></item>
         /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
@@ -6587,7 +6603,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// </list>
         /// </description></item>
         /// <item><description>Each input document can be up to 200 MB in size.</description></item>
-        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document contains too much or complex content, the conversion may time out.</description></item>
         /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
@@ -6808,7 +6824,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// </list>
         /// </description></item>
         /// <item><description>Each input document can be up to 200 MB in size.</description></item>
-        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document contains too much or complex content, the conversion may time out.</description></item>
         /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
@@ -6857,7 +6873,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// </list>
         /// </description></item>
         /// <item><description>Each input document can be up to 200 MB in size.</description></item>
-        /// <item><description>The maximum conversion time is 120 seconds. If the document is large in size or contains complex content, the conversion may time out.</description></item>
+        /// <item><description>The maximum conversion time is 120 seconds. If the document contains too much or complex content, the conversion may time out.</description></item>
         /// <item><description>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<list type="bullet">
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
