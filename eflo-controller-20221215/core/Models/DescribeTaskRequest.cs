@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Task ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

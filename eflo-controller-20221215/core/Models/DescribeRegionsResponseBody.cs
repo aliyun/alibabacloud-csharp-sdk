@@ -9,15 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of region information.</para>
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
+            /// <summary>
+            /// <para>Region name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Hang Zhou</para>
+            /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
+            /// <para>region id</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -28,6 +39,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1D2FBB36-C39B-5EBB-9928-FCC1A236D65D</para>
         /// </summary>

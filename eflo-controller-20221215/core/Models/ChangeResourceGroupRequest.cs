@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Target Resource Group</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Resource ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

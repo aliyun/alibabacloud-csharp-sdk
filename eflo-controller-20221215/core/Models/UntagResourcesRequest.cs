@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Whether to remove all, only effective when TagKey.N is empty. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True, remove all</description></item>
+        /// <item><description>False, do not remove all</description></item>
+        /// </list>
+        /// <para>Default is False</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -18,6 +25,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +36,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>List of resource IDs</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -35,6 +44,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>Resource type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +54,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>List of tag keys</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

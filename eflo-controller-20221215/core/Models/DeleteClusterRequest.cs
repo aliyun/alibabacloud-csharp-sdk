@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DeleteClusterRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

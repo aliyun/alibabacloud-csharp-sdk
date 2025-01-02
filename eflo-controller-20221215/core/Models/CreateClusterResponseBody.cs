@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>Cluster ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i116913051663373010974</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3C683243-7915-57FB-9570-A2932C1C0F78</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Task Id</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i159809891662373011015</para>
         /// </summary>

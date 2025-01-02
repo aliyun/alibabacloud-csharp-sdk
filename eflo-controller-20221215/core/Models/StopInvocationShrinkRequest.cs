@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class StopInvocationShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Command execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string InvokeId { get; set; }
 
+        /// <summary>
+        /// <para>List of nodes.</para>
+        /// </summary>
         [NameInMap("NodeIdList")]
         [Validation(Required=false)]
         public string NodeIdListShrink { get; set; }

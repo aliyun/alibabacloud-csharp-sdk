@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ReimageNodesRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i15dfa12e8f27c44f4a006c2c8bb</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Whether to allow skipping failed node tasks, default value is False</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public bool? IgnoreFailedNodeTasks { get; set; }
 
+        /// <summary>
+        /// <para>Node list</para>
+        /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public List<ReimageNodesRequestNodes> Nodes { get; set; }
         public class ReimageNodesRequestNodes : TeaModel {
             /// <summary>
+            /// <para>Hostname</para>
+            /// 
             /// <b>Example:</b>
             /// <para>457db5ca-241d-11ed-9fd7-acde48001122</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Hostname { get; set; }
 
             /// <summary>
+            /// <para>System image ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>m-8vbf8rpv2nn14y7oybjy</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ImageId { get; set; }
 
             /// <summary>
+            /// <para>Login password</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
+            /// <para>Node ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e01-cn-zvp2tgykr0b</para>
             /// </summary>
@@ -63,6 +78,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         }
 
+        /// <summary>
+        /// <para>Custom data</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>#!/bin/sh
+        /// echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

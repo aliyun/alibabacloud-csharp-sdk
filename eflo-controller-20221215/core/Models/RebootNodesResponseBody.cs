@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class RebootNodesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Task Id</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i158475611663639202234</para>
         /// </summary>
