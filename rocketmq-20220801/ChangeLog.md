@@ -1,3 +1,7 @@
+2025-01-02 Version: 2.1.1
+- Update API CreateInstance: update param body.
+
+
 2024-12-31 Version: 2.1.0
 - Support API DeleteDisasterRecoveryPlan.
 - Support API ListMetricMeta.

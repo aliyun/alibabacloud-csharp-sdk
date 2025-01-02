@@ -453,6 +453,20 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string SubSeriesCode { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestTags> Tags { get; set; }
+        public class CreateInstanceRequestTags : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value of this parameter, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
