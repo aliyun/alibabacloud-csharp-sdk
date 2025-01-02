@@ -47,6 +47,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The level of the rule group for the IPS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: loose.</description></item>
+        /// <item><description><b>2</b>: medium.</description></item>
+        /// <item><description><b>3</b>: strict.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RuleClass")]
         [Validation(Required=false)]
         public int? RuleClass { get; set; }

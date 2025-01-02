@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

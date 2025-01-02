@@ -1069,6 +1069,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["TaskData"] = request.TaskData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
             {
                 query["TimeZone"] = request.TimeZone;
@@ -1118,6 +1122,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskData))
             {
                 query["TaskData"] = request.TaskData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                query["TaskType"] = request.TaskType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
             {
@@ -5752,7 +5760,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资产统计信息</para>
+        /// <para>Queries statistics on the assets that are protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5802,7 +5810,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资产统计信息</para>
+        /// <para>Queries statistics on the assets that are protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5852,7 +5860,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资产统计信息</para>
+        /// <para>Queries statistics on the assets that are protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5870,7 +5878,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资产统计信息</para>
+        /// <para>Queries statistics on the assets that are protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6420,7 +6428,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// DescribeDomainResolveResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated")]
         // Deprecated
         public DescribeDomainResolveResponse DescribeDomainResolveWithOptions(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6491,7 +6499,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// DescribeDomainResolveResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated")]
         // Deprecated
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveWithOptionsAsync(DescribeDomainResolveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6559,7 +6567,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// DescribeDomainResolveResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated")]
         // Deprecated
         public DescribeDomainResolveResponse DescribeDomainResolve(DescribeDomainResolveRequest request)
         {
@@ -6590,7 +6598,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// DescribeDomainResolveResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeDomainResolve is deprecated\n")]
+        [Obsolete("OpenAPI DescribeDomainResolve is deprecated")]
         // Deprecated
         public async Task<DescribeDomainResolveResponse> DescribeDomainResolveAsync(DescribeDomainResolveRequest request)
         {
@@ -9848,6 +9856,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["FirewallType"] = request.FirewallType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOnlyPrivateAssoc))
+            {
+                query["IsOnlyPrivateAssoc"] = request.IsOnlyPrivateAssoc;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -9984,6 +9996,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallType))
             {
                 query["FirewallType"] = request.FirewallType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOnlyPrivateAssoc))
+            {
+                query["IsOnlyPrivateAssoc"] = request.IsOnlyPrivateAssoc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -11282,8 +11298,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户版本信息</para>
+        /// <para>Queries the edition information about Cloud Firewall.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the edition information about Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserBuyVersionRequest
@@ -11324,8 +11347,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户版本信息</para>
+        /// <para>Queries the edition information about Cloud Firewall.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the edition information about Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserBuyVersionRequest
@@ -11366,8 +11396,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户版本信息</para>
+        /// <para>Queries the edition information about Cloud Firewall.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the edition information about Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserBuyVersionRequest
@@ -11384,8 +11421,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户版本信息</para>
+        /// <para>Queries the edition information about Cloud Firewall.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the edition information about Cloud Firewall.</para>
+        /// <h2><a href="#qps-"></a>Limits</h2>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserBuyVersionRequest

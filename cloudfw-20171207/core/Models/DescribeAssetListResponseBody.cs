@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the assets that are protected by Cloud Firewall.</para>
+        /// <para>The assets that are protected by Cloud Firewall.</para>
         /// </summary>
         [NameInMap("Assets")]
         [Validation(Required=false)]
@@ -94,6 +94,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? IpVersion { get; set; }
 
+            /// <summary>
+            /// <para>Outbound traffic in the last 7 days.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("Last7DayOutTrafficBytes")]
             [Validation(Required=false)]
             public long? Last7DayOutTrafficBytes { get; set; }
@@ -238,6 +244,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
+            /// <summary>
+            /// <para>Data leakage detection enabled status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>open</para>
+            /// </summary>
             [NameInMap("SensitiveDataStatus")]
             [Validation(Required=false)]
             public string SensitiveDataStatus { get; set; }

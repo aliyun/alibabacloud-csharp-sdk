@@ -39,7 +39,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The number of the page to return.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +98,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <para>Maximum value: 50.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

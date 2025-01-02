@@ -161,6 +161,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
+        /// <para>Whether to query only the data that has completed private network tracing.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("IsOnlyPrivateAssoc")]
+        [Validation(Required=false)]
+        public string IsOnlyPrivateAssoc { get; set; }
+
+        /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese (default)</description></item>

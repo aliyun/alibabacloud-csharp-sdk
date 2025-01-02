@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class DeleteNatFirewallControlPolicyBatchRequest : TeaModel {
         /// <summary>
         /// <para>The UUIDs of access control policies.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AclUuidList")]
         [Validation(Required=false)]

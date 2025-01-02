@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetStatisticResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>850A84******25g4d2</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The statistics on specifications.</para>
+        /// </summary>
         [NameInMap("ResourceSpecStatistic")]
         [Validation(Required=false)]
         public DescribeAssetStatisticResponseBodyResourceSpecStatistic ResourceSpecStatistic { get; set; }
         public class DescribeAssetStatisticResponseBodyResourceSpecStatistic : TeaModel {
             /// <summary>
+            /// <para>The number of public IP addresses that can be protected.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IpNumSpec { get; set; }
 
             /// <summary>
+            /// <para>The number of public IP addresses that are protected.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -37,30 +46,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? IpNumUsed { get; set; }
 
-            [NameInMap("IsIpNumEnough")]
-            [Validation(Required=false)]
-            public int? IsIpNumEnough { get; set; }
-
-            [NameInMap("IsRegionNumEnough")]
-            [Validation(Required=false)]
-            public int? IsRegionNumEnough { get; set; }
-
-            [NameInMap("IsSuggestUpdate")]
-            [Validation(Required=false)]
-            public int? IsSuggestUpdate { get; set; }
-
-            [NameInMap("RegionNumSpec")]
-            [Validation(Required=false)]
-            public int? RegionNumSpec { get; set; }
-
-            [NameInMap("RegionNumUsed")]
-            [Validation(Required=false)]
-            public int? RegionNumUsed { get; set; }
-
+            /// <summary>
+            /// <para>The number of public IP addresses that can enable data leakage detection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("SensitiveDataIpNumSpec")]
             [Validation(Required=false)]
             public long? SensitiveDataIpNumSpec { get; set; }
 
+            /// <summary>
+            /// <para>The number of public IP addresses that enabled data leakage detection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("SensitiveDataIpNumUsed")]
             [Validation(Required=false)]
             public long? SensitiveDataIpNumUsed { get; set; }

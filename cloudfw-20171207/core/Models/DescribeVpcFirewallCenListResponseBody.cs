@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the details about the VPC firewall.</para>
+        /// <para>The information about the VPC firewalls.</para>
         /// </summary>
         [NameInMap("VpcFirewalls")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string FirewallSwitchStatus { get; set; }
 
             /// <summary>
-            /// <para>The information about the intrusion prevention system (IPS) configuration.</para>
+            /// <para>The intrusion prevention system (IPS) configurations.</para>
             /// </summary>
             [NameInMap("IpsConfig")]
             [Validation(Required=false)]
@@ -116,6 +116,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [Validation(Required=false)]
                 public int? EnableAllPatch { get; set; }
 
+                /// <summary>
+                /// <para>The level of the rule group for the IPS. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: loose.</description></item>
+                /// <item><description><b>2</b>: medium.</description></item>
+                /// <item><description><b>3</b>: strict.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("RuleClass")]
                 [Validation(Required=false)]
                 public int? RuleClass { get; set; }

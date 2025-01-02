@@ -39,14 +39,32 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DstVpcId { get; set; }
 
+        /// <summary>
+        /// <para>Type of the hit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("HitContentType")]
         [Validation(Required=false)]
         public int? HitContentType { get; set; }
 
+        /// <summary>
+        /// <para>The position where the hit ends.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>67</para>
+        /// </summary>
         [NameInMap("HitTo")]
         [Validation(Required=false)]
         public int? HitTo { get; set; }
 
+        /// <summary>
+        /// <para>Hit payload.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2f636f6d706f7365722f73656e645f656d61696c3f746f3d6d61667740776f66736f7961792675726c3d687474703a2f2f302e302e302e303a31323334352f692f6431366530312f313664622f673670772f</para>
+        /// </summary>
         [NameInMap("ParsedContent")]
         [Validation(Required=false)]
         public string ParsedContent { get; set; }

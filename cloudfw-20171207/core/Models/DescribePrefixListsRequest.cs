@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class DescribePrefixListsRequest : TeaModel {
         /// <summary>
         /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>

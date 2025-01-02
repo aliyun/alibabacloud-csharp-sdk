@@ -76,10 +76,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public long? OutBytes { get; set; }
 
+            /// <summary>
+            /// <para>Protection duration. Unit: hours.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("ProtectionDuration")]
             [Validation(Required=false)]
             public long? ProtectionDuration { get; set; }
 
+            /// <summary>
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
+            /// </summary>
             [NameInMap("RegionNo")]
             [Validation(Required=false)]
             public string RegionNo { get; set; }

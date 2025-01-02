@@ -33,6 +33,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? AddressListCount { get; set; }
 
+            [NameInMap("Addresses")]
+            [Validation(Required=false)]
+            public List<DescribeAddressBookResponseBodyAclsAddresses> Addresses { get; set; }
+            public class DescribeAddressBookResponseBodyAclsAddresses : TeaModel {
+                [NameInMap("Address")]
+                [Validation(Required=false)]
+                public string Address { get; set; }
+
+                [NameInMap("Note")]
+                [Validation(Required=false)]
+                public string Note { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</para>
             /// <list type="bullet">

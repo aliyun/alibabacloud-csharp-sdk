@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language of the content within the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default)</description></item>
+        /// <item><description><b>en</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to sort the results. Valid values:</para>
+        /// <para>The method that you want to use to sort the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: the ascending order.</description></item>
-        /// <item><description><b>desc</b> (default): the descending order.</description></item>
+        /// <item><description><b>asc</b></description></item>
+        /// <item><description><b>desc</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

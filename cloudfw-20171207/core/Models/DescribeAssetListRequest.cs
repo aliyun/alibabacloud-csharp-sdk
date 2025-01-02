@@ -73,6 +73,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string NewResourceTag { get; set; }
 
+        /// <summary>
+        /// <para>Whether to query external traffic information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("OutStatistic")]
         [Validation(Required=false)]
         public string OutStatistic { get; set; }
@@ -134,6 +140,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string SearchItem { get; set; }
 
+        /// <summary>
+        /// <para>Data leakage detection activation status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>open</para>
+        /// </summary>
         [NameInMap("SensitiveStatus")]
         [Validation(Required=false)]
         public string SensitiveStatus { get; set; }

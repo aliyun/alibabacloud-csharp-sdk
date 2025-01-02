@@ -85,6 +85,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The application ports.</para>
+            /// <remarks>
+            /// <para> Only the first 100 application ports are displayed.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("ApplicationPortList")]
             [Validation(Required=false)]
@@ -132,6 +135,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             }
 
+            /// <summary>
+            /// <para>The outbound asset count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("AssetCount")]
             [Validation(Required=false)]
             public long? AssetCount { get; set; }
@@ -251,6 +260,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public bool? IsMarkNormal { get; set; }
 
+            /// <summary>
+            /// <para>Location name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>山东省青岛市</para>
+            /// </summary>
             [NameInMap("LocationName")]
             [Validation(Required=false)]
             public string LocationName { get; set; }
@@ -265,6 +280,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public long? OutBytes { get; set; }
 
+            /// <summary>
+            /// <para>The outbound private asset count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("PrivateAssetCount")]
             [Validation(Required=false)]
             public long? PrivateAssetCount { get; set; }
@@ -349,9 +370,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: low</description></item>
-                /// <item><description><b>2</b>: medium</description></item>
-                /// <item><description><b>3</b>: high</description></item>
+                /// <item><description><b>1</b>: low.</description></item>
+                /// <item><description><b>2</b>: medium.</description></item>
+                /// <item><description><b>3</b>: high.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

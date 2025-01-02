@@ -35,6 +35,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskData { get; set; }
 
         /// <summary>
+        /// <para>The type of the task. For more information about task types, see the descriptions in the &quot;DescribeDownloadTaskType&quot; topic.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InternetFirewallAsset</para>
+        /// </summary>
+        [NameInMap("TaskType")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
+
+        /// <summary>
         /// <para>The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the domain names in outbound connections.</para>
+        /// <para>The domain names in outbound connections.</para>
         /// </summary>
         [NameInMap("DomainList")]
         [Validation(Required=false)]
@@ -74,10 +74,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string AddressGroupUUID { get; set; }
 
+            /// <summary>
+            /// <para>The application names.</para>
+            /// </summary>
             [NameInMap("ApplicationNameList")]
             [Validation(Required=false)]
             public List<string> ApplicationNameList { get; set; }
 
+            /// <summary>
+            /// <para>The outbound asset count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("AssetCount")]
             [Validation(Required=false)]
             public long? AssetCount { get; set; }
@@ -227,6 +236,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public long? OutBytes { get; set; }
 
+            /// <summary>
+            /// <para>The outbound private asset count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("PrivateAssetCount")]
             [Validation(Required=false)]
             public long? PrivateAssetCount { get; set; }

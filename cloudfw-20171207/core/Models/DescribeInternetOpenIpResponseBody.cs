@@ -146,10 +146,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<string> ServiceNameList { get; set; }
 
+            /// <summary>
+            /// <para>Number of source IPs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>22</para>
+            /// </summary>
             [NameInMap("SrcIpCnt")]
             [Validation(Required=false)]
             public long? SrcIpCnt { get; set; }
 
+            /// <summary>
+            /// <para>Outbound traffic in the last 7 days.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100000</para>
+            /// </summary>
             [NameInMap("TotalReplyBytes")]
             [Validation(Required=false)]
             public long? TotalReplyBytes { get; set; }
