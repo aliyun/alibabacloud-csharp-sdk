@@ -551,6 +551,170 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>诊断任务创建接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDiagnosticTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosticTaskResponse
+        /// </returns>
+        public CreateDiagnosticTaskResponse CreateDiagnosticTaskWithOptions(CreateDiagnosticTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDiagnosticTaskShrinkRequest request = new CreateDiagnosticTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AiJobLogInfo))
+            {
+                request.AiJobLogInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AiJobLogInfo, "AiJobLogInfo", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeIds))
+            {
+                request.NodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeIds, "NodeIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiJobLogInfoShrink))
+            {
+                body["AiJobLogInfo"] = request.AiJobLogInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticType))
+            {
+                body["DiagnosticType"] = request.DiagnosticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIdsShrink))
+            {
+                body["NodeIds"] = request.NodeIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnosticTask",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnosticTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>诊断任务创建接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDiagnosticTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosticTaskResponse
+        /// </returns>
+        public async Task<CreateDiagnosticTaskResponse> CreateDiagnosticTaskWithOptionsAsync(CreateDiagnosticTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDiagnosticTaskShrinkRequest request = new CreateDiagnosticTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AiJobLogInfo))
+            {
+                request.AiJobLogInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AiJobLogInfo, "AiJobLogInfo", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NodeIds))
+            {
+                request.NodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NodeIds, "NodeIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiJobLogInfoShrink))
+            {
+                body["AiJobLogInfo"] = request.AiJobLogInfoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiagnosticType))
+            {
+                body["DiagnosticType"] = request.DiagnosticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIdsShrink))
+            {
+                body["NodeIds"] = request.NodeIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnosticTask",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnosticTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>诊断任务创建接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnosticTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosticTaskResponse
+        /// </returns>
+        public CreateDiagnosticTaskResponse CreateDiagnosticTask(CreateDiagnosticTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDiagnosticTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>诊断任务创建接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnosticTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosticTaskResponse
+        /// </returns>
+        public async Task<CreateDiagnosticTaskResponse> CreateDiagnosticTaskAsync(CreateDiagnosticTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDiagnosticTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Delete cluster instance</para>
         /// </summary>
         /// 
@@ -2654,6 +2818,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["CommandContent"] = request.CommandContent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                body["CommandId"] = request.CommandId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentEncoding))
             {
                 body["ContentEncoding"] = request.ContentEncoding;
@@ -2670,6 +2838,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["Frequency"] = request.Frequency;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Launcher))
+            {
+                body["Launcher"] = request.Launcher;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -2685,6 +2857,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatMode))
             {
                 body["RepeatMode"] = request.RepeatMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminationMode))
+            {
+                body["TerminationMode"] = request.TerminationMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
             {
@@ -2754,6 +2930,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["CommandContent"] = request.CommandContent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandId))
+            {
+                body["CommandId"] = request.CommandId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentEncoding))
             {
                 body["ContentEncoding"] = request.ContentEncoding;
@@ -2770,6 +2950,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["Frequency"] = request.Frequency;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Launcher))
+            {
+                body["Launcher"] = request.Launcher;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -2785,6 +2969,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatMode))
             {
                 body["RepeatMode"] = request.RepeatMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminationMode))
+            {
+                body["TerminationMode"] = request.TerminationMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
             {

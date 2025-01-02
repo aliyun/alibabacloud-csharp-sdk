@@ -29,7 +29,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <item><description>Custom parameter names can only contain a-zA-Z0-9-_, and are case-insensitive.</description></item>
         /// <item><description>A single custom parameter name cannot exceed 64 bytes.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZWNobyAxMjM=</para>
@@ -37,6 +36,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [NameInMap("CommandContent")]
         [Validation(Required=false)]
         public string CommandContent { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>c-e996287206324975b5fbe1d***</para>
+        /// </summary>
+        [NameInMap("CommandId")]
+        [Validation(Required=false)]
+        public string CommandId { get; set; }
 
         /// <summary>
         /// <para>Encoding method for the script content. Valid values:</para>
@@ -100,6 +107,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Frequency { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
+        /// </summary>
+        [NameInMap("Launcher")]
+        [Validation(Required=false)]
+        public string Launcher { get; set; }
+
+        /// <summary>
         /// <para>Command name.</para>
         /// 
         /// <b>Example:</b>
@@ -154,6 +169,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [NameInMap("RepeatMode")]
         [Validation(Required=false)]
         public string RepeatMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ProcessTree</para>
+        /// </summary>
+        [NameInMap("TerminationMode")]
+        [Validation(Required=false)]
+        public string TerminationMode { get; set; }
 
         /// <summary>
         /// <para>Timeout for executing the command, in seconds. If the command cannot run due to process issues, missing modules, or the absence of the Cloud Assistant Agent, a timeout will occur. After a timeout, the command process will be forcibly terminated. Default value: 60.</para>
