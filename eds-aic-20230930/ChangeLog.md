@@ -1,3 +1,7 @@
+2025-01-02 Version: 3.2.0
+- Support API OperateApp.
+
+
 2024-12-25 Version: 3.1.0
 - Support API BatchGetAcpConnectionTicket.
 
