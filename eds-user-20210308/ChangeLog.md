@@ -1,3 +1,7 @@
+2025-01-02 Version: 1.3.2
+- Update API DescribeUsers: add param IsQueryAllSubOrgs.
+
+
 2024-12-11 Version: 1.3.1
 - Update API CreateUsers: update param Users.
 - Update API FilterUsers: add param IsQueryAllSubOrgs.

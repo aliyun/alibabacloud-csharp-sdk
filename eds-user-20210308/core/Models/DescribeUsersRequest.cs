@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("IsQueryAllSubOrgs")]
+        [Validation(Required=false)]
+        public bool? IsQueryAllSubOrgs { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">

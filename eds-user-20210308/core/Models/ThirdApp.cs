@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             [NameInMap("IdTokenAlgorithmType")]
             [Validation(Required=false)]
-            public int? IdTokenAlgorithmType { get; set; }
+            public string IdTokenAlgorithmType { get; set; }
 
             [NameInMap("IdTokenEffectiveTime")]
             [Validation(Required=false)]

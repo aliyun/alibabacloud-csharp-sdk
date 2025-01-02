@@ -1400,6 +1400,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 body["GroupId"] = request.GroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQueryAllSubOrgs))
+            {
+                body["IsQueryAllSubOrgs"] = request.IsQueryAllSubOrgs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
             {
                 body["OrgId"] = request.OrgId;
@@ -1493,6 +1497,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQueryAllSubOrgs))
+            {
+                body["IsQueryAllSubOrgs"] = request.IsQueryAllSubOrgs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
             {
