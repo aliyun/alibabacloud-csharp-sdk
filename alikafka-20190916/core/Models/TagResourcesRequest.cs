@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add.</para>
+        /// <para>The tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the resource tag.</para>
+            /// <para>The tag key.</para>
             /// <list type="bullet">
             /// <item><description>You must specify this parameter.</description></item>
             /// <item><description>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</description></item>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the resource tag.</para>
+            /// <para>The tag value.</para>
             /// <list type="bullet">
             /// <item><description>You can leave this parameter empty.</description></item>
             /// <item><description>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</description></item>

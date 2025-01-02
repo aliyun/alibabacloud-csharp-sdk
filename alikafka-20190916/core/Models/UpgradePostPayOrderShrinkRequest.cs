@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</para>
+        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,18 +27,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
-        /// <para>The Internet traffic for the instance.</para>
+        /// <para>The maximum Internet traffic of the instance.</para>
         /// <list type="bullet">
         /// <item><description>The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</description></item>
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set <b>EipModel</b> to <b>true</b>, set <b>EipMax</b> to a value that is greater than 0.</description></item>
-        /// <item><description>If you set <b>EipModel</b> to <b>false</b>, set <b>EipMax</b> to <b>0</b>.</description></item>
-        /// <item><description>When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you set <b>EipModel</b> to <b>true</b>, set <b>EipMax</b> to a value that is greater than 0.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>EipModel</b> to <b>false</b>, set <b>EipMax</b> to <b>0</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -73,14 +76,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum traffic for the instance. We recommend that you do not configure this parameter.</para>
+        /// <para>The maximum traffic of the instance. We recommend that you do not configure this parameter.</para>
         /// <list type="bullet">
         /// <item><description>The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.</description></item>
         /// <item><description>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</description></item>
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</para>
+        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</para>
+        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,12 +114,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The number of partitions. We recommend that you configure this parameter.</para>
         /// <list type="bullet">
-        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</description></item>
+        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</description></item>
         /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</para>
+        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +141,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured for the ApsaraMQ for Kafka serverless instance. When you create a serverless ApsaraMQ for Kafka instance, you must configure these parameters.</para>
+        /// <para>The parameters that are configured for the serverless instance. These parameters are required only when you create a serverless instance.</para>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
@@ -168,13 +171,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The number of topics. We recommend that you do not configure this parameter.</para>
         /// <list type="bullet">
-        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</description></item>
+        /// <item><description>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</description></item>
         /// <item><description>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</description></item>
-        /// <item><description>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.</description></item>
+        /// <item><description>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.</description></item>
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you create an ApsaraMQ for Kafka V3 serverless instance, you do not need to configure this parameter.</para>
+        /// <para> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

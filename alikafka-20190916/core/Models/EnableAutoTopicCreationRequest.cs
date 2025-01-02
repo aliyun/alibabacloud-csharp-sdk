@@ -27,7 +27,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>disable: disables the automatic topic creation feature.</description></item>
         /// <item><description>updatePartition: changes the number of partitions in topics that are automatically created.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enable</para>
@@ -57,6 +56,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("UpdatePartition")]
+        [Validation(Required=false)]
+        public bool? UpdatePartition { get; set; }
 
     }
 

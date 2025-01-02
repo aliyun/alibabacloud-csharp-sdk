@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 /// <summary>
                 /// <para>The encryption method.</para>
                 /// <remarks>
-                /// <para> This field is available only for serverless ApsaraMQ for Kafka V3 instances.</para>
+                /// <para> This parameter is available only for serverless ApsaraMQ for Kafka instances.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

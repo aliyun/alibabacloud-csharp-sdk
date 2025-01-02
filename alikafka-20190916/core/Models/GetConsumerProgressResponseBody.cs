@@ -154,6 +154,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                             public long? BrokerOffset { get; set; }
 
                             /// <summary>
+                            /// <para>Client ID of the application.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>client-id-KafkaConsumerDemo</para>
+                            /// </summary>
+                            [NameInMap("ClientId")]
+                            [Validation(Required=false)]
+                            public string ClientId { get; set; }
+
+                            /// <summary>
+                            /// <para>The IP address of the client.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>172.16.11.3</para>
+                            /// </summary>
+                            [NameInMap("ClientIp")]
+                            [Validation(Required=false)]
+                            public string ClientIp { get; set; }
+
+                            /// <summary>
                             /// <para>The consumer offset in the partition of the topic.</para>
                             /// 
                             /// <b>Example:</b>
@@ -172,6 +192,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                             [NameInMap("LastTimestamp")]
                             [Validation(Required=false)]
                             public long? LastTimestamp { get; set; }
+
+                            /// <summary>
+                            /// <para>Member ID.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>client-id-KafkaConsumerDemo-70b64883-a911-4882-8084-598b958848b4</para>
+                            /// </summary>
+                            [NameInMap("MemberId")]
+                            [Validation(Required=false)]
+                            public string MemberId { get; set; }
 
                             /// <summary>
                             /// <para>The partition ID.</para>

@@ -40,14 +40,32 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string AllConfig { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the flexible group creation feature is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("AutoCreateGroupEnable")]
                 [Validation(Required=false)]
                 public bool? AutoCreateGroupEnable { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the automatic topic creation feature is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("AutoCreateTopicEnable")]
                 [Validation(Required=false)]
                 public bool? AutoCreateTopicEnable { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the secondary zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-a</para>
+                /// </summary>
                 [NameInMap("BackupZoneId")]
                 [Validation(Required=false)]
                 public string BackupZoneId { get; set; }
@@ -251,6 +269,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>The number of partitions in a topic that is automatically created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
+                /// </summary>
                 [NameInMap("DefaultPartitionNum")]
                 [Validation(Required=false)]
                 public int? DefaultPartitionNum { get; set; }
@@ -498,6 +522,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 public string SaslDomainEndpoint { get; set; }
 
                 /// <summary>
+                /// <para>The Simple Authentication and Security Layer (SASL) endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</para>
+                /// <list type="bullet">
+                /// <item><description>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <c>{Instance domain name}:{Port number}</c>.</description></item>
+                /// <item><description>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <c>{Broker IP address}:{Port number}</c>.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.16.3.XX:9094,172.16.3.XX:9094,172.16.3.XX:9094</para>
+                /// </summary>
+                [NameInMap("SaslEndPoint")]
+                [Validation(Required=false)]
+                public string SaslEndPoint { get; set; }
+
+                /// <summary>
                 /// <para>The security group to which the instance belongs.</para>
                 /// <list type="bullet">
                 /// <item><description>If the instance is deployed in the ApsaraMQ for Kafka console or by calling the <a href="https://help.aliyun.com/document_detail/157786.html">StartInstance</a> operation without a security group configured, no value is returned.</description></item>
@@ -706,6 +744,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// <para>The vSwitch IDs.</para>
+                /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public GetInstanceListResponseBodyInstanceListInstanceVOVSwitchIds VSwitchIds { get; set; }
@@ -754,6 +795,34 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
+
+                /// <summary>
+                /// <para>The SSL endpoint of the instance in domain name mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</para>
+                /// <list type="bullet">
+                /// <item><description>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <c>{Instance domain name}:{Port number}</c>.</description></item>
+                /// <item><description>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <c>{Broker IP address}:{Port number}</c>.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>alikafka-post-cn-<b><b><b>-1-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-</b></b></b>-2-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-******-3-vpc.alikafka.aliyuncs.com:9095</para>
+                /// </summary>
+                [NameInMap("VpcSaslDomainEndpoint")]
+                [Validation(Required=false)]
+                public string VpcSaslDomainEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</para>
+                /// <list type="bullet">
+                /// <item><description>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <c>{Instance domain name}:{Port number}</c>.</description></item>
+                /// <item><description>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <c>{Broker IP address}:{Port number}</c>.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.16.3.XX:9095,172.16.3.XX:9095,172.16.3.XX:9095</para>
+                /// </summary>
+                [NameInMap("VpcSaslEndPoint")]
+                [Validation(Required=false)]
+                public string VpcSaslEndPoint { get; set; }
 
                 /// <summary>
                 /// <para>The zone ID.</para>

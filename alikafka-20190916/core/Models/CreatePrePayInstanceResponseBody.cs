@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class CreateSaslUserResponseBody : TeaModel {
+    public class CreatePrePayInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The HTTP status code 200 indicates that the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,29 +17,45 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public CreatePrePayInstanceResponseBodyData Data { get; set; }
+        public class CreatePrePayInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>alikafka_post-cn-xxxxxx</para>
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>236972661xxxx</para>
+            /// </summary>
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public long? OrderId { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>The returned message.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>operation success.</para>
+        /// <para>operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>C5CA600C-7D5A-45B5-B6DB-44FAC2C****</para>
+        /// <para>E57A8862-DF68-4055-8E55-B80CB4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

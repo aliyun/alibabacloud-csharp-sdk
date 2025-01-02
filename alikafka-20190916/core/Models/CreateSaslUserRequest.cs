@@ -27,10 +27,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>SCRAM-SHA-256</description></item>
         /// </list>
         /// <remarks>
+        /// <para> This parameter is available only for ApsaraMQ for Kafka serverless instances.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SCRAM-SHA-256</para>

@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public class GetConsumerListResponseBodyConsumerListConsumerVO : TeaModel {
                 /// <summary>
                 /// <para>Indicates that the consumer group was automatically created by the system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("AutomaticallyCreatedGroup")]
                 [Validation(Required=false)]
@@ -46,6 +49,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [NameInMap("ConsumerId")]
                 [Validation(Required=false)]
                 public string ConsumerId { get; set; }
+
+                /// <summary>
+                /// <para>The timestamp that indicates when the consumer group was created. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1729736584002</para>
+                /// </summary>
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
 
                 /// <summary>
                 /// <para>The instance ID.</para>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? CompactTopic { get; set; }
 
         /// <summary>
-        /// <para>The additional configurations.</para>
+        /// <para>The additional configuration.</para>
         /// <list type="bullet">
         /// <item><description>The value must be in JSON format.</description></item>
         /// <item><description>Set Key to <b>replications</b>. This value specifies the number of replicas of the topic. The value must be an integer that ranges from 1 to 3.</description></item>

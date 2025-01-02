@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class GetKafkaClientIpRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the consumer group.</para>
+        /// <remarks>
+        /// <para> This parameter is required only if you set Type to byGroup.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>group_name</para>
         /// </summary>
@@ -28,6 +34,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Group { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +45,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the instance is deployed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +56,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +67,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The topic name.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required only if you set Type to byTopic.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>topic_name</para>
         /// </summary>
@@ -66,6 +82,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Topic { get; set; }
 
         /// <summary>
+        /// <para>The query method that you want to use to query the client IP addresses. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>byInstance: queries the IP addresses of the clients that are connected to the instance within a specific period of time.</description></item>
+        /// <item><description>byTopic: queries the IP addresses of the clients that are connected to a specific topic on the instance within a specific period of time.</description></item>
+        /// <item><description>byGroup: queries the IP addresses of the clients that are connected to a specific group on the instance within a specific period of time.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

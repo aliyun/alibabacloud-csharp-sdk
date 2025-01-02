@@ -16,8 +16,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description><b>Read</b></description></item>
         /// <item><description><b>Describe</b>: reads of transactional IDs.</description></item>
         /// <item><description><b>IdempotentWrite</b>: idempotent data writes to clusters.</description></item>
-        /// <item><description><b>IDEMPOTENT_WRITE</b>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</description></item>
-        /// <item><description><b>DESCRIBE_CONFIGS</b>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</description></item>
+        /// <item><description><b>IDEMPOTENT_WRITE</b>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</description></item>
+        /// <item><description><b>DESCRIBE_CONFIGS</b>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description><b>Read</b></description></item>
         /// <item><description><b>Describe</b>: reads of transactional IDs.</description></item>
         /// <item><description><b>IdempotentWrite</b>: idempotent data writes to clusters.</description></item>
-        /// <item><description><b>IDEMPOTENT_WRITE</b>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</description></item>
-        /// <item><description><b>DESCRIBE_CONFIGS</b>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</description></item>
+        /// <item><description><b>IDEMPOTENT_WRITE</b>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</description></item>
+        /// <item><description><b>DESCRIBE_CONFIGS</b>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</para>
+        /// <para> This parameter is available only for serverless ApsaraMQ for Kafka instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description><b>ALLOW</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</para>
+        /// <para> This parameter is available only for serverless ApsaraMQ for Kafka instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,13 +118,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourceType { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
+        /// <para>The IP address of the source.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</description></item>
-        /// <item><description>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can specify a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is available only for serverless ApsaraMQ for Kafka instances.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

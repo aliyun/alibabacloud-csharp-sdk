@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class CreateSaslUserResponseBody : TeaModel {
+    public class CreatePostPayInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The HTTP status code 200 indicates that the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,9 +17,29 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public CreatePostPayInstanceResponseBodyData Data { get; set; }
+        public class CreatePostPayInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>alikafka_pre-cn-pe333xxxxxx</para>
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>236972661580636</para>
+            /// </summary>
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public long? OrderId { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>The returned message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
         /// </summary>
@@ -30,18 +48,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>C5CA600C-7D5A-45B5-B6DB-44FAC2C****</para>
+        /// <para>ABA4A7FD-E10F-45C7-9774-A5236015A***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

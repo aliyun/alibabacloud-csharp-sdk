@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <para>The disk size.</para>
         /// <para>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// <para> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,13 +39,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
-        /// <para>The disk type. Valid values:</para>
+        /// <para>The disk type of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: ultra disk</description></item>
         /// <item><description><b>1</b>: standard SSD</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// <para> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,13 +56,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The maximum Internet traffic in the instance.</para>
+        /// <para>The Internet traffic.</para>
         /// <list type="bullet">
         /// <item><description>If you set <b>DeployType</b> to <b>4</b>, you must configure this parameter.</description></item>
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// <para> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// <para> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// <para> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: the pay-as-you-go billing method for ApsaraMQ for Kafka V2 instances.</description></item>
-        /// <item><description>3: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances.</description></item>
+        /// <item><description>1: pay-as-you-go (reserved capacity).</description></item>
+        /// <item><description>3: pay-as-you-go (reserved capacity) + pay-as-you-go (on-demand capacity)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// <para> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The parameters configured for the serverless ApsaraMQ for Kafka V3 instance. When you create a Serverless ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.</para>
+        /// <para>The parameters configured for the serverless ApsaraMQ for Kafka instance. These parameters are required only when you create a serverless instance.</para>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.</para>
+        /// <para> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
