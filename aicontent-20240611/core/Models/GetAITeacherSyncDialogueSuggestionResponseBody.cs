@@ -19,19 +19,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public class GetAITeacherSyncDialogueSuggestionResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>谢谢莉莉.你喜欢吃肉吗，莉莉？</para>
+            /// </summary>
+            [NameInMap("chineseResult")]
+            [Validation(Required=false)]
+            public string ChineseResult { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>Thanks, Lily. Do you like meat, Lily?</para>
             /// </summary>
             [NameInMap("englishResult")]
             [Validation(Required=false)]
             public string EnglishResult { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>谢谢莉莉.你喜欢吃肉吗，莉莉？</para>
-            /// </summary>
-            [NameInMap("englishResult1")]
-            [Validation(Required=false)]
-            public string EnglishResult1 { get; set; }
 
         }
 
