@@ -131,6 +131,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            [NameInMap("ImageVersion")]
+            [Validation(Required=false)]
+            public string ImageVersion { get; set; }
+
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
@@ -170,6 +174,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("PolicyGroupId")]
             [Validation(Required=false)]
             public string PolicyGroupId { get; set; }
+
+            [NameInMap("PublicIpAddress")]
+            [Validation(Required=false)]
+            public string PublicIpAddress { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

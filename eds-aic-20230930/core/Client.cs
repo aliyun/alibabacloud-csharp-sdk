@@ -325,6 +325,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupAll))
+            {
+                query["BackupAll"] = request.BackupAll;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileName))
             {
                 query["BackupFileName"] = request.BackupFileName;
@@ -394,6 +398,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
             {
                 query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupAll))
+            {
+                query["BackupAll"] = request.BackupAll;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileName))
             {
@@ -2814,6 +2822,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return await DescribeAppsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询备份文件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
         /// </param>
@@ -2835,6 +2848,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceName))
             {
                 query["AndroidInstanceName"] = request.AndroidInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupAll))
+            {
+                query["BackupAll"] = request.BackupAll;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
             {
@@ -2895,6 +2912,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return TeaModel.ToObject<DescribeBackupFilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询备份文件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
         /// </param>
@@ -2916,6 +2938,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceName))
             {
                 query["AndroidInstanceName"] = request.AndroidInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupAll))
+            {
+                query["BackupAll"] = request.BackupAll;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
             {
@@ -2976,6 +3002,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return TeaModel.ToObject<DescribeBackupFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询备份文件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
         /// </param>
@@ -2989,6 +3020,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return DescribeBackupFilesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询备份文件列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
         /// </param>
@@ -5877,6 +5913,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupAll))
+            {
+                query["BackupAll"] = request.BackupAll;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
             {
                 query["BackupFileId"] = request.BackupFileId;
@@ -5934,6 +5974,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
             {
                 query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupAll))
+            {
+                query["BackupAll"] = request.BackupAll;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
             {

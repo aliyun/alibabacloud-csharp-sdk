@@ -1,3 +1,12 @@
+2025-01-03 Version: 3.2.1
+- Update API BackupFile: add param BackupAll.
+- Update API DescribeAndroidInstances: update response param.
+- Update API DescribeBackupFiles: add param BackupAll.
+- Update API DescribeBackupFiles: update response param.
+- Update API DescribeTasks: update response param.
+- Update API RecoveryFile: add param BackupAll.
+
+
 2025-01-02 Version: 3.2.0
 - Support API OperateApp.
 

@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            [NameInMap("InstanceStatus")]
+            [Validation(Required=false)]
+            public string InstanceStatus { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>B8ED2BA9-0C6A-5643-818F-B5D60A64****</para>

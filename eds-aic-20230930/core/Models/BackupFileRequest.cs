@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIdList { get; set; }
 
+        [NameInMap("BackupAll")]
+        [Validation(Required=false)]
+        public bool? BackupAll { get; set; }
+
         [NameInMap("BackupFileName")]
         [Validation(Required=false)]
         public string BackupFileName { get; set; }
