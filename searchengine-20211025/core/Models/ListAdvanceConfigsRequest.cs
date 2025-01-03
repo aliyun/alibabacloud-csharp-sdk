@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public bool? NewMode { get; set; }
 
+        [NameInMap("pageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
+
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
         /// <summary>
         /// <para>The type of advanced configurations that you want to query. Valid values: - online -offline (default)</para>
         /// 

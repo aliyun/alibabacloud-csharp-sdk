@@ -6531,6 +6531,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             {
                 query["newMode"] = request.NewMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["type"] = request.Type;
@@ -6594,6 +6602,14 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewMode))
             {
                 query["newMode"] = request.NewMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {

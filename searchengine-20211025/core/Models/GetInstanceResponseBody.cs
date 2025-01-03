@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public GetInstanceResponseBodyResult Result { get; set; }
         public class GetInstanceResponseBodyResult : TeaModel {
+            [NameInMap("bsVersion")]
+            [Validation(Required=false)]
+            public string BsVersion { get; set; }
+
             /// <summary>
             /// <para>The billing method.</para>
             /// 
