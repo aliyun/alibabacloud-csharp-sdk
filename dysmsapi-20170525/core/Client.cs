@@ -2764,7 +2764,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询卡片发送详情</para>
+        /// <para>Query card sending details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2842,7 +2842,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询卡片发送详情</para>
+        /// <para>Query card sending details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2920,7 +2920,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询卡片发送详情</para>
+        /// <para>Query card sending details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2938,7 +2938,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询卡片发送详情</para>
+        /// <para>Query card sending details</para>
         /// </summary>
         /// 
         /// <param name="request">

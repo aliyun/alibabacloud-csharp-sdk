@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? QualificationId { get; set; }
 
+        [NameInMap("RegisterResult")]
+        [Validation(Required=false)]
+        public int? RegisterResult { get; set; }
+
         /// <summary>
         /// <para>Explanation of the SMS signature scenario, with a maximum length of 200 characters.</para>
         /// 

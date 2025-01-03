@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
     public class QueryExtCodeSignRequest : TeaModel {
         /// <summary>
         /// <para>扩展码A3</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01</para>
@@ -50,7 +49,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         /// <summary>
         /// <para>签名</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>

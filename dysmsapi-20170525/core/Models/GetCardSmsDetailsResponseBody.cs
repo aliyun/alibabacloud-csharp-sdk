@@ -9,19 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class GetCardSmsDetailsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Access denied detail; this field is returned only if the RAM check fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>卡片短信发送结果</para>
+        /// <para>Card SMS sending result</para>
         /// </summary>
         [NameInMap("CardSendDetailDTO")]
         [Validation(Required=false)]
         public GetCardSmsDetailsResponseBodyCardSendDetailDTO CardSendDetailDTO { get; set; }
         public class GetCardSmsDetailsResponseBodyCardSendDetailDTO : TeaModel {
             /// <summary>
-            /// <para>页码</para>
+            /// <para>Current page number</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -31,7 +37,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             public long? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>页数</para>
+            /// <para>Page size</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -40,12 +46,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>List of card SMS sending records</para>
+            /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<GetCardSmsDetailsResponseBodyCardSendDetailDTORecords> Records { get; set; }
             public class GetCardSmsDetailsResponseBodyCardSendDetailDTORecords : TeaModel {
                 /// <summary>
-                /// <para>发送错误码</para>
+                /// <para>Error code for sending</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -55,7 +64,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string ErrCode { get; set; }
 
                 /// <summary>
-                /// <para>客户传输outId</para>
+                /// <para>Customer-transmitted outId</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
@@ -65,7 +74,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string OutId { get; set; }
 
                 /// <summary>
-                /// <para>接收短信手机号</para>
+                /// <para>Phone number that received the SMS</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>156****9080</para>
@@ -75,7 +84,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// <para>接收时间</para>
+                /// <para>Receive date</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-27 11:26:35</para>
@@ -85,7 +94,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string ReceiveDate { get; set; }
 
                 /// <summary>
-                /// <para>接收短信类型</para>
+                /// <para>Receive SMS type</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CARD_SMS</para>
@@ -95,7 +104,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string ReceiveType { get; set; }
 
                 /// <summary>
-                /// <para>渲染时间</para>
+                /// <para>Render date</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-27 12:13:39</para>
@@ -105,7 +114,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string RenderDate { get; set; }
 
                 /// <summary>
-                /// <para>解析状态.。0：未解析；1：解析成功；3：未解析</para>
+                /// <para>Render status. 0: Not rendered; 1: Rendered successfully; 3: Not rendered</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -115,7 +124,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public long? RenderStatus { get; set; }
 
                 /// <summary>
-                /// <para>短信发送时间</para>
+                /// <para>Time when the SMS was sent</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-27 11:26:32</para>
@@ -125,7 +134,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string SendDate { get; set; }
 
                 /// <summary>
-                /// <para>发送状态 1：发送中；2：发送失败；3：发送成功；4：寻址失败</para>
+                /// <para>Sending status. 1: Sending; 2: Send failed; 3: Sent successfully; 4: Addressing failed</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -135,7 +144,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public long? SendStatus { get; set; }
 
                 /// <summary>
-                /// <para>短信内容。只有文本短信有值</para>
+                /// <para>SMS content. Only applicable for text messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>您收到一条短信消息</para>
@@ -145,7 +154,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string SmsContent { get; set; }
 
                 /// <summary>
-                /// <para>模板code</para>
+                /// <para>Template code</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CARD_SMS_6***</para>
@@ -157,7 +166,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>总量</para>
+            /// <para>Total count</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -169,7 +178,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>状态码</para>
+        /// <para>Request status code.</para>
+        /// <list type="bullet">
+        /// <item><description>OK indicates a successful request.</description></item>
+        /// <item><description>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API Error Codes</a>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -179,7 +192,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>状态描述</para>
+        /// <para>Description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -189,6 +202,11 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call was successful. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> - <b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
