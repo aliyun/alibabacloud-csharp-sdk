@@ -336,6 +336,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string StructureType { get; set; }
 
+        [NameInMap("enableHeaders")]
+        [Validation(Required=false)]
+        public bool? EnableHeaders { get; set; }
+
         [NameInMap("metaExtractColumns")]
         [Validation(Required=false)]
         public List<CreateIndexRequestMetaExtractColumns> MetaExtractColumns { get; set; }

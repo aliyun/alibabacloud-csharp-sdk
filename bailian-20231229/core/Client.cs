@@ -886,6 +886,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["StructureType"] = request.StructureType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
+            {
+                query["enableHeaders"] = request.EnableHeaders;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaExtractColumnsShrink))
             {
                 query["metaExtractColumns"] = request.MetaExtractColumnsShrink;
@@ -1030,6 +1034,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureType))
             {
                 query["StructureType"] = request.StructureType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
+            {
+                query["enableHeaders"] = request.EnableHeaders;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaExtractColumnsShrink))
             {
