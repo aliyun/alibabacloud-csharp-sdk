@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string EditingConfigShrink { get; set; }
 
+        [NameInMap("ExtendParam")]
+        [Validation(Required=false)]
+        public string ExtendParam { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

@@ -17666,6 +17666,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["EditingConfig"] = request.EditingConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendParam))
+            {
+                body["ExtendParam"] = request.ExtendParam;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfigShrink))
             {
                 body["InputConfig"] = request.InputConfigShrink;
@@ -17733,6 +17737,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfigShrink))
             {
                 body["EditingConfig"] = request.EditingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendParam))
+            {
+                body["ExtendParam"] = request.ExtendParam;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfigShrink))
             {

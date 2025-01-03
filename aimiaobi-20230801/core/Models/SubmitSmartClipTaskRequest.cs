@@ -13,6 +13,114 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public SubmitSmartClipTaskRequestEditingConfig EditingConfig { get; set; }
         public class SubmitSmartClipTaskRequestEditingConfig : TeaModel {
+            [NameInMap("BackgroundMusicConfig")]
+            [Validation(Required=false)]
+            public SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig BackgroundMusicConfig { get; set; }
+            public class SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig : TeaModel {
+                [NameInMap("Style")]
+                [Validation(Required=false)]
+                public string Style { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.2</para>
+                /// </summary>
+                [NameInMap("Volume")]
+                [Validation(Required=false)]
+                public double? Volume { get; set; }
+
+            }
+
+            [NameInMap("MediaConfig")]
+            [Validation(Required=false)]
+            public SubmitSmartClipTaskRequestEditingConfigMediaConfig MediaConfig { get; set; }
+            public class SubmitSmartClipTaskRequestEditingConfigMediaConfig : TeaModel {
+                [NameInMap("Volume")]
+                [Validation(Required=false)]
+                public double? Volume { get; set; }
+
+            }
+
+            [NameInMap("SpeechConfig")]
+            [Validation(Required=false)]
+            public SubmitSmartClipTaskRequestEditingConfigSpeechConfig SpeechConfig { get; set; }
+            public class SubmitSmartClipTaskRequestEditingConfigSpeechConfig : TeaModel {
+                [NameInMap("AsrConfig")]
+                [Validation(Required=false)]
+                public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig AsrConfig { get; set; }
+                public class SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig : TeaModel {
+                    [NameInMap("Alignment")]
+                    [Validation(Required=false)]
+                    public string Alignment { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>SimSun</para>
+                    /// </summary>
+                    [NameInMap("Font")]
+                    [Validation(Required=false)]
+                    public string Font { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>#ffffff</para>
+                    /// </summary>
+                    [NameInMap("FontColor")]
+                    [Validation(Required=false)]
+                    public string FontColor { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
+                    [NameInMap("FontSize")]
+                    [Validation(Required=false)]
+                    public string FontSize { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
+                    [NameInMap("Spacing")]
+                    [Validation(Required=false)]
+                    public string Spacing { get; set; }
+
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
+                    public float? X { get; set; }
+
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
+                    public float? Y { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("SpeechRate")]
+                [Validation(Required=false)]
+                public double? SpeechRate { get; set; }
+
+                [NameInMap("Style")]
+                [Validation(Required=false)]
+                public string Style { get; set; }
+
+                [NameInMap("Voice")]
+                [Validation(Required=false)]
+                public string Voice { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.5</para>
+                /// </summary>
+                [NameInMap("Volume")]
+                [Validation(Required=false)]
+                public double? Volume { get; set; }
+
+            }
+
             [NameInMap("TitleConfig")]
             [Validation(Required=false)]
             public SubmitSmartClipTaskRequestEditingConfigTitleConfig TitleConfig { get; set; }
@@ -60,6 +168,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             }
 
         }
+
+        [NameInMap("ExtendParam")]
+        [Validation(Required=false)]
+        public string ExtendParam { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

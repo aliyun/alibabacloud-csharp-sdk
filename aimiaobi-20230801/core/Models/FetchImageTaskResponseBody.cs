@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para><a href="https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/r-000aham3nsx9gc7a8r5l.csv?Expires=1678260131&OSSAccessKeyId=LTAIjGotF8wXIEjy&Signature=WpMfqBnjeR0w5UL1xFAd1J556Pw%3D">https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/r-000aham3nsx9gc7a8r5l.csv?Expires=1678260131&amp;OSSAccessKeyId=LTAIjGotF8wXIEjy&amp;Signature=WpMfqBnjeR0w5UL1xFAd1J556Pw%3D</a></para>
+                    /// <para><a href="http://www.example.com/xxx.png">http://www.example.com/xxx.png</a></para>
                     /// </summary>
                     [NameInMap("Url")]
                     [Validation(Required=false)]
