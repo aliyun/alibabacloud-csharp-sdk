@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateWorkitemCommentRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1964584</para>
         /// </summary>
         [NameInMap("commentId")]
         [Validation(Required=false)]
         public long? CommentId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MARKDOWN/RICHTEXT</para>
         /// </summary>
         [NameInMap("formatType")]
         [Validation(Required=false)]
         public string FormatType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9144ef6b72d8exxxxx9e61a4d0</para>
         /// </summary>
         [NameInMap("workitemIdentifier")]
         [Validation(Required=false)]

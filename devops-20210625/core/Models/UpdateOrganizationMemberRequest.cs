@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateOrganizationMemberRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("organizationMemberName")]
         [Validation(Required=false)]

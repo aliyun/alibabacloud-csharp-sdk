@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class AddPipelineRelationsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11,22</para>
         /// </summary>
         [NameInMap("relObjectIds")]
         [Validation(Required=false)]
         public string RelObjectIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VARIABLE_GROUP</para>
         /// </summary>
         [NameInMap("relObjectType")]
         [Validation(Required=false)]

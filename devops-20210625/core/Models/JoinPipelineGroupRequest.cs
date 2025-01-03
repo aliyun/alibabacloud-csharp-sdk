@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class JoinPipelineGroupRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>122,122</para>
         /// </summary>
         [NameInMap("pipelineIds")]
         [Validation(Required=false)]

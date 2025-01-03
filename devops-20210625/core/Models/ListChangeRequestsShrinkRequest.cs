@@ -13,20 +13,35 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AppNameListShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>change1</para>
+        /// </summary>
         [NameInMap("displayNameKeyword")]
         [Validation(Required=false)]
         public string DisplayNameKeyword { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4dc150725770510122396e2476</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>id</para>
+        /// </summary>
         [NameInMap("orderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>66c0c9fffeb86b450c199fcd</para>
         /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
@@ -36,18 +51,34 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string OwnerIdListShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>keyset</para>
+        /// </summary>
         [NameInMap("pagination")]
         [Validation(Required=false)]
         public string Pagination { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("perPage")]
         [Validation(Required=false)]
         public int? PerPage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desc</para>
+        /// </summary>
         [NameInMap("sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }

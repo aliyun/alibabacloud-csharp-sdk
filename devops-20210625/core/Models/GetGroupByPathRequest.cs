@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetGroupByPathRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60de7a6852743a5162b5f957/test-group</para>
         /// </summary>
         [NameInMap("identity")]
         [Validation(Required=false)]
         public string Identity { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60de7a6852743a5162b5f957</para>
         /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]

@@ -9,21 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateTestCaseResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>error</para>
+        /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18E50717-93A4-53BC-A30D-963F742A1CE6</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
@@ -36,6 +51,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public CreateTestCaseResponseBodyTestcaseAssignedTo AssignedTo { get; set; }
             public class CreateTestCaseResponseBodyTestcaseAssignedTo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>134xxx343xxxxx</para>
+                /// </summary>
                 [NameInMap("assignIdentifier")]
                 [Validation(Required=false)]
                 public string AssignIdentifier { get; set; }
@@ -44,12 +63,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3c2253c22xxxxxxxx53a</para>
+                /// </summary>
                 [NameInMap("tbRoleId")]
                 [Validation(Required=false)]
                 public string TbRoleId { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TestCase</para>
+            /// </summary>
             [NameInMap("categoryIdentifier")]
             [Validation(Required=false)]
             public string CategoryIdentifier { get; set; }
@@ -58,6 +85,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public CreateTestCaseResponseBodyTestcaseCreator Creator { get; set; }
             public class CreateTestCaseResponseBodyTestcaseCreator : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>134xxx343xxxxx</para>
+                /// </summary>
                 [NameInMap("createIdentifier")]
                 [Validation(Required=false)]
                 public string CreateIdentifier { get; set; }
@@ -80,10 +111,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                     [Validation(Required=false)]
                     public string ExpectContent { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>RICHTEXT</para>
+                    /// </summary>
                     [NameInMap("expectContentType")]
                     [Validation(Required=false)]
                     public string ExpectContentType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>59253164xxxxxxf2e98dbc7e27</para>
+                    /// </summary>
                     [NameInMap("expectIdentifier")]
                     [Validation(Required=false)]
                     public string ExpectIdentifier { get; set; }
@@ -98,10 +137,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                     [Validation(Required=false)]
                     public string PreContent { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>RICHTEXT</para>
+                    /// </summary>
                     [NameInMap("preContentType")]
                     [Validation(Required=false)]
                     public string PreContentType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>59253164xxxxxxf2e98dbc7e27</para>
+                    /// </summary>
                     [NameInMap("preIdentifier")]
                     [Validation(Required=false)]
                     public string PreIdentifier { get; set; }
@@ -116,16 +163,28 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                     [Validation(Required=false)]
                     public string StepContent { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>RICHTEXT</para>
+                    /// </summary>
                     [NameInMap("stepContentType")]
                     [Validation(Required=false)]
                     public string StepContentType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>59253164xxxxxxf2e98dbc7e27</para>
+                    /// </summary>
                     [NameInMap("stepIdentifier")]
                     [Validation(Required=false)]
                     public string StepIdentifier { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TEXT/TABLE</para>
+                /// </summary>
                 [NameInMap("stepType")]
                 [Validation(Required=false)]
                 public string StepType { get; set; }
@@ -136,10 +195,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public CreateTestCaseResponseBodyTestcaseDirectory Directory { get; set; }
             public class CreateTestCaseResponseBodyTestcaseDirectory : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0bc1150dcxxxxxxxx04c</para>
+                /// </summary>
                 [NameInMap("childIdentifier")]
                 [Validation(Required=false)]
                 public string ChildIdentifier { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0bc1150dcxxxxxxxx04c</para>
+                /// </summary>
                 [NameInMap("directoryIdentifier")]
                 [Validation(Required=false)]
                 public string DirectoryIdentifier { get; set; }
@@ -154,6 +221,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5a73f81c834d013361d92bdcce</para>
+            /// </summary>
             [NameInMap("identifier")]
             [Validation(Required=false)]
             public string Identifier { get; set; }
@@ -162,6 +233,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public CreateTestCaseResponseBodyTestcaseModifier Modifier { get; set; }
             public class CreateTestCaseResponseBodyTestcaseModifier : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>134xxx343xxxxx</para>
+                /// </summary>
                 [NameInMap("modifyIdentifier")]
                 [Validation(Required=false)]
                 public string ModifyIdentifier { get; set; }
@@ -172,10 +247,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>a18571eba8fe9267cd8375fc06</para>
+            /// </summary>
             [NameInMap("spaceIdentifier")]
             [Validation(Required=false)]
             public string SpaceIdentifier { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TestRepo</para>
+            /// </summary>
             [NameInMap("spaceType")]
             [Validation(Required=false)]
             public string SpaceType { get; set; }

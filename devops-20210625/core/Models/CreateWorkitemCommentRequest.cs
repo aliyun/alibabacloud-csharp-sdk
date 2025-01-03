@@ -10,25 +10,35 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateWorkitemCommentRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RICHTEXT/MARKDOWN</para>
         /// </summary>
         [NameInMap("formatType")]
         [Validation(Required=false)]
         public string FormatType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>26842</para>
+        /// </summary>
         [NameInMap("parentId")]
         [Validation(Required=false)]
         public string ParentId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1e9903d8b3f12xxxxxf9286ef5</para>
         /// </summary>
         [NameInMap("workitemIdentifier")]
         [Validation(Required=false)]

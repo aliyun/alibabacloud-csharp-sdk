@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateResourceMemberRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1111111111111</para>
         /// </summary>
         [NameInMap("accountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
         /// </summary>
         [NameInMap("roleName")]
         [Validation(Required=false)]

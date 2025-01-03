@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListProjectWorkitemTypesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Req</para>
         /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Project</para>
         /// </summary>
         [NameInMap("spaceType")]
         [Validation(Required=false)]

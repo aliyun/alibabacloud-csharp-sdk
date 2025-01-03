@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListProjectMembersRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Space</para>
         /// </summary>
         [NameInMap("targetType")]
         [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateTestCaseRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("updateWorkitemPropertyRequest")]
         [Validation(Required=false)]
         public List<UpdateTestCaseRequestUpdateWorkitemPropertyRequest> UpdateWorkitemPropertyRequest { get; set; }
         public class UpdateTestCaseRequestUpdateWorkitemPropertyRequest : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tc.type</para>
             /// </summary>
             [NameInMap("fieldIdentifier")]
             [Validation(Required=false)]
             public string FieldIdentifier { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0a032xx28107xxxx53e87a9</para>
             /// </summary>
             [NameInMap("fieldValue")]
             [Validation(Required=false)]

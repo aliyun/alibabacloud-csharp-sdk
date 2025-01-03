@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListPipelineJobsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DEPLOY</para>
         /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]

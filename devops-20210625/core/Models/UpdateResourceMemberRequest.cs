@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateResourceMemberRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
         /// </summary>
         [NameInMap("roleName")]
         [Validation(Required=false)]

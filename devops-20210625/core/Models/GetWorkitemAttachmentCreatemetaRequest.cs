@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetWorkitemAttachmentCreatemetaRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>application.jar</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]

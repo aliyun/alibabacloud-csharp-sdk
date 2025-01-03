@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetPipelineEmasArtifactUrlRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>122</para>
         /// </summary>
         [NameInMap("serviceConnectionId")]
         [Validation(Required=false)]

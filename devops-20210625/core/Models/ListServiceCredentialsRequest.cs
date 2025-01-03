@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListServiceCredentialsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>username_password</para>
         /// </summary>
         [NameInMap("serviceCredentialType")]
         [Validation(Required=false)]

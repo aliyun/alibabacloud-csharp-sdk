@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetTestResultListResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Openapi.RequestError</para>
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>error</para>
+        /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ASSDS-ASSASX-XSAXSA-XSAXSAXS</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
@@ -43,10 +59,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>8</para>
+            /// </summary>
             [NameInMap("bugCount")]
             [Validation(Required=false)]
             public long? BugCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Req</para>
+            /// </summary>
             [NameInMap("categoryIdentifier")]
             [Validation(Required=false)]
             public string CategoryIdentifier { get; set; }
@@ -81,6 +105,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string SpaceIdentifier { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>测试工作项</para>
+            /// </summary>
             [NameInMap("subject")]
             [Validation(Required=false)]
             public string Subject { get; set; }
@@ -103,10 +131,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public long? TestResultGmtCreate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>a8bxxxxxxxxxxxxxxxx54</para>
+            /// </summary>
             [NameInMap("testResultIdentifier")]
             [Validation(Required=false)]
             public string TestResultIdentifier { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TO DO</para>
+            /// </summary>
             [NameInMap("testResultStatus")]
             [Validation(Required=false)]
             public string TestResultStatus { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListOrganizationsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("accessLevel")]
         [Validation(Required=false)]
         public int? AccessLevel { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
         [NameInMap("minAccessLevel")]
         [Validation(Required=false)]
         public int? MinAccessLevel { get; set; }

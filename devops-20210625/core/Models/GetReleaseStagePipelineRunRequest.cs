@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetReleaseStagePipelineRunRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>66c0c9fffeb86b450c199fcd</para>
+        /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }

@@ -9,19 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateVariableGroupRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>变量组</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>变量组</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;isEncrypted&quot;:true,&quot;name&quot;:&quot;name1&quot;,&quot;value&quot;:&quot;vaue1&quot;}]</para>
         /// </summary>
         [NameInMap("variables")]
         [Validation(Required=false)]

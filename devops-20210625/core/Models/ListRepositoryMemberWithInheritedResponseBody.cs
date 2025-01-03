@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public int? AccessLevel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></para>
+            /// </summary>
             [NameInMap("avatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
@@ -46,12 +50,16 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             public ListRepositoryMemberWithInheritedResponseBodyResultInherited Inherited { get; set; }
             public class ListRepositoryMemberWithInheritedResponseBodyResultInherited : TeaModel {
                 /// <summary>
-                /// id
+                /// <para>id</para>
                 /// </summary>
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>codeup</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string NameWithNamespace { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>codeup</para>
+                /// </summary>
                 [NameInMap("path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
@@ -72,20 +84,36 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("visibilityLevel")]
                 [Validation(Required=false)]
                 public string VisibilityLevel { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>codeup</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>active</para>
+            /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>yunxiao</para>
+            /// </summary>
             [NameInMap("username")]
             [Validation(Required=false)]
             public string Username { get; set; }

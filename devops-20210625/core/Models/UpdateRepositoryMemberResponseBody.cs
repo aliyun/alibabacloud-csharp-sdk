@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateRepositoryMemberResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F590C9D8-E908-5B6C-95AC-56B7E8011FFA</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,56 +37,107 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public UpdateRepositoryMemberResponseBodyResult Result { get; set; }
         public class UpdateRepositoryMemberResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("accessLevel")]
             [Validation(Required=false)]
             public int? AccessLevel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100">https://tcs-devops.aliyuncs.com/thumbnail/112afcb7a6a35c3f67f1bea827c4/w/100/h/100</a></para>
+            /// </summary>
             [NameInMap("avatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="mailto:test@alibaba.com">test@alibaba.com</a></para>
+            /// </summary>
             [NameInMap("email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2020-08-08 08:08:08</para>
+            /// </summary>
             [NameInMap("expireAt")]
             [Validation(Required=false)]
             public string ExpireAt { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30815</para>
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test_memeber_name</para>
+            /// </summary>
             [NameInMap("memberName")]
             [Validation(Required=false)]
             public string MemberName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>USERS</para>
+            /// </summary>
             [NameInMap("memberType")]
             [Validation(Required=false)]
             public string MemberType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>codeup</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>223241</para>
+            /// </summary>
             [NameInMap("sourceId")]
             [Validation(Required=false)]
             public long? SourceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Project</para>
+            /// </summary>
             [NameInMap("sourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>normal</para>
+            /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>codeup-test</para>
+            /// </summary>
             [NameInMap("username")]
             [Validation(Required=false)]
             public string Username { get; set; }
 
             /// <summary>
-            /// web url
+            /// <para>web url</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("webUrl")]
             [Validation(Required=false)]
@@ -82,6 +145,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

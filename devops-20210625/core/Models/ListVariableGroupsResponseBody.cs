@@ -9,26 +9,50 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListVariableGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>assassa</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ASSDS-ASSASX-XSAXSA-XSAXSAXS</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
@@ -37,26 +61,50 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public List<ListVariableGroupsResponseBodyVariableGroups> VariableGroups { get; set; }
         public class ListVariableGroupsResponseBodyVariableGroups : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1586863220000</para>
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>13232343434343</para>
+            /// </summary>
             [NameInMap("creatorAccountId")]
             [Validation(Required=false)]
             public string CreatorAccountId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>变量组</para>
+            /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>12234</para>
+            /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>13232343434343</para>
+            /// </summary>
             [NameInMap("modifierAccountId")]
             [Validation(Required=false)]
             public string ModifierAccountId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>变量组</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -65,16 +113,28 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public List<ListVariableGroupsResponseBodyVariableGroupsRelatedPipelines> RelatedPipelines { get; set; }
             public class ListVariableGroupsResponseBodyVariableGroupsRelatedPipelines : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1234</para>
+                /// </summary>
                 [NameInMap("id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>流水线</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1586863220000</para>
+            /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
@@ -83,14 +143,26 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public List<ListVariableGroupsResponseBodyVariableGroupsVariables> Variables { get; set; }
             public class ListVariableGroupsResponseBodyVariableGroupsVariables : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("isEncrypted")]
                 [Validation(Required=false)]
                 public bool? IsEncrypted { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>name1</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>value1</para>
+                /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

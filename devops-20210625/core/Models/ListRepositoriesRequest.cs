@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("archived")]
         [Validation(Required=false)]
         public bool? Archived { get; set; }
@@ -21,29 +25,49 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public int? MinAccessLevel { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>created_at</para>
+        /// </summary>
         [NameInMap("orderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("organizationId")]
         [Validation(Required=false)]
         public string OrganizationId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("perPage")]
         [Validation(Required=false)]
         public long? PerPage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Demo</para>
+        /// </summary>
         [NameInMap("search")]
         [Validation(Required=false)]
         public string Search { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desc</para>
+        /// </summary>
         [NameInMap("sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }

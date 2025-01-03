@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class DeleteWorkitemRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3ef2ef6018d254d660e65f87a6</para>
         /// </summary>
         [NameInMap("identifier")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListTestCaseFieldsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e8bxxxxxxxxxxxxxxxx23</para>
         /// </summary>
         [NameInMap("spaceIdentifier")]
         [Validation(Required=false)]

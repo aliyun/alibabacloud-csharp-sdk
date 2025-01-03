@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetPipelineScanReportUrlRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/test/test/test.html</para>
         /// </summary>
         [NameInMap("reportPath")]
         [Validation(Required=false)]

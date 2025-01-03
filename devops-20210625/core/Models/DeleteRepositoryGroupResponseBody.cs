@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class DeleteRepositoryGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SYSTEM_UNKNOWN_ERROR</para>
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30F2DA15-2877-5FC9-BC71-F7F394717907</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,12 +37,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public DeleteRepositoryGroupResponseBodyResult Result { get; set; }
         public class DeleteRepositoryGroupResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public bool? Result { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

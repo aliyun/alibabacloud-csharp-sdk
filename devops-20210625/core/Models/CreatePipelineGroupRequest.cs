@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreatePipelineGroupRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

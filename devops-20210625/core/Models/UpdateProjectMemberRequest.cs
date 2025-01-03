@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class UpdateProjectMemberRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>project.admin</para>
         /// </summary>
         [NameInMap("roleIdentifier")]
         [Validation(Required=false)]
         public string RoleIdentifier { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5e70xxxxxxcd000xxxxe96</para>
         /// </summary>
         [NameInMap("targetIdentifier")]
         [Validation(Required=false)]
         public string TargetIdentifier { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Space</para>
         /// </summary>
         [NameInMap("targetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>19xx7043xxxxxxx914</para>
         /// </summary>
         [NameInMap("userIdentifier")]
         [Validation(Required=false)]
         public string UserIdentifier { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("userType")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class PassReleaseStagePipelineValidateResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

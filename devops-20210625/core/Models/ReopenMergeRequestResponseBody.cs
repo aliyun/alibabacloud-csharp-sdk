@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ReopenMergeRequestResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Openapi.RequestError</para>
+        /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>313A1BF6-63B7-52D4-A098-952221A65254</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,12 +37,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public ReopenMergeRequestResponseBodyResult Result { get; set; }
         public class ReopenMergeRequestResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public bool? Result { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
