@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string DiskCategory { get; set; }
 
+        [NameInMap("DiskIdPattern")]
+        [Validation(Required=false)]
+        public string DiskIdPattern { get; set; }
+
         /// <summary>
         /// <para>The list of disks.</para>
         /// 

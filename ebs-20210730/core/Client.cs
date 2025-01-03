@@ -4404,6 +4404,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["EventLevel"] = request.EventLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
             {
                 query["EventName"] = request.EventName;
@@ -4477,6 +4481,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevel))
+            {
+                query["EventLevel"] = request.EventLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
             {
@@ -4588,6 +4596,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             {
                 query["DiskCategory"] = request.DiskCategory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdPattern))
+            {
+                query["DiskIdPattern"] = request.DiskIdPattern;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIds))
             {
                 query["DiskIds"] = request.DiskIds;
@@ -4649,6 +4661,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskCategory))
             {
                 query["DiskCategory"] = request.DiskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdPattern))
+            {
+                query["DiskIdPattern"] = request.DiskIdPattern;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIds))
             {

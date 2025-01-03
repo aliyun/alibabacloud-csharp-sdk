@@ -111,6 +111,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string EventType { get; set; }
 
             /// <summary>
+            /// <para>Extra attributes of event, possible fields are:</para>
+            /// <list type="bullet">
+            /// <item><description>EcsInstanceId: ECS instance ID where the cloud disk is mounted;</description></item>
+            /// <item><description>Adapter: cloud disk mount point.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;EcsInstanceId\&quot;:\&quot;i-uf6dkn9qpcw6y94g7ag7\&quot;,\&quot;Adapter\&quot;:\&quot;hda\&quot;}</para>
+            /// </summary>
+            [NameInMap("ExtraAttributes")]
+            [Validation(Required=false)]
+            public string ExtraAttributes { get; set; }
+
+            /// <summary>
             /// <para>The recommended action after the event occurred. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ModifyDiskSpec</description></item>

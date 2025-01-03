@@ -20,6 +20,21 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The severity level of the event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INFO</b></description></item>
+        /// <item><description><b>WARN</b></description></item>
+        /// <item><description><b>CRITICAL</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WARN</para>
+        /// </summary>
+        [NameInMap("EventLevel")]
+        [Validation(Required=false)]
+        public string EventLevel { get; set; }
+
+        /// <summary>
         /// <para>The name of the event. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</description></item>
@@ -44,9 +59,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. If you specify MaxResults, <c>MaxResults</c> and <c>NextToken</c> are used for a paged query.</para>
+        /// <para>The number of entries to return on each page. If you specify MaxResults, <c>MaxResults</c> and <c>NextToken</c> are used for a paged query.</para>
         /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>Default value: 10</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
