@@ -1,3 +1,14 @@
+2025-01-06 Version: 6.16.0
+- Support API GetLocalityRule.
+- Support API UpdateLocalityRule.
+- Update API GetApplicationInstanceList: update param AppName.
+- Update API GetServiceListPage: update param AppName.
+- Update API ImportServices: add param SourceId.
+- Update API PullServices: add param SourceId.
+- Update API PullServices: update response param.
+- Update API QueryAllSwimmingLane: update response param.
+
+
 2024-12-26 Version: 6.15.1
 - Update API GetApplicationInstanceList: update param AppName.
 - Update API GetServiceListPage: update param AppName.
