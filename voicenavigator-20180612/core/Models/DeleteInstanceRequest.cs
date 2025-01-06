@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d74d6290-7cbe-4436-b5d7-014ebb0f4060</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

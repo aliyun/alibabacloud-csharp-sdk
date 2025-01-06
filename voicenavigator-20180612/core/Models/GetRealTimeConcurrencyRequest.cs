@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class GetRealTimeConcurrencyRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c112c168ed664c0a851f9ca72d2f7999</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

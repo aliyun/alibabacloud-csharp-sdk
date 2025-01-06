@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecbfa5e3-1838-4e8a-aa08-fa8b713b82df</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[Managed]</para>
+        /// </summary>
         [NameInMap("NluServiceTypeListJsonString")]
         [Validation(Required=false)]
         public string NluServiceTypeListJsonString { get; set; }
@@ -26,14 +30,20 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Number { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

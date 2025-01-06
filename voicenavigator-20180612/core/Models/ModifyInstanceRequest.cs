@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Concurrency")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12f407b22cbe4890ac595f09985848d5</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
