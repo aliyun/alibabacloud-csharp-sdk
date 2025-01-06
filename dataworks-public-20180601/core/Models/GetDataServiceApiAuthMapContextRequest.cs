@@ -8,38 +8,40 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
 {
-    public class GetDataServiceApiContextResponseBody : TeaModel {
+    public class GetDataServiceApiAuthMapContextRequest : TeaModel {
         /// <summary>
+        /// <para>API ID</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{&quot;apiId&quot;:123}</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Data")]
+        [NameInMap("ApiId")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public long? ApiId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>/apiPath</para>
         /// </summary>
-        [NameInMap("ErrCode")]
+        [NameInMap("ApiPath")]
         [Validation(Required=false)]
-        public string ErrCode { get; set; }
+        public string ApiPath { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("ErrMsg")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string ErrMsg { get; set; }
+        public long? ProjectId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1AFAE64E-D1BE-432B-A9****</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Verbose")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public bool? Verbose { get; set; }
 
     }
 

@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
 {
-    public class OpenDataWorksStandardServiceRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("Region")]
+    public class GetDataServiceFunctionRequest : TeaModel {
+        [NameInMap("FunctionId")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public long? FunctionId { get; set; }
 
     }
 

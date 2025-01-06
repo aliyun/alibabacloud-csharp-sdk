@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
 {
-    public class GetDataServiceApiContextResponseBody : TeaModel {
+    public class GetDataServiceApiAuthMapContextResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;apiId&quot;:123}</para>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
         public string ErrMsg { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1AFAE64E-D1BE-432B-A9****</para>
+        /// <para>123-abc</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

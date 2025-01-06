@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
 {
     public class StartTaskQualityRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallbackResultString")]
         [Validation(Required=false)]

@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuleCategory")]
         [Validation(Required=false)]

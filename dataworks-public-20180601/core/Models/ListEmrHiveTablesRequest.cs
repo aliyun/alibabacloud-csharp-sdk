@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
 {
     public class ListEmrHiveTablesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C-D033DD5FB82436A6</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("DatabaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

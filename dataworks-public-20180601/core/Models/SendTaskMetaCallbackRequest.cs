@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
 {
     public class SendTaskMetaCallbackRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConnectionInfo")]
         [Validation(Required=false)]
         public string ConnectionInfo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -35,35 +35,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
         public List<string> Resources { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SubType")]
         [Validation(Required=false)]
         public string SubType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskEnvParam")]
         [Validation(Required=false)]
         public string TaskEnvParam { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

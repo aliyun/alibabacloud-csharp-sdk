@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20180601.Models
 {
     public class ListEmrHiveDatabasesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C-D033DD5FB82436A6</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
