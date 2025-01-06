@@ -968,6 +968,144 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取推理结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPredictionRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPredictionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPredictionResponse
+        /// </returns>
+        public GetPredictionResponse GetPredictionWithOptions(string deploymentId, GetPredictionRequest request, GetPredictionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Token))
+            {
+                realHeaders["Token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Token);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPrediction",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/deployments/" + deploymentId + "/predict",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<GetPredictionResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推理结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPredictionRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPredictionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPredictionResponse
+        /// </returns>
+        public async Task<GetPredictionResponse> GetPredictionWithOptionsAsync(string deploymentId, GetPredictionRequest request, GetPredictionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Token))
+            {
+                realHeaders["Token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Token);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = request.Body,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPrediction",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/deployments/" + deploymentId + "/predict",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<GetPredictionResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推理结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPredictionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPredictionResponse
+        /// </returns>
+        public GetPredictionResponse GetPrediction(string deploymentId, GetPredictionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPredictionHeaders headers = new GetPredictionHeaders();
+            return GetPredictionWithOptions(deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推理结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPredictionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPredictionResponse
+        /// </returns>
+        public async Task<GetPredictionResponse> GetPredictionAsync(string deploymentId, GetPredictionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPredictionHeaders headers = new GetPredictionHeaders();
+            return await GetPredictionWithOptionsAsync(deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取query分析结果</para>
         /// </summary>
         /// 
