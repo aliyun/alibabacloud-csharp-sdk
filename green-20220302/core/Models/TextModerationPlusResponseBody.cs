@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
             /// <summary>
             /// <para>The results.</para>
             /// </summary>

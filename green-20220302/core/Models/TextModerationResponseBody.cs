@@ -36,6 +36,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
+            [NameInMap("dataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
+            [NameInMap("descriptions")]
+            [Validation(Required=false)]
+            public string Descriptions { get; set; }
+
             /// <summary>
             /// <para>The device ID.</para>
             /// 
