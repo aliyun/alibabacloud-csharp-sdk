@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateDiagnosticTaskShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Log information</para>
+        /// </summary>
         [NameInMap("AiJobLogInfo")]
         [Validation(Required=false)]
         public string AiJobLogInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Cluster ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i118913031696573280136</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Diagnostic type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CheckByAiJobLogs</para>
         /// </summary>
@@ -29,6 +36,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string DiagnosticType { get; set; }
 
+        /// <summary>
+        /// <para>List of node IDs</para>
+        /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public string NodeIdsShrink { get; set; }

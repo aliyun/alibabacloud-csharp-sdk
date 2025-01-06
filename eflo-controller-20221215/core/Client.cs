@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务创建接口</para>
+        /// <para>Diagnostic Task Creation Interface</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -615,7 +615,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务创建接口</para>
+        /// <para>Diagnostic Task Creation Interface</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -679,7 +679,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务创建接口</para>
+        /// <para>Diagnostic Task Creation Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -697,7 +697,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务创建接口</para>
+        /// <para>Diagnostic Task Creation Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2323,6 +2323,270 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFreeNodesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户可用的机型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMachineTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMachineTypesResponse
+        /// </returns>
+        public ListMachineTypesResponse ListMachineTypesWithOptions(ListMachineTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMachineTypes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMachineTypesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户可用的机型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMachineTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMachineTypesResponse
+        /// </returns>
+        public async Task<ListMachineTypesResponse> ListMachineTypesWithOptionsAsync(ListMachineTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMachineTypes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMachineTypesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户可用的机型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMachineTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMachineTypesResponse
+        /// </returns>
+        public ListMachineTypesResponse ListMachineTypes(ListMachineTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMachineTypesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户可用的机型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMachineTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMachineTypesResponse
+        /// </returns>
+        public async Task<ListMachineTypesResponse> ListMachineTypesAsync(ListMachineTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMachineTypesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Node Group Information Under the Cluster</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupsResponse
+        /// </returns>
+        public ListNodeGroupsResponse ListNodeGroupsWithOptions(ListNodeGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeGroups",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Node Group Information Under the Cluster</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupsResponse
+        /// </returns>
+        public async Task<ListNodeGroupsResponse> ListNodeGroupsWithOptionsAsync(ListNodeGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                body["NodeGroupId"] = request.NodeGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeGroups",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Node Group Information Under the Cluster</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupsResponse
+        /// </returns>
+        public ListNodeGroupsResponse ListNodeGroups(ListNodeGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNodeGroupsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Node Group Information Under the Cluster</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeGroupsResponse
+        /// </returns>
+        public async Task<ListNodeGroupsResponse> ListNodeGroupsAsync(ListNodeGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNodeGroupsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

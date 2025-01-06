@@ -1,3 +1,8 @@
+2025-01-06 Version: 2.2.0
+- Support API ListMachineTypes.
+- Support API ListNodeGroups.
+
+
 2025-01-02 Version: 2.1.0
 - Support API CreateDiagnosticTask.
 - Update API RunCommand: add param CommandId.
