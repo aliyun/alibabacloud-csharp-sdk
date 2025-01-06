@@ -493,6 +493,16 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SchedulerSpec")]
+        [Validation(Required=false)]
+        public GetClusterResponseBodySchedulerSpec SchedulerSpec { get; set; }
+        public class GetClusterResponseBodySchedulerSpec : TeaModel {
+            [NameInMap("EnableTopologyAwareness")]
+            [Validation(Required=false)]
+            public bool? EnableTopologyAwareness { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The security group ID.</para>
         /// 

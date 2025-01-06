@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string MonitorSpecShrink { get; set; }
 
+        [NameInMap("SchedulerSpec")]
+        [Validation(Required=false)]
+        public string SchedulerSpecShrink { get; set; }
+
     }
 
 }

@@ -5749,6 +5749,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 request.MonitorSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MonitorSpec, "MonitorSpec", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SchedulerSpec))
+            {
+                request.SchedulerSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SchedulerSpec, "SchedulerSpec", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVersion))
             {
@@ -5801,6 +5805,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSpecShrink))
             {
                 query["MonitorSpec"] = request.MonitorSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerSpecShrink))
+            {
+                query["SchedulerSpec"] = request.SchedulerSpecShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5849,6 +5857,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 request.MonitorSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MonitorSpec, "MonitorSpec", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SchedulerSpec))
+            {
+                request.SchedulerSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SchedulerSpec, "SchedulerSpec", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientVersion))
             {
@@ -5901,6 +5913,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSpecShrink))
             {
                 query["MonitorSpec"] = request.MonitorSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulerSpecShrink))
+            {
+                query["SchedulerSpec"] = request.SchedulerSpecShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

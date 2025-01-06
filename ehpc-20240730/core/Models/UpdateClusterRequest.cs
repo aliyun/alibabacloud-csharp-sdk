@@ -172,6 +172,16 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
         }
 
+        [NameInMap("SchedulerSpec")]
+        [Validation(Required=false)]
+        public UpdateClusterRequestSchedulerSpec SchedulerSpec { get; set; }
+        public class UpdateClusterRequestSchedulerSpec : TeaModel {
+            [NameInMap("EnableTopologyAwareness")]
+            [Validation(Required=false)]
+            public bool? EnableTopologyAwareness { get; set; }
+
+        }
+
     }
 
 }
