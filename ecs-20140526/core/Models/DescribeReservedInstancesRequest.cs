@@ -25,7 +25,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AllocationType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The instance type of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <remarks>
+        /// <para> Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g5.large</para>
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The instance family of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g5</para>
@@ -126,6 +129,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The name of the reserved instance.</para>
+        /// <remarks>
+        /// <para> Only exact search is supported.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>testReservedInstanceName</para>
@@ -143,12 +149,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scope of the reserved instance. Valid values:</para>
+        /// <para>The scope level of the reserved instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Region: regional</description></item>
         /// <item><description>Zone: zonal</description></item>
         /// </list>
-        /// <para>Default value: Region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Region</para>
@@ -158,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The statuses of the reserved instances.</para>
+        /// <para>The status of the reserved instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -200,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID of the reserved instance. This parameter is valid and required if you set Scope to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-z</para>

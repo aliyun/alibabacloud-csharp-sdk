@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</para>
+        /// <para>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>60</description></item>
         /// <item><description>600</description></item>

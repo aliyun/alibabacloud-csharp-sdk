@@ -215,8 +215,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The type of the private pool generated after the capacity reservation takes effect. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Open: open private pool.</description></item>
-                /// <item><description>Target: targeted private pool.</description></item>
+                /// <item><description>Open: open private pool. If you use the capacity reservation to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the capacity reservation is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the instances.</description></item>
+                /// <item><description>Target: targeted private pool. If you use the capacity reservation to create ECS instances, the targeted private pool that is associated with the capacity reservation is automatically matched. If no capacity is available in the private pool, the instances fail to be created.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

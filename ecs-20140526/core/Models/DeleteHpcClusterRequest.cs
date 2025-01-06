@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteHpcClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The <b>ClientToken</b> value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <b>The token can contain only ASCII characters and cannot exceed 64 characters in length.</b> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OwnerAccount { get; set; }
 
         /// <summary>
+        /// <para>RAM用户的虚拟账号ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>155780923770</para>
         /// </summary>
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>资源主账号的账号名称。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EcsforCloud</para>
         /// </summary>
@@ -66,6 +70,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
+        /// <para>资源主账号的ID，亦即UID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>155780923770</para>
         /// </summary>

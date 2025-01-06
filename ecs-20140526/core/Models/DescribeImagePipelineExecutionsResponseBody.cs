@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the image creation task.</para>
+        /// <para>Details of the image creation tasks.</para>
         /// </summary>
         [NameInMap("ImagePipelineExecution")]
         [Validation(Required=false)]
@@ -93,13 +93,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The status of the image creation task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>BUILDING</description></item>
-                /// <item><description>DISTRIBUTING</description></item>
-                /// <item><description>RELEASING</description></item>
-                /// <item><description>SUCCESS</description></item>
-                /// <item><description>FAILED</description></item>
-                /// <item><description>CANCELLING</description></item>
-                /// <item><description>CANCELLED</description></item>
+                /// <item><description>PREPARING: Resources, such as intermediate instances, are being created.</description></item>
+                /// <item><description>REPAIRING: The source image is being repaired.</description></item>
+                /// <item><description>BUILDING: The user-defined commands are being run and an image is being created.</description></item>
+                /// <item><description>TESTING: The user-defined test commands are being run.</description></item>
+                /// <item><description>DISTRIBUTING: The created image is being copied and shared.</description></item>
+                /// <item><description>RELEASING: The temporary resources generated during the image creation process are being released.</description></item>
+                /// <item><description>SUCCESS The image creation task is completed.</description></item>
+                /// <item><description>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</description></item>
+                /// <item><description>FAILED: The image creation task fails.</description></item>
+                /// <item><description>TEST_FAILED: The image is created, but the test fails.</description></item>
+                /// <item><description>CANCELLING: The image creation task is being canceled.</description></item>
+                /// <item><description>CANCELLED: The image creation task is canceled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

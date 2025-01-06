@@ -12,15 +12,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new boot mode of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BIOS: Basic Input/Output System (BIOS)</description></item>
-        /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI)</description></item>
-        /// <item><description>UEFI-Preferred: BIOS and UEFI</description></item>
+        /// <item><description>BIOS: BIOS mode</description></item>
+        /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI) mode</description></item>
+        /// <item><description>UEFI-Preferred: BIOS mode and UEFI mode</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Before you change the boot mode, we recommend that you obtain the boot modes supported by the image. If you specify an unsupported boot mode for the image, ECS instances that use the image cannot start as expected. If you do not know which boot modes are supported by the image, we recommend that you use the image check feature to perform a check. For information about the image check feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a>.</para>
-        /// </remarks>
-        /// <remarks>
-        /// <para> For information about the UEFI-Preferred boot mode, see <a href="https://help.aliyun.com/document_detail/2244655.html">Best practices for ECS instance boot modes</a>.</para>
+        /// <para> Before you change this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of custom images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,15 +48,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ModifyImageAttributeRequestFeatures Features { get; set; }
         public class ModifyImageAttributeRequestFeatures : TeaModel {
+            /// <summary>
+            /// <para>The image metadata access mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</para>
+            /// </description></item>
+            /// <item><description><para>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</para>
+            /// <para>**</para>
+            /// <para><b>Note</b> You cannot change the value of ImdsSupport from v2 to v1 for an image. To change the value of ImdsSupport from v2 to v1 for an image, use the snapshots associated with the image to create an image and set ImdsSupport to v1 for the new image.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v2</para>
+            /// </summary>
             [NameInMap("ImdsSupport")]
             [Validation(Required=false)]
             public string ImdsSupport { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to support the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
+            /// <para>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>supported: The image supports NVMe. Instances created from this image also support NVMe.</description></item>
-            /// <item><description>unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.</description></item>
+            /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
+            /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

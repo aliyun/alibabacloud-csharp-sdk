@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReInitDiskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically start the instance after the disk is re-initialized.</para>
+        /// <para>Specifies whether to automatically start the instance after the disk is re-initialized. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>

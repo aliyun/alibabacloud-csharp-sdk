@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSupportInstanceTypesRequest : TeaModel {
         /// <summary>
-        /// <para>The scenario in which you want to use the image. Valid values:</para>
+        /// <para>The scenario in which the image is used. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CreateEcs (default): instance creation</description></item>
         /// <item><description>ChangeOS: replacement of the system disk or operating system</description></item>

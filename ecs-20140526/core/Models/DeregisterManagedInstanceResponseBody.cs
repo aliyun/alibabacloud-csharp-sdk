@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeregisterManagedInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The managed instance.</para>
+        /// <para>Details of the managed instances.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]

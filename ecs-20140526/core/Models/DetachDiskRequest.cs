@@ -32,6 +32,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The ID of the disk that you want to detach.</para>
+        /// <list type="bullet">
+        /// <item><description>The disk that you want to detach must be attached to an ECS instance and in the In Use (<c>In_use</c>) state.</description></item>
+        /// <item><description>The instance from which you want to detach a data disk must be in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>The instance from which you want to detach the system disk must be in the <c>Stopped</c> state.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

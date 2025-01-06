@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The auto-renewal status of the reserved instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AutoRenewal: The reserved instance is automatically renewed.</description></item>
-                /// <item><description>Normal: You must manually renew the reserved instance.</description></item>
+                /// <item><description>AutoRenewal: automatically renews the reserved instance.</description></item>
+                /// <item><description>Normal: manually renews the reserved instances.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string Device { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
                         [NameInMap("Encrypted")]
                         [Validation(Required=false)]
                         public bool? Encrypted { get; set; }
@@ -278,6 +282,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string CpuOnlineUpgrade { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>v2</para>
+                    /// </summary>
                     [NameInMap("ImdsSupport")]
                     [Validation(Required=false)]
                     public string ImdsSupport { get; set; }

@@ -313,8 +313,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Waiting: The image is waiting to be processed.</description></item>
         /// <item><description>Available: The image is available.</description></item>
         /// <item><description>UnAvailable: The image is unavailable.</description></item>
-        /// <item><description>CreateFailed: The image failed to be created.</description></item>
-        /// <item><description>Deprecated: The image is deprecated.</description></item>
+        /// <item><description>CreateFailed: The image fails to be created.</description></item>
+        /// <item><description>Deprecated: The image is no longer used.</description></item>
         /// </list>
         /// <para>Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).</para>
         /// 

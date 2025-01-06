@@ -24,18 +24,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The CPU topology type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ContinuousCoreToHTMapping</c>: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</description></item>
-            /// <item><description><c>DiscreteCoreToHTMapping</c>: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.</description></item>
+            /// <item><description>ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</description></item>
+            /// <item><description>DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core.</description></item>
             /// </list>
-            /// <para>By default, this parameter is left empty.</para>
-            /// <remarks>
-            /// </remarks>
+            /// <para>This parameter is left empty by default.</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is supported only by specific instance families. For information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify CPU topologies</a>.</para>
-            /// </description></item>
-            /// <item><description><para>Before you specify this parameter, make sure that the instance is in the Stopped (<c>Stopped</c>) state.</para>
-            /// </description></item>
+            /// <item><description>The instance must be in the Stopped (<c>Stopped</c>) state.</description></item>
             /// </list>
+            /// <remarks>
+            /// <para> This parameter is supported only for specific instance families. For information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify CPU topologies</a>.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>DiscreteCoreToHTMapping</para>
@@ -87,10 +86,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The Jumbo Frame feature is enabled for the instance.</description></item>
+        /// <item><description>false: The Jumbo Frame feature is disabled for the instance.</description></item>
         /// </list>
-        /// <para>You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTU and jumbo frames</a>.</para>
+        /// <para>Take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
+        /// <item><description>The instance must reside in a VPC.</description></item>
+        /// <item><description>After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500. You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">Jumbo Frames</a>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -102,8 +106,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The hostname of the instance. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you change the hostname of the instance, the instance cannot be in the Creating (<c>Pending</c>) or Starting (<c>Starting</c>) state. Otherwise, the new hostname and the configurations in <c>/etc/hosts</c> may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance.</description></item>
-        /// <item><description>After you change the hostname, you must call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new hostname to take effect.</description></item>
+        /// <item><description>The instance cannot be in the Creating (<c>Pending</c>) or Starting (<c>Starting</c>) state. Otherwise, the new hostname and the configurations in the <c>/etc/hosts</c> file may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance.</description></item>
+        /// <item><description>The parameter takes effect after the instance is restarted. You can restart an instance in the ECS console. For more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance. The parameter cannot take effect if you restart an instance within the operating system.</description></item>
         /// </list>
         /// <para>The following limits apply to the hostnames of instances that run different operating systems:</para>
         /// <list type="bullet">
@@ -140,7 +144,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of queues supported by the primary ENI.</para>
+        /// <para>The number of queues supported by the primary elastic network interface (ENI) of the instance. Take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance must be in the Stopped (<c>Stopped</c>) state.</description></item>
+        /// <item><description>The number of queues supported by an ENI cannot exceed the maximum number of queues that the instance type allows for each ENI. The total number of queues on all ENIs on the instance cannot exceed the queue quota that the instance type supports. To query the maximum number of queues that an instance type allows for each ENI and the queue quota for the instance type, call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</description></item>
+        /// <item><description>If you set this parameter to -1, the value is reset to the default value for the instance type. To query the default number of queues of an ENI of each instance type, call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -158,10 +167,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
-        /// <pre><c>( ) ` ~ ! @ # $ % ^ &amp; * - _ + = | { } [ ] : ; \\&quot; &lt; &gt; , . ? /
-        /// </c></pre>
-        /// <para>The password of a Windows instance cannot start with a forward slash (/).</para>
+        /// <para>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <em><em>( ) \` ~ ! @ # $ % ^ &amp; \</em> - _ + = | { } [ ] : ; \&quot; &lt; &gt; , . ? /</em>* The password of a Windows instance cannot start with a forward slash (/). Take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance cannot be in the Starting (<c>Starting</c>) state.</description></item>
+        /// <item><description>The parameter takes effect after the instance is restarted. You can restart an instance in the ECS console. For more information, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation to restart the instance. The parameter cannot take effect if you restart an instance within the operating system.</description></item>
+        /// </list>
         /// <remarks>
         /// <para> For security reasons, we recommend that you use HTTPS to send requests if <c>Password</c> is specified.</para>
         /// </remarks>
@@ -300,15 +310,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of replacement security groups.</para>
+        /// <para>The IDs of the new security groups to which to assign the instance. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>All security group IDs must be unique.</description></item>
-        /// <item><description>The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the list.</description></item>
-        /// <item><description>You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</description></item>
+        /// <item><description>The security group IDs in the array cannot be duplicate. The length of the array is related to the quota of security groups to which the instance can be assigned. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits and quotas&quot; topic.</description></item>
+        /// <item><description>The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the array.</description></item>
+        /// <item><description>You can move the instance to security groups of a different type. However, the array cannot contain the IDs of both basic and advanced security groups.</description></item>
         /// <item><description>The security groups and the instance must belong to the same VPC.</description></item>
-        /// <item><description>The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits and quotas&quot; topic.</description></item>
-        /// <item><description>New security groups become valid for the instance after a short delay.</description></item>
+        /// <item><description>Security groups of instances in the classic network cannot be changed.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> New security groups become valid for the instance after a short delay.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp15ed6xe1yxeycg7o****</para>
@@ -318,8 +330,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> SecurityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The user data of the instance. The user data must be encoded in Base64.</para>
-        /// <para>The maximum size of the raw data before encoding is 32 KB. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.</para>
+        /// <para>The user data of the instance. We recommend that you encode the data in Base64. Take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance must meet the limits for user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Initialize an instance by using instance user data</a>.</description></item>
+        /// <item><description>After you restart the instance, the new user data is displayed but not run as scripts.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The maximum size of the raw data before encoding is 32 KB. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ZWNobyBoZWxsbyBlY3Mh</para>

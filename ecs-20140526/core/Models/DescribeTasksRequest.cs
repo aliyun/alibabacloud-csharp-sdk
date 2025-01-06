@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end point of the time period for which to query created tasks. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The end of the time range to query. The time range refers to the period of time during which the task is created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-23T15:16:00Z</para>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Page start from page 1.</para>
+        /// <para>The page number.</para>
+        /// <para>Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,12 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of resource N that is associated with the task. Valid values of N: 1 to 100.</para>
-        /// <list type="bullet">
-        /// <item><description>If TaskAction is set to ImportImage or ExportImage, set the resource ID to an image ID.</description></item>
-        /// <item><description>If TaskAction is set to RedeployInstance, set the resource ID to an Elastic Compute Service (ECS) instance ID.</description></item>
-        /// <item><description>If TaskAction is set to ModifyDiskSpec, set the resource ID to a disk ID.</description></item>
-        /// </list>
+        /// <para>The IDs of the resources associated with the task. Valid values of N: 1 to 100.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -83,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start point of the time period for which to query created tasks. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The beginning of the time range to query. The time range refers to the period of time during which the task is created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-23T15:10:00Z</para>
@@ -109,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</para>
+        /// <para>The task IDs. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-bp1hvgwromzv32iq****,t-bp179lofu2pv768w****</para>
@@ -119,15 +114,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskIds { get; set; }
 
         /// <summary>
-        /// <para>The state of the task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Finished</description></item>
         /// <item><description>Processing</description></item>
         /// <item><description>Failed</description></item>
         /// </list>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>This parameter is left empty by default.</para>
         /// <remarks>
-        /// <para> The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.</para>
+        /// <para> The system only queries tasks in the Finished, Processing, and Failed states and ignores other values.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

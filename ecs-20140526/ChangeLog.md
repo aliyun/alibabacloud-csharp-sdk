@@ -1,3 +1,9 @@
+2025-01-06 Version: 5.0.1
+- Update API DescribePrefixLists: add param PrefixListId.
+- Update API DescribePrefixLists: update param PrefixListId.
+- Update API ModifyDiskSpec: add param DestinationZoneId.
+
+
 2024-12-26 Version: 5.0.0
 - Update API DescribeImages: update response param.
 - Update API ModifyInstanceAttribute: add param CpuOptions.Core.

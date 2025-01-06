@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with a <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName02</para>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BaseImageType { get; set; }
 
         /// <summary>
-        /// <para>The content of the image template. The content cannot exceed 16 KB in size and can contain up to 127 commands. For more information about the commands that are supported, see the &quot;Usage notes&quot; section of this topic.</para>
+        /// <para>The build content in the image template. The content cannot exceed 16 KB in size. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FROM IMAGE:m-bp67acfmxazb4p****</para>
@@ -98,9 +98,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -175,8 +173,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The repair mode of the image template.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Standard: the standard mode.</para>
+        /// <para>Supported check items in Linux operating systems:</para>
+        /// <list type="bullet">
+        /// <item><description>GUESTOS.CloudInit</description></item>
+        /// <item><description>GUESTOS.Dhcp</description></item>
+        /// <item><description>GUESTOS.Virtio</description></item>
+        /// <item><description>GUESTOS.OnlineResizeFS</description></item>
+        /// <item><description>GUESTOS.Grub</description></item>
+        /// <item><description>GUESTOS.Fstab</description></item>
+        /// </list>
+        /// <para>Supported check items in Windows operating systems:</para>
+        /// <list type="bullet">
+        /// <item><description>GUESTOS.Virtio</description></item>
+        /// <item><description>GUESTOS.Updat</description></item>
+        /// <item><description>GUESTOS.Hotfix</description></item>
+        /// <item><description>GUESTOS.Server</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// <para> As the check and repair capabilities continue to improve, the number of check items may increase. For more information about check items, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -245,9 +265,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The test content in the image template. The content cannot exceed 16 KB in size. For information about the commands supported by Image Builder, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

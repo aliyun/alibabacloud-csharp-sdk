@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type.</para>
+        /// <para>The instance type of the capacity reservation. You can specify this parameter to query only effective capacity reservations. To query capacity reservations that are released, you must specify PrivatePoolOptions.Ids.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -129,16 +129,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The state of the capacity reservation. Valid values:</para>
+        /// <para>The status of the capacity reservation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>All: All states.</description></item>
         /// <item><description>Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.</description></item>
         /// <item><description>Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.</description></item>
         /// <item><description>Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.</description></item>
         /// <item><description>Active: The capacity reservation is in effect.</description></item>
-        /// <item><description>Released: The capacity reservation has been released manually or automatically when it expired.</description></item>
+        /// <item><description>Released: The capacity reservation is manually or automatically released when it expires.</description></item>
         /// </list>
-        /// <para>Default value: Active.</para>
+        /// <para>If you do not specify this parameter, capacity reservations in states other than Pending and Released are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -148,15 +148,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags of the capacity reservation.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCapacityReservationsRequestTag> Tag { get; set; }
         public class DescribeCapacityReservationsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N. Valid values of N: 1 to 20.</para>
-            /// <para>If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>The key of tag N of the capacity reservation. Valid values of N: 1 to 20.</para>
+            /// <para>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N. Valid values of N: 1 to 20.</para>
+            /// <para>The value of tag N of the capacity reservation. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public CreateImageRequestFeatures Features { get; set; }
         public class CreateImageRequestFeatures : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>v2</para>
+            /// </summary>
             [NameInMap("ImdsSupport")]
             [Validation(Required=false)]
             public string ImdsSupport { get; set; }

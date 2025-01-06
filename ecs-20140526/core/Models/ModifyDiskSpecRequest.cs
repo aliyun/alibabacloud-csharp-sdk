@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskSpecRequest : TeaModel {
+        [NameInMap("DestinationZoneId")]
+        [Validation(Required=false)]
+        public string DestinationZoneId { get; set; }
+
         /// <summary>
         /// <para>The new disk category of the cloud disk. Valid values:</para>
         /// <list type="bullet">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the OSS storage plans.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned OSS storage plans.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the OSS storage plan expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>Details about the OSS storage plans.</para>
         /// </summary>
         [NameInMap("SnapshotPackages")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage> SnapshotPackage { get; set; }
             public class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage : TeaModel {
                 /// <summary>
-                /// <para>The time when the OSS storage plan was purchased. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The name of the OSS storage plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testDisplayName</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The maximum storage capacity offered by the OSS storage plan.</para>
+                /// <para>The time when the OSS storage plan expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-11-30T06:32:31Z</para>
@@ -71,6 +71,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
+                /// <para>The maximum storage capacity offered by the OSS storage plan.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
                 /// </summary>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? InitCapacity { get; set; }
 
                 /// <summary>
-                /// <para>DescribeSnapshotPackage</para>
+                /// <para>The time when the OSS storage plan was purchased. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2017-11-30T06:32:31Z</para>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The name of the OSS storage plan.</para>
+        /// <para>The total number of OSS storage plans.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

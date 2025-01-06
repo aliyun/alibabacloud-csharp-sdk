@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the disk that you want to roll back.</para>
+        /// <para>The ID of the cloud disk that you want to roll back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot that you want to use to roll back the disk.</para>
+        /// <para>The ID of the snapshot that you want to use to roll back the cloud disk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeImageFromFamilyResponseBodyImage Image { get; set; }
         public class DescribeImageFromFamilyResponseBodyImage : TeaModel {
             /// <summary>
-            /// <para>The image architecture. Valid values:</para>
+            /// <para>The architecture of the image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>i386</description></item>
             /// <item><description>x86_64</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the image.</para>
+            /// <para>The description of the volume.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The mappings between the disks and snapshots under the image.</para>
+            /// <para>The mappings between the disk and the snapshot in the image.</para>
             /// </summary>
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <summary>
                     /// <para>The device name of the disk. Example: /dev/xvdb.</para>
                     /// <remarks>
-                    /// <para> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</para>
+                    /// <para> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Device { get; set; }
 
                     /// <summary>
-                    /// <para>The format of the image.</para>
+                    /// <para>The image format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>qcow2</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ImportOSSBucket { get; set; }
 
                     /// <summary>
-                    /// <para>The OSS object corresponding to the imported image file.</para>
+                    /// <para>The OSS object to which the imported image belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>imageImport</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Size { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the snapshot.</para>
+                    /// <para>The snapshot ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>s-bp17ot2q7x72ggtw****</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string SnapshotId { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the image.</para>
+                    /// <para>The image type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>custom</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageFamily { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-bp1g7004ksh0oeuc****</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageOwnerAlias { get; set; }
 
             /// <summary>
-            /// <para>The version of the image.</para>
+            /// <para>The image version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsCopied { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image has been shared to other Alibaba Cloud accounts.</para>
+            /// <para>Indicates whether the custom image was shared to other Alibaba Cloud accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IsSelfShared { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you have subscribed to the image corresponding to the specified product code.</para>
+            /// <para>Indicates whether you have subscribed to the service terms of the image product corresponding to the image product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsSubscribed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image supports cloud-init.</para>
+            /// <para>Indicates whether cloud-init is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsSupportIoOptimized { get; set; }
 
             /// <summary>
-            /// <para>The name of the operating system.</para>
+            /// <para>The display name of the operating system in Chinese.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud Linux 2.1903</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OSType { get; set; }
 
             /// <summary>
-            /// <para>The platform of the operating system.</para>
+            /// <para>The operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Aliyun</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The image creation progress. Unit: percent (%).</para>
+            /// <para>The image creation progress in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -309,12 +309,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>The status of the image. Valid values:</para>
+            /// <para>The state of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>UnAvailable: The image is unavailable.</description></item>
-            /// <item><description>Available: The image is available.</description></item>
-            /// <item><description>Creating: The image is being created.</description></item>
-            /// <item><description>CreateFailed: The image failed to be created.</description></item>
+            /// <item><description>UnAvailable</description></item>
+            /// <item><description>Available</description></item>
+            /// <item><description>Creating</description></item>
+            /// <item><description>CreateFailed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of Tag data.</para>
+            /// <para>The tags of the image.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<DescribeImageFromFamilyResponseBodyImageTagsTag> Tag { get; set; }
                 public class DescribeImageFromFamilyResponseBodyImageTagsTag : TeaModel {
                     /// <summary>
-                    /// <para>The tag key of the image.</para>
+                    /// <para>The tag key of the custom image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TestKey</para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string TagKey { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value of the image.</para>
+                    /// <para>The tag value of the custom image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TestValue</para>
@@ -362,8 +362,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Indicates whether the image has been used to create ECS instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>instance: The image has been used to create one or more ECS instances.</description></item>
-            /// <item><description>none: The image has not been used to create ECS instances.</description></item>
+            /// <item><description>instance: The image was used to create one or more ECS instances.</description></item>
+            /// <item><description>none: The image was not used to create ECS instances.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

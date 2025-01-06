@@ -32,14 +32,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
         public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration : TeaModel {
             /// <summary>
-            /// <para>This parameter is not publicly available.</para>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> Arn { get; set; }
             public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn : TeaModel {
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000000000</para>
@@ -49,7 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? AssumeRoleFor { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hide</para>
@@ -59,7 +65,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RoleType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hide</para>
@@ -86,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key used in cross-region snapshot replication and encryption.</para>
+            /// <para>The ID of the Key Management Service (KMS) key used in cross-region snapshot replication and encryption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40826X</para>
@@ -238,11 +246,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Format description:</para>
+        /// <para>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. For example, 1 indicates 01:00:00. Format description:</para>
         /// <list type="bullet">
         /// <item><description>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</description></item>
-        /// <item><description>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</description></item>
+        /// <item><description>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify up to 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you scheduled snapshots to be automatically created at 09:00, 10:00, 11:00, and 12:00. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

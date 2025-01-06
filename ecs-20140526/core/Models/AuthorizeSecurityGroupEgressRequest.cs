@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group rules. Valid values of N: 1 to 100.</para>
+        /// <para>An array of security group rules. You can specify 1 to 100 security group rules.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -190,11 +190,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>You must specify at least one of the following parameters: <c>DestGroupId</c>, <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, and <c>DestPrefixListId</c>.</description></item>
             /// <item><description>If you specify <c>DestGroupId</c> but do not specify <c>DestCidrIp</c>, you must set <c>NicType</c> to intranet.</description></item>
             /// <item><description>If you specify both <c>DestGroupId</c> and <c>DestCidrIp</c>, <c>DestCidrIp</c> takes precedence.</description></item>
-            /// </list>
-            /// <para>When you specify this parameter, take note of the following items:</para>
-            /// <list type="bullet">
-            /// <item><description>Advanced security groups do not support security group rules that reference security groups as authorization objects.</description></item>
-            /// <item><description>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -279,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Ipv6DestCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
+            /// <para>The source IPv6 CIDR block or IPv6 address.</para>
             /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// <remarks>
             /// <para> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <c>DestCidrIp</c> in the same request.</para>

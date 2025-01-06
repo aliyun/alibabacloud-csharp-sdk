@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the task.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task was completed.</para>
+                /// <para>The time when the task ended.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-24T12:50Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string FinishedTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource.</para>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m-bp1i8huqm5u7****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SupportCancel { get; set; }
 
                 /// <summary>
-                /// <para>The name of the task.</para>
+                /// <para>The name of the operation that generates the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ImportImage</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TaskAction { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the task.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>t-bp1hvgwromzv32iq****</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>The state of the task.</para>
+                /// <para>The task status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Finished</para>

@@ -121,13 +121,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the elasticity assurances. Valid values:</para>
+        /// <para>The status of the elasticity assurance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>All</description></item>
-        /// <item><description>Preparing</description></item>
-        /// <item><description>Prepared</description></item>
-        /// <item><description>Active</description></item>
-        /// <item><description>Released</description></item>
+        /// <item><description>All: All states.</description></item>
+        /// <item><description>Deactivated: The elasticity assurance is pending activation. This state is in invitational preview.</description></item>
+        /// <item><description>Preparing: The elasticity assurance is being prepared.</description></item>
+        /// <item><description>Prepared: The elasticity assurance is to take effect.</description></item>
+        /// <item><description>Active: The elasticity assurance is in effect.</description></item>
+        /// <item><description>Released: The elasticity assurance is released.</description></item>
         /// </list>
         /// <para>Default value: Active.</para>
         /// 

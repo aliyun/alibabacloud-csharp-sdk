@@ -61,10 +61,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<StartImagePipelineExecutionRequestTag> Tag { get; set; }
         public class StartImagePipelineExecutionRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -75,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para> This parameter is deprecated.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TemplateTag")]
@@ -85,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class StartImagePipelineExecutionRequestTemplateTag : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is deprecated.</para>
+            /// <para> This parameter is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is deprecated.</para>
+            /// <para> This parameter is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
