@@ -58,6 +58,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
         /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
         /// <item><description><b>CCN</b>: Cloud Connect Network (CCN) instance</description></item>
+        /// <item><description><b>ECR</b>: Express Connect Router (ECR)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

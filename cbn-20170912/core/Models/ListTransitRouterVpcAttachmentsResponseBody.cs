@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -215,6 +215,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string TransitRouterId { get; set; }
 
+            /// <summary>
+            /// <para>The features of the VPC connection.</para>
+            /// </summary>
             [NameInMap("TransitRouterVPCAttachmentOptions")]
             [Validation(Required=false)]
             public Dictionary<string, string> TransitRouterVPCAttachmentOptions { get; set; }

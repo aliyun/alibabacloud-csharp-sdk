@@ -114,7 +114,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <item><description><b>china</b>: Chinese mainland.</description></item>
                 /// <item><description><b>asia-pacific</b>: Asia Pacific</description></item>
                 /// <item><description><b>europe</b>: Europe</description></item>
-                /// <item><description><b>australia</b>: Australia</description></item>
                 /// <item><description><b>north-america</b>: North America</description></item>
                 /// </list>
                 /// 
@@ -131,7 +130,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <item><description><b>china</b>: Chinese mainland.</description></item>
                 /// <item><description><b>asia-pacific</b>: Asia Pacific</description></item>
                 /// <item><description><b>europe</b>: Europe</description></item>
-                /// <item><description><b>australia</b>: Australia</description></item>
                 /// <item><description><b>north-america</b>: North America</description></item>
                 /// </list>
                 /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyFlowLogAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-7qthudw0ll6jmc****</para>
@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
 
+        /// <summary>
+        /// <para>The time window for collecting log data. Unit: seconds. Valid values: <b>60</b> or <b>600</b> Default value: <b>600</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public long? Interval { get; set; }

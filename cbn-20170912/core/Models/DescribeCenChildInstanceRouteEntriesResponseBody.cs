@@ -115,9 +115,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                         /// <summary>
                         /// <para>The type of the peer network instance on which the overlapping routes are found. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>VPC</b></description></item>
-                        /// <item><description><b>VBR</b></description></item>
-                        /// <item><description><b>CCN</b></description></item>
+                        /// <item><description><b>VPC</b>: VPC</description></item>
+                        /// <item><description><b>VBR</b>: VBR</description></item>
+                        /// <item><description><b>CCN</b>: CCN instance</description></item>
+                        /// <item><description><b>ECR</b>: ECR</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>

@@ -101,10 +101,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentName { get; set; }
 
         /// <summary>
-        /// <para>Feature configurations of the VPC connection.</para>
-        /// <list type="bullet">
-        /// <item><description>ipv6Support: specifies whether to enable IPv6. Valid values: true and false. The default value is the status of the VPC connection.</description></item>
-        /// </list>
+        /// <para>The features of the VPC connection.</para>
         /// </summary>
         [NameInMap("TransitRouterVPCAttachmentOptions")]
         [Validation(Required=false)]

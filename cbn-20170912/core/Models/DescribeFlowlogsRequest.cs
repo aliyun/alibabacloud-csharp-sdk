@@ -65,10 +65,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
 
+        /// <summary>
+        /// <para>The flow log version.</para>
+        /// <para>Flow logs are automatically created in the latest version, which is <b>3</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("FlowLogVersion")]
         [Validation(Required=false)]
         public string FlowLogVersion { get; set; }
 
+        /// <summary>
+        /// <para>The time window for collecting log data. Unit: seconds Valid values: <b>60</b> or <b>600</b> Default value: <b>600</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public int? Interval { get; set; }
@@ -93,7 +106,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -200,6 +213,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string TransitRouterAttachmentId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the transit router.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-uf654ttymmljlvh2x****</para>
+        /// </summary>
         [NameInMap("TransitRouterId")]
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }

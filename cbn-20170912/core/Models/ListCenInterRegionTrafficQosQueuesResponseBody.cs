@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> TrafficQosQueues { get; set; }
         public class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues : TeaModel {
             /// <summary>
-            /// <para>带宽保障类型为按绝对值模式时，当前队列分配跨地域带宽的值。</para>
-            /// <para>例如，<b>1</b>表示符合当前队列的流量报文最多只能使用1Mbps的跨地域带宽。</para>
+            /// <para>The absolute bandwidth value that can be allocated to the current queue.</para>
+            /// <para>A value of <b>1</b> indicates that the QoS queue can consume at most 1 Mbit/s of inter-region bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<int?> Dscps { get; set; }
 
             /// <summary>
-            /// <para>当前队列实际生效的带宽值。</para>
+            /// <para>The actual bandwidth of the current queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.35</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string EffectiveBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The percentage of the inter-region bandwidth that can be consumed by the QoS queue.</para>
+            /// <para>The percentage of bandwidth that can be allocated to the current queue.</para>
             /// <para>A value of <b>1</b> indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.</para>
             /// 
             /// <b>Example:</b>

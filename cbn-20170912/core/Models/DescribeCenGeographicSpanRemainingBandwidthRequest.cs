@@ -27,7 +27,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <item><description><b>North-America</b>: North America</description></item>
         /// <item><description><b>Asia-Pacific</b>: Asia Pacific</description></item>
         /// <item><description><b>Europe</b>: Europe</description></item>
-        /// <item><description><b>Australia</b>: Australia</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +44,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <item><description><b>North-America</b>: North America</description></item>
         /// <item><description><b>Asia-Pacific</b>: Asia Pacific</description></item>
         /// <item><description><b>Europe</b>: Europe</description></item>
-        /// <item><description><b>Australia</b>: Australia</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosQueuesRequest : TeaModel {
         /// <summary>
-        /// <para>按照实际的生效带宽值进行过滤，只允许输入正整数，单位Mbps。</para>
+        /// <para>The filter works based on the actual bandwidth. Enter a positive integer. Unit: Mbit/s.</para>
         /// </summary>
         [NameInMap("EffectiveBandwidthFilter")]
         [Validation(Required=false)]
         public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter EffectiveBandwidthFilter { get; set; }
         public class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter : TeaModel {
             /// <summary>
-            /// <para>实际生效带宽大于或等于指定带宽值。</para>
+            /// <para>The actual bandwidth is equal to or larger than the specified value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? Gte { get; set; }
 
             /// <summary>
-            /// <para>实际生效带宽小于或等于指定带宽值。</para>
+            /// <para>The actual bandwidth is equal to or smaller than the specified value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

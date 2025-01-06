@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenInterRegionTrafficQosPolicyRequest : TeaModel {
+        /// <summary>
+        /// <para>The allocation mode of the guaranteed bandwidth. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>byBandwidth</b>: allocates an absolute bandwidth value for the QoS queue.</description></item>
+        /// <item><description><b>byBandwidthPercent</b> (default): allocates a bandwidth percentage for the OoS queue.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>byBandwidthPercent</para>
+        /// </summary>
         [NameInMap("BandwidthGuaranteeMode")]
         [Validation(Required=false)]
         public string BandwidthGuaranteeMode { get; set; }
@@ -84,6 +94,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public List<CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues> TrafficQosQueues { get; set; }
         public class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues : TeaModel {
+            /// <summary>
+            /// <para>The absolute bandwidth that can be consumed by the QoS queue. Unit: Mbit/s.</para>
+            /// <para>Each QoS policy supports at most 10 queues. You can specify a valid bandwidth value for each queue.</para>
+            /// <para>For example, a value of 1 specifies that the queue can consume 1 Mbit/s of the inter-region bandwidth.</para>
+            /// <remarks>
+            /// <para> The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public string Bandwidth { get; set; }
@@ -98,7 +119,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The description of the current queue.</para>
-            /// <para>Each QoS policy supports at most three queues. You can specify a description for each queue.</para>
+            /// <para>Each QoS policy supports at most 10 queues. You can specify a description for each queue.</para>
             /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
@@ -122,7 +143,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The percentage of the inter-region bandwidth that can be used by the queue.</para>
-            /// <para>Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.</para>
+            /// <para>Each QoS policy supports at most 10 queues. You can specify a valid percentage for each queue.</para>
             /// <para>For example, a value of <b>1</b> specifies that the queue can consume 1% of the inter-region bandwidth.</para>
             /// <remarks>
             /// <para> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</para>

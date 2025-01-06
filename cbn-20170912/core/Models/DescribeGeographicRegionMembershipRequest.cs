@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the area that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>china</b>: the Chinese mainland</description></item>
+        /// <item><description><b>asia-pacific</b>: Asia Pacific</description></item>
+        /// <item><description><b>europe</b>: Europe</description></item>
+        /// <item><description><b>north-america</b>: North America</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -36,6 +45,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CenId { get; set; }
 
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions Options { get; set; }
+            public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions : TeaModel {
+                [NameInMap("Igmpv2Support")]
+                [Validation(Required=false)]
+                public string Igmpv2Support { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The region ID of the transit router.</para>
             /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>

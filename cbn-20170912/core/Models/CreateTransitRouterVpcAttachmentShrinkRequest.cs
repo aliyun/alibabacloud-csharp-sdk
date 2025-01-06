@@ -164,6 +164,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string TransitRouterId { get; set; }
 
+        /// <summary>
+        /// <para>Feature configurations of the VPC connection.</para>
+        /// </summary>
         [NameInMap("TransitRouterVPCAttachmentOptions")]
         [Validation(Required=false)]
         public string TransitRouterVPCAttachmentOptionsShrink { get; set; }

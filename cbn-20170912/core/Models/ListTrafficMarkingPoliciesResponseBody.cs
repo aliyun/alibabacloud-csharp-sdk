@@ -134,12 +134,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> TrafficMatchRules { get; set; }
             public class ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules : TeaModel {
+                /// <summary>
+                /// <para>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IPv4</para>
+                /// </summary>
                 [NameInMap("AddressFamily")]
                 [Validation(Required=false)]
                 public string AddressFamily { get; set; }
 
                 /// <summary>
-                /// <para>The destination CIDR block that is used to match packets.</para>
+                /// <para>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.120.0/24</para>
@@ -182,7 +188,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The source CIDR block that is used to match packets.</para>
+                /// <para>The source CIDR block of packets. IPv6 and IPv4 addresses are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.10.0/24</para>

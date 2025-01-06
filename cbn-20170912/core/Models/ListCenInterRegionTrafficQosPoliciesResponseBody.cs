@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies> TrafficQosPolicies { get; set; }
         public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies : TeaModel {
             /// <summary>
-            /// <para>带宽保障类型。</para>
+            /// <para>The guaranteed bandwidth mode.</para>
             /// <list type="bullet">
-            /// <item><description><b>byBandwidth</b>：按带宽绝对值模式配置QoS队列。</description></item>
-            /// <item><description><b>byBandwidthPercent</b>：按带宽百分比模式配置QoS队列。</description></item>
+            /// <item><description><b>byBandwidth</b>: allocates absolute bandwidth values to QoS queues.</description></item>
+            /// <item><description><b>byBandwidthPercent</b>: assigns bandwidth percentages to QoS queues.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> TrafficQosQueues { get; set; }
             public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues : TeaModel {
                 /// <summary>
-                /// <para>带宽保障类型为按绝对值模式时，当前队列分配的跨地域带宽的值。</para>
+                /// <para>If the QoS queues are assigned absolute bandwidth values, this parameter indicates the absolute bandwidth value that is allocated to the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<int?> Dscps { get; set; }
 
                 /// <summary>
-                /// <para>当前队列实际生效的带宽值。</para>
+                /// <para>The actual bandwidth value of the current queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.35</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string QosQueueName { get; set; }
 
                 /// <summary>
-                /// <para>The percentage of the inter-region bandwidth that can be used by the queue.</para>
+                /// <para>If the QoS queues are assigned bandwidth percentages, this parameter indicates the percentage of bandwidth that is allocated to the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

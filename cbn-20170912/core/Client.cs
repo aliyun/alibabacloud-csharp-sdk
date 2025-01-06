@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// AddTraficMatchRuleToTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.")]
         // Deprecated
         public AddTraficMatchRuleToTrafficMarkingPolicyResponse AddTraficMatchRuleToTrafficMarkingPolicyWithOptions(AddTraficMatchRuleToTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// AddTraficMatchRuleToTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.")]
         // Deprecated
         public async Task<AddTraficMatchRuleToTrafficMarkingPolicyResponse> AddTraficMatchRuleToTrafficMarkingPolicyWithOptionsAsync(AddTraficMatchRuleToTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -659,7 +659,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// AddTraficMatchRuleToTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.")]
         // Deprecated
         public AddTraficMatchRuleToTrafficMarkingPolicyResponse AddTraficMatchRuleToTrafficMarkingPolicy(AddTraficMatchRuleToTrafficMarkingPolicyRequest request)
         {
@@ -689,7 +689,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// AddTraficMatchRuleToTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI AddTraficMatchRuleToTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::AddTrafficMatchRuleToTrafficMarkingPolicy instead.")]
         // Deprecated
         public async Task<AddTraficMatchRuleToTrafficMarkingPolicyResponse> AddTraficMatchRuleToTrafficMarkingPolicyAsync(AddTraficMatchRuleToTrafficMarkingPolicyRequest request)
         {
@@ -2730,7 +2730,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2><a href="#"></a>Prerequisite</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call the <b>CreateCenInterRegionTrafficQosPolicy</b> operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>An inter-region connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a>.</description></item>
@@ -2836,7 +2836,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2><a href="#"></a>Prerequisite</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call the <b>CreateCenInterRegionTrafficQosPolicy</b> operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>An inter-region connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a>.</description></item>
@@ -2942,7 +2942,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2><a href="#"></a>Prerequisite</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call the <b>CreateCenInterRegionTrafficQosPolicy</b> operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>An inter-region connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a>.</description></item>
@@ -2980,7 +2980,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2><a href="#"></a>Prerequisite</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call the <b>CreateCenInterRegionTrafficQosPolicy</b> operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
         /// <item><description>An inter-region connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a>.</description></item>
@@ -3003,12 +3003,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the queue.</para>
+        /// <para>Creates queues in a quality of service (QoS) policy to manage network traffic based on finer granularities, improve service performance, and meet service-level agreements (SLAs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the request.</para>
+        /// <para>The <b>CreateCenInterRegionTrafficQosQueue</b> operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <b>ListCenInterRegionTrafficQosPolicies</b> operation to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the <b>TrafficQosPolicyId</b> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>If a QoS policy is in the <b>Modifying</b> state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.</description></item>
+        /// <item><description>If a QoS policy is in the <b>Active</b> state, the queue is created.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3094,12 +3098,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the queue.</para>
+        /// <para>Creates queues in a quality of service (QoS) policy to manage network traffic based on finer granularities, improve service performance, and meet service-level agreements (SLAs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the request.</para>
+        /// <para>The <b>CreateCenInterRegionTrafficQosQueue</b> operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <b>ListCenInterRegionTrafficQosPolicies</b> operation to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the <b>TrafficQosPolicyId</b> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>If a QoS policy is in the <b>Modifying</b> state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.</description></item>
+        /// <item><description>If a QoS policy is in the <b>Active</b> state, the queue is created.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3185,12 +3193,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the queue.</para>
+        /// <para>Creates queues in a quality of service (QoS) policy to manage network traffic based on finer granularities, improve service performance, and meet service-level agreements (SLAs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the request.</para>
+        /// <para>The <b>CreateCenInterRegionTrafficQosQueue</b> operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <b>ListCenInterRegionTrafficQosPolicies</b> operation to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the <b>TrafficQosPolicyId</b> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>If a QoS policy is in the <b>Modifying</b> state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.</description></item>
+        /// <item><description>If a QoS policy is in the <b>Active</b> state, the queue is created.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3208,12 +3220,16 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the queue.</para>
+        /// <para>Creates queues in a quality of service (QoS) policy to manage network traffic based on finer granularities, improve service performance, and meet service-level agreements (SLAs).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the request.</para>
+        /// <para>The <b>CreateCenInterRegionTrafficQosQueue</b> operation is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <b>ListCenInterRegionTrafficQosPolicies</b> operation to query the status of the QoS policy to determine the status of the queue. When you call this operation, you must set the <b>TrafficQosPolicyId</b> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>If a QoS policy is in the <b>Modifying</b> state, the queue is being created. In this case, you can query the QoS policy and queue but cannot perform other operations.</description></item>
+        /// <item><description>If a QoS policy is in the <b>Active</b> state, the queue is created.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3660,20 +3676,28 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:</para>
+        /// <para>Flow logs can be used to capture traffic information about transit routers and network instance connections, including inter-region connections, virtual private cloud (VPC) connections, VPN connections, Express Connect Router (ECR) connections, and virtual border router (VBR) connections. Before you create a flow log, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Flow logs are supported only by Enterprise Edition transit routers.</description></item>
-        /// <item><description>Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see <a href="https://help.aliyun.com/document_detail/339822.html">Limits</a>.</description></item>
-        /// <item><description>Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
-        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
-        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After you send a request, the system returns a flow log ID and runs the task in the background. You can call the <c>DescribeFlowLogs</c> operation to query the status of a flow log.<list type="bullet">
-        /// <item><description>If a flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
-        /// <item><description>If a flow log is in the <b>Active</b> state, the flow log is created.</description></item>
+        /// <item><description>Flow logs are used to capture information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through Cloud Enterprise Network (CEN). After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
+        /// <item><description>If you use a flow log to capture traffic information about VPC connections, the flow log captures information only about traffic on the elastic network interface (ENI) of the transit router. For more information about how to view traffic information about other ENIs in the VPC, see <a href="https://help.aliyun.com/document_detail/127150.html">VPC flow log overview</a>.</description></item>
+        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <c>DescribeFlowlogs</c> operation to query the status of a flow log.<list type="bullet">
+        /// <item><description>If the flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
+        /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h1>Prerequisites</h1>
-        /// <para>An inter-region connection or a VBR connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a> or <a href="https://help.aliyun.com/document_detail/261361.html">CreateTransitRouterVbrAttachment</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Required resources are created. For more information about how to create resources, see the following topics:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468237.html">CreateTransitRouterVpcAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2715446.html">CreateTransitRouterEcrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468243.html">CreateTransitRouterVbrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468270.html">CreateTransitRouterPeerAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468222.html">CreateTransitRouter</a></description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3780,20 +3804,28 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:</para>
+        /// <para>Flow logs can be used to capture traffic information about transit routers and network instance connections, including inter-region connections, virtual private cloud (VPC) connections, VPN connections, Express Connect Router (ECR) connections, and virtual border router (VBR) connections. Before you create a flow log, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Flow logs are supported only by Enterprise Edition transit routers.</description></item>
-        /// <item><description>Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see <a href="https://help.aliyun.com/document_detail/339822.html">Limits</a>.</description></item>
-        /// <item><description>Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
-        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
-        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After you send a request, the system returns a flow log ID and runs the task in the background. You can call the <c>DescribeFlowLogs</c> operation to query the status of a flow log.<list type="bullet">
-        /// <item><description>If a flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
-        /// <item><description>If a flow log is in the <b>Active</b> state, the flow log is created.</description></item>
+        /// <item><description>Flow logs are used to capture information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through Cloud Enterprise Network (CEN). After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
+        /// <item><description>If you use a flow log to capture traffic information about VPC connections, the flow log captures information only about traffic on the elastic network interface (ENI) of the transit router. For more information about how to view traffic information about other ENIs in the VPC, see <a href="https://help.aliyun.com/document_detail/127150.html">VPC flow log overview</a>.</description></item>
+        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <c>DescribeFlowlogs</c> operation to query the status of a flow log.<list type="bullet">
+        /// <item><description>If the flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
+        /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h1>Prerequisites</h1>
-        /// <para>An inter-region connection or a VBR connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a> or <a href="https://help.aliyun.com/document_detail/261361.html">CreateTransitRouterVbrAttachment</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Required resources are created. For more information about how to create resources, see the following topics:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468237.html">CreateTransitRouterVpcAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2715446.html">CreateTransitRouterEcrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468243.html">CreateTransitRouterVbrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468270.html">CreateTransitRouterPeerAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468222.html">CreateTransitRouter</a></description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3900,20 +3932,28 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:</para>
+        /// <para>Flow logs can be used to capture traffic information about transit routers and network instance connections, including inter-region connections, virtual private cloud (VPC) connections, VPN connections, Express Connect Router (ECR) connections, and virtual border router (VBR) connections. Before you create a flow log, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Flow logs are supported only by Enterprise Edition transit routers.</description></item>
-        /// <item><description>Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see <a href="https://help.aliyun.com/document_detail/339822.html">Limits</a>.</description></item>
-        /// <item><description>Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
-        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
-        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After you send a request, the system returns a flow log ID and runs the task in the background. You can call the <c>DescribeFlowLogs</c> operation to query the status of a flow log.<list type="bullet">
-        /// <item><description>If a flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
-        /// <item><description>If a flow log is in the <b>Active</b> state, the flow log is created.</description></item>
+        /// <item><description>Flow logs are used to capture information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through Cloud Enterprise Network (CEN). After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
+        /// <item><description>If you use a flow log to capture traffic information about VPC connections, the flow log captures information only about traffic on the elastic network interface (ENI) of the transit router. For more information about how to view traffic information about other ENIs in the VPC, see <a href="https://help.aliyun.com/document_detail/127150.html">VPC flow log overview</a>.</description></item>
+        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <c>DescribeFlowlogs</c> operation to query the status of a flow log.<list type="bullet">
+        /// <item><description>If the flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
+        /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h1>Prerequisites</h1>
-        /// <para>An inter-region connection or a VBR connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a> or <a href="https://help.aliyun.com/document_detail/261361.html">CreateTransitRouterVbrAttachment</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Required resources are created. For more information about how to create resources, see the following topics:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468237.html">CreateTransitRouterVpcAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2715446.html">CreateTransitRouterEcrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468243.html">CreateTransitRouterVbrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468270.html">CreateTransitRouterPeerAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468222.html">CreateTransitRouter</a></description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3936,20 +3976,28 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Flow logs are used to capture the information about network traffic between transit routers and between virtual border routers (VBRs). Before you create a flow log, take note of the following items:</para>
+        /// <para>Flow logs can be used to capture traffic information about transit routers and network instance connections, including inter-region connections, virtual private cloud (VPC) connections, VPN connections, Express Connect Router (ECR) connections, and virtual border router (VBR) connections. Before you create a flow log, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Flow logs are supported only by Enterprise Edition transit routers.</description></item>
-        /// <item><description>Only flow logs in some regions can capture the information about network traffic over VBR connections. For more information, see <a href="https://help.aliyun.com/document_detail/339822.html">Limits</a>.</description></item>
-        /// <item><description>Flow logs are used to capture the information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
-        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through CEN. After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
-        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After you send a request, the system returns a flow log ID and runs the task in the background. You can call the <c>DescribeFlowLogs</c> operation to query the status of a flow log.<list type="bullet">
-        /// <item><description>If a flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
-        /// <item><description>If a flow log is in the <b>Active</b> state, the flow log is created.</description></item>
+        /// <item><description>Flow logs are used to capture information about outbound traffic on transit routers. Information about inbound traffic on transit routers is not captured.
+        /// For example, an Elastic Compute Service (ECS) instance in the US (Silicon Valley) region accesses an ECS instance in the US (Virginia) region through Cloud Enterprise Network (CEN). After you enable the flow log feature for the transit router in the US (Virginia) region, you can check the log entries about packets sent from the ECS instance in the US (Virginia) region to the ECS instance in the US (Silicon Valley) region. However, packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region are not recorded. If you want to record the packets sent from the ECS instance in the US (Silicon Valley) region to the ECS instance in the US (Virginia) region, you must also enable the flow log feature on the transit router that is in the US (Silicon Valley) region.</description></item>
+        /// <item><description>If you use a flow log to capture traffic information about VPC connections, the flow log captures information only about traffic on the elastic network interface (ENI) of the transit router. For more information about how to view traffic information about other ENIs in the VPC, see <a href="https://help.aliyun.com/document_detail/127150.html">VPC flow log overview</a>.</description></item>
+        /// <item><description><c>CreateFlowLog</c> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <c>DescribeFlowlogs</c> operation to query the status of a flow log.<list type="bullet">
+        /// <item><description>If the flow log is in the <b>Creating</b> state, the flow log is being created. In this case, you can query the flow log but cannot perform other operations.</description></item>
+        /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h1>Prerequisites</h1>
-        /// <para>An inter-region connection or a VBR connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/261363.html">CreateTransitRouterPeerAttachment</a> or <a href="https://help.aliyun.com/document_detail/261361.html">CreateTransitRouterVbrAttachment</a>.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Required resources are created. For more information about how to create resources, see the following topics:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468237.html">CreateTransitRouterVpcAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2715446.html">CreateTransitRouterEcrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468243.html">CreateTransitRouterVbrAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468270.html">CreateTransitRouterPeerAttachment</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/468222.html">CreateTransitRouter</a></description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5386,6 +5434,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -5481,6 +5533,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -6988,23 +7044,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use the following methods to attach a VPC to an Enterprise Edition transit router:
-        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, and <b>TransitRouterId</b>.
-        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b>. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
+        /// <para>  You can use the following methods to create a VPC connection from an Enterprise Edition transit router:
+        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>TransitRouterId</b>, and <b>RegionId</b> parameters.
+        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b> parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
-        /// <item><description>If a VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
-        /// <item><description>If a VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
+        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
+        /// <item><description>If the VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
+        /// <item><description>If the VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.</description></item>
         /// </list>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>At least one vSwitch is deployed for the VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
-        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the required permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
-        /// <item><description>VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
+        /// <item><description>The VPC in the zones of the Enterprise Edition transit router contains at least one vSwitch. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
+        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
+        /// <item><description>VPC connections incur fees. Make sure that you understand the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7126,23 +7182,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use the following methods to attach a VPC to an Enterprise Edition transit router:
-        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, and <b>TransitRouterId</b>.
-        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b>. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
+        /// <para>  You can use the following methods to create a VPC connection from an Enterprise Edition transit router:
+        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>TransitRouterId</b>, and <b>RegionId</b> parameters.
+        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b> parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
-        /// <item><description>If a VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
-        /// <item><description>If a VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
+        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
+        /// <item><description>If the VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
+        /// <item><description>If the VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.</description></item>
         /// </list>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>At least one vSwitch is deployed for the VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
-        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the required permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
-        /// <item><description>VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
+        /// <item><description>The VPC in the zones of the Enterprise Edition transit router contains at least one vSwitch. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
+        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
+        /// <item><description>VPC connections incur fees. Make sure that you understand the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7264,23 +7320,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use the following methods to attach a VPC to an Enterprise Edition transit router:
-        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, and <b>TransitRouterId</b>.
-        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b>. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
+        /// <para>  You can use the following methods to create a VPC connection from an Enterprise Edition transit router:
+        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>TransitRouterId</b>, and <b>RegionId</b> parameters.
+        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b> parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
-        /// <item><description>If a VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
-        /// <item><description>If a VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
+        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
+        /// <item><description>If the VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
+        /// <item><description>If the VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.</description></item>
         /// </list>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>At least one vSwitch is deployed for the VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
-        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the required permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
-        /// <item><description>VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
+        /// <item><description>The VPC in the zones of the Enterprise Edition transit router contains at least one vSwitch. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
+        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
+        /// <item><description>VPC connections incur fees. Make sure that you understand the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7304,23 +7360,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use the following methods to attach a VPC to an Enterprise Edition transit router:
-        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, and <b>TransitRouterId</b>.
-        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b>. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
+        /// <para>  You can use the following methods to create a VPC connection from an Enterprise Edition transit router:
+        ///     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>TransitRouterId</b>, and <b>RegionId</b> parameters.
+        ///     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, configure the <b>VpcId</b>, <b>ZoneMappings.N.VSwitchId</b>, <b>ZoneMappings.N.ZoneId</b>, <b>CenId</b>, and <b>RegionId</b> parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After you send a request, the VPC connection ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
-        /// <item><description>If a VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
-        /// <item><description>If a VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
+        /// <item><description><b>CreateTransitRouterVpcAttachment</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/261222.html">ListTransitRouterVpcAttachments</a> operation to query the status of a VPC connection.<list type="bullet">
+        /// <item><description>If the VPC connection is in the <b>Attaching</b> state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.</description></item>
+        /// <item><description>If the VPC connection is in the <b>Attached</b> state, the VPC connection is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.</description></item>
         /// </list>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>At least one vSwitch is deployed for the VPC in the zones supported by Enterprise Edition transit routers. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
-        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the required permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
-        /// <item><description>VPC connections incur fees. Take note of the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
+        /// <item><description>The VPC in the zones of the Enterprise Edition transit router contains at least one vSwitch. Each vSwitch must have at least one idle IP address. For more information, see <a href="https://help.aliyun.com/document_detail/181681.html">Regions and zones supported by Enterprise Edition transit routers</a>.</description></item>
+        /// <item><description>To connect to a network instance that belongs to another Alibaba Cloud account, you must first acquire the permissions from the account. For more information, see <a href="https://help.aliyun.com/document_detail/181553.html">Acquire permissions to connect to a network instance that belongs to another account</a>.</description></item>
+        /// <item><description>VPC connections incur fees. Make sure that you understand the billing rules of VPC connections before you create a VPC connection. For more information, see <a href="https://help.aliyun.com/document_detail/189836.html">Billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15891,7 +15947,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定区域内的地域信息</para>
+        /// <para>Queries regions in an area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15957,7 +16013,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定区域内的地域信息</para>
+        /// <para>Queries regions in an area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16023,7 +16079,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定区域内的地域信息</para>
+        /// <para>Queries regions in an area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16041,7 +16097,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定区域内的地域信息</para>
+        /// <para>Queries regions in an area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26107,7 +26163,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a flow log.</para>
+        /// <para>Modifies the name, description, and capture window of a flow log.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26198,7 +26254,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a flow log.</para>
+        /// <para>Modifies the name, description, and capture window of a flow log.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26289,7 +26345,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a flow log.</para>
+        /// <para>Modifies the name, description, and capture window of a flow log.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26316,7 +26372,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a flow log.</para>
+        /// <para>Modifies the name, description, and capture window of a flow log.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26343,7 +26399,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑流分类规则的名称和描述</para>
+        /// <para>Modifies the name and description of a traffic classification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26421,7 +26477,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑流分类规则的名称和描述</para>
+        /// <para>Modifies the name and description of a traffic classification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26499,7 +26555,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑流分类规则的名称和描述</para>
+        /// <para>Modifies the name and description of a traffic classification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26517,7 +26573,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑流分类规则的名称和描述</para>
+        /// <para>Modifies the name and description of a traffic classification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26832,6 +26888,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -26905,6 +26965,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -28734,7 +28798,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.")]
         // Deprecated
         public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse RemoveTraficMatchRuleFromTrafficMarkingPolicyWithOptions(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -28816,7 +28880,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.")]
         // Deprecated
         public async Task<RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTraficMatchRuleFromTrafficMarkingPolicyWithOptionsAsync(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -28895,7 +28959,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.")]
         // Deprecated
         public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse RemoveTraficMatchRuleFromTrafficMarkingPolicy(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request)
         {
@@ -28925,7 +28989,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <returns>
         /// RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse
         /// </returns>
-        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.\n")]
+        [Obsolete("OpenAPI RemoveTraficMatchRuleFromTrafficMarkingPolicy is deprecated, please use Cbn::2017-09-12::RemoveTrafficMatchRuleFromTrafficMarkingPolicy instead.")]
         // Deprecated
         public async Task<RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse> RemoveTraficMatchRuleFromTrafficMarkingPolicyAsync(RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest request)
         {

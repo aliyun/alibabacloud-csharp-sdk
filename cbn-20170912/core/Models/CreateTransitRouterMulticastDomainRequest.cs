@@ -44,6 +44,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("Options")]
+        [Validation(Required=false)]
+        public CreateTransitRouterMulticastDomainRequestOptions Options { get; set; }
+        public class CreateTransitRouterMulticastDomainRequestOptions : TeaModel {
+            [NameInMap("Igmpv2Support")]
+            [Validation(Required=false)]
+            public string Igmpv2Support { get; set; }
+
+        }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

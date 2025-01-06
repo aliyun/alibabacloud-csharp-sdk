@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateCenInterRegionTrafficQosQueueAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>按带宽绝对值模式分配时，当前队列可使用的跨地域带宽的绝对值，单位Mbps。</para>
-        /// <para>输入数字即可，无需输入单位。</para>
+        /// <para>The absolute bandwidth value that can be allocated to the current queue. Unit: Mbit/s.</para>
+        /// <para>Enter a number. You do not need to enter a unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string QosQueueName { get; set; }
 
         /// <summary>
-        /// <para>The percentage of the inter-region bandwidth that can be used by the queue.</para>
+        /// <para>The percentage of bandwidth that can be allocated to the current queue.</para>
         /// <para>Enter a number. You do not need to enter a percent sign (%).</para>
         /// 
         /// <b>Example:</b>

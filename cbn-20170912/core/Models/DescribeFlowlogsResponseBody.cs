@@ -71,6 +71,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string FlowLogName { get; set; }
 
+                /// <summary>
+                /// <para>The flow log version.</para>
+                /// <para>Flow logs are automatically created in the latest version, which is <b>3</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("FlowLogVersion")]
                 [Validation(Required=false)]
                 public string FlowLogVersion { get; set; }
@@ -85,6 +92,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public long? Interval { get; set; }
 
+                /// <summary>
+                /// <para>The string that defines the format of the flow log. Format:</para>
+                /// <para><c>${Field 1}${Field 2}${Field 3}</c></para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>${srcaddr}${dstaddr}${bytes}</para>
+                /// </summary>
                 [NameInMap("LogFormatString")]
                 [Validation(Required=false)]
                 public string LogFormatString { get; set; }
@@ -134,7 +148,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>A list of tags.</para>
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -178,6 +192,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public string TransitRouterAttachmentId { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the transit router.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tr-bp1g9313sx675zr1lajmj</para>
+                /// </summary>
                 [NameInMap("TransitRouterId")]
                 [Validation(Required=false)]
                 public string TransitRouterId { get; set; }
