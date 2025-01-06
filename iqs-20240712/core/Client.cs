@@ -949,6 +949,10 @@ namespace AlibabaCloud.SDK.IQS20240712
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CityLimit))
+            {
+                query["cityLimit"] = request.CityLimit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
             {
                 query["keywords"] = request.Keywords;
@@ -1019,6 +1023,10 @@ namespace AlibabaCloud.SDK.IQS20240712
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CityLimit))
+            {
+                query["cityLimit"] = request.CityLimit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
             {
                 query["keywords"] = request.Keywords;
@@ -1127,6 +1135,10 @@ namespace AlibabaCloud.SDK.IQS20240712
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CityLimit))
+            {
+                query["cityLimit"] = request.CityLimit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
             {
                 query["keywords"] = request.Keywords;
@@ -1189,6 +1201,10 @@ namespace AlibabaCloud.SDK.IQS20240712
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CityLimit))
+            {
+                query["cityLimit"] = request.CityLimit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
             {
                 query["keywords"] = request.Keywords;

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20240712.Models
 {
     public class PlaceSearchNovaRequest : TeaModel {
+        [NameInMap("cityLimit")]
+        [Validation(Required=false)]
+        public bool? CityLimit { get; set; }
+
         [NameInMap("keywords")]
         [Validation(Required=false)]
         public string Keywords { get; set; }
