@@ -1,3 +1,8 @@
+2025-01-06 Version: 2.9.1
+- Update API ConvertPostPayOrder: add param PaidType.
+- Update API UpgradePrePayOrder: update param DiskSize.
+
+
 2025-01-02 Version: 2.9.0
 - Support API CreatePostPayInstance.
 - Support API CreatePrePayInstance.

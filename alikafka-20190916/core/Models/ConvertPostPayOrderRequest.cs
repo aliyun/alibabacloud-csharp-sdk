@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("PaidType")]
+        [Validation(Required=false)]
+        public int? PaidType { get; set; }
+
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
