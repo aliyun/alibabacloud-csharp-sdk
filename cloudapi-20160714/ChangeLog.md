@@ -1,3 +1,8 @@
+2025-01-07 Version: 4.6.0
+- Support API ModifyInstanceVpcAttributeForConsole.
+- Update API DescribeApiGroups: add param BasePath.
+
+
 2024-12-19 Version: 4.5.1
 - Update API CreateLogConfig: add param CreateSlr.
 - Update API DescribeApi: update response param.

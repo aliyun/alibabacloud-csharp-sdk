@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiGroupsRequest : TeaModel {
+        [NameInMap("BasePath")]
+        [Validation(Required=false)]
+        public string BasePath { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable tag verification.</para>
         /// 
