@@ -1,3 +1,6 @@
+2025-01-07 Version: 3.2.3
+- Generated csharp 2023-09-30 for eds-aic.
+
 2025-01-07 Version: 3.2.2
 - Generated csharp 2023-09-30 for eds-aic.
 
