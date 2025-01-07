@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("ScopeType")]
+        [Validation(Required=false)]
+        public int? ScopeType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>markdown</para>
         /// </summary>
         [NameInMap("TargetFormat")]

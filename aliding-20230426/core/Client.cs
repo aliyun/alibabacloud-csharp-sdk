@@ -21187,6 +21187,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["GenerateCp"] = request.GenerateCp;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                body["ScopeType"] = request.ScopeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFormat))
             {
                 body["TargetFormat"] = request.TargetFormat;
@@ -21265,6 +21269,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateCp))
             {
                 body["GenerateCp"] = request.GenerateCp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                body["ScopeType"] = request.ScopeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFormat))
             {
