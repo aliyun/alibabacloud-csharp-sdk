@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>/dev/xvdb</para>
+            /// </summary>
+            [NameInMap("Device")]
+            [Validation(Required=false)]
+            public string Device { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>PL0</para>
             /// </summary>
             [NameInMap("Level")]
@@ -68,6 +76,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>s-bp1ei2b44ripxuo46hym</para>
+            /// </summary>
+            [NameInMap("SnapshotId")]
+            [Validation(Required=false)]
+            public string SnapshotId { get; set; }
 
         }
 

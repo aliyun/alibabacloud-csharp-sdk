@@ -1,3 +1,6 @@
+2025-01-07 Version: 2.0.3
+- Generated csharp 2024-07-30 for EHPC.
+
 2025-01-06 Version: 2.0.2
 - Update API CreateNodes: add param DeploymentSetId.
 - Update API GetCluster: update response param.
