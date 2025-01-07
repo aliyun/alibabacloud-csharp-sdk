@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainSecureStatisticsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of domain names that trigger security alerts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AlarmCount { get; set; }
 
         /// <summary>
+        /// <para>The number of the websites for which no certificates are installed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? NoSslCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1EE7B150-D67E-53FD-A52D-3E8E669A****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of the domain names that have security risks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RiskCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of domain names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>72</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalDomainCount { get; set; }
 
         /// <summary>
+        /// <para>The number of the domain names that have vulnerabilities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

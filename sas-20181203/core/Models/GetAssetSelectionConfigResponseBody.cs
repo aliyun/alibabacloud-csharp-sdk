@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public GetAssetSelectionConfigResponseBodyData Data { get; set; }
         public class GetAssetSelectionConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The operating system of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>windows</b></description></item>
+            /// <item><description><b>linux</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>linux</para>
+            /// </summary>
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
+            /// <summary>
             /// <para>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</para>
             /// 
             /// <b>Example:</b>

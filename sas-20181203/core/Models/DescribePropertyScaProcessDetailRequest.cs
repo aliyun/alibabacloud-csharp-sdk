@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Pid { get; set; }
 
         /// <summary>
+        /// <para>The information about the server that you want to query. The value can be the public IP address, private IP address, or name of the server. Fuzzy match is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.167.XX.XX</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateMonitorAccountResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</para>
         /// </summary>

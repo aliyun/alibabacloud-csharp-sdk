@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCheckInstanceResultWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The adding result.</para>
+        /// <para>The data returned. This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -26,6 +29,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the whitelist rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>381049</para>
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }

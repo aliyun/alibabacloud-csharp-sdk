@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpgradeVersionByUuidsRequest : TeaModel {
         /// <summary>
+        /// <para>The version to which you want to upgrade the client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string UpgradeVersion { get; set; }
 
         /// <summary>
+        /// <para>The UUIDs of the assets on which you want to run the detection task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UuidList")]

@@ -166,6 +166,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Levels { get; set; }
 
+        /// <summary>
+        /// <para>The type of the accounts that you want to query. Default value: <b>0</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: the current account.</description></item>
+        /// <item><description><b>1</b>: all accounts.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("MultiAccountActionType")]
         [Validation(Required=false)]
         public int? MultiAccountActionType { get; set; }
@@ -242,7 +252,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>Vulnerability exploitation</b></description></item>
         /// <item><description><b>Malicious process (on-premises threat detection)</b></description></item>
         /// <item><description><b>Trusted exception</b></description></item>
-        /// <item><description><b>Operations to manage other resources</b></description></item>
+        /// <item><description><b>Others</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -322,6 +332,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the Alibaba Cloud accounts within which alerts are generated.</para>
+        /// </summary>
         [NameInMap("SourceAliUids")]
         [Validation(Required=false)]
         public List<long?> SourceAliUids { get; set; }

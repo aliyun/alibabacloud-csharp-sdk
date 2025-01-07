@@ -29,10 +29,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The status code of the Cloud Security Posture Management (CSPM) task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: The task is being initialized. The system is calculating the total number of subtasks.</description></item>
+        /// <item><description>1: The task is being executed. You can query the total number of tasks and the number of completed tasks.</description></item>
+        /// <item><description>2: The task is successful.</description></item>
+        /// <item><description>3: The task times out.</description></item>
+        /// <item><description>4: The task is invalid. Check whether assets exist.</description></item>
+        /// <item><description>5: No task record is found. Check whether the TaskId parameter is valid.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("StatusCode")]
         [Validation(Required=false)]
         public string StatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5347c7b6-c85c-4070-846a-3029e08e****</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

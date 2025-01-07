@@ -16,6 +16,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListAgentlessRelateMaliciousResponseBodyList> List { get; set; }
         public class ListAgentlessRelateMaliciousResponseBodyList : TeaModel {
+            [NameInMap("Details")]
+            [Validation(Required=false)]
+            public List<ListAgentlessRelateMaliciousResponseBodyListDetails> Details { get; set; }
+            public class ListAgentlessRelateMaliciousResponseBodyListDetails : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("NameKey")]
+                [Validation(Required=false)]
+                public string NameKey { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("DownloadUrl")]
+            [Validation(Required=false)]
+            public string DownloadUrl { get; set; }
+
             /// <summary>
             /// <para>The file path.</para>
             /// 
@@ -35,6 +61,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("FirstScanTimestamp")]
             [Validation(Required=false)]
             public long? FirstScanTimestamp { get; set; }
+
+            [NameInMap("HighLight")]
+            [Validation(Required=false)]
+            public string HighLight { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
 
             /// <summary>
             /// <para>The name of the asset.</para>
@@ -75,6 +109,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("LatestScanTimestamp")]
             [Validation(Required=false)]
             public long? LatestScanTimestamp { get; set; }
+
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("MaliciousMd5")]
+            [Validation(Required=false)]
+            public string MaliciousMd5 { get; set; }
+
+            [NameInMap("MaliciousName")]
+            [Validation(Required=false)]
+            public string MaliciousName { get; set; }
+
+            [NameInMap("MaliciousType")]
+            [Validation(Required=false)]
+            public string MaliciousType { get; set; }
+
+            [NameInMap("OperateResult")]
+            [Validation(Required=false)]
+            public string OperateResult { get; set; }
+
+            [NameInMap("OperateTimestamp")]
+            [Validation(Required=false)]
+            public string OperateTimestamp { get; set; }
+
+            [NameInMap("Partition")]
+            [Validation(Required=false)]
+            public string Partition { get; set; }
+
+            [NameInMap("TargetId")]
+            [Validation(Required=false)]
+            public string TargetId { get; set; }
+
+            [NameInMap("TargetName")]
+            [Validation(Required=false)]
+            public string TargetName { get; set; }
+
+            [NameInMap("TargetType")]
+            [Validation(Required=false)]
+            public string TargetType { get; set; }
 
             /// <summary>
             /// <para>The UUID of the server.</para>

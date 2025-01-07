@@ -334,6 +334,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string SensitiveFileName { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
             /// <summary>
             /// <para>The number of unprocessed mirrors.</para>
             /// 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteHybridProxyClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>414EC213-AD2D-56C3-B140-108773B24405</para>
         /// </summary>

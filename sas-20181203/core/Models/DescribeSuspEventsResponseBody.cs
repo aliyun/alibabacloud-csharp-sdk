@@ -340,6 +340,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>16</b>: handling</description></item>
             /// <item><description><b>32</b>: handled</description></item>
             /// <item><description><b>64</b>: expired</description></item>
+            /// <item><description><b>604</b>: marked as a false positive by the system</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -557,7 +558,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousRuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The labels of alarm event.</para>
+            /// <para>The tags of the alert events.</para>
             /// </summary>
             [NameInMap("MarkList")]
             [Validation(Required=false)]
@@ -657,6 +658,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string SecurityEventIds { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the Alibaba Cloud account within which an alert is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>196072141348****</para>
+            /// </summary>
             [NameInMap("SourceAliUid")]
             [Validation(Required=false)]
             public long? SourceAliUid { get; set; }

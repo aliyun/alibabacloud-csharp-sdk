@@ -47,7 +47,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The cloud service providers. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
+        /// <item><description><b>ALIYUN</b>: Alibaba Cloud.</description></item>
+        /// <item><description><b>TENCENT</b>: Tencent Cloud.</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
+        /// <item><description><b>MICROSOFT</b>: Microsoft Azure.</description></item>
+        /// <item><description><b>AWS</b>: Amazon Web Services (AWS).</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Vendors")]

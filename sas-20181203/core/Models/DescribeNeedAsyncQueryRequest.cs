@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeNeedAsyncQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>suspicious</b>: alerts</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

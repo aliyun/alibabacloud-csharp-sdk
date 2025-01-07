@@ -176,6 +176,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? NoRiskInstanceCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of assets that are not added to Security Center of the specified asset type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("NotBindMachineInstanceCount")]
             [Validation(Required=false)]
             public int? NotBindMachineInstanceCount { get; set; }

@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteHybridProxyRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the proxy cluster.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the proxy node that you want to remove. The value starts with inet-proxy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

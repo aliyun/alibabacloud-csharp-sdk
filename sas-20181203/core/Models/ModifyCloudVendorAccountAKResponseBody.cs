@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <list type="bullet">
                 /// <item><description><b>HOST</b>: host.</description></item>
                 /// <item><description><b>CSPM</b>: configuration assessment.</description></item>
-                /// <item><description><b>SIEM</b>: threat analysis and response.</description></item>
+                /// <item><description><b>SIEM</b>: CTDR.</description></item>
                 /// <item><description><b>TRIAL</b>: log audit.</description></item>
                 /// </list>
                 /// 
@@ -133,6 +133,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The AccessKey ID.</para>
+            /// <remarks>
+            /// <para> If AkType is set to <b>primary</b>, the value of SecretId is AccessKey ID of the third-party master account. If AkType is set to <b>sub</b>, the value of SecretId is the AccessKey ID of the third-party sub-account. This parameter value does not change for a <b>Microsoft Azure account</b>. For an Azure account, this parameter value is the <b>app ID</b> that is used for authentication.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>AE6SLd****</para>
@@ -172,12 +175,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The cloud service provider. Valid values:</para>
+            /// <para>The type of the cloud asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Tencent</b></description></item>
-            /// <item><description><b>HUAWEICLOUD</b></description></item>
-            /// <item><description><b>Azure</b></description></item>
-            /// <item><description><b>AWS</b></description></item>
+            /// <item><description><b>Tencent</b>: Tencent Cloud.</description></item>
+            /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
+            /// <item><description><b>Azure</b>: Microsoft Azure.</description></item>
+            /// <item><description><b>AWS</b>: Amazon Web Services (AWS).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

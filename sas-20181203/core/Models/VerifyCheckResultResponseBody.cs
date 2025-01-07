@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class VerifyCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string OperateCode { get; set; }
 
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
+            /// <summary>
+            /// <para>The throttling duration. Unit: seconds</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1800</para>
+            /// </summary>
             [NameInMap("ThrottlingTimeSecond")]
             [Validation(Required=false)]
             public int? ThrottlingTimeSecond { get; set; }

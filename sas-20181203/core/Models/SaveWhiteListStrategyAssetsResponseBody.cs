@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SaveWhiteListStrategyAssetsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A4EB8B1C-1DEC-5E18-BCD0-XXXX</para>
         /// </summary>

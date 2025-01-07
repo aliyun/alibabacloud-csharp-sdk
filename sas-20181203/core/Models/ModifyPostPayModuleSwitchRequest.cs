@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the pay-as-you-go instance. This parameter is required.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~DescribeVersionConfig~">DescribeVersionConfig</a> operation to obtain the ID.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/421770.html">DescribeVersionConfig</a> operation to obtain the ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

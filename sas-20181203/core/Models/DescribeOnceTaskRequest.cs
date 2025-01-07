@@ -52,6 +52,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RootTaskId { get; set; }
 
+        /// <summary>
+        /// <para>The source of the task. Valid values include the following values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>schedule</b>: automatic scheduling of Cloud Security Scanner.</description></item>
+        /// <item><description><b>console</b>: one-click detection in the Cloud Security Scanner console.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>console</para>
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

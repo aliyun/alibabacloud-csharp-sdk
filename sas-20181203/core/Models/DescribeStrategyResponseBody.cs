@@ -183,6 +183,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? PassRate { get; set; }
 
+            [NameInMap("Percent")]
+            [Validation(Required=false)]
+            public string Percent { get; set; }
+
             /// <summary>
             /// <para>The number of the assets on which the baseline check is complete.</para>
             /// 
@@ -226,6 +230,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
+
+            [NameInMap("UserModifyTime")]
+            [Validation(Required=false)]
+            public long? UserModifyTime { get; set; }
 
         }
 

@@ -85,6 +85,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
+            /// <para>The ID of the PrivateLink endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
+            [NameInMap("PrivateLinkEndpointId")]
+            [Validation(Required=false)]
+            public long? PrivateLinkEndpointId { get; set; }
+
+            /// <summary>
             /// <para>The name of the proxy cluster.</para>
             /// 
             /// <b>Example:</b>

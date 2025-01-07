@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAttestorRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the KMS key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key-********</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string KeyId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the Key Management Service (KMS) key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string KeyRegionId { get; set; }
 
         /// <summary>
+        /// <para>The version ID of the KMS key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key-****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string KeyVersionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the witness.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>attestor-auto-ad5316</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remark</para>
         /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>
         /// </summary>

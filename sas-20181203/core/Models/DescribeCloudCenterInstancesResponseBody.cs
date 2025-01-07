@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudCenterInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details about the asset.</para>
+        /// <para>An array that consists of the details about the assets.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -30,10 +30,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AlarmStatus { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the application.</para>
+            /// <remarks>
+            /// <para> This parameter is available only when the <b>Vendor</b> parameter is set to 9.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the application.</para>
+            /// <remarks>
+            /// <para> This parameter is available only when the <b>Vendor</b> parameter is set to 9.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testAppName</para>
+            /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
@@ -58,6 +76,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AssetType { get; set; }
 
+            /// <summary>
+            /// <para>The name of the asset type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Elastic Compute Service</para>
+            /// </summary>
             [NameInMap("AssetTypeName")]
             [Validation(Required=false)]
             public string AssetTypeName { get; set; }
@@ -91,14 +115,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AuthVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the Security Center edition that is authorized to scan the asset. Valid values:</para>
+            /// <para>The name of the Security Center edition that is authorized to protect the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Basic edition</description></item>
             /// <item><description>Anti-virus edition</description></item>
             /// <item><description>Advanced edition</description></item>
             /// <item><description>Enterprise edition</description></item>
             /// <item><description>Ultimate edition</description></item>
-            /// <item><description>Value-added Plan edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,6 +159,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ClientStatus")]
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
+
+            [NameInMap("ClientSubStatus")]
+            [Validation(Required=false)]
+            public string ClientSubStatus { get; set; }
 
             /// <summary>
             /// <para>The ID of the cluster.</para>
@@ -215,6 +242,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Flag { get; set; }
 
+            /// <summary>
+            /// <para>The service provider of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ALIYUN</b></description></item>
+            /// <item><description><b>OUT</b></description></item>
+            /// <item><description><b>IDC</b></description></item>
+            /// <item><description><b>Tencent</b></description></item>
+            /// <item><description><b>HUAWEICLOUD</b></description></item>
+            /// <item><description><b>Azure</b></description></item>
+            /// <item><description><b>AWS</b></description></item>
+            /// <item><description><b>ASK</b></description></item>
+            /// <item><description><b>TRIPARTITE</b></description></item>
+            /// <item><description><b>SAE</b></description></item>
+            /// <item><description><b>PAI</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ASK</para>
+            /// </summary>
             [NameInMap("FlagName")]
             [Validation(Required=false)]
             public string FlagName { get; set; }
@@ -550,6 +596,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string TagId { get; set; }
 
+            [NameInMap("TagResources")]
+            [Validation(Required=false)]
+            public string TagResources { get; set; }
+
             /// <summary>
             /// <para>The UUID of the asset.</para>
             /// 
@@ -561,12 +611,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The type of the asset by source. Valid values:</para>
+            /// <para>The service provider of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: an ECS instance.</description></item>
-            /// <item><description><b>1</b>: a third-party cloud server.</description></item>
-            /// <item><description><b>2</b>: a server in a data center.</description></item>
-            /// <item><description><b>3</b>: a server deployed on Tencent Cloud. This value is returned only after the asset is protected by Security Center.</description></item>
+            /// <item><description><b>0</b>: an asset provided by Alibaba Cloud</description></item>
+            /// <item><description><b>1</b>: an asset outside Alibaba Cloud</description></item>
+            /// <item><description><b>2</b>: an asset in a data center</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: an asset from a third-party cloud service provider</description></item>
+            /// <item><description><b>8</b>: a lightweight asset</description></item>
+            /// <item><description><b>9</b>: a SAE instance</description></item>
+            /// <item><description><b>10</b>: an instance in PAI</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -577,11 +630,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Vendor { get; set; }
 
             /// <summary>
-            /// <para>The name of the service provider (SP) for the asset.</para>
+            /// <para>The name of the service provider for the asset.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TENCENT</b>: Tencent Cloud</description></item>
             /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
+            /// <item><description><b>OUT</b>: a third-party service provider</description></item>
+            /// <item><description><b>IDC</b>: a data center</description></item>
+            /// <item><description><b>TENCENT</b>: Tencent Cloud</description></item>
+            /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
+            /// <item><description><b>Microsoft</b>: Microsoft Azure</description></item>
+            /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
+            /// <item><description><b>TRIPARTITE</b>: a lightweight server</description></item>
+            /// <item><description><b>SAE</b>: a SAE instance</description></item>
+            /// <item><description><b>PAI</b>: an instance in PAI</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckResultRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the check items.</para>
+        /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>POLARDB</b>: PolarDB</description></item>
         /// <item><description><b>POSTGRESQL</b>: ApsaraDB RDS for PostgreSQL</description></item>
         /// <item><description><b>MSE</b>: Microservices Engine (MSE)</description></item>
-        /// <item><description><b>NAS</b>: Apsara File Storage NAS (NAS)</description></item>
+        /// <item><description><b>NAS</b>: File Storage NAS (NAS)</description></item>
         /// <item><description><b>SDDP</b>: Sensitive Data Discovery and Protection (SDDP)</description></item>
         /// <item><description><b>EIP</b>: Elastic IP Address (EIP)</description></item>
         /// </list>
@@ -99,6 +102,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether fixing is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SUPPORT_REPAIR</b></description></item>
+        /// <item><description><b>NOT_SUPPORT_REPAIR</b></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("OperationTypes")]
         [Validation(Required=false)]
         public List<string> OperationTypes { get; set; }
@@ -128,7 +138,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of requirement items.</para>
+        /// <para>The IDs of the requirements.</para>
         /// </summary>
         [NameInMap("RequirementIds")]
         [Validation(Required=false)]
@@ -158,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> SortTypes { get; set; }
 
         /// <summary>
-        /// <para>The IDs of standards.</para>
+        /// <para>The standard IDs.</para>
         /// </summary>
         [NameInMap("StandardIds")]
         [Validation(Required=false)]
@@ -186,9 +196,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> Types { get; set; }
 
         /// <summary>
-        /// <para>The cloud service providers. Valid value:</para>
+        /// <para>The cloud service providers. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
+        /// <item><description><b>TENCENT</b>: Tencent Cloud</description></item>
+        /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
+        /// <item><description><b>MICROSOFT</b>: Microsoft Azure</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Vendors")]

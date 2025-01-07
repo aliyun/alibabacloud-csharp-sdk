@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateAssetSelectionConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("BusinessType")]
             [Validation(Required=false)]
             public string BusinessType { get; set; }
+
+            /// <summary>
+            /// <para>The operating system of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>windows</b>: the Windows operating system</description></item>
+            /// <item><description><b>linux</b>: the Linux operating system</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>all</para>
+            /// </summary>
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
 
             /// <summary>
             /// <para>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</para>

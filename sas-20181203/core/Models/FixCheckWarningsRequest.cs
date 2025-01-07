@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("RetentionDays")]
+        [Validation(Required=false)]
+        public int? RetentionDays { get; set; }
+
         /// <summary>
         /// <para>The ID of the baseline risk item.</para>
         /// <remarks>
@@ -59,6 +63,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("RiskId")]
         [Validation(Required=false)]
         public long? RiskId { get; set; }
+
+        [NameInMap("SnapshotName")]
+        [Validation(Required=false)]
+        public string SnapshotName { get; set; }
 
         /// <summary>
         /// <para>The source IP address of the request.</para>

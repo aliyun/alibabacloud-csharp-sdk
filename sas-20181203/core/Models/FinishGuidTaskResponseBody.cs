@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FinishGuidTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>08DCAABC-82E7-5EF5-A9E7-A82DC07C****</para>
         /// </summary>

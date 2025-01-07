@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCompressFileDetectResultRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The identifier of the file. Only MD5 hash values are supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0a212417e65c26ff133cfff28f6c****</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HashKey { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>27.9.XX.XX</para>
         /// </summary>

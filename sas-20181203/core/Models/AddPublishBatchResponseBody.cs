@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddPublishBatchResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the release batch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BatchId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7BC55C8F-226E-5AF5-9A2C-2EC43864****</para>
         /// </summary>

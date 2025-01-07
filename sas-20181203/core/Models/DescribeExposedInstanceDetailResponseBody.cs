@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The exposure details about the server.</para>
+        /// <para>The list of exposure details of the server or database.</para>
         /// </summary>
         [NameInMap("ExposedChains")]
         [Validation(Required=false)]
@@ -91,42 +91,145 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of configuration risks.</para>
+            /// </summary>
             [NameInMap("CspmRiskList")]
             [Validation(Required=false)]
             public List<DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList> CspmRiskList { get; set; }
             public class DescribeExposedInstanceDetailResponseBodyExposedChainsCspmRiskList : TeaModel {
+                /// <summary>
+                /// <para>The subtype of the cloud asset. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>0</b>: Elastic Compute Service (ECS).</para>
+                /// <list type="bullet">
+                /// <item><description><b>100</b>: instance.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: ApsaraDB RDS.</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: instance.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: ApsaraDB for MongoDB (MongoDB).</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: instance.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: ApsaraDB for Redis (Redis).</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: instance.</description></item>
+                /// </list>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("AssetSubType")]
                 [Validation(Required=false)]
                 public int? AssetSubType { get; set; }
 
+                /// <summary>
+                /// <para>The subtype name of the cloud asset. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>INSTANCE</b>: MongoDB instance, Apsara DB for RDS instance, and ApsaraDB for Redis instance.</description></item>
+                /// <item><description><b>ECS_INSTANCE</b>: ECS instance.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>INSTANCE</para>
+                /// </summary>
                 [NameInMap("AssetSubTypeName")]
                 [Validation(Required=false)]
                 public string AssetSubTypeName { get; set; }
 
+                /// <summary>
+                /// <para>The instance type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: an ECS instance.</description></item>
+                /// <item><description>3: an ApsaraDB RDS instance.</description></item>
+                /// <item><description>4: an ApsaraDB for MongoDB instance.</description></item>
+                /// <item><description>5: an ApsaraDB for Redis instance.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("AssetType")]
                 [Validation(Required=false)]
                 public int? AssetType { get; set; }
 
+                /// <summary>
+                /// <para>The name of the cloud asset type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ECS</b></description></item>
+                /// <item><description><b>RDS</b></description></item>
+                /// <item><description><b>KVSTORE</b></description></item>
+                /// <item><description><b>MONGODB</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS</para>
+                /// </summary>
                 [NameInMap("AssetTypeName")]
                 [Validation(Required=false)]
                 public string AssetTypeName { get; set; }
 
+                /// <summary>
+                /// <para>The name of the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Create Alert Rule</para>
+                /// </summary>
                 [NameInMap("CheckName")]
                 [Validation(Required=false)]
                 public string CheckName { get; set; }
 
+                /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp14ggqzi9k6ocfb****</para>
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// <para>The risk level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>HIGH</b></description></item>
+                /// <item><description><b>MEDIUM</b></description></item>
+                /// <item><description><b>LOW</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>HIGH</para>
+                /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public string RiskLevel { get; set; }
 
+                /// <summary>
+                /// <para>The type of the cloud asset by source. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: an asset provided by Alibaba Cloud.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("Vendor")]
                 [Validation(Required=false)]
                 public int? Vendor { get; set; }
@@ -144,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposureComponent { get; set; }
 
             /// <summary>
-            /// <para>The public IP address.</para>
+            /// <para>The IP address of the server or the public endpoint of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.99.XX.XX</para>
@@ -164,12 +267,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposurePort { get; set; }
 
             /// <summary>
-            /// <para>The resource from which the server is exposed. Valid values:</para>
+            /// <para>The resource from which the server or database is exposed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INTERNET_IP</b>: the public IP address of an Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>SLB</b>: the public IP address of a Server Load Balancer (SLB) instance</description></item>
-            /// <item><description><b>EIP</b>: an elastic IP address (EIP)</description></item>
-            /// <item><description><b>DNAT</b>: the NAT gateway that connects to the Internet by using the DNAT feature</description></item>
+            /// <item><description><b>INTERNET_IP</b>: the public IP address of an Elastic Compute Service (ECS) instance.</description></item>
+            /// <item><description><b>SLB</b>: the public IP address of a Server Load Balancer (SLB) instance.</description></item>
+            /// <item><description><b>EIP</b>: an elastic IP address (EIP).</description></item>
+            /// <item><description><b>DNAT</b>: the Network Address Translation (NAT) gateway that connects to the Internet by using the Destination Network Address Translation (DNAT) feature</description></item>
+            /// <item><description><b>DB_CONNECTION</b>: the public endpoint of a database.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,10 +286,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of the ExposureType parameter is <b>INTERNET_IP</b>, the value of this parameter is an empty string.</description></item>
-            /// <item><description>If the value of the ExposureType parameter is <b>SLB</b>, the value of this parameter is the ID of the Internet-facing SLB instance.</description></item>
+            /// <item><description>If the value of the ExposureType parameter is <b>INTERNET_IP</b>, this parameter is empty.</description></item>
+            /// <item><description>If the value of the ExposureType parameter is <b>SLB</b>, the value of this parameter is the ID of the SLB instance.</description></item>
             /// <item><description>If the value of the ExposureType parameter is <b>EIP</b>, the value of this parameter is the ID of the EIP.</description></item>
             /// <item><description>If the value of the ExposureType parameter is <b>DNAT</b>, the value of this parameter is the ID of the NAT gateway.</description></item>
+            /// <item><description>If the value of the ExposureType parameter is <b>DB_CONNECTION</b>, the value of this parameter is the ID of the database.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -206,7 +311,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp116qem8npvchqc****</para>
@@ -216,7 +321,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>worker-k8s-for-cs-c929ee2a145214f89a8b248005be5****</para>
@@ -321,9 +426,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The region in which the server resides.</para>
+            /// <para>The region ID.</para>
             /// <remarks>
-            /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+            /// <para> For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -334,7 +439,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server.</para>
+            /// <para>The UUID of the server or the instance ID of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4f9ce097-4a7d-48fe-baef-6960e5b6****</para>

@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><para><b>type</b>: the type of the applicable scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>GroupId</b>: the ID of a server group</description></item>
-        /// <item><description><b>Uuid</b>: the UUID of a server</description></item>
+        /// <item><description><b>GroupId</b>: the ID of a server group.</description></item>
+        /// <item><description><b>Uuid</b>: the UUID of a server.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>uuids</b>: the UUIDs of servers</para>
+        /// <item><description><para><b>uuids</b>: the UUIDs of servers. This field is of the string type.</para>
         /// </description></item>
-        /// <item><description><para><b>groupIds</b>: the IDs of server groups</para>
+        /// <item><description><para><b>groupIds</b>: the IDs of server groups. This field is of the long type.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you leave this parameter empty, all servers are added to the whitelist. If you set the <b>type</b> field to <b>GroupId</b>, you must also specify the <b>groupIds</b> field. If you set <b>type</b> to <b>Uuid</b>, you must specify the <b>uuids</b> parameter.</para>
+        /// <para> If you leave this parameter empty, the applicable scope is all servers. If you set the <b>type</b> field to <b>GroupId</b>, you must also specify the <b>groupIds</b> field. If you set the <b>type</b> field to <b>Uuid</b>, you must also specify the <b>uuids</b> field.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;type&quot;:&quot;GroupId&quot;,&quot;uuids&quot;:[],&quot;groupIds&quot;:[10782678]}</para>
+        /// <para>{&quot;type&quot;:&quot;Uuid&quot;,&quot;uuids&quot;:[&quot;b31a708f-5fea-426e-bebe-a7b0893****&quot;,&quot;1f749687-3b5d-4e11-8140-d964673****&quot;],&quot;groupIds&quot;:[]}</para>
         /// </summary>
         [NameInMap("TargetInfo")]
         [Validation(Required=false)]

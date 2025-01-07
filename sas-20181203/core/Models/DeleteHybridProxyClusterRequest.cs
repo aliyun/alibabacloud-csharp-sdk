@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteHybridProxyClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the proxy cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

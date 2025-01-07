@@ -50,11 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? OnlyImage { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the instance. Default value: <b>linux</b>. Valid values:</para>
+        /// <para>The operating system of the asset. Default value: <b>linux</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>linux</b></description></item>
         /// <item><description><b>windows</b></description></item>
-        /// <item><description><b>windows-2003</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,6 +62,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Os")]
         [Validation(Required=false)]
         public string Os { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the PrivateLink endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72845</para>
+        /// </summary>
+        [NameInMap("PrivateLinkId")]
+        [Validation(Required=false)]
+        public long? PrivateLinkId { get; set; }
 
         /// <summary>
         /// <para>The name of the proxy cluster.</para>

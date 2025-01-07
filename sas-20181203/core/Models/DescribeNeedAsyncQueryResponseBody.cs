@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeNeedAsyncQueryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the result is returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5DFD6277-CC36-57F7-ACE6-F5952XXXXXXXX</para>
         /// </summary>

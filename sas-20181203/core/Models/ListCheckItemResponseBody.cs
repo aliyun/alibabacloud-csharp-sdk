@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>POLARDB</b>: PolarDB.</description></item>
             /// <item><description><b>POSTGRESQL</b>: ApsaraDB RDS for PostgreSQL.</description></item>
             /// <item><description><b>MSE</b>: Microservices Engine (MSE).</description></item>
-            /// <item><description><b>NAS</b>: Apsara File Storage NAS (NAS).</description></item>
+            /// <item><description><b>NAS</b>: File Storage NAS (NAS).</description></item>
             /// <item><description><b>SDDP</b>: Sensitive Data Discovery and Protection (SDDP).</description></item>
             /// <item><description><b>EIP</b>: Elastic IP Address (EIP).</description></item>
             /// </list>

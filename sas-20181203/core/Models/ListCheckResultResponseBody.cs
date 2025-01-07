@@ -10,20 +10,55 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the check items.</para>
+        /// <para>The check items.</para>
         /// </summary>
         [NameInMap("Checks")]
         [Validation(Required=false)]
         public List<ListCheckResultResponseBodyChecks> Checks { get; set; }
         public class ListCheckResultResponseBodyChecks : TeaModel {
+            /// <summary>
+            /// <para>The subtype of the cloud service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("AssetSubType")]
             [Validation(Required=false)]
             public int? AssetSubType { get; set; }
 
+            /// <summary>
+            /// <para>The type of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: an ECS instance</description></item>
+            /// <item><description><b>1</b>: a SLB instance</description></item>
+            /// <item><description><b>2</b>: a NAT gateway</description></item>
+            /// <item><description><b>3</b>: an ApsaraDB RDS instance</description></item>
+            /// <item><description><b>4</b>: an ApsaraDB for MongoDB instance</description></item>
+            /// <item><description><b>5</b>: an ApsaraDB for Redis instance</description></item>
+            /// <item><description><b>6</b>: a container image</description></item>
+            /// <item><description><b>7</b>: a container</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("AssetType")]
             [Validation(Required=false)]
             public int? AssetType { get; set; }
 
+            /// <summary>
+            /// <para>The service provider of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Alibaba Cloud</description></item>
+            /// <item><description><b>3</b>: Huawei Cloud</description></item>
+            /// <item><description><b>4</b>: Microsoft Azure</description></item>
+            /// <item><description><b>5</b>: AWS</description></item>
+            /// <item><description><b>7</b>: Tencent Cloud</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("AssetVendor")]
             [Validation(Required=false)]
             public int? AssetVendor { get; set; }
@@ -218,6 +253,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LastCheckTime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether fixing is supported. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SUPPORT_REPAIR</b></description></item>
+            /// <item><description><b>NOT_SUPPORT_REPAIR</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NOT_SUPPORT_REPAIR</para>
+            /// </summary>
             [NameInMap("OperationType")]
             [Validation(Required=false)]
             public string OperationType { get; set; }

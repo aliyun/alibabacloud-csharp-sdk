@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public GetSensitiveDefineRuleConfigResponseBodyData Data { get; set; }
         public class GetSensitiveDefineRuleConfigResponseBodyData : TeaModel {
+            [NameInMap("EnableNewRule")]
+            [Validation(Required=false)]
+            public int? EnableNewRule { get; set; }
+
             /// <summary>
             /// <para>The custom configuration ID.</para>
             /// 

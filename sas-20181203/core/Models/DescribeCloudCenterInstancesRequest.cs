@@ -32,6 +32,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The service provider of the asset. Separate multiple service providers with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: an asset provided by Alibaba Cloud</description></item>
+        /// <item><description><b>1</b>: an asset outside Alibaba Cloud</description></item>
+        /// <item><description><b>2</b>: an asset in a data center</description></item>
+        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: an asset from a third-party cloud service provider</description></item>
+        /// <item><description><b>8</b>: a lightweight asset</description></item>
+        /// <item><description><b>9</b>: a Serverless App Engine (SAE) instance</description></item>
+        /// <item><description><b>10</b>: an instance in Platform for AI (PAI)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1,2,3</para>
+        /// </summary>
         [NameInMap("Flags")]
         [Validation(Required=false)]
         public string Flags { get; set; }

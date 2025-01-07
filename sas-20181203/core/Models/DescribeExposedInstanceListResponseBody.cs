@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details about the exposed asset.</para>
+        /// <para>The details of the exposures.</para>
         /// </summary>
         [NameInMap("ExposedInstances")]
         [Validation(Required=false)]
@@ -26,20 +26,55 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AsapVulCount { get; set; }
 
+            /// <summary>
+            /// <para>The type of the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: an ECS instance.</description></item>
+            /// <item><description><b>1</b>: a SLB instance.</description></item>
+            /// <item><description><b>2</b>: a NAT gateway.</description></item>
+            /// <item><description><b>3</b>: an ApsaraDB RDS instance.</description></item>
+            /// <item><description><b>4</b>: an ApsaraDB for MongoDB instance.</description></item>
+            /// <item><description><b>5</b>: an ApsaraDB for Redis instance.</description></item>
+            /// <item><description><b>6</b>: a container image.</description></item>
+            /// <item><description><b>7</b>: a container.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("AssetType")]
             [Validation(Required=false)]
             public int? AssetType { get; set; }
 
+            /// <summary>
+            /// <para>The JSON string that specifies the information about a database asset, which contains the following fields.</para>
+            /// <list type="bullet">
+            /// <item><description>assetSubType: the asset subtype.</description></item>
+            /// <item><description>assetSubTypeName: the name of the asset subtype.</description></item>
+            /// <item><description>assetType: the type of the asset.</description></item>
+            /// <item><description>assetTypeName: the name of the asset type.</description></item>
+            /// <item><description>vendor: the service provider of the asset.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{assetSubTypeName&quot;:&quot;INSTANCE&quot;,&quot;assetType&quot;:3,&quot;assetTypeName&quot;:&quot;RDS&quot;,&quot;vendor&quot;:0}</para>
+            /// </summary>
             [NameInMap("CloudAssetInfo")]
             [Validation(Required=false)]
             public string CloudAssetInfo { get; set; }
 
+            /// <summary>
+            /// <para>The number of CSPM risks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("CspmAlarmCount")]
             [Validation(Required=false)]
             public int? CspmAlarmCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of servers that are exposed on the Internet.</para>
+            /// <para>The number of weak password risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -81,10 +116,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The resource from which the asset is exposed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INTERNET_IP</b>: the public IP address of an ECS instance</description></item>
-            /// <item><description><b>SLB</b>: the public IP address of a Server Load Balancer (SLB) instance</description></item>
-            /// <item><description><b>EIP</b>: an elastic IP address (EIP)</description></item>
-            /// <item><description><b>DNAT</b>: the NAT gateway that connects to the Internet by using the DNAT feature</description></item>
+            /// <item><description><b>INTERNET_IP</b>: the public IP address of an ECS instance.</description></item>
+            /// <item><description><b>SLB</b>: the public IP address of a Server Load Balancer (SLB) instance.</description></item>
+            /// <item><description><b>EIP</b>: an elastic IP address (EIP).</description></item>
+            /// <item><description><b>DNAT</b>: the NAT gateway that connects to the Internet by using the Destination Network Address Translation (DNAT) feature.</description></item>
+            /// <item><description><b>DB_CONNECTION</b>: the public endpoint of a database.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,12 +131,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposureType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.</para>
+            /// <para>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</para>
             /// <list type="bullet">
             /// <item><description>If the value of the ExposureType parameter is <b>INTERNET_IP</b>, this parameter is empty.</description></item>
             /// <item><description>If the value of the ExposureType parameter is <b>SLB</b>, the value of this parameter is the ID of the SLB instance.</description></item>
             /// <item><description>If the value of the ExposureType parameter is <b>EIP</b>, the value of this parameter is the ID of the EIP.</description></item>
             /// <item><description>If the value of the ExposureType parameter is <b>DNAT</b>, the value of this parameter is the ID of the NAT gateway.</description></item>
+            /// <item><description>If the value of the ExposureType parameter is <b>DB_CONNECTION</b>, the value of this parameter is the ID of the database.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The instance ID of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp1g6wxdwps7s9dz****</para>
@@ -141,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The name of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc_centos7.2_005</para>
@@ -191,7 +228,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NntfVulCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the server resides.</para>
+            /// <para>The ID of the region in which the asset resides.</para>
             /// <remarks>
             /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
             /// </remarks>
@@ -214,7 +251,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalVulCount { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server.</para>
+            /// <para>The UUID of the server or the instance ID of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dd803d9e-a337-4add-9c5b-7d503e08****</para>
@@ -263,7 +300,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries about the servers that are exposed on the Internet.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

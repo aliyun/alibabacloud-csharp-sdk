@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetDetailByUuidResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asset details.</para>
+        /// <para>The details of the server.</para>
         /// </summary>
         [NameInMap("AssetDetail")]
         [Validation(Required=false)]
@@ -54,7 +54,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>5</b>: Advanced edition</description></item>
             /// <item><description><b>3</b>: Enterprise edition</description></item>
             /// <item><description><b>7</b>: Ultimate edition</description></item>
-            /// <item><description><b>10</b>: Value-added Plan edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -242,7 +241,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Kernel { get; set; }
 
             /// <summary>
-            /// <para>The Media Access Control (MAC) addresses.</para>
+            /// <para>The media access control (MAC) addresses of the server.</para>
             /// </summary>
             [NameInMap("MacList")]
             [Validation(Required=false)]

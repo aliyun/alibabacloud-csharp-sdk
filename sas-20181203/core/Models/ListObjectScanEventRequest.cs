@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>When a file is a subfile within a compressed package, the ParentEventId represents the alert of the compressed package itself.</para>
+        /// <para>The ID of the alert that is generated for the package to which the subfile belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

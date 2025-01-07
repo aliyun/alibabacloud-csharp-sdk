@@ -9,10 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceListRequest : TeaModel {
+        /// <summary>
+        /// <para>The type of the asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: an Elastic Compute Service (ECS) instance.</description></item>
+        /// <item><description><b>3</b>: an ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>4</b>: an ApsaraDB for MongoDB instance.</description></item>
+        /// <item><description><b>5</b>: an ApsaraDB for Redis instance.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("AssetType")]
         [Validation(Required=false)]
         public string AssetType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the asset has Cloud Security Posture Management (CSPM) risks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("CspmStatus")]
         [Validation(Required=false)]
         public bool? CspmStatus { get; set; }
@@ -38,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExposureComponent { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the server.</para>
+        /// <para>The public IP address of the server or the public endpoint of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116.12.XX.XX</para>
@@ -71,16 +93,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The health status of the Elastic Compute Service (ECS) instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values:</para>
+        /// <para>Specifies whether the asset has weak password risks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Healthy</description></item>
-        /// <item><description>Unhealthy</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
-        /// <para>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and then releases the automatically created instances among the unhealthy instances.</para>
-        /// <para>Unhealthy ECS instances that are manually added to the scaling group are released based on the management mode of the instance lifecycle. If the lifecycle of the ECS instances is not managed by the scaling group, Auto Scaling removes the instances from the scaling group but does not release them. If the lifecycle of the ECS instances is managed by the scaling group, Auto Scaling removes the instances from the scaling group and releases them.</para>
-        /// <remarks>
-        /// <para> Make sure that you have sufficient balance within your account. If you have overdue payments in your account, pay-as-you-go and preemptible instances are stopped or released. For information about how the status of ECS instances changes when you have overdue payments in your account, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Unhealthy</para>
@@ -90,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the server.</para>
+        /// <para>The instance ID of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1g6wxdwps7s9dz****</para>
@@ -100,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the server.</para>
+        /// <para>The name of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc_centos7.2_005</para>
@@ -136,10 +153,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the server has vulnerabilities. Valid values:</para>
+        /// <para>Specifies whether the asset has vulnerabilities. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The server has vulnerabilities.</description></item>
-        /// <item><description><b>false</b>: The server does not have vulnerabilities.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

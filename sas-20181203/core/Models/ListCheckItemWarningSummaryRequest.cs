@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CheckWarningStatus { get; set; }
 
+        [NameInMap("CheckWarningStatusList")]
+        [Validation(Required=false)]
+        public List<int?> CheckWarningStatusList { get; set; }
+
         /// <summary>
         /// <para>The name of the field that is used to query containers.</para>
         /// 
@@ -152,6 +156,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
         /// <summary>
         /// <para>The UUIDs of the servers.</para>

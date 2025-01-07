@@ -20,12 +20,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of check items.</para>
+        /// <para>The IDs of the check items.</para>
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the whitelist rule.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of whitelist rules.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22</para>
+        /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }

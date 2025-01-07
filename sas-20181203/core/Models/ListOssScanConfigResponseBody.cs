@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> BucketNameList { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</para>
+            /// <para>The maximum number of objects that can be extracted during decompression. Valid values: 1 to 1000. If the maximum number of objects that can be extracted is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DecompressMaxFileCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</para>
+            /// <para>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the maximum number of decompression levels is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? DecompressMaxLayer { get; set; }
 
+            /// <summary>
+            /// <para>The decryption methods.</para>
+            /// </summary>
             [NameInMap("DecryptionList")]
             [Validation(Required=false)]
             public List<string> DecryptionList { get; set; }
@@ -115,6 +118,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> KeySuffixList { get; set; }
 
+            /// <summary>
+            /// <para>The timestamp when the object was last modified. The time must be later than the timestamp that you specify. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1724301769834</para>
+            /// </summary>
             [NameInMap("LastModifiedStartTime")]
             [Validation(Required=false)]
             public long? LastModifiedStartTime { get; set; }

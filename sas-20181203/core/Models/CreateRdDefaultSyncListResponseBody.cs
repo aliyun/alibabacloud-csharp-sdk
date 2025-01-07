@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateRdDefaultSyncListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BA674E4B-00CF-5DEA-8B92-360862FB5133</para>
         /// </summary>

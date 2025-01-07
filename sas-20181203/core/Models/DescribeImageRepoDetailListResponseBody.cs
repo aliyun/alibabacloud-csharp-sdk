@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Endpoints { get; set; }
 
+            [NameInMap("HasRiskImageCount")]
+            [Validation(Required=false)]
+            public int? HasRiskImageCount { get; set; }
+
             /// <summary>
             /// <para>The number of baseline risk items on the image repository.</para>
             /// 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DingTalkOnlineTestResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2E96F605-1BE3-5954-83A5-AE96C617****</para>
         /// </summary>

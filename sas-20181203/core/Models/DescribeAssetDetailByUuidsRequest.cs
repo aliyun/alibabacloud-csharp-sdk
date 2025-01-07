@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>资源目录成员账号主账号ID。</para>
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
         /// <remarks>
-        /// <para>调用<a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a>接口可以获取该参数。</para>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the instances. Separate multiple UUIDs with commas (,).</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of instances.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

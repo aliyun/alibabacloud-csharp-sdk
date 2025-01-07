@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryAssetDetailByUUIDRequest : TeaModel {
         /// <summary>
+        /// <para>A key-value pair that consists of the user ID and the asset list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///       &quot;AliUid&quot;: &quot;176618589410****&quot;,

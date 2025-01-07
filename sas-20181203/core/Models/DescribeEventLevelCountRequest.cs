@@ -76,6 +76,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
+        /// <summary>
+        /// <para>The type of the accounts that you want to query. Default value: <b>0</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: the current account.</description></item>
+        /// <item><description><b>1</b>: all accounts.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("MultiAccountActionType")]
         [Validation(Required=false)]
         public int? MultiAccountActionType { get; set; }

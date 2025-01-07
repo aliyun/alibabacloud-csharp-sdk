@@ -20,48 +20,113 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array consisting of the operations that you can perform to handle the alert event.</para>
+        /// <para>The operations that are performed to handle the alert.</para>
         /// </summary>
         [NameInMap("SecurityEventOperationsResponse")]
         [Validation(Required=false)]
         public List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse> SecurityEventOperationsResponse { get; set; }
         public class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse : TeaModel {
+            /// <summary>
+            /// <para>The objects on which the operations are performed. This parameter is required when you add the alert to the whitelist by configuring precise defense rules.</para>
+            /// </summary>
             [NameInMap("MappingMarkFields")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields> MappingMarkFields { get; set; }
             public class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMappingMarkFields : TeaModel {
+                /// <summary>
+                /// <para>The description of the field that is added to the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the value of the field can be changed.</para>
+                /// <list type="bullet">
+                /// <item><description><b>CUSTOM</b>: The value of the field can be changed.</description></item>
+                /// <item><description><b>SYSTEM</b>: The value of the field cannot be changed.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CUSTOM</para>
+                /// </summary>
                 [NameInMap("FillType")]
                 [Validation(Required=false)]
                 public string FillType { get; set; }
 
+                /// <summary>
+                /// <para>The maximum length of the field that is added to the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2048</para>
+                /// </summary>
                 [NameInMap("MaxLength")]
                 [Validation(Required=false)]
                 public int? MaxLength { get; set; }
 
+                /// <summary>
+                /// <para>The minimum length of the field that is added to the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
                 [NameInMap("MinLength")]
                 [Validation(Required=false)]
                 public int? MinLength { get; set; }
 
+                /// <summary>
+                /// <para>The name of the field that is added to the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pid</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the parameter is required. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("Required")]
                 [Validation(Required=false)]
                 public bool? Required { get; set; }
 
+                /// <summary>
+                /// <para>The display name of the field that can be used in the whitelist rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pid</para>
+                /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]
                 public string ShowName { get; set; }
 
+                /// <summary>
+                /// <para>The display name of the field that is added to the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1791</para>
+                /// </summary>
                 [NameInMap("ShowValue")]
                 [Validation(Required=false)]
                 public string ShowValue { get; set; }
 
+                /// <summary>
+                /// <para>The value of the field that is added to the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1791</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -69,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>An array consisting of the configuration information that is used when the value of the OperationCode parameter is <b>advance_mark_mis_info</b>.</para>
+            /// <para>The configurations that are used when the value of the OperationCode parameter is <b>advance_mark_mis_info</b>.</para>
             /// </summary>
             [NameInMap("MarkField")]
             [Validation(Required=false)]
@@ -142,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>An array consisting of the configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.</para>
+            /// <para>The configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.</para>
             /// </summary>
             [NameInMap("MarkFieldsSource")]
             [Validation(Required=false)]
@@ -188,7 +253,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The operation that you can perform to handle the alert. Valid values:</para>
+            /// <para>The operation that is performed to handle the alert. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>block_ip</b>: blocks the source IP address.</description></item>
             /// <item><description><b>advance_mark_mis_info</b>: adds the alert to the whitelist.</description></item>
@@ -197,9 +262,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>kill_process</b>: terminates the malicious process.</description></item>
             /// <item><description><b>cleanup</b>: performs in-depth virus detection and removal.</description></item>
             /// <item><description><b>kill_and_quara</b>: terminates the malicious process and quarantines the source file.</description></item>
-            /// <item><description><b>disable_malicious_defense</b>: stops the container on which the alerting files or processes exist.</description></item>
+            /// <item><description><b>disable_malicious_defense</b>: disables the malicious behavior defense feature.</description></item>
             /// <item><description><b>client_problem_check</b>: performs troubleshooting.</description></item>
             /// <item><description><b>quara</b>: quarantines the source file of the malicious process.</description></item>
+            /// <item><description><b>defense_mark_mis_info</b>: enables the precise defense feature but disables the notification feature.</description></item>
+            /// <item><description><b>rm_defense_mark_mis_info</b>: enables the notification feature.</description></item>
+            /// <item><description><b>rm_mark_mis_info</b>: removes the alert from the whitelist.</description></item>
+            /// <item><description><b>cancle_manual</b>: cancels marking the alert as manually handled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -210,9 +279,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperationCode { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the operation that you can perform to handle the alert event.</para>
+            /// <para>The configuration of the operation that is performed to handle the alert.</para>
             /// <remarks>
-            /// <para> If the value of the OperationCode parameter is <c>kill_and_quara</c> or <c>block_ip</c>, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.</para>
+            /// <para> If the value of the <b>OperationCode</b> parameter is <b>kill_and_quara</b> or <b>block_ip</b>, the OperationParams parameter is required. If the value of the <b>OperationCode</b> parameter is a different value, the OperationParams parameter can be left empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -223,10 +292,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperationParams { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you can handle the alert event in the current edition of Security Center. Valid values:</para>
+            /// <para>Indicates whether you can handle the alert in the current edition of Security Center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

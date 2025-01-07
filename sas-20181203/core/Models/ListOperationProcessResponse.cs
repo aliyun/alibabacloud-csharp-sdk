@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class UninstallRaspAttachResponse : TeaModel {
+    public class ListOperationProcessResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UninstallRaspAttachResponseBody Body { get; set; }
+        public ListOperationProcessResponseBody Body { get; set; }
 
     }
 

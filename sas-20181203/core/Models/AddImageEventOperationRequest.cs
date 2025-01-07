@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string EventType { get; set; }
 
+        [NameInMap("Note")]
+        [Validation(Required=false)]
+        public string Note { get; set; }
+
         /// <summary>
         /// <para>The operation code.</para>
         /// <list type="bullet">
@@ -83,6 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Scenarios")]
         [Validation(Required=false)]
         public string Scenarios { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
 
     }
 

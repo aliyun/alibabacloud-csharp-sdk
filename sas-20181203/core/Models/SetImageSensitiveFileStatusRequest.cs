@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SetImageSensitiveFileStatusRequest : TeaModel {
+        [NameInMap("IdList")]
+        [Validation(Required=false)]
+        public List<long?> IdList { get; set; }
+
         /// <summary>
         /// <para>The UUID of the image. Separate multiple UUIDs with commas (,).</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ImageUuids")]
         [Validation(Required=false)]
         public string ImageUuids { get; set; }
+
+        [NameInMap("ScanRange")]
+        [Validation(Required=false)]
+        public List<string> ScanRange { get; set; }
 
         /// <summary>
         /// <para>The alert type of the sensitive file. Valid values:</para>

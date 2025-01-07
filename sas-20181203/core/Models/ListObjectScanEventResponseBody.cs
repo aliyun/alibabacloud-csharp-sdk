@@ -140,6 +140,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether an alert is generated for the file extracted from the package. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

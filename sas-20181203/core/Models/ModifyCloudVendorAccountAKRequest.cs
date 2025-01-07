@@ -24,18 +24,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuthIds { get; set; }
 
         /// <summary>
-        /// <para>The modules that are associated with the AccessKey pair.</para>
+        /// <para>The modules that are associated with the AccessKey pair. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HOST</b>: host.</description></item>
+        /// <item><description><b>CSPM</b>: configuration assessment.</description></item>
+        /// <item><description><b>SIEM</b>: Cloud Threat Detection and Response (CTDR).</description></item>
+        /// <item><description><b>TRIAL</b>: log audit.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can call the <a href="~~GetSupportedModules~~">GetSupportedModules</a> operation to query the supported modules.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("AuthModules")]
         [Validation(Required=false)]
         public List<string> AuthModules { get; set; }
 
         /// <summary>
-        /// <para>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</para>
+        /// <para>The Active Directory (AD) domain. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>china</b></description></item>
         /// <item><description><b>global</b></description></item>
         /// </list>
+        /// <remarks>
+        /// <para> This parameter takes effect only when Vendor is set to Azure.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -45,9 +57,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        /// <summary>
+        /// <para>The regions that are examined during AccessKey pair authentication.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</para>
+        /// <para> This parameter takes effect only when Vendor is set to AWS. You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Regions")]
@@ -56,6 +82,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The AccessKey ID.</para>
+        /// <remarks>
+        /// <para> If AkType is set to <b>primary</b>, you must set SecretId to the AccessKey ID of the third-party master account. If AkType is set to <b>sub</b>, you must set SecretId to the AccessKey ID of the third-party sub-account. This parameter value does not change for a <b>Microsoft Azure account</b>. For an Azure account, set this parameter to the <b>app ID</b> that is used for authentication.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>S3D6c4O***</para>
@@ -65,21 +94,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SecretId { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey secret. Valid values:</para>
-        /// <para>1\. If AkType is set to primary, specify this parameter based on the following description:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: Specify the AccessKey secret of a primary account on Tencent Cloud.</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: Specify the AccessKey secret of a primary account on Huawei Cloud.</description></item>
-        /// <item><description><b>Azure</b>: Specify the AccessKey secret of a primary account on Microsoft Azure.</description></item>
-        /// <item><description><b>AWS</b>: Specifythe AccessKey secret of a primary account on Amazon Web Services (AWS).</description></item>
-        /// </list>
-        /// <para>2\. If AkType is set to sub, specify this parameter based on the following description:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: Specify the AccessKey secret of a sub-account on Tencent Cloud.</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: Specify the AccessKey secret of a sub-account on Huawei Cloud.</description></item>
-        /// <item><description><b>Azure</b>: Specify the AccessKey secret of a sub-account on Microsoft Azure.</description></item>
-        /// <item><description><b>AWS</b>: Specify the AccessKey secret of a sub-account on AWS.</description></item>
-        /// </list>
+        /// <para>The AccessKey secret.</para>
+        /// <remarks>
+        /// <para> If AkType is set to <b>primary</b>, you must set SecretKey to the AccessKey secret of the third-party master account. If AkType is set to <b>sub</b>, you must set SecretKey to the AccessKey secret of the third-party sub-account. This parameter value does not change for a <b>Microsoft Azure account</b>. For an Azure account, set this parameter to the <b>password</b> that is used for authentication.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>AE6SLd****</para>
@@ -103,14 +121,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The subscription IDs. This parameter takes effect only when Vendor is set to Azure.</para>
+        /// <para>The IDs of subscriptions.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only when Vendor is set to Azure.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("SubscriptionIds")]
         [Validation(Required=false)]
         public List<string> SubscriptionIds { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This parameter takes effect only when Vendor is set to Azure.</para>
+        /// <para>The tenant ID.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only when Vendor is set to Azure.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>95304a97-339b-4de5-9a7d-cdbffaf****</para>

@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The reason the vulnerability is added to the whitelist.</para>
+            /// <para>The reason why the vulnerability is added to the whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>already config in another way</para>

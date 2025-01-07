@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>ECS_FILE</b>: ECS files</description></item>
             /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
-            /// <item><description><b>NAS</b>: Apsara File Storage NAS file systems</description></item>
+            /// <item><description><b>NAS</b>: File Storage NAS file systems</description></item>
             /// <item><description><b>OTS_TABLE</b>: Tablestore instances</description></item>
             /// </list>
             /// 

@@ -28,6 +28,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BusinessType { get; set; }
 
         /// <summary>
+        /// <para>The operating system of the asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>all</b>: all operating systems</description></item>
+        /// <item><description><b>windows</b>: the Windows operating system</description></item>
+        /// <item><description><b>linux</b>: the Linux operating system</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you leave this parameter empty, the system automatically selects a value for the parameter based on the value of the <b>BusinessType</b> parameter.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If the BusinessType parameter is set to <b>VIRUS_SCAN_CYCLE_CONFIG</b>, the value of the Platform parameter is <b>all</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the BusinessType parameter is set to <b>VIRUS_SCAN_ONCE_TASK</b>, the value of the Platform parameter is <b>all</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the BusinessType parameter is set to <b>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</b>, the value of the Platform parameter is <b>all</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the BusinessType parameter is set to <b>AGENTLESS_VUL_WHITE_LIST_[ID]</b> the value of the Platform parameter is <b>all</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the BusinessType parameter is set to <b>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</b>, the value of the Platform parameter is <b>linux</b>.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>linux</para>
+        /// </summary>
+        [NameInMap("Platform")]
+        [Validation(Required=false)]
+        public string Platform { get; set; }
+
+        /// <summary>
         /// <para>The dimension based on which you want to select the asset. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>instance</b>: selects the asset by server.</description></item>

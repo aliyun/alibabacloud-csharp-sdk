@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>114.55.**.**</para>
+        /// <para><c>114.55.**.**</c></para>
         /// </summary>
         [NameInMap("RegistryHostIp")]
         [Validation(Required=false)]

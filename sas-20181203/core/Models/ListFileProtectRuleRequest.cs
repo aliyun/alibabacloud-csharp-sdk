@@ -45,6 +45,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The type of the operating system. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>windows</b>: Windows</description></item>
+        /// <item><description><b>linux</b>: Linux</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>linux</para>
+        /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }

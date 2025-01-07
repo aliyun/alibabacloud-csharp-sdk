@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePublishGraySwitchResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>231A8A81-CBB4-5AB3-A624-98A501******</para>
         /// </summary>

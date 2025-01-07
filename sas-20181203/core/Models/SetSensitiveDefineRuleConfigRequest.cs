@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        [NameInMap("EnableNewRule")]
+        [Validation(Required=false)]
+        public int? EnableNewRule { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
     }
 
 }

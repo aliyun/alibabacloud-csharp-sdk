@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetDetailByUuidsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details of the ECS instances.</para>
+        /// <para>An array that consists of the details of the instances.</para>
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]
@@ -28,6 +28,47 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetType { get; set; }
 
             /// <summary>
+            /// <para>The timestamp when Security Center is authorized to protect the instance. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1627974044000</para>
+            /// </summary>
+            [NameInMap("AuthModifyTime")]
+            [Validation(Required=false)]
+            public long? AuthModifyTime { get; set; }
+
+            /// <summary>
+            /// <para>The edition of Security Center that is authorized to protect the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Basic edition (Unauthorized)</description></item>
+            /// <item><description><b>6</b>: Anti-virus edition</description></item>
+            /// <item><description><b>5</b>: Advanced edition</description></item>
+            /// <item><description><b>3</b>: Enterprise edition</description></item>
+            /// <item><description><b>7</b>: Ultimate edition</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7</para>
+            /// </summary>
+            [NameInMap("AuthVersion")]
+            [Validation(Required=false)]
+            public int? AuthVersion { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether Security Center is authorized to protect the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("Bind")]
+            [Validation(Required=false)]
+            public bool? Bind { get; set; }
+
+            /// <summary>
             /// <para>The status of the Security Center agent. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>online</b></description></item>
@@ -40,6 +81,53 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ClientStatus")]
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
+
+            /// <summary>
+            /// <para>The version of the Security Center agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.0.0</para>
+            /// </summary>
+            [NameInMap("ClientVersion")]
+            [Validation(Required=false)]
+            public string ClientVersion { get; set; }
+
+            /// <summary>
+            /// <para>The number of CPU cores.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("Cpu")]
+            [Validation(Required=false)]
+            public int? Cpu { get; set; }
+
+            /// <summary>
+            /// <para>The details of the CPU.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Intel(R) Xeon(R) Platinum 8163 CPU @ 2.50GHz</para>
+            /// </summary>
+            [NameInMap("CpuInfo")]
+            [Validation(Required=false)]
+            public string CpuInfo { get; set; }
+
+            /// <summary>
+            /// <para>The timestamp when Security Center records the details of the instance. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1603863599000</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
+            /// <summary>
+            /// <para>An array that consists of the information about the disk.</para>
+            /// </summary>
+            [NameInMap("DiskInfoList")]
+            [Validation(Required=false)]
+            public List<string> DiskInfoList { get; set; }
 
             /// <summary>
             /// <para>The type of the asset by source. Valid values:</para>
@@ -57,6 +145,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Flag")]
             [Validation(Required=false)]
             public int? Flag { get; set; }
+
+            /// <summary>
+            /// <para>The group to which the instance belongs. By default, the instances that are not grouped belong to the <b>Default</b> group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
+            [NameInMap("GroupTrace")]
+            [Validation(Required=false)]
+            public string GroupTrace { get; set; }
+
+            /// <summary>
+            /// <para>The hostname.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("HostName")]
+            [Validation(Required=false)]
+            public string HostName { get; set; }
 
             /// <summary>
             /// <para>The ID of the ECS instance.</para>
@@ -112,6 +220,50 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
+            /// <para>The IP addresses of the instances.</para>
+            /// </summary>
+            [NameInMap("IpList")]
+            [Validation(Required=false)]
+            public List<string> IpList { get; set; }
+
+            /// <summary>
+            /// <para>The kernel version of the operating system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4.18.0-80.11.2.el8_0.x86_64</para>
+            /// </summary>
+            [NameInMap("Kernel")]
+            [Validation(Required=false)]
+            public string Kernel { get; set; }
+
+            /// <summary>
+            /// <para>The media access control (MAC) addresses of the instances.</para>
+            /// </summary>
+            [NameInMap("MacList")]
+            [Validation(Required=false)]
+            public List<string> MacList { get; set; }
+
+            /// <summary>
+            /// <para>The memory size of the instance. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("Mem")]
+            [Validation(Required=false)]
+            public int? Mem { get; set; }
+
+            /// <summary>
+            /// <para>The memory size of the instance. Unit: MB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024</para>
+            /// </summary>
+            [NameInMap("Memory")]
+            [Validation(Required=false)]
+            public long? Memory { get; set; }
+
+            /// <summary>
             /// <para>The operating system of the ECS instance.</para>
             /// 
             /// <b>Example:</b>
@@ -120,6 +272,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }
+
+            /// <summary>
+            /// <para>The operating system version of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Linux 64bit</para>
+            /// </summary>
+            [NameInMap("OsDetail")]
+            [Validation(Required=false)]
+            public string OsDetail { get; set; }
 
             /// <summary>
             /// <para>The name of the operating system run by the ECS instance.</para>
@@ -163,6 +325,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
+
+            /// <summary>
+            /// <para>The operating system information about the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CentOS Linux 8.0.1905</para>
+            /// </summary>
+            [NameInMap("SysInfo")]
+            [Validation(Required=false)]
+            public string SysInfo { get; set; }
+
+            /// <summary>
+            /// <para>The tag added to the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
 
             /// <summary>
             /// <para>The UUID of the ECS instance.</para>

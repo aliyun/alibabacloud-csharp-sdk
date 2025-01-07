@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                [NameInMap("Note")]
+                [Validation(Required=false)]
+                public string Note { get; set; }
+
                 /// <summary>
                 /// <para>The operation code.</para>
                 /// <list type="bullet">

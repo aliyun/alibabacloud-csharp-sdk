@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The operation code of the configuration assessment task.</para>
             /// <list type="bullet">
             /// <item><description><b>Throttling</b>: frequency limit</description></item>
+            /// <item><description><b>AuthorizationExhaust</b>: insufficient quota</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -29,6 +30,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string OperateCode { get; set; }
 
+            /// <summary>
+            /// <para>The throttling duration. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1800</para>
+            /// </summary>
             [NameInMap("ThrottlingTimeSecond")]
             [Validation(Required=false)]
             public int? ThrottlingTimeSecond { get; set; }

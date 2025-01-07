@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateImageEventOperationRequest : TeaModel {
+        [NameInMap("Conditions")]
+        [Validation(Required=false)]
+        public string Conditions { get; set; }
+
         /// <summary>
         /// <para>The ID of the alert handling rule.</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        [NameInMap("Note")]
+        [Validation(Required=false)]
+        public string Note { get; set; }
 
         /// <summary>
         /// <para>The application scope of the rule. The value is in the JSON format. Valid values:</para>
@@ -32,6 +40,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Scenarios")]
         [Validation(Required=false)]
         public string Scenarios { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
 
     }
 

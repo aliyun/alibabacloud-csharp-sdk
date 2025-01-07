@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you.</para>
+        /// <para>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you. Default value: <b>false</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IsItemStatistic")]
         [Validation(Required=false)]
@@ -31,7 +38,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The account ID of the resource directory.</para>
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>000</para>

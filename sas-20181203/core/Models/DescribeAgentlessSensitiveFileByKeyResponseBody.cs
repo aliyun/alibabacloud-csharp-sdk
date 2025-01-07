@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList : TeaModel {
+            [NameInMap("FilePath")]
+            [Validation(Required=false)]
+            public string FilePath { get; set; }
+
             /// <summary>
             /// <para>The timestamp when the first scan was performed. Unit: milliseconds.</para>
             /// 
@@ -84,6 +88,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("FirstScanTime")]
             [Validation(Required=false)]
             public long? FirstScanTime { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
 
             /// <summary>
             /// <para>The instance name of the asset.</para>
@@ -124,6 +132,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
+
+            [NameInMap("Md5")]
+            [Validation(Required=false)]
+            public string Md5 { get; set; }
+
+            [NameInMap("Prompt")]
+            [Validation(Required=false)]
+            public string Prompt { get; set; }
 
             /// <summary>
             /// <para>The risk level. Valid values:</para>

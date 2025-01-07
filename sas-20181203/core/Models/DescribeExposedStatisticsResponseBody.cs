@@ -29,16 +29,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? ExposedComponentCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of ApsaraDB for MongoDB instances that are exposed on the Internet.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ExposedDdsCount")]
         [Validation(Required=false)]
         public int? ExposedDdsCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of Elastic Compute Service (ECS) instances that are exposed on the Internet.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("ExposedEcsCount")]
         [Validation(Required=false)]
         public int? ExposedEcsCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of servers that are exposed on the Internet.</para>
+        /// <para>The total number of assets that are exposed on the Internet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -57,6 +69,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? ExposedIpCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of ApsaraDB for Redis instances that are exposed on the Internet.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ExposedKvstoreCount")]
         [Validation(Required=false)]
         public int? ExposedKvstoreCount { get; set; }
@@ -91,6 +109,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? ExposedPortCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of ApsaraDB RDS instances that are exposed on the Internet.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ExposedRdsCount")]
         [Validation(Required=false)]
         public int? ExposedRdsCount { get; set; }

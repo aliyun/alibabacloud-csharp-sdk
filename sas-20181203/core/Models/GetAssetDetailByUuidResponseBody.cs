@@ -47,14 +47,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AuthModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The edition of Security Center that is authorized to protect the asset. Valid values:</para>
+            /// <para>The edition of Security Center that is authorized to protect the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Basic edition</description></item>
+            /// <item><description><b>1</b>: Basic edition (Unauthorized)</description></item>
             /// <item><description><b>6</b>: Anti-virus edition</description></item>
             /// <item><description><b>5</b>: Advanced edition</description></item>
             /// <item><description><b>3</b>: Enterprise edition</description></item>
             /// <item><description><b>7</b>: Ultimate edition</description></item>
-            /// <item><description><b>10</b>: Value-added Plan edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,6 +91,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ClientStatus")]
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
+
+            [NameInMap("ClientSubStatus")]
+            [Validation(Required=false)]
+            public string ClientSubStatus { get; set; }
 
             /// <summary>
             /// <para>The version of the Security Center agent.</para>

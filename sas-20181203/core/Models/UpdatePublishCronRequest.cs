@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePublishCronRequest : TeaModel {
         /// <summary>
+        /// <para>The cron expression that is used to specify the start time of the upgrade.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Cron { get; set; }
 
         /// <summary>
+        /// <para>The day of a week on which you want to perform the upgrade. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MON</b></description></item>
+        /// <item><description><b>TUE</b></description></item>
+        /// <item><description><b>WED</b></description></item>
+        /// <item><description><b>THU</b></description></item>
+        /// <item><description><b>FRI</b></description></item>
+        /// <item><description><b>SAT</b></description></item>
+        /// <item><description><b>SUN</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>SUN</para>
         /// </summary>
@@ -28,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CronDay { get; set; }
 
         /// <summary>
+        /// <para>The start timestamp. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1657407600000</para>
         /// </summary>
@@ -36,6 +50,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CronTime { get; set; }
 
         /// <summary>
+        /// <para>The type of the upgrade cycle. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>day</b>: every day</description></item>
+        /// <item><description><b>week</b>: every week</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>day</para>
         /// </summary>
@@ -44,6 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CronType { get; set; }
 
         /// <summary>
+        /// <para>The duration of the upgrade. Unit: hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

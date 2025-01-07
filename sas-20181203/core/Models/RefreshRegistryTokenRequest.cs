@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RefreshRegistryTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the image repository.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain the ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

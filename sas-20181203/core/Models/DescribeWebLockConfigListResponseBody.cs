@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebLockConfigListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the configurations of web tamper proofing.</para>
+        /// <para>The configurations of web tamper proofing.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExclusiveFileType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the directory that has web tamper proofing enabled.</para>
+            /// <para>The configuration ID of the protected directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>

@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the policy. Set the value to Automated Batch Vulnerability Fixing Policy for Multiple Servers.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Automated Batch Vulnerability Fixing Policy for Multiple Servers</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

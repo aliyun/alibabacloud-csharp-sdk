@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockCreateConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The configuration ID of the protected directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1404656</para>
+        /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }

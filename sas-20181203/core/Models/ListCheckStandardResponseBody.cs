@@ -20,14 +20,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the check items.</para>
+        /// <para>The standards.</para>
         /// </summary>
         [NameInMap("Standards")]
         [Validation(Required=false)]
         public List<ListCheckStandardResponseBodyStandards> Standards { get; set; }
         public class ListCheckStandardResponseBodyStandards : TeaModel {
             /// <summary>
-            /// <para>The ID of the check item.</para>
+            /// <para>The cloud service provider that uses the standard. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Alibaba Cloud.</description></item>
+            /// <item><description><b>3</b>: Tencent Cloud.</description></item>
+            /// <item><description><b>4</b>: Huawei Cloud.</description></item>
+            /// <item><description><b>5</b>: Microsoft Azure.</description></item>
+            /// <item><description><b>7</b>: AWS.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("BindVendor")]
+            [Validation(Required=false)]
+            public int? BindVendor { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,14 +54,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of search conditions.</para>
+            /// <para>The requirements.</para>
             /// </summary>
             [NameInMap("Requirements")]
             [Validation(Required=false)]
             public List<ListCheckStandardResponseBodyStandardsRequirements> Requirements { get; set; }
             public class ListCheckStandardResponseBodyStandardsRequirements : TeaModel {
                 /// <summary>
-                /// <para>The ID of the search condition.</para>
+                /// <para>The ID of the requirement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -54,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The number of check items queried by using the search condition.</para>
+                /// <para>The number of check items in the requirement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -74,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// <para>The priority field indicates the level of prominence.</para>
+                /// <para>The priority for display.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -96,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ShowName { get; set; }
 
             /// <summary>
-            /// <para>The priority field indicates the level of prominence.</para>
+            /// <para>The priority for display.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -106,7 +123,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ShowPriorityLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of the check item.</para>
+            /// <para>The type of the standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IDENTITY_PERMISSION</para>

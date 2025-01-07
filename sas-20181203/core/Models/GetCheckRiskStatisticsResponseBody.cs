@@ -177,6 +177,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Summary")]
+        [Validation(Required=false)]
+        public GetCheckRiskStatisticsResponseBodySummary Summary { get; set; }
+        public class GetCheckRiskStatisticsResponseBodySummary : TeaModel {
+            [NameInMap("HandledCheckToday")]
+            [Validation(Required=false)]
+            public int? HandledCheckToday { get; set; }
+
+            [NameInMap("HandledCheckTotal")]
+            [Validation(Required=false)]
+            public int? HandledCheckTotal { get; set; }
+
+            [NameInMap("HandledDays")]
+            [Validation(Required=false)]
+            public int? HandledDays { get; set; }
+
+            [NameInMap("RiskCheckCnt")]
+            [Validation(Required=false)]
+            public int? RiskCheckCnt { get; set; }
+
+            [NameInMap("RiskDays")]
+            [Validation(Required=false)]
+            public int? RiskDays { get; set; }
+
+            [NameInMap("RiskWarningCnt")]
+            [Validation(Required=false)]
+            public int? RiskWarningCnt { get; set; }
+
+        }
+
     }
 
 }

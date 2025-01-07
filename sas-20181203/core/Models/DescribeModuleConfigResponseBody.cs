@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeModuleConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of configurations for the module.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>An array that consists of the configurations of the module.</para>
+        /// </summary>
         [NameInMap("ModuleConfigList")]
         [Validation(Required=false)]
         public List<DescribeModuleConfigResponseBodyModuleConfigList> ModuleConfigList { get; set; }
         public class DescribeModuleConfigResponseBodyModuleConfigList : TeaModel {
             /// <summary>
+            /// <para>The name of the configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>timescan</para>
             /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ConfigName { get; set; }
 
+            /// <summary>
+            /// <para>An array that consists of the configuration items.</para>
+            /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeModuleConfigResponseBodyModuleConfigListItems> Items { get; set; }
             public class DescribeModuleConfigResponseBodyModuleConfigListItems : TeaModel {
                 /// <summary>
+                /// <para>The ID of the server group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>173</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? GroupId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>i-uf6435dn4t59b9av****</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>inStanceName****</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
+                /// <para>The IP address of the server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>31.13.XX.XX</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Ip { get; set; }
 
                 /// <summary>
+                /// <para>The region in which the server resides.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Region { get; set; }
 
                 /// <summary>
+                /// <para>The UUID of the server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>a47e3713-ed22-4015-93a3-d88ebe6****</para>
                 /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
+            /// <para>The name of the module.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alihids</para>
             /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>
         /// </summary>
@@ -110,6 +138,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
