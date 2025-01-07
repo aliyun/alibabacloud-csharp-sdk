@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarBillSettlementQueryRequest : TeaModel {
+        [NameInMap("bill_batch")]
+        [Validation(Required=false)]
+        public string BillBatch { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,8 +34,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01</para>
         /// </summary>
@@ -40,14 +42,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PeriodEnd { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01</para>
         /// </summary>
         [NameInMap("period_start")]
         [Validation(Required=false)]
         public string PeriodStart { get; set; }
+
+        [NameInMap("scroll_id")]
+        [Validation(Required=false)]
+        public string ScrollId { get; set; }
+
+        [NameInMap("scroll_mod")]
+        [Validation(Required=false)]
+        public bool? ScrollMod { get; set; }
 
     }
 

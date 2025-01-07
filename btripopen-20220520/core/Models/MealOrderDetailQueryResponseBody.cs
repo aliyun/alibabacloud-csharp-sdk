@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? CorpRefundAmount { get; set; }
 
+            [NameInMap("meal_reason")]
+            [Validation(Required=false)]
+            public string MealReason { get; set; }
+
             [NameInMap("merchant_name")]
             [Validation(Required=false)]
             public string MerchantName { get; set; }

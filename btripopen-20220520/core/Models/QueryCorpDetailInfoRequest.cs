@@ -8,18 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class MonthBillGetRequest : TeaModel {
-        [NameInMap("bill_batch")]
-        [Validation(Required=false)]
-        public string BillBatch { get; set; }
-
+    public class QueryCorpDetailInfoRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>202207</para>
+        /// <para>btripxxxxxx</para>
         /// </summary>
-        [NameInMap("bill_month")]
+        [NameInMap("target_corp_id")]
         [Validation(Required=false)]
-        public string BillMonth { get; set; }
+        public string TargetCorpId { get; set; }
 
     }
 

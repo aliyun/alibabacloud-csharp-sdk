@@ -220,6 +220,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CascadeDepartment { get; set; }
 
+                [NameInMap("category_desc")]
+                [Validation(Required=false)]
+                public string CategoryDesc { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>23.9</para>
@@ -335,6 +339,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("fee_type")]
                 [Validation(Required=false)]
                 public string FeeType { get; set; }
+
+                [NameInMap("fee_type_desc")]
+                [Validation(Required=false)]
+                public string FeeTypeDesc { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -576,6 +584,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? ServiceFee { get; set; }
 
+                [NameInMap("settle_type_desc")]
+                [Validation(Required=false)]
+                public string SettleTypeDesc { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>460</para>
@@ -616,6 +628,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                [NameInMap("status_desc")]
+                [Validation(Required=false)]
+                public string StatusDesc { get; set; }
+
                 /// <summary>
                 /// <para>税率</para>
                 /// 
@@ -641,6 +657,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("trade")]
                 [Validation(Required=false)]
                 public string Trade { get; set; }
+
+                [NameInMap("trade_action_desc")]
+                [Validation(Required=false)]
+                public string TradeActionDesc { get; set; }
 
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]
@@ -703,6 +723,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("period_start")]
             [Validation(Required=false)]
             public string PeriodStart { get; set; }
+
+            [NameInMap("scroll_id")]
+            [Validation(Required=false)]
+            public string ScrollId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

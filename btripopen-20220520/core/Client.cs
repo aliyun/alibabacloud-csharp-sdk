@@ -4797,6 +4797,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -4812,6 +4816,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -4864,6 +4876,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -4879,6 +4895,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -6185,6 +6209,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -6204,6 +6232,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -6256,6 +6292,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -6275,6 +6315,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -6365,6 +6413,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -6384,6 +6436,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -6436,6 +6496,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -6455,6 +6519,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -10891,6 +10963,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -10906,6 +10982,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -10958,6 +11042,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -10973,6 +11061,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -17455,6 +17551,210 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询福豆记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FuPointBillSettlementQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// FuPointBillSettlementQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuPointBillSettlementQueryResponse
+        /// </returns>
+        public FuPointBillSettlementQueryResponse FuPointBillSettlementQueryWithOptions(FuPointBillSettlementQueryRequest request, FuPointBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
+            {
+                query["cooperator_id"] = request.CooperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FuPointBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/fupoint/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FuPointBillSettlementQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询福豆记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FuPointBillSettlementQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// FuPointBillSettlementQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuPointBillSettlementQueryResponse
+        /// </returns>
+        public async Task<FuPointBillSettlementQueryResponse> FuPointBillSettlementQueryWithOptionsAsync(FuPointBillSettlementQueryRequest request, FuPointBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
+            {
+                query["cooperator_id"] = request.CooperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FuPointBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/fupoint/v1/bill-settlement",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FuPointBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询福豆记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FuPointBillSettlementQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuPointBillSettlementQueryResponse
+        /// </returns>
+        public FuPointBillSettlementQueryResponse FuPointBillSettlementQuery(FuPointBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FuPointBillSettlementQueryHeaders headers = new FuPointBillSettlementQueryHeaders();
+            return FuPointBillSettlementQueryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询福豆记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FuPointBillSettlementQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FuPointBillSettlementQueryResponse
+        /// </returns>
+        public async Task<FuPointBillSettlementQueryResponse> FuPointBillSettlementQueryAsync(FuPointBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FuPointBillSettlementQueryHeaders headers = new FuPointBillSettlementQueryHeaders();
+            return await FuPointBillSettlementQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>换取GroupCorpToken接口</para>
         /// </summary>
         /// 
@@ -18335,6 +18635,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -18350,6 +18654,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -18402,6 +18714,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -18417,6 +18733,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -22635,6 +22959,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -22650,6 +22978,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -22702,6 +23038,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -22717,6 +23057,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -22807,6 +23155,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["category"] = request.Category;
@@ -22826,6 +23178,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -22878,6 +23238,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["category"] = request.Category;
@@ -22897,6 +23261,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -28367,6 +28739,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -28382,6 +28758,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -28434,6 +28818,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -28449,6 +28837,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -28991,6 +29387,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
             {
                 query["bill_month"] = request.BillMonth;
@@ -29046,6 +29446,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
             {
                 query["bill_month"] = request.BillMonth;
@@ -29115,6 +29519,162 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             MonthBillGetHeaders headers = new MonthBillGetHeaders();
             return await MonthBillGetWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单退款明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OrderRefundDetailQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// OrderRefundDetailQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderRefundDetailQueryResponse
+        /// </returns>
+        public OrderRefundDetailQueryResponse OrderRefundDetailQueryWithOptions(OrderRefundDetailQueryRequest request, OrderRefundDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorOrderId))
+            {
+                body["cooperator_order_id"] = request.CooperatorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OrderRefundDetailQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/coop-hotel/v1/refund/action/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OrderRefundDetailQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单退款明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OrderRefundDetailQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// OrderRefundDetailQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderRefundDetailQueryResponse
+        /// </returns>
+        public async Task<OrderRefundDetailQueryResponse> OrderRefundDetailQueryWithOptionsAsync(OrderRefundDetailQueryRequest request, OrderRefundDetailQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorOrderId))
+            {
+                body["cooperator_order_id"] = request.CooperatorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OrderRefundDetailQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/coop-hotel/v1/refund/action/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OrderRefundDetailQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单退款明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OrderRefundDetailQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderRefundDetailQueryResponse
+        /// </returns>
+        public OrderRefundDetailQueryResponse OrderRefundDetailQuery(OrderRefundDetailQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            OrderRefundDetailQueryHeaders headers = new OrderRefundDetailQueryHeaders();
+            return OrderRefundDetailQueryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单退款明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OrderRefundDetailQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OrderRefundDetailQueryResponse
+        /// </returns>
+        public async Task<OrderRefundDetailQueryResponse> OrderRefundDetailQueryAsync(OrderRefundDetailQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            OrderRefundDetailQueryHeaders headers = new OrderRefundDetailQueryHeaders();
+            return await OrderRefundDetailQueryWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -29623,6 +30183,154 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             ProjectModifyHeaders headers = new ProjectModifyHeaders();
             return await ProjectModifyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询企业信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCorpDetailInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryCorpDetailInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCorpDetailInfoResponse
+        /// </returns>
+        public QueryCorpDetailInfoResponse QueryCorpDetailInfoWithOptions(QueryCorpDetailInfoRequest request, QueryCorpDetailInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCorpId))
+            {
+                query["target_corp_id"] = request.TargetCorpId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCorpDetailInfo",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/corps/v1/corps/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCorpDetailInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询企业信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCorpDetailInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryCorpDetailInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCorpDetailInfoResponse
+        /// </returns>
+        public async Task<QueryCorpDetailInfoResponse> QueryCorpDetailInfoWithOptionsAsync(QueryCorpDetailInfoRequest request, QueryCorpDetailInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCorpId))
+            {
+                query["target_corp_id"] = request.TargetCorpId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCorpDetailInfo",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/corps/v1/corps/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCorpDetailInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询企业信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCorpDetailInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCorpDetailInfoResponse
+        /// </returns>
+        public QueryCorpDetailInfoResponse QueryCorpDetailInfo(QueryCorpDetailInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryCorpDetailInfoHeaders headers = new QueryCorpDetailInfoHeaders();
+            return QueryCorpDetailInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询企业信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCorpDetailInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCorpDetailInfoResponse
+        /// </returns>
+        public async Task<QueryCorpDetailInfoResponse> QueryCorpDetailInfoAsync(QueryCorpDetailInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryCorpDetailInfoHeaders headers = new QueryCorpDetailInfoHeaders();
+            return await QueryCorpDetailInfoWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32271,6 +32979,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -32286,6 +32998,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -32338,6 +33058,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -32353,6 +33077,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
             {
                 query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))

@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class MonthBillGetRequest : TeaModel {
-        [NameInMap("bill_batch")]
+    public class FuPointBillSettlementQueryHeaders : TeaModel {
+        [NameInMap("commonHeaders")]
         [Validation(Required=false)]
-        public string BillBatch { get; set; }
+        public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>202207</para>
+        /// <para>feth00jqwls</para>
         /// </summary>
-        [NameInMap("bill_month")]
+        [NameInMap("x-acs-btrip-corp-token")]
         [Validation(Required=false)]
-        public string BillMonth { get; set; }
+        public string XAcsBtripCorpToken { get; set; }
 
     }
 

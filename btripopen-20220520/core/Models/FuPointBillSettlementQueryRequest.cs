@@ -8,10 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class IeFlightBillSettlementQueryRequest : TeaModel {
+    public class FuPointBillSettlementQueryRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20240101</para>
+        /// </summary>
         [NameInMap("bill_batch")]
         [Validation(Required=false)]
         public string BillBatch { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cooperator_alibtrip</para>
+        /// </summary>
+        [NameInMap("cooperator_id")]
+        [Validation(Required=false)]
+        public string CooperatorId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -49,10 +61,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string PeriodStart { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1qwe</para>
+        /// </summary>
         [NameInMap("scroll_id")]
         [Validation(Required=false)]
         public string ScrollId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("scroll_mod")]
         [Validation(Required=false)]
         public bool? ScrollMod { get; set; }

@@ -579,6 +579,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public long? RunTime { get; set; }
 
+                    [NameInMap("sub_from_city_ad_code")]
+                    [Validation(Required=false)]
+                    public string SubFromCityAdCode { get; set; }
+
+                    [NameInMap("sub_from_city_ad_name")]
+                    [Validation(Required=false)]
+                    public string SubFromCityAdName { get; set; }
+
+                    [NameInMap("sub_to_city_code")]
+                    [Validation(Required=false)]
+                    public string SubToCityCode { get; set; }
+
+                    [NameInMap("sub_to_city_name")]
+                    [Validation(Required=false)]
+                    public string SubToCityName { get; set; }
+
                     [NameInMap("to_city_ad_code")]
                     [Validation(Required=false)]
                     public string ToCityAdCode { get; set; }
@@ -806,6 +822,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("start_time")]
                     [Validation(Required=false)]
                     public string StartTime { get; set; }
+
+                    [NameInMap("sub_from_city_ad_code")]
+                    [Validation(Required=false)]
+                    public string SubFromCityAdCode { get; set; }
+
+                    [NameInMap("sub_from_city_ad_name")]
+                    [Validation(Required=false)]
+                    public string SubFromCityAdName { get; set; }
+
+                    [NameInMap("sub_middle_city_code")]
+                    [Validation(Required=false)]
+                    public string SubMiddleCityCode { get; set; }
+
+                    [NameInMap("sub_middle_city_name")]
+                    [Validation(Required=false)]
+                    public string SubMiddleCityName { get; set; }
+
+                    [NameInMap("sub_to_city_code")]
+                    [Validation(Required=false)]
+                    public string SubToCityCode { get; set; }
+
+                    [NameInMap("sub_to_city_name")]
+                    [Validation(Required=false)]
+                    public string SubToCityName { get; set; }
 
                     [NameInMap("to_city_ad_code")]
                     [Validation(Required=false)]

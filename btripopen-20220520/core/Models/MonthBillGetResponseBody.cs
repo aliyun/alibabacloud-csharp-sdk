@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public long? MailBillDate { get; set; }
 
+                [NameInMap("mealAmount")]
+                [Validation(Required=false)]
+                public double? MealAmount { get; set; }
+
                 /// <summary>
                 /// <para>服务费金额（单位：元）</para>
                 /// 
@@ -133,6 +137,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("trainAmount")]
                 [Validation(Required=false)]
                 public double? TrainAmount { get; set; }
+
+                [NameInMap("vasAmount")]
+                [Validation(Required=false)]
+                public double? VasAmount { get; set; }
 
             }
 
