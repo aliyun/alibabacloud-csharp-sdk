@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public byte[] CreateTime { get; set; }
+            public string CreateTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("LayoutIds")]
             [Validation(Required=false)]
-            public List<long?> LayoutIds { get; set; }
+            public List<string> LayoutIds { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
