@@ -3217,6 +3217,158 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>二要素有效期核验接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyResponse
+        /// </returns>
+        public Id2MetaPeriodVerifyResponse Id2MetaPeriodVerifyWithOptions(Id2MetaPeriodVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityEndDate))
+            {
+                body["ValidityEndDate"] = request.ValidityEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityStartDate))
+            {
+                body["ValidityStartDate"] = request.ValidityStartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id2MetaPeriodVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id2MetaPeriodVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>二要素有效期核验接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyResponse
+        /// </returns>
+        public async Task<Id2MetaPeriodVerifyResponse> Id2MetaPeriodVerifyWithOptionsAsync(Id2MetaPeriodVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityEndDate))
+            {
+                body["ValidityEndDate"] = request.ValidityEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityStartDate))
+            {
+                body["ValidityStartDate"] = request.ValidityStartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id2MetaPeriodVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id2MetaPeriodVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>二要素有效期核验接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyResponse
+        /// </returns>
+        public Id2MetaPeriodVerifyResponse Id2MetaPeriodVerify(Id2MetaPeriodVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Id2MetaPeriodVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>二要素有效期核验接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyResponse
+        /// </returns>
+        public async Task<Id2MetaPeriodVerifyResponse> Id2MetaPeriodVerifyAsync(Id2MetaPeriodVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Id2MetaPeriodVerifyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>身份二要素标准版</para>
         /// </summary>
         /// 
@@ -4241,6 +4393,150 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>手机号三要素详版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaDetailStandardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaDetailStandardVerifyResponse
+        /// </returns>
+        public Mobile3MetaDetailStandardVerifyResponse Mobile3MetaDetailStandardVerifyWithOptions(Mobile3MetaDetailStandardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Mobile3MetaDetailStandardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Mobile3MetaDetailStandardVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号三要素详版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaDetailStandardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaDetailStandardVerifyResponse
+        /// </returns>
+        public async Task<Mobile3MetaDetailStandardVerifyResponse> Mobile3MetaDetailStandardVerifyWithOptionsAsync(Mobile3MetaDetailStandardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Mobile3MetaDetailStandardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Mobile3MetaDetailStandardVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号三要素详版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaDetailStandardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaDetailStandardVerifyResponse
+        /// </returns>
+        public Mobile3MetaDetailStandardVerifyResponse Mobile3MetaDetailStandardVerify(Mobile3MetaDetailStandardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Mobile3MetaDetailStandardVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号三要素详版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaDetailStandardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaDetailStandardVerifyResponse
+        /// </returns>
+        public async Task<Mobile3MetaDetailStandardVerifyResponse> Mobile3MetaDetailStandardVerifyAsync(Mobile3MetaDetailStandardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Mobile3MetaDetailStandardVerifyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>手机三要素详版接口</para>
         /// </summary>
         /// 
@@ -4381,6 +4677,150 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await Mobile3MetaDetailVerifyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号三要素简版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaSimpleStandardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaSimpleStandardVerifyResponse
+        /// </returns>
+        public Mobile3MetaSimpleStandardVerifyResponse Mobile3MetaSimpleStandardVerifyWithOptions(Mobile3MetaSimpleStandardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Mobile3MetaSimpleStandardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Mobile3MetaSimpleStandardVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号三要素简版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaSimpleStandardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaSimpleStandardVerifyResponse
+        /// </returns>
+        public async Task<Mobile3MetaSimpleStandardVerifyResponse> Mobile3MetaSimpleStandardVerifyWithOptionsAsync(Mobile3MetaSimpleStandardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Mobile3MetaSimpleStandardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Mobile3MetaSimpleStandardVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号三要素简版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaSimpleStandardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaSimpleStandardVerifyResponse
+        /// </returns>
+        public Mobile3MetaSimpleStandardVerifyResponse Mobile3MetaSimpleStandardVerify(Mobile3MetaSimpleStandardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Mobile3MetaSimpleStandardVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号三要素简版_标准版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile3MetaSimpleStandardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile3MetaSimpleStandardVerifyResponse
+        /// </returns>
+        public async Task<Mobile3MetaSimpleStandardVerifyResponse> Mobile3MetaSimpleStandardVerifyAsync(Mobile3MetaSimpleStandardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Mobile3MetaSimpleStandardVerifyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
