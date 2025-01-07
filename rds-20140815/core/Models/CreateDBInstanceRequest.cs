@@ -510,12 +510,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Classic</b>: the classic network</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</description></item>
-        /// <item><description>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</description></item>
-        /// <item><description>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <b>VPC</b>.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <b>VPC</b>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Classic</para>
@@ -542,7 +545,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IoAccelerationEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the write optimization feature.</para>
+        /// <para>Specifies whether to enable the write optimization feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>optimized</b>: enables the feature.</description></item>
         /// <item><description><b>none</b>: disables the feature.</description></item>
@@ -748,11 +751,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <item><description><b>false</b> (default)</description></item>
             /// </list>
             /// <remarks>
-            /// <list type="bullet">
-            /// <item><description>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</description></item>
-            /// <item><description>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</description></item>
-            /// </list>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</para>
+            /// </description></item>
+            /// <item><description><para>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

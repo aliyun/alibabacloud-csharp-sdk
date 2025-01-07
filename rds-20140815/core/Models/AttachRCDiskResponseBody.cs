@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AttachRCDiskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C19D1668-70CB-5421-AA91-D6D8EE3AB664</para>
         /// </summary>

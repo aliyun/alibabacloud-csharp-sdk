@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any non-zero positive integer. Default value: <b>1</b>.</para>
+        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

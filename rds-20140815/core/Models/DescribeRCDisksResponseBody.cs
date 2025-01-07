@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             /// <summary>
             /// <para>The billing method of the disk.</para>
-            /// <para>PostPaid: pay-as-you-go</para>
+            /// <para>Only <b>PostPaid</b> (pay-as-you-go) is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Storage capacity - Baseline performance}. Baseline performance = min{1,800 + 50 × Storage capacity, 50,000}.</para>
+            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline performance}. Baseline performance = min{1,800 + 50 × *Capacity, 50,000}</para>
             /// <para>This parameter is available only when the <c>Category</c> parameter is set to <c>cloud_auto</c>.</para>
             /// 
             /// <b>Example:</b>

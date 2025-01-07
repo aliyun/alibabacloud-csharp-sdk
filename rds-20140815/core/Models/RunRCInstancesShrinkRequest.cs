@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CreateAckEdgeParam")]
+        [Validation(Required=false)]
+        public string CreateAckEdgeParamShrink { get; set; }
+
         [NameInMap("CreateExtraParam")]
         [Validation(Required=false)]
         public string CreateExtraParam { get; set; }

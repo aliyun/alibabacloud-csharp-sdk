@@ -1,3 +1,10 @@
+2025-01-07 Version: 10.0.0
+- Support API ModifyDBInstanceReplicationSwitch.
+- Delete API DescribeDiagnosticReportList.
+- Update API CreateRCNodePool: add param SupportCase.
+- Update API RunRCInstances: add param CreateAckEdgeParam.
+
+
 2024-12-26 Version: 9.2.0
 - Support API CreateRCNodePool.
 - Support API DeleteRCNodePool.

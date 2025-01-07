@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AssociateEipAddressWithRCInstanceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eip-bp166out2x4bpcf******</para>
+        /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public string AllocationId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rc-i322y2t562oh7o******</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -90,6 +90,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? ColdDataEnabled { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable storage compression.</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable</description></item>
+        /// <item><description>off: Disable</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("CompressionMode")]
         [Validation(Required=false)]
         public string CompressionMode { get; set; }

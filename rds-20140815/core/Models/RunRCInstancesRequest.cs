@@ -62,6 +62,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CreateAckEdgeParam")]
+        [Validation(Required=false)]
+        public RunRCInstancesRequestCreateAckEdgeParam CreateAckEdgeParam { get; set; }
+        public class RunRCInstancesRequestCreateAckEdgeParam : TeaModel {
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            [NameInMap("NodePoolId")]
+            [Validation(Required=false)]
+            public string NodePoolId { get; set; }
+
+        }
+
         [NameInMap("CreateExtraParam")]
         [Validation(Required=false)]
         public string CreateExtraParam { get; set; }

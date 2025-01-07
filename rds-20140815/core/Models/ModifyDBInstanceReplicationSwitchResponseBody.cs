@@ -8,10 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class AssociateEipAddressWithRCInstanceResponseBody : TeaModel {
+    public class ModifyDBInstanceReplicationSwitchResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>EFFC7565-B3CF-5CFA-9E1F-164DD1E1F498</para>
+        /// <para>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

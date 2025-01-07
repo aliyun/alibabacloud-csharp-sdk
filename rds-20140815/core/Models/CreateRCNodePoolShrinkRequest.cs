@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
+        [NameInMap("SupportCase")]
+        [Validation(Required=false)]
+        public string SupportCase { get; set; }
+
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public string SystemDiskShrink { get; set; }

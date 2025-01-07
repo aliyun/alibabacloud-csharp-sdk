@@ -181,10 +181,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Collation { get; set; }
 
+                /// <summary>
+                /// <para>The storage compression mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>on, off</para>
+                /// </summary>
                 [NameInMap("CompressionMode")]
                 [Validation(Required=false)]
                 public string CompressionMode { get; set; }
 
+                /// <summary>
+                /// <para>The storage compression ratio.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.25</para>
+                /// </summary>
                 [NameInMap("CompressionRatio")]
                 [Validation(Required=false)]
                 public string CompressionRatio { get; set; }
@@ -1090,6 +1102,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string SuperPermissionMode { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the storage compression mode can be enabled for the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true, false</para>
+                /// </summary>
                 [NameInMap("SupportCompression")]
                 [Validation(Required=false)]
                 public bool? SupportCompression { get; set; }

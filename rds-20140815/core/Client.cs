@@ -1279,7 +1279,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载RC云盘</para>
+        /// <para>Attaches a pay-as-you-go data disk or a system disk to an RDS Custom instance. The instance and the disk must reside in the same zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1333,7 +1333,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载RC云盘</para>
+        /// <para>Attaches a pay-as-you-go data disk or a system disk to an RDS Custom instance. The instance and the disk must reside in the same zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1387,7 +1387,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载RC云盘</para>
+        /// <para>Attaches a pay-as-you-go data disk or a system disk to an RDS Custom instance. The instance and the disk must reside in the same zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1405,7 +1405,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载RC云盘</para>
+        /// <para>Attaches a pay-as-you-go data disk or a system disk to an RDS Custom instance. The instance and the disk must reside in the same zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11402,6 +11402,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["SpotStrategy"] = request.SpotStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportCase))
+            {
+                query["SupportCase"] = request.SupportCase;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
             {
                 query["SystemDisk"] = request.SystemDiskShrink;
@@ -11577,6 +11581,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
             {
                 query["SpotStrategy"] = request.SpotStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportCase))
+            {
+                query["SupportCase"] = request.SupportCase;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
             {
@@ -32127,186 +32135,6 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDetachedBackupsWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribeDiagnosticReportList is deprecated
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the information about diagnostics reports.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This operation is phased out.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeDiagnosticReportListRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeDiagnosticReportListResponse
-        /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
-        // Deprecated
-        public DescribeDiagnosticReportListResponse DescribeDiagnosticReportListWithOptions(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
-            {
-                query["DBInstanceId"] = request.DBInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDiagnosticReportList",
-                Version = "2014-08-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDiagnosticReportListResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribeDiagnosticReportList is deprecated
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the information about diagnostics reports.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This operation is phased out.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeDiagnosticReportListRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeDiagnosticReportListResponse
-        /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
-        // Deprecated
-        public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListWithOptionsAsync(DescribeDiagnosticReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
-            {
-                query["DBInstanceId"] = request.DBInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeDiagnosticReportList",
-                Version = "2014-08-15",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeDiagnosticReportListResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribeDiagnosticReportList is deprecated
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the information about diagnostics reports.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This operation is phased out.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeDiagnosticReportListRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeDiagnosticReportListResponse
-        /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
-        // Deprecated
-        public DescribeDiagnosticReportListResponse DescribeDiagnosticReportList(DescribeDiagnosticReportListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeDiagnosticReportListWithOptions(request, runtime);
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribeDiagnosticReportList is deprecated
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the information about diagnostics reports.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This operation is phased out.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeDiagnosticReportListRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeDiagnosticReportListResponse
-        /// </returns>
-        [Obsolete("OpenAPI DescribeDiagnosticReportList is deprecated")]
-        // Deprecated
-        public async Task<DescribeDiagnosticReportListResponse> DescribeDiagnosticReportListAsync(DescribeDiagnosticReportListRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeDiagnosticReportListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -56807,6 +56635,158 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改数据库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceReplicationSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceReplicationSwitchResponse
+        /// </returns>
+        public ModifyDBInstanceReplicationSwitchResponse ModifyDBInstanceReplicationSwitchWithOptions(ModifyDBInstanceReplicationSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalReplication))
+            {
+                query["ExternalReplication"] = request.ExternalReplication;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceReplicationSwitch",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceReplicationSwitchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改数据库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceReplicationSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceReplicationSwitchResponse
+        /// </returns>
+        public async Task<ModifyDBInstanceReplicationSwitchResponse> ModifyDBInstanceReplicationSwitchWithOptionsAsync(ModifyDBInstanceReplicationSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalReplication))
+            {
+                query["ExternalReplication"] = request.ExternalReplication;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceReplicationSwitch",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceReplicationSwitchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改数据库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceReplicationSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceReplicationSwitchResponse
+        /// </returns>
+        public ModifyDBInstanceReplicationSwitchResponse ModifyDBInstanceReplicationSwitch(ModifyDBInstanceReplicationSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBInstanceReplicationSwitchWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改数据库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceReplicationSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceReplicationSwitchResponse
+        /// </returns>
+        public async Task<ModifyDBInstanceReplicationSwitchResponse> ModifyDBInstanceReplicationSwitchAsync(ModifyDBInstanceReplicationSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBInstanceReplicationSwitchWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the SSL encryption settings of an instance.</para>
         /// </summary>
         /// 
@@ -64240,18 +64220,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Supported database engines</h3>
-        /// <list type="bullet">
-        /// <item><description>MySQL</description></item>
-        /// <item><description>PostgreSQL</description></item>
-        /// <item><description>SQL Server<remarks>
-        /// <para> If DAS Enterprise Edition is supported in the region in which the instance resides, the most recent version of DAS Enterprise Edition is enabled when you call the operation to enable the SQL Audit feature for the instance. For more information about the database engines and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Supported databases and regions</a>.</para>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
+        /// <h3><a href="#"></a>Note:</h3>
+        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
         /// <h3><a href="#"></a>References</h3>
         /// <remarks>
-        /// <para> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</para>
+        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -64328,18 +64301,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Supported database engines</h3>
-        /// <list type="bullet">
-        /// <item><description>MySQL</description></item>
-        /// <item><description>PostgreSQL</description></item>
-        /// <item><description>SQL Server<remarks>
-        /// <para> If DAS Enterprise Edition is supported in the region in which the instance resides, the most recent version of DAS Enterprise Edition is enabled when you call the operation to enable the SQL Audit feature for the instance. For more information about the database engines and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Supported databases and regions</a>.</para>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
+        /// <h3><a href="#"></a>Note:</h3>
+        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
         /// <h3><a href="#"></a>References</h3>
         /// <remarks>
-        /// <para> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</para>
+        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -64416,18 +64382,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Supported database engines</h3>
-        /// <list type="bullet">
-        /// <item><description>MySQL</description></item>
-        /// <item><description>PostgreSQL</description></item>
-        /// <item><description>SQL Server<remarks>
-        /// <para> If DAS Enterprise Edition is supported in the region in which the instance resides, the most recent version of DAS Enterprise Edition is enabled when you call the operation to enable the SQL Audit feature for the instance. For more information about the database engines and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Supported databases and regions</a>.</para>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
+        /// <h3><a href="#"></a>Note:</h3>
+        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
         /// <h3><a href="#"></a>References</h3>
         /// <remarks>
-        /// <para> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</para>
+        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -64456,18 +64415,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Supported database engines</h3>
-        /// <list type="bullet">
-        /// <item><description>MySQL</description></item>
-        /// <item><description>PostgreSQL</description></item>
-        /// <item><description>SQL Server<remarks>
-        /// <para> If DAS Enterprise Edition is supported in the region in which the instance resides, the most recent version of DAS Enterprise Edition is enabled when you call the operation to enable the SQL Audit feature for the instance. For more information about the database engines and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Supported databases and regions</a>.</para>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
+        /// <h3><a href="#"></a>Note:</h3>
+        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
         /// <h3><a href="#"></a>References</h3>
         /// <remarks>
-        /// <para> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</para>
+        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -68655,8 +68607,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换rds custom实例系统盘</para>
+        /// <para>Reinstalls the operating system (OS) of an RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Stopped state.</para>
+        /// <list type="bullet">
+        /// <item><description>If you reinstall the system, the data on the original system disk is lost. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReplaceRCInstanceSystemDiskRequest
@@ -68717,8 +68677,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换rds custom实例系统盘</para>
+        /// <para>Reinstalls the operating system (OS) of an RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Stopped state.</para>
+        /// <list type="bullet">
+        /// <item><description>If you reinstall the system, the data on the original system disk is lost. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReplaceRCInstanceSystemDiskRequest
@@ -68779,8 +68747,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换rds custom实例系统盘</para>
+        /// <para>Reinstalls the operating system (OS) of an RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Stopped state.</para>
+        /// <list type="bullet">
+        /// <item><description>If you reinstall the system, the data on the original system disk is lost. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReplaceRCInstanceSystemDiskRequest
@@ -68797,8 +68773,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更换rds custom实例系统盘</para>
+        /// <para>Reinstalls the operating system (OS) of an RDS Custom instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The instance must be in the Stopped state.</para>
+        /// <list type="bullet">
+        /// <item><description>If you reinstall the system, the data on the original system disk is lost. Exercise caution when you perform this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReplaceRCInstanceSystemDiskRequest
@@ -70738,6 +70722,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             RunRCInstancesShrinkRequest request = new RunRCInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateAckEdgeParam))
+            {
+                request.CreateAckEdgeParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateAckEdgeParam, "CreateAckEdgeParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataDisk))
             {
                 request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
@@ -70762,6 +70750,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateAckEdgeParamShrink))
+            {
+                query["CreateAckEdgeParam"] = request.CreateAckEdgeParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateExtraParam))
             {
@@ -70923,6 +70915,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             RunRCInstancesShrinkRequest request = new RunRCInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateAckEdgeParam))
+            {
+                request.CreateAckEdgeParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateAckEdgeParam, "CreateAckEdgeParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataDisk))
             {
                 request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
@@ -70947,6 +70943,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateAckEdgeParamShrink))
+            {
+                query["CreateAckEdgeParam"] = request.CreateAckEdgeParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateExtraParam))
             {
@@ -72799,8 +72799,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步RDS Custom的安全组</para>
+        /// <para>Adds security group rules to an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncRCSecurityGroupRequest
@@ -72849,8 +72857,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步RDS Custom的安全组</para>
+        /// <para>Adds security group rules to an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncRCSecurityGroupRequest
@@ -72899,8 +72915,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步RDS Custom的安全组</para>
+        /// <para>Adds security group rules to an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncRCSecurityGroupRequest
@@ -72917,8 +72941,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步RDS Custom的安全组</para>
+        /// <para>Adds security group rules to an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncRCSecurityGroupRequest
@@ -73671,8 +73703,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// <para>Unbinds a elastic IP address (EIP) from an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnassociateEipAddressWithRCInstanceRequest
@@ -73721,8 +73761,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// <para>Unbinds a elastic IP address (EIP) from an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnassociateEipAddressWithRCInstanceRequest
@@ -73771,8 +73819,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// <para>Unbinds a elastic IP address (EIP) from an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnassociateEipAddressWithRCInstanceRequest
@@ -73789,8 +73845,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑RDS Custom实例的弹性公网</para>
+        /// <para>Unbinds a elastic IP address (EIP) from an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnassociateEipAddressWithRCInstanceRequest

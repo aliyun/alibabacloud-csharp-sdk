@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
+        /// <para>The disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

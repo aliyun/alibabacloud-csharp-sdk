@@ -151,6 +151,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             /// <summary>
             /// <para>The snapshot name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>s-2ze8klip00xcogcwer76</para>
             /// </summary>
             [NameInMap("SnapshotName")]
             [Validation(Required=false)]
