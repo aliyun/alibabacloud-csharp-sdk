@@ -1411,6 +1411,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["Entrusted"] = request.Entrusted;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreInvalidInstance))
+            {
+                query["IgnoreInvalidInstance"] = request.IgnoreInvalidInstance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
@@ -1512,6 +1516,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Entrusted))
             {
                 query["Entrusted"] = request.Entrusted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreInvalidInstance))
+            {
+                query["IgnoreInvalidInstance"] = request.IgnoreInvalidInstance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {

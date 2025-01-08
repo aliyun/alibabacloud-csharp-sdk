@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? Entrusted { get; set; }
 
+        [NameInMap("IgnoreInvalidInstance")]
+        [Validation(Required=false)]
+        public bool? IgnoreInvalidInstance { get; set; }
+
         /// <summary>
         /// <para>The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.</para>
         /// </summary>
