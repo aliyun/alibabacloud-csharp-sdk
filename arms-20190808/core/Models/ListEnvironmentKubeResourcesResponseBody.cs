@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentKubeResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListEnvironmentKubeResourcesResponseBodyData> Data { get; set; }
         public class ListEnvironmentKubeResourcesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The version number of the API.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ApiVersion { get; set; }
 
             /// <summary>
+            /// <para>The resource type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Pod</para>
             /// </summary>
@@ -37,19 +46,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string Kind { get; set; }
 
+            /// <summary>
+            /// <para>The metadata.</para>
+            /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
             public ListEnvironmentKubeResourcesResponseBodyDataMetadata Metadata { get; set; }
             public class ListEnvironmentKubeResourcesResponseBodyDataMetadata : TeaModel {
+                /// <summary>
+                /// <para>The annotations.</para>
+                /// </summary>
                 [NameInMap("Annotations")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Annotations { get; set; }
 
+                /// <summary>
+                /// <para>The tags.</para>
+                /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Labels { get; set; }
 
                 /// <summary>
+                /// <para>The resource name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>arms-prometheus-ack-arms-prometheus-c577b6cc8-mvdwd</para>
                 /// </summary>
@@ -58,6 +78,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The namespace.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>arms-prom</para>
                 /// </summary>
@@ -68,6 +90,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
+            /// <para>The resource specifications.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///         &quot;dnsPolicy&quot;: &quot;ClusterFirst&quot;,
@@ -89,6 +113,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public object Spec { get; set; }
 
             /// <summary>
+            /// <para>The status of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>run</para>
             /// </summary>
@@ -99,6 +125,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>message</para>
         /// </summary>
@@ -107,7 +135,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C21AB7CF-B7AF-410F-BD61-82D1567F****</para>
@@ -117,6 +145,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

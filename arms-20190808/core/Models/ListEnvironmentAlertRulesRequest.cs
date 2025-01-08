@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentAlertRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the add-on. You must specify AddonName or Scene.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mysql</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AddonName { get; set; }
 
         /// <summary>
+        /// <para>The environment ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The scenario of the add-on. You must specify AddonName or Scene.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>database</para>
         /// </summary>

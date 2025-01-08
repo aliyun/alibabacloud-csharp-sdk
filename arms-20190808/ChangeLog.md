@@ -1,3 +1,8 @@
+2025-01-08 Version: 8.0.0
+- Update API CreateOrUpdateAlertRule: update response param.
+- Update API DoInsightsAction: add param RegionId.
+
+
 2024-12-20 Version: 7.3.2
 - Update API GetRumExceptionStack: add param ExtraInfo.
 

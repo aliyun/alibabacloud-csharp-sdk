@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -204,6 +204,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
+            /// <summary>
+            /// <para>The time when the billing method was modified.</para>
+            /// </summary>
             [NameInMap("PaymentTypeUpdateTime")]
             [Validation(Required=false)]
             public string PaymentTypeUpdateTime { get; set; }

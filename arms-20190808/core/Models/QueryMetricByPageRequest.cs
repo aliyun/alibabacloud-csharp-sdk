@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The dimension from which metrics are sorted. You can set this parameter to a supported dimension.</para>
+        /// <para>The dimension for arranging metrics in sequence. For more information, see the supplementary metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pid</para>

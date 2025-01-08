@@ -105,6 +105,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     [Validation(Required=false)]
                     public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsDependencies Dependencies { get; set; }
                     public class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsDependencies : TeaModel {
+                        /// <summary>
+                        /// <para>The cluster type.</para>
+                        /// </summary>
                         [NameInMap("ClusterTypes")]
                         [Validation(Required=false)]
                         public List<string> ClusterTypes { get; set; }
@@ -186,20 +189,38 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         [Validation(Required=false)]
                         public bool? DefaultInstall { get; set; }
 
+                        /// <summary>
+                        /// <para>Indicates whether a service account is enabled.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
                         [NameInMap("EnableServiceAccount")]
                         [Validation(Required=false)]
                         public bool? EnableServiceAccount { get; set; }
 
+                        /// <summary>
+                        /// <para>The metric check rule.</para>
+                        /// </summary>
                         [NameInMap("MetricCheckRule")]
                         [Validation(Required=false)]
                         public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule MetricCheckRule { get; set; }
                         public class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule : TeaModel {
+                            /// <summary>
+                            /// <para>The PromQL statements.</para>
+                            /// </summary>
                             [NameInMap("PromQL")]
                             [Validation(Required=false)]
                             public List<string> PromQL { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// <para>Indicates whether a restart is required after the installation.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
                         [NameInMap("NeedRestartAfterIntegration")]
                         [Validation(Required=false)]
                         public bool? NeedRestartAfterIntegration { get; set; }

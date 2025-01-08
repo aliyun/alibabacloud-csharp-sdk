@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? AlertGroup { get; set; }
 
             /// <summary>
-            /// <para>The ID of the alert rule.</para>
+            /// <para>The alert rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5510445</para>
             /// </summary>
             [NameInMap("AlertId")]
             [Validation(Required=false)]
-            public float? AlertId { get; set; }
+            public long? AlertId { get; set; }
 
             /// <summary>
             /// <para>The name of the alert rule.</para>

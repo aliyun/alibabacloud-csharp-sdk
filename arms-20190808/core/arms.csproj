@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.ARMS20190808</AssemblyName>
-    <Version>7.3.2</Version>
+    <Version>8.0.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Application Real-Time Monitoring Service (20190808) SDK Library for .NET</Description>

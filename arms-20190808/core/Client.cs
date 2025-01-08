@@ -15152,6 +15152,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         public DoInsightsActionResponse DoInsightsActionWithOptions(DoInsightsActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
             {
@@ -15163,6 +15168,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -15198,6 +15204,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         public async Task<DoInsightsActionResponse> DoInsightsActionWithOptionsAsync(DoInsightsActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
             {
@@ -15209,6 +15220,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -24632,7 +24644,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境的告警组列表</para>
+        /// <para>Queries the alert groups of an environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24686,7 +24698,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境的告警组列表</para>
+        /// <para>Queries the alert groups of an environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24740,7 +24752,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境的告警组列表</para>
+        /// <para>Queries the alert groups of an environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24758,7 +24770,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境的告警组列表</para>
+        /// <para>Queries the alert groups of an environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25056,7 +25068,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境中的kube资源列表</para>
+        /// <para>Queries the Kubernetes resources of an environment.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25120,7 +25132,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境中的kube资源列表</para>
+        /// <para>Queries the Kubernetes resources of an environment.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25184,7 +25196,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境中的kube资源列表</para>
+        /// <para>Queries the Kubernetes resources of an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25202,7 +25214,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境中的kube资源列表</para>
+        /// <para>Queries the Kubernetes resources of an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25220,7 +25232,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境指标target列表</para>
+        /// <para>Queries the targets of an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25270,7 +25282,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境指标target列表</para>
+        /// <para>Queries the targets of an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25320,7 +25332,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境指标target列表</para>
+        /// <para>Queries the targets of an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25338,7 +25350,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境指标target列表</para>
+        /// <para>Queries the targets of an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
