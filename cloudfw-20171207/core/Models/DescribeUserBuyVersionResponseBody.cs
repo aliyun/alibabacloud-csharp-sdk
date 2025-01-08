@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
+        [NameInMap("InternetBandwidth")]
+        [Validation(Required=false)]
+        public long? InternetBandwidth { get; set; }
+
         /// <summary>
         /// <para>The number of public IP addresses that can be protected.</para>
         /// <remarks>
@@ -122,6 +126,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? MaxOverflow { get; set; }
 
+        [NameInMap("NatBandwidth")]
+        [Validation(Required=false)]
+        public long? NatBandwidth { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 
@@ -174,6 +182,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("Version")]
         [Validation(Required=false)]
         public int? Version { get; set; }
+
+        [NameInMap("VpcBandwidth")]
+        [Validation(Required=false)]
+        public long? VpcBandwidth { get; set; }
 
         /// <summary>
         /// <para>The number of virtual private clouds (VPCs) that can be protected.</para>

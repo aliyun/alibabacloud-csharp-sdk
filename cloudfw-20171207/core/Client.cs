@@ -14591,6 +14591,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSdl))
+            {
+                query["MaxSdl"] = request.MaxSdl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchRules))
             {
                 query["PatchRules"] = request.PatchRules;
@@ -14652,6 +14656,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSdl))
+            {
+                query["MaxSdl"] = request.MaxSdl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchRules))
             {

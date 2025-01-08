@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("MaxSdl")]
+        [Validation(Required=false)]
+        public long? MaxSdl { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable virtual patching. Valid values:</para>
         /// <list type="bullet">

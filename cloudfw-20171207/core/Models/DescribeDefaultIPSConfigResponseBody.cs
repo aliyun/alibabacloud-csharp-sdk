@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? CtiRules { get; set; }
 
+        [NameInMap("FreeTrailStatus")]
+        [Validation(Required=false)]
+        public string FreeTrailStatus { get; set; }
+
+        [NameInMap("MaxSdl")]
+        [Validation(Required=false)]
+        public long? MaxSdl { get; set; }
+
         /// <summary>
         /// <para>Indicates whether virtual patching is enabled. Valid values:</para>
         /// <list type="bullet">
