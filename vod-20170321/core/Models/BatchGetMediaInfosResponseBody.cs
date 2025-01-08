@@ -589,6 +589,120 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             }
 
+            [NameInMap("PlayInfoList")]
+            [Validation(Required=false)]
+            public List<BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList> PlayInfoList { get; set; }
+            public class BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList : TeaModel {
+                [NameInMap("BitDepth")]
+                [Validation(Required=false)]
+                public int? BitDepth { get; set; }
+
+                [NameInMap("Bitrate")]
+                [Validation(Required=false)]
+                public string Bitrate { get; set; }
+
+                [NameInMap("CodecName")]
+                [Validation(Required=false)]
+                public string CodecName { get; set; }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
+                public string CreationTime { get; set; }
+
+                [NameInMap("Definition")]
+                [Validation(Required=false)]
+                public string Definition { get; set; }
+
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
+                public string Duration { get; set; }
+
+                [NameInMap("Encrypt")]
+                [Validation(Required=false)]
+                public long? Encrypt { get; set; }
+
+                [NameInMap("EncryptMode")]
+                [Validation(Required=false)]
+                public string EncryptMode { get; set; }
+
+                [NameInMap("EncryptType")]
+                [Validation(Required=false)]
+                public string EncryptType { get; set; }
+
+                [NameInMap("Format")]
+                [Validation(Required=false)]
+                public string Format { get; set; }
+
+                [NameInMap("Fps")]
+                [Validation(Required=false)]
+                public string Fps { get; set; }
+
+                [NameInMap("HDRType")]
+                [Validation(Required=false)]
+                public string HDRType { get; set; }
+
+                [NameInMap("Height")]
+                [Validation(Required=false)]
+                public long? Height { get; set; }
+
+                [NameInMap("JobExt")]
+                [Validation(Required=false)]
+                public string JobExt { get; set; }
+
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                [NameInMap("JobType")]
+                [Validation(Required=false)]
+                public int? JobType { get; set; }
+
+                [NameInMap("ModificationTime")]
+                [Validation(Required=false)]
+                public string ModificationTime { get; set; }
+
+                [NameInMap("NarrowBandType")]
+                [Validation(Required=false)]
+                public string NarrowBandType { get; set; }
+
+                [NameInMap("PlayURL")]
+                [Validation(Required=false)]
+                public string PlayURL { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public long? Size { get; set; }
+
+                [NameInMap("Specification")]
+                [Validation(Required=false)]
+                public string Specification { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("StreamType")]
+                [Validation(Required=false)]
+                public string StreamType { get; set; }
+
+                [NameInMap("TemplateGroupId")]
+                [Validation(Required=false)]
+                public string TemplateGroupId { get; set; }
+
+                [NameInMap("TemplateId")]
+                [Validation(Required=false)]
+                public string TemplateId { get; set; }
+
+                [NameInMap("WatermarkId")]
+                [Validation(Required=false)]
+                public string WatermarkId { get; set; }
+
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public long? Width { get; set; }
+
+            }
+
         }
 
         [NameInMap("NonExistMediaIds")]

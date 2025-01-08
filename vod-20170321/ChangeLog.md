@@ -1,3 +1,7 @@
+2025-01-08 Version: 3.6.1
+- Update API BatchGetMediaInfos: update response param.
+
+
 2024-12-19 Version: 3.6.0
 - Support API BatchGetMediaInfos.
 - Support API DescribeMediaDistribution.
