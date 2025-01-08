@@ -4979,6 +4979,166 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取GDN实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGdnInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGdnInstancesResponse
+        /// </returns>
+        public DescribeGdnInstancesResponse DescribeGdnInstancesWithOptions(DescribeGdnInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterType))
+            {
+                query["FilterType"] = request.FilterType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterValue))
+            {
+                query["FilterValue"] = request.FilterValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
+            {
+                query["GDNId"] = request.GDNId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGdnInstances",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGdnInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取GDN实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGdnInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGdnInstancesResponse
+        /// </returns>
+        public async Task<DescribeGdnInstancesResponse> DescribeGdnInstancesWithOptionsAsync(DescribeGdnInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterType))
+            {
+                query["FilterType"] = request.FilterType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterValue))
+            {
+                query["FilterValue"] = request.FilterValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
+            {
+                query["GDNId"] = request.GDNId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGdnInstances",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGdnInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取GDN实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGdnInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGdnInstancesResponse
+        /// </returns>
+        public DescribeGdnInstancesResponse DescribeGdnInstances(DescribeGdnInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGdnInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取GDN实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGdnInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGdnInstancesResponse
+        /// </returns>
+        public async Task<DescribeGdnInstancesResponse> DescribeGdnInstancesAsync(DescribeGdnInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGdnInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>开放商业备份集</para>
         /// </summary>
         /// 
@@ -8873,6 +9033,142 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchDBInstanceHAWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GDN主备切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchGdnMemberRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchGdnMemberRoleResponse
+        /// </returns>
+        public SwitchGdnMemberRoleResponse SwitchGdnMemberRoleWithOptions(SwitchGdnMemberRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchGdnMemberRole",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchGdnMemberRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GDN主备切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchGdnMemberRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchGdnMemberRoleResponse
+        /// </returns>
+        public async Task<SwitchGdnMemberRoleResponse> SwitchGdnMemberRoleWithOptionsAsync(SwitchGdnMemberRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchGdnMemberRole",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchGdnMemberRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GDN主备切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchGdnMemberRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchGdnMemberRoleResponse
+        /// </returns>
+        public SwitchGdnMemberRoleResponse SwitchGdnMemberRole(SwitchGdnMemberRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SwitchGdnMemberRoleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GDN主备切换</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchGdnMemberRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchGdnMemberRoleResponse
+        /// </returns>
+        public async Task<SwitchGdnMemberRoleResponse> SwitchGdnMemberRoleAsync(SwitchGdnMemberRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SwitchGdnMemberRoleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
