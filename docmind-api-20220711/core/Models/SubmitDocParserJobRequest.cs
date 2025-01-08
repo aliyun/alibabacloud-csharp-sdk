@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public bool? FormulaEnhancement { get; set; }
 
+        [NameInMap("LlmEnhancement")]
+        [Validation(Required=false)]
+        public bool? LlmEnhancement { get; set; }
+
     }
 
 }
