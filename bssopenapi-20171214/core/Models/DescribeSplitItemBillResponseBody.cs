@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public float? AdjustAmount { get; set; }
 
+                [NameInMap("AfterDiscountAmount")]
+                [Validation(Required=false)]
+                public string AfterDiscountAmount { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the account to which the bill belongs.</para>
                 /// 
