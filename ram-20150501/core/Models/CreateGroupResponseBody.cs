@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateGroupResponseBody : TeaModel {
         /// <summary>
-        /// The information about the group.
+        /// <para>The information about the group.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public CreateGroupResponseBodyGroup Group { get; set; }
         public class CreateGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// The description.
+            /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Dev-Team</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
 
             /// <summary>
-            /// The creation time.
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2015-01-23T12:33:18Z</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The ID of the user group.
+            /// <para>The ID of the user group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>g-FpMEHiMysofp****</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The name of the user group.
+            /// <para>The name of the user group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Dev-Team</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D3F0679E-9757-95DB-AF2D-04D5188C69C5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

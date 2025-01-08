@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListGroupsForUserResponseBody : TeaModel {
         /// <summary>
-        /// The list of the RAM user groups.
+        /// <para>The list of the RAM user groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
@@ -21,28 +21,40 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public List<ListGroupsForUserResponseBodyGroupsGroup> Group { get; set; }
             public class ListGroupsForUserResponseBodyGroupsGroup : TeaModel {
                 /// <summary>
-                /// The description of the RAM user group.
+                /// <para>The description of the RAM user group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Dev-Team</para>
                 /// </summary>
                 [NameInMap("Comments")]
                 [Validation(Required=false)]
                 public string Comments { get; set; }
 
                 /// <summary>
-                /// The ID of the RAM user group.
+                /// <para>The ID of the RAM user group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>g-zYtroLrgbZR1****</para>
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The name of the RAM user group.
+                /// <para>The name of the RAM user group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Dev-Team</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// The time when the RAM user joined the RAM user group.
+                /// <para>The time when the RAM user joined the RAM user group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("JoinDate")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DA772B52-BF9F-54CA-AC77-AA7A2DA89D46</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DeleteRoleRequest : TeaModel {
         /// <summary>
-        /// The name of the RAM role.
+        /// <para>The name of the RAM role.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECSAdmin</para>
         /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]

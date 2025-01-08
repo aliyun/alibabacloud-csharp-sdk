@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdatePolicyDescriptionRequest : TeaModel {
         /// <summary>
-        /// The description of the policy.
+        /// <para>The description of the policy.</para>
+        /// <para>The value of the parameter must be 1 to 1,024 characters in length.</para>
         /// 
-        /// The value of the parameter must be 1 to 1,024 characters in length.
+        /// <b>Example:</b>
+        /// <para>This is a test policy.</para>
         /// </summary>
         [NameInMap("NewDescription")]
         [Validation(Required=false)]
         public string NewDescription { get; set; }
 
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestPolicy</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]

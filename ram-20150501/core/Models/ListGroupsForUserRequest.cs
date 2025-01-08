@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListGroupsForUserRequest : TeaModel {
         /// <summary>
-        /// The username of the RAM user.
+        /// <para>The username of the RAM user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alice</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

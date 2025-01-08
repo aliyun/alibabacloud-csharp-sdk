@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DeleteVirtualMFADeviceRequest : TeaModel {
         /// <summary>
-        /// The serial number of the MFA device.
+        /// <para>The serial number of the MFA device.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::123456789012****:mfa/device002</para>
         /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]

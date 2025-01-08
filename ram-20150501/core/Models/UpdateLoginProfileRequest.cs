@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateLoginProfileRequest : TeaModel {
         /// <summary>
-        /// Specifies whether an MFA device must be attached to the RAM user upon logon.
+        /// <para>Specifies whether an MFA device must be attached to the RAM user upon logon.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("MFABindRequired")]
         [Validation(Required=false)]
         public bool? MFABindRequired { get; set; }
 
         /// <summary>
-        /// The logon password of the RAM user. The password must meet the password strength requirements.
+        /// <para>The logon password of the RAM user. The password must meet the password strength requirements.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mypassword</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// Specifies whether the RAM user must change the password upon logon.
+        /// <para>Specifies whether the RAM user must change the password upon logon.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("PasswordResetRequired")]
         [Validation(Required=false)]
         public bool? PasswordResetRequired { get; set; }
 
         /// <summary>
-        /// The name of the RAM user.
+        /// <para>The name of the RAM user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zhangq****</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

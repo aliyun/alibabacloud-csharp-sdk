@@ -9,8 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DeletePolicyRequest : TeaModel {
+        [NameInMap("CascadingDelete")]
+        [Validation(Required=false)]
+        public bool? CascadingDelete { get; set; }
+
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OSS-Administrator</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]

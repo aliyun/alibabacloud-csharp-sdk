@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateGroupRequest : TeaModel {
         /// <summary>
-        /// The description.
+        /// <para>The description.</para>
+        /// <para>The value can be up to 128 characters in length.</para>
         /// 
-        /// The value can be up to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>Dev-Team</para>
         /// </summary>
         [NameInMap("Comments")]
         [Validation(Required=false)]
         public string Comments { get; set; }
 
         /// <summary>
-        /// The name of the user group.
+        /// <para>The name of the user group.</para>
+        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</para>
         /// 
-        /// The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).
+        /// <b>Example:</b>
+        /// <para>Dev-Team</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

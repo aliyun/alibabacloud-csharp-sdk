@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class RemoveUserFromGroupRequest : TeaModel {
         /// <summary>
-        /// The name of the RAM user group.
+        /// <para>The name of the RAM user group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dev-Team</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The name of the RAM user.
+        /// <para>The name of the RAM user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zhangq****</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

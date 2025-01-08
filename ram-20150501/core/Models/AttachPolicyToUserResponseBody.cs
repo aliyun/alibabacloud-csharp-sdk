@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class AttachPolicyToUserResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>697852FB-50D7-44D9-9774-530C31EAC572</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

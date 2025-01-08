@@ -10,70 +10,96 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class SetPasswordPolicyRequest : TeaModel {
         /// <summary>
-        /// Specifies whether a password will expire.
+        /// <para>Specifies whether a password will expire.</para>
+        /// <para>Valid values: <c>true</c> and <c>false</c>. Default value: <c>false</c>. If you leave this parameter unspecified, the default value false is used.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set this parameter to <c>true</c>, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.</description></item>
+        /// <item><description>If you set this parameter to <c>false</c>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</description></item>
+        /// </list>
         /// 
-        /// Valid values: `true` and `false`. Default value: `false`. If you leave this parameter unspecified, the default value false is used.
-        /// 
-        /// *   If you set this parameter to `true`, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.
-        /// *   If you set this parameter to `false`, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("HardExpiry")]
         [Validation(Required=false)]
         public bool? HardExpiry { get; set; }
 
         /// <summary>
-        /// The maximum number of permitted logon attempts within one hour. The number of logon attempts is reset to zero if a RAM user changes the password.
+        /// <para>The maximum number of permitted logon attempts within one hour. The number of logon attempts is reset to zero if a RAM user changes the password.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("MaxLoginAttemps")]
         [Validation(Required=false)]
         public int? MaxLoginAttemps { get; set; }
 
         /// <summary>
-        /// The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.
+        /// <para>The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("MaxPasswordAge")]
         [Validation(Required=false)]
         public int? MaxPasswordAge { get; set; }
 
         /// <summary>
-        /// The minimum required number of characters in a password.
+        /// <para>The minimum required number of characters in a password.</para>
+        /// <para>Valid values: 8 to 32. Default value: 8.</para>
         /// 
-        /// Valid values: 8 to 32. Default value: 8.
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("MinimumPasswordLength")]
         [Validation(Required=false)]
         public int? MinimumPasswordLength { get; set; }
 
         /// <summary>
-        /// The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.
+        /// <para>The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("PasswordReusePrevention")]
         [Validation(Required=false)]
         public int? PasswordReusePrevention { get; set; }
 
         /// <summary>
-        /// Specifies whether a password must contain one or more lowercase letters.
+        /// <para>Specifies whether a password must contain one or more lowercase letters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RequireLowercaseCharacters")]
         [Validation(Required=false)]
         public bool? RequireLowercaseCharacters { get; set; }
 
         /// <summary>
-        /// Specifies whether a password must contain one or more digits.
+        /// <para>Specifies whether a password must contain one or more digits.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RequireNumbers")]
         [Validation(Required=false)]
         public bool? RequireNumbers { get; set; }
 
         /// <summary>
-        /// Specifies whether a password must contain one or more special characters.
+        /// <para>Specifies whether a password must contain one or more special characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RequireSymbols")]
         [Validation(Required=false)]
         public bool? RequireSymbols { get; set; }
 
         /// <summary>
-        /// Specifies whether a password must contain one or more uppercase letters.
+        /// <para>Specifies whether a password must contain one or more uppercase letters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RequireUppercaseCharacters")]
         [Validation(Required=false)]

@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListRolesResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the response is truncated.
+        /// <para>Indicates whether the response is truncated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value is `true`, you can call this operation again and set the `Marker` parameter to obtain the truncated part.
+        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the value is <c>true</c>, you can call this operation again and set the <c>Marker</c> parameter to obtain the truncated part.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EXAMPLE</para>
         /// </summary>
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of RAM roles.
+        /// <para>The information of RAM roles.</para>
         /// </summary>
         [NameInMap("Roles")]
         [Validation(Required=false)]
@@ -42,49 +51,70 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public List<ListRolesResponseBodyRolesRole> Role { get; set; }
             public class ListRolesResponseBodyRolesRole : TeaModel {
                 /// <summary>
-                /// The Alibaba Cloud Resource Name (ARN) of the RAM role.
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The time when the RAM role was created.
+                /// <para>The time when the RAM role was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
                 /// <summary>
-                /// The description of the RAM role.
+                /// <para>The description of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS administrator</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The maximum session duration of the RAM role.
+                /// <para>The maximum session duration of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3600</para>
                 /// </summary>
                 [NameInMap("MaxSessionDuration")]
                 [Validation(Required=false)]
                 public long? MaxSessionDuration { get; set; }
 
                 /// <summary>
-                /// The ID of the RAM role.
+                /// <para>The ID of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>901234567890****</para>
                 /// </summary>
                 [NameInMap("RoleId")]
                 [Validation(Required=false)]
                 public string RoleId { get; set; }
 
                 /// <summary>
-                /// The name of the RAM role.
+                /// <para>The name of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECSAdmin</para>
                 /// </summary>
                 [NameInMap("RoleName")]
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
 
                 /// <summary>
-                /// The time when the RAM role was modified.
+                /// <para>The time when the RAM role was modified.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]

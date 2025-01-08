@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListVirtualMFADevicesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of MFA devices.
+        /// <para>The list of MFA devices.</para>
         /// </summary>
         [NameInMap("VirtualMFADevices")]
         [Validation(Required=false)]
@@ -28,42 +31,57 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public List<ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice> VirtualMFADevice { get; set; }
             public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice : TeaModel {
                 /// <summary>
-                /// The time when the MFA device was enabled.
+                /// <para>The time when the MFA device was enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-02-18T17:22:08Z</para>
                 /// </summary>
                 [NameInMap("ActivateDate")]
                 [Validation(Required=false)]
                 public string ActivateDate { get; set; }
 
                 /// <summary>
-                /// The serial number of the MFA device.
+                /// <para>The serial number of the MFA device.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acs:ram::123456789012****:mfa/device002</para>
                 /// </summary>
                 [NameInMap("SerialNumber")]
                 [Validation(Required=false)]
                 public string SerialNumber { get; set; }
 
                 /// <summary>
-                /// The basic information of the RAM user to which the MFA device is attached.
+                /// <para>The basic information of the RAM user to which the MFA device is attached.</para>
                 /// </summary>
                 [NameInMap("User")]
                 [Validation(Required=false)]
                 public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser User { get; set; }
                 public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser : TeaModel {
                     /// <summary>
-                    /// The display name of the RAM user.
+                    /// <para>The display name of the RAM user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>zhangq****</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// The unique ID of the RAM user.
+                    /// <para>The unique ID of the RAM user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>122748924538****</para>
                     /// </summary>
                     [NameInMap("UserId")]
                     [Validation(Required=false)]
                     public string UserId { get; set; }
 
                     /// <summary>
-                    /// The name of the RAM user.
+                    /// <para>The name of the RAM user.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>zhangq****</para>
                     /// </summary>
                     [NameInMap("UserName")]
                     [Validation(Required=false)]

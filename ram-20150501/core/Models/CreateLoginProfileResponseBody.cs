@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateLoginProfileResponseBody : TeaModel {
         /// <summary>
-        /// The logon configurations of the RAM user.
+        /// <para>The logon configurations of the RAM user.</para>
         /// </summary>
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public CreateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class CreateLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// The time when the logon configurations were created.
+            /// <para>The time when the logon configurations were created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2015-01-23T12:33:18Z</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// Indicates whether an MFA device must be attached to the RAM user upon logon.
+            /// <para>Indicates whether an MFA device must be attached to the RAM user upon logon.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("MFABindRequired")]
             [Validation(Required=false)]
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// Indicates whether the RAM user must change the password upon logon.
+            /// <para>Indicates whether the RAM user must change the password upon logon.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("PasswordResetRequired")]
             [Validation(Required=false)]
             public bool? PasswordResetRequired { get; set; }
 
             /// <summary>
-            /// The name of the RAM user.
+            /// <para>The name of the RAM user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zhangq****</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

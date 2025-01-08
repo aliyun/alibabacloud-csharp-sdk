@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class SetDefaultPolicyVersionRequest : TeaModel {
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OSS-Administrator</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// The ID of the policy version that you want to set as the default version.
+        /// <para>The ID of the policy version that you want to set as the default version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v2</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

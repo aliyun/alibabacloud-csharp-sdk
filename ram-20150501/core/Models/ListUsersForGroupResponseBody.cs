@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListUsersForGroupResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the response is truncated.
+        /// <para>Indicates whether the response is truncated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value of IsTruncated is `true`, you can call this operation again and set `marker` to obtain the truncated part.
+        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the value of IsTruncated is <c>true</c>, you can call this operation again and set <c>marker</c> to obtain the truncated part.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EXAMPLE</para>
         /// </summary>
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of the RAM users.
+        /// <para>The list of the RAM users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -42,21 +51,30 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public List<ListUsersForGroupResponseBodyUsersUser> User { get; set; }
             public class ListUsersForGroupResponseBodyUsersUser : TeaModel {
                 /// <summary>
-                /// The display name of the RAM user.
+                /// <para>The display name of the RAM user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alice</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// The time when the RAM user joined the RAM user group.
+                /// <para>The time when the RAM user joined the RAM user group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("JoinDate")]
                 [Validation(Required=false)]
                 public string JoinDate { get; set; }
 
                 /// <summary>
-                /// The name of the RAM user.
+                /// <para>The name of the RAM user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zhangqiang</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]

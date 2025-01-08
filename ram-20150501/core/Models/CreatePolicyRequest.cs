@@ -10,29 +10,34 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreatePolicyRequest : TeaModel {
         /// <summary>
-        /// The description of the policy.
+        /// <para>The description of the policy.</para>
+        /// <para>The description must be 1 to 1,024 characters in length.</para>
         /// 
-        /// The description must be 1 to 1,024 characters in length.
+        /// <b>Example:</b>
+        /// <para>Query ECS instances in a specific region</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The document of the policy.
+        /// <para>The document of the policy.</para>
+        /// <para>The document must be 1 to 6,144 characters in length.</para>
+        /// <para>For more information about policy elements and sample policies, see <a href="https://help.aliyun.com/document_detail/93738.html">Policy elements</a> and <a href="https://help.aliyun.com/document_detail/210969.html">Overview of sample policies</a>.</para>
         /// 
-        /// The document must be 1 to 6,144 characters in length.
-        /// 
-        /// For more information about policy elements and sample policies, see [Policy elements](https://help.aliyun.com/document_detail/93738.html) and [Overview of sample policies](https://help.aliyun.com/document_detail/210969.html).
+        /// <b>Example:</b>
+        /// <para>{&quot;Statement&quot;: [{&quot;Effect&quot;: &quot;Allow&quot;,&quot;Action&quot;: &quot;ecs:Describe*&quot;,&quot;Resource&quot;: &quot;acs:ecs:cn-qingdao:<em>:instance/</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</para>
         /// </summary>
         [NameInMap("PolicyDocument")]
         [Validation(Required=false)]
         public string PolicyDocument { get; set; }
 
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, and hyphens (-).</para>
         /// 
-        /// The name must be 1 to 128 characters in length, and can contain letters, digits, and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>View-ECS-instances-in-a-specific-region</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]

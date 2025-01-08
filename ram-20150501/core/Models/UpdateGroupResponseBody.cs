@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateGroupResponseBody : TeaModel {
         /// <summary>
-        /// The information of the RAM user group.
+        /// <para>The information of the RAM user group.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public UpdateGroupResponseBodyGroup Group { get; set; }
         public class UpdateGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// The description of the RAM user group.
+            /// <para>The description of the RAM user group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NewDev-Team</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
 
             /// <summary>
-            /// The time when the RAM user group was created.
+            /// <para>The time when the RAM user group was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2015-01-23T12:33:18Z</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The ID of the RAM user group.
+            /// <para>The ID of the RAM user group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>g-FpMEHiMysofp****</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
             /// <summary>
-            /// The new name of the RAM user group.
+            /// <para>The new name of the RAM user group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NewDev-Team</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
-            /// The time when the information of the RAM user group was updated.
+            /// <para>The time when the information of the RAM user group was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2015-01-23T12:33:18Z</para>
             /// </summary>
             [NameInMap("UpdateDate")]
             [Validation(Required=false)]
@@ -54,7 +69,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EC6647CC-0A36-EC7A-BA72-CC81BF3DE182</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

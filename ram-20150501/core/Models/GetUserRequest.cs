@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetUserRequest : TeaModel {
         /// <summary>
-        /// The username of the RAM user.
+        /// <para>The username of the RAM user.</para>
+        /// <para>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</para>
         /// 
-        /// The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).
+        /// <b>Example:</b>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

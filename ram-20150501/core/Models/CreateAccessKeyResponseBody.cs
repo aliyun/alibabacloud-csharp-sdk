@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateAccessKeyResponseBody : TeaModel {
         /// <summary>
-        /// The information of the AccessKey pair.
+        /// <para>The information of the AccessKey pair.</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
         public CreateAccessKeyResponseBodyAccessKey AccessKey { get; set; }
         public class CreateAccessKeyResponseBodyAccessKey : TeaModel {
             /// <summary>
-            /// The AccessKey ID.
+            /// <para>The AccessKey ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0wNEpMMlzy7s****</para>
             /// </summary>
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// The AccessKey secret.
+            /// <para>The AccessKey secret.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PupkTg8jdmau1cXxYacgE736PJ****</para>
             /// </summary>
             [NameInMap("AccessKeySecret")]
             [Validation(Required=false)]
             public string AccessKeySecret { get; set; }
 
             /// <summary>
-            /// The time when the AccessKey pair was created.
+            /// <para>The time when the AccessKey pair was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2015-01-23T12:33:18Z</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The status of the AccessKey pair. Valid values: Active and Inactive.
+            /// <para>The status of the AccessKey pair. Valid values: Active and Inactive.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Active</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

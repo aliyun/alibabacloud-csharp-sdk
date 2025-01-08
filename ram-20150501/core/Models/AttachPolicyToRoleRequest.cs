@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class AttachPolicyToRoleRequest : TeaModel {
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OSS-Administrator</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// The type of the policy. Valid values: `System` and `Custom`.
+        /// <para>The type of the policy. Valid values: <c>System</c> and <c>Custom</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// The name of the RAM role.
+        /// <para>The name of the RAM role.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OSSAdminRole</para>
         /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]

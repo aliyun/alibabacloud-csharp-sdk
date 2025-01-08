@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DeleteUserRequest : TeaModel {
         /// <summary>
-        /// The name of the RAM user.
+        /// <para>The name of the RAM user.</para>
+        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</para>
         /// 
-        /// The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).
+        /// <b>Example:</b>
+        /// <para>zhangq****</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
