@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class LeaveClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HSM that you want to remove from the cluster.</para>
+        /// <para>The ID of the HSM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

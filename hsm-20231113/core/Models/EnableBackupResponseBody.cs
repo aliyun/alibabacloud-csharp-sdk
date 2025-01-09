@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class EnableBackupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4C467B38-3910-447D-87BC-AC049166F216</para>
         /// </summary>

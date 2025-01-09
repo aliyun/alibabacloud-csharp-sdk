@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ResetBackupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the backup.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>backup-fdb897sdfg5****</para>
         /// </summary>

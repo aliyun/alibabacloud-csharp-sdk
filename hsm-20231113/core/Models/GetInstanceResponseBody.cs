@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HSM details.</para>
+        /// <para>The information about the HSM.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster_online</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The device type.</para>
+            /// <para>The type of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jnta.SJJ1528-G</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string DeviceType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expired.</para>
+            /// <para>The time when the HSM expired.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1699496389720</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The HSM ID.</para>
+            /// <para>The ID of the HSM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hsm-cn-g4t3jwsc****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public bool? IsTrial { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the HSM is the master HSM.</para>
+            /// <para>Indicates whether the HSM is a master HSM. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public bool? Master { get; set; }
 
             /// <summary>
-            /// <para>The order ID.</para>
+            /// <para>The ID of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23576634952****</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The HSM description.</para>
+            /// <para>The description of the HSM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hsmOnline</para>
@@ -145,16 +145,16 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The HSM status.</para>
+            /// <para>The status of the HSM. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PENDING</description></item>
-            /// <item><description>ACTIVE</description></item>
-            /// <item><description>EXPIRED</description></item>
-            /// <item><description>INVALID</description></item>
-            /// <item><description>FAILURE</description></item>
-            /// <item><description>RESET</description></item>
-            /// <item><description>PAUSED</description></item>
-            /// <item><description>MODIFYING</description></item>
+            /// <item><description>PENDING: The HSM is disabled.</description></item>
+            /// <item><description>ACTIVE: The HSM is enabled.</description></item>
+            /// <item><description>EXPIRED: The HSM expired.</description></item>
+            /// <item><description>INVALID: The HSM is invalid.</description></item>
+            /// <item><description>FAILURE: The HSM failed to be created.</description></item>
+            /// <item><description>RESET: The HSM is being reset.</description></item>
+            /// <item><description>PAUSED: The HSM is paused.</description></item>
+            /// <item><description>MODIFYING: The HSM is being modified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,12 +164,15 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>密码机硬件隔离类型，枚举值&quot;vsm&quot;虚拟密码机，&quot;hostedHsm&quot;托管硬件密码机</para>
+            /// </summary>
             [NameInMap("TenantIsolationType")]
             [Validation(Required=false)]
             public string TenantIsolationType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch configured for the HSM.</para>
+            /// <para>The ID of the vSwitch that is configured for the HSM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1mvfs31ltt0wyhf****</para>
@@ -179,7 +182,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The vendor information.</para>
+            /// <para>The information about the vendor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jnta</para>
@@ -199,7 +202,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The IP address whitelist of the HSM.</para>
+            /// <para>The IP addresses in the whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18.68.XX.XX</para>
@@ -209,7 +212,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Whitelist { get; set; }
 
             /// <summary>
-            /// <para>The zone ID.</para>
+            /// <para>The ID of the zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-b</para>

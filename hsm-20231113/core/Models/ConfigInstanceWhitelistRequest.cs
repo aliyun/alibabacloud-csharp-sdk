@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigInstanceWhitelistRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the HSM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>A list of IP addresses that you want to configure in the whitelist. Separate multiple IP addresses with spaces or commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

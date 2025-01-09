@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The HSM ID.</para>
+        /// <para>The ID of the HSM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hsm-cn-vj30bil****</para>

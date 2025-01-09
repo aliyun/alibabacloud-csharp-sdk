@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string ClusterCsr { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster-p94y1dud9ts****</para>
@@ -51,8 +51,12 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            [NameInMap("ClusterMode")]
+            [Validation(Required=false)]
+            public int? ClusterMode { get; set; }
+
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster_polar_****</para>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The device type.</para>
+            /// <para>The type of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jnta</para>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public List<GetClusterResponseBodyClusterInstances> Instances { get; set; }
             public class GetClusterResponseBodyClusterInstances : TeaModel {
                 /// <summary>
-                /// <para>The HSM ID.</para>
+                /// <para>The ID of the HSM.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hsm-cn-g6z3v0uf****</para>
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the HSM is the master HSM.</para>
+                /// <para>Indicates whether the HSM is a master HSM. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true</description></item>
                 /// <item><description>false</description></item>
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
                 public bool? Master { get; set; }
 
                 /// <summary>
-                /// <para>The sequence number of the HSM in the cluster.</para>
+                /// <para>The ID of the HSM in the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -159,13 +163,13 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>The cluster status.</para>
+            /// <para>The status of the cluster. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NEW: The cluster is not initialized.</description></item>
             /// <item><description>INITIALIZED: The cluster is initialized.</description></item>
             /// <item><description>DELETED: The cluster is deleted.</description></item>
             /// <item><description>SYNCHRONIZING: The cluster is being synchronized.</description></item>
-            /// <item><description>TO_DELETE: The cluster is to be deleted.</description></item>
+            /// <item><description>TO_DELETE: The cluster is pending deletion.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,14 +200,14 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Whitelist { get; set; }
 
             /// <summary>
-            /// <para>The information about the zone in which the cluster is deployed.</para>
+            /// <para>The information about the zones in which the cluster is deployed.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
             public List<GetClusterResponseBodyClusterZones> Zones { get; set; }
             public class GetClusterResponseBodyClusterZones : TeaModel {
                 /// <summary>
-                /// <para>The vSwitch ID.</para>
+                /// <para>The ID of the vSwitch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-uf61s651p69bdgmki****</para>
@@ -213,7 +217,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID.</para>
+                /// <para>The ID of the zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-j</para>

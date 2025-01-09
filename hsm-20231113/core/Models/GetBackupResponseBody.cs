@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetBackupResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the backup.</para>
+        /// </summary>
         [NameInMap("Backup")]
         [Validation(Required=false)]
         public GetBackupResponseBodyBackup Backup { get; set; }
         public class GetBackupResponseBodyBackup : TeaModel {
             /// <summary>
+            /// <para>The number of images that are automatically backed up.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? AutoImageCount { get; set; }
 
             /// <summary>
+            /// <para>The backup time in the 24-hour format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string BackupHourInDay { get; set; }
 
             /// <summary>
+            /// <para>The ID of the backup.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>backup-fdb897sdf****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string BackupId { get; set; }
 
             /// <summary>
+            /// <para>The automatic backup cycle. Unit: days.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? BackupPeriod { get; set; }
 
             /// <summary>
+            /// <para>The time when the backup is created. The value is accurate to the millisecond. The value is a UNIX timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1682417553781</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the backup. The value is accurate to the millisecond. The value is a UNIX timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1682417553781</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the hardware security module (HSM) that is associated with the backup.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hsm-cn-5yd35431****</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of images.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string MaxImageCount { get; set; }
 
             /// <summary>
+            /// <para>The name of the backup.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>backup-te****</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The next time when the image is created. The value is accurate to the millisecond. The value is a UNIX timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1682417553781</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? NextImageCreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the HSM to which the backup belongs. This parameter is available only for HSM backups outside the Chinese mainland and the value of this parameter is consistent with the value of InstanceId.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hsm-cn-huoahd****</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string OwnerInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The time when the backup is released. The value is accurate to the millisecond. The value is a UNIX timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1641275680000</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public long? ReleaseTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the backup.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <para>The ID of the backup. This parameter is available only for HSM backups in the Chinese mainland.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>backup-fdb897sdfg53****</para>
             /// </summary>
@@ -134,6 +167,13 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string SpInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The status of the backup. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NEW</description></item>
+            /// <item><description>EXPIRED</description></item>
+            /// <item><description>ENABLED</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>NEW</para>
             /// </summary>
@@ -142,6 +182,12 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The type of the backup. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEFAULT</description></item>
+            /// <item><description>NORMAL</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>DEFAULT</para>
             /// </summary>
@@ -152,6 +198,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4C467B38-3910-447D-87BC-AC049166F216</para>
         /// </summary>

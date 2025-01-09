@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigInstanceRemarkRequest : TeaModel {
         /// <summary>
-        /// <para>The HSM ID.</para>
+        /// <para>The ID of the HSM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The description of the HSM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

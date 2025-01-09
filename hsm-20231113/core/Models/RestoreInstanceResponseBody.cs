@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class RestoreInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task details.</para>
+        /// <para>The details of the task.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public bool? Completed { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created. Unit: milliseconds. The value is a UNIX timestamp.</para>
+            /// <para>The time when the task is created. The value is accurate to the millisecond. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1711764127000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-540356379023708160</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The task progress. Unit: percent (%).</para>
+            /// <para>The progress of the task. Unit: percent (%).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The response returned if the task succeeds.</para>
+            /// <para>The response returned after the task succeeds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Response { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -87,7 +87,11 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the action. Valid values: create: creates a task. cancel: cancels a task.</para>
+            /// <para>The operation type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>create</description></item>
+            /// <item><description>cancel</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>create</para>

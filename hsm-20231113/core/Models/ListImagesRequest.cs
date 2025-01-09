@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ListImagesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the backup.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,12 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The image generation mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PERIODIC: The image is automatically generated.</description></item>
+        /// <item><description>MANUAL: The image is manually generated.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MANUAL</para>
         /// </summary>
@@ -38,6 +46,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string Mode { get; set; }
 
         /// <summary>
+        /// <para>The number of images per page. Valid values: 1 to 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +57,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

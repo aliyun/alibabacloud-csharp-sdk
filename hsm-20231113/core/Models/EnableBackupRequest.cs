@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class EnableBackupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the backup.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the HSM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

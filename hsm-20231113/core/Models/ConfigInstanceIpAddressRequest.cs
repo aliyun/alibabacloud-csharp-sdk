@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigInstanceIpAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The HSM ID.</para>
+        /// <para>The ID of the HSM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the HSM in the VPC.</para>
+        /// <para>The endpoint of the VPC to which the HMS belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the subnet to which the HSM belongs.</para>
+        /// <para>The ID of the vSwitch to which the HMS belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the HSM belongs.</para>
+        /// <para>The ID of the VPC to which the HMS belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

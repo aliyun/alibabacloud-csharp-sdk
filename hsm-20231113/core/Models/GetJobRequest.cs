@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetJobRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

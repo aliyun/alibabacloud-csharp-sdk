@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ListClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the clusters.</para>
+        /// <para>The clusters.</para>
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
         public List<ListClustersResponseBodyClusters> Clusters { get; set; }
         public class ListClustersResponseBodyClusters : TeaModel {
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster-w3G9vOJI2****</para>
@@ -27,13 +27,13 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cluster status.</para>
+            /// <para>The status of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NEW: not initialized</description></item>
-            /// <item><description>INITIALIZED: initialized</description></item>
-            /// <item><description>DELETED: deleted</description></item>
-            /// <item><description>SYNCHRONIZING: being synchronized</description></item>
-            /// <item><description>TO_DELETE: pending deletion</description></item>
+            /// <item><description>NEW: The cluster is not initialized.</description></item>
+            /// <item><description>INITIALIZED: The cluster is initialized.</description></item>
+            /// <item><description>DELETED: The cluster is deleted.</description></item>
+            /// <item><description>SYNCHRONIZING: The cluster is being synchronized.</description></item>
+            /// <item><description>TO_DELETE: The cluster is pending deletion.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of clusters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>114</para>

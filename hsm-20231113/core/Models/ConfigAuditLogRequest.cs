@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigAuditLogRequest : TeaModel {
         /// <summary>
-        /// <para>The status of the audit log feature.</para>
+        /// <para>Specifies whether to enable the audit log feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enable</description></item>
         /// <item><description>disable</description></item>

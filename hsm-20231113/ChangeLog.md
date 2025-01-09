@@ -1,3 +1,10 @@
+2025-01-09 Version: 1.1.2
+- Update API GetCluster: update response param.
+- Update API ListInstances: update param CurrentPage.
+- Update API ListInstances: update param PageSize.
+- Update API ListInstances: update param RegionId.
+
+
 2024-09-24 Version: 1.1.1
 - Update API GetInstance: update response param.
 - Update API ListInstances: add param TenantIsolationType.

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigClusterCertificateRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,6 +24,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string ClusterCertificate { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,6 +35,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The self-signed certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

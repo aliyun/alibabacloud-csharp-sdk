@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The HSM ID.</para>
+            /// <para>The ID of the HSM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hsm-cn-vj30bil8****</para>
@@ -37,7 +37,17 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The HSM status. PENDING ACTIVE EXPIRED INVALID FAILURE RESET PAUSED MODIFYING</para>
+            /// <para>The HSM status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PENDING: The HSM is disabled.</description></item>
+            /// <item><description>ACTIVE: The HSM is enabled.</description></item>
+            /// <item><description>EXPIRED: The HSM expired.</description></item>
+            /// <item><description>INVALID: The HSM is invalid.</description></item>
+            /// <item><description>FAILURE: The HSM failed to be created.</description></item>
+            /// <item><description>RESET: The HSM is being reset.</description></item>
+            /// <item><description>PAUSED: The HSM is paused.</description></item>
+            /// <item><description>MODIFYING: The HSM is being modified.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -49,7 +59,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 1000.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

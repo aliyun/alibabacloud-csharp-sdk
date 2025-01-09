@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetAuditLogStatusRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to obtain the list of OSS buckets that can be used to store audit logs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public bool? GetOssBucket { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

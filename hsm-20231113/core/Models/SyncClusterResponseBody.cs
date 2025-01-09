@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class SyncClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task details.</para>
+        /// <para>The details of the task.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-000bu7m5vjmyz9s7qz85</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The task progress. Unit: percent (%).</para>
+            /// <para>The progress of the task. Unit: percent (%).</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The response parameters.</para>
+            /// <para>The response returned after the task succeeds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Response { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>success</description></item>
             /// <item><description>running</description></item>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the action.</para>
+            /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>create: creates a task.</description></item>
-            /// <item><description>cancel: cancels a task.</description></item>
+            /// <item><description>create</description></item>
+            /// <item><description>cancel</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

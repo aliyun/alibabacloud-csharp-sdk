@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置备份名与备注</para>
+        /// <para>Configures the name and description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置备份名与备注</para>
+        /// <para>Configures the name and description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置备份名与备注</para>
+        /// <para>Configures the name and description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置备份名与备注</para>
+        /// <para>Configures the name and description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -347,8 +347,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置备份自动轮转任务</para>
+        /// <para>Modifies the execution mode of a backup task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only hardware security modules (HSMs) in the Chinese mainland support the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigBackupTaskRequest
@@ -405,8 +410,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置备份自动轮转任务</para>
+        /// <para>Modifies the execution mode of a backup task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only hardware security modules (HSMs) in the Chinese mainland support the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigBackupTaskRequest
@@ -463,8 +473,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置备份自动轮转任务</para>
+        /// <para>Modifies the execution mode of a backup task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only hardware security modules (HSMs) in the Chinese mainland support the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigBackupTaskRequest
@@ -481,8 +496,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置备份自动轮转任务</para>
+        /// <para>Modifies the execution mode of a backup task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only hardware security modules (HSMs) in the Chinese mainland support the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigBackupTaskRequest
@@ -499,8 +519,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际站配置HSM集群证书</para>
+        /// <para>Configures a certificate for a cluster of hardware security modules (HSMs) outside the Chinese mainland.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about how to create a self-signed certificate and a cluster certificate on an Elastic Compute Service (ECS) instance, see <a href="https://help.aliyun.com/document_detail/293585.html">Create a NIST FIPS-validated GVSM cluster</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigClusterCertificateRequest
@@ -549,8 +574,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际站配置HSM集群证书</para>
+        /// <para>Configures a certificate for a cluster of hardware security modules (HSMs) outside the Chinese mainland.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about how to create a self-signed certificate and a cluster certificate on an Elastic Compute Service (ECS) instance, see <a href="https://help.aliyun.com/document_detail/293585.html">Create a NIST FIPS-validated GVSM cluster</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigClusterCertificateRequest
@@ -599,8 +629,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际站配置HSM集群证书</para>
+        /// <para>Configures a certificate for a cluster of hardware security modules (HSMs) outside the Chinese mainland.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about how to create a self-signed certificate and a cluster certificate on an Elastic Compute Service (ECS) instance, see <a href="https://help.aliyun.com/document_detail/293585.html">Create a NIST FIPS-validated GVSM cluster</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigClusterCertificateRequest
@@ -617,8 +652,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际站配置HSM集群证书</para>
+        /// <para>Configures a certificate for a cluster of hardware security modules (HSMs) outside the Chinese mainland.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about how to create a self-signed certificate and a cluster certificate on an Elastic Compute Service (ECS) instance, see <a href="https://help.aliyun.com/document_detail/293585.html">Create a NIST FIPS-validated GVSM cluster</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigClusterCertificateRequest
@@ -635,7 +675,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster.</para>
+        /// <para>Changes the name of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -681,7 +721,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster.</para>
+        /// <para>Changes the name of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -727,7 +767,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster.</para>
+        /// <para>Changes the name of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -745,7 +785,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster.</para>
+        /// <para>Changes the name of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -763,8 +803,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置集群子网</para>
+        /// <para>Modifies a list of vSwitches that are associated with a hardware security module (HSM) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the operation to configure all vSwitches that are associated with a HSM cluster. You can only add new vSwitches. You cannot delete vSwitches.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConfigClusterSubnetRequest
@@ -823,8 +868,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置集群子网</para>
+        /// <para>Modifies a list of vSwitches that are associated with a hardware security module (HSM) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the operation to configure all vSwitches that are associated with a HSM cluster. You can only add new vSwitches. You cannot delete vSwitches.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConfigClusterSubnetRequest
@@ -883,8 +933,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置集群子网</para>
+        /// <para>Modifies a list of vSwitches that are associated with a hardware security module (HSM) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the operation to configure all vSwitches that are associated with a HSM cluster. You can only add new vSwitches. You cannot delete vSwitches.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigClusterSubnetRequest
@@ -901,8 +956,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置集群子网</para>
+        /// <para>Modifies a list of vSwitches that are associated with a hardware security module (HSM) cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the operation to configure all vSwitches that are associated with a HSM cluster. You can only add new vSwitches. You cannot delete vSwitches.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigClusterSubnetRequest
@@ -924,7 +984,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. In this case, you do not need to create an IP address for the HSM in the cluster.</para>
+        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. You do not need to create an IP address for the HSM in the cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -975,7 +1035,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. In this case, you do not need to create an IP address for the HSM in the cluster.</para>
+        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. You do not need to create an IP address for the HSM in the cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1026,7 +1086,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. In this case, you do not need to create an IP address for the HSM in the cluster.</para>
+        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. You do not need to create an IP address for the HSM in the cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1049,7 +1109,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. In this case, you do not need to create an IP address for the HSM in the cluster.</para>
+        /// <para>The IP address whitelist of a cluster has a higher priority than the IP address whitelist of a hardware security module (HSM) in the cluster. In cluster mode, we recommend that you create an IP address whitelist for your cluster. You do not need to create an IP address for the HSM in the cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1067,7 +1127,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置镜像备注</para>
+        /// <para>Modifies the description of an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1113,7 +1173,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置镜像备注</para>
+        /// <para>Modifies the description of an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1159,7 +1219,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置镜像备注</para>
+        /// <para>Modifies the description of an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1177,7 +1237,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置镜像备注</para>
+        /// <para>Modifies the description of an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1495,8 +1555,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TODO 不允许控制台直接修改集群内实例的白名单实现重构</para>
+        /// <para>Modifies the IP address whitelist of a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can configure the IP address whitelist for HSMs that are not added to a cluster and are in the ACTIVE state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigInstanceWhitelistRequest
@@ -1541,8 +1606,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TODO 不允许控制台直接修改集群内实例的白名单实现重构</para>
+        /// <para>Modifies the IP address whitelist of a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can configure the IP address whitelist for HSMs that are not added to a cluster and are in the ACTIVE state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigInstanceWhitelistRequest
@@ -1587,8 +1657,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TODO 不允许控制台直接修改集群内实例的白名单实现重构</para>
+        /// <para>Modifies the IP address whitelist of a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can configure the IP address whitelist for HSMs that are not added to a cluster and are in the ACTIVE state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigInstanceWhitelistRequest
@@ -1605,8 +1680,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TODO 不允许控制台直接修改集群内实例的白名单实现重构</para>
+        /// <para>Modifies the IP address whitelist of a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can configure the IP address whitelist for HSMs that are not added to a cluster and are in the ACTIVE state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigInstanceWhitelistRequest
@@ -1623,8 +1703,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨地域复制镜像</para>
+        /// <para>Copies an image to another region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation requires that the destination region does not have the same image. This operation is available only for hardware security modules (HSMs) outside the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CopyImageRequest
@@ -1669,8 +1754,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨地域复制镜像</para>
+        /// <para>Copies an image to another region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation requires that the destination region does not have the same image. This operation is available only for hardware security modules (HSMs) outside the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CopyImageRequest
@@ -1715,8 +1805,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨地域复制镜像</para>
+        /// <para>Copies an image to another region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation requires that the destination region does not have the same image. This operation is available only for hardware security modules (HSMs) outside the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CopyImageRequest
@@ -1733,8 +1828,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨地域复制镜像</para>
+        /// <para>Copies an image to another region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation requires that the destination region does not have the same image. This operation is available only for hardware security modules (HSMs) outside the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CopyImageRequest
@@ -1751,7 +1851,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a hardware security module (HSM) as the master HSM to create a cluster.</para>
+        /// <para>Creates a cluster by specifying a hardware security module (HSM) as the master HSM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1806,7 +1906,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a hardware security module (HSM) as the master HSM to create a cluster.</para>
+        /// <para>Creates a cluster by specifying a hardware security module (HSM) as the master HSM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1861,7 +1961,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a hardware security module (HSM) as the master HSM to create a cluster.</para>
+        /// <para>Creates a cluster by specifying a hardware security module (HSM) as the master HSM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1884,7 +1984,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a hardware security module (HSM) as the master HSM to create a cluster.</para>
+        /// <para>Creates a cluster by specifying a hardware security module (HSM) as the master HSM.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1907,12 +2007,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cluster.</para>
+        /// <para>Deletes a hardware security module (HSM) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a cluster only when no hardware security modules (HSMs) exist in the cluster.</para>
+        /// <para>You can delete an HSM only if the cluster does not contain HSMs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1954,12 +2054,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cluster.</para>
+        /// <para>Deletes a hardware security module (HSM) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a cluster only when no hardware security modules (HSMs) exist in the cluster.</para>
+        /// <para>You can delete an HSM only if the cluster does not contain HSMs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2001,12 +2101,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cluster.</para>
+        /// <para>Deletes a hardware security module (HSM) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a cluster only when no hardware security modules (HSMs) exist in the cluster.</para>
+        /// <para>You can delete an HSM only if the cluster does not contain HSMs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2024,12 +2124,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cluster.</para>
+        /// <para>Deletes a hardware security module (HSM) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a cluster only when no hardware security modules (HSMs) exist in the cluster.</para>
+        /// <para>You can delete an HSM only if the cluster does not contain HSMs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2045,6 +2145,11 @@ namespace AlibabaCloud.SDK.Hsm20231113
             return await DeleteClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions that are supported by Cloud Hardware Security Module.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -2082,6 +2187,11 @@ namespace AlibabaCloud.SDK.Hsm20231113
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions that are supported by Cloud Hardware Security Module.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -2119,6 +2229,11 @@ namespace AlibabaCloud.SDK.Hsm20231113
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions that are supported by Cloud Hardware Security Module.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -2132,6 +2247,11 @@ namespace AlibabaCloud.SDK.Hsm20231113
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions that are supported by Cloud Hardware Security Module.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -2147,8 +2267,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用备份</para>
+        /// <para>Binds a backup to a specified hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for backups in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableBackupRequest
@@ -2193,8 +2318,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用备份</para>
+        /// <para>Binds a backup to a specified hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for backups in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableBackupRequest
@@ -2239,8 +2369,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用备份</para>
+        /// <para>Binds a backup to a specified hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for backups in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableBackupRequest
@@ -2257,8 +2392,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用备份</para>
+        /// <para>Binds a backup to a specified hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for backups in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableBackupRequest
@@ -2275,7 +2415,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动导出镜像</para>
+        /// <para>Exports the image for a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2321,7 +2461,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动导出镜像</para>
+        /// <para>Exports the image for a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2367,7 +2507,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动导出镜像</para>
+        /// <para>Exports the image for a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2385,7 +2525,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动导出镜像</para>
+        /// <para>Exports the image for a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2403,7 +2543,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计日志功能开通状态</para>
+        /// <para>Queries the status of the audit log feature in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2449,7 +2589,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计日志功能开通状态</para>
+        /// <para>Queries the status of the audit log feature in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2495,7 +2635,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计日志功能开通状态</para>
+        /// <para>Queries the status of the audit log feature in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2513,7 +2653,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计日志功能开通状态</para>
+        /// <para>Queries the status of the audit log feature in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2531,7 +2671,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示用户备份</para>
+        /// <para>Queries the information about a specified backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2573,7 +2713,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示用户备份</para>
+        /// <para>Queries the information about a specified backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2615,7 +2755,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示用户备份</para>
+        /// <para>Queries the information about a specified backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2633,7 +2773,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示用户备份</para>
+        /// <para>Queries the information about a specified backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2651,7 +2791,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a cluster.</para>
+        /// <para>Queries information about a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2693,7 +2833,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a cluster.</para>
+        /// <para>Queries information about a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2735,7 +2875,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a cluster.</para>
+        /// <para>Queries information about a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2753,7 +2893,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a cluster.</para>
+        /// <para>Queries information about a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2771,7 +2911,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示备份下的用户镜像</para>
+        /// <para>Queries information about an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2813,7 +2953,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示备份下的用户镜像</para>
+        /// <para>Queries information about an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2855,7 +2995,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示备份下的用户镜像</para>
+        /// <para>Queries information about an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2873,7 +3013,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示备份下的用户镜像</para>
+        /// <para>Queries information about an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2891,7 +3031,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a hardware security module (HSM).</para>
+        /// <para>Queries information about a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2933,7 +3073,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a hardware security module (HSM).</para>
+        /// <para>Queries information about a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2975,7 +3115,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a hardware security module (HSM).</para>
+        /// <para>Queries information about a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2993,7 +3133,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a hardware security module (HSM).</para>
+        /// <para>Queries information about a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3011,7 +3151,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步任务执行信息</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3053,7 +3193,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步任务执行信息</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3095,7 +3235,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步任务执行信息</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3113,7 +3253,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步任务执行信息</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3131,7 +3271,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建审计日志的服务关联角色</para>
+        /// <para>Authorizes Cloud Hardware Security Module to deliver logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3164,7 +3304,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建审计日志的服务关联角色</para>
+        /// <para>Authorizes Cloud Hardware Security Module to deliver logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3197,7 +3337,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建审计日志的服务关联角色</para>
+        /// <para>Authorizes Cloud Hardware Security Module to deliver logs.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3211,7 +3351,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建审计日志的服务关联角色</para>
+        /// <para>Authorizes Cloud Hardware Security Module to deliver logs.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3382,7 +3522,10 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add an HSM only to the cluster that is in the INITIALIZED state, and the HSM must be enabled or disabled and is not initialized.</para>
+        /// <para>  You can add the HSM to only the cluster that is in the INITIALIZED state.</para>
+        /// <list type="bullet">
+        /// <item><description>The HSM that you want to add to the cluster is enabled or disabled and is not initialized.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3433,7 +3576,10 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add an HSM only to the cluster that is in the INITIALIZED state, and the HSM must be enabled or disabled and is not initialized.</para>
+        /// <para>  You can add the HSM to only the cluster that is in the INITIALIZED state.</para>
+        /// <list type="bullet">
+        /// <item><description>The HSM that you want to add to the cluster is enabled or disabled and is not initialized.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3484,7 +3630,10 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add an HSM only to the cluster that is in the INITIALIZED state, and the HSM must be enabled or disabled and is not initialized.</para>
+        /// <para>  You can add the HSM to only the cluster that is in the INITIALIZED state.</para>
+        /// <list type="bullet">
+        /// <item><description>The HSM that you want to add to the cluster is enabled or disabled and is not initialized.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3507,7 +3656,10 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can add an HSM only to the cluster that is in the INITIALIZED state, and the HSM must be enabled or disabled and is not initialized.</para>
+        /// <para>  You can add the HSM to only the cluster that is in the INITIALIZED state.</para>
+        /// <list type="bullet">
+        /// <item><description>The HSM that you want to add to the cluster is enabled or disabled and is not initialized.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -3530,9 +3682,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If non-master HSMs exist in a cluster, you cannot remove the master HSM from the cluster.</para>
+        /// <para>  If non-master HSMs exist in a cluster, the master HSM cannot be removed from the cluster.</para>
         /// <list type="bullet">
-        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to be available. Proceed with caution.</description></item>
+        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to the available state. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3584,9 +3736,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If non-master HSMs exist in a cluster, you cannot remove the master HSM from the cluster.</para>
+        /// <para>  If non-master HSMs exist in a cluster, the master HSM cannot be removed from the cluster.</para>
         /// <list type="bullet">
-        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to be available. Proceed with caution.</description></item>
+        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to the available state. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3638,9 +3790,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If non-master HSMs exist in a cluster, you cannot remove the master HSM from the cluster.</para>
+        /// <para>  If non-master HSMs exist in a cluster, the master HSM cannot be removed from the cluster.</para>
         /// <list type="bullet">
-        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to be available. Proceed with caution.</description></item>
+        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to the available state. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3664,9 +3816,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If non-master HSMs exist in a cluster, you cannot remove the master HSM from the cluster.</para>
+        /// <para>  If non-master HSMs exist in a cluster, the master HSM cannot be removed from the cluster.</para>
         /// <list type="bullet">
-        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to be available. Proceed with caution.</description></item>
+        /// <item><description>After the master HSM is removed from a cluster, the cluster enters the TO_DELETE state and cannot be restored to the available state. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3685,7 +3837,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份列表</para>
+        /// <para>Queries the backups that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3747,7 +3899,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份列表</para>
+        /// <para>Queries the backups that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3809,7 +3961,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份列表</para>
+        /// <para>Queries the backups that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3827,7 +3979,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份列表</para>
+        /// <para>Queries the backups that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3845,7 +3997,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the clusters that meet the query conditions.</para>
+        /// <para>Queries the clusters that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3895,7 +4047,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the clusters that meet the query conditions.</para>
+        /// <para>Queries the clusters that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3945,7 +4097,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the clusters that meet the query conditions.</para>
+        /// <para>Queries the clusters that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3963,7 +4115,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the clusters that meet the query conditions.</para>
+        /// <para>Queries the clusters that meet the query conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3981,7 +4133,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户镜像列表</para>
+        /// <para>Queries the images that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4039,7 +4191,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户镜像列表</para>
+        /// <para>Queries the images that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4097,7 +4249,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户镜像列表</para>
+        /// <para>Queries the images that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4115,7 +4267,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户镜像列表</para>
+        /// <para>Queries the images that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4277,7 +4429,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源组移动资源</para>
+        /// <para>Moves a resource to a new resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4331,7 +4483,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源组移动资源</para>
+        /// <para>Moves a resource to a new resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4385,7 +4537,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源组移动资源</para>
+        /// <para>Moves a resource to a new resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4403,7 +4555,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源组移动资源</para>
+        /// <para>Moves a resource to a new resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4421,12 +4573,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates a hardware security module (HSM).</para>
+        /// <para>Disables a hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you deactivate an HSM, the relevant service operations fail. Proceed with caution.</para>
+        /// <para>After you disable an HSM, the relevant service operations fail. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4468,12 +4620,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates a hardware security module (HSM).</para>
+        /// <para>Disables a hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you deactivate an HSM, the relevant service operations fail. Proceed with caution.</para>
+        /// <para>After you disable an HSM, the relevant service operations fail. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4515,12 +4667,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates a hardware security module (HSM).</para>
+        /// <para>Disables a hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you deactivate an HSM, the relevant service operations fail. Proceed with caution.</para>
+        /// <para>After you disable an HSM, the relevant service operations fail. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4538,12 +4690,12 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates a hardware security module (HSM).</para>
+        /// <para>Disables a hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you deactivate an HSM, the relevant service operations fail. Proceed with caution.</para>
+        /// <para>After you disable an HSM, the relevant service operations fail. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4566,7 +4718,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for general virtual security modules (GVSMs) that are deployed in regions in the Chinese mainland.</para>
+        /// <para>This operation is supported only for general virtual security modules (GVSMs) in the Chinese mainland.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4613,7 +4765,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for general virtual security modules (GVSMs) that are deployed in regions in the Chinese mainland.</para>
+        /// <para>This operation is supported only for general virtual security modules (GVSMs) in the Chinese mainland.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4660,7 +4812,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for general virtual security modules (GVSMs) that are deployed in regions in the Chinese mainland.</para>
+        /// <para>This operation is supported only for general virtual security modules (GVSMs) in the Chinese mainland.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4683,7 +4835,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for general virtual security modules (GVSMs) that are deployed in regions in the Chinese mainland.</para>
+        /// <para>This operation is supported only for general virtual security modules (GVSMs) in the Chinese mainland.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4701,8 +4853,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置备份</para>
+        /// <para>Disassociates a backup from a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for HSMs in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetBackupRequest
@@ -4743,8 +4900,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置备份</para>
+        /// <para>Disassociates a backup from a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for HSMs in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetBackupRequest
@@ -4785,8 +4947,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置备份</para>
+        /// <para>Disassociates a backup from a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for HSMs in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetBackupRequest
@@ -4803,8 +4970,13 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置备份</para>
+        /// <para>Disassociates a backup from a hardware security module (HSM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only for HSMs in the Chinese mainland.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetBackupRequest
@@ -4826,7 +4998,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Exercise caution.</para>
+        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4873,7 +5045,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Exercise caution.</para>
+        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4920,7 +5092,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Exercise caution.</para>
+        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4943,7 +5115,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Exercise caution.</para>
+        /// <para>After an HSM is reset, all related data is deleted and cannot be recovered. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4966,7 +5138,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use images to restore only HSMs that are suspended or deactivated.</para>
+        /// <para>You can use images to restore only HSMs that are paused or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5017,7 +5189,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use images to restore only HSMs that are suspended or deactivated.</para>
+        /// <para>You can use images to restore only HSMs that are paused or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5068,7 +5240,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use images to restore only HSMs that are suspended or deactivated.</para>
+        /// <para>You can use images to restore only HSMs that are paused or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5091,7 +5263,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use images to restore only HSMs that are suspended or deactivated.</para>
+        /// <para>You can use images to restore only HSMs that are paused or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5109,7 +5281,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a deactivated hardware security module (HSM).</para>
+        /// <para>Resumes a disabled hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5151,7 +5323,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a deactivated hardware security module (HSM).</para>
+        /// <para>Resumes a disabled hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5193,7 +5365,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a deactivated hardware security module (HSM).</para>
+        /// <para>Resumes a disabled hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5211,7 +5383,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a deactivated hardware security module (HSM).</para>
+        /// <para>Resumes a disabled hardware security module (HSM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5229,7 +5401,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promote a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5275,7 +5447,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promote a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5321,7 +5493,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promote a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5339,7 +5511,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promote a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5357,12 +5529,15 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes HSM data in a cluster.</para>
+        /// <para>Synchronizes the data of hardware security modules (HSMs) in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5404,12 +5579,15 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes HSM data in a cluster.</para>
+        /// <para>Synchronizes the data of hardware security modules (HSMs) in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5451,12 +5629,15 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes HSM data in a cluster.</para>
+        /// <para>Synchronizes the data of hardware security modules (HSMs) in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5474,12 +5655,15 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes HSM data in a cluster.</para>
+        /// <para>Synchronizes the data of hardware security modules (HSMs) in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <list type="bullet">
+        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">

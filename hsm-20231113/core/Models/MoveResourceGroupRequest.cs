@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the hardware security module (HSM).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

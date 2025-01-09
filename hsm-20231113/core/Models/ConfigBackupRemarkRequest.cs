@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class ConfigBackupRemarkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the backup.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The name of the backup.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>backup-test</para>
         /// </summary>
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The description of the backup.</para>
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
