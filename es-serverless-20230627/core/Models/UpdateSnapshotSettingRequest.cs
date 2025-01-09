@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 {
     public class UpdateSnapshotSettingRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0 0 01 ? * * *</para>
         /// </summary>
         [NameInMap("quartzRegex")]
         [Validation(Required=false)]

@@ -10,16 +10,15 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 {
     public class CreateAppRequest : TeaModel {
         /// <summary>
-        /// 应用名
-        /// 
-        /// This parameter is required.
+        /// <para>应用名</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("appName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("authentication")]
         [Validation(Required=false)]
@@ -42,14 +41,14 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("chargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// 应用备注
+        /// <para>应用备注</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 {
     public class ListIndicesResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8C85CCB3-C0C9-521C-B599-F903E14A8793</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

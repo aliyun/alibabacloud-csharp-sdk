@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         public string ContactInfo { get; set; }
 
         /// <summary>
-        /// 应用备注
+        /// <para>应用备注</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

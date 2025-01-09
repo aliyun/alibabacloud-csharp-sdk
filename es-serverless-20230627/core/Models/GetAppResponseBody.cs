@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 {
     public class GetAppResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2C5DAA30-****-5181-9B87-9D6181016197</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         [Validation(Required=false)]
         public GetAppResponseBodyResult Result { get; set; }
         public class GetAppResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test-app-abc</para>
+            /// </summary>
             [NameInMap("appId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>es-severless-test-app</para>
+            /// </summary>
             [NameInMap("appName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
@@ -29,6 +41,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public string AppType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-08-15T11:20:52.370Z</para>
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -41,6 +57,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-08-15T11:21:50.000Z</para>
+            /// </summary>
             [NameInMap("modifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
@@ -81,6 +101,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>*******7595</para>
+            /// </summary>
             [NameInMap("ownerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
@@ -129,14 +153,26 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ACTIVE</para>
+            /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>7.10</para>
+            /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }

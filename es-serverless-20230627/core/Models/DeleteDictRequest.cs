@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
 {
     public class DeleteDictRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a.dic</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MAIN</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
