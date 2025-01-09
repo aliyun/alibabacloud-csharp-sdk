@@ -1,3 +1,6 @@
+2025-01-09 Version: 4.7.1
+- Generated csharp 2016-07-14 for CloudAPI.
+
 2025-01-09 Version: 4.7.0
 - Support API ModifyInstanceVpcAttributeForConsole.
 - Update API DescribeApiGroups: add param BasePath.
