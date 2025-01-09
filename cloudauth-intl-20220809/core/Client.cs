@@ -1587,6 +1587,190 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>身份二要素有效期核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyIntlResponse
+        /// </returns>
+        public Id2MetaPeriodVerifyIntlResponse Id2MetaPeriodVerifyIntlWithOptions(Id2MetaPeriodVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
+            {
+                body["DocName"] = request.DocName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocNo))
+            {
+                body["DocNo"] = request.DocNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                body["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                body["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                body["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityEndDate))
+            {
+                body["ValidityEndDate"] = request.ValidityEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityStartDate))
+            {
+                body["ValidityStartDate"] = request.ValidityStartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id2MetaPeriodVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id2MetaPeriodVerifyIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份二要素有效期核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyIntlResponse
+        /// </returns>
+        public async Task<Id2MetaPeriodVerifyIntlResponse> Id2MetaPeriodVerifyIntlWithOptionsAsync(Id2MetaPeriodVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
+            {
+                body["DocName"] = request.DocName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocNo))
+            {
+                body["DocNo"] = request.DocNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                body["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                body["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                body["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityEndDate))
+            {
+                body["ValidityEndDate"] = request.ValidityEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityStartDate))
+            {
+                body["ValidityStartDate"] = request.ValidityStartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id2MetaPeriodVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id2MetaPeriodVerifyIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份二要素有效期核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyIntlResponse
+        /// </returns>
+        public Id2MetaPeriodVerifyIntlResponse Id2MetaPeriodVerifyIntl(Id2MetaPeriodVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Id2MetaPeriodVerifyIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>身份二要素有效期核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Id2MetaPeriodVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id2MetaPeriodVerifyIntlResponse
+        /// </returns>
+        public async Task<Id2MetaPeriodVerifyIntlResponse> Id2MetaPeriodVerifyIntlAsync(Id2MetaPeriodVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Id2MetaPeriodVerifyIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>身份二要素国际版接口</para>
         /// </summary>
         /// 
