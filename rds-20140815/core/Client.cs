@@ -1143,8 +1143,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// <para>Associates an elastic IP address (EIP) with an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If the RDS Custom instance uses a public IP address, the public IP address is automatically released after you associate an EIP with the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateEipAddressWithRCInstanceRequest
@@ -1193,8 +1203,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// <para>Associates an elastic IP address (EIP) with an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If the RDS Custom instance uses a public IP address, the public IP address is automatically released after you associate an EIP with the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateEipAddressWithRCInstanceRequest
@@ -1243,8 +1263,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// <para>Associates an elastic IP address (EIP) with an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If the RDS Custom instance uses a public IP address, the public IP address is automatically released after you associate an EIP with the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateEipAddressWithRCInstanceRequest
@@ -1261,8 +1291,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定弹性网卡到RDS Custom实例</para>
+        /// <para>Associates an elastic IP address (EIP) with an RDS Custom for SQL Server instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If the RDS Custom instance uses a public IP address, the public IP address is automatically released after you associate an EIP with the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateEipAddressWithRCInstanceRequest
@@ -56635,7 +56675,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据库复制</para>
+        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56693,7 +56733,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据库复制</para>
+        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56751,7 +56791,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据库复制</para>
+        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56769,7 +56809,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据库复制</para>
+        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
         /// </summary>
         /// 
         /// <param name="request">

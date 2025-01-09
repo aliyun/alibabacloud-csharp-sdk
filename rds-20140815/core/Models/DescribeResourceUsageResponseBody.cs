@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? BackupDataSize { get; set; }
 
+        [NameInMap("BackupEcsSnapshotSize")]
+        [Validation(Required=false)]
+        public string BackupEcsSnapshotSize { get; set; }
+
         /// <summary>
         /// <para>The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.</para>
         /// 

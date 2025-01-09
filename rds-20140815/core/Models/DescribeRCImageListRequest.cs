@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
         /// <summary>
         /// <para>The page number.</para>
         /// 

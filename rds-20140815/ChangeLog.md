@@ -1,3 +1,12 @@
+2025-01-09 Version: 10.0.1
+- Update API CreateRCNodePool: update param SystemDisk.
+- Update API DescribeRCImageList: add param InstanceType.
+- Update API DescribeRCImageList: update response param.
+- Update API DescribeRCInstanceAttribute: update response param.
+- Update API DescribeRCNodePool: update response param.
+- Update API DescribeResourceUsage: update response param.
+
+
 2025-01-07 Version: 10.0.0
 - Support API ModifyDBInstanceReplicationSwitch.
 - Delete API DescribeDiagnosticReportList.

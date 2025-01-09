@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string OSType { get; set; }
 
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
             /// <summary>
             /// <para>The image size. Unit: GiB.</para>
             /// 

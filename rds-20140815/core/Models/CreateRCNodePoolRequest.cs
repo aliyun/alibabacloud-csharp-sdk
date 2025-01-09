@@ -164,6 +164,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }

@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceDiskType { get; set; }
 
             /// <summary>
-            /// <para>The type of the original disk.</para>
+            /// <para>The type of the source disk.</para>
             /// <remarks>
             /// <para> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</para>
             /// </remarks>

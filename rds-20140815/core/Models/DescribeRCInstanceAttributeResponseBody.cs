@@ -575,6 +575,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string StoppedMode { get; set; }
 
+        [NameInMap("SystemDisk")]
+        [Validation(Required=false)]
+        public DescribeRCInstanceAttributeResponseBodySystemDisk SystemDisk { get; set; }
+        public class DescribeRCInstanceAttributeResponseBodySystemDisk : TeaModel {
+            [NameInMap("DeleteWithInstance")]
+            [Validation(Required=false)]
+            public bool? DeleteWithInstance { get; set; }
+
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public string Encrypted { get; set; }
+
+            [NameInMap("SystemDiskCategory")]
+            [Validation(Required=false)]
+            public string SystemDiskCategory { get; set; }
+
+            [NameInMap("SystemDiskPerformanceLevel")]
+            [Validation(Required=false)]
+            public string SystemDiskPerformanceLevel { get; set; }
+
+            [NameInMap("SystemDiskSize")]
+            [Validation(Required=false)]
+            public long? SystemDiskSize { get; set; }
+
+        }
+
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodyTags Tags { get; set; }
