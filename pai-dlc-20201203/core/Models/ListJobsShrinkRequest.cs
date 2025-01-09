@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PaymentType")]
+        [Validation(Required=false)]
+        public string PaymentType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>flow-*******</para>

@@ -2737,6 +2737,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineId))
             {
                 query["PipelineId"] = request.PipelineId;
@@ -2876,6 +2880,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineId))
             {
