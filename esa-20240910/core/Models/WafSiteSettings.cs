@@ -29,6 +29,74 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         }
 
+        [NameInMap("BotManagement")]
+        [Validation(Required=false)]
+        public WafSiteSettingsBotManagement BotManagement { get; set; }
+        public class WafSiteSettingsBotManagement : TeaModel {
+            [NameInMap("DefiniteBots")]
+            [Validation(Required=false)]
+            public WafSiteSettingsBotManagementDefiniteBots DefiniteBots { get; set; }
+            public class WafSiteSettingsBotManagementDefiniteBots : TeaModel {
+                [NameInMap("Action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+            }
+
+            [NameInMap("EffectOnStatic")]
+            [Validation(Required=false)]
+            public WafSiteSettingsBotManagementEffectOnStatic EffectOnStatic { get; set; }
+            public class WafSiteSettingsBotManagementEffectOnStatic : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+            }
+
+            [NameInMap("JSDetection")]
+            [Validation(Required=false)]
+            public WafSiteSettingsBotManagementJSDetection JSDetection { get; set; }
+            public class WafSiteSettingsBotManagementJSDetection : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+            }
+
+            [NameInMap("LikelyBots")]
+            [Validation(Required=false)]
+            public WafSiteSettingsBotManagementLikelyBots LikelyBots { get; set; }
+            public class WafSiteSettingsBotManagementLikelyBots : TeaModel {
+                [NameInMap("Action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+            }
+
+            [NameInMap("VerifiedBots")]
+            [Validation(Required=false)]
+            public WafSiteSettingsBotManagementVerifiedBots VerifiedBots { get; set; }
+            public class WafSiteSettingsBotManagementVerifiedBots : TeaModel {
+                [NameInMap("Action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+            }
+
+        }
+
         [NameInMap("ClientIpIdentifier")]
         [Validation(Required=false)]
         public WafSiteSettingsClientIpIdentifier ClientIpIdentifier { get; set; }

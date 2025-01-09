@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class CreateRoutineRelatedRecordRequest : TeaModel {
         /// <summary>
         /// <para>The routine name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateRoutineRelatedRecord</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The record name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-record-1.example.com</para>
@@ -31,6 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The website ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54362329990032</para>

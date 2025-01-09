@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class DeleteRoutineRelatedRouteRequest : TeaModel {
         /// <summary>
         /// <para>The routine name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DeleteRoutineRelatedRoute</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The route URL.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em>.example.com/path1</em></para>
@@ -31,6 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The route ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c3b82a3d1524e9f750da11d0cc0be0a</para>
@@ -41,6 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The website ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54362329990032</para>

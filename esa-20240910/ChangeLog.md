@@ -1,3 +1,53 @@
+2025-01-09 Version: 2.7.0
+- Support API ApplyCertificate.
+- Support API CreateOriginPool.
+- Support API DeleteOriginPool.
+- Support API DescribeDDoSBpsList.
+- Support API DescribeDDoSL7QpsList.
+- Support API GetCertificate.
+- Support API GetClientCertificateHostnames.
+- Support API GetOriginPool.
+- Support API ListCertificates.
+- Support API ListOriginPools.
+- Support API SetClientCertificateHostnames.
+- Support API UpdateOriginPool.
+- Update API CommitRoutineStagingCode: update param Name.
+- Update API CreateRoutine: update param Description.
+- Update API CreateRoutine: update param Name.
+- Update API CreateRoutine: update param SpecName.
+- Update API CreateRoutineRelatedRecord: update param Name.
+- Update API CreateRoutineRelatedRecord: update param RecordName.
+- Update API CreateRoutineRelatedRecord: update param SiteId.
+- Update API CreateRoutineRelatedRoute: add param ByPass.
+- Update API CreateRoutineRelatedRoute: update param Name.
+- Update API CreateRoutineRelatedRoute: update param Route.
+- Update API CreateRoutineRelatedRoute: update param SiteId.
+- Update API CreateUserDeliveryTask: add param Details.
+- Update API DeleteRoutine: update param Name.
+- Update API DeleteRoutineCodeVersion: update param CodeVersion.
+- Update API DeleteRoutineCodeVersion: update param Name.
+- Update API DeleteRoutineRelatedRecord: update param Name.
+- Update API DeleteRoutineRelatedRecord: update param RecordId.
+- Update API DeleteRoutineRelatedRecord: update param RecordName.
+- Update API DeleteRoutineRelatedRecord: update param SiteId.
+- Update API DeleteRoutineRelatedRoute: update param Name.
+- Update API DeleteRoutineRelatedRoute: update param Route.
+- Update API DeleteRoutineRelatedRoute: update param RouteId.
+- Update API DeleteRoutineRelatedRoute: update param SiteId.
+- Update API GetOriginProtection: update param SiteId.
+- Update API GetRoutine: update param Name.
+- Update API GetRoutine: update response param.
+- Update API GetRoutineStagingCodeUploadInfo: update param Name.
+- Update API GetSiteWafSettings: add param Path.
+- Update API GetUserDeliveryTask: update response param.
+- Update API PublishRoutineCodeVersion: update param Env.
+- Update API PublishRoutineCodeVersion: update param Name.
+- Update API PurgeCaches: update param SiteId.
+- Update API PurgeCaches: update param Type.
+- Update API UpdatePage: update param Description.
+- Update API UpdateUserDeliveryTask: add param Details.
+
+
 2024-11-29 Version: 2.6.0
 - Support API CreateClientCertificate.
 - Support API DeleteCertificate.

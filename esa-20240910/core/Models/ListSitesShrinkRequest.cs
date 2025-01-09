@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public bool? OnlyEnterprise { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>visitTime</para>
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }

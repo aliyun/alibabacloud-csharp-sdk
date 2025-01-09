@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class DeleteRoutineCodeVersionRequest : TeaModel {
         /// <summary>
         /// <para>The code version.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710120201067203242</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The routine name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-routine1</para>

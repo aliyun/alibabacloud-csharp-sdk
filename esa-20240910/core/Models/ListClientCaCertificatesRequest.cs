@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListClientCaCertificatesRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Valid values: 1 to 500.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

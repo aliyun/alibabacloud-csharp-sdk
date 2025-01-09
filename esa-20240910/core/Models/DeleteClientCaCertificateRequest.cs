@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteClientCaCertificateRequest : TeaModel {
         /// <summary>
+        /// <para>The certificate ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The website ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

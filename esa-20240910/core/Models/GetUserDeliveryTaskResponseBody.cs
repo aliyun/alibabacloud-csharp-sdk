@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string DeliveryType { get; set; }
 
+        [NameInMap("Details")]
+        [Validation(Required=false)]
+        public string Details { get; set; }
+
         /// <summary>
         /// <para>The discard rate.</para>
         /// 

@@ -37,6 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The description of the custom error page.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a custom deny page</para>

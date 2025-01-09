@@ -211,6 +211,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string VerifyCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2023-12-24T02:01:11Z</para>
+            /// </summary>
             [NameInMap("VisitTime")]
             [Validation(Required=false)]
             public string VisitTime { get; set; }

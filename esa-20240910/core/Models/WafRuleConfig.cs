@@ -167,13 +167,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         }
 
-        [NameInMap("Match")]
-        [Validation(Required=false)]
-        public WafRuleMatch Match { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Notes")]
+        [Validation(Required=false)]
+        public string Notes { get; set; }
 
         [NameInMap("RateLimit")]
         [Validation(Required=false)]
@@ -252,6 +252,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("Value")]
+        [Validation(Required=false)]
+        public string Value { get; set; }
 
     }
 

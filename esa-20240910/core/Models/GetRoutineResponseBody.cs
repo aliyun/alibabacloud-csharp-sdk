@@ -190,6 +190,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public List<GetRoutineResponseBodyRelatedRoutes> RelatedRoutes { get; set; }
         public class GetRoutineResponseBodyRelatedRoutes : TeaModel {
+            [NameInMap("ByPass")]
+            [Validation(Required=false)]
+            public string ByPass { get; set; }
+
             /// <summary>
             /// <para>The route.</para>
             /// 

@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The routine name, which must be unique in the same account.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-routine1</para>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The specification of the routine.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5ms</para>

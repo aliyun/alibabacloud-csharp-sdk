@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class DeleteRoutineRelatedRecordRequest : TeaModel {
         /// <summary>
         /// <para>The routine name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DeleteRoutineRelatedRecord</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The record ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -31,6 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The record name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-xxx.example.com</para>
@@ -41,6 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The website ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

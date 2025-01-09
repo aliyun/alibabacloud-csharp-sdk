@@ -9,8 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineRelatedRouteRequest : TeaModel {
+        [NameInMap("ByPass")]
+        [Validation(Required=false)]
+        public string ByPass { get; set; }
+
         /// <summary>
         /// <para>The routine name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateRoutineRelatedRoute</para>
@@ -21,6 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The route.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em>.example.com/path1</em></para>
@@ -31,6 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The website ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54362329990032</para>

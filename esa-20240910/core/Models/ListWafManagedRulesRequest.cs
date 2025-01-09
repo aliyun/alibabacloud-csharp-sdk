@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? AttackType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF rule, which can be obtained by calling the <a href="~~ListWafRules~~">ListWafRules</a> operation.</para>
+        /// <para>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<int?> ProtectionLevels { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>The status of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
