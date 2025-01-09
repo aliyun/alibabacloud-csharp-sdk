@@ -1,3 +1,8 @@
+2025-01-09 Version: 4.7.0
+- Support API ModifyInstanceVpcAttributeForConsole.
+- Update API DescribeApiGroups: add param BasePath.
+
+
 2025-01-07 Version: 4.6.0
 - Support API ModifyInstanceVpcAttributeForConsole.
 - Update API DescribeApiGroups: add param BasePath.
