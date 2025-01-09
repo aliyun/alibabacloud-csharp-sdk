@@ -141,6 +141,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public List<string> AirlinePreferList { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>A1</para>
+            /// </summary>
+            [NameInMap("service_quality")]
+            [Validation(Required=false)]
+            public string ServiceQuality { get; set; }
+
         }
 
     }
