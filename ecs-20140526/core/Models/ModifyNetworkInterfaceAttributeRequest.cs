@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork EnhancedNetwork { get; set; }
         public class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork : TeaModel {
+            [NameInMap("EnableRss")]
+            [Validation(Required=false)]
+            public bool? EnableRss { get; set; }
+
             /// <summary>
             /// <para>This parameter is not publicly available.</para>
             /// 

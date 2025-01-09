@@ -105,18 +105,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
-        /// </remarks>
+        /// <para>The tags of the image creation task.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImagePipelineExecutionsRequestTag> Tag { get; set; }
         public class DescribeImagePipelineExecutionsRequestTag : TeaModel {
             /// <summary>
-            /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
-            /// </remarks>
+            /// <para>The key of tag N of the image creation task. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -126,9 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
-            /// </remarks>
+            /// <para>The value of tag N of the image creation task. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>

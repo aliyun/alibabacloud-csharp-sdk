@@ -163,7 +163,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance whose operating system you want to replace.</para>
+        /// <remarks>
+        /// <para> Make sure that the instance is in the <c>Stopped</c> (<c>Stopped</c>) state.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

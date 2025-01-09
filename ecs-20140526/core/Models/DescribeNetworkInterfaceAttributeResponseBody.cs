@@ -278,6 +278,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork EnhancedNetwork { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork : TeaModel {
+            [NameInMap("EnableRss")]
+            [Validation(Required=false)]
+            public bool? EnableRss { get; set; }
+
             /// <summary>
             /// <para>This parameter is not publicly available.</para>
             /// 

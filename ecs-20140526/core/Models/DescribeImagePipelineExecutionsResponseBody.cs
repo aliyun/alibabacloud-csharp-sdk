@@ -115,9 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <remarks>
-                /// <para>This parameter is not publicly available.</para>
-                /// </remarks>
+                /// <para>The tags of the image creation task.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -128,9 +126,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag : TeaModel {
                         /// <summary>
-                        /// <remarks>
-                        /// <para>This parameter is not publicly available.</para>
-                        /// </remarks>
+                        /// <para>The tag key of the image creation task.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>null</para>
@@ -140,9 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <remarks>
-                        /// <para>This parameter is not publicly available.</para>
-                        /// </remarks>
+                        /// <para>The tag value of the image creation task.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>null</para>

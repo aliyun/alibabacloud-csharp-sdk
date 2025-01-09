@@ -1,3 +1,10 @@
+2025-01-09 Version: 5.0.2
+- Update API CreateNetworkInterface: update param EnhancedNetwork.
+- Update API DescribeInstanceTypes: update response param.
+- Update API DescribeNetworkInterfaceAttribute: update response param.
+- Update API ModifyNetworkInterfaceAttribute: update param EnhancedNetwork.
+
+
 2025-01-06 Version: 5.0.1
 - Update API DescribePrefixLists: add param PrefixListId.
 - Update API DescribePrefixLists: update param PrefixListId.

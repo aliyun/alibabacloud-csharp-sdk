@@ -131,6 +131,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork EnhancedNetwork { get; set; }
                 public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork : TeaModel {
+                    [NameInMap("RssSupport")]
+                    [Validation(Required=false)]
+                    public bool? RssSupport { get; set; }
+
                     /// <summary>
                     /// <remarks>
                     /// <para> This parameter is not publicly available.</para>

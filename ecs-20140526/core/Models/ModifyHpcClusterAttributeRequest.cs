@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyHpcClusterAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <b>ClientToken</b> value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <b>The token can contain only ASCII characters and cannot exceed 64 characters in length.</b> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the HPC cluster. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the HPC cluster. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// <para>This parameter is empty by default.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HpcClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// <para>This parameter is empty by default.</para>
         /// 
         /// <b>Example:</b>
@@ -61,6 +61,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OwnerAccount { get; set; }
 
         /// <summary>
+        /// <para>RAM用户的虚拟账号ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the HPC cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +82,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>资源主账号的账号名称。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EcsforCloud</para>
         /// </summary>
@@ -88,6 +92,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
+        /// <para>资源主账号的ID，亦即UID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>
