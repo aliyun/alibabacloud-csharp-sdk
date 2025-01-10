@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterDiagnosisCheckItemsRequest : TeaModel {
         /// <summary>
-        /// <para>查询语言。</para>
+        /// <para>The query language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh_CN</para>

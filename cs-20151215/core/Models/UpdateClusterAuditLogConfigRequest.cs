@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateClusterAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Enable or disable the audit log feature.</para>
+        /// <para>Enable or disable audit logging.</para>
         /// <list type="bullet">
-        /// <item><description>false: enables the audit log feature or updates the audit log configuration.</description></item>
-        /// <item><description>true: disables the audit log feature.</description></item>
+        /// <item><description>false: enables audit logging or updates the audit logging configurations.</description></item>
+        /// <item><description>true: disables audit logging.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Disable { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/zh/sls/product-overview/project?spm=a2c4g.11186623.0.i3">SLS project</a> to which the <a href="https://help.aliyun.com/zh/sls/product-overview/logstore?spm=a2c4g.11186623.0.0.48287ce0jAUWWM">Logstore</a> belongs.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> to which the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> that stores the cluster audit logs belongs.</para>
         /// <list type="bullet">
         /// <item><description>Default value: k8s-log-{clusterid}.</description></item>
         /// <item><description>After the cluster audit log feature is enabled, a Logstore is created in the specified SLS project to store the cluster audit logs.</description></item>
-        /// <item><description>If you want to change the project after the cluster audit log feature is enabled, you can use this parameter to specify another SLS project. You can perform this operation only in ACK managed clusters.</description></item>
+        /// <item><description>If you want to change the project after audit logging is enabled for the cluster, you can use this parameter to specify another project. You can perform this operation only in ACK managed clusters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

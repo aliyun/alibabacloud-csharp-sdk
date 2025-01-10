@@ -1553,6 +1553,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["min_replica_count"] = request.MinReplicaCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priorities))
+            {
+                body["priorities"] = request.Priorities;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecycleNodeDeletionEnabled))
             {
                 body["recycle_node_deletion_enabled"] = request.RecycleNodeDeletionEnabled;
@@ -1654,6 +1658,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReplicaCount))
             {
                 body["min_replica_count"] = request.MinReplicaCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priorities))
+            {
+                body["priorities"] = request.Priorities;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecycleNodeDeletionEnabled))
             {
@@ -13531,7 +13539,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto O\&amp;M schedules of a cluster.</para>
+        /// <para>Queries the automated maintenance schedules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13581,7 +13589,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto O\&amp;M schedules of a cluster.</para>
+        /// <para>Queries the automated maintenance schedules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13631,7 +13639,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto O\&amp;M schedules of a cluster.</para>
+        /// <para>Queries the automated maintenance schedules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13650,7 +13658,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto O\&amp;M schedules of a cluster.</para>
+        /// <para>Queries the automated maintenance schedules of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18734,7 +18742,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</para>
+        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18789,7 +18797,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</para>
+        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18844,7 +18852,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</para>
+        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18868,7 +18876,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</para>
+        /// <para>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">

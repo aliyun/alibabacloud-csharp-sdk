@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public int? MinReplicaCount { get; set; }
 
+        [NameInMap("priorities")]
+        [Validation(Required=false)]
+        public Dictionary<string, List<string>> Priorities { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode. For more information about the swift mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling mode</a>. Default value: false Valid values:</para>
         /// <list type="bullet">

@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UnInstallClusterAddonsResponseBody : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The ID of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c5b5e80b0b64a4bf6939d2d8fbbc5****</para>
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>74D1512F-67DA-54E8-99EA-4D50EB4898F4</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>任务ID。</para>
+        /// <para>The ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>T-66e39b39c0fdd001320005c0</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]
