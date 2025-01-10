@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDocumentCollectionRequest : TeaModel {
         /// <summary>
-        /// <para>Name of the document library to be created.</para>
+        /// <para>The name of the document collection that you want to create.</para>
         /// <remarks>
         /// <para>The name must comply with PostgreSQL object naming restrictions.</para>
         /// </remarks>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</para>
         /// </remarks>
@@ -38,26 +38,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Vectorization algorithm.</para>
+        /// <para>The vectorization algorithm.</para>
         /// <remarks>
-        /// <para>Supported algorithms:</para>
-        /// <list type="bullet">
-        /// <item><description>text-embedding-v1: 1536 dimensions</description></item>
-        /// <item><description>text-embedding-v2: 1536 dimensions</description></item>
-        /// <item><description>text2vec: 1024 dimensions</description></item>
-        /// <item><description>m3e-base: 768 dimensions</description></item>
-        /// <item><description>m3e-small: 512 dimensions</description></item>
-        /// <item><description>clip-vit-b-32: CLIP ViT-B/32 model, 512 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-vit-b-16: CLIP ViT-B/16 model, 512 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-vit-l-14: CLIP ViT-L/14 model, 768 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-vit-l-14-336px: CLIP ViT-L/14@336px model, 768 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-rn50: CLIP RN50 model, 1024 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-rn101: CLIP RN101 model, 512 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-rn50x4: CLIP RN50x4 model, 640 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-rn50x16: CLIP RN50x16 model, 768 dimensions, image vectorization algorithm</description></item>
-        /// <item><description>clip-rn50x64: CLIP RN50x64 model, 1024 dimensions, image vectorization algorithm</description></item>
-        /// </list>
+        /// <para> Supported algorithms:</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>text-embedding-v1: the algorithm that produces 1536-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>text-embedding-v2: the algorithm that produces 1536-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>text2vec: the algorithm that produces 1024-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>m3e-base: the algorithm that produces 768-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>m3e-small: the algorithm that produces 512-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-vit-b-32: the image vectorization algorithm that uses the Contrastive Language-Image Pre-Training (CLIP) ViT-B/32 model and produces 512-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-vit-b-16: the image vectorization algorithm that uses the CLIP ViT-B/16 model and produces 512-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-vit-l-14: the image vectorization algorithm that uses the CLIP ViT-L/14 model and produces 768-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-vit-l-14-336px: the image vectorization algorithm that uses the CLIP ViT-L/14@336px model and produces 768-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-rn50: the image vectorization algorithm that uses the CLIP RN50 model and produces 1024-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-rn101: the image vectorization algorithm that uses the CLIP RN101 model and produces 512-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-rn50x4: the image vectorization algorithm that uses the CLIP RN50x4 model and produces 640-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-rn50x16: the image vectorization algorithm that uses the CLIP RN50x16 model and produces 768-dimensional vectors.</para>
+        /// </description></item>
+        /// <item><description><para>clip-rn50x64: the image vectorization algorithm that uses the CLIP RN50x64 model and produces 1024-dimensional vectors.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>text-embedding-v1</para>
@@ -67,13 +81,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EmbeddingModel { get; set; }
 
         /// <summary>
-        /// <para>Whether to use mmap to build HNSW index, default is 0. If the data does not need to be deleted and there are requirements for the speed of uploading data, it is recommended to set this to 1.</para>
+        /// <para>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>When set to 0, segment-page storage will be used by default to build the index. This mode can use PostgreSQL\&quot;s shared_buffer as a cache and supports operations such as deletion and updates.</description></item>
-        /// <item><description>When set to 1, the index will be built using mmap. This mode does not support deletion or update operations.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.</para>
+        /// </description></item>
+        /// <item><description><para>1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -83,7 +99,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ExternalStorage { get; set; }
 
         /// <summary>
-        /// <para>Fields used for full-text search, separated by commas (,). These fields must be keys defined in Metadata.</para>
+        /// <para>The fields used for full-text search. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,page</para>
@@ -93,10 +109,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FullTextRetrievalFields { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of neighbors in the HNSW algorithm, ranging from 1 to 1000. The interface will automatically set this value based on the vector dimension, and it generally does not need to be manually configured.</para>
+        /// <para>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</para>
         /// <remarks>
-        /// <para>It is recommended to set according to the vector dimension: &gt;- For dimensions less than or equal to 384: 16 &gt;- For dimensions greater than 384 but less than or equal to 768: 32 &gt;- For dimensions greater than 768 but less than or equal to 1024: 64 &gt;- For dimensions greater than 1024: 128</para>
+        /// <para> We recommend that you configure this parameter based on the value of the Dimension parameter.</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</para>
+        /// </description></item>
+        /// <item><description><para>If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</para>
+        /// </description></item>
+        /// <item><description><para>If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</para>
+        /// </description></item>
+        /// <item><description><para>If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -106,7 +132,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? HnswM { get; set; }
 
         /// <summary>
-        /// <para>Name of the management account with rds_superuser permissions.</para>
+        /// <para>The name of the manager account that has the rds_superuser permission.</para>
         /// <remarks>
         /// <para>You can create an account through the console -&gt; Account Management, or by using the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> API.</para>
         /// </remarks>
@@ -120,7 +146,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccount { get; set; }
 
         /// <summary>
-        /// <para>Management account password.</para>
+        /// <para>The password of the management account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -131,12 +157,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccountPassword { get; set; }
 
         /// <summary>
-        /// <para>Metadata of vector data, in the form of a MAP JSON string. The key represents the field name, and the value represents the data type.</para>
+        /// <para>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</para>
         /// <remarks>
-        /// <para>Supported data types</para>
+        /// <para>Supported data types:</para>
         /// <list type="bullet">
-        /// <item><description>For a list of data types, see: <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types-1/">Data Types</a>.</description></item>
-        /// <item><description>The money type is not supported at this time.</description></item>
+        /// <item><description>For information about data types, see: <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types-1/">Data Types</a>.</description></item>
+        /// <item><description>The money type is not supported.</description></item>
         /// </list>
         /// </remarks>
         /// <remarks>
@@ -150,17 +176,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Metadata { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>title</para>
+        /// </summary>
         [NameInMap("MetadataIndices")]
         [Validation(Required=false)]
         public string MetadataIndices { get; set; }
 
         /// <summary>
-        /// <para>Method used when building the vector index.</para>
-        /// <para>Value description:</para>
+        /// <para>The method that is used to create vector indexes.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>l2</b>: Euclidean distance.</description></item>
-        /// <item><description><b>ip</b>: Inner product (dot product) distance.</description></item>
-        /// <item><description><b>cosine</b> (default): Cosine similarity.</description></item>
+        /// <item><description><b>ip</b>: inner product distance.</description></item>
+        /// <item><description><b>cosine</b> (default): cosine similarity.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -171,9 +201,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Metrics { get; set; }
 
         /// <summary>
-        /// <para>Namespace, default is public.</para>
+        /// <para>The name of the namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can create a namespace using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -188,7 +218,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Tokenizer used for full-text search, default is zh_cn.</para>
+        /// <para>The analyzer that is used for full-text search. Default value: zh_cn.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh_cn</para>
@@ -198,10 +228,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Parser { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable PQ (Product Quantization) algorithm for index acceleration. It is recommended to enable this when the data volume exceeds 500,000. Value description:</para>
+        /// <para>Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Disabled.</description></item>
-        /// <item><description>1: Enabled (default).</description></item>
+        /// <item><description>0: no.</description></item>
+        /// <item><description>1 (default): yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -212,7 +242,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PqEnable { get; set; }
 
         /// <summary>
-        /// <para>ID of the region where the instance is located.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -1,3 +1,11 @@
+2025-01-10 Version: 2.2.0
+- Support API CreateBackup.
+- Support API DeleteBackup.
+- Support API DescribeBackupJob.
+- Support API ListBackupJobs.
+- Update API ModifyMasterSpec: update param AccessKeyId.
+
+
 2024-12-20 Version: 2.1.0
 - Support API CreateRemoteADBDataSource.
 - Support API DeleteAccount.

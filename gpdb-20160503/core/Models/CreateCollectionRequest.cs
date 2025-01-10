@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ExternalStorage { get; set; }
 
         /// <summary>
-        /// <para>Fields used for full-text search, separated by commas (,). These fields must be keys defined in Metadata.</para>
+        /// <para>The fields used for full-text search. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,content</para>
@@ -141,17 +141,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Metadata { get; set; }
 
+        /// <summary>
+        /// <para>The scalar index fields. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>title</para>
+        /// </summary>
         [NameInMap("MetadataIndices")]
         [Validation(Required=false)]
         public string MetadataIndices { get; set; }
 
         /// <summary>
-        /// <para>Method used when building the vector index.</para>
-        /// <para>Value description:</para>
+        /// <para>The method that is used to create vector indexes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>l2</b>: Euclidean distance.</description></item>
-        /// <item><description><b>ip</b>: Inner product (dot product) distance.</description></item>
-        /// <item><description><b>cosine</b> (default): Cosine similarity.</description></item>
+        /// <item><description>l2: Euclidean distance.</description></item>
+        /// <item><description>ip: inner product distance.</description></item>
+        /// <item><description>cosine: cosine similarity.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
