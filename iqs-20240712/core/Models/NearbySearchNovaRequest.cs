@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        [NameInMap("sortRule")]
+        [Validation(Required=false)]
+        public string SortRule { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>GAS_STATION|RESTAURANT|HOTEL|ATTRACTION</para>
