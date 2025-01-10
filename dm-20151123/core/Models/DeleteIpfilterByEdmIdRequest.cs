@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? FromType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10120</para>
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

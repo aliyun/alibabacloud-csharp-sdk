@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CreateUserSuppressionRequest : TeaModel {
+        /// <summary>
+        /// <para>Email address or domain name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.net">test@example.net</a></para>
+        /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }

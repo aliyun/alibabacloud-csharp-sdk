@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 添加IP防护信息
-         *
-         * @param request AddIpfilterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddIpfilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddIpfilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddIpfilterResponse
+        /// </returns>
         public AddIpfilterResponse AddIpfilterWithOptions(AddIpfilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -83,13 +91,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<AddIpfilterResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 添加IP防护信息
-         *
-         * @param request AddIpfilterRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AddIpfilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddIpfilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddIpfilterResponse
+        /// </returns>
         public async Task<AddIpfilterResponse> AddIpfilterWithOptionsAsync(AddIpfilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -129,37 +145,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<AddIpfilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 添加IP防护信息
-         *
-         * @param request AddIpfilterRequest
-         * @return AddIpfilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddIpfilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddIpfilterResponse
+        /// </returns>
         public AddIpfilterResponse AddIpfilter(AddIpfilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddIpfilterWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 添加IP防护信息
-         *
-         * @param request AddIpfilterRequest
-         * @return AddIpfilterResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddIpfilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddIpfilterResponse
+        /// </returns>
         public async Task<AddIpfilterResponse> AddIpfilterAsync(AddIpfilterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddIpfilterWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 验证回信地址
-         *
-         * @param request ApproveReplyMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApproveReplyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveReplyMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveReplyMailAddressResponse
+        /// </returns>
         public ApproveReplyMailAddressResponse ApproveReplyMailAddressWithOptions(ApproveReplyMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -199,13 +235,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ApproveReplyMailAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 验证回信地址
-         *
-         * @param request ApproveReplyMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ApproveReplyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveReplyMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveReplyMailAddressResponse
+        /// </returns>
         public async Task<ApproveReplyMailAddressResponse> ApproveReplyMailAddressWithOptionsAsync(ApproveReplyMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -245,37 +289,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ApproveReplyMailAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 验证回信地址
-         *
-         * @param request ApproveReplyMailAddressRequest
-         * @return ApproveReplyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveReplyMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveReplyMailAddressResponse
+        /// </returns>
         public ApproveReplyMailAddressResponse ApproveReplyMailAddress(ApproveReplyMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ApproveReplyMailAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 验证回信地址
-         *
-         * @param request ApproveReplyMailAddressRequest
-         * @return ApproveReplyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApproveReplyMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApproveReplyMailAddressResponse
+        /// </returns>
         public async Task<ApproveReplyMailAddressResponse> ApproveReplyMailAddressAsync(ApproveReplyMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApproveReplyMailAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量发送邮件
-         *
-         * @param request BatchSendMailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量发送邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSendMailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMailResponse
+        /// </returns>
         public BatchSendMailResponse BatchSendMailWithOptions(BatchSendMailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -291,6 +355,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
             {
                 query["ClickTrace"] = request.ClickTrace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Headers))
+            {
+                query["Headers"] = request.Headers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -351,13 +419,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<BatchSendMailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量发送邮件
-         *
-         * @param request BatchSendMailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BatchSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量发送邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSendMailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMailResponse
+        /// </returns>
         public async Task<BatchSendMailResponse> BatchSendMailWithOptionsAsync(BatchSendMailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -373,6 +449,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
             {
                 query["ClickTrace"] = request.ClickTrace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Headers))
+            {
+                query["Headers"] = request.Headers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -433,37 +513,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<BatchSendMailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量发送邮件
-         *
-         * @param request BatchSendMailRequest
-         * @return BatchSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量发送邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSendMailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMailResponse
+        /// </returns>
         public BatchSendMailResponse BatchSendMail(BatchSendMailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchSendMailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量发送邮件
-         *
-         * @param request BatchSendMailRequest
-         * @return BatchSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量发送邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchSendMailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchSendMailResponse
+        /// </returns>
         public async Task<BatchSendMailResponse> BatchSendMailAsync(BatchSendMailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchSendMailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 校验域名状态
-         *
-         * @param request CheckDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDomainResponse
+        /// </returns>
         public CheckDomainResponse CheckDomainWithOptions(CheckDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -503,13 +603,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CheckDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 校验域名状态
-         *
-         * @param request CheckDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDomainResponse
+        /// </returns>
         public async Task<CheckDomainResponse> CheckDomainWithOptionsAsync(CheckDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -549,37 +657,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CheckDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 校验域名状态
-         *
-         * @param request CheckDomainRequest
-         * @return CheckDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDomainResponse
+        /// </returns>
         public CheckDomainResponse CheckDomain(CheckDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 校验域名状态
-         *
-         * @param request CheckDomainRequest
-         * @return CheckDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDomainResponse
+        /// </returns>
         public async Task<CheckDomainResponse> CheckDomainAsync(CheckDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 校验回信地址
-         *
-         * @param request CheckReplyToMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckReplyToMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReplyToMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReplyToMailAddressResponse
+        /// </returns>
         public CheckReplyToMailAddressResponse CheckReplyToMailAddressWithOptions(CheckReplyToMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -627,13 +755,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CheckReplyToMailAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 校验回信地址
-         *
-         * @param request CheckReplyToMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CheckReplyToMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReplyToMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReplyToMailAddressResponse
+        /// </returns>
         public async Task<CheckReplyToMailAddressResponse> CheckReplyToMailAddressWithOptionsAsync(CheckReplyToMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -681,37 +817,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CheckReplyToMailAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 校验回信地址
-         *
-         * @param request CheckReplyToMailAddressRequest
-         * @return CheckReplyToMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReplyToMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReplyToMailAddressResponse
+        /// </returns>
         public CheckReplyToMailAddressResponse CheckReplyToMailAddress(CheckReplyToMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CheckReplyToMailAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 校验回信地址
-         *
-         * @param request CheckReplyToMailAddressRequest
-         * @return CheckReplyToMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验回信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckReplyToMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckReplyToMailAddressResponse
+        /// </returns>
         public async Task<CheckReplyToMailAddressResponse> CheckReplyToMailAddressAsync(CheckReplyToMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckReplyToMailAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建域名
-         *
-         * @param request CreateDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public CreateDomainResponse CreateDomainWithOptions(CreateDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -751,13 +907,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建域名
-         *
-         * @param request CreateDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public async Task<CreateDomainResponse> CreateDomainWithOptionsAsync(CreateDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -797,35 +961,52 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建域名
-         *
-         * @param request CreateDomainRequest
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public CreateDomainResponse CreateDomain(CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建域名
-         *
-         * @param request CreateDomainRequest
-         * @return CreateDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDomainResponse
+        /// </returns>
         public async Task<CreateDomainResponse> CreateDomainAsync(CreateDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMailAddressResponse
-         */
+        /// <param name="request">
+        /// CreateMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMailAddressResponse
+        /// </returns>
         public CreateMailAddressResponse CreateMailAddressWithOptions(CreateMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -873,11 +1054,16 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateMailAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateMailAddressResponse
-         */
+        /// <param name="request">
+        /// CreateMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMailAddressResponse
+        /// </returns>
         public async Task<CreateMailAddressResponse> CreateMailAddressWithOptionsAsync(CreateMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -925,33 +1111,47 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateMailAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateMailAddressRequest
-         * @return CreateMailAddressResponse
-         */
+        /// <param name="request">
+        /// CreateMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMailAddressResponse
+        /// </returns>
         public CreateMailAddressResponse CreateMailAddress(CreateMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateMailAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateMailAddressRequest
-         * @return CreateMailAddressResponse
-         */
+        /// <param name="request">
+        /// CreateMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMailAddressResponse
+        /// </returns>
         public async Task<CreateMailAddressResponse> CreateMailAddressAsync(CreateMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMailAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建收件人列表
-         *
-         * @param request CreateReceiverRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReceiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReceiverResponse
+        /// </returns>
         public CreateReceiverResponse CreateReceiverWithOptions(CreateReceiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -999,13 +1199,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateReceiverResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建收件人列表
-         *
-         * @param request CreateReceiverRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReceiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReceiverResponse
+        /// </returns>
         public async Task<CreateReceiverResponse> CreateReceiverWithOptionsAsync(CreateReceiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1053,37 +1261,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateReceiverResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建收件人列表
-         *
-         * @param request CreateReceiverRequest
-         * @return CreateReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReceiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReceiverResponse
+        /// </returns>
         public CreateReceiverResponse CreateReceiver(CreateReceiverRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateReceiverWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建收件人列表
-         *
-         * @param request CreateReceiverRequest
-         * @return CreateReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReceiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReceiverResponse
+        /// </returns>
         public async Task<CreateReceiverResponse> CreateReceiverAsync(CreateReceiverRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateReceiverWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建标签
-         *
-         * @param request CreateTagRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public CreateTagResponse CreateTagWithOptions(CreateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1127,13 +1355,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateTagResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建标签
-         *
-         * @param request CreateTagRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public async Task<CreateTagResponse> CreateTagWithOptionsAsync(CreateTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1177,37 +1413,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建标签
-         *
-         * @param request CreateTagRequest
-         * @return CreateTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public CreateTagResponse CreateTag(CreateTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTagWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建标签
-         *
-         * @param request CreateTagRequest
-         * @return CreateTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public async Task<CreateTagResponse> CreateTagAsync(CreateTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTagWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 创建用户无效地址
-         *
-         * @param request CreateUserSuppressionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create User\&quot;s Invalid Address</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserSuppressionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSuppressionResponse
+        /// </returns>
         public CreateUserSuppressionResponse CreateUserSuppressionWithOptions(CreateUserSuppressionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1247,13 +1503,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateUserSuppressionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建用户无效地址
-         *
-         * @param request CreateUserSuppressionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create User\&quot;s Invalid Address</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserSuppressionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSuppressionResponse
+        /// </returns>
         public async Task<CreateUserSuppressionResponse> CreateUserSuppressionWithOptionsAsync(CreateUserSuppressionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1293,37 +1557,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<CreateUserSuppressionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建用户无效地址
-         *
-         * @param request CreateUserSuppressionRequest
-         * @return CreateUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create User\&quot;s Invalid Address</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserSuppressionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSuppressionResponse
+        /// </returns>
         public CreateUserSuppressionResponse CreateUserSuppression(CreateUserSuppressionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserSuppressionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 创建用户无效地址
-         *
-         * @param request CreateUserSuppressionRequest
-         * @return CreateUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create User\&quot;s Invalid Address</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserSuppressionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserSuppressionResponse
+        /// </returns>
         public async Task<CreateUserSuppressionResponse> CreateUserSuppressionAsync(CreateUserSuppressionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserSuppressionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除域名
-         *
-         * @param request DeleteDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public DeleteDomainResponse DeleteDomainWithOptions(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1363,13 +1647,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除域名
-         *
-         * @param request DeleteDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1409,37 +1701,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除域名
-         *
-         * @param request DeleteDomainRequest
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除域名
-         *
-         * @param request DeleteDomainRequest
-         * @return DeleteDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDomainResponse
+        /// </returns>
         public async Task<DeleteDomainResponse> DeleteDomainAsync(DeleteDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 从无效地址库删除无效地址
-         *
-         * @param request DeleteInvalidAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从无效地址库删除无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInvalidAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInvalidAddressResponse
+        /// </returns>
         public DeleteInvalidAddressResponse DeleteInvalidAddressWithOptions(DeleteInvalidAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1479,13 +1791,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteInvalidAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 从无效地址库删除无效地址
-         *
-         * @param request DeleteInvalidAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从无效地址库删除无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInvalidAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInvalidAddressResponse
+        /// </returns>
         public async Task<DeleteInvalidAddressResponse> DeleteInvalidAddressWithOptionsAsync(DeleteInvalidAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1525,37 +1845,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteInvalidAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 从无效地址库删除无效地址
-         *
-         * @param request DeleteInvalidAddressRequest
-         * @return DeleteInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从无效地址库删除无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInvalidAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInvalidAddressResponse
+        /// </returns>
         public DeleteInvalidAddressResponse DeleteInvalidAddress(DeleteInvalidAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteInvalidAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 从无效地址库删除无效地址
-         *
-         * @param request DeleteInvalidAddressRequest
-         * @return DeleteInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从无效地址库删除无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInvalidAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInvalidAddressResponse
+        /// </returns>
         public async Task<DeleteInvalidAddressResponse> DeleteInvalidAddressAsync(DeleteInvalidAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteInvalidAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除IP保护信息
-         *
-         * @param request DeleteIpfilterByEdmIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIpfilterByEdmIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpfilterByEdmIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpfilterByEdmIdResponse
+        /// </returns>
         public DeleteIpfilterByEdmIdResponse DeleteIpfilterByEdmIdWithOptions(DeleteIpfilterByEdmIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1599,13 +1939,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteIpfilterByEdmIdResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除IP保护信息
-         *
-         * @param request DeleteIpfilterByEdmIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteIpfilterByEdmIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpfilterByEdmIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpfilterByEdmIdResponse
+        /// </returns>
         public async Task<DeleteIpfilterByEdmIdResponse> DeleteIpfilterByEdmIdWithOptionsAsync(DeleteIpfilterByEdmIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1649,37 +1997,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteIpfilterByEdmIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除IP保护信息
-         *
-         * @param request DeleteIpfilterByEdmIdRequest
-         * @return DeleteIpfilterByEdmIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpfilterByEdmIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpfilterByEdmIdResponse
+        /// </returns>
         public DeleteIpfilterByEdmIdResponse DeleteIpfilterByEdmId(DeleteIpfilterByEdmIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteIpfilterByEdmIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除IP保护信息
-         *
-         * @param request DeleteIpfilterByEdmIdRequest
-         * @return DeleteIpfilterByEdmIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpfilterByEdmIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpfilterByEdmIdResponse
+        /// </returns>
         public async Task<DeleteIpfilterByEdmIdResponse> DeleteIpfilterByEdmIdAsync(DeleteIpfilterByEdmIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteIpfilterByEdmIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除发信地址
-         *
-         * @param request DeleteMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMailAddressResponse
+        /// </returns>
         public DeleteMailAddressResponse DeleteMailAddressWithOptions(DeleteMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1719,13 +2087,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteMailAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除发信地址
-         *
-         * @param request DeleteMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMailAddressResponse
+        /// </returns>
         public async Task<DeleteMailAddressResponse> DeleteMailAddressWithOptionsAsync(DeleteMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1765,37 +2141,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteMailAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除发信地址
-         *
-         * @param request DeleteMailAddressRequest
-         * @return DeleteMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMailAddressResponse
+        /// </returns>
         public DeleteMailAddressResponse DeleteMailAddress(DeleteMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteMailAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除发信地址
-         *
-         * @param request DeleteMailAddressRequest
-         * @return DeleteMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMailAddressResponse
+        /// </returns>
         public async Task<DeleteMailAddressResponse> DeleteMailAddressAsync(DeleteMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMailAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除收件人列表
-         *
-         * @param request DeleteReceiverRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverResponse
+        /// </returns>
         public DeleteReceiverResponse DeleteReceiverWithOptions(DeleteReceiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1835,13 +2231,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteReceiverResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除收件人列表
-         *
-         * @param request DeleteReceiverRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverResponse
+        /// </returns>
         public async Task<DeleteReceiverResponse> DeleteReceiverWithOptionsAsync(DeleteReceiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1881,37 +2285,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteReceiverResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除收件人列表
-         *
-         * @param request DeleteReceiverRequest
-         * @return DeleteReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverResponse
+        /// </returns>
         public DeleteReceiverResponse DeleteReceiver(DeleteReceiverRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteReceiverWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除收件人列表
-         *
-         * @param request DeleteReceiverRequest
-         * @return DeleteReceiverResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除收件人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverResponse
+        /// </returns>
         public async Task<DeleteReceiverResponse> DeleteReceiverAsync(DeleteReceiverRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteReceiverWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除单个收件人
-         *
-         * @param request DeleteReceiverDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverDetailResponse
+        /// </returns>
         public DeleteReceiverDetailResponse DeleteReceiverDetailWithOptions(DeleteReceiverDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1955,13 +2379,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteReceiverDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除单个收件人
-         *
-         * @param request DeleteReceiverDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverDetailResponse
+        /// </returns>
         public async Task<DeleteReceiverDetailResponse> DeleteReceiverDetailWithOptionsAsync(DeleteReceiverDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2005,37 +2437,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteReceiverDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除单个收件人
-         *
-         * @param request DeleteReceiverDetailRequest
-         * @return DeleteReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverDetailResponse
+        /// </returns>
         public DeleteReceiverDetailResponse DeleteReceiverDetail(DeleteReceiverDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteReceiverDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除单个收件人
-         *
-         * @param request DeleteReceiverDetailRequest
-         * @return DeleteReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReceiverDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReceiverDetailResponse
+        /// </returns>
         public async Task<DeleteReceiverDetailResponse> DeleteReceiverDetailAsync(DeleteReceiverDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteReceiverDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除标签
-         *
-         * @param request DeleteTagRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public DeleteTagResponse DeleteTagWithOptions(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2075,13 +2527,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteTagResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除标签
-         *
-         * @param request DeleteTagRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public async Task<DeleteTagResponse> DeleteTagWithOptionsAsync(DeleteTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2121,35 +2581,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DeleteTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除标签
-         *
-         * @param request DeleteTagRequest
-         * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public DeleteTagResponse DeleteTag(DeleteTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTagWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除标签
-         *
-         * @param request DeleteTagRequest
-         * @return DeleteTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public async Task<DeleteTagResponse> DeleteTagAsync(DeleteTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTagWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request DescAccountSummaryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescAccountSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve account information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescAccountSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescAccountSummaryResponse
+        /// </returns>
         public DescAccountSummaryResponse DescAccountSummaryWithOptions(DescAccountSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2185,11 +2667,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DescAccountSummaryResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request DescAccountSummaryRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescAccountSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve account information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescAccountSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescAccountSummaryResponse
+        /// </returns>
         public async Task<DescAccountSummaryResponse> DescAccountSummaryWithOptionsAsync(DescAccountSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2225,33 +2717,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DescAccountSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request DescAccountSummaryRequest
-         * @return DescAccountSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve account information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescAccountSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescAccountSummaryResponse
+        /// </returns>
         public DescAccountSummaryResponse DescAccountSummary(DescAccountSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescAccountSummaryWithOptions(request, runtime);
         }
 
-        /**
-         * @param request DescAccountSummaryRequest
-         * @return DescAccountSummaryResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve account information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescAccountSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescAccountSummaryResponse
+        /// </returns>
         public async Task<DescAccountSummaryResponse> DescAccountSummaryAsync(DescAccountSummaryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescAccountSummaryWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取域名详情
-         *
-         * @param request DescDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescDomainResponse
+        /// </returns>
         public DescDomainResponse DescDomainWithOptions(DescDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2295,13 +2811,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DescDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取域名详情
-         *
-         * @param request DescDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescDomainResponse
+        /// </returns>
         public async Task<DescDomainResponse> DescDomainWithOptionsAsync(DescDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2345,37 +2869,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<DescDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取域名详情
-         *
-         * @param request DescDomainRequest
-         * @return DescDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescDomainResponse
+        /// </returns>
         public DescDomainResponse DescDomain(DescDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取域名详情
-         *
-         * @param request DescDomainRequest
-         * @return DescDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescDomainResponse
+        /// </returns>
         public async Task<DescDomainResponse> DescDomainAsync(DescDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取IP保护信息
-         *
-         * @param request GetIpProtectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpProtectionResponse
+        /// </returns>
         public GetIpProtectionResponse GetIpProtectionWithOptions(GetIpProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2411,13 +2955,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetIpProtectionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取IP保护信息
-         *
-         * @param request GetIpProtectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpProtectionResponse
+        /// </returns>
         public async Task<GetIpProtectionResponse> GetIpProtectionWithOptionsAsync(GetIpProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2453,37 +3005,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetIpProtectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取IP保护信息
-         *
-         * @param request GetIpProtectionRequest
-         * @return GetIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpProtectionResponse
+        /// </returns>
         public GetIpProtectionResponse GetIpProtection(GetIpProtectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetIpProtectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取IP保护信息
-         *
-         * @param request GetIpProtectionRequest
-         * @return GetIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP保护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpProtectionResponse
+        /// </returns>
         public async Task<GetIpProtectionResponse> GetIpProtectionAsync(GetIpProtectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetIpProtectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取IP防护信息
-         *
-         * @param request GetIpfilterListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIpfilterListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpfilterListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpfilterListResponse
+        /// </returns>
         public GetIpfilterListResponse GetIpfilterListWithOptions(GetIpfilterListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2519,13 +3091,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetIpfilterListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取IP防护信息
-         *
-         * @param request GetIpfilterListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetIpfilterListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpfilterListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpfilterListResponse
+        /// </returns>
         public async Task<GetIpfilterListResponse> GetIpfilterListWithOptionsAsync(GetIpfilterListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2561,37 +3141,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetIpfilterListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取IP防护信息
-         *
-         * @param request GetIpfilterListRequest
-         * @return GetIpfilterListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpfilterListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpfilterListResponse
+        /// </returns>
         public GetIpfilterListResponse GetIpfilterList(GetIpfilterListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetIpfilterListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取IP防护信息
-         *
-         * @param request GetIpfilterListRequest
-         * @return GetIpfilterListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IP防护信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpfilterListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpfilterListResponse
+        /// </returns>
         public async Task<GetIpfilterListResponse> GetIpfilterListAsync(GetIpfilterListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetIpfilterListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取用户无效地址级别配置
-         *
-         * @param request GetSuppressionListLevelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuppressionListLevelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuppressionListLevelResponse
+        /// </returns>
         public GetSuppressionListLevelResponse GetSuppressionListLevelWithOptions(GetSuppressionListLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2627,13 +3227,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetSuppressionListLevelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户无效地址级别配置
-         *
-         * @param request GetSuppressionListLevelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuppressionListLevelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuppressionListLevelResponse
+        /// </returns>
         public async Task<GetSuppressionListLevelResponse> GetSuppressionListLevelWithOptionsAsync(GetSuppressionListLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2669,37 +3277,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetSuppressionListLevelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取用户无效地址级别配置
-         *
-         * @param request GetSuppressionListLevelRequest
-         * @return GetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuppressionListLevelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuppressionListLevelResponse
+        /// </returns>
         public GetSuppressionListLevelResponse GetSuppressionListLevel(GetSuppressionListLevelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSuppressionListLevelWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取用户无效地址级别配置
-         *
-         * @param request GetSuppressionListLevelRequest
-         * @return GetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuppressionListLevelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuppressionListLevelResponse
+        /// </returns>
         public async Task<GetSuppressionListLevelResponse> GetSuppressionListLevelAsync(GetSuppressionListLevelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSuppressionListLevelWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取跟踪信息
-         *
-         * @param request GetTrackListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTrackListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListResponse
+        /// </returns>
         public GetTrackListResponse GetTrackListWithOptions(GetTrackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2775,13 +3403,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetTrackListResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取跟踪信息
-         *
-         * @param request GetTrackListRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTrackListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListResponse
+        /// </returns>
         public async Task<GetTrackListResponse> GetTrackListWithOptionsAsync(GetTrackListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2857,37 +3493,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetTrackListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取跟踪信息
-         *
-         * @param request GetTrackListRequest
-         * @return GetTrackListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListResponse
+        /// </returns>
         public GetTrackListResponse GetTrackList(GetTrackListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTrackListWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取跟踪信息
-         *
-         * @param request GetTrackListRequest
-         * @return GetTrackListResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListResponse
+        /// </returns>
         public async Task<GetTrackListResponse> GetTrackListAsync(GetTrackListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTrackListWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 根据发信地址和Tag名称获取跟踪信息
-         *
-         * @param request GetTrackListByMailFromAndTagNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTrackListByMailFromAndTagNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据发信地址和Tag名称获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListByMailFromAndTagNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListByMailFromAndTagNameResponse
+        /// </returns>
         public GetTrackListByMailFromAndTagNameResponse GetTrackListByMailFromAndTagNameWithOptions(GetTrackListByMailFromAndTagNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2963,13 +3619,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetTrackListByMailFromAndTagNameResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据发信地址和Tag名称获取跟踪信息
-         *
-         * @param request GetTrackListByMailFromAndTagNameRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTrackListByMailFromAndTagNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据发信地址和Tag名称获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListByMailFromAndTagNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListByMailFromAndTagNameResponse
+        /// </returns>
         public async Task<GetTrackListByMailFromAndTagNameResponse> GetTrackListByMailFromAndTagNameWithOptionsAsync(GetTrackListByMailFromAndTagNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3045,37 +3709,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetTrackListByMailFromAndTagNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据发信地址和Tag名称获取跟踪信息
-         *
-         * @param request GetTrackListByMailFromAndTagNameRequest
-         * @return GetTrackListByMailFromAndTagNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据发信地址和Tag名称获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListByMailFromAndTagNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListByMailFromAndTagNameResponse
+        /// </returns>
         public GetTrackListByMailFromAndTagNameResponse GetTrackListByMailFromAndTagName(GetTrackListByMailFromAndTagNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTrackListByMailFromAndTagNameWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 根据发信地址和Tag名称获取跟踪信息
-         *
-         * @param request GetTrackListByMailFromAndTagNameRequest
-         * @return GetTrackListByMailFromAndTagNameResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据发信地址和Tag名称获取跟踪信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrackListByMailFromAndTagNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrackListByMailFromAndTagNameResponse
+        /// </returns>
         public async Task<GetTrackListByMailFromAndTagNameResponse> GetTrackListByMailFromAndTagNameAsync(GetTrackListByMailFromAndTagNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTrackListByMailFromAndTagNameWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取账号详情
-         *
-         * @param request GetUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Account Details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public GetUserResponse GetUserWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3094,13 +3778,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取账号详情
-         *
-         * @param request GetUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Account Details</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public async Task<GetUserResponse> GetUserWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3119,35 +3811,49 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取账号详情
-         *
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Account Details</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public GetUserResponse GetUser()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetUserWithOptions(runtime);
         }
 
-        /**
-         * @summary 获取账号详情
-         *
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Account Details</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public async Task<GetUserResponse> GetUserAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary 列出用户无效地址
-         *
-         * @param request ListUserSuppressionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List User Invalid Addresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSuppressionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSuppressionResponse
+        /// </returns>
         public ListUserSuppressionResponse ListUserSuppressionWithOptions(ListUserSuppressionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3211,13 +3917,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ListUserSuppressionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出用户无效地址
-         *
-         * @param request ListUserSuppressionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List User Invalid Addresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSuppressionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSuppressionResponse
+        /// </returns>
         public async Task<ListUserSuppressionResponse> ListUserSuppressionWithOptionsAsync(ListUserSuppressionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3281,37 +3995,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ListUserSuppressionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列出用户无效地址
-         *
-         * @param request ListUserSuppressionRequest
-         * @return ListUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List User Invalid Addresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSuppressionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSuppressionResponse
+        /// </returns>
         public ListUserSuppressionResponse ListUserSuppression(ListUserSuppressionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserSuppressionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 列出用户无效地址
-         *
-         * @param request ListUserSuppressionRequest
-         * @return ListUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List User Invalid Addresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserSuppressionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserSuppressionResponse
+        /// </returns>
         public async Task<ListUserSuppressionResponse> ListUserSuppressionAsync(ListUserSuppressionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserSuppressionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改发信地址
-         *
-         * @param request ModifyMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMailAddressResponse
+        /// </returns>
         public ModifyMailAddressResponse ModifyMailAddressWithOptions(ModifyMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3359,13 +4093,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ModifyMailAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改发信地址
-         *
-         * @param request ModifyMailAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMailAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMailAddressResponse
+        /// </returns>
         public async Task<ModifyMailAddressResponse> ModifyMailAddressWithOptionsAsync(ModifyMailAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3413,37 +4155,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ModifyMailAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改发信地址
-         *
-         * @param request ModifyMailAddressRequest
-         * @return ModifyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMailAddressResponse
+        /// </returns>
         public ModifyMailAddressResponse ModifyMailAddress(ModifyMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyMailAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改发信地址
-         *
-         * @param request ModifyMailAddressRequest
-         * @return ModifyMailAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改发信地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyMailAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMailAddressResponse
+        /// </returns>
         public async Task<ModifyMailAddressResponse> ModifyMailAddressAsync(ModifyMailAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyMailAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改域级别密码
-         *
-         * @param request ModifyPWByDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPWByDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域级别密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPWByDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPWByDomainResponse
+        /// </returns>
         public ModifyPWByDomainResponse ModifyPWByDomainWithOptions(ModifyPWByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3487,13 +4249,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ModifyPWByDomainResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改域级别密码
-         *
-         * @param request ModifyPWByDomainRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyPWByDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域级别密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPWByDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPWByDomainResponse
+        /// </returns>
         public async Task<ModifyPWByDomainResponse> ModifyPWByDomainWithOptionsAsync(ModifyPWByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3537,37 +4307,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ModifyPWByDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改域级别密码
-         *
-         * @param request ModifyPWByDomainRequest
-         * @return ModifyPWByDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域级别密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPWByDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPWByDomainResponse
+        /// </returns>
         public ModifyPWByDomainResponse ModifyPWByDomain(ModifyPWByDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyPWByDomainWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改域级别密码
-         *
-         * @param request ModifyPWByDomainRequest
-         * @return ModifyPWByDomainResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域级别密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPWByDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPWByDomainResponse
+        /// </returns>
         public async Task<ModifyPWByDomainResponse> ModifyPWByDomainAsync(ModifyPWByDomainRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPWByDomainWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 修改标签
-         *
-         * @param request ModifyTagRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTagResponse
+        /// </returns>
         public ModifyTagResponse ModifyTagWithOptions(ModifyTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3615,13 +4405,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ModifyTagResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改标签
-         *
-         * @param request ModifyTagRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTagResponse
+        /// </returns>
         public async Task<ModifyTagResponse> ModifyTagWithOptionsAsync(ModifyTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3669,37 +4467,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<ModifyTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 修改标签
-         *
-         * @param request ModifyTagRequest
-         * @return ModifyTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTagResponse
+        /// </returns>
         public ModifyTagResponse ModifyTag(ModifyTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTagWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 修改标签
-         *
-         * @param request ModifyTagRequest
-         * @return ModifyTagResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTagResponse
+        /// </returns>
         public async Task<ModifyTagResponse> ModifyTagAsync(ModifyTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTagWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询域名信息
-         *
-         * @param request QueryDomainByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDomainByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDomainByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainByParamResponse
+        /// </returns>
         public QueryDomainByParamResponse QueryDomainByParamWithOptions(QueryDomainByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3751,13 +4569,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryDomainByParamResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询域名信息
-         *
-         * @param request QueryDomainByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryDomainByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDomainByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainByParamResponse
+        /// </returns>
         public async Task<QueryDomainByParamResponse> QueryDomainByParamWithOptionsAsync(QueryDomainByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3809,37 +4635,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryDomainByParamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询域名信息
-         *
-         * @param request QueryDomainByParamRequest
-         * @return QueryDomainByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDomainByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainByParamResponse
+        /// </returns>
         public QueryDomainByParamResponse QueryDomainByParam(QueryDomainByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDomainByParamWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询域名信息
-         *
-         * @param request QueryDomainByParamRequest
-         * @return QueryDomainByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDomainByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainByParamResponse
+        /// </returns>
         public async Task<QueryDomainByParamResponse> QueryDomainByParamAsync(QueryDomainByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDomainByParamWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary NextStart修改为string
-         *
-         * @param request QueryInvalidAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>NextStart修改为string</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInvalidAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInvalidAddressResponse
+        /// </returns>
         public QueryInvalidAddressResponse QueryInvalidAddressWithOptions(QueryInvalidAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3895,13 +4741,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryInvalidAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary NextStart修改为string
-         *
-         * @param request QueryInvalidAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>NextStart修改为string</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInvalidAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInvalidAddressResponse
+        /// </returns>
         public async Task<QueryInvalidAddressResponse> QueryInvalidAddressWithOptionsAsync(QueryInvalidAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3957,35 +4811,52 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryInvalidAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary NextStart修改为string
-         *
-         * @param request QueryInvalidAddressRequest
-         * @return QueryInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>NextStart修改为string</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInvalidAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInvalidAddressResponse
+        /// </returns>
         public QueryInvalidAddressResponse QueryInvalidAddress(QueryInvalidAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryInvalidAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary NextStart修改为string
-         *
-         * @param request QueryInvalidAddressRequest
-         * @return QueryInvalidAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>NextStart修改为string</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInvalidAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInvalidAddressResponse
+        /// </returns>
         public async Task<QueryInvalidAddressResponse> QueryInvalidAddressAsync(QueryInvalidAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryInvalidAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request QueryMailAddressByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMailAddressByParamResponse
-         */
+        /// <param name="request">
+        /// QueryMailAddressByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMailAddressByParamResponse
+        /// </returns>
         public QueryMailAddressByParamResponse QueryMailAddressByParamWithOptions(QueryMailAddressByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4037,11 +4908,16 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryMailAddressByParamResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryMailAddressByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryMailAddressByParamResponse
-         */
+        /// <param name="request">
+        /// QueryMailAddressByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMailAddressByParamResponse
+        /// </returns>
         public async Task<QueryMailAddressByParamResponse> QueryMailAddressByParamWithOptionsAsync(QueryMailAddressByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4093,33 +4969,47 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryMailAddressByParamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryMailAddressByParamRequest
-         * @return QueryMailAddressByParamResponse
-         */
+        /// <param name="request">
+        /// QueryMailAddressByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMailAddressByParamResponse
+        /// </returns>
         public QueryMailAddressByParamResponse QueryMailAddressByParam(QueryMailAddressByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryMailAddressByParamWithOptions(request, runtime);
         }
 
-        /**
-         * @param request QueryMailAddressByParamRequest
-         * @return QueryMailAddressByParamResponse
-         */
+        /// <param name="request">
+        /// QueryMailAddressByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMailAddressByParamResponse
+        /// </returns>
         public async Task<QueryMailAddressByParamResponse> QueryMailAddressByParamAsync(QueryMailAddressByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryMailAddressByParamWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询收信人列表详情
-         *
-         * @param request QueryReceiverByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReceiverByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverByParamResponse
+        /// </returns>
         public QueryReceiverByParamResponse QueryReceiverByParamWithOptions(QueryReceiverByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4171,13 +5061,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryReceiverByParamResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询收信人列表详情
-         *
-         * @param request QueryReceiverByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReceiverByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverByParamResponse
+        /// </returns>
         public async Task<QueryReceiverByParamResponse> QueryReceiverByParamWithOptionsAsync(QueryReceiverByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4229,37 +5127,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryReceiverByParamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询收信人列表详情
-         *
-         * @param request QueryReceiverByParamRequest
-         * @return QueryReceiverByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverByParamResponse
+        /// </returns>
         public QueryReceiverByParamResponse QueryReceiverByParam(QueryReceiverByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryReceiverByParamWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询收信人列表详情
-         *
-         * @param request QueryReceiverByParamRequest
-         * @return QueryReceiverByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverByParamResponse
+        /// </returns>
         public async Task<QueryReceiverByParamResponse> QueryReceiverByParamAsync(QueryReceiverByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryReceiverByParamWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询收信人列表详情信息
-         *
-         * @param request QueryReceiverDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverDetailResponse
+        /// </returns>
         public QueryReceiverDetailResponse QueryReceiverDetailWithOptions(QueryReceiverDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4311,13 +5229,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryReceiverDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询收信人列表详情信息
-         *
-         * @param request QueryReceiverDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverDetailResponse
+        /// </returns>
         public async Task<QueryReceiverDetailResponse> QueryReceiverDetailWithOptionsAsync(QueryReceiverDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4369,35 +5295,52 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryReceiverDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询收信人列表详情信息
-         *
-         * @param request QueryReceiverDetailRequest
-         * @return QueryReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverDetailResponse
+        /// </returns>
         public QueryReceiverDetailResponse QueryReceiverDetail(QueryReceiverDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryReceiverDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询收信人列表详情信息
-         *
-         * @param request QueryReceiverDetailRequest
-         * @return QueryReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询收信人列表详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReceiverDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReceiverDetailResponse
+        /// </returns>
         public async Task<QueryReceiverDetailResponse> QueryReceiverDetailAsync(QueryReceiverDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryReceiverDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request QueryTagByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTagByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTagByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTagByParamResponse
+        /// </returns>
         public QueryTagByParamResponse QueryTagByParamWithOptions(QueryTagByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4445,11 +5388,16 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryTagByParamResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryTagByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTagByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTagByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTagByParamResponse
+        /// </returns>
         public async Task<QueryTagByParamResponse> QueryTagByParamWithOptionsAsync(QueryTagByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4497,31 +5445,42 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryTagByParamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryTagByParamRequest
-         * @return QueryTagByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTagByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTagByParamResponse
+        /// </returns>
         public QueryTagByParamResponse QueryTagByParam(QueryTagByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryTagByParamWithOptions(request, runtime);
         }
 
-        /**
-         * @param request QueryTagByParamRequest
-         * @return QueryTagByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTagByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTagByParamResponse
+        /// </returns>
         public async Task<QueryTagByParamResponse> QueryTagByParamAsync(QueryTagByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryTagByParamWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request QueryTaskByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTaskByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTaskByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskByParamResponse
+        /// </returns>
         public QueryTaskByParamResponse QueryTaskByParamWithOptions(QueryTaskByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4573,11 +5532,16 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryTaskByParamResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryTaskByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTaskByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTaskByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskByParamResponse
+        /// </returns>
         public async Task<QueryTaskByParamResponse> QueryTaskByParamWithOptionsAsync(QueryTaskByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4629,33 +5593,47 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<QueryTaskByParamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryTaskByParamRequest
-         * @return QueryTaskByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTaskByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskByParamResponse
+        /// </returns>
         public QueryTaskByParamResponse QueryTaskByParam(QueryTaskByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryTaskByParamWithOptions(request, runtime);
         }
 
-        /**
-         * @param request QueryTaskByParamRequest
-         * @return QueryTaskByParamResponse
-         */
+        /// <param name="request">
+        /// QueryTaskByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskByParamResponse
+        /// </returns>
         public async Task<QueryTaskByParamResponse> QueryTaskByParamAsync(QueryTaskByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryTaskByParamWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 删除用户无效地址
-         *
-         * @param request RemoveUserSuppressionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUserSuppressionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserSuppressionResponse
+        /// </returns>
         public RemoveUserSuppressionResponse RemoveUserSuppressionWithOptions(RemoveUserSuppressionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4695,13 +5673,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<RemoveUserSuppressionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除用户无效地址
-         *
-         * @param request RemoveUserSuppressionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RemoveUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUserSuppressionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserSuppressionResponse
+        /// </returns>
         public async Task<RemoveUserSuppressionResponse> RemoveUserSuppressionWithOptionsAsync(RemoveUserSuppressionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4741,37 +5727,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<RemoveUserSuppressionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除用户无效地址
-         *
-         * @param request RemoveUserSuppressionRequest
-         * @return RemoveUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUserSuppressionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserSuppressionResponse
+        /// </returns>
         public RemoveUserSuppressionResponse RemoveUserSuppression(RemoveUserSuppressionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveUserSuppressionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 删除用户无效地址
-         *
-         * @param request RemoveUserSuppressionRequest
-         * @return RemoveUserSuppressionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户无效地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveUserSuppressionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserSuppressionResponse
+        /// </returns>
         public async Task<RemoveUserSuppressionResponse> RemoveUserSuppressionAsync(RemoveUserSuppressionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveUserSuppressionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 建单个收件人
-         *
-         * @param request SaveReceiverDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SaveReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>建单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveReceiverDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveReceiverDetailResponse
+        /// </returns>
         public SaveReceiverDetailResponse SaveReceiverDetailWithOptions(SaveReceiverDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4815,13 +5821,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SaveReceiverDetailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 建单个收件人
-         *
-         * @param request SaveReceiverDetailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SaveReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>建单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveReceiverDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveReceiverDetailResponse
+        /// </returns>
         public async Task<SaveReceiverDetailResponse> SaveReceiverDetailWithOptionsAsync(SaveReceiverDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4865,37 +5879,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SaveReceiverDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 建单个收件人
-         *
-         * @param request SaveReceiverDetailRequest
-         * @return SaveReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>建单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveReceiverDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveReceiverDetailResponse
+        /// </returns>
         public SaveReceiverDetailResponse SaveReceiverDetail(SaveReceiverDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SaveReceiverDetailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 建单个收件人
-         *
-         * @param request SaveReceiverDetailRequest
-         * @return SaveReceiverDetailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>建单个收件人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveReceiverDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveReceiverDetailResponse
+        /// </returns>
         public async Task<SaveReceiverDetailResponse> SaveReceiverDetailAsync(SaveReceiverDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SaveReceiverDetailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 发送模板测试邮件
-         *
-         * @param request SendTestByTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendTestByTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送模板测试邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendTestByTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTestByTemplateResponse
+        /// </returns>
         public SendTestByTemplateResponse SendTestByTemplateWithOptions(SendTestByTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4963,13 +5997,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SendTestByTemplateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 发送模板测试邮件
-         *
-         * @param request SendTestByTemplateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SendTestByTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送模板测试邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendTestByTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTestByTemplateResponse
+        /// </returns>
         public async Task<SendTestByTemplateResponse> SendTestByTemplateWithOptionsAsync(SendTestByTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5037,37 +6079,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SendTestByTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 发送模板测试邮件
-         *
-         * @param request SendTestByTemplateRequest
-         * @return SendTestByTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送模板测试邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendTestByTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTestByTemplateResponse
+        /// </returns>
         public SendTestByTemplateResponse SendTestByTemplate(SendTestByTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendTestByTemplateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 发送模板测试邮件
-         *
-         * @param request SendTestByTemplateRequest
-         * @return SendTestByTemplateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送模板测试邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendTestByTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendTestByTemplateResponse
+        /// </returns>
         public async Task<SendTestByTemplateResponse> SendTestByTemplateAsync(SendTestByTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendTestByTemplateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取指定条件下的发送数据
-         *
-         * @param request SenderStatisticsByTagNameAndBatchIDRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SenderStatisticsByTagNameAndBatchIDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定条件下的发送数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsByTagNameAndBatchIDRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsByTagNameAndBatchIDResponse
+        /// </returns>
         public SenderStatisticsByTagNameAndBatchIDResponse SenderStatisticsByTagNameAndBatchIDWithOptions(SenderStatisticsByTagNameAndBatchIDRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5119,13 +6181,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SenderStatisticsByTagNameAndBatchIDResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定条件下的发送数据
-         *
-         * @param request SenderStatisticsByTagNameAndBatchIDRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SenderStatisticsByTagNameAndBatchIDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定条件下的发送数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsByTagNameAndBatchIDRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsByTagNameAndBatchIDResponse
+        /// </returns>
         public async Task<SenderStatisticsByTagNameAndBatchIDResponse> SenderStatisticsByTagNameAndBatchIDWithOptionsAsync(SenderStatisticsByTagNameAndBatchIDRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5177,37 +6247,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SenderStatisticsByTagNameAndBatchIDResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取指定条件下的发送数据
-         *
-         * @param request SenderStatisticsByTagNameAndBatchIDRequest
-         * @return SenderStatisticsByTagNameAndBatchIDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定条件下的发送数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsByTagNameAndBatchIDRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsByTagNameAndBatchIDResponse
+        /// </returns>
         public SenderStatisticsByTagNameAndBatchIDResponse SenderStatisticsByTagNameAndBatchID(SenderStatisticsByTagNameAndBatchIDRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SenderStatisticsByTagNameAndBatchIDWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取指定条件下的发送数据
-         *
-         * @param request SenderStatisticsByTagNameAndBatchIDRequest
-         * @return SenderStatisticsByTagNameAndBatchIDResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定条件下的发送数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsByTagNameAndBatchIDRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsByTagNameAndBatchIDResponse
+        /// </returns>
         public async Task<SenderStatisticsByTagNameAndBatchIDResponse> SenderStatisticsByTagNameAndBatchIDAsync(SenderStatisticsByTagNameAndBatchIDRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SenderStatisticsByTagNameAndBatchIDWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询投递结果详情
-         *
-         * @param request SenderStatisticsDetailByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SenderStatisticsDetailByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递结果详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsDetailByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsDetailByParamResponse
+        /// </returns>
         public SenderStatisticsDetailByParamResponse SenderStatisticsDetailByParamWithOptions(SenderStatisticsDetailByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5275,13 +6365,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SenderStatisticsDetailByParamResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询投递结果详情
-         *
-         * @param request SenderStatisticsDetailByParamRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SenderStatisticsDetailByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递结果详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsDetailByParamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsDetailByParamResponse
+        /// </returns>
         public async Task<SenderStatisticsDetailByParamResponse> SenderStatisticsDetailByParamWithOptionsAsync(SenderStatisticsDetailByParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5349,37 +6447,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SenderStatisticsDetailByParamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询投递结果详情
-         *
-         * @param request SenderStatisticsDetailByParamRequest
-         * @return SenderStatisticsDetailByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递结果详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsDetailByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsDetailByParamResponse
+        /// </returns>
         public SenderStatisticsDetailByParamResponse SenderStatisticsDetailByParam(SenderStatisticsDetailByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SenderStatisticsDetailByParamWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询投递结果详情
-         *
-         * @param request SenderStatisticsDetailByParamRequest
-         * @return SenderStatisticsDetailByParamResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递结果详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SenderStatisticsDetailByParamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SenderStatisticsDetailByParamResponse
+        /// </returns>
         public async Task<SenderStatisticsDetailByParamResponse> SenderStatisticsDetailByParamAsync(SenderStatisticsDetailByParamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SenderStatisticsDetailByParamWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 设置用户无效地址级别配置
-         *
-         * @param request SetSuppressionListLevelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetSuppressionListLevelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuppressionListLevelResponse
+        /// </returns>
         public SetSuppressionListLevelResponse SetSuppressionListLevelWithOptions(SetSuppressionListLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5419,13 +6537,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SetSuppressionListLevelResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置用户无效地址级别配置
-         *
-         * @param request SetSuppressionListLevelRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetSuppressionListLevelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuppressionListLevelResponse
+        /// </returns>
         public async Task<SetSuppressionListLevelResponse> SetSuppressionListLevelWithOptionsAsync(SetSuppressionListLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5465,37 +6591,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SetSuppressionListLevelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 设置用户无效地址级别配置
-         *
-         * @param request SetSuppressionListLevelRequest
-         * @return SetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetSuppressionListLevelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuppressionListLevelResponse
+        /// </returns>
         public SetSuppressionListLevelResponse SetSuppressionListLevel(SetSuppressionListLevelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetSuppressionListLevelWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 设置用户无效地址级别配置
-         *
-         * @param request SetSuppressionListLevelRequest
-         * @return SetSuppressionListLevelResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户无效地址级别配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetSuppressionListLevelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuppressionListLevelResponse
+        /// </returns>
         public async Task<SetSuppressionListLevelResponse> SetSuppressionListLevelAsync(SetSuppressionListLevelRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetSuppressionListLevelWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary API发信
-         *
-         * @param request SingleSendMailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SingleSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>API发信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SingleSendMailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SingleSendMailResponse
+        /// </returns>
         public SingleSendMailResponse SingleSendMailWithOptions(SingleSendMailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5515,6 +6661,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAlias))
             {
                 query["FromAlias"] = request.FromAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Headers))
+            {
+                query["Headers"] = request.Headers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HtmlBody))
             {
@@ -5587,13 +6737,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SingleSendMailResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary API发信
-         *
-         * @param request SingleSendMailRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SingleSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>API发信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SingleSendMailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SingleSendMailResponse
+        /// </returns>
         public async Task<SingleSendMailResponse> SingleSendMailWithOptionsAsync(SingleSendMailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5613,6 +6771,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAlias))
             {
                 query["FromAlias"] = request.FromAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Headers))
+            {
+                query["Headers"] = request.Headers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HtmlBody))
             {
@@ -5685,37 +6847,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<SingleSendMailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary API发信
-         *
-         * @param request SingleSendMailRequest
-         * @return SingleSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>API发信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SingleSendMailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SingleSendMailResponse
+        /// </returns>
         public SingleSendMailResponse SingleSendMail(SingleSendMailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SingleSendMailWithOptions(request, runtime);
         }
 
-        /**
-         * @summary API发信
-         *
-         * @param request SingleSendMailRequest
-         * @return SingleSendMailResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>API发信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SingleSendMailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SingleSendMailResponse
+        /// </returns>
         public async Task<SingleSendMailResponse> SingleSendMailAsync(SingleSendMailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SingleSendMailWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新IP防护API
-         *
-         * @param request UpdateIpProtectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新IP防护API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpProtectionResponse
+        /// </returns>
         public UpdateIpProtectionResponse UpdateIpProtectionWithOptions(UpdateIpProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5755,13 +6937,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<UpdateIpProtectionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新IP防护API
-         *
-         * @param request UpdateIpProtectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新IP防护API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpProtectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpProtectionResponse
+        /// </returns>
         public async Task<UpdateIpProtectionResponse> UpdateIpProtectionWithOptionsAsync(UpdateIpProtectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5801,37 +6991,57 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<UpdateIpProtectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新IP防护API
-         *
-         * @param request UpdateIpProtectionRequest
-         * @return UpdateIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新IP防护API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpProtectionResponse
+        /// </returns>
         public UpdateIpProtectionResponse UpdateIpProtection(UpdateIpProtectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateIpProtectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新IP防护API
-         *
-         * @param request UpdateIpProtectionRequest
-         * @return UpdateIpProtectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新IP防护API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpProtectionResponse
+        /// </returns>
         public async Task<UpdateIpProtectionResponse> UpdateIpProtectionAsync(UpdateIpProtectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateIpProtectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 更新帐号信息
-         *
-         * @param tmpReq UpdateUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update account information</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public UpdateUserResponse UpdateUserWithOptions(UpdateUserRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5865,13 +7075,21 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新帐号信息
-         *
-         * @param tmpReq UpdateUserRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update account information</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public async Task<UpdateUserResponse> UpdateUserWithOptionsAsync(UpdateUserRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5905,24 +7123,36 @@ namespace AlibabaCloud.SDK.Dm20151123
             return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新帐号信息
-         *
-         * @param request UpdateUserRequest
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update account information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public UpdateUserResponse UpdateUser(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateUserWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 更新帐号信息
-         *
-         * @param request UpdateUserRequest
-         * @return UpdateUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update account information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserResponse
+        /// </returns>
         public async Task<UpdateUserResponse> UpdateUserAsync(UpdateUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

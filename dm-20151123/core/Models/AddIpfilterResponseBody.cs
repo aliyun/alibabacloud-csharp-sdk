@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class AddIpfilterResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10795</para>
+        /// </summary>
         [NameInMap("IpFilterId")]
         [Validation(Required=false)]
         public string IpFilterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0E9282E8-DC08-5445-8FB0-B9F0CA28B249</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

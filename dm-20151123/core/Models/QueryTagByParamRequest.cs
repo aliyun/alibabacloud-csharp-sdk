@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTagByParamRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1aTag</para>
+        /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTagByParamResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
@@ -37,10 +53,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string TagDescription { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>52366</para>
+                /// </summary>
                 [NameInMap("TagId")]
                 [Validation(Required=false)]
                 public string TagId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>hellopal</para>
+                /// </summary>
                 [NameInMap("TagName")]
                 [Validation(Required=false)]
                 public string TagName { get; set; }

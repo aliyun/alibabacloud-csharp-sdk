@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryReceiverByParamRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>mesh-notification</para>
+        /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

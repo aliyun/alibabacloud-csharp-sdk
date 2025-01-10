@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteMailAddressRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23457</para>
         /// </summary>
         [NameInMap("MailAddressId")]
         [Validation(Required=false)]

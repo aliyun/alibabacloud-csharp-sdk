@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteTagResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

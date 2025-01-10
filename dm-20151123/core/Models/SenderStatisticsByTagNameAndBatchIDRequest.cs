@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsByTagNameAndBatchIDRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-09-29</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -33,12 +40,19 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-09-29</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
         public string TagName { get; set; }

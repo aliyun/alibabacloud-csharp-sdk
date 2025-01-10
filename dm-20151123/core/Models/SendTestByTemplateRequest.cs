@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SendTestByTemplateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2000/01/01</para>
+        /// </summary>
         [NameInMap("Birthday")]
         [Validation(Required=false)]
         public string Birthday { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
@@ -31,6 +35,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string Gender { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1380000****</para>
+        /// </summary>
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }
@@ -52,7 +60,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

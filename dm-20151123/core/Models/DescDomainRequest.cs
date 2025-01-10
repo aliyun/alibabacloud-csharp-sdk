@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DescDomainRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ID of the domain name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>13464</para>
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -20,6 +24,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Determine whether to perform real-time DNS resolution</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("RequireRealTimeDnsRecords")]
         [Validation(Required=false)]
         public bool? RequireRealTimeDnsRecords { get; set; }

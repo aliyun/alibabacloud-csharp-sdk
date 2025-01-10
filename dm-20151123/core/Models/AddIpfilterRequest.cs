@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class AddIpfilterRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SaveReceiverDetailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{“b”:” birthday”,”e”:”<a href="mailto:xxx@alibaba-inc.com">xxx@alibaba-inc.com</a>”,”g”:” gender”,”m”:” mobile “,”n”:” nickname “,”u”:”name “}]</para>
         /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34642</para>
         /// </summary>
         [NameInMap("ReceiverId")]
         [Validation(Required=false)]

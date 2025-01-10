@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ModifyMailAddressRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1344565</para>
         /// </summary>
         [NameInMap("MailAddressId")]
         [Validation(Required=false)]
@@ -20,10 +23,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pwd129WDCft9</para>
+        /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a***@example.net</para>
+        /// </summary>
         [NameInMap("ReplyAddress")]
         [Validation(Required=false)]
         public string ReplyAddress { get; set; }

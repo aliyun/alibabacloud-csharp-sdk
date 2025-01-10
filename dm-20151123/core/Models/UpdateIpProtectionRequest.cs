@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class UpdateIpProtectionRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("IpProtection")]
         [Validation(Required=false)]
         public string IpProtection { get; set; }

@@ -10,19 +10,29 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SingleSendMailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.com">test@example.com</a></para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public int? AddressType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("ClickTrace")]
         [Validation(Required=false)]
         public string ClickTrace { get; set; }
@@ -31,6 +41,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string FromAlias { get; set; }
 
+        [NameInMap("Headers")]
+        [Validation(Required=false)]
+        public string Headers { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>body</para>
+        /// </summary>
         [NameInMap("HtmlBody")]
         [Validation(Required=false)]
         public string HtmlBody { get; set; }
@@ -39,6 +57,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:111@aliyun.com">111@aliyun.com</a></para>
+        /// </summary>
         [NameInMap("ReplyAddress")]
         [Validation(Required=false)]
         public string ReplyAddress { get; set; }
@@ -48,7 +70,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string ReplyAddressAlias { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ReplyToAddress")]
         [Validation(Required=false)]
@@ -63,22 +88,36 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Subject</para>
         /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
         public string TagName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12121</para>
+        /// </summary>
         [NameInMap("TextBody")]
         [Validation(Required=false)]
         public string TextBody { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test1@example.com">test1@example.com</a></para>
         /// </summary>
         [NameInMap("ToAddress")]
         [Validation(Required=false)]

@@ -22,9 +22,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the tag.
+        /// <para>The ID of the tag.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]

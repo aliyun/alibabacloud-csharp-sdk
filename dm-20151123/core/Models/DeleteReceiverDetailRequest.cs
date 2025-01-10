@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123534</para>
         /// </summary>
         [NameInMap("ReceiverId")]
         [Validation(Required=false)]

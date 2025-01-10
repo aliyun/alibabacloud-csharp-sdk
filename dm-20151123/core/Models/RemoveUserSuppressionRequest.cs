@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>59511</para>
+        /// </summary>
         [NameInMap("SuppressionIds")]
         [Validation(Required=false)]
         public string SuppressionIds { get; set; }

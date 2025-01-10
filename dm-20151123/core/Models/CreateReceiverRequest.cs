@@ -18,14 +18,20 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vme</para>
         /// </summary>
         [NameInMap("ReceiversAlias")]
         [Validation(Required=false)]
         public string ReceiversAlias { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xme</para>
         /// </summary>
         [NameInMap("ReceiversName")]
         [Validation(Required=false)]

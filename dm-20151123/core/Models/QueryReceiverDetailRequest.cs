@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryReceiverDetailRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>b***@example.net</para>
+        /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("NextStart")]
         [Validation(Required=false)]
         public string NextStart { get; set; }
@@ -21,12 +29,19 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1235</para>
         /// </summary>
         [NameInMap("ReceiverId")]
         [Validation(Required=false)]

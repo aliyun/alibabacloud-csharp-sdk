@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetTrackListByMailFromAndTagNameRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:e-service@amegroups.cn">e-service@amegroups.cn</a></para>
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-09-29</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -36,10 +43,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
@@ -53,12 +68,19 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-09-29</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Subscription</para>
+        /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
         public string TagName { get; set; }

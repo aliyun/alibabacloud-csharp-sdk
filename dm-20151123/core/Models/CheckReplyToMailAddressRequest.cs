@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>126545</para>
         /// </summary>
         [NameInMap("MailAddressId")]
         [Validation(Required=false)]
@@ -24,6 +27,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }

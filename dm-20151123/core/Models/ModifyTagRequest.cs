@@ -26,18 +26,22 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TagDescription { get; set; }
 
         /// <summary>
-        /// The ID of the tag.
+        /// <para>The ID of the tag.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]
         public int? TagId { get; set; }
 
         /// <summary>
-        /// The name of the tag.
+        /// <para>The name of the tag.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>vme</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

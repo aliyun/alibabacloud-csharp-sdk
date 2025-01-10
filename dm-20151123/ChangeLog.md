@@ -1,3 +1,9 @@
+2025-01-10 Version: 1.2.4
+- Update API BatchSendMail: add param Headers.
+- Update API SingleSendMail: add param Headers.
+- Update API SingleSendMail: update param ResourceOwnerAccount.
+
+
 2024-09-03 Version: 1.2.3
 - Generated csharp 2015-11-23 for Dm.
 

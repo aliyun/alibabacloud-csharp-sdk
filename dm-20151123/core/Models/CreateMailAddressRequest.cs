@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CreateMailAddressRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:reply@aliyun.com">reply@aliyun.com</a></para>
+        /// </summary>
         [NameInMap("ReplyAddress")]
         [Validation(Required=false)]
         public string ReplyAddress { get; set; }
@@ -33,7 +37,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>batch</para>
         /// </summary>
         [NameInMap("Sendtype")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ModifyPWByDomainResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>02B2A890-CBD8-4806-9BCA-C93190CE7EF6</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

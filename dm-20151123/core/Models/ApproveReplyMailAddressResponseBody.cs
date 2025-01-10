@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ApproveReplyMailAddressResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
