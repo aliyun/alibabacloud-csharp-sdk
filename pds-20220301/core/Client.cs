@@ -7249,7 +7249,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户认证方式详情</para>
+        /// <para>Queries the information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7303,7 +7303,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户认证方式详情</para>
+        /// <para>Queries the information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7357,7 +7357,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户认证方式详情</para>
+        /// <para>Queries the information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7376,7 +7376,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户认证方式详情</para>
+        /// <para>Queries the information about an account.</para>
         /// </summary>
         /// 
         /// <param name="request">

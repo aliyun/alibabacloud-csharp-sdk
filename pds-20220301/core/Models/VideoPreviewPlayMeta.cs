@@ -21,10 +21,18 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<VideoPreviewPlayMetaLiveTranscodingTaskList> LiveTranscodingTaskList { get; set; }
         public class VideoPreviewPlayMetaLiveTranscodingTaskList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("keep_original_resolution")]
             [Validation(Required=false)]
             public bool? KeepOriginalResolution { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>finished</para>
+            /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -66,6 +74,58 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             [NameInMap("width")]
             [Validation(Required=false)]
             public long? Width { get; set; }
+
+        }
+
+        [NameInMap("offline_video_transcoding_list")]
+        [Validation(Required=false)]
+        public List<VideoPreviewPlayMetaOfflineVideoTranscodingList> OfflineVideoTranscodingList { get; set; }
+        public class VideoPreviewPlayMetaOfflineVideoTranscodingList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("keep_original_resolution")]
+            [Validation(Required=false)]
+            public string KeepOriginalResolution { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>finished</para>
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>264_720p</para>
+            /// </summary>
+            [NameInMap("template_id")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
+        }
+
+        [NameInMap("quick_video_list")]
+        [Validation(Required=false)]
+        public List<VideoPreviewPlayMetaQuickVideoList> QuickVideoList { get; set; }
+        public class VideoPreviewPlayMetaQuickVideoList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>finished</para>
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>264_720p</para>
+            /// </summary>
+            [NameInMap("template_id")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
 
         }
 

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        [NameInMap("live_transcoding_subtitle_task_list")]
+        [Validation(Required=false)]
+        public List<VideoPreviewSubtitleInfo> LiveTranscodingSubtitleTaskList { get; set; }
+
         [NameInMap("live_transcoding_task_list")]
         [Validation(Required=false)]
         public List<VideoPreviewPlayInfoLiveTranscodingTaskList> LiveTranscodingTaskList { get; set; }
@@ -82,6 +86,32 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             public string Url { get; set; }
 
         }
+
+        [NameInMap("offline_video_transcoding_subtitle_list")]
+        [Validation(Required=false)]
+        public List<VideoPreviewSubtitleInfo> OfflineVideoTranscodingSubtitleList { get; set; }
+
+        [NameInMap("quick_video_list")]
+        [Validation(Required=false)]
+        public List<VideoPreviewPlayInfoQuickVideoList> QuickVideoList { get; set; }
+        public class VideoPreviewPlayInfoQuickVideoList : TeaModel {
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("template_id")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
+            [NameInMap("url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
+        [NameInMap("quick_video_subtitle_list")]
+        [Validation(Required=false)]
+        public List<VideoPreviewSubtitleInfo> QuickVideoSubtitleList { get; set; }
 
     }
 
