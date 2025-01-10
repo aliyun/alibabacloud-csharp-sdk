@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-brain-industrial")]
 [assembly: AssemblyDescription("Alibaba Cloud brain-industrial (20200920) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5000c9a0-015c-11eb-9122-41f8da93f71b")]
+[assembly: Guid("bc386330-cf75-11ef-971a-d10710f8e440")]
 
 // Version information for an assembly consists of the following four values:
 //
