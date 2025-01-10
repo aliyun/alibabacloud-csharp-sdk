@@ -12,6 +12,20 @@
 - Update API GetWebshellToken: add param ContainerName.
 
 
+2025-01-10 Version: 1.24.2
+- Update API CreateApplication: add param CustomImageNetworkType.
+- Update API CreateIngress: add param AddressType.
+- Update API CreateIngress: add param LoadBalancerEdition.
+- Update API CreateIngress: add param ZoneMappings.
+- Update API CreateIngress: update param SlbId.
+- Update API DeployApplication: add param CustomImageNetworkType.
+- Update API DescribeApplicationConfig: update response param.
+- Update API DescribeApplicationInstances: add param InstanceId.
+- Update API DescribeApplicationInstances: update response param.
+- Update API DescribeIngress: update response param.
+- Update API GetWebshellToken: add param ContainerName.
+
+
 2024-12-17 Version: 1.24.1
 - Update API CreateApplication: add param EnableSidecarResourceIsolated.
 - Update API CreateApplication: add param SidecarContainersConfig.
