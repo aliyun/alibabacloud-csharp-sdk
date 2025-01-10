@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("ContainerName")]
+        [Validation(Required=false)]
+        public string ContainerName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

@@ -225,6 +225,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CustomHostAlias { get; set; }
 
+            [NameInMap("CustomImageNetworkType")]
+            [Validation(Required=false)]
+            public string CustomImageNetworkType { get; set; }
+
             [NameInMap("Dotnet")]
             [Validation(Required=false)]
             public string Dotnet { get; set; }
@@ -278,6 +282,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("EnableNewArms")]
             [Validation(Required=false)]
             public bool? EnableNewArms { get; set; }
+
+            [NameInMap("Enabledle")]
+            [Validation(Required=false)]
+            public bool? Enabledle { get; set; }
 
             /// <summary>
             /// <para>The environment variables. Variable description:</para>

@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CustomHostAlias { get; set; }
 
+        [NameInMap("CustomImageNetworkType")]
+        [Validation(Required=false)]
+        public string CustomImageNetworkType { get; set; }
+
         /// <summary>
         /// <para>true</para>
         /// 

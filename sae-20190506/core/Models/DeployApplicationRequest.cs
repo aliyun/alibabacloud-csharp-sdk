@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CustomHostAlias { get; set; }
 
+        [NameInMap("CustomImageNetworkType")]
+        [Validation(Required=false)]
+        public string CustomImageNetworkType { get; set; }
+
         /// <summary>
         /// <para>This parameter takes effect only for applications that are in the Stopped state. If you call the <b>DeployApplication</b> operation to manage a running application, the application is immediately redeployed.</para>
         /// <list type="bullet">

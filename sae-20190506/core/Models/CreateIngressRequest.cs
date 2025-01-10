@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateIngressRequest : TeaModel {
+        [NameInMap("AddressType")]
+        [Validation(Required=false)]
+        public string AddressType { get; set; }
+
         /// <summary>
         /// <para>The ID of the certificate that is associated with the <b>CLB</b> instance.</para>
         /// <list type="bullet">
@@ -134,6 +138,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string LoadBalanceType { get; set; }
 
+        [NameInMap("LoadBalancerEdition")]
+        [Validation(Required=false)]
+        public string LoadBalancerEdition { get; set; }
+
         /// <summary>
         /// <para>The ID of the namespace where the application is located. Currently, cross-namespace applications are not supported.</para>
         /// <para>This parameter is required.</para>
@@ -193,7 +201,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <remarks>
         /// <para> The SLB instance can be a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-uf6hucc7inlqrtcq5****</para>
@@ -201,6 +208,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("SlbId")]
         [Validation(Required=false)]
         public string SlbId { get; set; }
+
+        [NameInMap("ZoneMappings")]
+        [Validation(Required=false)]
+        public string ZoneMappings { get; set; }
 
     }
 

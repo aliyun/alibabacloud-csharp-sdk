@@ -179,6 +179,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("MainContainerStatus")]
+                [Validation(Required=false)]
+                public string MainContainerStatus { get; set; }
+
                 /// <summary>
                 /// <para>The version of the package.</para>
                 /// 
@@ -188,6 +192,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("PackageVersion")]
                 [Validation(Required=false)]
                 public string PackageVersion { get; set; }
+
+                [NameInMap("SidecarContainersStatus")]
+                [Validation(Required=false)]
+                public List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> SidecarContainersStatus { get; set; }
+                public class DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus : TeaModel {
+                    [NameInMap("ContainerId")]
+                    [Validation(Required=false)]
+                    public string ContainerId { get; set; }
+
+                    [NameInMap("ContainerStatus")]
+                    [Validation(Required=false)]
+                    public string ContainerStatus { get; set; }
+
+                    [NameInMap("ImageUrl")]
+                    [Validation(Required=false)]
+                    public string ImageUrl { get; set; }
+
+                }
+
+                [NameInMap("UnhealthyMessage")]
+                [Validation(Required=false)]
+                public string UnhealthyMessage { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the zone where the instance is deployed.</para>

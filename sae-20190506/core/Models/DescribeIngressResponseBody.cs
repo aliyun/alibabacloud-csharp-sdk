@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CertIds { get; set; }
 
+            [NameInMap("CreatedBySae")]
+            [Validation(Required=false)]
+            public bool? CreatedBySae { get; set; }
+
             /// <summary>
             /// <para>The forwarding rules.</para>
             /// </summary>
