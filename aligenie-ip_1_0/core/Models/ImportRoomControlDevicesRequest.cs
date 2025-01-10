@@ -14,14 +14,17 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string EnableInfraredDeviceImport { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vdgrefds</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LocationDevices")]
         [Validation(Required=false)]
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 public string ConnectType { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("DeviceName")]
                 [Validation(Required=false)]
@@ -103,12 +106,19 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>light</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>night_light</para>
+                /// </summary>
                 [NameInMap("Number")]
                 [Validation(Required=false)]
                 public string Number { get; set; }
@@ -128,7 +138,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>room</para>
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
@@ -141,7 +154,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1211</para>
         /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]

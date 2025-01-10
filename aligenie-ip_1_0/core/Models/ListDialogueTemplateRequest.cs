@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListDialogueTemplateRequest : TeaModel {
         /// <summary>
-        /// hotelId
+        /// <para>hotelId</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80d84ea8ed9e422fbad52715c8fc56f1</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]

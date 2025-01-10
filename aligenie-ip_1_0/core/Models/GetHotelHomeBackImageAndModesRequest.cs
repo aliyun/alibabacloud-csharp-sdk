@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetHotelHomeBackImageAndModesRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public GetHotelHomeBackImageAndModesRequestUserInfo UserInfo { get; set; }
         public class GetHotelHomeBackImageAndModesRequestUserInfo : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1248494721591392955</para>
             /// </summary>
             [NameInMap("EncodeKey")]
             [Validation(Required=false)]
             public string EncodeKey { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PROJECT_ID</para>
             /// </summary>
             [NameInMap("EncodeType")]
             [Validation(Required=false)]
             public string EncodeType { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mFU6VtVU+pgA8lx6rYMo7SPl11t+8b+8ALrn10MIPEdpK/HI9wELAEppYhPI1cYRDa4og8AMjAEBZKbLUwFjFA==</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OPEN_ID</para>
             /// </summary>
             [NameInMap("IdType")]
             [Validation(Required=false)]

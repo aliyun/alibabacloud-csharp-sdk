@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class UpdateBasicInfoQARequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11:11</para>
         /// </summary>
         [NameInMap("CheckInTime")]
         [Validation(Required=false)]
         public string CheckInTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11:11</para>
         /// </summary>
         [NameInMap("CheckOutTime")]
         [Validation(Required=false)]
         public string CheckOutTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HotelAddress")]
         [Validation(Required=false)]
         public string HotelAddress { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>af7***536</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
@@ -50,35 +59,38 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string HotelService { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ParkingExpenses")]
         [Validation(Required=false)]
         public string ParkingExpenses { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ParkingPosition")]
         [Validation(Required=false)]
         public string ParkingPosition { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123***</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WifiName")]
         [Validation(Required=false)]
         public string WifiName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WifiPassword")]
         [Validation(Required=false)]

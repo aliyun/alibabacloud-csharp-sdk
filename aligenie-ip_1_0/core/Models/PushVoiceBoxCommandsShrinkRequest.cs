@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class PushVoiceBoxCommandsShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Commands")]
         [Validation(Required=false)]
         public string CommandsShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetHotelScreenSaverStyleRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>af7***536</para>
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }

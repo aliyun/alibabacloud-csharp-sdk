@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class DeleteCartoonRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a7***83</para>
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }

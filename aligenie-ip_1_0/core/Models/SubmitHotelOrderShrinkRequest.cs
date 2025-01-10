@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class SubmitHotelOrderShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public string PayloadShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]

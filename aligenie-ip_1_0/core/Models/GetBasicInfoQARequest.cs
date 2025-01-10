@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetBasicInfoQARequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a7***83</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]

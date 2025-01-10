@@ -14,21 +14,27 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string EnableInfraredDeviceImport { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vdgrefds</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LocationDevices")]
         [Validation(Required=false)]
         public string LocationDevicesShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1211</para>
         /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]

@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Extentions { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0EC7*726E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,10 +33,18 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public GetWelcomeTextAndMusicResponseBodyResult Result { get; set; }
         public class GetWelcomeTextAndMusicResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>a7***83</para>
+            /// </summary>
             [NameInMap("HotelId")]
             [Validation(Required=false)]
             public string HotelId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://ailabsaicloudservice.alicdn.com/tmp/a.wav">http://ailabsaicloudservice.alicdn.com/tmp/a.wav</a></para>
+            /// </summary>
             [NameInMap("MusicUrl")]
             [Validation(Required=false)]
             public string MusicUrl { get; set; }
@@ -39,6 +55,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("StatusCode")]
         [Validation(Required=false)]
         public int? StatusCode { get; set; }

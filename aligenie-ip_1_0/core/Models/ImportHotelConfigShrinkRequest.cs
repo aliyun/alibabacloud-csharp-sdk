@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ImportHotelConfigShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a7***83</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ImportHotelConfig")]
         [Validation(Required=false)]

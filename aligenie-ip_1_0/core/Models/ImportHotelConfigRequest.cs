@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ImportHotelConfigRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a7***83</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ImportHotelConfig")]
         [Validation(Required=false)]
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             public List<ImportHotelConfigRequestImportHotelConfigRcuCustomScenes> RcuCustomScenes { get; set; }
             public class ImportHotelConfigRequestImportHotelConfigRcuCustomScenes : TeaModel {
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("CorpusList")]
                 [Validation(Required=false)]
@@ -43,14 +46,14 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 public string Icon { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// This parameter is required.
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("SceneId")]
                 [Validation(Required=false)]

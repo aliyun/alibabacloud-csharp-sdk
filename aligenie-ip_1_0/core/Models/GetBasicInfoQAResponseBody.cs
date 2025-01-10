@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetBasicInfoQAResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0EC7***726E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,10 +29,18 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public GetBasicInfoQAResponseBodyResult Result { get; set; }
         public class GetBasicInfoQAResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>11:11</para>
+            /// </summary>
             [NameInMap("CheckInTime")]
             [Validation(Required=false)]
             public string CheckInTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>11:11</para>
+            /// </summary>
             [NameInMap("CheckOutTime")]
             [Validation(Required=false)]
             public string CheckOutTime { get; set; }
@@ -53,6 +69,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string ParkingPosition { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123***</para>
+            /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
@@ -67,6 +87,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("StatusCode")]
         [Validation(Required=false)]
         public int? StatusCode { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListInfraredDeviceBrandsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]

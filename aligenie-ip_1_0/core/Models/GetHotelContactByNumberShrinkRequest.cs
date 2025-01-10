@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetHotelContactByNumberShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101</para>
         /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]

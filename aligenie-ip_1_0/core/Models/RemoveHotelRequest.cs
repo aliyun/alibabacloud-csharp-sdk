@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class RemoveHotelRequest : TeaModel {
         /// <summary>
-        /// appkey
+        /// <para>appkey</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30193305</para>
         /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e6dd44fd16084db8a60d69fd625d9f0f</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAEVK***UE3d3Z2ETwh</para>
         /// </summary>
         [NameInMap("TbOpenId")]
         [Validation(Required=false)]

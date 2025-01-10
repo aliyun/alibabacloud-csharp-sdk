@@ -10,30 +10,38 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListHotelSceneBookItemsRequest : TeaModel {
         /// <summary>
-        /// hotelID
+        /// <para>hotelID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>80d84ea8ed9e422fbad52715c8fc56f1</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public ListHotelSceneBookItemsRequestPage Page { get; set; }
         public class ListHotelSceneBookItemsRequestPage : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -42,7 +50,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FOOD</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

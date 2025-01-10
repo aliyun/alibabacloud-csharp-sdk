@@ -10,28 +10,48 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetHotelNoticeV2Request : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public GetHotelNoticeV2RequestUserInfo UserInfo { get; set; }
         public class GetHotelNoticeV2RequestUserInfo : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("EncodeKey")]
             [Validation(Required=false)]
             public string EncodeKey { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>HOTEL</para>
+            /// </summary>
             [NameInMap("EncodeType")]
             [Validation(Required=false)]
             public string EncodeType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rV/XSgPuxZjx/hN3iw8U+e8ou***lk1r43LWcVW6fvY1Rr4sEPFodpnA==</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>OPEN_ID</para>
+            /// </summary>
             [NameInMap("IdType")]
             [Validation(Required=false)]
             public string IdType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("OrganizationId")]
             [Validation(Required=false)]
             public string OrganizationId { get; set; }

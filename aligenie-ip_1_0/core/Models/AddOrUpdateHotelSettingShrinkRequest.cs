@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string HotelDeviceModeListShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a7a3***013</para>
+        /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string NightModeShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SCREENSAVER</para>
+        /// </summary>
         [NameInMap("SettingType")]
         [Validation(Required=false)]
         public string SettingType { get; set; }

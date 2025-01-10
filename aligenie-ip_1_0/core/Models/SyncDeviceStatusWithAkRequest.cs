@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string CategoryCnName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>light</para>
         /// </summary>
         [NameInMap("CategoryEnName")]
         [Validation(Required=false)]
@@ -25,14 +28,20 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string DeviceName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>af7***536</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>room</para>
         /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
@@ -43,21 +52,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string LocationCnName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bedLight</para>
         /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]
         public string Number { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1211</para>
         /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]
         public string RoomNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Switch")]
         [Validation(Required=false)]

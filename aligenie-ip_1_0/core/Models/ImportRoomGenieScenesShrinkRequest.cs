@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ImportRoomGenieScenesShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a7a3***013</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1211</para>
         /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]

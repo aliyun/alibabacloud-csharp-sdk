@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class RemoveChildAccountAuthRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30**53</para>
         /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tbxxxx</para>
         /// </summary>
         [NameInMap("ChildAccountName")]
         [Validation(Required=false)]
         public string ChildAccountName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>af7***536</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAEV***E3d3Z2ETwh</para>
         /// </summary>
         [NameInMap("TbOpenId")]
         [Validation(Required=false)]

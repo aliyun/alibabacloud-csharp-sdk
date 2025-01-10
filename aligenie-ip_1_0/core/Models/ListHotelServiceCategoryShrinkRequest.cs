@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListHotelServiceCategoryShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]

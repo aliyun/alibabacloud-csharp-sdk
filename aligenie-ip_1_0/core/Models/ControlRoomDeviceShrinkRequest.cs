@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ControlRoomDeviceShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>thing.attribute.set
+        /// thing.attribute.adjust</para>
         /// </summary>
         [NameInMap("Cmd")]
         [Validation(Required=false)]
@@ -21,28 +25,37 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public int? DeviceIndex { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INFRARED49122575595</para>
         /// </summary>
         [NameInMap("DeviceNumber")]
         [Validation(Required=false)]
         public string DeviceNumber { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a7***83</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public string PropertiesShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1211</para>
         /// </summary>
         [NameInMap("RoomNo")]
         [Validation(Required=false)]

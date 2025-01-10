@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class UpdateHotelRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>31342884</para>
         /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2022-02-22 00:00:00</para>
+        /// </summary>
         [NameInMap("EstOpenTime")]
         [Validation(Required=false)]
         public string EstOpenTime { get; set; }
@@ -24,12 +31,19 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string HotelAddress { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a*****@hotel.com</para>
+        /// </summary>
         [NameInMap("HotelEmail")]
         [Validation(Required=false)]
         public string HotelEmail { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e6dd44fd16084db8a60d69fd625d9f0f</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
@@ -39,6 +53,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string HotelName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>130***</para>
+        /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
@@ -51,12 +69,19 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
         [NameInMap("RoomNum")]
         [Validation(Required=false)]
         public int? RoomNum { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAEVK***UE3d3Z2ETwh</para>
         /// </summary>
         [NameInMap("TbOpenId")]
         [Validation(Required=false)]

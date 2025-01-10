@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class UpdateTicketRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023***93975</para>
         /// </summary>
         [NameInMap("GroupKey")]
         [Validation(Required=false)]
         public string GroupKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>520a0c0***5eb</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>waiting</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

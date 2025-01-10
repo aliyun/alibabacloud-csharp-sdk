@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListCitiesByProvinceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Province")]
         [Validation(Required=false)]

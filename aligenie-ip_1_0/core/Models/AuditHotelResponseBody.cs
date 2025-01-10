@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class AuditHotelResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -18,7 +22,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// RequestId
+        /// <para>RequestId</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

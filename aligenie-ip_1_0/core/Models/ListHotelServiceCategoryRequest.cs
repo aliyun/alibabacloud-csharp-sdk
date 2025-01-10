@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class ListHotelServiceCategoryRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public ListHotelServiceCategoryRequestPayload Payload { get; set; }
         public class ListHotelServiceCategoryRequestPayload : TeaModel {
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HOTEL_SERVICE</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

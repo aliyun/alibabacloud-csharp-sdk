@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public List<string> Answers { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CustomQAId")]
         [Validation(Required=false)]
         public string CustomQAId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>af7***536</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
@@ -31,6 +37,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public List<string> KeyWords { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("MajorQuestion")]
         [Validation(Required=false)]
         public string MajorQuestion { get; set; }

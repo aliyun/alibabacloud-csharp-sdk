@@ -14,16 +14,27 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string Answer { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>af7***536</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ServiceQAId")]
         [Validation(Required=false)]
         public long? ServiceQAId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("isActive")]
         [Validation(Required=false)]
         public bool? IsActive { get; set; }

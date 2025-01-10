@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         public string TemplateDetail { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123123</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

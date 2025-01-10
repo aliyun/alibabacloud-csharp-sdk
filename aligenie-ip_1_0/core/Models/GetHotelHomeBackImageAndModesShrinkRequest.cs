@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class GetHotelHomeBackImageAndModesShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]

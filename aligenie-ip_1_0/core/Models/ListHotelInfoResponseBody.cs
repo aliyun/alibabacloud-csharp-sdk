@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public List<ListHotelInfoResponseBodyResultAuthAccount> AuthAccount { get; set; }
             public class ListHotelInfoResponseBodyResultAuthAccount : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>leetest</para>
+                /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }
@@ -39,6 +43,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string HotelAddress { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cf2446fc9d144c85aaee4f9ae20a96e7</para>
+            /// </summary>
             [NameInMap("HotelId")]
             [Validation(Required=false)]
             public string HotelId { get; set; }
@@ -49,6 +57,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("StatusCode")]
         [Validation(Required=false)]
         public int? StatusCode { get; set; }

@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
 {
     public class AddCartoonRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>520a0***eb</para>
         /// </summary>
         [NameInMap("HotelId")]
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40c804***697</para>
         /// </summary>
         [NameInMap("StartVideoMd5")]
         [Validation(Required=false)]
         public string StartVideoMd5 { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>https://***.mp4</para>
         /// </summary>
         [NameInMap("StartVideoUrl")]
         [Validation(Required=false)]
