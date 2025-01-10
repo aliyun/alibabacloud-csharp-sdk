@@ -47,14 +47,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The retention period of the snapshot that is created when you fix the baseline risk. Valid values: 1 to 365. Unit: days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RetentionDays")]
         [Validation(Required=false)]
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The ID of the baseline risk item.</para>
+        /// <para>The ID of the risk item.</para>
         /// <remarks>
-        /// <para> To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs.</para>
+        /// <para> To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,6 +70,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the snapshot that is created when you fix the baseline risk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sas_fix_2024-12-04</para>
+        /// </summary>
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
         public string SnapshotName { get; set; }

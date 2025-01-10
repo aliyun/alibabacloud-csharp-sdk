@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScaProcessDetailRequest : TeaModel {
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public string BizType { get; set; }
+
+        [NameInMap("Cmdline")]
+        [Validation(Required=false)]
+        public string Cmdline { get; set; }
+
         /// <summary>
         /// <para>The page number. Default value: <b>1</b>.</para>
         /// 

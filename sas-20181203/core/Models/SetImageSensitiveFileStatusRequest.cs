@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SetImageSensitiveFileStatusRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the sensitive files.</para>
+        /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
         public List<long?> IdList { get; set; }
@@ -23,6 +26,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ImageUuids { get; set; }
 
+        /// <summary>
+        /// <para>The types of the assets that are scanned.</para>
+        /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
         public List<string> ScanRange { get; set; }
