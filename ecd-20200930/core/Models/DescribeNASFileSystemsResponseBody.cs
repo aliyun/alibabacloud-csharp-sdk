@@ -16,6 +16,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeNASFileSystemsResponseBodyFileSystems> FileSystems { get; set; }
         public class DescribeNASFileSystemsResponseBodyFileSystems : TeaModel {
+            [NameInMap("AllowOperateUserDrive")]
+            [Validation(Required=false)]
+            public bool? AllowOperateUserDrive { get; set; }
+
+            [NameInMap("AppInstanceGroups")]
+            [Validation(Required=false)]
+            public List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> AppInstanceGroups { get; set; }
+            public class DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups : TeaModel {
+                [NameInMap("AppInstanceGroupId")]
+                [Validation(Required=false)]
+                public string AppInstanceGroupId { get; set; }
+
+                [NameInMap("AppInstanceGroupName")]
+                [Validation(Required=false)]
+                public string AppInstanceGroupName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The total capacity of the NAS file system. Unit: GiB.</para>
             /// <list type="bullet">
@@ -194,6 +212,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string OfficeSiteName { get; set; }
 
+            [NameInMap("OfficeSites")]
+            [Validation(Required=false)]
+            public List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> OfficeSites { get; set; }
+            public class DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites : TeaModel {
+                [NameInMap("OfficeSiteId")]
+                [Validation(Required=false)]
+                public string OfficeSiteId { get; set; }
+
+                [NameInMap("OfficeSiteName")]
+                [Validation(Required=false)]
+                public string OfficeSiteName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Indicates whether the User Profile Management (UPM) feature is supported.</para>
             /// 
@@ -213,6 +245,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("Scene")]
+            [Validation(Required=false)]
+            public string Scene { get; set; }
 
             /// <summary>
             /// <para>The storage type of the NAS file system. Valid values:</para>

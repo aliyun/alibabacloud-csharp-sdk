@@ -1,3 +1,10 @@
+2025-01-11 Version: 4.2.1
+- Update API CreateDesktops: update param BundleId.
+- Update API DescribeClientEvents: update response param.
+- Update API DescribeNASFileSystems: update response param.
+- Update API DescribePolicyGroups: update response param.
+
+
 2024-12-16 Version: 4.2.0
 - Support API DescribeModificationPrice.
 - Support API DescribeRefundPrice.

@@ -305,6 +305,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? CpuSingleRateLimit { get; set; }
 
+            [NameInMap("DesktopCount")]
+            [Validation(Required=false)]
+            public int? DesktopCount { get; set; }
+
+            [NameInMap("DesktopGroupCount")]
+            [Validation(Required=false)]
+            public int? DesktopGroupCount { get; set; }
+
             [NameInMap("DeviceRedirects")]
             [Validation(Required=false)]
             public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> DeviceRedirects { get; set; }
@@ -594,6 +602,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("MemorySingleRateLimit")]
             [Validation(Required=false)]
             public int? MemorySingleRateLimit { get; set; }
+
+            [NameInMap("MobileRestart")]
+            [Validation(Required=false)]
+            public string MobileRestart { get; set; }
+
+            [NameInMap("MobileShutdown")]
+            [Validation(Required=false)]
+            public string MobileShutdown { get; set; }
 
             /// <summary>
             /// <para>The policy name.</para>
@@ -897,6 +913,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RemoteCoordinate { get; set; }
 
+            [NameInMap("ResourceGroupCount")]
+            [Validation(Required=false)]
+            public int? ResourceGroupCount { get; set; }
+
             [NameInMap("ResourceRegionId")]
             [Validation(Required=false)]
             public string ResourceRegionId { get; set; }
@@ -925,6 +945,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("SmoothEnhancement")]
             [Validation(Required=false)]
             public string SmoothEnhancement { get; set; }
+
+            [NameInMap("StatusMonitor")]
+            [Validation(Required=false)]
+            public string StatusMonitor { get; set; }
 
             [NameInMap("StreamingMode")]
             [Validation(Required=false)]
