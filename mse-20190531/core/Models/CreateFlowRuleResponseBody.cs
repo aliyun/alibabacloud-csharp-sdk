@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("LimitApp")]
+            [Validation(Required=false)]
+            public string LimitApp { get; set; }
+
             /// <summary>
             /// <para>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</para>
             /// 

@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string FallbackObject { get; set; }
 
+                [NameInMap("LimitApp")]
+                [Validation(Required=false)]
+                public string LimitApp { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>default</para>

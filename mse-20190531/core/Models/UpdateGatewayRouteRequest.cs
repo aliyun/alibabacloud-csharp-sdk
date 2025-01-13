@@ -80,6 +80,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string DomainIdListJSON { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to activate Web Application Firewall (WAF).</para>
         /// 
@@ -88,6 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("EnableWaf")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? EnableWaf { get; set; }
 
         /// <summary>

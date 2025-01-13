@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        [NameInMap("LimitApp")]
+        [Validation(Required=false)]
+        public string LimitApp { get; set; }
+
         /// <summary>
         /// <para>The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.</para>
         /// 

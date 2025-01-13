@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        [NameInMap("LimitApp")]
+        [Validation(Required=false)]
+        public string LimitApp { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

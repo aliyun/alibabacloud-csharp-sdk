@@ -5137,6 +5137,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxQueueingTimeMs))
             {
                 query["MaxQueueingTimeMs"] = request.MaxQueueingTimeMs;
@@ -5218,6 +5222,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxQueueingTimeMs))
             {
@@ -5997,6 +6005,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -6066,6 +6078,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
@@ -23240,7 +23256,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关开启鉴权的路由</para>
+        /// <para>Queries a list of routes for which authentication is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23290,7 +23306,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关开启鉴权的路由</para>
+        /// <para>Queries a list of routes for which authentication is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23340,7 +23356,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关开启鉴权的路由</para>
+        /// <para>Queries a list of routes for which authentication is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23358,7 +23374,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关开启鉴权的路由</para>
+        /// <para>Queries a list of routes for which authentication is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32581,6 +32597,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxQueueingTimeMs))
             {
                 query["MaxQueueingTimeMs"] = request.MaxQueueingTimeMs;
@@ -32654,6 +32674,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxQueueingTimeMs))
             {
@@ -37013,6 +37037,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["Enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -37078,6 +37106,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LimitApp))
+            {
+                query["LimitApp"] = request.LimitApp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
