@@ -494,6 +494,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? Replicas { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         [NameInMap("SaeVersion")]
         [Validation(Required=false)]
         public string SaeVersion { get; set; }

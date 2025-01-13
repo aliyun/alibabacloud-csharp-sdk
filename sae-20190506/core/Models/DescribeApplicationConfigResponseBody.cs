@@ -828,6 +828,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public int? Replicas { get; set; }
 
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
             [NameInMap("SecretMountDesc")]
             [Validation(Required=false)]
             public List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> SecretMountDesc { get; set; }
