@@ -1,3 +1,6 @@
+2025-01-13 Version: 2.9.1
+- Generated csharp ip_1.0 for AliGenie.
+
 2025-01-10 Version: 2.9.0
 - Support API ExecuteScene.
 - Support API QueryRoomStatus.
