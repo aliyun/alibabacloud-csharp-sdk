@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                [NameInMap("AdvancedOptions")]
+                [Validation(Required=false)]
+                public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions AdvancedOptions { get; set; }
+                public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions : TeaModel {
+                    [NameInMap("RetainCloudAssistant")]
+                    [Validation(Required=false)]
+                    public bool? RetainCloudAssistant { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The source image.</para>
                 /// <list type="bullet">
@@ -131,6 +141,74 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string ImagePipelineId { get; set; }
 
+                [NameInMap("ImportImageOptions")]
+                [Validation(Required=false)]
+                public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions ImportImageOptions { get; set; }
+                public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions : TeaModel {
+                    [NameInMap("Architecture")]
+                    [Validation(Required=false)]
+                    public string Architecture { get; set; }
+
+                    [NameInMap("BootMode")]
+                    [Validation(Required=false)]
+                    public string BootMode { get; set; }
+
+                    [NameInMap("DiskDeviceMappings")]
+                    [Validation(Required=false)]
+                    public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings DiskDeviceMappings { get; set; }
+                    public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings : TeaModel {
+                        [NameInMap("DiskDeviceMapping")]
+                        [Validation(Required=false)]
+                        public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping> DiskDeviceMapping { get; set; }
+                        public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappingsDiskDeviceMapping : TeaModel {
+                            [NameInMap("DiskImageSize")]
+                            [Validation(Required=false)]
+                            public int? DiskImageSize { get; set; }
+
+                            [NameInMap("Format")]
+                            [Validation(Required=false)]
+                            public string Format { get; set; }
+
+                            [NameInMap("OSSBucket")]
+                            [Validation(Required=false)]
+                            public string OSSBucket { get; set; }
+
+                            [NameInMap("OSSObject")]
+                            [Validation(Required=false)]
+                            public string OSSObject { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("Features")]
+                    [Validation(Required=false)]
+                    public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures Features { get; set; }
+                    public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures : TeaModel {
+                        [NameInMap("NvmeSupport")]
+                        [Validation(Required=false)]
+                        public string NvmeSupport { get; set; }
+
+                    }
+
+                    [NameInMap("LicenseType")]
+                    [Validation(Required=false)]
+                    public string LicenseType { get; set; }
+
+                    [NameInMap("OSType")]
+                    [Validation(Required=false)]
+                    public string OSType { get; set; }
+
+                    [NameInMap("Platform")]
+                    [Validation(Required=false)]
+                    public string Platform { get; set; }
+
+                    [NameInMap("RetainImportedImage")]
+                    [Validation(Required=false)]
+                    public bool? RetainImportedImage { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The instance type.</para>
                 /// 
@@ -160,6 +238,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("NvmeSupport")]
+                [Validation(Required=false)]
+                public string NvmeSupport { get; set; }
 
                 /// <summary>
                 /// <para>The repair mode of the image template.</para>

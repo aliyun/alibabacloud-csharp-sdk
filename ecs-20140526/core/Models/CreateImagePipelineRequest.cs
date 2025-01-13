@@ -19,13 +19,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<long?> AddAccount { get; set; }
 
+        [NameInMap("AdvancedOptions")]
+        [Validation(Required=false)]
+        public CreateImagePipelineRequestAdvancedOptions AdvancedOptions { get; set; }
+        public class CreateImagePipelineRequestAdvancedOptions : TeaModel {
+            [NameInMap("RetainCloudAssistant")]
+            [Validation(Required=false)]
+            public bool? RetainCloudAssistant { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The source image.</para>
         /// <list type="bullet">
         /// <item><description>If you set <c>BaseImageType</c> to IMAGE, set the BaseImage parameter to the ID of a custom image.</description></item>
         /// <item><description>If you set <c>BaseImageType</c> to IMAGE_FAMILY, set the BaseImage parameter to the name of an image family.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp67acfmxazb4p****</para>
@@ -118,6 +127,68 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        [NameInMap("ImportImageOptions")]
+        [Validation(Required=false)]
+        public CreateImagePipelineRequestImportImageOptions ImportImageOptions { get; set; }
+        public class CreateImagePipelineRequestImportImageOptions : TeaModel {
+            [NameInMap("Architecture")]
+            [Validation(Required=false)]
+            public string Architecture { get; set; }
+
+            [NameInMap("BootMode")]
+            [Validation(Required=false)]
+            public string BootMode { get; set; }
+
+            [NameInMap("DiskDeviceMappings")]
+            [Validation(Required=false)]
+            public List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> DiskDeviceMappings { get; set; }
+            public class CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings : TeaModel {
+                [NameInMap("DiskImageSize")]
+                [Validation(Required=false)]
+                public int? DiskImageSize { get; set; }
+
+                [NameInMap("Format")]
+                [Validation(Required=false)]
+                public string Format { get; set; }
+
+                [NameInMap("OSSBucket")]
+                [Validation(Required=false)]
+                public string OSSBucket { get; set; }
+
+                [NameInMap("OSSObject")]
+                [Validation(Required=false)]
+                public string OSSObject { get; set; }
+
+            }
+
+            [NameInMap("Features")]
+            [Validation(Required=false)]
+            public CreateImagePipelineRequestImportImageOptionsFeatures Features { get; set; }
+            public class CreateImagePipelineRequestImportImageOptionsFeatures : TeaModel {
+                [NameInMap("NvmeSupport")]
+                [Validation(Required=false)]
+                public string NvmeSupport { get; set; }
+
+            }
+
+            [NameInMap("LicenseType")]
+            [Validation(Required=false)]
+            public string LicenseType { get; set; }
+
+            [NameInMap("OSType")]
+            [Validation(Required=false)]
+            public string OSType { get; set; }
+
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+
+            [NameInMap("RetainImportedImage")]
+            [Validation(Required=false)]
+            public bool? RetainImportedImage { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query instance types.</para>
         /// <para>If you do not configure this parameter, an instance type that provides the fewest vCPUs and memory resources is automatically selected. This configuration is subject to resource availability of instance types. For example, the ecs.g6.large instance type is automatically selected. If available ecs.g6.large resources are insufficient, the ecs.g6.xlarge instance type is selected.</para>
@@ -152,6 +223,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("NvmeSupport")]
+        [Validation(Required=false)]
+        public string NvmeSupport { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
