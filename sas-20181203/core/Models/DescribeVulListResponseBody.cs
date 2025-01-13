@@ -676,6 +676,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? PrimaryId { get; set; }
 
+            [NameInMap("Progress")]
+            [Validation(Required=false)]
+            public int? Progress { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
             /// <list type="bullet">
