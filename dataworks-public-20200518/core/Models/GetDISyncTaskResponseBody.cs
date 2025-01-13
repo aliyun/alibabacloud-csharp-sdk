@@ -16,6 +16,76 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public GetDISyncTaskResponseBodyData Data { get; set; }
         public class GetDISyncTaskResponseBodyData : TeaModel {
+            [NameInMap("AlarmList")]
+            [Validation(Required=false)]
+            public List<GetDISyncTaskResponseBodyDataAlarmList> AlarmList { get; set; }
+            public class GetDISyncTaskResponseBodyDataAlarmList : TeaModel {
+                [NameInMap("AlarmRuleList")]
+                [Validation(Required=false)]
+                public List<GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList> AlarmRuleList { get; set; }
+                public class GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList : TeaModel {
+                    [NameInMap("Aggregator")]
+                    [Validation(Required=false)]
+                    public string Aggregator { get; set; }
+
+                    [NameInMap("Comparator")]
+                    [Validation(Required=false)]
+                    public string Comparator { get; set; }
+
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
+                    public long? Duration { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public string Level { get; set; }
+
+                    [NameInMap("Threshold")]
+                    [Validation(Required=false)]
+                    public long? Threshold { get; set; }
+
+                }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+                [NameInMap("Metric")]
+                [Validation(Required=false)]
+                public string Metric { get; set; }
+
+                [NameInMap("NotifyRule")]
+                [Validation(Required=false)]
+                public GetDISyncTaskResponseBodyDataAlarmListNotifyRule NotifyRule { get; set; }
+                public class GetDISyncTaskResponseBodyDataAlarmListNotifyRule : TeaModel {
+                    [NameInMap("Critical")]
+                    [Validation(Required=false)]
+                    public List<string> Critical { get; set; }
+
+                    [NameInMap("Interval")]
+                    [Validation(Required=false)]
+                    public long? Interval { get; set; }
+
+                    [NameInMap("Warning")]
+                    [Validation(Required=false)]
+                    public List<string> Warning { get; set; }
+
+                }
+
+                [NameInMap("RuleName")]
+                [Validation(Required=false)]
+                public string RuleName { get; set; }
+
+            }
+
             /// <summary>
             /// <list type="bullet">
             /// <item><description>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</description></item>

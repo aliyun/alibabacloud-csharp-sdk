@@ -195,8 +195,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The type of the code in the file.</para>
-        /// <para>Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</para>
+        /// <para>The type of the code for the file. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -385,6 +384,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? Stop { get; set; }
 
+        /// <summary>
+        /// <para>The timeout period.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public int? Timeout { get; set; }

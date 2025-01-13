@@ -42514,7 +42514,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新基线</para>
+        /// <para>Updates a baseline.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42614,7 +42614,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新基线</para>
+        /// <para>Updates a baseline.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42714,7 +42714,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新基线</para>
+        /// <para>Updates a baseline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42732,7 +42732,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新基线</para>
+        /// <para>Updates a baseline.</para>
         /// </summary>
         /// 
         /// <param name="request">

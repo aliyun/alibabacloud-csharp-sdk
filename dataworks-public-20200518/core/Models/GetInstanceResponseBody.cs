@@ -217,6 +217,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NodeName { get; set; }
 
             /// <summary>
+            /// <para>The owner of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -235,6 +237,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ParamValues { get; set; }
 
             /// <summary>
+            /// <para>The sequence number of the cycle. This parameter indicates the sequence number of the cycle of the instance on the current day.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

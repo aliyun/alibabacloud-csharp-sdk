@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<UpdateBaselineRequestAlertSettings> AlertSettings { get; set; }
         public class UpdateBaselineRequestAlertSettings : TeaModel {
             /// <summary>
-            /// <para>The interval at which an event alert notification is sent. Unit: seconds. Minimum value: 900.</para>
+            /// <para>The interval at which an event alert notification is sent. Unit: minutes. Minimum value: 5. Maximum value: 1,440.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1800</para>

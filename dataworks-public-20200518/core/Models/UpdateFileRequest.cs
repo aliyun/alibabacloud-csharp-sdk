@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string AdvancedSettings { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ApplyScheduleImmediately")]
         [Validation(Required=false)]
         public bool? ApplyScheduleImmediately { get; set; }
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DependentNodeIdList { get; set; }
 
         /// <summary>
-        /// <para>The type of the cross-cycle scheduling dependency of the node that corresponds to the file. Valid values:</para>
+        /// <para>The type of the cross-cycle scheduling dependency of the node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</description></item>
         /// <item><description>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</description></item>
@@ -321,7 +325,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <item><description>NORMAL: The node is an auto triggered node.</description></item>
         /// <item><description>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</description></item>
         /// <item><description>PAUSE: The node is a paused node.</description></item>
-        /// <item><description>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to succeeded when the scheduling system starts to run the nodes.</description></item>
+        /// <item><description>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -372,6 +376,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? Stop { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public int? Timeout { get; set; }
