@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The service URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://foo-115**.console.cn-hangzhou.eas.pai-ml.com?expire=1735202661&signature=ey">https://foo-115**.console.cn-hangzhou.eas.pai-ml.com?expire=1735202661&amp;signature=ey</a>*******</para>
         /// </summary>

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string QueueService { get; set; }
 
+        [NameInMap("TrafficMode")]
+        [Validation(Required=false)]
+        public string TrafficMode { get; set; }
+
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }

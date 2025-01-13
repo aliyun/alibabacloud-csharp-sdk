@@ -4973,7 +4973,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取群组端点列表</para>
+        /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5009,7 +5009,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取群组端点列表</para>
+        /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5045,7 +5045,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取群组端点列表</para>
+        /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5060,7 +5060,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取群组端点列表</para>
+        /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5789,7 +5789,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务端点列表</para>
+        /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5825,7 +5825,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务端点列表</para>
+        /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5861,7 +5861,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务端点列表</para>
+        /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5876,7 +5876,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务端点列表</para>
+        /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6459,7 +6459,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务监控签名地址</para>
+        /// <para>Obtains the logon-free URL of the service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6513,7 +6513,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务监控签名地址</para>
+        /// <para>Obtains the logon-free URL of the service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6567,7 +6567,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务监控签名地址</para>
+        /// <para>Obtains the logon-free URL of the service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6586,7 +6586,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务监控签名地址</para>
+        /// <para>Obtains the logon-free URL of the service.</para>
         /// </summary>
         /// 
         /// <param name="request">
