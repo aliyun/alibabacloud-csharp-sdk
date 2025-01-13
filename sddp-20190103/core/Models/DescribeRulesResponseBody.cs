@@ -191,6 +191,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? MatchType { get; set; }
 
+            [NameInMap("ModelRuleIds")]
+            [Validation(Required=false)]
+            public string ModelRuleIds { get; set; }
+
             /// <summary>
             /// <para>The name of the sensitive data detection rule.</para>
             /// 
@@ -303,6 +307,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("Target")]
             [Validation(Required=false)]
             public string Target { get; set; }
+
+            [NameInMap("TemplateRuleIds")]
+            [Validation(Required=false)]
+            public string TemplateRuleIds { get; set; }
 
             /// <summary>
             /// <para>The ID of the account that is used to create the sensitive data detection rule.</para>
