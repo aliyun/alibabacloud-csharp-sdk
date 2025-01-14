@@ -179,6 +179,310 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>挂载业务策略至指定审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public AttachPolicy2ApprovalProcessResponse AttachPolicy2ApprovalProcessWithOptions(AttachPolicy2ApprovalProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                body["ProcessId"] = request.ProcessId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachPolicy2ApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachPolicy2ApprovalProcessResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>挂载业务策略至指定审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public async Task<AttachPolicy2ApprovalProcessResponse> AttachPolicy2ApprovalProcessWithOptionsAsync(AttachPolicy2ApprovalProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                body["ProcessId"] = request.ProcessId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachPolicy2ApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachPolicy2ApprovalProcessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>挂载业务策略至指定审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public AttachPolicy2ApprovalProcessResponse AttachPolicy2ApprovalProcess(AttachPolicy2ApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachPolicy2ApprovalProcessWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>挂载业务策略至指定审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public async Task<AttachPolicy2ApprovalProcessResponse> AttachPolicy2ApprovalProcessAsync(AttachPolicy2ApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachPolicy2ApprovalProcessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApprovalProcessResponse
+        /// </returns>
+        public CreateApprovalProcessResponse CreateApprovalProcessWithOptions(CreateApprovalProcessRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateApprovalProcessShrinkRequest request = new CreateApprovalProcessShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemas))
+            {
+                request.MatchSchemasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemas, "MatchSchemas", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchSchemasShrink))
+            {
+                body["MatchSchemas"] = request.MatchSchemasShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessName))
+            {
+                body["ProcessName"] = request.ProcessName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessNodes))
+            {
+                bodyFlat["ProcessNodes"] = request.ProcessNodes;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApprovalProcessResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApprovalProcessResponse
+        /// </returns>
+        public async Task<CreateApprovalProcessResponse> CreateApprovalProcessWithOptionsAsync(CreateApprovalProcessRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateApprovalProcessShrinkRequest request = new CreateApprovalProcessShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemas))
+            {
+                request.MatchSchemasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemas, "MatchSchemas", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchSchemasShrink))
+            {
+                body["MatchSchemas"] = request.MatchSchemasShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessName))
+            {
+                body["ProcessName"] = request.ProcessName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessNodes))
+            {
+                bodyFlat["ProcessNodes"] = request.ProcessNodes;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApprovalProcessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApprovalProcessResponse
+        /// </returns>
+        public CreateApprovalProcessResponse CreateApprovalProcess(CreateApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateApprovalProcessWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApprovalProcessResponse
+        /// </returns>
+        public async Task<CreateApprovalProcessResponse> CreateApprovalProcessAsync(CreateApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateApprovalProcessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建自定义身份源用户</para>
         /// </summary>
         /// 
@@ -2355,6 +2659,138 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量删除审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApprovalProcessesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApprovalProcessesResponse
+        /// </returns>
+        public DeleteApprovalProcessesResponse DeleteApprovalProcessesWithOptions(DeleteApprovalProcessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessIds))
+            {
+                bodyFlat["ProcessIds"] = request.ProcessIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApprovalProcesses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApprovalProcessesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApprovalProcessesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApprovalProcessesResponse
+        /// </returns>
+        public async Task<DeleteApprovalProcessesResponse> DeleteApprovalProcessesWithOptionsAsync(DeleteApprovalProcessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessIds))
+            {
+                bodyFlat["ProcessIds"] = request.ProcessIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApprovalProcesses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApprovalProcessesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApprovalProcessesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApprovalProcessesResponse
+        /// </returns>
+        public DeleteApprovalProcessesResponse DeleteApprovalProcesses(DeleteApprovalProcessesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteApprovalProcessesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApprovalProcessesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApprovalProcessesResponse
+        /// </returns>
+        public async Task<DeleteApprovalProcessesResponse> DeleteApprovalProcessesAsync(DeleteApprovalProcessesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteApprovalProcessesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除自定义身份源指定用户</para>
         /// </summary>
         /// 
@@ -3607,6 +4043,142 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>解绑业务策略与审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public DetachPolicy2ApprovalProcessResponse DetachPolicy2ApprovalProcessWithOptions(DetachPolicy2ApprovalProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                body["ProcessId"] = request.ProcessId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachPolicy2ApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachPolicy2ApprovalProcessResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑业务策略与审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public async Task<DetachPolicy2ApprovalProcessResponse> DetachPolicy2ApprovalProcessWithOptionsAsync(DetachPolicy2ApprovalProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                body["ProcessId"] = request.ProcessId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachPolicy2ApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachPolicy2ApprovalProcessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑业务策略与审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public DetachPolicy2ApprovalProcessResponse DetachPolicy2ApprovalProcess(DetachPolicy2ApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetachPolicy2ApprovalProcessWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑业务策略与审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachPolicy2ApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachPolicy2ApprovalProcessResponse
+        /// </returns>
+        public async Task<DetachPolicy2ApprovalProcessResponse> DetachPolicy2ApprovalProcessAsync(DetachPolicy2ApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetachPolicy2ApprovalProcessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>批量查询用户设备列表</para>
         /// </summary>
         /// 
@@ -3941,6 +4513,436 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetActiveIdpConfigWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalResponse
+        /// </returns>
+        public GetApprovalResponse GetApprovalWithOptions(GetApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApproval",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalResponse
+        /// </returns>
+        public async Task<GetApprovalResponse> GetApprovalWithOptionsAsync(GetApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApproval",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalResponse
+        /// </returns>
+        public GetApprovalResponse GetApproval(GetApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetApprovalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalResponse
+        /// </returns>
+        public async Task<GetApprovalResponse> GetApprovalAsync(GetApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetApprovalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalProcessResponse
+        /// </returns>
+        public GetApprovalProcessResponse GetApprovalProcessWithOptions(GetApprovalProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalProcessResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalProcessResponse
+        /// </returns>
+        public async Task<GetApprovalProcessResponse> GetApprovalProcessWithOptionsAsync(GetApprovalProcessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalProcessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalProcessResponse
+        /// </returns>
+        public GetApprovalProcessResponse GetApprovalProcess(GetApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetApprovalProcessWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalProcessResponse
+        /// </returns>
+        public async Task<GetApprovalProcessResponse> GetApprovalProcessAsync(GetApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetApprovalProcessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalSchemaResponse
+        /// </returns>
+        public GetApprovalSchemaResponse GetApprovalSchemaWithOptions(GetApprovalSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApprovalSchema",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalSchemaResponse
+        /// </returns>
+        public async Task<GetApprovalSchemaResponse> GetApprovalSchemaWithOptionsAsync(GetApprovalSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApprovalSchema",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalSchemaResponse
+        /// </returns>
+        public GetApprovalSchemaResponse GetApprovalSchema(GetApprovalSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetApprovalSchemaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalSchemaResponse
+        /// </returns>
+        public async Task<GetApprovalSchemaResponse> GetApprovalSchemaAsync(GetApprovalSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetApprovalSchemaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBootAndAntiUninstallPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public GetBootAndAntiUninstallPolicyResponse GetBootAndAntiUninstallPolicyWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBootAndAntiUninstallPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBootAndAntiUninstallPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBootAndAntiUninstallPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public async Task<GetBootAndAntiUninstallPolicyResponse> GetBootAndAntiUninstallPolicyWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBootAndAntiUninstallPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBootAndAntiUninstallPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public GetBootAndAntiUninstallPolicyResponse GetBootAndAntiUninstallPolicy()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetBootAndAntiUninstallPolicyWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public async Task<GetBootAndAntiUninstallPolicyResponse> GetBootAndAntiUninstallPolicyAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetBootAndAntiUninstallPolicyWithOptionsAsync(runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5285,6 +6287,566 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListApplicationsForPrivateAccessTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesResponse
+        /// </returns>
+        public ListApprovalProcessesResponse ListApprovalProcessesWithOptions(ListApprovalProcessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalProcesses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalProcessesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesResponse
+        /// </returns>
+        public async Task<ListApprovalProcessesResponse> ListApprovalProcessesWithOptionsAsync(ListApprovalProcessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalProcesses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalProcessesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesResponse
+        /// </returns>
+        public ListApprovalProcessesResponse ListApprovalProcesses(ListApprovalProcessesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListApprovalProcessesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesResponse
+        /// </returns>
+        public async Task<ListApprovalProcessesResponse> ListApprovalProcessesAsync(ListApprovalProcessesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListApprovalProcessesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批渲染模板关联的流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesForApprovalSchemasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesForApprovalSchemasResponse
+        /// </returns>
+        public ListApprovalProcessesForApprovalSchemasResponse ListApprovalProcessesForApprovalSchemasWithOptions(ListApprovalProcessesForApprovalSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalProcessesForApprovalSchemas",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalProcessesForApprovalSchemasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批渲染模板关联的流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesForApprovalSchemasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesForApprovalSchemasResponse
+        /// </returns>
+        public async Task<ListApprovalProcessesForApprovalSchemasResponse> ListApprovalProcessesForApprovalSchemasWithOptionsAsync(ListApprovalProcessesForApprovalSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalProcessesForApprovalSchemas",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalProcessesForApprovalSchemasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批渲染模板关联的流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesForApprovalSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesForApprovalSchemasResponse
+        /// </returns>
+        public ListApprovalProcessesForApprovalSchemasResponse ListApprovalProcessesForApprovalSchemas(ListApprovalProcessesForApprovalSchemasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListApprovalProcessesForApprovalSchemasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批渲染模板关联的流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalProcessesForApprovalSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalProcessesForApprovalSchemasResponse
+        /// </returns>
+        public async Task<ListApprovalProcessesForApprovalSchemasResponse> ListApprovalProcessesForApprovalSchemasAsync(ListApprovalProcessesForApprovalSchemasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListApprovalProcessesForApprovalSchemasWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasResponse
+        /// </returns>
+        public ListApprovalSchemasResponse ListApprovalSchemasWithOptions(ListApprovalSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalSchemas",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalSchemasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasResponse
+        /// </returns>
+        public async Task<ListApprovalSchemasResponse> ListApprovalSchemasWithOptionsAsync(ListApprovalSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalSchemas",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalSchemasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasResponse
+        /// </returns>
+        public ListApprovalSchemasResponse ListApprovalSchemas(ListApprovalSchemasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListApprovalSchemasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询审批动态模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasResponse
+        /// </returns>
+        public async Task<ListApprovalSchemasResponse> ListApprovalSchemasAsync(ListApprovalSchemasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListApprovalSchemasWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程关联的渲染模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasForApprovalProcessesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasForApprovalProcessesResponse
+        /// </returns>
+        public ListApprovalSchemasForApprovalProcessesResponse ListApprovalSchemasForApprovalProcessesWithOptions(ListApprovalSchemasForApprovalProcessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalSchemasForApprovalProcesses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalSchemasForApprovalProcessesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程关联的渲染模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasForApprovalProcessesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasForApprovalProcessesResponse
+        /// </returns>
+        public async Task<ListApprovalSchemasForApprovalProcessesResponse> ListApprovalSchemasForApprovalProcessesWithOptionsAsync(ListApprovalSchemasForApprovalProcessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovalSchemasForApprovalProcesses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalSchemasForApprovalProcessesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程关联的渲染模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasForApprovalProcessesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasForApprovalProcessesResponse
+        /// </returns>
+        public ListApprovalSchemasForApprovalProcessesResponse ListApprovalSchemasForApprovalProcesses(ListApprovalSchemasForApprovalProcessesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListApprovalSchemasForApprovalProcessesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审批流程关联的渲染模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalSchemasForApprovalProcessesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalSchemasForApprovalProcessesResponse
+        /// </returns>
+        public async Task<ListApprovalSchemasForApprovalProcessesResponse> ListApprovalSchemasForApprovalProcessesAsync(ListApprovalSchemasForApprovalProcessesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListApprovalSchemasForApprovalProcessesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalsResponse
+        /// </returns>
+        public ListApprovalsResponse ListApprovalsWithOptions(ListApprovalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovals",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalsResponse
+        /// </returns>
+        public async Task<ListApprovalsResponse> ListApprovalsWithOptionsAsync(ListApprovalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApprovals",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApprovalsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalsResponse
+        /// </returns>
+        public ListApprovalsResponse ListApprovals(ListApprovalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListApprovalsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询审批</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApprovalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApprovalsResponse
+        /// </returns>
+        public async Task<ListApprovalsResponse> ListApprovalsAsync(ListApprovalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListApprovalsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7799,6 +9361,118 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列表查询卸载申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUninstallApplicationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUninstallApplicationsResponse
+        /// </returns>
+        public ListUninstallApplicationsResponse ListUninstallApplicationsWithOptions(ListUninstallApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUninstallApplications",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUninstallApplicationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询卸载申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUninstallApplicationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUninstallApplicationsResponse
+        /// </returns>
+        public async Task<ListUninstallApplicationsResponse> ListUninstallApplicationsWithOptionsAsync(ListUninstallApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUninstallApplications",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUninstallApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询卸载申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUninstallApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUninstallApplicationsResponse
+        /// </returns>
+        public ListUninstallApplicationsResponse ListUninstallApplications(ListUninstallApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUninstallApplicationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询卸载申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUninstallApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUninstallApplicationsResponse
+        /// </returns>
+        public async Task<ListUninstallApplicationsResponse> ListUninstallApplicationsAsync(ListUninstallApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUninstallApplicationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>列表查询用户应用权限</para>
         /// </summary>
         /// 
@@ -8819,6 +10493,494 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeUserSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalProcessResponse
+        /// </returns>
+        public UpdateApprovalProcessResponse UpdateApprovalProcessWithOptions(UpdateApprovalProcessRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateApprovalProcessShrinkRequest request = new UpdateApprovalProcessShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemas))
+            {
+                request.MatchSchemasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemas, "MatchSchemas", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchSchemasShrink))
+            {
+                body["MatchSchemas"] = request.MatchSchemasShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                body["ProcessId"] = request.ProcessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessName))
+            {
+                body["ProcessName"] = request.ProcessName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessNodes))
+            {
+                bodyFlat["ProcessNodes"] = request.ProcessNodes;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApprovalProcessResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateApprovalProcessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalProcessResponse
+        /// </returns>
+        public async Task<UpdateApprovalProcessResponse> UpdateApprovalProcessWithOptionsAsync(UpdateApprovalProcessRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateApprovalProcessShrinkRequest request = new UpdateApprovalProcessShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemas))
+            {
+                request.MatchSchemasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemas, "MatchSchemas", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchSchemasShrink))
+            {
+                body["MatchSchemas"] = request.MatchSchemasShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                body["ProcessId"] = request.ProcessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessName))
+            {
+                body["ProcessName"] = request.ProcessName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessNodes))
+            {
+                bodyFlat["ProcessNodes"] = request.ProcessNodes;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApprovalProcess",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApprovalProcessResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalProcessResponse
+        /// </returns>
+        public UpdateApprovalProcessResponse UpdateApprovalProcess(UpdateApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateApprovalProcessWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新审批流程</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApprovalProcessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalProcessResponse
+        /// </returns>
+        public async Task<UpdateApprovalProcessResponse> UpdateApprovalProcessAsync(UpdateApprovalProcessRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateApprovalProcessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改审批状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApprovalStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalStatusResponse
+        /// </returns>
+        public UpdateApprovalStatusResponse UpdateApprovalStatusWithOptions(UpdateApprovalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalId))
+            {
+                query["ApprovalId"] = request.ApprovalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApprovalStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApprovalStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改审批状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApprovalStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalStatusResponse
+        /// </returns>
+        public async Task<UpdateApprovalStatusResponse> UpdateApprovalStatusWithOptionsAsync(UpdateApprovalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalId))
+            {
+                query["ApprovalId"] = request.ApprovalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApprovalStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApprovalStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改审批状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApprovalStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalStatusResponse
+        /// </returns>
+        public UpdateApprovalStatusResponse UpdateApprovalStatus(UpdateApprovalStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateApprovalStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改审批状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApprovalStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApprovalStatusResponse
+        /// </returns>
+        public async Task<UpdateApprovalStatusResponse> UpdateApprovalStatusAsync(UpdateApprovalStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateApprovalStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBootAndAntiUninstallPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public UpdateBootAndAntiUninstallPolicyResponse UpdateBootAndAntiUninstallPolicyWithOptions(UpdateBootAndAntiUninstallPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBootAndAntiUninstallPolicyShrinkRequest request = new UpdateBootAndAntiUninstallPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BlockContent))
+            {
+                request.BlockContentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BlockContent, "BlockContent", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowReport))
+            {
+                body["AllowReport"] = request.AllowReport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockContentShrink))
+            {
+                body["BlockContent"] = request.BlockContentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAntiUninstall))
+            {
+                body["IsAntiUninstall"] = request.IsAntiUninstall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBoot))
+            {
+                body["IsBoot"] = request.IsBoot;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistUsers))
+            {
+                bodyFlat["WhitelistUsers"] = request.WhitelistUsers;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBootAndAntiUninstallPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBootAndAntiUninstallPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBootAndAntiUninstallPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public async Task<UpdateBootAndAntiUninstallPolicyResponse> UpdateBootAndAntiUninstallPolicyWithOptionsAsync(UpdateBootAndAntiUninstallPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBootAndAntiUninstallPolicyShrinkRequest request = new UpdateBootAndAntiUninstallPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BlockContent))
+            {
+                request.BlockContentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BlockContent, "BlockContent", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowReport))
+            {
+                body["AllowReport"] = request.AllowReport;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockContentShrink))
+            {
+                body["BlockContent"] = request.BlockContentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAntiUninstall))
+            {
+                body["IsAntiUninstall"] = request.IsAntiUninstall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBoot))
+            {
+                body["IsBoot"] = request.IsBoot;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistUsers))
+            {
+                bodyFlat["WhitelistUsers"] = request.WhitelistUsers;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBootAndAntiUninstallPolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBootAndAntiUninstallPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBootAndAntiUninstallPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public UpdateBootAndAntiUninstallPolicyResponse UpdateBootAndAntiUninstallPolicy(UpdateBootAndAntiUninstallPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateBootAndAntiUninstallPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自启动与防卸载策略配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBootAndAntiUninstallPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBootAndAntiUninstallPolicyResponse
+        /// </returns>
+        public async Task<UpdateBootAndAntiUninstallPolicyResponse> UpdateBootAndAntiUninstallPolicyAsync(UpdateBootAndAntiUninstallPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateBootAndAntiUninstallPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10559,6 +12721,146 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRegistrationPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改卸载申请状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUninstallApplicationsStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUninstallApplicationsStatusResponse
+        /// </returns>
+        public UpdateUninstallApplicationsStatusResponse UpdateUninstallApplicationsStatusWithOptions(UpdateUninstallApplicationsStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationIds))
+            {
+                bodyFlat["ApplicationIds"] = request.ApplicationIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUninstallApplicationsStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUninstallApplicationsStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改卸载申请状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUninstallApplicationsStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUninstallApplicationsStatusResponse
+        /// </returns>
+        public async Task<UpdateUninstallApplicationsStatusResponse> UpdateUninstallApplicationsStatusWithOptionsAsync(UpdateUninstallApplicationsStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationIds))
+            {
+                bodyFlat["ApplicationIds"] = request.ApplicationIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUninstallApplicationsStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUninstallApplicationsStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改卸载申请状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUninstallApplicationsStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUninstallApplicationsStatusResponse
+        /// </returns>
+        public UpdateUninstallApplicationsStatusResponse UpdateUninstallApplicationsStatus(UpdateUninstallApplicationsStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateUninstallApplicationsStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改卸载申请状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateUninstallApplicationsStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUninstallApplicationsStatusResponse
+        /// </returns>
+        public async Task<UpdateUninstallApplicationsStatusResponse> UpdateUninstallApplicationsStatusAsync(UpdateUninstallApplicationsStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateUninstallApplicationsStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

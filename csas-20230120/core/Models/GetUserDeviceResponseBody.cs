@@ -179,6 +179,20 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string NacStatus { get; set; }
 
+            [NameInMap("NetInterfaceInfo")]
+            [Validation(Required=false)]
+            public List<GetUserDeviceResponseBodyDeviceNetInterfaceInfo> NetInterfaceInfo { get; set; }
+            public class GetUserDeviceResponseBodyDeviceNetInterfaceInfo : TeaModel {
+                [NameInMap("Mac")]
+                [Validation(Required=false)]
+                public string Mac { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Enabled</para>

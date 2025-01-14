@@ -1,3 +1,28 @@
+2025-01-14 Version: 1.11.0
+- Support API AttachPolicy2ApprovalProcess.
+- Support API CreateApprovalProcess.
+- Support API DeleteApprovalProcesses.
+- Support API DetachPolicy2ApprovalProcess.
+- Support API GetApproval.
+- Support API GetApprovalProcess.
+- Support API GetApprovalSchema.
+- Support API GetBootAndAntiUninstallPolicy.
+- Support API ListApprovalProcesses.
+- Support API ListApprovalProcessesForApprovalSchemas.
+- Support API ListApprovalSchemas.
+- Support API ListApprovalSchemasForApprovalProcesses.
+- Support API ListApprovals.
+- Support API ListUninstallApplications.
+- Support API UpdateApprovalProcess.
+- Support API UpdateApprovalStatus.
+- Support API UpdateBootAndAntiUninstallPolicy.
+- Support API UpdateUninstallApplicationsStatus.
+- Update API GetUserDevice: update response param.
+- Update API ListUserDevices: update response param.
+- Update API UpdateUserDevicesSharingStatus: update response param.
+- Update API UpdateUserDevicesStatus: update response param.
+
+
 2024-11-13 Version: 1.10.0
 - Support API ListUserApplications.
 - Support API ListUserPrivateAccessPolicies.
