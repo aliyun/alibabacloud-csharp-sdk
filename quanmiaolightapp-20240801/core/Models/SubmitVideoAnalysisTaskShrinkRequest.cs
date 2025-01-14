@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
-    public class RunVideoAnalysisShrinkRequest : TeaModel {
+    public class SubmitVideoAnalysisTaskShrinkRequest : TeaModel {
         [NameInMap("frameSampleMethod")]
         [Validation(Required=false)]
         public string FrameSampleMethodShrink { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>english</para>
+        /// <para>chinese</para>
         /// </summary>
         [NameInMap("language")]
         [Validation(Required=false)]
@@ -47,23 +47,11 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>a3d1c2ac-f086-4a21-9069-f5631542f5ax</para>
+        /// <para>2</para>
         /// </summary>
-        [NameInMap("originalSessionId")]
-        [Validation(Required=false)]
-        public string OriginalSessionId { get; set; }
-
         [NameInMap("snapshotInterval")]
         [Validation(Required=false)]
         public double? SnapshotInterval { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>a3d1c2ac-f086-4a21-9069-f5631542f5a2</para>
-        /// </summary>
-        [NameInMap("taskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
 
         [NameInMap("videoExtraInfo")]
         [Validation(Required=false)]
@@ -75,7 +63,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>qwen-vl-max</para>
+        /// <para>qwen-vl-max-latest</para>
         /// </summary>
         [NameInMap("videoModelId")]
         [Validation(Required=false)]
@@ -86,6 +74,8 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         public string VideoRolesShrink { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://xxxx.mp4">http://xxxx.mp4</a></para>
         /// </summary>

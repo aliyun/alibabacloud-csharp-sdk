@@ -87,6 +87,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                     [Validation(Required=false)]
                     public bool? GenerateFinished { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>qwen-vl-max</para>
+                    /// </summary>
+                    [NameInMap("modelId")]
+                    [Validation(Required=false)]
+                    public string ModelId { get; set; }
+
                     [NameInMap("text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
@@ -221,6 +229,18 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                     [Validation(Required=false)]
                     public bool? GenerateFinished { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>qwen-max</para>
+                    /// </summary>
+                    [NameInMap("modelId")]
+                    [Validation(Required=false)]
+                    public string ModelId { get; set; }
+
+                    [NameInMap("modelReduce")]
+                    [Validation(Required=false)]
+                    public bool? ModelReduce { get; set; }
+
                     [NameInMap("text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
@@ -268,6 +288,18 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                     [NameInMap("generateFinished")]
                     [Validation(Required=false)]
                     public bool? GenerateFinished { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("modelId")]
+                    [Validation(Required=false)]
+                    public string ModelId { get; set; }
+
+                    [NameInMap("modelReduce")]
+                    [Validation(Required=false)]
+                    public bool? ModelReduce { get; set; }
 
                     [NameInMap("text")]
                     [Validation(Required=false)]
@@ -335,6 +367,44 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                 }
 
+                [NameInMap("videoShotSnapshotResult")]
+                [Validation(Required=false)]
+                public RunVideoAnalysisResponseBodyPayloadOutputVideoShotSnapshotResult VideoShotSnapshotResult { get; set; }
+                public class RunVideoAnalysisResponseBodyPayloadOutputVideoShotSnapshotResult : TeaModel {
+                    [NameInMap("videoShots")]
+                    [Validation(Required=false)]
+                    public List<RunVideoAnalysisResponseBodyPayloadOutputVideoShotSnapshotResultVideoShots> VideoShots { get; set; }
+                    public class RunVideoAnalysisResponseBodyPayloadOutputVideoShotSnapshotResultVideoShots : TeaModel {
+                        [NameInMap("endTime")]
+                        [Validation(Required=false)]
+                        public long? EndTime { get; set; }
+
+                        [NameInMap("endTimeFormat")]
+                        [Validation(Required=false)]
+                        public string EndTimeFormat { get; set; }
+
+                        [NameInMap("startTime")]
+                        [Validation(Required=false)]
+                        public long? StartTime { get; set; }
+
+                        [NameInMap("startTimeFormat")]
+                        [Validation(Required=false)]
+                        public string StartTimeFormat { get; set; }
+
+                        [NameInMap("videoSnapshots")]
+                        [Validation(Required=false)]
+                        public List<RunVideoAnalysisResponseBodyPayloadOutputVideoShotSnapshotResultVideoShotsVideoSnapshots> VideoSnapshots { get; set; }
+                        public class RunVideoAnalysisResponseBodyPayloadOutputVideoShotSnapshotResultVideoShotsVideoSnapshots : TeaModel {
+                            [NameInMap("url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
+
+                }
+
                 [NameInMap("videoTitleGenerateResult")]
                 [Validation(Required=false)]
                 public RunVideoAnalysisResponseBodyPayloadOutputVideoTitleGenerateResult VideoTitleGenerateResult { get; set; }
@@ -346,6 +416,18 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                     [NameInMap("generateFinished")]
                     [Validation(Required=false)]
                     public bool? GenerateFinished { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>qwen-max</para>
+                    /// </summary>
+                    [NameInMap("modelId")]
+                    [Validation(Required=false)]
+                    public string ModelId { get; set; }
+
+                    [NameInMap("modelReduce")]
+                    [Validation(Required=false)]
+                    public bool? ModelReduce { get; set; }
 
                     [NameInMap("text")]
                     [Validation(Required=false)]

@@ -9,9 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class RunVideoAnalysisRequest : TeaModel {
+        [NameInMap("frameSampleMethod")]
+        [Validation(Required=false)]
+        public RunVideoAnalysisRequestFrameSampleMethod FrameSampleMethod { get; set; }
+        public class RunVideoAnalysisRequestFrameSampleMethod : TeaModel {
+            [NameInMap("interval")]
+            [Validation(Required=false)]
+            public double? Interval { get; set; }
+
+            [NameInMap("methodName")]
+            [Validation(Required=false)]
+            public string MethodName { get; set; }
+
+            [NameInMap("pixel")]
+            [Validation(Required=false)]
+            public int? Pixel { get; set; }
+
+        }
+
         [NameInMap("generateOptions")]
         [Validation(Required=false)]
         public List<string> GenerateOptions { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>english</para>
+        /// </summary>
+        [NameInMap("language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
 
         [NameInMap("modelCustomPromptTemplate")]
         [Validation(Required=false)]
@@ -68,6 +94,24 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [NameInMap("videoModelId")]
         [Validation(Required=false)]
         public string VideoModelId { get; set; }
+
+        [NameInMap("videoRoles")]
+        [Validation(Required=false)]
+        public List<RunVideoAnalysisRequestVideoRoles> VideoRoles { get; set; }
+        public class RunVideoAnalysisRequestVideoRoles : TeaModel {
+            [NameInMap("roleInfo")]
+            [Validation(Required=false)]
+            public string RoleInfo { get; set; }
+
+            [NameInMap("roleName")]
+            [Validation(Required=false)]
+            public string RoleName { get; set; }
+
+            [NameInMap("urls")]
+            [Validation(Required=false)]
+            public List<string> Urls { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>
