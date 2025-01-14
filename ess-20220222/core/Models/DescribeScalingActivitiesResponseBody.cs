@@ -170,6 +170,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            [NameInMap("ErrorMessages")]
+            [Validation(Required=false)]
+            public List<DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages> ErrorMessages { get; set; }
+            public class DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("FailedInstanceIds")]
+                [Validation(Required=false)]
+                public List<string> FailedInstanceIds { get; set; }
+
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the instance refresh task.</para>
             /// 

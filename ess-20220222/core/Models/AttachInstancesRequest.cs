@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? Entrusted { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("IgnoreInvalidInstance")]
         [Validation(Required=false)]
         public bool? IgnoreInvalidInstance { get; set; }
