@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyAccountDescriptionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyAccountDescriptionResponseBodyData Data { get; set; }
@@ -22,6 +25,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Account { get; set; }
 
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-xxxxx</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxx-xxx</para>
         /// </summary>

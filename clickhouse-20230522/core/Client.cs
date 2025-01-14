@@ -2814,7 +2814,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止正在进行的任务</para>
+        /// <para>Terminates an ongoing query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2864,7 +2864,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止正在进行的任务</para>
+        /// <para>Terminates an ongoing query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2914,7 +2914,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止正在进行的任务</para>
+        /// <para>Terminates an ongoing query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2932,7 +2932,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止正在进行的任务</para>
+        /// <para>Terminates an ongoing query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3514,7 +3514,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改链接地址</para>
+        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3543,6 +3543,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisablePorts))
+            {
+                query["DisablePorts"] = request.DisablePorts;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3568,7 +3572,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改链接地址</para>
+        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3597,6 +3601,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisablePorts))
+            {
+                query["DisablePorts"] = request.DisablePorts;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3622,7 +3630,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改链接地址</para>
+        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3640,7 +3648,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改链接地址</para>
+        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

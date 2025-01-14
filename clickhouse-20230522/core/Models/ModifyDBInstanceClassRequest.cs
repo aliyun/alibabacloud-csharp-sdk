@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public long? ScaleMax { get; set; }
 
         /// <summary>
+        /// <para>The minimum capacity for auto scaling.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

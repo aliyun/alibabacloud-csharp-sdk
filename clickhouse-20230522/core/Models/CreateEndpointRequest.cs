@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The network type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Public</para>
         /// </summary>

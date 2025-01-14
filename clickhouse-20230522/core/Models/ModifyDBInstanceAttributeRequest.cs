@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration that you want to modify.</para>
+        /// <list type="bullet">
+        /// <item><description>MaintainTime: the O\&amp;M time</description></item>
+        /// <item><description>DBInstanceDescription: the cluster name</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The code of the cloud service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>
         /// </summary>

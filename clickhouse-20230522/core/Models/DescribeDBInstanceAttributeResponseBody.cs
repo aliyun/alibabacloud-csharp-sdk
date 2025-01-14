@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("DisabledPorts")]
+            [Validation(Required=false)]
+            public string DisabledPorts { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>clickhouse</para>

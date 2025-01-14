@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
+        /// <para>The engine type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>
         /// </summary>

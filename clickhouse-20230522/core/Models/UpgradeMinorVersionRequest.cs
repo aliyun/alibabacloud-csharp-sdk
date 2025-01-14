@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to update the minor engine version of the cluster immediately. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediate</b>: The system immediately performs the update.</description></item>
+        /// <item><description><b>MaintainTime</b>: The system performs the update during the specified maintenance window.</description></item>
+        /// <item><description><b>SpecifyTime</b>: The system performs the update at a specified time.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Immediate</para>
         /// </summary>

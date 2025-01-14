@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The code of the cloud service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>
         /// </summary>
