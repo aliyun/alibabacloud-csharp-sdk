@@ -8,17 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class DeleteQueueRequest : TeaModel {
+    public class DisableEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the queue.</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>tf-testAccMNSQueue-525478433321945943</para>
+        /// <para>public</para>
         /// </summary>
-        [NameInMap("QueueName")]
+        [NameInMap("EndpointType")]
         [Validation(Required=false)]
-        public string QueueName { get; set; }
+        public string EndpointType { get; set; }
 
     }
 

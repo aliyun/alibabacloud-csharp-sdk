@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class UnsubscribeRequest : TeaModel {
         /// <summary>
-        /// The name of the subscription.
+        /// <para>The name of the subscription.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MySubscription</para>
         /// </summary>
         [NameInMap("SubscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
         /// <summary>
-        /// The name of the topic.
+        /// <para>The name of the topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]

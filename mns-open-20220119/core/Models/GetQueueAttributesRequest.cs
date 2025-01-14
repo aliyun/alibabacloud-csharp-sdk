@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class GetQueueAttributesRequest : TeaModel {
         /// <summary>
-        /// The name of the queue.
+        /// <para>The name of the queue.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>demo-queue</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]

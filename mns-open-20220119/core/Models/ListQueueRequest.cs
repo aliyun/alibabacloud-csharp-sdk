@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class ListQueueRequest : TeaModel {
         /// <summary>
-        /// The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.
+        /// <para>The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.
+        /// <para>The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the queue.
+        /// <para>The name of the queue.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-queue</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]

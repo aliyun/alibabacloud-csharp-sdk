@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class DeleteQueueResponseBody : TeaModel {
+    public class GetEndpointAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,45 +17,51 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
-        /// <summary>
-        /// <para>The returned data.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DeleteQueueResponseBodyData Data { get; set; }
-        public class DeleteQueueResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The response code.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>200</para>
-            /// </summary>
-            [NameInMap("Code")]
+        public GetEndpointAttributeResponseBodyData Data { get; set; }
+        public class GetEndpointAttributeResponseBodyData : TeaModel {
+            [NameInMap("CidrList")]
             [Validation(Required=false)]
-            public long? Code { get; set; }
+            public List<GetEndpointAttributeResponseBodyDataCidrList> CidrList { get; set; }
+            public class GetEndpointAttributeResponseBodyDataCidrList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>allow</para>
+                /// </summary>
+                [NameInMap("AclStrategy")]
+                [Validation(Required=false)]
+                public string AclStrategy { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>172.18.0.0/24</para>
+                /// </summary>
+                [NameInMap("Cidr")]
+                [Validation(Required=false)]
+                public string Cidr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1701951224000</para>
+                /// </summary>
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+            }
 
             /// <summary>
-            /// <para>The returned message.</para>
-            /// </summary>
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            /// <summary>
-            /// <para>Indicates whether the request was successful.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
-            [NameInMap("Success")]
+            [NameInMap("EndpointEnabled")]
             [Validation(Required=false)]
-            public bool? Success { get; set; }
+            public bool? EndpointEnabled { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>operation success</para>
         /// </summary>
@@ -66,8 +70,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123****</para>
         /// </summary>
@@ -76,8 +78,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response status.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -86,8 +86,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

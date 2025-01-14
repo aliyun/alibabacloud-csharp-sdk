@@ -10,66 +10,88 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class ListTopicResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTopicResponseBodyData Data { get; set; }
         public class ListTopicResponseBodyData : TeaModel {
             /// <summary>
-            /// The data returned on the current page.
+            /// <para>The data returned on the current page.</para>
             /// </summary>
             [NameInMap("PageData")]
             [Validation(Required=false)]
             public List<ListTopicResponseBodyDataPageData> PageData { get; set; }
             public class ListTopicResponseBodyDataPageData : TeaModel {
                 /// <summary>
-                /// The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1449554962</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+                /// <para>The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1449554962</para>
                 /// </summary>
                 [NameInMap("LastModifyTime")]
                 [Validation(Required=false)]
                 public long? LastModifyTime { get; set; }
 
                 /// <summary>
-                /// Indicates whether the logging feature is enabled.
+                /// <para>Indicates whether the logging feature is enabled.</para>
+                /// <list type="bullet">
+                /// <item><description>True</description></item>
+                /// <item><description>False</description></item>
+                /// </list>
                 /// 
-                /// *   True
-                /// *   False
+                /// <b>Example:</b>
+                /// <para>True</para>
                 /// </summary>
                 [NameInMap("LoggingEnabled")]
                 [Validation(Required=false)]
                 public bool? LoggingEnabled { get; set; }
 
                 /// <summary>
-                /// The maximum length of the message that is sent to the topic. Unit: bytes.
+                /// <para>The maximum length of the message that is sent to the topic. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>65536</para>
                 /// </summary>
                 [NameInMap("MaxMessageSize")]
                 [Validation(Required=false)]
                 public long? MaxMessageSize { get; set; }
 
                 /// <summary>
-                /// The number of messages in the topic.
+                /// <para>The number of messages in the topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("MessageCount")]
                 [Validation(Required=false)]
                 public long? MessageCount { get; set; }
 
                 /// <summary>
-                /// The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.
+                /// <para>The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86400</para>
                 /// </summary>
                 [NameInMap("MessageRetentionPeriod")]
                 [Validation(Required=false)]
@@ -94,7 +116,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string TopicInnerUrl { get; set; }
 
                 /// <summary>
-                /// The name of the topic.
+                /// <para>The name of the topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demo-topic</para>
                 /// </summary>
                 [NameInMap("TopicName")]
                 [Validation(Required=false)]
@@ -107,21 +132,30 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             }
 
             /// <summary>
-            /// The page number.
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNum")]
             [Validation(Required=false)]
             public long? PageNum { get; set; }
 
             /// <summary>
-            /// The number of entries per page.
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>130</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -130,28 +164,40 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>06273500-249F-5863-121D-74D51123****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The response status.
+        /// <para>The response status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

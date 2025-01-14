@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,47 +10,65 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateQueueRequest : TeaModel {
         /// <summary>
-        /// The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0
+        /// <para>The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("DelaySeconds")]
         [Validation(Required=false)]
         public long? DelaySeconds { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the logging feature. Valid values:
+        /// <para>Specifies whether to enable the logging feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True</description></item>
+        /// <item><description>False (default)</description></item>
+        /// </list>
         /// 
-        /// *   True
-        /// *   False (default)
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableLogging")]
         [Validation(Required=false)]
         public bool? EnableLogging { get; set; }
 
         /// <summary>
-        /// The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.
+        /// <para>The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>65536</para>
         /// </summary>
         [NameInMap("MaximumMessageSize")]
         [Validation(Required=false)]
         public long? MaximumMessageSize { get; set; }
 
         /// <summary>
-        /// The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.
+        /// <para>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>345600</para>
         /// </summary>
         [NameInMap("MessageRetentionPeriod")]
         [Validation(Required=false)]
         public long? MessageRetentionPeriod { get; set; }
 
         /// <summary>
-        /// The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Valid values: 0 to 30. Unit: seconds. Default value: 0
+        /// <para>The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Valid values: 0 to 30. Unit: seconds. Default value: 0</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("PollingWaitSeconds")]
         [Validation(Required=false)]
         public long? PollingWaitSeconds { get; set; }
 
         /// <summary>
-        /// The name of the queue.
+        /// <para>The name of the queue.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>06273500-249F-5863-121D-74D51123****</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
@@ -74,7 +89,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.
+        /// <para>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("VisibilityTimeout")]
         [Validation(Required=false)]

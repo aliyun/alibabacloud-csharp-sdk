@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class SetTopicAttributesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the logging feature. Valid values:
+        /// <para>Specifies whether to enable the logging feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True</description></item>
+        /// <item><description>False (default)</description></item>
+        /// </list>
         /// 
-        /// *   True
-        /// *   False (default)
+        /// <b>Example:</b>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("EnableLogging")]
         [Validation(Required=false)]
         public bool? EnableLogging { get; set; }
 
         /// <summary>
-        /// The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.
+        /// <para>The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>65536</para>
         /// </summary>
         [NameInMap("MaxMessageSize")]
         [Validation(Required=false)]
         public long? MaxMessageSize { get; set; }
 
         /// <summary>
-        /// The name of the topic.
+        /// <para>The name of the topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]

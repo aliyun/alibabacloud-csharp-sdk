@@ -24,9 +24,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// The name of the topic.
+        /// <para>The name of the topic.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>demo-topic</para>
         /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]

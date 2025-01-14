@@ -10,35 +10,44 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class SetQueueAttributesResponseBody : TeaModel {
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SetQueueAttributesResponseBodyData Data { get; set; }
         public class SetQueueAttributesResponseBodyData : TeaModel {
             /// <summary>
-            /// The response code.
+            /// <para>The response code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public long? Code { get; set; }
 
             /// <summary>
-            /// The returned message.
+            /// <para>The returned message.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// Indicates whether the request was successful.
+            /// <para>Indicates whether the request was successful.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -47,28 +56,40 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>06273500-249F-5863-121D-74D51123****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The response status.
+        /// <para>The response status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
