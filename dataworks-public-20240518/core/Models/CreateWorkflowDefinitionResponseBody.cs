@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateWorkflowDefinitionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the workflow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>463497880880954XXXX</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0EF298E5-0940-5AC7-9CB0-65025070XXXX</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataSourceSharedRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The data source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
+        /// <para>The user with which you want to share the data source. If you do not configure this parameter, the data source is shared to an entire workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1107550004253538</para>
         /// </summary>
@@ -38,6 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SharedUser { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace to which you want to share the data source. You cannot share the data source to the workspace with which the data source is associated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

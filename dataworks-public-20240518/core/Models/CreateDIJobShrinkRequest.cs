@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDIJobShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The description of the synchronization task.</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The settings of the destination. Only a single destination is supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DestinationDataSourceSettings")]
@@ -21,6 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DestinationDataSourceSettingsShrink { get; set; }
 
         /// <summary>
+        /// <para>The destination type. Valid values: Hologres and Hive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,21 +35,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string DestinationDataSourceType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <para>This parameter is deprecated and is replaced by the Name parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql_to_holo_sync_8772</para>
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string JobName { get; set; }
 
+        /// <summary>
+        /// <para>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</para>
+        /// </summary>
         [NameInMap("JobSettings")]
         [Validation(Required=false)]
         public string JobSettingsShrink { get; set; }
 
         /// <summary>
+        /// <para>The synchronization type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</description></item>
+        /// <item><description>RealtimeIncremental: real-time incremental synchronization</description></item>
+        /// <item><description>Full: full synchronization</description></item>
+        /// <item><description>OfflineIncremental: batch incremental synchronization</description></item>
+        /// <item><description>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +74,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string MigrationType { get; set; }
 
         /// <summary>
+        /// <para>The name of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql_to_holo_sync_8772</para>
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
+        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>
@@ -63,6 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The resource settings.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSettings")]
@@ -70,6 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceSettingsShrink { get; set; }
 
         /// <summary>
+        /// <para>The settings of the source. Only a single source is supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceDataSourceSettings")]
@@ -77,6 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SourceDataSourceSettingsShrink { get; set; }
 
         /// <summary>
+        /// <para>The source type. Set this parameter to MySQL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,12 +122,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SourceDataSourceType { get; set; }
 
         /// <summary>
+        /// <para>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TableMappings")]
         [Validation(Required=false)]
         public string TableMappingsShrink { get; set; }
 
+        /// <summary>
+        /// <para>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</para>
+        /// </summary>
         [NameInMap("TransformationRules")]
         [Validation(Required=false)]
         public string TransformationRulesShrink { get; set; }

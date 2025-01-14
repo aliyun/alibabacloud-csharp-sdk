@@ -10,16 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDIJobMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <para>The ID of the synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11265</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
-        public string DIJobId { get; set; }
+        public long? DIJobId { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The metrics that you want to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetricName")]
@@ -37,6 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> MetricName { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

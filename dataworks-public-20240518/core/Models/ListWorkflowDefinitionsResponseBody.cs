@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowDefinitionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListWorkflowDefinitionsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListWorkflowDefinitionsResponseBodyPagingInfo : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>227</para>
             /// </summary>
@@ -37,12 +46,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
+            /// <summary>
+            /// <para>The workflows.</para>
+            /// </summary>
             [NameInMap("WorkflowDefinitions")]
             [Validation(Required=false)]
             public List<ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions> WorkflowDefinitions { get; set; }
             public class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions : TeaModel {
                 /// <summary>
-                /// <para>工作流的创建时间</para>
+                /// <para>The time when the workflow was created. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1698057323000</para>
@@ -52,24 +64,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>工作流的描述</para>
+                /// <para>The description of the workflow.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>工作流定义的唯一ID</para>
+                /// <para>The ID of the workflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>463497880880954XXXX</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public string Id { get; set; }
+                public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>工作流的最近修改时间</para>
+                /// <para>The times when the workflow was last modified. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1698057323000</para>
@@ -79,14 +91,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>工作流的名称</para>
+                /// <para>The name of the workflow.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>工作流的责任人</para>
+                /// <para>The owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -96,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>工作流定义的所属项目空间</para>
+                /// <para>The ID of the DataWorks workspace to which the workflow belongs.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -104,41 +116,41 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
-                public string ProjectId { get; set; }
+                public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>工作流的脚本信息</para>
+                /// <para>The script information.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
                 public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript Script { get; set; }
                 public class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript : TeaModel {
                     /// <summary>
-                    /// <para>工作流脚本的id</para>
+                    /// <para>The script ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>698002781368644XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public string Id { get; set; }
+                    public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>工作流的脚本路径</para>
+                    /// <para>The script path.</para>
                     /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>脚本的运行时信息</para>
+                    /// <para>The runtime.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime Runtime { get; set; }
                     public class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>脚本所属类型</para>
+                        /// <para>The command.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>WORKFLOW</para>
@@ -152,7 +164,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>工作流类型，可选值：CycleWorkflow、ManualWorkflow，分别表示周期工作流和手动工作流</para>
+                /// <para>The type of the workflow.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>CycleWorkflow</description></item>
+                /// <item><description>ManualWorkflow</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CycleWorkflow</para>
@@ -166,6 +183,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8C3ED0C5-ABAB-55E1-854B-DAC02B11XXXX</para>
         /// </summary>

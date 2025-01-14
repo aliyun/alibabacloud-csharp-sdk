@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDeploymentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the process.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a7ef0634-20ec-4a7c-a214-54020f91XXXX</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</para>
         /// </summary>

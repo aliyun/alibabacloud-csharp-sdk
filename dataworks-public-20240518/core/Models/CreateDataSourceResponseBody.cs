@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataSourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22130</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataSourceSharedRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The sharing rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>105412</para>
         /// </summary>

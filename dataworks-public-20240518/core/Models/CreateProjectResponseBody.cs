@@ -13,11 +13,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AFBB799F-8578-51C5-A766-E922EDB8XXXX</para>
         /// </summary>

@@ -9,15 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StartDIJobShrinkRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <para>This parameter is deprecated. Use the Id parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
-        public string DIJobId { get; set; }
+        [Obsolete]
+        public long? DIJobId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -26,6 +29,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("ForceToRerun")]
         [Validation(Required=false)]
         public bool? ForceToRerun { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
 
         [NameInMap("RealtimeStartSettings")]
         [Validation(Required=false)]

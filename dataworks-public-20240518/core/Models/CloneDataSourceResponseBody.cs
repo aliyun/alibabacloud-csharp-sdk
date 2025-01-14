@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CloneDataSourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the cloned data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19715</para>
         /// </summary>

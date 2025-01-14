@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class RenameWorkflowDefinitionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>975BD43D-C421-595C-A29C-565A8AD5XXXX</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -9,16 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListFunctionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListFunctionsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListFunctionsResponseBodyPagingInfo : TeaModel {
+            /// <summary>
+            /// <para>The UDFs.</para>
+            /// </summary>
             [NameInMap("Functions")]
             [Validation(Required=false)]
             public List<ListFunctionsResponseBodyPagingInfoFunctions> Functions { get; set; }
             public class ListFunctionsResponseBodyPagingInfoFunctions : TeaModel {
                 /// <summary>
-                /// <para>ARM集群资源文件列表</para>
+                /// <para>The file resources in an Advanced RISC Machines (ARM) cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx.jar,yyy.jar</para>
@@ -28,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ArmResource { get; set; }
 
                 /// <summary>
-                /// <para>函数实现类名</para>
+                /// <para>The fully qualified class name of the UDF.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.demo.Main</para>
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ClassName { get; set; }
 
                 /// <summary>
-                /// <para>命令描述</para>
+                /// <para>The description of the command.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testUdf(xx,yy)</para>
@@ -48,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CommandDescription { get; set; }
 
                 /// <summary>
-                /// <para>代表创建时间的资源属性字段</para>
+                /// <para>The time when the UDF was created. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1655953028000</para>
@@ -58,14 +64,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>函数注册到的数据源信息</para>
+                /// <para>The data source information about the UDF.</para>
                 /// </summary>
                 [NameInMap("DataSource")]
                 [Validation(Required=false)]
                 public ListFunctionsResponseBodyPagingInfoFunctionsDataSource DataSource { get; set; }
                 public class ListFunctionsResponseBodyPagingInfoFunctionsDataSource : TeaModel {
                     /// <summary>
-                    /// <para>数据源名称</para>
+                    /// <para>The name of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps_first</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>数据源类型</para>
+                    /// <para>The type of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>数据库名，可选</para>
+                /// <para>The name of the database. This parameter is returned for E-MapReduce (EMR) functions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_first</para>
@@ -97,14 +103,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DatabaseName { get; set; }
 
                 /// <summary>
-                /// <para>对funciotn的描述</para>
+                /// <para>The overall description of the UDF.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>嵌套函数代码内容</para>
+                /// <para>The code of the embedded UDF.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>print(\&quot;hello,world!\&quot;)</para>
@@ -114,7 +120,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EmbeddedCode { get; set; }
 
                 /// <summary>
-                /// <para>嵌套代码类型</para>
+                /// <para>The type of the nested code.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Python2</description></item>
+                /// <item><description>Python3</description></item>
+                /// <item><description>Java8</description></item>
+                /// <item><description>Java11</description></item>
+                /// <item><description>Java17</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Python2</para>
@@ -124,7 +138,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EmbeddedCodeType { get; set; }
 
                 /// <summary>
-                /// <para>嵌套资源类型</para>
+                /// <para>The type of the nested resource.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>File: general resources</description></item>
+                /// <item><description>Embedded: embedded resources</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>File</para>
@@ -134,14 +153,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EmbeddedResourceType { get; set; }
 
                 /// <summary>
-                /// <para>示例说明</para>
+                /// <para>The description of the example.</para>
                 /// </summary>
                 [NameInMap("ExampleDescription")]
                 [Validation(Required=false)]
                 public string ExampleDescription { get; set; }
 
                 /// <summary>
-                /// <para>函数的实现代码</para>
+                /// <para>The files resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx.jar,yyy.jar</para>
@@ -151,17 +170,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string FileResource { get; set; }
 
                 /// <summary>
-                /// <para>代表资源一级ID的资源属性字段</para>
+                /// <para>The ID of the UDF.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>580667964888595XXXX</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public string Id { get; set; }
+                public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>修改时间</para>
+                /// <para>The time when the UDF was last modified. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1655953028000</para>
@@ -171,14 +190,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>代表资源名称的资源属性字段</para>
+                /// <para>The name of the UDF.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>函数责任人</para>
+                /// <para>The owner of the UDF.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -188,38 +207,38 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>命令描述</para>
+                /// <para>The description of the parameter.</para>
                 /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
 
                 /// <summary>
-                /// <para>项目Id</para>
+                /// <para>The ID of the workspace to which the UDF belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>307XXX</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
-                public string ProjectId { get; set; }
+                public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>返回值说明</para>
+                /// <para>The description of the return value.</para>
                 /// </summary>
                 [NameInMap("ReturnValueDescription")]
                 [Validation(Required=false)]
                 public string ReturnValueDescription { get; set; }
 
                 /// <summary>
-                /// <para>运行时资源组信息</para>
+                /// <para>The information about the resource group used when you run the UDF.</para>
                 /// </summary>
                 [NameInMap("RuntimeResource")]
                 [Validation(Required=false)]
                 public ListFunctionsResponseBodyPagingInfoFunctionsRuntimeResource RuntimeResource { get; set; }
                 public class ListFunctionsResponseBodyPagingInfoFunctionsRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>运行时资源组Id</para>
+                    /// <para>The ID of the resource group used when you run the UDF.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>S_resgrop_xxx</para>
@@ -231,38 +250,38 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>工作流的脚本信息</para>
+                /// <para>The script information about the UDF.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
                 public ListFunctionsResponseBodyPagingInfoFunctionsScript Script { get; set; }
                 public class ListFunctionsResponseBodyPagingInfoFunctionsScript : TeaModel {
                     /// <summary>
-                    /// <para>脚本的id</para>
+                    /// <para>The script ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>652567824470354XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public string Id { get; set; }
+                    public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>脚本路径</para>
+                    /// <para>The script path.</para>
                     /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>脚本的运行时信息</para>
+                    /// <para>The runtime.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListFunctionsResponseBodyPagingInfoFunctionsScriptRuntime Runtime { get; set; }
                     public class ListFunctionsResponseBodyPagingInfoFunctionsScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>脚本所属类型</para>
+                        /// <para>The command.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ODPS_FUNCTION</para>
@@ -276,7 +295,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>函数类型</para>
+                /// <para>The UDF type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Math: mathematical operation function</description></item>
+                /// <item><description>Aggregate: aggregate function</description></item>
+                /// <item><description>String: string processing function</description></item>
+                /// <item><description>Date: date function</description></item>
+                /// <item><description>Analytic: window function</description></item>
+                /// <item><description>Other: other functions</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MATH</para>
@@ -288,6 +316,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -296,6 +326,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -304,6 +336,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>294</para>
             /// </summary>
@@ -314,6 +348,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>89FB2BF0-EB00-5D03-9C34-05931001XXXX</para>
         /// </summary>

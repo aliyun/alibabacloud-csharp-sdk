@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataSourceRequest : TeaModel {
         /// <summary>
+        /// <para>The data source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

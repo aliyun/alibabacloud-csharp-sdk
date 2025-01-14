@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDIJobsRequest : TeaModel {
         /// <summary>
+        /// <para>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
         /// </summary>
@@ -18,6 +20,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DestinationDataSourceType { get; set; }
 
         /// <summary>
+        /// <para>The synchronization type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</description></item>
+        /// <item><description>RealtimeIncremental: real-time incremental synchronization</description></item>
+        /// <item><description>Full: full synchronization</description></item>
+        /// <item><description>OfflineIncremental: batch incremental synchronization</description></item>
+        /// <item><description>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FullAndRealtimeIncremental</para>
         /// </summary>
@@ -26,6 +37,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string MigrationType { get; set; }
 
         /// <summary>
+        /// <para>The name of the export task.</para>
+        /// <para>The name of each export task must be unique. You must make sure that the names of the export tasks in the current workspace are unique.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_export_01</para>
         /// </summary>
@@ -34,6 +48,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The DataWorks workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +79,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
         /// </summary>

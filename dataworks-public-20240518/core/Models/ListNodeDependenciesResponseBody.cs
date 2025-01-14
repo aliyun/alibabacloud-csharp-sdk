@@ -9,16 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListNodeDependenciesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListNodeDependenciesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListNodeDependenciesResponseBodyPagingInfo : TeaModel {
+            /// <summary>
+            /// <para>The descendant nodes.</para>
+            /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<ListNodeDependenciesResponseBodyPagingInfoNodes> Nodes { get; set; }
             public class ListNodeDependenciesResponseBodyPagingInfoNodes : TeaModel {
                 /// <summary>
-                /// <para>节点的创建时间</para>
+                /// <para>The time when the node was created. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
@@ -28,14 +34,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>数据源信息</para>
+                /// <para>The information about the data source.</para>
                 /// </summary>
                 [NameInMap("DataSource")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesDataSource DataSource { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesDataSource : TeaModel {
                     /// <summary>
-                    /// <para>数据源名称</para>
+                    /// <para>The name of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps_first</para>
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>数据源类型</para>
+                    /// <para>The type of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps</para>
@@ -57,36 +63,38 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>描述</para>
+                /// <para>The description of the node.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>723932906364267XXXX</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public string Id { get; set; }
+                public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>节点输入</para>
+                /// <para>The input of the node.</para>
                 /// </summary>
                 [NameInMap("Inputs")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesInputs Inputs { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesInputs : TeaModel {
                     /// <summary>
-                    /// <para>节点输出列表</para>
+                    /// <para>The node outputs.</para>
                     /// </summary>
                     [NameInMap("NodeOutputs")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs> NodeOutputs { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs : TeaModel {
                         /// <summary>
-                        /// <para>节点输出</para>
+                        /// <para>The node output.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>860438872620113XXXX</para>
@@ -98,14 +106,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>表列表</para>
+                    /// <para>The tables.</para>
                     /// </summary>
                     [NameInMap("Tables")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsTables> Tables { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesInputsTables : TeaModel {
                         /// <summary>
-                        /// <para>表id</para>
+                        /// <para>The table ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>odps.autotest.test_output_table_1</para>
@@ -117,14 +125,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>变量列表</para>
+                    /// <para>The variables.</para>
                     /// </summary>
                     [NameInMap("Variables")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables> Variables { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables : TeaModel {
                         /// <summary>
-                        /// <para>制品类型</para>
+                        /// <para>The artifact type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Variable</para>
@@ -134,17 +142,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string ArtifactType { get; set; }
 
                         /// <summary>
-                        /// <para>变量id</para>
+                        /// <para>The variable ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>543218872620113XXXX</para>
                         /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
-                        public string Id { get; set; }
+                        public long? Id { get; set; }
 
                         /// <summary>
-                        /// <para>变量名</para>
+                        /// <para>The name of the variable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>input</para>
@@ -154,14 +162,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>变量所属节点</para>
+                        /// <para>The node to which the variable belongs.</para>
                         /// </summary>
                         [NameInMap("Node")]
                         [Validation(Required=false)]
                         public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariablesNode Node { get; set; }
                         public class ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>节点输出</para>
+                            /// <para>The output of the node.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>860438872620113XXXX</para>
@@ -173,7 +181,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>范围</para>
+                        /// <para>The scope of the variable.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>NodeParameter</description></item>
+                        /// <item><description>NodeContext</description></item>
+                        /// <item><description>Workflow</description></item>
+                        /// <item><description>Workspace</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>NodeParameter</para>
@@ -183,7 +198,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>类型</para>
+                        /// <para>The type of the variable.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>NoKvVariableExpression</description></item>
+                        /// <item><description>Constant</description></item>
+                        /// <item><description>PassThrough</description></item>
+                        /// <item><description>System</description></item>
+                        /// <item><description>NodeOutput</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Constant</para>
@@ -193,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>变量值</para>
+                        /// <para>The value of the variable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>111</para>
@@ -207,7 +230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>属性修改时间</para>
+                /// <para>The time when the node was last modified. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
@@ -217,28 +240,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>节点名</para>
+                /// <para>The name of the node.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>节点输出</para>
+                /// <para>The output of the node.</para>
                 /// </summary>
                 [NameInMap("Outputs")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesOutputs Outputs { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputs : TeaModel {
                     /// <summary>
-                    /// <para>节点输出列表</para>
+                    /// <para>The node outputs.</para>
                     /// </summary>
                     [NameInMap("NodeOutputs")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs> NodeOutputs { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs : TeaModel {
                         /// <summary>
-                        /// <para>节点输出</para>
+                        /// <para>The node output.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>463497880880954XXXX</para>
@@ -250,14 +273,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>表列表</para>
+                    /// <para>The tables.</para>
                     /// </summary>
                     [NameInMap("Tables")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsTables> Tables { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsTables : TeaModel {
                         /// <summary>
-                        /// <para>表id</para>
+                        /// <para>The table ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>odps.autotest.test_output_table_1</para>
@@ -269,14 +292,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>变量列表</para>
+                    /// <para>The variables.</para>
                     /// </summary>
                     [NameInMap("Variables")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables> Variables { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables : TeaModel {
                         /// <summary>
-                        /// <para>制品类型</para>
+                        /// <para>The artifact type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Variable</para>
@@ -286,17 +309,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string ArtifactType { get; set; }
 
                         /// <summary>
-                        /// <para>变量id</para>
+                        /// <para>The variable ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>543217824470354XXXX</para>
                         /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
-                        public string Id { get; set; }
+                        public long? Id { get; set; }
 
                         /// <summary>
-                        /// <para>变量名</para>
+                        /// <para>The name of the variable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>output</para>
@@ -306,14 +329,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>变量所属节点</para>
+                        /// <para>The node to which the variable belongs.</para>
                         /// </summary>
                         [NameInMap("Node")]
                         [Validation(Required=false)]
                         public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode Node { get; set; }
                         public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>节点输出</para>
+                            /// <para>The output of the node to which the variable belongs.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>463497880880954XXXX</para>
@@ -325,7 +348,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>范围</para>
+                        /// <para>The scope of the variable.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>NodeParameter</description></item>
+                        /// <item><description>NodeContext</description></item>
+                        /// <item><description>Workflow</description></item>
+                        /// <item><description>Workspace</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>NodeParameter</para>
@@ -335,7 +365,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>类型</para>
+                        /// <para>The type of the variable.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>NoKvVariableExpression</description></item>
+                        /// <item><description>Constant</description></item>
+                        /// <item><description>PassThrough</description></item>
+                        /// <item><description>System</description></item>
+                        /// <item><description>NodeOutput</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Constant</para>
@@ -345,7 +383,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>变量值</para>
+                        /// <para>The value of the variable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>111</para>
@@ -359,7 +397,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>节点的责任人</para>
+                /// <para>The owner of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -369,14 +407,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the workspace to which the node belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>65133</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
-                public string ProjectId { get; set; }
+                public long? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The scheduling type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Normal: The node is scheduled as expected.</description></item>
+                /// <item><description>Pause: The node is paused, and the running of its descendant nodes is blocked.</description></item>
+                /// <item><description>Skip: The node is dry run. The system does not actually run the node but directly prompts that the node is successfully run. The running duration of the node is 0 seconds. In addition, the node does not occupy resources or block the running of its descendant nodes.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
                 /// </summary>
@@ -385,14 +433,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Recurrence { get; set; }
 
                 /// <summary>
-                /// <para>资源组信息</para>
+                /// <para>The information about the resource group.</para>
                 /// </summary>
                 [NameInMap("RuntimeResource")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesRuntimeResource RuntimeResource { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>资源组id</para>
+                    /// <para>The resource group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>S_res_group_XXXX_XXXX</para>
@@ -404,24 +452,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>工作流的脚本信息</para>
+                /// <para>The script information.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesScript Script { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesScript : TeaModel {
                     /// <summary>
-                    /// <para>脚本的id</para>
+                    /// <para>The script ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>853573334108680XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public string Id { get; set; }
+                    public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>脚本路径</para>
+                    /// <para>The script path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>root/demo</para>
@@ -431,14 +479,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>脚本的运行时信息</para>
+                    /// <para>The runtime.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListNodeDependenciesResponseBodyPagingInfoNodesScriptRuntime Runtime { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>脚本所属类型</para>
+                        /// <para>The command used to distinguish node types.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ODPS_SQL</para>
@@ -452,14 +500,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>调度策略</para>
+                /// <para>The scheduling policy.</para>
                 /// </summary>
                 [NameInMap("Strategy")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesStrategy Strategy { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesStrategy : TeaModel {
                     /// <summary>
-                    /// <para>生成实例的模式</para>
+                    /// <para>The instance generation mode.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>T+1</para>
@@ -469,7 +517,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string InstanceMode { get; set; }
 
                     /// <summary>
-                    /// <para>重试时间间隔</para>
+                    /// <para>The rerun interval after a failure. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>180000</para>
@@ -479,7 +527,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? RerunInterval { get; set; }
 
                     /// <summary>
-                    /// <para>允许重跑的模式</para>
+                    /// <para>The rerun mode.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Allowed</para>
@@ -489,7 +537,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string RerunMode { get; set; }
 
                     /// <summary>
-                    /// <para>重试次数</para>
+                    /// <para>The number of reruns after a failure.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -499,7 +547,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? RerunTimes { get; set; }
 
                     /// <summary>
-                    /// <para>超时时间</para>
+                    /// <para>The timeout period. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -511,14 +559,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>标签信息</para>
+                /// <para>The tags. This parameter is not in use.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListNodeDependenciesResponseBodyPagingInfoNodesTags> Tags { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesTags : TeaModel {
                     /// <summary>
-                    /// <para>标签键</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -528,7 +576,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>标签值</para>
+                    /// <para>The tag value</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -540,24 +588,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>调度任务Id</para>
+                /// <para>The scheduling task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>580667964888595XXXX</para>
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
-                public string TaskId { get; set; }
+                public long? TaskId { get; set; }
 
                 /// <summary>
-                /// <para>触发器信息</para>
+                /// <para>The trigger.</para>
                 /// </summary>
                 [NameInMap("Trigger")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesTrigger Trigger { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesTrigger : TeaModel {
                     /// <summary>
-                    /// <para>触发器的cron表达式</para>
+                    /// <para>The CRON expression for scheduling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>00 00 00 * * ?</para>
@@ -567,7 +615,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Cron { get; set; }
 
                     /// <summary>
-                    /// <para>结束时间，格式为yyyy-MM-dd HH:mm:ss</para>
+                    /// <para>The end time of the validity period of the scheduling. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9999-01-01 00:00:00</para>
@@ -577,17 +625,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>触发器id</para>
+                    /// <para>The trigger ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>543680677872062XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public string Id { get; set; }
+                    public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>开始时间，格式为yyyy-MM-dd HH:mm:ss</para>
+                    /// <para>The start time of the validity period of the scheduling. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1970-01-01 00:00:00</para>
@@ -597,7 +645,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string StartTime { get; set; }
 
                     /// <summary>
-                    /// <para>时区</para>
+                    /// <para>The time zone.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Asia/Shanghai</para>
@@ -607,7 +655,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Timezone { get; set; }
 
                     /// <summary>
-                    /// <para>触发器类型</para>
+                    /// <para>The type of the trigger.</para>
+                    /// <para>Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Scheduler</description></item>
+                    /// <item><description>Manual</description></item>
+                    /// <item><description>Streaming</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Scheduler</para>
@@ -621,6 +675,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -629,6 +685,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -637,6 +695,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>90</para>
             /// </summary>
@@ -647,6 +707,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>204EAF68-CCE3-5112-8DA0-E7A60F02XXXX</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetProjectResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the workspace.</para>
+        /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]
         public GetProjectResponseBodyProject Project { get; set; }
         public class GetProjectResponseBodyProject : TeaModel {
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud resource group to which the workspace belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-acfmzbn7pti3zfa</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string AliyunResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
             [NameInMap("AliyunResourceTags")]
             [Validation(Required=false)]
             public List<GetProjectResponseBodyProjectAliyunResourceTags> AliyunResourceTags { get; set; }
             public class GetProjectResponseBodyProjectAliyunResourceTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>batch</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>blue</para>
                 /// </summary>
@@ -43,11 +55,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             }
 
+            /// <summary>
+            /// <para>The description of the workspace.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the development environment is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</description></item>
+            /// <item><description>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -56,6 +77,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? DevEnvironmentEnabled { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Develop role is disabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>false</description></item>
+            /// <item><description>true</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -63,11 +90,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public bool? DevRoleDisabled { get; set; }
 
+            /// <summary>
+            /// <para>The display name of the workspace.</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>28477242</para>
             /// </summary>
@@ -76,6 +108,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The name of the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sora_finance</para>
             /// </summary>
@@ -84,6 +118,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account to which the workspace belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>207947397706614299</para>
             /// </summary>
@@ -92,6 +128,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether scheduling of PAI tasks is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</description></item>
+            /// <item><description>false: Scheduling of PAI tasks is disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -100,6 +142,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? PaiTaskEnabled { get; set; }
 
             /// <summary>
+            /// <para>The status of the workspace. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Available</description></item>
+            /// <item><description>Initializing</description></item>
+            /// <item><description>InitFailed</description></item>
+            /// <item><description>Forbidden</description></item>
+            /// <item><description>Deleting</description></item>
+            /// <item><description>DeleteFailed</description></item>
+            /// <item><description>Frozen</description></item>
+            /// <item><description>Updating</description></item>
+            /// <item><description>UpdateFailed</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Available</para>
             /// </summary>
@@ -110,6 +165,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17XXXX</para>
         /// </summary>

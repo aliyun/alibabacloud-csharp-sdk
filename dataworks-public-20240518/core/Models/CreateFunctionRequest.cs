@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateFunctionRequest : TeaModel {
         /// <summary>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -17,9 +18,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Spec")]

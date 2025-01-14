@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止发布流程</para>
+        /// <para>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止发布流程</para>
+        /// <para>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止发布流程</para>
+        /// <para>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止发布流程</para>
+        /// <para>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -194,8 +194,339 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Associates a resource group with a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateProjectToResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateProjectToResourceGroupResponse
+        /// </returns>
+        public AssociateProjectToResourceGroupResponse AssociateProjectToResourceGroupWithOptions(AssociateProjectToResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateProjectToResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateProjectToResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a resource group with a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateProjectToResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateProjectToResourceGroupResponse
+        /// </returns>
+        public async Task<AssociateProjectToResourceGroupResponse> AssociateProjectToResourceGroupWithOptionsAsync(AssociateProjectToResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateProjectToResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateProjectToResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a resource group with a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateProjectToResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateProjectToResourceGroupResponse
+        /// </returns>
+        public AssociateProjectToResourceGroupResponse AssociateProjectToResourceGroup(AssociateProjectToResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateProjectToResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a resource group with a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateProjectToResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateProjectToResourceGroupResponse
+        /// </returns>
+        public async Task<AssociateProjectToResourceGroupResponse> AssociateProjectToResourceGroupAsync(AssociateProjectToResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateProjectToResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>把数据质量规则关联到数据质量校验任务上</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachDataQualityRulesToEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDataQualityRulesToEvaluationTaskResponse
+        /// </returns>
+        public AttachDataQualityRulesToEvaluationTaskResponse AttachDataQualityRulesToEvaluationTaskWithOptions(AttachDataQualityRulesToEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachDataQualityRulesToEvaluationTaskShrinkRequest request = new AttachDataQualityRulesToEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRuleIds))
+            {
+                request.DataQualityRuleIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRuleIds, "DataQualityRuleIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityEvaluationTaskId))
+            {
+                body["DataQualityEvaluationTaskId"] = request.DataQualityEvaluationTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRuleIdsShrink))
+            {
+                body["DataQualityRuleIds"] = request.DataQualityRuleIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachDataQualityRulesToEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachDataQualityRulesToEvaluationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>把数据质量规则关联到数据质量校验任务上</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachDataQualityRulesToEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDataQualityRulesToEvaluationTaskResponse
+        /// </returns>
+        public async Task<AttachDataQualityRulesToEvaluationTaskResponse> AttachDataQualityRulesToEvaluationTaskWithOptionsAsync(AttachDataQualityRulesToEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachDataQualityRulesToEvaluationTaskShrinkRequest request = new AttachDataQualityRulesToEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRuleIds))
+            {
+                request.DataQualityRuleIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRuleIds, "DataQualityRuleIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityEvaluationTaskId))
+            {
+                body["DataQualityEvaluationTaskId"] = request.DataQualityEvaluationTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRuleIdsShrink))
+            {
+                body["DataQualityRuleIds"] = request.DataQualityRuleIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachDataQualityRulesToEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachDataQualityRulesToEvaluationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>把数据质量规则关联到数据质量校验任务上</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDataQualityRulesToEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDataQualityRulesToEvaluationTaskResponse
+        /// </returns>
+        public AttachDataQualityRulesToEvaluationTaskResponse AttachDataQualityRulesToEvaluationTask(AttachDataQualityRulesToEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachDataQualityRulesToEvaluationTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>把数据质量规则关联到数据质量校验任务上</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachDataQualityRulesToEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachDataQualityRulesToEvaluationTaskResponse
+        /// </returns>
+        public async Task<AttachDataQualityRulesToEvaluationTaskResponse> AttachDataQualityRulesToEvaluationTaskAsync(AttachDataQualityRulesToEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachDataQualityRulesToEvaluationTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clones an existing data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloneDataSourceRequest
@@ -240,8 +571,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Clones an existing data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloneDataSourceRequest
@@ -286,8 +628,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Clones an existing data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloneDataSourceRequest
@@ -304,8 +657,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Clones an existing data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloneDataSourceRequest
@@ -322,8 +686,317 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务</para>
+        /// <para>Creates a custom monitoring alert rule.</para>
         /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRuleResponse
+        /// </returns>
+        public CreateAlertRuleResponse CreateAlertRuleWithOptions(CreateAlertRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAlertRuleShrinkRequest request = new CreateAlertRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerCondition))
+            {
+                request.TriggerConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerCondition, "TriggerCondition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionShrink))
+            {
+                query["TriggerCondition"] = request.TriggerConditionShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAlertRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom monitoring alert rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRuleResponse
+        /// </returns>
+        public async Task<CreateAlertRuleResponse> CreateAlertRuleWithOptionsAsync(CreateAlertRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAlertRuleShrinkRequest request = new CreateAlertRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerCondition))
+            {
+                request.TriggerConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerCondition, "TriggerCondition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionShrink))
+            {
+                query["TriggerCondition"] = request.TriggerConditionShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAlertRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom monitoring alert rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRuleResponse
+        /// </returns>
+        public CreateAlertRuleResponse CreateAlertRule(CreateAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAlertRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom monitoring alert rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRuleResponse
+        /// </returns>
+        public async Task<CreateAlertRuleResponse> CreateAlertRuleAsync(CreateAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAlertRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDIAlarmRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDIAlarmRuleResponse
+        /// </returns>
+        public CreateDIAlarmRuleResponse CreateDIAlarmRuleWithOptions(CreateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDIAlarmRuleShrinkRequest request = new CreateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDIAlarmRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDIAlarmRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDIAlarmRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDIAlarmRuleResponse
+        /// </returns>
+        public async Task<CreateDIAlarmRuleResponse> CreateDIAlarmRuleWithOptionsAsync(CreateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDIAlarmRuleShrinkRequest request = new CreateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDIAlarmRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDIAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDIAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDIAlarmRuleResponse
+        /// </returns>
+        public CreateDIAlarmRuleResponse CreateDIAlarmRule(CreateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDIAlarmRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert rule for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDIAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDIAlarmRuleResponse
+        /// </returns>
+        public async Task<CreateDIAlarmRuleResponse> CreateDIAlarmRuleAsync(CreateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDIAlarmRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new-version synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDIJobRequest
@@ -386,8 +1059,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务</para>
+        /// <para>Creates a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDIJobRequest
@@ -450,8 +1128,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务</para>
+        /// <para>Creates a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDIJobRequest
@@ -468,8 +1151,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集成任务</para>
+        /// <para>Creates a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDIJobRequest
@@ -486,8 +1174,1011 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>创建标签</para>
         /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataAssetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAssetTagResponse
+        /// </returns>
+        public CreateDataAssetTagResponse CreateDataAssetTagWithOptions(CreateDataAssetTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataAssetTagShrinkRequest request = new CreateDataAssetTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Managers))
+            {
+                request.ManagersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Managers, "Managers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Values))
+            {
+                request.ValuesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Values, "Values", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagersShrink))
+            {
+                query["Managers"] = request.ManagersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValueType))
+            {
+                query["ValueType"] = request.ValueType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValuesShrink))
+            {
+                query["Values"] = request.ValuesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAssetTag",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAssetTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标签</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataAssetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAssetTagResponse
+        /// </returns>
+        public async Task<CreateDataAssetTagResponse> CreateDataAssetTagWithOptionsAsync(CreateDataAssetTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataAssetTagShrinkRequest request = new CreateDataAssetTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Managers))
+            {
+                request.ManagersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Managers, "Managers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Values))
+            {
+                request.ValuesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Values, "Values", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagersShrink))
+            {
+                query["Managers"] = request.ManagersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValueType))
+            {
+                query["ValueType"] = request.ValueType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValuesShrink))
+            {
+                query["Values"] = request.ValuesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAssetTag",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAssetTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAssetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAssetTagResponse
+        /// </returns>
+        public CreateDataAssetTagResponse CreateDataAssetTag(CreateDataAssetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataAssetTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAssetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAssetTagResponse
+        /// </returns>
+        public async Task<CreateDataAssetTagResponse> CreateDataAssetTagAsync(CreateDataAssetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataAssetTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a monitor in DataWorks Data Quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public CreateDataQualityEvaluationTaskResponse CreateDataQualityEvaluationTaskWithOptions(CreateDataQualityEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityEvaluationTaskShrinkRequest request = new CreateDataQualityEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRules))
+            {
+                request.DataQualityRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRules, "DataQualityRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Hooks))
+            {
+                request.HooksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Hooks, "Hooks", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notifications))
+            {
+                request.NotificationsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notifications, "Notifications", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRulesShrink))
+            {
+                body["DataQualityRules"] = request.DataQualityRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HooksShrink))
+            {
+                body["Hooks"] = request.HooksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationsShrink))
+            {
+                body["Notifications"] = request.NotificationsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConf))
+            {
+                body["RuntimeConf"] = request.RuntimeConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityEvaluationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a monitor in DataWorks Data Quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<CreateDataQualityEvaluationTaskResponse> CreateDataQualityEvaluationTaskWithOptionsAsync(CreateDataQualityEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityEvaluationTaskShrinkRequest request = new CreateDataQualityEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRules))
+            {
+                request.DataQualityRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRules, "DataQualityRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Hooks))
+            {
+                request.HooksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Hooks, "Hooks", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notifications))
+            {
+                request.NotificationsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notifications, "Notifications", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRulesShrink))
+            {
+                body["DataQualityRules"] = request.DataQualityRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HooksShrink))
+            {
+                body["Hooks"] = request.HooksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationsShrink))
+            {
+                body["Notifications"] = request.NotificationsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConf))
+            {
+                body["RuntimeConf"] = request.RuntimeConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityEvaluationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a monitor in DataWorks Data Quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public CreateDataQualityEvaluationTaskResponse CreateDataQualityEvaluationTask(CreateDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataQualityEvaluationTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a monitor in DataWorks Data Quality.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<CreateDataQualityEvaluationTaskResponse> CreateDataQualityEvaluationTaskAsync(CreateDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataQualityEvaluationTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据质量校验任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public CreateDataQualityEvaluationTaskInstanceResponse CreateDataQualityEvaluationTaskInstanceWithOptions(CreateDataQualityEvaluationTaskInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityEvaluationTaskInstanceShrinkRequest request = new CreateDataQualityEvaluationTaskInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeResource))
+            {
+                request.RuntimeResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeResource, "RuntimeResource", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityEvaluationTaskId))
+            {
+                body["DataQualityEvaluationTaskId"] = request.DataQualityEvaluationTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResourceShrink))
+            {
+                body["RuntimeResource"] = request.RuntimeResourceShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityEvaluationTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityEvaluationTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据质量校验任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public async Task<CreateDataQualityEvaluationTaskInstanceResponse> CreateDataQualityEvaluationTaskInstanceWithOptionsAsync(CreateDataQualityEvaluationTaskInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityEvaluationTaskInstanceShrinkRequest request = new CreateDataQualityEvaluationTaskInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeResource))
+            {
+                request.RuntimeResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeResource, "RuntimeResource", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityEvaluationTaskId))
+            {
+                body["DataQualityEvaluationTaskId"] = request.DataQualityEvaluationTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResourceShrink))
+            {
+                body["RuntimeResource"] = request.RuntimeResourceShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityEvaluationTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityEvaluationTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据质量校验任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public CreateDataQualityEvaluationTaskInstanceResponse CreateDataQualityEvaluationTaskInstance(CreateDataQualityEvaluationTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataQualityEvaluationTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据质量校验任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public async Task<CreateDataQualityEvaluationTaskInstanceResponse> CreateDataQualityEvaluationTaskInstanceAsync(CreateDataQualityEvaluationTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataQualityEvaluationTaskInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleResponse
+        /// </returns>
+        public CreateDataQualityRuleResponse CreateDataQualityRuleWithOptions(CreateDataQualityRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityRuleShrinkRequest request = new CreateDataQualityRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorHandlers))
+            {
+                request.ErrorHandlersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorHandlers, "ErrorHandlers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorHandlersShrink))
+            {
+                body["ErrorHandlers"] = request.ErrorHandlersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                body["Severity"] = request.Severity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleResponse
+        /// </returns>
+        public async Task<CreateDataQualityRuleResponse> CreateDataQualityRuleWithOptionsAsync(CreateDataQualityRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityRuleShrinkRequest request = new CreateDataQualityRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorHandlers))
+            {
+                request.ErrorHandlersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorHandlers, "ErrorHandlers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorHandlersShrink))
+            {
+                body["ErrorHandlers"] = request.ErrorHandlersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                body["Severity"] = request.Severity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleResponse
+        /// </returns>
+        public CreateDataQualityRuleResponse CreateDataQualityRule(CreateDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataQualityRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleResponse
+        /// </returns>
+        public async Task<CreateDataQualityRuleResponse> CreateDataQualityRuleAsync(CreateDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataQualityRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleTemplateResponse
+        /// </returns>
+        public CreateDataQualityRuleTemplateResponse CreateDataQualityRuleTemplateWithOptions(CreateDataQualityRuleTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityRuleTemplateShrinkRequest request = new CreateDataQualityRuleTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryPath))
+            {
+                body["DirectoryPath"] = request.DirectoryPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleScope))
+            {
+                body["VisibleScope"] = request.VisibleScope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityRuleTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<CreateDataQualityRuleTemplateResponse> CreateDataQualityRuleTemplateWithOptionsAsync(CreateDataQualityRuleTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataQualityRuleTemplateShrinkRequest request = new CreateDataQualityRuleTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryPath))
+            {
+                body["DirectoryPath"] = request.DirectoryPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleScope))
+            {
+                body["VisibleScope"] = request.VisibleScope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataQualityRuleTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleTemplateResponse
+        /// </returns>
+        public CreateDataQualityRuleTemplateResponse CreateDataQualityRuleTemplate(CreateDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataQualityRuleTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<CreateDataQualityRuleTemplateResponse> CreateDataQualityRuleTemplateAsync(CreateDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataQualityRuleTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a data source to the development environment or production environment of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -548,8 +2239,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Adds a data source to the development environment or production environment of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -610,8 +2312,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Adds a data source to the development environment or production environment of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -628,8 +2341,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Adds a data source to the development environment or production environment of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceRequest
@@ -646,8 +2370,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Creates a rule for sharing a data source to other workspaces or RAM users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceSharedRuleRequest
@@ -700,8 +2435,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Creates a rule for sharing a data source to other workspaces or RAM users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceSharedRuleRequest
@@ -754,8 +2500,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Creates a rule for sharing a data source to other workspaces or RAM users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceSharedRuleRequest
@@ -772,8 +2529,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Creates a rule for sharing a data source to other workspaces or RAM users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to share a data source from Workspace A to Workspace B, you must have the permissions to share the data source in both workspaces. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataSourceSharedRuleRequest
@@ -790,8 +2558,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建发布流程</para>
+        /// <para>Creates a process for deploying or undeploying an entity in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDeploymentRequest
@@ -850,8 +2625,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建发布流程</para>
+        /// <para>Creates a process for deploying or undeploying an entity in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDeploymentRequest
@@ -910,8 +2692,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建发布流程</para>
+        /// <para>Creates a process for deploying or undeploying an entity in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeploymentRequest
@@ -928,8 +2717,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建发布流程</para>
+        /// <para>Creates a process for deploying or undeploying an entity in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeploymentRequest
@@ -946,8 +2742,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建udf函数</para>
+        /// <para>Creates a user-defined function (UDF) in DataStudio. The information about the UDF is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFunctionRequest
@@ -992,8 +2795,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建udf函数</para>
+        /// <para>Creates a user-defined function (UDF) in DataStudio. The information about the UDF is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFunctionRequest
@@ -1038,8 +2848,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建udf函数</para>
+        /// <para>Creates a user-defined function (UDF) in DataStudio. The information about the UDF is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFunctionRequest
@@ -1056,8 +2873,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建udf函数</para>
+        /// <para>Creates a user-defined function (UDF) in DataStudio. The information about the UDF is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple UDFs at a time. If you specify multiple UDFs by using FlowSpec, the system creates only the first specified UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFunctionRequest
@@ -1074,8 +2898,179 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建节点</para>
+        /// <para>Creates a network and associates the network with a general resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkResponse
+        /// </returns>
+        public CreateNetworkResponse CreateNetworkWithOptions(CreateNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchId))
+            {
+                body["VswitchId"] = request.VswitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNetwork",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a network and associates the network with a general resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkResponse
+        /// </returns>
+        public async Task<CreateNetworkResponse> CreateNetworkWithOptionsAsync(CreateNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchId))
+            {
+                body["VswitchId"] = request.VswitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNetwork",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a network and associates the network with a general resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkResponse
+        /// </returns>
+        public CreateNetworkResponse CreateNetwork(CreateNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateNetworkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a network and associates the network with a general resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNetworkResponse
+        /// </returns>
+        public async Task<CreateNetworkResponse> CreateNetworkAsync(CreateNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateNetworkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node in DataStudio. The information about the node is described by using FlowSpec.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeRequest
@@ -1128,8 +3123,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建节点</para>
+        /// <para>Creates a node in DataStudio. The information about the node is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeRequest
@@ -1182,8 +3184,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建节点</para>
+        /// <para>Creates a node in DataStudio. The information about the node is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeRequest
@@ -1200,8 +3209,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建节点</para>
+        /// <para>Creates a node in DataStudio. The information about the node is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple nodes at a time. If you specify multiple nodes by using FlowSpec, the system creates only the first specified node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeRequest
@@ -1218,7 +3234,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1294,7 +3310,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1370,7 +3386,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1388,7 +3404,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1406,8 +3422,183 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件</para>
+        /// <para>Adds a workspace member and assigns a workspace-level role to the member.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateProjectMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectMemberResponse
+        /// </returns>
+        public CreateProjectMemberResponse CreateProjectMemberWithOptions(CreateProjectMemberRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateProjectMemberShrinkRequest request = new CreateProjectMemberShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProjectMember",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProjectMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a workspace member and assigns a workspace-level role to the member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateProjectMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectMemberResponse
+        /// </returns>
+        public async Task<CreateProjectMemberResponse> CreateProjectMemberWithOptionsAsync(CreateProjectMemberRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateProjectMemberShrinkRequest request = new CreateProjectMemberShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProjectMember",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProjectMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a workspace member and assigns a workspace-level role to the member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectMemberResponse
+        /// </returns>
+        public CreateProjectMemberResponse CreateProjectMember(CreateProjectMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateProjectMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a workspace member and assigns a workspace-level role to the member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectMemberResponse
+        /// </returns>
+        public async Task<CreateProjectMemberResponse> CreateProjectMemberAsync(CreateProjectMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateProjectMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a file resource in DataStudio. The information about the file resource is described by using FlowSpec.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceRequest
@@ -1452,8 +3643,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件</para>
+        /// <para>Creates a file resource in DataStudio. The information about the file resource is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceRequest
@@ -1498,8 +3696,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件</para>
+        /// <para>Creates a file resource in DataStudio. The information about the file resource is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceRequest
@@ -1516,8 +3721,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源文件</para>
+        /// <para>Creates a file resource in DataStudio. The information about the file resource is described by using FlowSpec.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceRequest
@@ -1534,8 +3746,415 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a serverless resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceGroupResponse
+        /// </returns>
+        public CreateResourceGroupResponse CreateResourceGroupWithOptions(CreateResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateResourceGroupShrinkRequest request = new CreateResourceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AliyunResourceTags))
+            {
+                request.AliyunResourceTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AliyunResourceTags, "AliyunResourceTags", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceGroupId))
+            {
+                body["AliyunResourceGroupId"] = request.AliyunResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceTagsShrink))
+            {
+                body["AliyunResourceTags"] = request.AliyunResourceTagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewEnabled))
+            {
+                body["AutoRenewEnabled"] = request.AutoRenewEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDuration))
+            {
+                body["PaymentDuration"] = request.PaymentDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDurationUnit))
+            {
+                body["PaymentDurationUnit"] = request.PaymentDurationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["PaymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchId))
+            {
+                body["VswitchId"] = request.VswitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceGroupResponse
+        /// </returns>
+        public async Task<CreateResourceGroupResponse> CreateResourceGroupWithOptionsAsync(CreateResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateResourceGroupShrinkRequest request = new CreateResourceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AliyunResourceTags))
+            {
+                request.AliyunResourceTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AliyunResourceTags, "AliyunResourceTags", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceGroupId))
+            {
+                body["AliyunResourceGroupId"] = request.AliyunResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceTagsShrink))
+            {
+                body["AliyunResourceTags"] = request.AliyunResourceTagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewEnabled))
+            {
+                body["AutoRenewEnabled"] = request.AutoRenewEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDuration))
+            {
+                body["PaymentDuration"] = request.PaymentDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDurationUnit))
+            {
+                body["PaymentDurationUnit"] = request.PaymentDurationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["PaymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchId))
+            {
+                body["VswitchId"] = request.VswitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceGroupResponse
+        /// </returns>
+        public CreateResourceGroupResponse CreateResourceGroup(CreateResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceGroupResponse
+        /// </returns>
+        public async Task<CreateResourceGroupResponse> CreateResourceGroupAsync(CreateResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a route for a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteResponse
+        /// </returns>
+        public CreateRouteResponse CreateRouteWithOptions(CreateRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidr))
+            {
+                body["DestinationCidr"] = request.DestinationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                body["NetworkId"] = request.NetworkId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a route for a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteResponse
+        /// </returns>
+        public async Task<CreateRouteResponse> CreateRouteWithOptionsAsync(CreateRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidr))
+            {
+                body["DestinationCidr"] = request.DestinationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                body["NetworkId"] = request.NetworkId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a route for a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteResponse
+        /// </returns>
+        public CreateRouteResponse CreateRoute(CreateRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRouteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a route for a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteResponse
+        /// </returns>
+        public async Task<CreateRouteResponse> CreateRouteAsync(CreateRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workflow in a directory of DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkflowDefinitionRequest
@@ -1580,8 +4199,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a workflow in a directory of DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkflowDefinitionRequest
@@ -1626,8 +4252,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a workflow in a directory of DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkflowDefinitionRequest
@@ -1644,8 +4277,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a workflow in a directory of DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkflowDefinitionRequest
@@ -1662,8 +4302,245 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集成任务</para>
+        /// <para>Deletes a custom alert monitoring rule.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRuleResponse
+        /// </returns>
+        public DeleteAlertRuleResponse DeleteAlertRuleWithOptions(DeleteAlertRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAlertRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom alert monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRuleResponse
+        /// </returns>
+        public async Task<DeleteAlertRuleResponse> DeleteAlertRuleWithOptionsAsync(DeleteAlertRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAlertRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom alert monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRuleResponse
+        /// </returns>
+        public DeleteAlertRuleResponse DeleteAlertRule(DeleteAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAlertRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom alert monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRuleResponse
+        /// </returns>
+        public async Task<DeleteAlertRuleResponse> DeleteAlertRuleAsync(DeleteAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAlertRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDIAlarmRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDIAlarmRuleResponse
+        /// </returns>
+        public DeleteDIAlarmRuleResponse DeleteDIAlarmRuleWithOptions(DeleteDIAlarmRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDIAlarmRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDIAlarmRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDIAlarmRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDIAlarmRuleResponse
+        /// </returns>
+        public async Task<DeleteDIAlarmRuleResponse> DeleteDIAlarmRuleWithOptionsAsync(DeleteDIAlarmRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDIAlarmRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDIAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDIAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDIAlarmRuleResponse
+        /// </returns>
+        public DeleteDIAlarmRuleResponse DeleteDIAlarmRule(DeleteDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDIAlarmRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDIAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDIAlarmRuleResponse
+        /// </returns>
+        public async Task<DeleteDIAlarmRuleResponse> DeleteDIAlarmRuleAsync(DeleteDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDIAlarmRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a new-version synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDIJobRequest
@@ -1700,8 +4577,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集成任务</para>
+        /// <para>Deletes a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDIJobRequest
@@ -1738,8 +4620,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集成任务</para>
+        /// <para>Deletes a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDIJobRequest
@@ -1756,8 +4643,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集成任务</para>
+        /// <para>Deletes a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDIJobRequest
@@ -1774,8 +4666,543 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>删除标签</para>
         /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteDataAssetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAssetTagResponse
+        /// </returns>
+        public DeleteDataAssetTagResponse DeleteDataAssetTagWithOptions(DeleteDataAssetTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteDataAssetTagShrinkRequest request = new DeleteDataAssetTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Values))
+            {
+                request.ValuesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Values, "Values", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValuesShrink))
+            {
+                query["Values"] = request.ValuesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAssetTag",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAssetTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteDataAssetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAssetTagResponse
+        /// </returns>
+        public async Task<DeleteDataAssetTagResponse> DeleteDataAssetTagWithOptionsAsync(DeleteDataAssetTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteDataAssetTagShrinkRequest request = new DeleteDataAssetTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Values))
+            {
+                request.ValuesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Values, "Values", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValuesShrink))
+            {
+                query["Values"] = request.ValuesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAssetTag",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAssetTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAssetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAssetTagResponse
+        /// </returns>
+        public DeleteDataAssetTagResponse DeleteDataAssetTag(DeleteDataAssetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataAssetTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAssetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAssetTagResponse
+        /// </returns>
+        public async Task<DeleteDataAssetTagResponse> DeleteDataAssetTagAsync(DeleteDataAssetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataAssetTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据质量校验任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityEvaluationTaskResponse
+        /// </returns>
+        public DeleteDataQualityEvaluationTaskResponse DeleteDataQualityEvaluationTaskWithOptions(DeleteDataQualityEvaluationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataQualityEvaluationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据质量校验任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<DeleteDataQualityEvaluationTaskResponse> DeleteDataQualityEvaluationTaskWithOptionsAsync(DeleteDataQualityEvaluationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataQualityEvaluationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据质量校验任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityEvaluationTaskResponse
+        /// </returns>
+        public DeleteDataQualityEvaluationTaskResponse DeleteDataQualityEvaluationTask(DeleteDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataQualityEvaluationTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据质量校验任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<DeleteDataQualityEvaluationTaskResponse> DeleteDataQualityEvaluationTaskAsync(DeleteDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataQualityEvaluationTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleResponse
+        /// </returns>
+        public DeleteDataQualityRuleResponse DeleteDataQualityRuleWithOptions(DeleteDataQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataQualityRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleResponse
+        /// </returns>
+        public async Task<DeleteDataQualityRuleResponse> DeleteDataQualityRuleWithOptionsAsync(DeleteDataQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleResponse
+        /// </returns>
+        public DeleteDataQualityRuleResponse DeleteDataQualityRule(DeleteDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataQualityRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleResponse
+        /// </returns>
+        public async Task<DeleteDataQualityRuleResponse> DeleteDataQualityRuleAsync(DeleteDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataQualityRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleTemplateResponse
+        /// </returns>
+        public DeleteDataQualityRuleTemplateResponse DeleteDataQualityRuleTemplateWithOptions(DeleteDataQualityRuleTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataQualityRuleTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<DeleteDataQualityRuleTemplateResponse> DeleteDataQualityRuleTemplateWithOptionsAsync(DeleteDataQualityRuleTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataQualityRuleTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleTemplateResponse
+        /// </returns>
+        public DeleteDataQualityRuleTemplateResponse DeleteDataQualityRuleTemplate(DeleteDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataQualityRuleTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<DeleteDataQualityRuleTemplateResponse> DeleteDataQualityRuleTemplateAsync(DeleteDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataQualityRuleTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a data source by ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all Dataworks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceRequest
@@ -1812,8 +5239,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Removes a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all Dataworks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceRequest
@@ -1850,8 +5288,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Removes a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all Dataworks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceRequest
@@ -1868,8 +5317,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Removes a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all Dataworks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceRequest
@@ -1886,8 +5346,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Deletes a sharing rule of a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceSharedRuleRequest
@@ -1928,8 +5399,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Deletes a sharing rule of a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceSharedRuleRequest
@@ -1970,8 +5452,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Deletes a sharing rule of a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceSharedRuleRequest
@@ -1988,8 +5481,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Deletes a sharing rule of a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to delete a sharing rule of a data source from Workspace A to Workspace B, you must have the permissions to share the data source in Workspace A or Workspace B. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataSourceSharedRuleRequest
@@ -2006,8 +5510,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除udf函数</para>
+        /// <para>Deletes a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFunctionRequest
@@ -2052,8 +5563,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除udf函数</para>
+        /// <para>Deletes a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFunctionRequest
@@ -2098,8 +5616,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除udf函数</para>
+        /// <para>Deletes a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFunctionRequest
@@ -2116,8 +5641,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除udf函数</para>
+        /// <para>Deletes a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFunctionRequest
@@ -2134,8 +5666,155 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点</para>
+        /// <para>Disassociates and deletes a network from a general resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkResponse
+        /// </returns>
+        public DeleteNetworkResponse DeleteNetworkWithOptions(DeleteNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNetwork",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates and deletes a network from a general resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkResponse
+        /// </returns>
+        public async Task<DeleteNetworkResponse> DeleteNetworkWithOptionsAsync(DeleteNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNetwork",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates and deletes a network from a general resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkResponse
+        /// </returns>
+        public DeleteNetworkResponse DeleteNetwork(DeleteNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNetworkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates and deletes a network from a general resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNetworkResponse
+        /// </returns>
+        public async Task<DeleteNetworkResponse> DeleteNetworkAsync(DeleteNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNetworkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a node from DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeRequest
@@ -2180,8 +5859,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点</para>
+        /// <para>Deletes a node from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeRequest
@@ -2226,8 +5912,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点</para>
+        /// <para>Deletes a node from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeRequest
@@ -2244,8 +5937,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点</para>
+        /// <para>Deletes a node from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A node that is deployed cannot be deleted. If you want to delete such a node, you must first undeploy the node.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeRequest
@@ -2262,8 +5962,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>销毁工作空间</para>
+        /// <para>Deletes a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -2304,8 +6009,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>销毁工作空间</para>
+        /// <para>Deletes a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -2346,8 +6056,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>销毁工作空间</para>
+        /// <para>Deletes a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -2364,8 +6079,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>销毁工作空间</para>
+        /// <para>Deletes a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -2382,8 +6102,163 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件</para>
+        /// <para>Removes a workspace member and the workspace-level roles that are assigned to the member.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectMemberResponse
+        /// </returns>
+        public DeleteProjectMemberResponse DeleteProjectMemberWithOptions(DeleteProjectMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProjectMember",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a workspace member and the workspace-level roles that are assigned to the member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectMemberResponse
+        /// </returns>
+        public async Task<DeleteProjectMemberResponse> DeleteProjectMemberWithOptionsAsync(DeleteProjectMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProjectMember",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a workspace member and the workspace-level roles that are assigned to the member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectMemberResponse
+        /// </returns>
+        public DeleteProjectMemberResponse DeleteProjectMember(DeleteProjectMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteProjectMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a workspace member and the workspace-level roles that are assigned to the member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectMemberResponse
+        /// </returns>
+        public async Task<DeleteProjectMemberResponse> DeleteProjectMemberAsync(DeleteProjectMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteProjectMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a file resource from DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteResourceRequest
@@ -2428,8 +6303,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件</para>
+        /// <para>Deletes a file resource from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteResourceRequest
@@ -2474,8 +6356,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件</para>
+        /// <para>Deletes a file resource from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteResourceRequest
@@ -2492,8 +6381,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源文件</para>
+        /// <para>Deletes a file resource from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A file resource that is deployed cannot be deleted. If you want to delete such a file resource, you must first undeploy the file resource.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteResourceRequest
@@ -2510,8 +6406,455 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a serverless resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceGroupResponse
+        /// </returns>
+        public DeleteResourceGroupResponse DeleteResourceGroupWithOptions(DeleteResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceGroupResponse
+        /// </returns>
+        public async Task<DeleteResourceGroupResponse> DeleteResourceGroupWithOptionsAsync(DeleteResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceGroupResponse
+        /// </returns>
+        public DeleteResourceGroupResponse DeleteResourceGroup(DeleteResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceGroupResponse
+        /// </returns>
+        public async Task<DeleteResourceGroupResponse> DeleteResourceGroupAsync(DeleteResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route from a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteResponse
+        /// </returns>
+        public DeleteRouteResponse DeleteRouteWithOptions(DeleteRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route from a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteResponse
+        /// </returns>
+        public async Task<DeleteRouteResponse> DeleteRouteWithOptionsAsync(DeleteRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route from a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteResponse
+        /// </returns>
+        public DeleteRouteResponse DeleteRoute(DeleteRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteRouteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route from a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteResponse
+        /// </returns>
+        public async Task<DeleteRouteResponse> DeleteRouteAsync(DeleteRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTaskResponse
+        /// </returns>
+        public DeleteTaskResponse DeleteTaskWithOptions(DeleteTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                query["ProjectEnv"] = request.ProjectEnv;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTaskResponse
+        /// </returns>
+        public async Task<DeleteTaskResponse> DeleteTaskWithOptionsAsync(DeleteTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                query["ProjectEnv"] = request.ProjectEnv;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTaskResponse
+        /// </returns>
+        public DeleteTaskResponse DeleteTask(DeleteTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTaskResponse
+        /// </returns>
+        public async Task<DeleteTaskResponse> DeleteTaskAsync(DeleteTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a workflow from DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkflowDefinitionRequest
@@ -2556,8 +6899,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a workflow from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkflowDefinitionRequest
@@ -2602,8 +6952,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a workflow from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkflowDefinitionRequest
@@ -2620,8 +6977,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a workflow from DataStudio.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkflowDefinitionRequest
@@ -2638,8 +7002,336 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行Deployment一个阶段</para>
+        /// <para>取消数据质量规则和数据质量校验任务的关联</para>
         /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachDataQualityRulesFromEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDataQualityRulesFromEvaluationTaskResponse
+        /// </returns>
+        public DetachDataQualityRulesFromEvaluationTaskResponse DetachDataQualityRulesFromEvaluationTaskWithOptions(DetachDataQualityRulesFromEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachDataQualityRulesFromEvaluationTaskShrinkRequest request = new DetachDataQualityRulesFromEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRuleIds))
+            {
+                request.DataQualityRuleIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRuleIds, "DataQualityRuleIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityEvaluationTaskId))
+            {
+                body["DataQualityEvaluationTaskId"] = request.DataQualityEvaluationTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRuleIdsShrink))
+            {
+                body["DataQualityRuleIds"] = request.DataQualityRuleIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachDataQualityRulesFromEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachDataQualityRulesFromEvaluationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消数据质量规则和数据质量校验任务的关联</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachDataQualityRulesFromEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDataQualityRulesFromEvaluationTaskResponse
+        /// </returns>
+        public async Task<DetachDataQualityRulesFromEvaluationTaskResponse> DetachDataQualityRulesFromEvaluationTaskWithOptionsAsync(DetachDataQualityRulesFromEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachDataQualityRulesFromEvaluationTaskShrinkRequest request = new DetachDataQualityRulesFromEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRuleIds))
+            {
+                request.DataQualityRuleIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRuleIds, "DataQualityRuleIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityEvaluationTaskId))
+            {
+                body["DataQualityEvaluationTaskId"] = request.DataQualityEvaluationTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRuleIdsShrink))
+            {
+                body["DataQualityRuleIds"] = request.DataQualityRuleIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachDataQualityRulesFromEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachDataQualityRulesFromEvaluationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消数据质量规则和数据质量校验任务的关联</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDataQualityRulesFromEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDataQualityRulesFromEvaluationTaskResponse
+        /// </returns>
+        public DetachDataQualityRulesFromEvaluationTaskResponse DetachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetachDataQualityRulesFromEvaluationTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消数据质量规则和数据质量校验任务的关联</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachDataQualityRulesFromEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachDataQualityRulesFromEvaluationTaskResponse
+        /// </returns>
+        public async Task<DetachDataQualityRulesFromEvaluationTaskResponse> DetachDataQualityRulesFromEvaluationTaskAsync(DetachDataQualityRulesFromEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetachDataQualityRulesFromEvaluationTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a resource group from a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateProjectFromResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateProjectFromResourceGroupResponse
+        /// </returns>
+        public DissociateProjectFromResourceGroupResponse DissociateProjectFromResourceGroupWithOptions(DissociateProjectFromResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DissociateProjectFromResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DissociateProjectFromResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a resource group from a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateProjectFromResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateProjectFromResourceGroupResponse
+        /// </returns>
+        public async Task<DissociateProjectFromResourceGroupResponse> DissociateProjectFromResourceGroupWithOptionsAsync(DissociateProjectFromResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DissociateProjectFromResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DissociateProjectFromResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a resource group from a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateProjectFromResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateProjectFromResourceGroupResponse
+        /// </returns>
+        public DissociateProjectFromResourceGroupResponse DissociateProjectFromResourceGroup(DissociateProjectFromResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DissociateProjectFromResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a resource group from a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateProjectFromResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateProjectFromResourceGroupResponse
+        /// </returns>
+        public async Task<DissociateProjectFromResourceGroupResponse> DissociateProjectFromResourceGroupAsync(DissociateProjectFromResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DissociateProjectFromResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a stage in a process.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+        ///  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecDeploymentStageRequest
@@ -2690,8 +7382,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行Deployment一个阶段</para>
+        /// <para>Executes a stage in a process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+        ///  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecDeploymentStageRequest
@@ -2742,8 +7442,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行Deployment一个阶段</para>
+        /// <para>Executes a stage in a process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+        ///  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecDeploymentStageRequest
@@ -2760,8 +7468,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行Deployment一个阶段</para>
+        /// <para>Executes a stage in a process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> The stages in a process are sequential. For more information, see the GetDeployment operation. Skipping or repeating a stage is not allowed.
+        ///  The execution of a stage is asynchronous. The response of this operation indicates only whether a stage is triggered but does not indicate whether the execution of the stage is successful. You can call the GetDeployment operation to check whether the execution is successful.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecDeploymentStageRequest
@@ -2778,8 +7494,125 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据集成任务</para>
+        /// <para>Queries a list of custom alert monitoring rules.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlertRuleResponse
+        /// </returns>
+        public GetAlertRuleResponse GetAlertRuleWithOptions(GetAlertRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlertRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom alert monitoring rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlertRuleResponse
+        /// </returns>
+        public async Task<GetAlertRuleResponse> GetAlertRuleWithOptionsAsync(GetAlertRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlertRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom alert monitoring rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlertRuleResponse
+        /// </returns>
+        public GetAlertRuleResponse GetAlertRule(GetAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAlertRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom alert monitoring rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlertRuleResponse
+        /// </returns>
+        public async Task<GetAlertRuleResponse> GetAlertRuleAsync(GetAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAlertRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobRequest
@@ -2816,8 +7649,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据集成任务</para>
+        /// <para>Queries the information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobRequest
@@ -2854,8 +7692,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据集成任务</para>
+        /// <para>Queries the information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobRequest
@@ -2872,8 +7715,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看数据集成任务</para>
+        /// <para>Queries the information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobRequest
@@ -2890,8 +7738,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务日志</para>
+        /// <para>Obtains logs generated for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobLogRequest
@@ -2928,8 +7781,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务日志</para>
+        /// <para>Obtains logs generated for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobLogRequest
@@ -2966,8 +7824,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务日志</para>
+        /// <para>Obtains logs generated for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobLogRequest
@@ -2984,8 +7847,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务日志</para>
+        /// <para>Obtains logs generated for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDIJobLogRequest
@@ -3002,8 +7870,507 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>查询数据质量校验任务详情</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskResponse
+        /// </returns>
+        public GetDataQualityEvaluationTaskResponse GetDataQualityEvaluationTaskWithOptions(GetDataQualityEvaluationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityEvaluationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据质量校验任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<GetDataQualityEvaluationTaskResponse> GetDataQualityEvaluationTaskWithOptionsAsync(GetDataQualityEvaluationTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityEvaluationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据质量校验任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskResponse
+        /// </returns>
+        public GetDataQualityEvaluationTaskResponse GetDataQualityEvaluationTask(GetDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataQualityEvaluationTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据质量校验任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<GetDataQualityEvaluationTaskResponse> GetDataQualityEvaluationTaskAsync(GetDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataQualityEvaluationTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据质量校验任务实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public GetDataQualityEvaluationTaskInstanceResponse GetDataQualityEvaluationTaskInstanceWithOptions(GetDataQualityEvaluationTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityEvaluationTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityEvaluationTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据质量校验任务实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public async Task<GetDataQualityEvaluationTaskInstanceResponse> GetDataQualityEvaluationTaskInstanceWithOptionsAsync(GetDataQualityEvaluationTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityEvaluationTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityEvaluationTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据质量校验任务实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public GetDataQualityEvaluationTaskInstanceResponse GetDataQualityEvaluationTaskInstance(GetDataQualityEvaluationTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataQualityEvaluationTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据质量校验任务实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityEvaluationTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityEvaluationTaskInstanceResponse
+        /// </returns>
+        public async Task<GetDataQualityEvaluationTaskInstanceResponse> GetDataQualityEvaluationTaskInstanceAsync(GetDataQualityEvaluationTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataQualityEvaluationTaskInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleResponse
+        /// </returns>
+        public GetDataQualityRuleResponse GetDataQualityRuleWithOptions(GetDataQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleResponse
+        /// </returns>
+        public async Task<GetDataQualityRuleResponse> GetDataQualityRuleWithOptionsAsync(GetDataQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleResponse
+        /// </returns>
+        public GetDataQualityRuleResponse GetDataQualityRule(GetDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataQualityRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleResponse
+        /// </returns>
+        public async Task<GetDataQualityRuleResponse> GetDataQualityRuleAsync(GetDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataQualityRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleTemplateResponse
+        /// </returns>
+        public GetDataQualityRuleTemplateResponse GetDataQualityRuleTemplateWithOptions(GetDataQualityRuleTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityRuleTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<GetDataQualityRuleTemplateResponse> GetDataQualityRuleTemplateWithOptionsAsync(GetDataQualityRuleTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataQualityRuleTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleTemplateResponse
+        /// </returns>
+        public GetDataQualityRuleTemplateResponse GetDataQualityRuleTemplate(GetDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataQualityRuleTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<GetDataQualityRuleTemplateResponse> GetDataQualityRuleTemplateAsync(GetDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataQualityRuleTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a data source by ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataSourceRequest
@@ -3040,8 +8407,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataSourceRequest
@@ -3078,8 +8456,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataSourceRequest
@@ -3096,8 +8485,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Development, Project Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataSourceRequest
@@ -3114,7 +8514,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取发布流程详情</para>
+        /// <para>Queries the information about a process for deploying or undeploying an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3152,7 +8552,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取发布流程详情</para>
+        /// <para>Queries the information about a process for deploying or undeploying an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3190,7 +8590,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取发布流程详情</para>
+        /// <para>Queries the information about a process for deploying or undeploying an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3208,7 +8608,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取发布流程详情</para>
+        /// <para>Queries the information about a process for deploying or undeploying an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3226,7 +8626,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取函数信息</para>
+        /// <para>Queries the information about a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3264,7 +8664,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取函数信息</para>
+        /// <para>Queries the information about a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3302,7 +8702,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取函数信息</para>
+        /// <para>Queries the information about a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3320,7 +8720,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取函数信息</para>
+        /// <para>Queries the information about a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3336,6 +8736,255 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return await GetFunctionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status information of an asynchronous task. After you call an asynchronous operation, an asynchronous task is generated. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
+        public GetJobStatusResponse GetJobStatusWithOptions(GetJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobStatus",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status information of an asynchronous task. After you call an asynchronous operation, an asynchronous task is generated. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
+        public async Task<GetJobStatusResponse> GetJobStatusWithOptionsAsync(GetJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobStatus",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status information of an asynchronous task. After you call an asynchronous operation, an asynchronous task is generated. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
+        public GetJobStatusResponse GetJobStatus(GetJobStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetJobStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status information of an asynchronous task. After you call an asynchronous operation, an asynchronous task is generated. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobStatusResponse
+        /// </returns>
+        public async Task<GetJobStatusResponse> GetJobStatusAsync(GetJobStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetJobStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkResponse
+        /// </returns>
+        public GetNetworkResponse GetNetworkWithOptions(GetNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetwork",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkResponse
+        /// </returns>
+        public async Task<GetNetworkResponse> GetNetworkWithOptionsAsync(GetNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetwork",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkResponse
+        /// </returns>
+        public GetNetworkResponse GetNetwork(GetNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNetworkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a network resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkResponse
+        /// </returns>
+        public async Task<GetNetworkResponse> GetNetworkAsync(GetNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNetworkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a node in DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNodeRequest
         /// </param>
@@ -3369,6 +9018,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<GetNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a node in DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNodeRequest
         /// </param>
@@ -3402,6 +9056,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<GetNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a node in DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNodeRequest
         /// </param>
@@ -3415,6 +9074,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return GetNodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a node in DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNodeRequest
         /// </param>
@@ -3430,8 +9094,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作空间详情</para>
+        /// <para>Queries the information about a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -3468,8 +9137,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作空间详情</para>
+        /// <para>Queries the information about a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -3506,8 +9180,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作空间详情</para>
+        /// <para>Queries the information about a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -3524,8 +9203,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工作空间详情</para>
+        /// <para>Queries the information about a DataWorks workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -3542,7 +9226,303 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件</para>
+        /// <para>Queries the details about a member in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectMemberResponse
+        /// </returns>
+        public GetProjectMemberResponse GetProjectMemberWithOptions(GetProjectMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectMember",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a member in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectMemberResponse
+        /// </returns>
+        public async Task<GetProjectMemberResponse> GetProjectMemberWithOptionsAsync(GetProjectMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectMember",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a member in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectMemberResponse
+        /// </returns>
+        public GetProjectMemberResponse GetProjectMember(GetProjectMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetProjectMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a member in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectMemberResponse
+        /// </returns>
+        public async Task<GetProjectMemberResponse> GetProjectMemberAsync(GetProjectMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetProjectMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a role in a DataWorks workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectRoleResponse
+        /// </returns>
+        public GetProjectRoleResponse GetProjectRoleWithOptions(GetProjectRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectRole",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a role in a DataWorks workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectRoleResponse
+        /// </returns>
+        public async Task<GetProjectRoleResponse> GetProjectRoleWithOptionsAsync(GetProjectRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectRole",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a role in a DataWorks workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectRoleResponse
+        /// </returns>
+        public GetProjectRoleResponse GetProjectRole(GetProjectRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetProjectRoleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a role in a DataWorks workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectRoleResponse
+        /// </returns>
+        public async Task<GetProjectRoleResponse> GetProjectRoleAsync(GetProjectRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetProjectRoleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3580,7 +9560,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件</para>
+        /// <para>Queries the information about a file resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3618,7 +9598,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件</para>
+        /// <para>Queries the information about a file resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3636,7 +9616,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源文件</para>
+        /// <para>Queries the information about a file resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3654,7 +9634,647 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>根据id获取指定资源组。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceGroupResponse
+        /// </returns>
+        public GetResourceGroupResponse GetResourceGroupWithOptions(GetResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据id获取指定资源组。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceGroupResponse
+        /// </returns>
+        public async Task<GetResourceGroupResponse> GetResourceGroupWithOptionsAsync(GetResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据id获取指定资源组。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceGroupResponse
+        /// </returns>
+        public GetResourceGroupResponse GetResourceGroup(GetResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据id获取指定资源组。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceGroupResponse
+        /// </returns>
+        public async Task<GetResourceGroupResponse> GetResourceGroupAsync(GetResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a route based on its ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteResponse
+        /// </returns>
+        public GetRouteResponse GetRouteWithOptions(GetRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRouteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a route based on its ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteResponse
+        /// </returns>
+        public async Task<GetRouteResponse> GetRouteWithOptionsAsync(GetRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRouteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a route based on its ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteResponse
+        /// </returns>
+        public GetRouteResponse GetRoute(GetRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRouteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a route based on its ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteResponse
+        /// </returns>
+        public async Task<GetRouteResponse> GetRouteAsync(GetRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public GetTaskResponse GetTaskWithOptions(GetTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public async Task<GetTaskResponse> GetTaskWithOptionsAsync(GetTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public GetTaskResponse GetTask(GetTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public async Task<GetTaskResponse> GetTaskAsync(GetTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceResponse
+        /// </returns>
+        public GetTaskInstanceResponse GetTaskInstanceWithOptions(GetTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceResponse
+        /// </returns>
+        public async Task<GetTaskInstanceResponse> GetTaskInstanceWithOptionsAsync(GetTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceResponse
+        /// </returns>
+        public GetTaskInstanceResponse GetTaskInstance(GetTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceResponse
+        /// </returns>
+        public async Task<GetTaskInstanceResponse> GetTaskInstanceAsync(GetTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTaskInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run log generated during a specific run of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceLogResponse
+        /// </returns>
+        public GetTaskInstanceLogResponse GetTaskInstanceLogWithOptions(GetTaskInstanceLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskInstanceLog",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskInstanceLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run log generated during a specific run of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceLogResponse
+        /// </returns>
+        public async Task<GetTaskInstanceLogResponse> GetTaskInstanceLogWithOptionsAsync(GetTaskInstanceLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskInstanceLog",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskInstanceLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run log generated during a specific run of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceLogResponse
+        /// </returns>
+        public GetTaskInstanceLogResponse GetTaskInstanceLog(GetTaskInstanceLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTaskInstanceLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run log generated during a specific run of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskInstanceLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskInstanceLogResponse
+        /// </returns>
+        public async Task<GetTaskInstanceLogResponse> GetTaskInstanceLogAsync(GetTaskInstanceLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTaskInstanceLogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3692,7 +10312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>Queries the information about a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3730,7 +10350,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>Queries the information about a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3748,7 +10368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>Queries the information about a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3766,8 +10386,641 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务事件</para>
+        /// <para>Assigns roles to members in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GrantMemberProjectRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantMemberProjectRolesResponse
+        /// </returns>
+        public GrantMemberProjectRolesResponse GrantMemberProjectRolesWithOptions(GrantMemberProjectRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GrantMemberProjectRolesShrinkRequest request = new GrantMemberProjectRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantMemberProjectRoles",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantMemberProjectRolesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns roles to members in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GrantMemberProjectRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantMemberProjectRolesResponse
+        /// </returns>
+        public async Task<GrantMemberProjectRolesResponse> GrantMemberProjectRolesWithOptionsAsync(GrantMemberProjectRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GrantMemberProjectRolesShrinkRequest request = new GrantMemberProjectRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantMemberProjectRoles",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantMemberProjectRolesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns roles to members in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GrantMemberProjectRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantMemberProjectRolesResponse
+        /// </returns>
+        public GrantMemberProjectRolesResponse GrantMemberProjectRoles(GrantMemberProjectRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GrantMemberProjectRolesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns roles to members in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GrantMemberProjectRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantMemberProjectRolesResponse
+        /// </returns>
+        public async Task<GrantMemberProjectRolesResponse> GrantMemberProjectRolesAsync(GrantMemberProjectRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GrantMemberProjectRolesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
+        ///  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowDefinitionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowDefinitionResponse
+        /// </returns>
+        public ImportWorkflowDefinitionResponse ImportWorkflowDefinitionWithOptions(ImportWorkflowDefinitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportWorkflowDefinition",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportWorkflowDefinitionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
+        ///  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowDefinitionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowDefinitionResponse
+        /// </returns>
+        public async Task<ImportWorkflowDefinitionResponse> ImportWorkflowDefinitionWithOptionsAsync(ImportWorkflowDefinitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportWorkflowDefinition",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportWorkflowDefinitionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
+        ///  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowDefinitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowDefinitionResponse
+        /// </returns>
+        public ImportWorkflowDefinitionResponse ImportWorkflowDefinition(ImportWorkflowDefinitionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportWorkflowDefinitionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
+        ///  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowDefinitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowDefinitionResponse
+        /// </returns>
+        public async Task<ImportWorkflowDefinitionResponse> ImportWorkflowDefinitionAsync(ImportWorkflowDefinitionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportWorkflowDefinitionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom monitoring alert rule by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAlertRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertRulesResponse
+        /// </returns>
+        public ListAlertRulesResponse ListAlertRulesWithOptions(ListAlertRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAlertRulesShrinkRequest request = new ListAlertRulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "TaskIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Types))
+            {
+                request.TypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Types, "Types", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Receiver))
+            {
+                query["Receiver"] = request.Receiver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                query["TaskIds"] = request.TaskIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypesShrink))
+            {
+                query["Types"] = request.TypesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlertRules",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom monitoring alert rule by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAlertRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertRulesResponse
+        /// </returns>
+        public async Task<ListAlertRulesResponse> ListAlertRulesWithOptionsAsync(ListAlertRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAlertRulesShrinkRequest request = new ListAlertRulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "TaskIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Types))
+            {
+                request.TypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Types, "Types", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Receiver))
+            {
+                query["Receiver"] = request.Receiver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                query["TaskIds"] = request.TaskIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypesShrink))
+            {
+                query["Types"] = request.TypesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlertRules",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom monitoring alert rule by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAlertRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertRulesResponse
+        /// </returns>
+        public ListAlertRulesResponse ListAlertRules(ListAlertRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAlertRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom monitoring alert rule by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAlertRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlertRulesResponse
+        /// </returns>
+        public async Task<ListAlertRulesResponse> ListAlertRulesAsync(ListAlertRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAlertRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views alert rules configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDIAlarmRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIAlarmRulesResponse
+        /// </returns>
+        public ListDIAlarmRulesResponse ListDIAlarmRulesWithOptions(ListDIAlarmRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIAlarmRules",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIAlarmRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views alert rules configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDIAlarmRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIAlarmRulesResponse
+        /// </returns>
+        public async Task<ListDIAlarmRulesResponse> ListDIAlarmRulesWithOptionsAsync(ListDIAlarmRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIAlarmRules",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIAlarmRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views alert rules configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDIAlarmRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIAlarmRulesResponse
+        /// </returns>
+        public ListDIAlarmRulesResponse ListDIAlarmRules(ListDIAlarmRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDIAlarmRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views alert rules configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDIAlarmRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIAlarmRulesResponse
+        /// </returns>
+        public async Task<ListDIAlarmRulesResponse> ListDIAlarmRulesAsync(ListDIAlarmRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDIAlarmRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries events for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobEventsRequest
@@ -3804,8 +11057,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务事件</para>
+        /// <para>Queries events for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobEventsRequest
@@ -3842,8 +11100,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务事件</para>
+        /// <para>Queries events for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobEventsRequest
@@ -3860,8 +11123,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务事件</para>
+        /// <para>Queries events for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobEventsRequest
@@ -3878,8 +11146,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务指标</para>
+        /// <para>Queries metrics for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDIJobMetricsRequest
@@ -3922,8 +11195,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务指标</para>
+        /// <para>Queries metrics for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDIJobMetricsRequest
@@ -3966,8 +11244,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务指标</para>
+        /// <para>Queries metrics for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobMetricsRequest
@@ -3984,8 +11267,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务指标</para>
+        /// <para>Queries metrics for a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobMetricsRequest
@@ -4002,8 +11290,145 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务</para>
+        /// <para>Queries the running information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDIJobRunDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIJobRunDetailsResponse
+        /// </returns>
+        public ListDIJobRunDetailsResponse ListDIJobRunDetailsWithOptions(ListDIJobRunDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIJobRunDetails",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIJobRunDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the running information about a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDIJobRunDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIJobRunDetailsResponse
+        /// </returns>
+        public async Task<ListDIJobRunDetailsResponse> ListDIJobRunDetailsWithOptionsAsync(ListDIJobRunDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDIJobRunDetails",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDIJobRunDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the running information about a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDIJobRunDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIJobRunDetailsResponse
+        /// </returns>
+        public ListDIJobRunDetailsResponse ListDIJobRunDetails(ListDIJobRunDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDIJobRunDetailsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the running information about a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDIJobRunDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDIJobRunDetailsResponse
+        /// </returns>
+        public async Task<ListDIJobRunDetailsResponse> ListDIJobRunDetailsAsync(ListDIJobRunDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDIJobRunDetailsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of synchronization tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobsRequest
@@ -4040,8 +11465,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务</para>
+        /// <para>Queries a list of synchronization tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobsRequest
@@ -4078,8 +11508,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务</para>
+        /// <para>Queries a list of synchronization tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobsRequest
@@ -4096,8 +11531,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集成任务</para>
+        /// <para>Queries a list of synchronization tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDIJobsRequest
@@ -4114,8 +11554,883 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>查询标签列表</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAssetTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetTagsResponse
+        /// </returns>
+        public ListDataAssetTagsResponse ListDataAssetTagsWithOptions(ListDataAssetTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAssetTags",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAssetTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAssetTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetTagsResponse
+        /// </returns>
+        public async Task<ListDataAssetTagsResponse> ListDataAssetTagsWithOptionsAsync(ListDataAssetTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAssetTags",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAssetTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAssetTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetTagsResponse
+        /// </returns>
+        public ListDataAssetTagsResponse ListDataAssetTags(ListDataAssetTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAssetTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAssetTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetTagsResponse
+        /// </returns>
+        public async Task<ListDataAssetTagsResponse> ListDataAssetTagsAsync(ListDataAssetTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAssetTagsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDataAssets</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListDataAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetsResponse
+        /// </returns>
+        public ListDataAssetsResponse ListDataAssetsWithOptions(ListDataAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDataAssetsShrinkRequest request = new ListDataAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataAssetIds))
+            {
+                request.DataAssetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataAssetIds, "DataAssetIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAssets",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAssetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDataAssets</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListDataAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetsResponse
+        /// </returns>
+        public async Task<ListDataAssetsResponse> ListDataAssetsWithOptionsAsync(ListDataAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDataAssetsShrinkRequest request = new ListDataAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataAssetIds))
+            {
+                request.DataAssetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataAssetIds, "DataAssetIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAssets",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAssetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDataAssets</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetsResponse
+        /// </returns>
+        public ListDataAssetsResponse ListDataAssets(ListDataAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAssetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDataAssets</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAssetsResponse
+        /// </returns>
+        public async Task<ListDataAssetsResponse> ListDataAssetsAsync(ListDataAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAssetsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances generated by a data quality monitoring task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTaskInstancesResponse
+        /// </returns>
+        public ListDataQualityEvaluationTaskInstancesResponse ListDataQualityEvaluationTaskInstancesWithOptions(ListDataQualityEvaluationTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityEvaluationTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityEvaluationTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances generated by a data quality monitoring task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTaskInstancesResponse
+        /// </returns>
+        public async Task<ListDataQualityEvaluationTaskInstancesResponse> ListDataQualityEvaluationTaskInstancesWithOptionsAsync(ListDataQualityEvaluationTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityEvaluationTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityEvaluationTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances generated by a data quality monitoring task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTaskInstancesResponse
+        /// </returns>
+        public ListDataQualityEvaluationTaskInstancesResponse ListDataQualityEvaluationTaskInstances(ListDataQualityEvaluationTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataQualityEvaluationTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances generated by a data quality monitoring task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTaskInstancesResponse
+        /// </returns>
+        public async Task<ListDataQualityEvaluationTaskInstancesResponse> ListDataQualityEvaluationTaskInstancesAsync(ListDataQualityEvaluationTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataQualityEvaluationTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring tasks by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTasksResponse
+        /// </returns>
+        public ListDataQualityEvaluationTasksResponse ListDataQualityEvaluationTasksWithOptions(ListDataQualityEvaluationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityEvaluationTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityEvaluationTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring tasks by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTasksResponse
+        /// </returns>
+        public async Task<ListDataQualityEvaluationTasksResponse> ListDataQualityEvaluationTasksWithOptionsAsync(ListDataQualityEvaluationTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityEvaluationTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityEvaluationTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring tasks by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTasksResponse
+        /// </returns>
+        public ListDataQualityEvaluationTasksResponse ListDataQualityEvaluationTasks(ListDataQualityEvaluationTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataQualityEvaluationTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring tasks by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityEvaluationTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityEvaluationTasksResponse
+        /// </returns>
+        public async Task<ListDataQualityEvaluationTasksResponse> ListDataQualityEvaluationTasksAsync(ListDataQualityEvaluationTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataQualityEvaluationTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityResultsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityResultsResponse
+        /// </returns>
+        public ListDataQualityResultsResponse ListDataQualityResultsWithOptions(ListDataQualityResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityResults",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityResultsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityResultsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityResultsResponse
+        /// </returns>
+        public async Task<ListDataQualityResultsResponse> ListDataQualityResultsWithOptionsAsync(ListDataQualityResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityResults",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityResultsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityResultsResponse
+        /// </returns>
+        public ListDataQualityResultsResponse ListDataQualityResults(ListDataQualityResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataQualityResultsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityResultsResponse
+        /// </returns>
+        public async Task<ListDataQualityResultsResponse> ListDataQualityResultsAsync(ListDataQualityResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataQualityResultsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则模版列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRuleTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRuleTemplatesResponse
+        /// </returns>
+        public ListDataQualityRuleTemplatesResponse ListDataQualityRuleTemplatesWithOptions(ListDataQualityRuleTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityRuleTemplates",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityRuleTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则模版列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRuleTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRuleTemplatesResponse
+        /// </returns>
+        public async Task<ListDataQualityRuleTemplatesResponse> ListDataQualityRuleTemplatesWithOptionsAsync(ListDataQualityRuleTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityRuleTemplates",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityRuleTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则模版列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRuleTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRuleTemplatesResponse
+        /// </returns>
+        public ListDataQualityRuleTemplatesResponse ListDataQualityRuleTemplates(ListDataQualityRuleTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataQualityRuleTemplatesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询质量规则模版列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRuleTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRuleTemplatesResponse
+        /// </returns>
+        public async Task<ListDataQualityRuleTemplatesResponse> ListDataQualityRuleTemplatesAsync(ListDataQualityRuleTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataQualityRuleTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring rules by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRulesResponse
+        /// </returns>
+        public ListDataQualityRulesResponse ListDataQualityRulesWithOptions(ListDataQualityRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityRules",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring rules by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRulesResponse
+        /// </returns>
+        public async Task<ListDataQualityRulesResponse> ListDataQualityRulesWithOptionsAsync(ListDataQualityRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataQualityRules",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataQualityRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring rules by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRulesResponse
+        /// </returns>
+        public ListDataQualityRulesResponse ListDataQualityRules(ListDataQualityRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataQualityRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of data quality monitoring rules by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDataQualityRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataQualityRulesResponse
+        /// </returns>
+        public async Task<ListDataQualityRulesResponse> ListDataQualityRulesAsync(ListDataQualityRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataQualityRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of sharing rules of a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataSourceSharedRulesRequest
@@ -4152,8 +12467,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a list of sharing rules of a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataSourceSharedRulesRequest
@@ -4190,8 +12516,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a list of sharing rules of a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataSourceSharedRulesRequest
@@ -4208,8 +12545,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a list of sharing rules of a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>If you want to query the sharing rules of a data source that is associated with Workspace A, you must have the permissions to share the data source in Workspace A. You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, and Workspace Owner</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataSourceSharedRulesRequest
@@ -4226,8 +12574,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a list of data sources based on the business information of data sources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDataSourcesRequest
@@ -4270,8 +12629,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a list of data sources based on the business information of data sources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDataSourcesRequest
@@ -4314,8 +12684,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a list of data sources based on the business information of data sources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataSourcesRequest
@@ -4332,8 +12713,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Queries a list of data sources based on the business information of data sources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataSourcesRequest
@@ -4350,7 +12742,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布流程</para>
+        /// <para>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4388,7 +12780,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布流程</para>
+        /// <para>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4426,7 +12818,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布流程</para>
+        /// <para>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4444,7 +12836,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取发布流程</para>
+        /// <para>Queries a list of processes that are used to deploy or undeploy entities in DataStudio. You can also specify filter conditions to query specific processes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4462,7 +12854,251 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取udf函数列表</para>
+        /// <para>Queries a list of descendant instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTaskInstancesResponse
+        /// </returns>
+        public ListDownstreamTaskInstancesResponse ListDownstreamTaskInstancesWithOptions(ListDownstreamTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDownstreamTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDownstreamTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTaskInstancesResponse
+        /// </returns>
+        public async Task<ListDownstreamTaskInstancesResponse> ListDownstreamTaskInstancesWithOptionsAsync(ListDownstreamTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDownstreamTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDownstreamTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTaskInstancesResponse
+        /// </returns>
+        public ListDownstreamTaskInstancesResponse ListDownstreamTaskInstances(ListDownstreamTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDownstreamTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTaskInstancesResponse
+        /// </returns>
+        public async Task<ListDownstreamTaskInstancesResponse> ListDownstreamTaskInstancesAsync(ListDownstreamTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDownstreamTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTasksResponse
+        /// </returns>
+        public ListDownstreamTasksResponse ListDownstreamTasksWithOptions(ListDownstreamTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDownstreamTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDownstreamTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTasksResponse
+        /// </returns>
+        public async Task<ListDownstreamTasksResponse> ListDownstreamTasksWithOptionsAsync(ListDownstreamTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDownstreamTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDownstreamTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTasksResponse
+        /// </returns>
+        public ListDownstreamTasksResponse ListDownstreamTasks(ListDownstreamTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDownstreamTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDownstreamTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDownstreamTasksResponse
+        /// </returns>
+        public async Task<ListDownstreamTasksResponse> ListDownstreamTasksAsync(ListDownstreamTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDownstreamTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of user-defined functions (UDFs) in DataStudio. You can also specify filter conditions to query specific UDFs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4500,7 +13136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取udf函数列表</para>
+        /// <para>Queries a list of user-defined functions (UDFs) in DataStudio. You can also specify filter conditions to query specific UDFs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4538,7 +13174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取udf函数列表</para>
+        /// <para>Queries a list of user-defined functions (UDFs) in DataStudio. You can also specify filter conditions to query specific UDFs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4556,7 +13192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取udf函数列表</para>
+        /// <para>Queries a list of user-defined functions (UDFs) in DataStudio. You can also specify filter conditions to query specific UDFs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4574,7 +13210,139 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点依赖列表</para>
+        /// <para>Queries a list of network resources of a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetworksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworksResponse
+        /// </returns>
+        public ListNetworksResponse ListNetworksWithOptions(ListNetworksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNetworks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNetworksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of network resources of a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetworksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworksResponse
+        /// </returns>
+        public async Task<ListNetworksResponse> ListNetworksWithOptionsAsync(ListNetworksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNetworks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNetworksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of network resources of a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetworksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworksResponse
+        /// </returns>
+        public ListNetworksResponse ListNetworks(ListNetworksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNetworksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of network resources of a serverless resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetworksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetworksResponse
+        /// </returns>
+        public async Task<ListNetworksResponse> ListNetworksAsync(ListNetworksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNetworksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of descendant nodes of a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4612,7 +13380,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点依赖列表</para>
+        /// <para>Queries a list of descendant nodes of a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4650,7 +13418,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点依赖列表</para>
+        /// <para>Queries a list of descendant nodes of a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4668,7 +13436,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点依赖列表</para>
+        /// <para>Queries a list of descendant nodes of a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4686,7 +13454,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点列表</para>
+        /// <para>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4724,7 +13492,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点列表</para>
+        /// <para>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4762,7 +13530,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点列表</para>
+        /// <para>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4780,7 +13548,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节点列表</para>
+        /// <para>Queries a list of nodes in DataStudio. You can also specify filter conditions to query specific nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4798,7 +13566,399 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询工作空间详情</para>
+        /// <para>Queries details about members in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProjectMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectMembersResponse
+        /// </returns>
+        public ListProjectMembersResponse ListProjectMembersWithOptions(ListProjectMembersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProjectMembersShrinkRequest request = new ListProjectMembersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "UserIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["UserIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjectMembers",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details about members in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProjectMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectMembersResponse
+        /// </returns>
+        public async Task<ListProjectMembersResponse> ListProjectMembersWithOptionsAsync(ListProjectMembersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProjectMembersShrinkRequest request = new ListProjectMembersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "UserIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["UserIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjectMembers",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectMembersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details about members in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectMembersResponse
+        /// </returns>
+        public ListProjectMembersResponse ListProjectMembers(ListProjectMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListProjectMembersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details about members in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectMembersResponse
+        /// </returns>
+        public async Task<ListProjectMembersResponse> ListProjectMembersAsync(ListProjectMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListProjectMembersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about roles in a DataWorks workspace by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProjectRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectRolesResponse
+        /// </returns>
+        public ListProjectRolesResponse ListProjectRolesWithOptions(ListProjectRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProjectRolesShrinkRequest request = new ListProjectRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Codes))
+            {
+                request.CodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Codes, "Codes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Names))
+            {
+                request.NamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Names, "Names", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodesShrink))
+            {
+                body["Codes"] = request.CodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamesShrink))
+            {
+                body["Names"] = request.NamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjectRoles",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectRolesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about roles in a DataWorks workspace by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListProjectRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectRolesResponse
+        /// </returns>
+        public async Task<ListProjectRolesResponse> ListProjectRolesWithOptionsAsync(ListProjectRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListProjectRolesShrinkRequest request = new ListProjectRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Codes))
+            {
+                request.CodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Codes, "Codes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Names))
+            {
+                request.NamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Names, "Names", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodesShrink))
+            {
+                body["Codes"] = request.CodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamesShrink))
+            {
+                body["Names"] = request.NamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjectRoles",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectRolesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about roles in a DataWorks workspace by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectRolesResponse
+        /// </returns>
+        public ListProjectRolesResponse ListProjectRoles(ListProjectRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListProjectRolesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about roles in a DataWorks workspace by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectRolesResponse
+        /// </returns>
+        public async Task<ListProjectRolesResponse> ListProjectRolesAsync(ListProjectRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListProjectRolesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of DataWorks workspaces of the tenant to which your account belongs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4890,7 +14050,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询工作空间详情</para>
+        /// <para>Queries a list of DataWorks workspaces of the tenant to which your account belongs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4982,7 +14142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询工作空间详情</para>
+        /// <para>Queries a list of DataWorks workspaces of the tenant to which your account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5000,7 +14160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询工作空间详情</para>
+        /// <para>Queries a list of DataWorks workspaces of the tenant to which your account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5018,7 +14178,147 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取资源文件</para>
+        /// <para>Queries a list of resource groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListResourceGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupsResponse
+        /// </returns>
+        public ListResourceGroupsResponse ListResourceGroupsWithOptions(ListResourceGroupsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListResourceGroupsShrinkRequest request = new ListResourceGroupsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AliyunResourceTags))
+            {
+                request.AliyunResourceTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AliyunResourceTags, "AliyunResourceTags", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceGroupTypes))
+            {
+                request.ResourceGroupTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceGroupTypes, "ResourceGroupTypes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceGroups",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of resource groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListResourceGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupsResponse
+        /// </returns>
+        public async Task<ListResourceGroupsResponse> ListResourceGroupsWithOptionsAsync(ListResourceGroupsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListResourceGroupsShrinkRequest request = new ListResourceGroupsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AliyunResourceTags))
+            {
+                request.AliyunResourceTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AliyunResourceTags, "AliyunResourceTags", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceGroupTypes))
+            {
+                request.ResourceGroupTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceGroupTypes, "ResourceGroupTypes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceGroups",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of resource groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupsResponse
+        /// </returns>
+        public ListResourceGroupsResponse ListResourceGroups(ListResourceGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListResourceGroupsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of resource groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupsResponse
+        /// </returns>
+        public async Task<ListResourceGroupsResponse> ListResourceGroupsAsync(ListResourceGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListResourceGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of file resources in DataStudio. You can also specify filter conditions to query specific file resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5056,7 +14356,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取资源文件</para>
+        /// <para>Queries a list of file resources in DataStudio. You can also specify filter conditions to query specific file resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5094,7 +14394,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取资源文件</para>
+        /// <para>Queries a list of file resources in DataStudio. You can also specify filter conditions to query specific file resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5112,7 +14412,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取资源文件</para>
+        /// <para>Queries a list of file resources in DataStudio. You can also specify filter conditions to query specific file resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5130,7 +14430,1167 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取workflowDefinition的列表</para>
+        /// <para>获取网络资源的路由列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutesResponse
+        /// </returns>
+        public ListRoutesResponse ListRoutesWithOptions(ListRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRoutes",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRoutesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网络资源的路由列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutesResponse
+        /// </returns>
+        public async Task<ListRoutesResponse> ListRoutesWithOptionsAsync(ListRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRoutes",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRoutesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网络资源的路由列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutesResponse
+        /// </returns>
+        public ListRoutesResponse ListRoutes(ListRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRoutesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网络资源的路由列表。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoutesResponse
+        /// </returns>
+        public async Task<ListRoutesResponse> ListRoutesAsync(ListRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRoutesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstanceOperationLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstanceOperationLogsResponse
+        /// </returns>
+        public ListTaskInstanceOperationLogsResponse ListTaskInstanceOperationLogsWithOptions(ListTaskInstanceOperationLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskInstanceOperationLogs",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskInstanceOperationLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstanceOperationLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstanceOperationLogsResponse
+        /// </returns>
+        public async Task<ListTaskInstanceOperationLogsResponse> ListTaskInstanceOperationLogsWithOptionsAsync(ListTaskInstanceOperationLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskInstanceOperationLogs",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskInstanceOperationLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstanceOperationLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstanceOperationLogsResponse
+        /// </returns>
+        public ListTaskInstanceOperationLogsResponse ListTaskInstanceOperationLogs(ListTaskInstanceOperationLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTaskInstanceOperationLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstanceOperationLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstanceOperationLogsResponse
+        /// </returns>
+        public async Task<ListTaskInstanceOperationLogsResponse> ListTaskInstanceOperationLogsAsync(ListTaskInstanceOperationLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTaskInstanceOperationLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances. You can also specify filter conditions to query specific instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
+        public ListTaskInstancesResponse ListTaskInstancesWithOptions(ListTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTaskInstancesShrinkRequest request = new ListTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "TaskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bizdate))
+            {
+                body["Bizdate"] = request.Bizdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                body["ProjectEnv"] = request.ProjectEnv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResource))
+            {
+                body["RuntimeResource"] = request.RuntimeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                body["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["TaskIds"] = request.TaskIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerRecurrence))
+            {
+                body["TriggerRecurrence"] = request.TriggerRecurrence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["TriggerType"] = request.TriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowInstanceId))
+            {
+                body["WorkflowInstanceId"] = request.WorkflowInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowInstanceType))
+            {
+                body["WorkflowInstanceType"] = request.WorkflowInstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances. You can also specify filter conditions to query specific instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
+        public async Task<ListTaskInstancesResponse> ListTaskInstancesWithOptionsAsync(ListTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTaskInstancesShrinkRequest request = new ListTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "TaskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bizdate))
+            {
+                body["Bizdate"] = request.Bizdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                body["ProjectEnv"] = request.ProjectEnv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResource))
+            {
+                body["RuntimeResource"] = request.RuntimeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                body["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["TaskIds"] = request.TaskIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerRecurrence))
+            {
+                body["TriggerRecurrence"] = request.TriggerRecurrence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["TriggerType"] = request.TriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowInstanceId))
+            {
+                body["WorkflowInstanceId"] = request.WorkflowInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowInstanceType))
+            {
+                body["WorkflowInstanceType"] = request.WorkflowInstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances. You can also specify filter conditions to query specific instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
+        public ListTaskInstancesResponse ListTaskInstances(ListTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of instances. You can also specify filter conditions to query specific instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskInstancesResponse
+        /// </returns>
+        public async Task<ListTaskInstancesResponse> ListTaskInstancesAsync(ListTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskOperationLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskOperationLogsResponse
+        /// </returns>
+        public ListTaskOperationLogsResponse ListTaskOperationLogsWithOptions(ListTaskOperationLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskOperationLogs",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskOperationLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskOperationLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskOperationLogsResponse
+        /// </returns>
+        public async Task<ListTaskOperationLogsResponse> ListTaskOperationLogsWithOptionsAsync(ListTaskOperationLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskOperationLogs",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskOperationLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskOperationLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskOperationLogsResponse
+        /// </returns>
+        public ListTaskOperationLogsResponse ListTaskOperationLogs(ListTaskOperationLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTaskOperationLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of operation logs of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.
+        /// You can call this operation to query only the operation logs generated within the previous 31 days.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskOperationLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskOperationLogsResponse
+        /// </returns>
+        public async Task<ListTaskOperationLogsResponse> ListTaskOperationLogsAsync(ListTaskOperationLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTaskOperationLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
+        public ListTasksResponse ListTasksWithOptions(ListTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                body["ProjectEnv"] = request.ProjectEnv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResource))
+            {
+                body["RuntimeResource"] = request.RuntimeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                body["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerRecurrence))
+            {
+                body["TriggerRecurrence"] = request.TriggerRecurrence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["TriggerType"] = request.TriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
+        public async Task<ListTasksResponse> ListTasksWithOptionsAsync(ListTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                body["ProjectEnv"] = request.ProjectEnv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeResource))
+            {
+                body["RuntimeResource"] = request.RuntimeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                body["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerRecurrence))
+            {
+                body["TriggerRecurrence"] = request.TriggerRecurrence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["TriggerType"] = request.TriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
+        public ListTasksResponse ListTasks(ListTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTasksResponse
+        /// </returns>
+        public async Task<ListTasksResponse> ListTasksAsync(ListTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTaskInstancesResponse
+        /// </returns>
+        public ListUpstreamTaskInstancesResponse ListUpstreamTaskInstancesWithOptions(ListUpstreamTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUpstreamTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUpstreamTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTaskInstancesResponse
+        /// </returns>
+        public async Task<ListUpstreamTaskInstancesResponse> ListUpstreamTaskInstancesWithOptionsAsync(ListUpstreamTaskInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUpstreamTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUpstreamTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTaskInstancesResponse
+        /// </returns>
+        public ListUpstreamTaskInstancesResponse ListUpstreamTaskInstances(ListUpstreamTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUpstreamTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor instances of an instance by page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTaskInstancesResponse
+        /// </returns>
+        public async Task<ListUpstreamTaskInstancesResponse> ListUpstreamTaskInstancesAsync(ListUpstreamTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUpstreamTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTasksResponse
+        /// </returns>
+        public ListUpstreamTasksResponse ListUpstreamTasksWithOptions(ListUpstreamTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUpstreamTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUpstreamTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTasksResponse
+        /// </returns>
+        public async Task<ListUpstreamTasksResponse> ListUpstreamTasksWithOptionsAsync(ListUpstreamTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUpstreamTasks",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUpstreamTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTasksResponse
+        /// </returns>
+        public ListUpstreamTasksResponse ListUpstreamTasks(ListUpstreamTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUpstreamTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of ancestor tasks of a task by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUpstreamTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUpstreamTasksResponse
+        /// </returns>
+        public async Task<ListUpstreamTasksResponse> ListUpstreamTasksAsync(ListUpstreamTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUpstreamTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workflows in DataStudio. You can also specify filter conditions to query specific workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5168,7 +15628,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取workflowDefinition的列表</para>
+        /// <para>Queries a list of workflows in DataStudio. You can also specify filter conditions to query specific workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5206,7 +15666,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取workflowDefinition的列表</para>
+        /// <para>Queries a list of workflows in DataStudio. You can also specify filter conditions to query specific workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5224,7 +15684,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取workflowDefinition的列表</para>
+        /// <para>Queries a list of workflows in DataStudio. You can also specify filter conditions to query specific workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5242,7 +15702,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动funciton的路径</para>
+        /// <para>Moves a user-defined function (UDF) to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5292,7 +15752,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动funciton的路径</para>
+        /// <para>Moves a user-defined function (UDF) to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5342,7 +15802,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动funciton的路径</para>
+        /// <para>Moves a user-defined function (UDF) to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5360,7 +15820,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动funciton的路径</para>
+        /// <para>Moves a user-defined function (UDF) to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5378,7 +15838,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动节点路径</para>
+        /// <para>Moves a node to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5428,7 +15888,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动节点路径</para>
+        /// <para>Moves a node to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5478,7 +15938,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动节点路径</para>
+        /// <para>Moves a node to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5496,7 +15956,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动节点路径</para>
+        /// <para>Moves a node to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5514,7 +15974,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源文件路径</para>
+        /// <para>Moves a file resource to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5564,7 +16024,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源文件路径</para>
+        /// <para>Moves a file resource to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5614,7 +16074,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源文件路径</para>
+        /// <para>Moves a file resource to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5632,7 +16092,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源文件路径</para>
+        /// <para>Moves a file resource to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5650,7 +16110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动工作流的路径</para>
+        /// <para>Moves a workflow to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5700,7 +16160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动工作流的路径</para>
+        /// <para>Moves a workflow to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5750,7 +16210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动工作流的路径</para>
+        /// <para>Moves a workflow to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5768,7 +16228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动工作流的路径</para>
+        /// <para>Moves a workflow to a path in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5786,7 +16246,179 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对function重命名</para>
+        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveTaskInstanceDependenciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTaskInstanceDependenciesResponse
+        /// </returns>
+        public RemoveTaskInstanceDependenciesResponse RemoveTaskInstanceDependenciesWithOptions(RemoveTaskInstanceDependenciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveTaskInstanceDependenciesShrinkRequest request = new RemoveTaskInstanceDependenciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpstreamTaskInstanceIds))
+            {
+                request.UpstreamTaskInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpstreamTaskInstanceIds, "UpstreamTaskInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamTaskInstanceIdsShrink))
+            {
+                body["UpstreamTaskInstanceIds"] = request.UpstreamTaskInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTaskInstanceDependencies",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTaskInstanceDependenciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveTaskInstanceDependenciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTaskInstanceDependenciesResponse
+        /// </returns>
+        public async Task<RemoveTaskInstanceDependenciesResponse> RemoveTaskInstanceDependenciesWithOptionsAsync(RemoveTaskInstanceDependenciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveTaskInstanceDependenciesShrinkRequest request = new RemoveTaskInstanceDependenciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpstreamTaskInstanceIds))
+            {
+                request.UpstreamTaskInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpstreamTaskInstanceIds, "UpstreamTaskInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamTaskInstanceIdsShrink))
+            {
+                body["UpstreamTaskInstanceIds"] = request.UpstreamTaskInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTaskInstanceDependencies",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTaskInstanceDependenciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveTaskInstanceDependenciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTaskInstanceDependenciesResponse
+        /// </returns>
+        public RemoveTaskInstanceDependenciesResponse RemoveTaskInstanceDependencies(RemoveTaskInstanceDependenciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveTaskInstanceDependenciesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveTaskInstanceDependenciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTaskInstanceDependenciesResponse
+        /// </returns>
+        public async Task<RemoveTaskInstanceDependenciesResponse> RemoveTaskInstanceDependenciesAsync(RemoveTaskInstanceDependenciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveTaskInstanceDependenciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renames a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5836,7 +16468,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对function重命名</para>
+        /// <para>Renames a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5886,7 +16518,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对function重命名</para>
+        /// <para>Renames a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5904,7 +16536,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对function重命名</para>
+        /// <para>Renames a user-defined function (UDF) in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5922,7 +16554,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名节点</para>
+        /// <para>Renames a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5972,7 +16604,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名节点</para>
+        /// <para>Renames a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6022,7 +16654,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名节点</para>
+        /// <para>Renames a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6040,7 +16672,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名节点</para>
+        /// <para>Renames a node in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6058,7 +16690,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源文件重命名</para>
+        /// <para>Renames a file resource in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6108,7 +16740,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源文件重命名</para>
+        /// <para>Renames a file resource in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6158,7 +16790,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源文件重命名</para>
+        /// <para>Renames a file resource in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6176,7 +16808,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源文件重命名</para>
+        /// <para>Renames a file resource in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6194,7 +16826,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名工作流</para>
+        /// <para>Renames a workflow in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6244,7 +16876,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名工作流</para>
+        /// <para>Renames a workflow in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6294,7 +16926,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名工作流</para>
+        /// <para>Renames a workflow in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6312,7 +16944,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重命名工作流</para>
+        /// <para>Renames a workflow in DataStudio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6328,10 +16960,603 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return await RenameWorkflowDefinitionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RerunTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunTaskInstancesResponse
+        /// </returns>
+        public RerunTaskInstancesResponse RerunTaskInstancesWithOptions(RerunTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RerunTaskInstancesShrinkRequest request = new RerunTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RerunTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RerunTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RerunTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunTaskInstancesResponse
+        /// </returns>
+        public async Task<RerunTaskInstancesResponse> RerunTaskInstancesWithOptionsAsync(RerunTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RerunTaskInstancesShrinkRequest request = new RerunTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RerunTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RerunTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RerunTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunTaskInstancesResponse
+        /// </returns>
+        public RerunTaskInstancesResponse RerunTaskInstances(RerunTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RerunTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RerunTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunTaskInstancesResponse
+        /// </returns>
+        public async Task<RerunTaskInstancesResponse> RerunTaskInstancesAsync(RerunTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RerunTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ResumeTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTaskInstancesResponse
+        /// </returns>
+        public ResumeTaskInstancesResponse ResumeTaskInstancesWithOptions(ResumeTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ResumeTaskInstancesShrinkRequest request = new ResumeTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ResumeTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTaskInstancesResponse
+        /// </returns>
+        public async Task<ResumeTaskInstancesResponse> ResumeTaskInstancesWithOptionsAsync(ResumeTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ResumeTaskInstancesShrinkRequest request = new ResumeTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTaskInstancesResponse
+        /// </returns>
+        public ResumeTaskInstancesResponse ResumeTaskInstances(ResumeTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResumeTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeTaskInstancesResponse
+        /// </returns>
+        public async Task<ResumeTaskInstancesResponse> ResumeTaskInstancesAsync(ResumeTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResumeTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动数据集成任务</para>
+        /// <para>Revokes roles that are assigned to a member in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RevokeMemberProjectRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemberProjectRolesResponse
+        /// </returns>
+        public RevokeMemberProjectRolesResponse RevokeMemberProjectRolesWithOptions(RevokeMemberProjectRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RevokeMemberProjectRolesShrinkRequest request = new RevokeMemberProjectRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeMemberProjectRoles",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeMemberProjectRolesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes roles that are assigned to a member in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RevokeMemberProjectRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemberProjectRolesResponse
+        /// </returns>
+        public async Task<RevokeMemberProjectRolesResponse> RevokeMemberProjectRolesWithOptionsAsync(RevokeMemberProjectRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RevokeMemberProjectRolesShrinkRequest request = new RevokeMemberProjectRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "RoleCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["RoleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeMemberProjectRoles",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeMemberProjectRolesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes roles that are assigned to a member in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeMemberProjectRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemberProjectRolesResponse
+        /// </returns>
+        public RevokeMemberProjectRolesResponse RevokeMemberProjectRoles(RevokeMemberProjectRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RevokeMemberProjectRolesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes roles that are assigned to a member in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RevokeMemberProjectRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeMemberProjectRolesResponse
+        /// </returns>
+        public async Task<RevokeMemberProjectRolesResponse> RevokeMemberProjectRolesAsync(RevokeMemberProjectRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RevokeMemberProjectRolesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SetSuccessTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuccessTaskInstancesResponse
+        /// </returns>
+        public SetSuccessTaskInstancesResponse SetSuccessTaskInstancesWithOptions(SetSuccessTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetSuccessTaskInstancesShrinkRequest request = new SetSuccessTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSuccessTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSuccessTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SetSuccessTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuccessTaskInstancesResponse
+        /// </returns>
+        public async Task<SetSuccessTaskInstancesResponse> SetSuccessTaskInstancesWithOptionsAsync(SetSuccessTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetSuccessTaskInstancesShrinkRequest request = new SetSuccessTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSuccessTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSuccessTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSuccessTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuccessTaskInstancesResponse
+        /// </returns>
+        public SetSuccessTaskInstancesResponse SetSuccessTaskInstances(SetSuccessTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetSuccessTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSuccessTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSuccessTaskInstancesResponse
+        /// </returns>
+        public async Task<SetSuccessTaskInstancesResponse> SetSuccessTaskInstancesAsync(SetSuccessTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetSuccessTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a new-version synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartDIJobRequest
@@ -6374,8 +17599,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动数据集成任务</para>
+        /// <para>Starts a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartDIJobRequest
@@ -6418,8 +17648,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动数据集成任务</para>
+        /// <para>Starts a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartDIJobRequest
@@ -6436,8 +17671,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动数据集成任务</para>
+        /// <para>Starts a new-version synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartDIJobRequest
@@ -6454,8 +17694,1249 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集成任务</para>
+        /// <para>Stops a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDIJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDIJobResponse
+        /// </returns>
+        public StopDIJobResponse StopDIJobWithOptions(StopDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDIJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDIJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDIJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDIJobResponse
+        /// </returns>
+        public async Task<StopDIJobResponse> StopDIJobWithOptionsAsync(StopDIJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopDIJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopDIJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDIJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDIJobResponse
+        /// </returns>
+        public StopDIJobResponse StopDIJob(StopDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopDIJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopDIJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopDIJobResponse
+        /// </returns>
+        public async Task<StopDIJobResponse> StopDIJobAsync(StopDIJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopDIJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// StopTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopTaskInstancesResponse
+        /// </returns>
+        public StopTaskInstancesResponse StopTaskInstancesWithOptions(StopTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StopTaskInstancesShrinkRequest request = new StopTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// StopTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopTaskInstancesResponse
+        /// </returns>
+        public async Task<StopTaskInstancesResponse> StopTaskInstancesWithOptionsAsync(StopTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StopTaskInstancesShrinkRequest request = new StopTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopTaskInstancesResponse
+        /// </returns>
+        public StopTaskInstancesResponse StopTaskInstances(StopTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopTaskInstancesResponse
+        /// </returns>
+        public async Task<StopTaskInstancesResponse> StopTaskInstancesAsync(StopTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SuspendTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTaskInstancesResponse
+        /// </returns>
+        public SuspendTaskInstancesResponse SuspendTaskInstancesWithOptions(SuspendTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SuspendTaskInstancesShrinkRequest request = new SuspendTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SuspendTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SuspendTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SuspendTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTaskInstancesResponse
+        /// </returns>
+        public async Task<SuspendTaskInstancesResponse> SuspendTaskInstancesWithOptionsAsync(SuspendTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SuspendTaskInstancesShrinkRequest request = new SuspendTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SuspendTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SuspendTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTaskInstancesResponse
+        /// </returns>
+        public SuspendTaskInstancesResponse SuspendTaskInstances(SuspendTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SuspendTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SuspendTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SuspendTaskInstancesResponse
+        /// </returns>
+        public async Task<SuspendTaskInstancesResponse> SuspendTaskInstancesAsync(SuspendTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SuspendTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产绑定标签</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TagDataAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagDataAssetsResponse
+        /// </returns>
+        public TagDataAssetsResponse TagDataAssetsWithOptions(TagDataAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TagDataAssetsShrinkRequest request = new TagDataAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataAssetIds))
+            {
+                request.DataAssetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataAssetIds, "DataAssetIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTraceEnabled))
+            {
+                query["AutoTraceEnabled"] = request.AutoTraceEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetIdsShrink))
+            {
+                query["DataAssetIds"] = request.DataAssetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetType))
+            {
+                query["DataAssetType"] = request.DataAssetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagDataAssets",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagDataAssetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产绑定标签</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TagDataAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagDataAssetsResponse
+        /// </returns>
+        public async Task<TagDataAssetsResponse> TagDataAssetsWithOptionsAsync(TagDataAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TagDataAssetsShrinkRequest request = new TagDataAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataAssetIds))
+            {
+                request.DataAssetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataAssetIds, "DataAssetIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTraceEnabled))
+            {
+                query["AutoTraceEnabled"] = request.AutoTraceEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetIdsShrink))
+            {
+                query["DataAssetIds"] = request.DataAssetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetType))
+            {
+                query["DataAssetType"] = request.DataAssetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagDataAssets",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagDataAssetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产绑定标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagDataAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagDataAssetsResponse
+        /// </returns>
+        public TagDataAssetsResponse TagDataAssets(TagDataAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TagDataAssetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产绑定标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagDataAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagDataAssetsResponse
+        /// </returns>
+        public async Task<TagDataAssetsResponse> TagDataAssetsAsync(TagDataAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TagDataAssetsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers a task to run by using an HTTP Trigger node at a specified time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TriggerSchedulerTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerSchedulerTaskInstanceResponse
+        /// </returns>
+        public TriggerSchedulerTaskInstanceResponse TriggerSchedulerTaskInstanceWithOptions(TriggerSchedulerTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerTime))
+            {
+                body["TriggerTime"] = request.TriggerTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerSchedulerTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerSchedulerTaskInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers a task to run by using an HTTP Trigger node at a specified time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TriggerSchedulerTaskInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerSchedulerTaskInstanceResponse
+        /// </returns>
+        public async Task<TriggerSchedulerTaskInstanceResponse> TriggerSchedulerTaskInstanceWithOptionsAsync(TriggerSchedulerTaskInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerTime))
+            {
+                body["TriggerTime"] = request.TriggerTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerSchedulerTaskInstance",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerSchedulerTaskInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers a task to run by using an HTTP Trigger node at a specified time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TriggerSchedulerTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerSchedulerTaskInstanceResponse
+        /// </returns>
+        public TriggerSchedulerTaskInstanceResponse TriggerSchedulerTaskInstance(TriggerSchedulerTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TriggerSchedulerTaskInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers a task to run by using an HTTP Trigger node at a specified time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TriggerSchedulerTaskInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerSchedulerTaskInstanceResponse
+        /// </returns>
+        public async Task<TriggerSchedulerTaskInstanceResponse> TriggerSchedulerTaskInstanceAsync(TriggerSchedulerTaskInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TriggerSchedulerTaskInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产解绑标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UnTagDataAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnTagDataAssetsResponse
+        /// </returns>
+        public UnTagDataAssetsResponse UnTagDataAssetsWithOptions(UnTagDataAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UnTagDataAssetsShrinkRequest request = new UnTagDataAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataAssetIds))
+            {
+                request.DataAssetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataAssetIds, "DataAssetIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetIdsShrink))
+            {
+                query["DataAssetIds"] = request.DataAssetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetType))
+            {
+                query["DataAssetType"] = request.DataAssetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnTagDataAssets",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnTagDataAssetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产解绑标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UnTagDataAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnTagDataAssetsResponse
+        /// </returns>
+        public async Task<UnTagDataAssetsResponse> UnTagDataAssetsWithOptionsAsync(UnTagDataAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UnTagDataAssetsShrinkRequest request = new UnTagDataAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataAssetIds))
+            {
+                request.DataAssetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataAssetIds, "DataAssetIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetIdsShrink))
+            {
+                query["DataAssetIds"] = request.DataAssetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataAssetType))
+            {
+                query["DataAssetType"] = request.DataAssetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnTagDataAssets",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnTagDataAssetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产解绑标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnTagDataAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnTagDataAssetsResponse
+        /// </returns>
+        public UnTagDataAssetsResponse UnTagDataAssets(UnTagDataAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnTagDataAssetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为资产解绑标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnTagDataAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnTagDataAssetsResponse
+        /// </returns>
+        public async Task<UnTagDataAssetsResponse> UnTagDataAssetsAsync(UnTagDataAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnTagDataAssetsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom alert monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRuleResponse
+        /// </returns>
+        public UpdateAlertRuleResponse UpdateAlertRuleWithOptions(UpdateAlertRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAlertRuleShrinkRequest request = new UpdateAlertRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerCondition))
+            {
+                request.TriggerConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerCondition, "TriggerCondition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionShrink))
+            {
+                query["TriggerCondition"] = request.TriggerConditionShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlertRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom alert monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAlertRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRuleResponse
+        /// </returns>
+        public async Task<UpdateAlertRuleResponse> UpdateAlertRuleWithOptionsAsync(UpdateAlertRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAlertRuleShrinkRequest request = new UpdateAlertRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notification))
+            {
+                request.NotificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notification, "Notification", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerCondition))
+            {
+                request.TriggerConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerCondition, "TriggerCondition", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationShrink))
+            {
+                query["Notification"] = request.NotificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerConditionShrink))
+            {
+                query["TriggerCondition"] = request.TriggerConditionShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlertRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlertRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom alert monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRuleResponse
+        /// </returns>
+        public UpdateAlertRuleResponse UpdateAlertRule(UpdateAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAlertRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom alert monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRuleResponse
+        /// </returns>
+        public async Task<UpdateAlertRuleResponse> UpdateAlertRuleAsync(UpdateAlertRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAlertRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDIAlarmRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDIAlarmRuleResponse
+        /// </returns>
+        public UpdateDIAlarmRuleResponse UpdateDIAlarmRuleWithOptions(UpdateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDIAlarmRuleShrinkRequest request = new UpdateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDIAlarmRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDIAlarmRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDIAlarmRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDIAlarmRuleResponse
+        /// </returns>
+        public async Task<UpdateDIAlarmRuleResponse> UpdateDIAlarmRuleWithOptionsAsync(UpdateDIAlarmRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDIAlarmRuleShrinkRequest request = new UpdateDIAlarmRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NotificationSettings))
+            {
+                request.NotificationSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NotificationSettings, "NotificationSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TriggerConditions))
+            {
+                request.TriggerConditionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConditions, "TriggerConditions", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDIAlarmRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDIAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDIAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDIAlarmRuleResponse
+        /// </returns>
+        public UpdateDIAlarmRuleResponse UpdateDIAlarmRule(UpdateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDIAlarmRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert rule configured for a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDIAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDIAlarmRuleResponse
+        /// </returns>
+        public async Task<UpdateDIAlarmRuleResponse> UpdateDIAlarmRuleAsync(UpdateDIAlarmRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDIAlarmRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a synchronization task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateDIJobRequest
@@ -6510,8 +18991,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集成任务</para>
+        /// <para>Updates a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateDIJobRequest
@@ -6566,8 +19052,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集成任务</para>
+        /// <para>Updates a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDIJobRequest
@@ -6584,8 +19075,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集成任务</para>
+        /// <para>Updates a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDIJobRequest
@@ -6602,8 +19098,871 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>更新标签</para>
         /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataAssetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAssetTagResponse
+        /// </returns>
+        public UpdateDataAssetTagResponse UpdateDataAssetTagWithOptions(UpdateDataAssetTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataAssetTagShrinkRequest request = new UpdateDataAssetTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Managers))
+            {
+                request.ManagersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Managers, "Managers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Values))
+            {
+                request.ValuesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Values, "Values", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagersShrink))
+            {
+                query["Managers"] = request.ManagersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValuesShrink))
+            {
+                query["Values"] = request.ValuesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataAssetTag",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataAssetTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新标签</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataAssetTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAssetTagResponse
+        /// </returns>
+        public async Task<UpdateDataAssetTagResponse> UpdateDataAssetTagWithOptionsAsync(UpdateDataAssetTagRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataAssetTagShrinkRequest request = new UpdateDataAssetTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Managers))
+            {
+                request.ManagersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Managers, "Managers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Values))
+            {
+                request.ValuesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Values, "Values", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagersShrink))
+            {
+                query["Managers"] = request.ManagersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValuesShrink))
+            {
+                query["Values"] = request.ValuesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataAssetTag",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataAssetTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAssetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAssetTagResponse
+        /// </returns>
+        public UpdateDataAssetTagResponse UpdateDataAssetTag(UpdateDataAssetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataAssetTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAssetTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAssetTagResponse
+        /// </returns>
+        public async Task<UpdateDataAssetTagResponse> UpdateDataAssetTagAsync(UpdateDataAssetTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataAssetTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a monitor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public UpdateDataQualityEvaluationTaskResponse UpdateDataQualityEvaluationTaskWithOptions(UpdateDataQualityEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataQualityEvaluationTaskShrinkRequest request = new UpdateDataQualityEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRules))
+            {
+                request.DataQualityRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRules, "DataQualityRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Hooks))
+            {
+                request.HooksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Hooks, "Hooks", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notifications))
+            {
+                request.NotificationsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notifications, "Notifications", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRulesShrink))
+            {
+                body["DataQualityRules"] = request.DataQualityRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HooksShrink))
+            {
+                body["Hooks"] = request.HooksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationsShrink))
+            {
+                body["Notifications"] = request.NotificationsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConf))
+            {
+                body["RuntimeConf"] = request.RuntimeConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataQualityEvaluationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a monitor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<UpdateDataQualityEvaluationTaskResponse> UpdateDataQualityEvaluationTaskWithOptionsAsync(UpdateDataQualityEvaluationTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataQualityEvaluationTaskShrinkRequest request = new UpdateDataQualityEvaluationTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataQualityRules))
+            {
+                request.DataQualityRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataQualityRules, "DataQualityRules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Hooks))
+            {
+                request.HooksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Hooks, "Hooks", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Notifications))
+            {
+                request.NotificationsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Notifications, "Notifications", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Trigger))
+            {
+                request.TriggerShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Trigger, "Trigger", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityRulesShrink))
+            {
+                body["DataQualityRules"] = request.DataQualityRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HooksShrink))
+            {
+                body["Hooks"] = request.HooksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationsShrink))
+            {
+                body["Notifications"] = request.NotificationsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConf))
+            {
+                body["RuntimeConf"] = request.RuntimeConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerShrink))
+            {
+                body["Trigger"] = request.TriggerShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataQualityEvaluationTask",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataQualityEvaluationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a monitor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public UpdateDataQualityEvaluationTaskResponse UpdateDataQualityEvaluationTask(UpdateDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataQualityEvaluationTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a monitor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is supported in all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataQualityEvaluationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityEvaluationTaskResponse
+        /// </returns>
+        public async Task<UpdateDataQualityEvaluationTaskResponse> UpdateDataQualityEvaluationTaskAsync(UpdateDataQualityEvaluationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataQualityEvaluationTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleResponse
+        /// </returns>
+        public UpdateDataQualityRuleResponse UpdateDataQualityRuleWithOptions(UpdateDataQualityRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataQualityRuleShrinkRequest request = new UpdateDataQualityRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorHandlers))
+            {
+                request.ErrorHandlersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorHandlers, "ErrorHandlers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorHandlersShrink))
+            {
+                body["ErrorHandlers"] = request.ErrorHandlersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                body["Severity"] = request.Severity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataQualityRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataQualityRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleResponse
+        /// </returns>
+        public async Task<UpdateDataQualityRuleResponse> UpdateDataQualityRuleWithOptionsAsync(UpdateDataQualityRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataQualityRuleShrinkRequest request = new UpdateDataQualityRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorHandlers))
+            {
+                request.ErrorHandlersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorHandlers, "ErrorHandlers", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Target))
+            {
+                request.TargetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Target, "Target", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorHandlersShrink))
+            {
+                body["ErrorHandlers"] = request.ErrorHandlersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Severity))
+            {
+                body["Severity"] = request.Severity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetShrink))
+            {
+                body["Target"] = request.TargetShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataQualityRule",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleResponse
+        /// </returns>
+        public UpdateDataQualityRuleResponse UpdateDataQualityRule(UpdateDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataQualityRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataQualityRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleResponse
+        /// </returns>
+        public async Task<UpdateDataQualityRuleResponse> UpdateDataQualityRuleAsync(UpdateDataQualityRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataQualityRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleTemplateResponse
+        /// </returns>
+        public UpdateDataQualityRuleTemplateResponse UpdateDataQualityRuleTemplateWithOptions(UpdateDataQualityRuleTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataQualityRuleTemplateShrinkRequest request = new UpdateDataQualityRuleTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryPath))
+            {
+                body["DirectoryPath"] = request.DirectoryPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataQualityRuleTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDataQualityRuleTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<UpdateDataQualityRuleTemplateResponse> UpdateDataQualityRuleTemplateWithOptionsAsync(UpdateDataQualityRuleTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataQualityRuleTemplateShrinkRequest request = new UpdateDataQualityRuleTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CheckingConfig))
+            {
+                request.CheckingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CheckingConfig, "CheckingConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SamplingConfig))
+            {
+                request.SamplingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SamplingConfig, "SamplingConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckingConfigShrink))
+            {
+                body["CheckingConfig"] = request.CheckingConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryPath))
+            {
+                body["DirectoryPath"] = request.DirectoryPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamplingConfigShrink))
+            {
+                body["SamplingConfig"] = request.SamplingConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataQualityRuleTemplate",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataQualityRuleTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleTemplateResponse
+        /// </returns>
+        public UpdateDataQualityRuleTemplateResponse UpdateDataQualityRuleTemplate(UpdateDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataQualityRuleTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a data quality monitoring rule template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataQualityRuleTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataQualityRuleTemplateResponse
+        /// </returns>
+        public async Task<UpdateDataQualityRuleTemplateResponse> UpdateDataQualityRuleTemplateAsync(UpdateDataQualityRuleTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataQualityRuleTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a data source by ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
@@ -6660,8 +20019,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Modifies a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
@@ -6718,8 +20088,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Modifies a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
@@ -6736,8 +20117,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Modifies a data source by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Tenant Administrator, Workspace Administrator, Workspace Owner, and O\&amp;M</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataSourceRequest
@@ -6754,7 +20146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新udf函数</para>
+        /// <para>Updates the basic information about a user-defined function (UDF) in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6804,7 +20196,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新udf函数</para>
+        /// <para>Updates the basic information about a user-defined function (UDF) in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6854,7 +20246,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新udf函数</para>
+        /// <para>Updates the basic information about a user-defined function (UDF) in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6872,7 +20264,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新udf函数</para>
+        /// <para>Updates the basic information about a user-defined function (UDF) in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6890,7 +20282,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点</para>
+        /// <para>Updates the basic information about a node in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6940,7 +20332,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点</para>
+        /// <para>Updates the basic information about a node in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6990,7 +20382,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点</para>
+        /// <para>Updates the basic information about a node in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7008,7 +20400,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点</para>
+        /// <para>Updates the basic information about a node in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7026,7 +20418,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7092,7 +20484,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7158,7 +20550,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7176,7 +20568,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a DataWorks workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7194,7 +20586,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源文件</para>
+        /// <para>Updates the basic information about a file resource in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7244,7 +20636,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源文件</para>
+        /// <para>Updates the basic information about a file resource in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7294,7 +20686,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源文件</para>
+        /// <para>Updates the basic information about a file resource in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7312,7 +20704,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源文件</para>
+        /// <para>Updates the basic information about a file resource in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7330,7 +20722,479 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates basic information about a resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceGroupResponse
+        /// </returns>
+        public UpdateResourceGroupResponse UpdateResourceGroupWithOptions(UpdateResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceGroupId))
+            {
+                body["AliyunResourceGroupId"] = request.AliyunResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["Remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates basic information about a resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceGroupResponse
+        /// </returns>
+        public async Task<UpdateResourceGroupResponse> UpdateResourceGroupWithOptionsAsync(UpdateResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunResourceGroupId))
+            {
+                body["AliyunResourceGroupId"] = request.AliyunResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["Remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceGroup",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates basic information about a resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceGroupResponse
+        /// </returns>
+        public UpdateResourceGroupResponse UpdateResourceGroup(UpdateResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates basic information about a resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceGroupResponse
+        /// </returns>
+        public async Task<UpdateResourceGroupResponse> UpdateResourceGroupAsync(UpdateResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a route.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteResponse
+        /// </returns>
+        public UpdateRouteResponse UpdateRouteWithOptions(UpdateRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidr))
+            {
+                body["DestinationCidr"] = request.DestinationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a route.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteResponse
+        /// </returns>
+        public async Task<UpdateRouteResponse> UpdateRouteWithOptionsAsync(UpdateRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidr))
+            {
+                body["DestinationCidr"] = request.DestinationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRoute",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a route.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteResponse
+        /// </returns>
+        public UpdateRouteResponse UpdateRoute(UpdateRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRouteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a route.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteResponse
+        /// </returns>
+        public async Task<UpdateRouteResponse> UpdateRouteAsync(UpdateRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskInstancesResponse
+        /// </returns>
+        public UpdateTaskInstancesResponse UpdateTaskInstancesWithOptions(UpdateTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTaskInstancesShrinkRequest request = new UpdateTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskInstances))
+            {
+                request.TaskInstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskInstances, "TaskInstances", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstancesShrink))
+            {
+                body["TaskInstances"] = request.TaskInstancesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTaskInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateTaskInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskInstancesResponse
+        /// </returns>
+        public async Task<UpdateTaskInstancesResponse> UpdateTaskInstancesWithOptionsAsync(UpdateTaskInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTaskInstancesShrinkRequest request = new UpdateTaskInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskInstances))
+            {
+                request.TaskInstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskInstances, "TaskInstances", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskInstancesShrink))
+            {
+                body["TaskInstances"] = request.TaskInstancesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTaskInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTaskInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskInstancesResponse
+        /// </returns>
+        public UpdateTaskInstancesResponse UpdateTaskInstances(UpdateTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTaskInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies properties configured for multiple instances at a time. The properties include the priority, resource group for scheduling, and data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateTaskInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskInstancesResponse
+        /// </returns>
+        public async Task<UpdateTaskInstancesResponse> UpdateTaskInstancesAsync(UpdateTaskInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information about a workflow in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7380,7 +21244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates the basic information about a workflow in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7430,7 +21294,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates the basic information about a workflow in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7448,7 +21312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates the basic information about a workflow in DataStudio. This API operation performs an incremental update. The update information is described by using FlowSpec.</para>
         /// </summary>
         /// 
         /// <param name="request">

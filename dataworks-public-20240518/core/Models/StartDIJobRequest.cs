@@ -9,15 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StartDIJobRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <para>This parameter is deprecated. Use the Id parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
-        public string DIJobId { get; set; }
+        [Obsolete]
+        public long? DIJobId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -27,28 +30,48 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public bool? ForceToRerun { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
         [NameInMap("RealtimeStartSettings")]
         [Validation(Required=false)]
         public StartDIJobRequestRealtimeStartSettings RealtimeStartSettings { get; set; }
         public class StartDIJobRequestRealtimeStartSettings : TeaModel {
+            /// <term><b>Obsolete</b></term>
             [NameInMap("FailoverSettings")]
             [Validation(Required=false)]
+            [Obsolete]
             public StartDIJobRequestRealtimeStartSettingsFailoverSettings FailoverSettings { get; set; }
             public class StartDIJobRequestRealtimeStartSettingsFailoverSettings : TeaModel {
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public long? Interval { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
+                /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
                 /// </summary>
                 [NameInMap("UpperLimit")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public long? UpperLimit { get; set; }
 
             }

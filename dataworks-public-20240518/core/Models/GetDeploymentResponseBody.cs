@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDeploymentResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the process.</para>
+        /// </summary>
         [NameInMap("Pipeline")]
         [Validation(Required=false)]
         public GetDeploymentResponseBodyPipeline Pipeline { get; set; }
         public class GetDeploymentResponseBodyPipeline : TeaModel {
             /// <summary>
-            /// <para>发布包创建时间戳</para>
+            /// <para>The time when the process was created. This value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724984066000</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>创建人</para>
+            /// <para>The creator of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>137946317766XXXX</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>发布流程Id</para>
+            /// <para>The ID of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7ef0634-20ec-4a7c-a214-54020f91XXXX</para>
@@ -43,12 +46,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>The error message returned when the process fails.</para>
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>修改时间</para>
+            /// <para>The time when the process was modified. This value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724984066000</para>
@@ -58,22 +64,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The DataWorks workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>56160</para>
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
-            public string ProjectId { get; set; }
+            public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>步骤详情</para>
+            /// <para>The information about stages in the process.</para>
             /// </summary>
             [NameInMap("Stages")]
             [Validation(Required=false)]
             public List<GetDeploymentResponseBodyPipelineStages> Stages { get; set; }
             public class GetDeploymentResponseBodyPipelineStages : TeaModel {
                 /// <summary>
-                /// <para>阶段代号</para>
+                /// <para>The code of the stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEV_CHECK</para>
@@ -83,32 +91,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>阶段描述</para>
+                /// <para>The description of the stage.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The details of the stage.</para>
+                /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Detail { get; set; }
 
                 /// <summary>
-                /// <para>阶段信息</para>
+                /// <para>The error message returned for the stage.</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>阶段名称</para>
+                /// <para>The name of the stage.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>阶段状态</para>
+                /// <para>The status of the stage.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Init</description></item>
+                /// <item><description>Running</description></item>
+                /// <item><description>Success</description></item>
+                /// <item><description>Fail</description></item>
+                /// <item><description>Termination</description></item>
+                /// <item><description>Cancel</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INIT</para>
@@ -118,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>步骤</para>
+                /// <para>The step number of the stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -128,7 +148,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Step { get; set; }
 
                 /// <summary>
-                /// <para>阶段类型</para>
+                /// <para>The type of the stage.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Deploy</description></item>
+                /// <item><description>Check</description></item>
+                /// <item><description>Offline</description></item>
+                /// <item><description>Build</description></item>
+                /// <item><description>Delete</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BUILD</para>
@@ -140,7 +168,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>发布流程状态</para>
+            /// <para>The status of the process.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Init</description></item>
+            /// <item><description>Running</description></item>
+            /// <item><description>Success</description></item>
+            /// <item><description>Fail</description></item>
+            /// <item><description>Termination</description></item>
+            /// <item><description>Cancel</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -152,6 +189,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>08468352-032C-5262-AEDC-68C9FA05XXXX</para>
         /// </summary>

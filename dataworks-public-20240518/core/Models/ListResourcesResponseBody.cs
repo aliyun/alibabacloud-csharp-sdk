@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListResourcesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListResourcesResponseBodyPagingInfo : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The file resources.</para>
+            /// </summary>
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public List<ListResourcesResponseBodyPagingInfoResources> Resources { get; set; }
             public class ListResourcesResponseBodyPagingInfoResources : TeaModel {
                 /// <summary>
+                /// <para>The time when the file resource was created. This value is a UNIX timestamp.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
                 /// </summary>
@@ -42,14 +54,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>函数注册到的数据源信息</para>
+                /// <para>The information about the data source.</para>
                 /// </summary>
                 [NameInMap("DataSource")]
                 [Validation(Required=false)]
                 public ListResourcesResponseBodyPagingInfoResourcesDataSource DataSource { get; set; }
                 public class ListResourcesResponseBodyPagingInfoResourcesDataSource : TeaModel {
                     /// <summary>
-                    /// <para>数据源名称</para>
+                    /// <para>The name of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps_first</para>
@@ -59,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>数据源类型</para>
+                    /// <para>The type of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps</para>
@@ -71,17 +83,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>代表资源组的资源属性字段</para>
+                /// <para>The ID of the file resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>631478864897630XXXX</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public string Id { get; set; }
+                public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>资源文件的最近修改时间</para>
+                /// <para>The times when the file resource was last modified. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
@@ -91,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>代表资源名称的资源属性字段</para>
+                /// <para>The name of the file resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>math.py</para>
@@ -101,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>资源文件的责任人</para>
+                /// <para>The owner of the file resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -111,34 +123,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>资源文件的项目id</para>
+                /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>344247</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
-                public string ProjectId { get; set; }
+                public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>工作流的脚本信息</para>
+                /// <para>The script information.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
                 public ListResourcesResponseBodyPagingInfoResourcesScript Script { get; set; }
                 public class ListResourcesResponseBodyPagingInfoResourcesScript : TeaModel {
                     /// <summary>
-                    /// <para>工作流脚本的id</para>
+                    /// <para>The script ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123348864897630XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public string Id { get; set; }
+                    public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>工作流的脚本路径</para>
+                    /// <para>The script path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>root/demo</para>
@@ -148,14 +160,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>脚本的运行时信息</para>
+                    /// <para>The runtime.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListResourcesResponseBodyPagingInfoResourcesScriptRuntime Runtime { get; set; }
                     public class ListResourcesResponseBodyPagingInfoResourcesScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>脚本所属类型</para>
+                        /// <para>The command used to distinguish file resource types.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ODPS_PYTHON</para>
@@ -169,7 +181,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>文件目标存储路径</para>
+                /// <para>The path of the source of the file resource. If the SourecType parameter is set to Local, this parameter is left empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</para>
@@ -179,7 +191,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SourcePath { get; set; }
 
                 /// <summary>
-                /// <para>文件资源来源存储类型</para>
+                /// <para>The storage type of the source of the file resource.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Local</description></item>
+                /// <item><description>Oss</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>local</para>
@@ -189,7 +206,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>文件来源路径</para>
+                /// <para>The storage path of the destination of the file resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</para>
@@ -199,7 +216,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string TargetPath { get; set; }
 
                 /// <summary>
-                /// <para>文件目标存储类型</para>
+                /// <para>The storage type of the destination of the file resource.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Gateway</description></item>
+                /// <item><description>Oss</description></item>
+                /// <item><description>Hdfs</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -209,7 +232,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string TargetType { get; set; }
 
                 /// <summary>
-                /// <para>资源类型</para>
+                /// <para>The type of the file resource.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Python</description></item>
+                /// <item><description>Jar</description></item>
+                /// <item><description>Archive</description></item>
+                /// <item><description>File</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>jar</para>
@@ -221,6 +251,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>131</para>
             /// </summary>
@@ -231,6 +263,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>99EBE7CF-69C0-5089-BE3E-79563C31XXXX</para>
         /// </summary>
