@@ -1,3 +1,8 @@
+2025-01-14 Version: 1.11.1
+- Update API CreateWmEmbedTask: update param CsvControl.
+- Update API CreateWmExtractTask: update param CsvControl.
+
+
 2025-01-14 Version: 1.11.0
 - Support API AttachPolicy2ApprovalProcess.
 - Support API CreateApprovalProcess.

@@ -13,17 +13,33 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public CreateWmEmbedTaskRequestCsvControl CsvControl { get; set; }
         public class CreateWmEmbedTaskRequestCsvControl : TeaModel {
+            [NameInMap("EmbedBitsNumberInEachTime")]
+            [Validation(Required=false)]
+            public long? EmbedBitsNumberInEachTime { get; set; }
+
             [NameInMap("EmbedColumn")]
             [Validation(Required=false)]
             public long? EmbedColumn { get; set; }
+
+            [NameInMap("EmbedDensity")]
+            [Validation(Required=false)]
+            public string EmbedDensity { get; set; }
 
             [NameInMap("EmbedPrecision")]
             [Validation(Required=false)]
             public long? EmbedPrecision { get; set; }
 
+            [NameInMap("EmbedTimePosition")]
+            [Validation(Required=false)]
+            public string EmbedTimePosition { get; set; }
+
             [NameInMap("Method")]
             [Validation(Required=false)]
             public string Method { get; set; }
+
+            [NameInMap("TimeFormat")]
+            [Validation(Required=false)]
+            public string TimeFormat { get; set; }
 
         }
 
