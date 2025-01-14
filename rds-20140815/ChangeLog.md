@@ -1,3 +1,7 @@
+2025-01-14 Version: 10.0.2
+- Update API CheckServiceLinkedRole: update response param.
+
+
 2025-01-09 Version: 10.0.1
 - Update API CreateRCNodePool: update param SystemDisk.
 - Update API DescribeRCImageList: add param InstanceType.

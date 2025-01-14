@@ -21,7 +21,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable native replication mode. Valid values: ON and OFF.</para>
+        /// <para>Specifies whether to enable the native replication feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ON</b></description></item>
+        /// <item><description><b>OFF</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

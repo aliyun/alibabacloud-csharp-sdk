@@ -56675,8 +56675,20 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
+        /// <para>Enables or disables the native replication feature of ApsaraDB RDS for MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The RDS instance runs MySQL 5.7.</description></item>
+        /// <item><description>The RDS instance runs RDS Basic Edition.</description></item>
+        /// <item><description>The RDS instance uses the pay-as-you-go or subscription billing method.</description></item>
+        /// <item><description>The RDS instance runs a minor engine version of 20240930 or later.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/2856530.html">Enable the native replication feature</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDBInstanceReplicationSwitchRequest
@@ -56733,8 +56745,20 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
+        /// <para>Enables or disables the native replication feature of ApsaraDB RDS for MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The RDS instance runs MySQL 5.7.</description></item>
+        /// <item><description>The RDS instance runs RDS Basic Edition.</description></item>
+        /// <item><description>The RDS instance uses the pay-as-you-go or subscription billing method.</description></item>
+        /// <item><description>The RDS instance runs a minor engine version of 20240930 or later.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/2856530.html">Enable the native replication feature</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDBInstanceReplicationSwitchRequest
@@ -56791,8 +56815,20 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
+        /// <para>Enables or disables the native replication feature of ApsaraDB RDS for MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The RDS instance runs MySQL 5.7.</description></item>
+        /// <item><description>The RDS instance runs RDS Basic Edition.</description></item>
+        /// <item><description>The RDS instance uses the pay-as-you-go or subscription billing method.</description></item>
+        /// <item><description>The RDS instance runs a minor engine version of 20240930 or later.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/2856530.html">Enable the native replication feature</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDBInstanceReplicationSwitchRequest
@@ -56809,8 +56845,20 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for ApsaraDB RDS.</para>
+        /// <para>Enables or disables the native replication feature of ApsaraDB RDS for MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you want to enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The RDS instance runs MySQL 5.7.</description></item>
+        /// <item><description>The RDS instance runs RDS Basic Edition.</description></item>
+        /// <item><description>The RDS instance uses the pay-as-you-go or subscription billing method.</description></item>
+        /// <item><description>The RDS instance runs a minor engine version of 20240930 or later.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/2856530.html">Enable the native replication feature</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDBInstanceReplicationSwitchRequest
