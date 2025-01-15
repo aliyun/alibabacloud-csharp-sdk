@@ -166,6 +166,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? RemainTime { get; set; }
 
+            [NameInMap("RestorePointId")]
+            [Validation(Required=false)]
+            public string RestorePointId { get; set; }
+
+            [NameInMap("RestorePointName")]
+            [Validation(Required=false)]
+            public string RestorePointName { get; set; }
+
             /// <summary>
             /// <para>The snapshot ID.</para>
             /// 

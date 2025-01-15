@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("DataDiskCategory")]
+            [Validation(Required=false)]
+            public string DataDiskCategory { get; set; }
+
             /// <summary>
             /// <para>The description of the cloud computer template.</para>
             /// 
@@ -401,6 +405,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("StockState")]
             [Validation(Required=false)]
             public string StockState { get; set; }
+
+            [NameInMap("SystemDiskCategory")]
+            [Validation(Required=false)]
+            public string SystemDiskCategory { get; set; }
 
             /// <summary>
             /// <para>Indicates whether disk encryption is enabled.</para>
