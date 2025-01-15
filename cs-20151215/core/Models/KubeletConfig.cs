@@ -35,6 +35,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("containerLogMaxWorkers")]
+        [Validation(Required=false)]
+        public int? ContainerLogMaxWorkers { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10s</para>
+        /// </summary>
+        [NameInMap("containerLogMonitorInterval")]
+        [Validation(Required=false)]
+        public string ContainerLogMonitorInterval { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("cpuCFSQuota")]
