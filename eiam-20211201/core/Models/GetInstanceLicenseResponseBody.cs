@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceLicenseResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Returned result.</para>
+        /// </summary>
         [NameInMap("License")]
         [Validation(Required=false)]
         public GetInstanceLicenseResponseBodyLicense License { get; set; }
         public class GetInstanceLicenseResponseBodyLicense : TeaModel {
             /// <summary>
-            /// <para>License 的版本型号,free-免费版，trail-试用版，enterprise-企业版</para>
+            /// <para>Edition of the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>free</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Edition { get; set; }
 
             /// <summary>
-            /// <para>License 的有效期终止日期</para>
+            /// <para>End date of the validity period of the License, timestamp</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723996800000</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>License 的付费类型，prepay-预付费，postpay-后付费</para>
+            /// <para>Payment type of the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>prepay</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseChargeType { get; set; }
 
             /// <summary>
-            /// <para>License 详细配置JSON</para>
+            /// <para>Detailed configuration JSON string of the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseConfigJson { get; set; }
 
             /// <summary>
-            /// <para>License 的创建时间</para>
+            /// <para>Creation time of the License, timestamp</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720509699000</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LicenseCreateTime { get; set; }
 
             /// <summary>
-            /// <para>License 的唯一标识</para>
+            /// <para>Unique identifier of the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>license_1234xxxx</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseId { get; set; }
 
             /// <summary>
-            /// <para>License 的状态，valid-有效，expired-已过期，released-已释放</para>
+            /// <para>Status of the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>valid</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseStatus { get; set; }
 
             /// <summary>
-            /// <para>License 的购买渠道</para>
+            /// <para>Purchase channel of the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PurchaseChannel { get; set; }
 
             /// <summary>
-            /// <para>License 对应的外部商品唯一标识</para>
+            /// <para>Unique external product identifier corresponding to the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-cn-xxxxx</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PurchaseInstanceId { get; set; }
 
             /// <summary>
-            /// <para>License 的有效期开始日期</para>
+            /// <para>Start date of the validity period of the License, timestamp</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720509699000</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>License 的用户配额</para>
+            /// <para>User quota of the License</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -126,6 +129,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

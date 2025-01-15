@@ -7663,8 +7663,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例当前生效的 License 信息</para>
+        /// <para>Query the currently effective License information of the instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceLicenseRequest
@@ -7705,8 +7710,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例当前生效的 License 信息</para>
+        /// <para>Query the currently effective License information of the instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceLicenseRequest
@@ -7747,8 +7757,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例当前生效的 License 信息</para>
+        /// <para>Query the currently effective License information of the instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceLicenseRequest
@@ -7765,8 +7780,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例当前生效的 License 信息</para>
+        /// <para>Query the currently effective License information of the instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceLicenseRequest

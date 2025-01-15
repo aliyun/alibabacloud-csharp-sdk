@@ -286,6 +286,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public string AppSecret { get; set; }
 
+                [NameInMap("EncryptKey")]
+                [Validation(Required=false)]
+                public string EncryptKey { get; set; }
+
                 /// <summary>
                 /// <para>IDaaS EIAM 飞书企业编码</para>
                 /// 
@@ -295,6 +299,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [NameInMap("EnterpriseNumber")]
                 [Validation(Required=false)]
                 public string EnterpriseNumber { get; set; }
+
+                [NameInMap("VerificationToken")]
+                [Validation(Required=false)]
+                public string VerificationToken { get; set; }
 
             }
 

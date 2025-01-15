@@ -95,6 +95,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string AppSecret { get; set; }
 
+            [NameInMap("EncryptKey")]
+            [Validation(Required=false)]
+            public string EncryptKey { get; set; }
+
+            [NameInMap("VerificationToken")]
+            [Validation(Required=false)]
+            public string VerificationToken { get; set; }
+
         }
 
         /// <summary>

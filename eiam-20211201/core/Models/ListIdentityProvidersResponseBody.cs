@@ -148,6 +148,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LogoUrl { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>disabled</para>
+            /// </summary>
+            [NameInMap("PeriodicSyncStatus")]
+            [Validation(Required=false)]
+            public string PeriodicSyncStatus { get; set; }
+
+            /// <summary>
             /// <para>IDaaS EIAM 是否支持UD同步</para>
             /// 
             /// <b>Example:</b>
