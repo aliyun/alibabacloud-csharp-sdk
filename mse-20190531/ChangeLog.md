@@ -1,3 +1,7 @@
+2025-01-15 Version: 6.16.2
+- Update API QueryAllSwimmingLane: update response param.
+
+
 2025-01-13 Version: 6.16.1
 - Update API AddGatewayRoute: update param EnableWaf.
 - Update API CreateFlowRule: add param LimitApp.

@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public int? CanaryModel { get; set; }
 
+                [NameInMap("Condition")]
+                [Validation(Required=false)]
+                public string Condition { get; set; }
+
                 [NameInMap("Conditions")]
                 [Validation(Required=false)]
                 public List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> Conditions { get; set; }
@@ -192,6 +196,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
             }
+
+            [NameInMap("GatewaySwimmingLaneRouteJson")]
+            [Validation(Required=false)]
+            public string GatewaySwimmingLaneRouteJson { get; set; }
 
             [NameInMap("GroupId")]
             [Validation(Required=false)]
