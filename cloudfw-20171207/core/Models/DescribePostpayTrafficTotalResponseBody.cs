@@ -79,6 +79,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? TotalNatTraffic { get; set; }
 
+        [NameInMap("TotalSdlBillTraffic")]
+        [Validation(Required=false)]
+        public long? TotalSdlBillTraffic { get; set; }
+
+        [NameInMap("TotalSdlFreeTraffic")]
+        [Validation(Required=false)]
+        public long? TotalSdlFreeTraffic { get; set; }
+
         /// <summary>
         /// <para>The total volume of traffic. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic. Unit: bytes.</para>
         /// 
