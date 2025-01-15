@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems> Items { get; set; }
             public class DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems : TeaModel {
+                [NameInMap("AfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? AfterDiscountAmount { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>202210</para>
@@ -116,6 +120,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("CostUnitCode")]
                 [Validation(Required=false)]
                 public string CostUnitCode { get; set; }
+
+                [NameInMap("CurrentAmortizationAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? CurrentAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -261,6 +269,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public double? PretaxGrossAmount { get; set; }
 
+                [NameInMap("PreviouslyAmortizedAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? PreviouslyAmortizedAfterDiscountAmount { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -352,6 +364,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
+
+                [NameInMap("RemainingAmortizationAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? RemainingAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

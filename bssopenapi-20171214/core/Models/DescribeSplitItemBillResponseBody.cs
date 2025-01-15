@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
                 [NameInMap("AfterDiscountAmount")]
                 [Validation(Required=false)]
-                public string AfterDiscountAmount { get; set; }
+                public float? AfterDiscountAmount { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the account to which the bill belongs.</para>

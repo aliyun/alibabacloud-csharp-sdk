@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public List<DescribeProductAmortizedCostByConsumePeriodResponseBodyDataItems> Items { get; set; }
             public class DescribeProductAmortizedCostByConsumePeriodResponseBodyDataItems : TeaModel {
+                [NameInMap("AfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? AfterDiscountAmount { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>202210</para>
@@ -104,6 +108,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("ConsumePeriod")]
                 [Validation(Required=false)]
                 public string ConsumePeriod { get; set; }
+
+                [NameInMap("CurrentAmortizationAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? CurrentAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -225,6 +233,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public double? PretaxGrossAmount { get; set; }
 
+                [NameInMap("PreviouslyAmortizedAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? PreviouslyAmortizedAfterDiscountAmount { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -312,6 +324,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("ProductName")]
                 [Validation(Required=false)]
                 public string ProductName { get; set; }
+
+                [NameInMap("RemainingAmortizationAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? RemainingAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

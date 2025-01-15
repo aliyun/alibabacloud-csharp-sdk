@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems> Items { get; set; }
             public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems : TeaModel {
+                [NameInMap("AfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? AfterDiscountAmount { get; set; }
+
                 /// <summary>
                 /// <para>The allocation month. Format: YYYYMM.</para>
                 /// 
@@ -156,6 +160,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("CostUnitCode")]
                 [Validation(Required=false)]
                 public string CostUnitCode { get; set; }
+
+                [NameInMap("CurrentAmortizationAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? CurrentAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
                 /// <para>The amount deducted by using vouchers and allocated to the current allocation month.</para>
@@ -337,6 +345,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public double? PretaxGrossAmount { get; set; }
 
+                [NameInMap("PreviouslyAmortizedAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? PreviouslyAmortizedAfterDiscountAmount { get; set; }
+
                 /// <summary>
                 /// <para>The amount deducted by using vouchers and allocated before the current allocation month.</para>
                 /// 
@@ -466,6 +478,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
+
+                [NameInMap("RemainingAmortizationAfterDiscountAmount")]
+                [Validation(Required=false)]
+                public double? RemainingAmortizationAfterDiscountAmount { get; set; }
 
                 /// <summary>
                 /// <para>The amount deducted by using vouchers and to be allocated to one or more future allocation months.</para>
