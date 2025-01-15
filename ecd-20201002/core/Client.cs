@@ -3249,6 +3249,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["SnapshotId"] = request.SnapshotId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDesktop))
+            {
+                query["StopDesktop"] = request.StopDesktop;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3310,6 +3314,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
                 query["SnapshotId"] = request.SnapshotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDesktop))
+            {
+                query["StopDesktop"] = request.StopDesktop;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
