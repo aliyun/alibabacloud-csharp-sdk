@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveAggregateConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The results of the operations.</para>
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public ActiveAggregateConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class ActiveAggregateConfigRulesResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// <para>The returned result.</para>
+            /// <para>The result information about the operation.</para>
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
@@ -34,11 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// <para>The error code returned.</para>
-                /// <list type="bullet">
-                /// <item><description>If the rule is enabled, no error code is returned.</description></item>
-                /// <item><description>If the rule fails to be enabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</description></item>
-                /// </list>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ConfigRuleNotExists</para>
@@ -50,8 +46,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>Indicates whether the request was successful. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The request was successful.</description></item>
-                /// <item><description>false: The request failed.</description></item>
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

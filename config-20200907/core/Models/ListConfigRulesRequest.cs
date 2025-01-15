@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListConfigRulesRequest : TeaModel {
+        /// <summary>
+        /// <para>The compliance package ID.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</para>
+        /// <remarks>
+        /// <para> You must configure either the <c>CompliancePackId</c> or <c>ConfigRuleId</c> parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cp-fe416457e0d90022****</para>
+        /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }
@@ -112,6 +122,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListConfigRulesRequestTag> Tag { get; set; }
+        public class ListConfigRulesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

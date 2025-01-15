@@ -177,10 +177,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the regions excluded from the compliance evaluations performed by the compliance package. Separate multiple region IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("ExcludeRegionIdsScope")]
         [Validation(Required=false)]
         public string ExcludeRegionIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-bnczc6r7rml****</para>
+        /// </summary>
         [NameInMap("ExcludeResourceGroupIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceGroupIdsScope { get; set; }
@@ -195,14 +207,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The tags that are excluded.</para>
+        /// </summary>
         [NameInMap("ExcludeTagsScope")]
         [Validation(Required=false)]
         public List<CreateAggregateCompliancePackRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
         public class CreateAggregateCompliancePackRequestExcludeTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }
@@ -229,12 +256,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceGroupIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-5cmbowstbkss9ta03****</para>
+        /// </summary>
         [NameInMap("ResourceIdsScope")]
         [Validation(Required=false)]
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the compliance package. Valid values:</para>
+        /// <para>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: high</description></item>
         /// <item><description>2 (default): medium</description></item>
@@ -271,14 +304,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
 
+        /// <summary>
+        /// <para>The tag scope.</para>
+        /// </summary>
         [NameInMap("TagsScope")]
         [Validation(Required=false)]
         public List<CreateAggregateCompliancePackRequestTagsScope> TagsScope { get; set; }
         public class CreateAggregateCompliancePackRequestTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tagKey1</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tagValue1</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }

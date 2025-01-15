@@ -8,21 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class ListAggregateConfigRulesRequest : TeaModel {
-        /// <summary>
-        /// <para>The ID of the account group.</para>
-        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ca-f632626622af0079****</para>
-        /// </summary>
-        [NameInMap("AggregatorId")]
-        [Validation(Required=false)]
-        public string AggregatorId { get; set; }
-
+    public class ListConfigRulesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The compliance package ID.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</para>
+        /// <remarks>
+        /// <para> You must configure either the <c>CompliancePackId</c> or <c>ConfigRuleId</c> parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cp-fe416457e0d90022****</para>
@@ -32,12 +24,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// <para>The compliance evaluation result. Valid values:</para>
+        /// <para>The compliance evaluation result of the rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>COMPLIANT: The resources are evaluated as compliant.</description></item>
         /// <item><description>NON_COMPLIANT: The resources are evaluated as non-compliant.</description></item>
         /// <item><description>NOT_APPLICABLE: The rule does not apply to the resources.</description></item>
-        /// <item><description>INSUFFICIENT_DATA: No data is available.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: No resource data is available.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,9 +52,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ACTIVE: The rule is being used to monitor resource configurations.</description></item>
+        /// <item><description>ACTIVE: The rule is enabled.</description></item>
         /// <item><description>DELETING: The rule is being deleted.</description></item>
-        /// <item><description>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</description></item>
+        /// <item><description>EVALUATING: The rule is being used to evaluate resource configurations.</description></item>
         /// <item><description>INACTIVE: The rule is disabled.</description></item>
         /// </list>
         /// 
@@ -74,7 +66,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleState { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for queries.</para>
+        /// <para>The query keyword.</para>
         /// <para>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +78,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1</para>
+        /// <para>Page numbers start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -97,7 +89,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100. Minimum value: 1. Default value: 10</para>
+        /// <para>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -107,7 +99,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Resource type for the rule to evaluate.</para>
+        /// <para>The type of the resources to be evaluated based on the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>
@@ -117,7 +109,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
+        /// <para>The risk level of the resources that are not compliant with the rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: high</description></item>
         /// <item><description>2: medium</description></item>
@@ -130,6 +122,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
 
     }
 

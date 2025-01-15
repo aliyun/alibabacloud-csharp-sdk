@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The name of the compliance package.</para>
         /// <para>For more information about how to obtain the name of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The name of the compliance package.</para>
         /// </summary>
         [NameInMap("CompliancePackName")]
         [Validation(Required=false)]
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public class UpdateCompliancePackRequestConfigRules : TeaModel {
             /// <summary>
             /// <para>The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</para>
-            /// <para>You need to only configure the <c>ManagedRuleIdentifier</c> or <c>ConfigRuleId</c> parameter. If you configure both parameters, the value of the <c>ConfigRuleId</c> parameter takes precedence. You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</para>
+            /// <para>You need to only specify one of the <c>ManagedRuleIdentifier</c> and <c>ConfigRuleId</c> properties. If you specify both the properties, the value of the <c>ConfigRuleId</c> property takes precedence. You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cr-e918626622af000f****</para>
@@ -60,21 +63,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// <para>The rule name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The rule name.</para>
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
             public string ConfigRuleName { get; set; }
 
             /// <summary>
-            /// <para>The input parameters of the rule.</para>
+            /// <para>The details of the input parameter of the rule.</para>
             /// </summary>
             [NameInMap("ConfigRuleParameters")]
             [Validation(Required=false)]
             public List<UpdateCompliancePackRequestConfigRulesConfigRuleParameters> ConfigRuleParameters { get; set; }
             public class UpdateCompliancePackRequestConfigRulesConfigRuleParameters : TeaModel {
                 /// <summary>
-                /// <para>The name of the input parameter.</para>
-                /// <para>You must configure the <c>ParameterName</c> and <c>ParameterValue</c> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
+                /// <para>The name of the managed rule parameter.</para>
+                /// <para>You must specify both <c>ParameterName</c> and <c>ParameterValue</c> or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bandwidth</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// <para>The value of the input parameter.</para>
+                /// <para>The value of the managed rule parameter.</para>
                 /// <para>You must configure the <c>ParameterName</c> and <c>ParameterValue</c> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
                 /// 
                 /// <b>Example:</b>
@@ -97,7 +103,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The description of the event rule.</para>
+            /// <para>The rule description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The rule description.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -117,9 +126,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: high</description></item>
-            /// <item><description>2: medium</description></item>
-            /// <item><description>3: low</description></item>
+            /// <item><description>1: high risk level</description></item>
+            /// <item><description>2: medium risk level</description></item>
+            /// <item><description>3: low risk level</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,15 +142,30 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The description of the compliance package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the compliance package.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("ExcludeRegionIdsScope")]
         [Validation(Required=false)]
         public string ExcludeRegionIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-bnczc6r7rml****</para>
+        /// </summary>
         [NameInMap("ExcludeResourceGroupIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceGroupIdsScope { get; set; }
@@ -156,14 +180,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>ExcludeTagsScope</para>
+        /// </summary>
         [NameInMap("ExcludeTagsScope")]
         [Validation(Required=false)]
         public List<UpdateCompliancePackRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
         public class UpdateCompliancePackRequestExcludeTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key-2</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value-2</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }
@@ -190,6 +229,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceGroupIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-5cmbowstbkss9ta03****</para>
+        /// </summary>
         [NameInMap("ResourceIdsScope")]
         [Validation(Required=false)]
         public string ResourceIdsScope { get; set; }
@@ -197,9 +242,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: high</description></item>
-        /// <item><description>2: medium</description></item>
-        /// <item><description>3: low</description></item>
+        /// <item><description>1: high risk level</description></item>
+        /// <item><description>2: medium risk level</description></item>
+        /// <item><description>3: low risk level</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -232,14 +277,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
 
+        /// <summary>
+        /// <para>TagsScope</para>
+        /// </summary>
         [NameInMap("TagsScope")]
         [Validation(Required=false)]
         public List<UpdateCompliancePackRequestTagsScope> TagsScope { get; set; }
         public class UpdateCompliancePackRequestTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key-1</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value-1</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }

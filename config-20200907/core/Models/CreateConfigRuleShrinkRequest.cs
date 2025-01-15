@@ -254,6 +254,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string SourceOwner { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
+
         /// <summary>
         /// <para>The logical relationship among the tag keys if you specify multiple tag keys for <c>TagKeyScope</c>. For example, if you set <c>TagKeyScope</c> to <c>ECS,OSS</c> and set TagKeyLogicScope to <c>AND</c>, the rule applies to resources with both the <c>ECS</c> and <c>OSS</c> tag keys. Valid values:</para>
         /// <list type="bullet">

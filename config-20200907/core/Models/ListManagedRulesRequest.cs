@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Page start from page 1. Default value: 1.</para>
+        /// <para>The page number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

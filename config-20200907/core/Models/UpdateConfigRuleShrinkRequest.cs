@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The name of the rule.</para>
         /// <para>For more information about how to query the name of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The name of the rule.</para>
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
@@ -58,15 +61,30 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The description of the rule. You can enter up to 500 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the rule.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("ExcludeRegionIdsScope")]
         [Validation(Required=false)]
         public string ExcludeRegionIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-bnczc6r7rml****</para>
+        /// </summary>
         [NameInMap("ExcludeResourceGroupIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceGroupIdsScope { get; set; }
@@ -84,14 +102,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The scope of the tag that is excluded.</para>
+        /// </summary>
         [NameInMap("ExcludeTagsScope")]
         [Validation(Required=false)]
         public List<UpdateConfigRuleShrinkRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
         public class UpdateConfigRuleShrinkRequestExcludeTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key-2</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value-2</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }
@@ -99,6 +132,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
+        /// <para>Optional. The extended content of the resource. This parameter can be used together with the MaximumExecutionFrequency parameter when the MaximumExecutionFrequency parameter is set to TwentyFour_Hours to specify the trigger time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;fixedHour&quot;:&quot;12&quot;}</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -117,16 +155,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string InputParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The intervals at which the rule is triggered. Valid values:</para>
+        /// <para>The interval at which the rule is triggered. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>One_Hour: 1 hour.</description></item>
-        /// <item><description>Three_Hours: 3 hours.</description></item>
-        /// <item><description>Six_Hours: 6 hours.</description></item>
-        /// <item><description>Twelve_Hours: 12 hours.</description></item>
-        /// <item><description>TwentyFour_Hours (default): 24 hours.</description></item>
+        /// <item><description>One_Hour</description></item>
+        /// <item><description>Three_Hours</description></item>
+        /// <item><description>Six_Hours</description></item>
+        /// <item><description>Twelve_Hours</description></item>
+        /// <item><description>TwentyFour_Hours (default)</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if you set the <c>ConfigRuleTriggerTypes</c> parameter to <c>ScheduledNotification</c>.</para>
+        /// <para> This parameter is required if the <c>ConfigRuleTriggerTypes</c> parameter is set to <c>ScheduledNotification</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -162,6 +200,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceGroupIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-5cmbowstbkss9ta03****</para>
+        /// </summary>
         [NameInMap("ResourceIdsScope")]
         [Validation(Required=false)]
         public string ResourceIdsScope { get; set; }
@@ -177,11 +221,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypesScopeShrink { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the resources that are not compliant with the rule. Valid values:</para>
+        /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: high risk level</description></item>
-        /// <item><description>2: medium risk level</description></item>
-        /// <item><description>3: low risk level</description></item>
+        /// <item><description>1: high</description></item>
+        /// <item><description>2: medium</description></item>
+        /// <item><description>3: low</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -190,6 +234,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
 
         /// <summary>
         /// <para>The logical relationship among the tag keys if you specify multiple tag keys for the <c>TagKeyScope</c> parameter. For example, if you set the <c>TagKeyScope</c> parameter to <c>ECS,OSS</c> and the TagKeyLogicScope parameter to <c>AND</c>, the rule applies to resources with both the <c>ECS</c> and <c>OSS</c> tag keys. Valid values:</para>
@@ -231,14 +279,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
 
+        /// <summary>
+        /// <para>The tag scope.</para>
+        /// </summary>
         [NameInMap("TagsScope")]
         [Validation(Required=false)]
         public List<UpdateConfigRuleShrinkRequestTagsScope> TagsScope { get; set; }
         public class UpdateConfigRuleShrinkRequestTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key-1</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value-1</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }

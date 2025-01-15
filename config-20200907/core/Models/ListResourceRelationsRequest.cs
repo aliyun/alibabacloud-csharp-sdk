@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListResourceRelationsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request. Valid values: 1 to 1000.</para>
+        /// <para>The maximum number of entries to return in a request. Valid values: 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

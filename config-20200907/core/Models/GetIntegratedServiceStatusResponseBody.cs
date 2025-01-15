@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetIntegratedServiceStatusResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The type of the event that is integrated across accounts. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NonCompliantNotification: non-compliance event</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NonCompliantNotification</para>
+        /// </summary>
         [NameInMap("AggregatorDeliveryDataType")]
         [Validation(Required=false)]
         public string AggregatorDeliveryDataType { get; set; }

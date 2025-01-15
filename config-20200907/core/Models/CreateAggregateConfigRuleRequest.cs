@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregateConfigRuleRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the member accounts to which the rule applies, which means that the resources within the member accounts are evaluated based on the rule. Separate multiple member account IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>115748125982****</para>
+        /// </summary>
         [NameInMap("AccountIdsScope")]
         [Validation(Required=false)]
         public string AccountIdsScope { get; set; }
@@ -38,6 +44,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The rule name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss-default-encryption-kms</para>
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
@@ -60,6 +69,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The description of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>description of rule</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -96,10 +108,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ExcludeFolderIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("ExcludeRegionIdsScope")]
         [Validation(Required=false)]
         public string ExcludeRegionIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-bnczc6r7rml****</para>
+        /// </summary>
         [NameInMap("ExcludeResourceGroupIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceGroupIdsScope { get; set; }
@@ -117,20 +141,41 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The scope of the tag that is excluded.</para>
+        /// </summary>
         [NameInMap("ExcludeTagsScope")]
         [Validation(Required=false)]
         public List<CreateAggregateConfigRuleRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
         public class CreateAggregateConfigRuleRequestExcludeTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The tag key of the resource that you want to exclude.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key-2</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The tag value of the resource that you want to exclude.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value-2</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;fixedHour&quot;:&quot;12&quot;}</para>
+        /// </summary>
         [NameInMap("ExtendContent")]
         [Validation(Required=false)]
         public string ExtendContent { get; set; }
@@ -166,14 +211,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The interval at which the rule is triggered. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>One_Hour: 1 hour.</description></item>
-        /// <item><description>Three_Hours: 3 hours.</description></item>
-        /// <item><description>Six_Hours: 6 hours.</description></item>
-        /// <item><description>Twelve_Hours: 12 hours.</description></item>
-        /// <item><description>TwentyFour_Hours (default): 24 hours.</description></item>
+        /// <item><description>One_Hour</description></item>
+        /// <item><description>Three_Hours</description></item>
+        /// <item><description>Six_Hours</description></item>
+        /// <item><description>Twelve_Hours</description></item>
+        /// <item><description>TwentyFour_Hours (default)</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if the <c>ConfigRuleTriggerTypes</c> parameter is set to <c>ScheduledNotification</c>.</para>
+        /// <para> This parameter is required if the <c>ConfigRuleTriggerTypes</c> parameter is set to <c>ScheduledNotification</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -209,6 +254,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceGroupIdsScope { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-5cmbowstbkss9ta03****</para>
+        /// </summary>
         [NameInMap("ResourceIdsScope")]
         [Validation(Required=false)]
         public string ResourceIdsScope { get; set; }
@@ -225,11 +276,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<string> ResourceTypesScope { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the resources that are not compliant with the rule. Valid values:</para>
+        /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: high risk level</description></item>
-        /// <item><description>2: medium risk level</description></item>
-        /// <item><description>3: low risk level</description></item>
+        /// <item><description>1: high</description></item>
+        /// <item><description>2: medium</description></item>
+        /// <item><description>3: low</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -259,8 +310,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALIYUN: managed rule</description></item>
-        /// <item><description>CUSTOM_FC: custom rule</description></item>
+        /// <item><description>ALIYUN: a managed rule.</description></item>
+        /// <item><description>CUSTOM_FC: a custom rule.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -311,14 +362,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
 
+        /// <summary>
+        /// <para>The tag scope.</para>
+        /// </summary>
         [NameInMap("TagsScope")]
         [Validation(Required=false)]
         public List<CreateAggregateConfigRuleRequestTagsScope> TagsScope { get; set; }
         public class CreateAggregateConfigRuleRequestTagsScope : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key-1</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value-1</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }

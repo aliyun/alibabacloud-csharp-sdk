@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the rule.</para>
+        /// <para>The rules.</para>
         /// </summary>
         [NameInMap("ConfigRule")]
         [Validation(Required=false)]
@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public long? AccountId { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the members to which the rule applies. Separate multiple member IDs with commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120886317861****</para>
+            /// </summary>
             [NameInMap("AccountIdsScope")]
             [Validation(Required=false)]
             public string AccountIdsScope { get; set; }
@@ -180,6 +186,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// <para>The name of the monitoring rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The name of the rule.</para>
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
@@ -254,6 +263,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
                 /// <summary>
                 /// <para>The name of the compliance package.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The name of the compliance package.</para>
                 /// </summary>
                 [NameInMap("CompliancePackName")]
                 [Validation(Required=false)]
@@ -303,6 +315,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// <para>The description of the managed rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The description of the managed rule.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -337,10 +352,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string ExcludeFolderIdsScope { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("ExcludeRegionIdsScope")]
             [Validation(Required=false)]
             public string ExcludeRegionIdsScope { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekzdibsjjc****</para>
+            /// </summary>
             [NameInMap("ExcludeResourceGroupIdsScope")]
             [Validation(Required=false)]
             public string ExcludeResourceGroupIdsScope { get; set; }
@@ -355,20 +382,41 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string ExcludeResourceIdsScope { get; set; }
 
+            /// <summary>
+            /// <para>The scope of the tag that is excluded.</para>
+            /// </summary>
             [NameInMap("ExcludeTagsScope")]
             [Validation(Required=false)]
             public List<GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope> ExcludeTagsScope { get; set; }
             public class GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope : TeaModel {
+                /// <summary>
+                /// <para>The key of the tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-2</para>
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// <para>The value of the tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value-2</para>
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;fixedHour&quot;:&quot;12&quot;}</para>
+            /// </summary>
             [NameInMap("ExtendContent")]
             [Validation(Required=false)]
             public string ExtendContent { get; set; }
@@ -418,6 +466,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
                 /// <summary>
                 /// <para>The description of the managed rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The description of the managed rule.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -442,6 +493,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
                 /// <summary>
                 /// <para>The name of the managed rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ram-user-mfa-check</para>
                 /// </summary>
                 [NameInMap("ManagedRuleName")]
                 [Validation(Required=false)]
@@ -559,6 +613,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string ResourceGroupIdsScope { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eip-8vbf3x310fn56ijfd****</para>
+            /// </summary>
             [NameInMap("ResourceIdsScope")]
             [Validation(Required=false)]
             public string ResourceIdsScope { get; set; }
@@ -712,14 +772,43 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string TagValueScope { get; set; }
 
-            [NameInMap("TagsScope")]
+            [NameInMap("Tags")]
             [Validation(Required=false)]
-            public List<GetAggregateConfigRuleResponseBodyConfigRuleTagsScope> TagsScope { get; set; }
-            public class GetAggregateConfigRuleResponseBodyConfigRuleTagsScope : TeaModel {
+            public List<GetAggregateConfigRuleResponseBodyConfigRuleTags> Tags { get; set; }
+            public class GetAggregateConfigRuleResponseBodyConfigRuleTags : TeaModel {
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The tag scope.</para>
+            /// </summary>
+            [NameInMap("TagsScope")]
+            [Validation(Required=false)]
+            public List<GetAggregateConfigRuleResponseBodyConfigRuleTagsScope> TagsScope { get; set; }
+            public class GetAggregateConfigRuleResponseBodyConfigRuleTagsScope : TeaModel {
+                /// <summary>
+                /// <para>The key of the tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-1</para>
+                /// </summary>
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                /// <summary>
+                /// <para>The value of the tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value-1</para>
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

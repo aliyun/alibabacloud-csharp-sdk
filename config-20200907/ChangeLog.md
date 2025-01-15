@@ -1,3 +1,15 @@
+2025-01-15 Version: 2.4.9
+- Update API CreateConfigRule: add param Tag.
+- Update API GetAggregateConfigRule: add param Tag.
+- Update API GetAggregateConfigRule: update response param.
+- Update API GetConfigRule: add param Tag.
+- Update API GetConfigRule: update response param.
+- Update API ListAggregateConfigRules: update param Keyword.
+- Update API ListConfigRules: add param Tag.
+- Update API ListConfigRules: update param Keyword.
+- Update API UpdateConfigRule: add param Tag.
+
+
 2024-12-18 Version: 2.4.8
 - Update API ActiveAggregateConfigRules: add param CompliancePackId.
 - Update API ActiveAggregateConfigRules: update param ConfigRuleIds.

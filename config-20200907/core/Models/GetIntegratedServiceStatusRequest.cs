@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <list type="bullet">
         /// <item><description>eventbridge: EventBridge</description></item>
         /// <item><description>cms: CloudMonitor</description></item>
-        /// <item><description>bpstudio: Cloud Architect Design Tools</description></item>
+        /// <item><description>bpstudio: Cloud Architect Design Tools (CADT)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

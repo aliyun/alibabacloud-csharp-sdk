@@ -49,10 +49,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example on how to enable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -107,10 +104,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example on how to enable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -165,10 +159,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example on how to enable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -191,10 +182,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example on how to enable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3128,6 +3116,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3225,6 +3222,7 @@ namespace AlibabaCloud.SDK.Config20200907
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3276,6 +3274,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3373,6 +3380,7 @@ namespace AlibabaCloud.SDK.Config20200907
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -8046,7 +8054,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组规则详情</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8054,7 +8062,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <para>This example shows how to query the details of the <c>cr-7f7d626622af0041****</c> rule in the <c>ca-7f00626622af0041****</c> account group.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetAggregateConfigRuleRequest
         /// </param>
         /// <param name="runtime">
@@ -8064,9 +8072,15 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <returns>
         /// GetAggregateConfigRuleResponse
         /// </returns>
-        public GetAggregateConfigRuleResponse GetAggregateConfigRuleWithOptions(GetAggregateConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetAggregateConfigRuleResponse GetAggregateConfigRuleWithOptions(GetAggregateConfigRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAggregateConfigRuleShrinkRequest request = new GetAggregateConfigRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
             {
@@ -8075,6 +8089,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
             {
                 query["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8097,7 +8115,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组规则详情</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8105,7 +8123,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <para>This example shows how to query the details of the <c>cr-7f7d626622af0041****</c> rule in the <c>ca-7f00626622af0041****</c> account group.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetAggregateConfigRuleRequest
         /// </param>
         /// <param name="runtime">
@@ -8115,9 +8133,15 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <returns>
         /// GetAggregateConfigRuleResponse
         /// </returns>
-        public async Task<GetAggregateConfigRuleResponse> GetAggregateConfigRuleWithOptionsAsync(GetAggregateConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetAggregateConfigRuleResponse> GetAggregateConfigRuleWithOptionsAsync(GetAggregateConfigRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAggregateConfigRuleShrinkRequest request = new GetAggregateConfigRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
             {
@@ -8126,6 +8150,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
             {
                 query["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8148,7 +8176,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组规则详情</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8171,7 +8199,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组规则详情</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10792,7 +10820,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <para>This topic provides an example on how to query the details of the <c>cr-7f7d626622af0041****</c> rule.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetConfigRuleRequest
         /// </param>
         /// <param name="runtime">
@@ -10802,13 +10830,23 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <returns>
         /// GetConfigRuleResponse
         /// </returns>
-        public GetConfigRuleResponse GetConfigRuleWithOptions(GetConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetConfigRuleResponse GetConfigRuleWithOptions(GetConfigRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetConfigRuleShrinkRequest request = new GetConfigRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
             {
                 query["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10839,7 +10877,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <para>This topic provides an example on how to query the details of the <c>cr-7f7d626622af0041****</c> rule.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetConfigRuleRequest
         /// </param>
         /// <param name="runtime">
@@ -10849,13 +10887,23 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <returns>
         /// GetConfigRuleResponse
         /// </returns>
-        public async Task<GetConfigRuleResponse> GetConfigRuleWithOptionsAsync(GetConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetConfigRuleResponse> GetConfigRuleWithOptionsAsync(GetConfigRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetConfigRuleShrinkRequest request = new GetConfigRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
             {
                 query["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13318,7 +13366,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13388,7 +13436,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13458,7 +13506,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13482,7 +13530,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the compliance evaluation results of one or more non-compliant resources that are evaluated based on a rule in an account group.</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13506,7 +13554,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores one or more resources that are evaluated as non-compliant by using a rule.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13572,7 +13620,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores one or more resources that are evaluated as non-compliant by using a rule.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13638,7 +13686,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores one or more resources that are evaluated as non-compliant by using a rule.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13662,7 +13710,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores one or more resources that are evaluated as non-compliant by using a rule.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16504,7 +16552,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <para>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListConfigRulesRequest
         /// </param>
         /// <param name="runtime">
@@ -16514,9 +16562,15 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <returns>
         /// ListConfigRulesResponse
         /// </returns>
-        public ListConfigRulesResponse ListConfigRulesWithOptions(ListConfigRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListConfigRulesResponse ListConfigRulesWithOptions(ListConfigRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListConfigRulesShrinkRequest request = new ListConfigRulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
             {
@@ -16553,6 +16607,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
                 query["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16583,7 +16641,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <para>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListConfigRulesRequest
         /// </param>
         /// <param name="runtime">
@@ -16593,9 +16651,15 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <returns>
         /// ListConfigRulesResponse
         /// </returns>
-        public async Task<ListConfigRulesResponse> ListConfigRulesWithOptionsAsync(ListConfigRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListConfigRulesResponse> ListConfigRulesWithOptionsAsync(ListConfigRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListConfigRulesShrinkRequest request = new ListConfigRulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
             {
@@ -16632,6 +16696,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
             {
                 query["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17024,8 +17092,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Background information</h3>
-        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</para>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
         /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
@@ -17090,8 +17158,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Background information</h3>
-        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</para>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
         /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
@@ -17156,8 +17224,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Background information</h3>
-        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</para>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
         /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
@@ -17182,8 +17250,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Background information</h3>
-        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</para>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
         /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
@@ -18043,7 +18111,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</para>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18118,7 +18187,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</para>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18193,7 +18263,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</para>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18216,7 +18287,8 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</para>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22217,6 +22289,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -22310,6 +22391,7 @@ namespace AlibabaCloud.SDK.Config20200907
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -22360,6 +22442,15 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -22453,6 +22544,7 @@ namespace AlibabaCloud.SDK.Config20200907
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

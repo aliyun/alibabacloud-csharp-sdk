@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ActiveConfigRulesRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the compliance package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cp-fe416457e0d90022****</para>
+        /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class GetConfigRuleRequest : TeaModel {
+    public class GetConfigRuleShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The rule ID.</para>
         /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
@@ -23,17 +23,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<GetConfigRuleRequestTag> Tag { get; set; }
-        public class GetConfigRuleRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeactiveConfigRulesRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the compliance package.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cp-fe416457e0d90022****</para>
+        /// </summary>
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }

@@ -16,6 +16,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public List<ListIntegratedServiceResponseBodyData> Data { get; set; }
         public class ListIntegratedServiceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The type of the event that is integrated across accounts. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NonCompliantNotification: non-compliance event</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NonCompliantNotification</para>
+            /// </summary>
             [NameInMap("AggregatorDeliveryDataType")]
             [Validation(Required=false)]
             public string AggregatorDeliveryDataType { get; set; }

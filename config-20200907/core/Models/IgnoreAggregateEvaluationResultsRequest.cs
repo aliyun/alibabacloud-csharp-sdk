@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The reason why you ignore the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The reason why you ignore the resource.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class GetAggregateConfigRuleRequest : TeaModel {
+    public class GetAggregateConfigRuleShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account group.</para>
         /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
@@ -35,17 +35,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<GetAggregateConfigRuleRequestTag> Tag { get; set; }
-        public class GetAggregateConfigRuleRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

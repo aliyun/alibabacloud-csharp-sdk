@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// <para>The name of the compliance package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The name of the compliance package.</para>
             /// </summary>
             [NameInMap("CompliancePackName")]
             [Validation(Required=false)]
@@ -81,6 +84,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the rule.</para>
+                /// 
+                /// <b>Example:</b>
                 /// <para>The name of the rule.</para>
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
@@ -131,6 +137,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
+                /// <para>The description of the rule.</para>
+                /// 
+                /// <b>Example:</b>
                 /// <para>The description of the rule.</para>
                 /// </summary>
                 [NameInMap("Description")]
@@ -186,6 +195,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// <para>The description of the compliance package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The description of the compliance package.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -213,10 +225,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public GetAggregateCompliancePackResponseBodyCompliancePackScope Scope { get; set; }
             public class GetAggregateCompliancePackResponseBodyCompliancePackScope : TeaModel {
+                /// <summary>
+                /// <para>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
                 [NameInMap("ExcludeRegionIdsScope")]
                 [Validation(Required=false)]
                 public string ExcludeRegionIdsScope { get; set; }
 
+                /// <summary>
+                /// <para>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-aekzc7r7rhx****</para>
+                /// </summary>
                 [NameInMap("ExcludeResourceGroupIdsScope")]
                 [Validation(Required=false)]
                 public string ExcludeResourceGroupIdsScope { get; set; }
@@ -231,14 +255,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string ExcludeResourceIdsScope { get; set; }
 
+                /// <summary>
+                /// <para>The scope of the tag that is excluded.</para>
+                /// </summary>
                 [NameInMap("ExcludeTagsScope")]
                 [Validation(Required=false)]
                 public List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> ExcludeTagsScope { get; set; }
                 public class GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope : TeaModel {
+                    /// <summary>
+                    /// <para>The key of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>key-2</para>
+                    /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
+                    /// <summary>
+                    /// <para>The value of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>value-2</para>
+                    /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
                     public string TagValue { get; set; }
@@ -265,6 +304,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string ResourceGroupIdsScope { get; set; }
 
+                /// <summary>
+                /// <para>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eip-8vbf3x310fn56ijfd****</para>
+                /// </summary>
                 [NameInMap("ResourceIdsScope")]
                 [Validation(Required=false)]
                 public string ResourceIdsScope { get; set; }
@@ -289,14 +334,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string TagValueScope { get; set; }
 
+                /// <summary>
+                /// <para>The tag scope.</para>
+                /// </summary>
                 [NameInMap("TagsScope")]
                 [Validation(Required=false)]
                 public List<GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope> TagsScope { get; set; }
                 public class GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope : TeaModel {
+                    /// <summary>
+                    /// <para>The key of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>key-1</para>
+                    /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
+                    /// <summary>
+                    /// <para>The value of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>value-1</para>
+                    /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
                     public string TagValue { get; set; }
@@ -321,6 +381,34 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             /// <summary>
             /// <para>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;configRuleTemplates&quot;: [
+            ///     {
+            ///       &quot;configRuleName&quot;: &quot;OSS-test-name&quot;,
+            ///       &quot;scope&quot;: {
+            ///         &quot;complianceResourceTypes&quot;: [
+            ///           &quot;ACS::OSS::Bucket&quot;
+            ///         ]
+            ///       },
+            ///       &quot;description&quot;: &quot;test-description&quot;,
+            ///       &quot;source&quot;: {
+            ///         &quot;owner&quot;: &quot;ALIYUN&quot;,
+            ///         &quot;identifier&quot;: &quot;oss-bucket-referer-xxx&quot;,
+            ///         &quot;sourceDetails&quot;: [
+            ///           {
+            ///             &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+            ///           }
+            ///         ]
+            ///       },
+            ///       &quot;inputParameters&quot;: {
+            ///         &quot;allowEmptyReferer&quot;: &quot;true&quot;,
+            ///         &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
+            ///       }
+            ///     }
+            ///   ]
+            /// }</para>
             /// </summary>
             [NameInMap("TemplateContent")]
             [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public ListAggregatorsResponseBodyAggregatorsResult AggregatorsResult { get; set; }
         public class ListAggregatorsResponseBodyAggregatorsResult : TeaModel {
             /// <summary>
-            /// <para>The information about the account groups.</para>
+            /// <para>The list of the account groups.</para>
             /// </summary>
             [NameInMap("Aggregators")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The information about the member accounts in the account group.</para>
+                /// <para>The ID of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>r-BU****</para>

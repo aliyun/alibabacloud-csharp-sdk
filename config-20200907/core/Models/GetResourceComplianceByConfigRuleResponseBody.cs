@@ -10,26 +10,26 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetResourceComplianceByConfigRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The compliance evaluation results returned.</para>
+        /// <para>The compliance result.</para>
         /// </summary>
         [NameInMap("ComplianceResult")]
         [Validation(Required=false)]
         public GetResourceComplianceByConfigRuleResponseBodyComplianceResult ComplianceResult { get; set; }
         public class GetResourceComplianceByConfigRuleResponseBodyComplianceResult : TeaModel {
             /// <summary>
-            /// <para>The information about the compliance evaluation.</para>
+            /// <para>The compliance evaluation results based on compliance types.</para>
             /// </summary>
             [NameInMap("Compliances")]
             [Validation(Required=false)]
             public List<GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> Compliances { get; set; }
             public class GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances : TeaModel {
                 /// <summary>
-                /// <para>The compliance evaluation result. Valid values:</para>
+                /// <para>The compliance evaluation results of the resources. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>COMPLIANT: The relevant resources are evaluated as compliant.</description></item>
-                /// <item><description>NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</description></item>
-                /// <item><description>NOT_APPLICABLE: The rule does not apply to your resources.</description></item>
-                /// <item><description>INSUFFICIENT_DATA: No resource data is available.</description></item>
+                /// <item><description>COMPLIANT: The resource was evaluated as compliant.</description></item>
+                /// <item><description>NON_COMPLIANT: The resource was evaluated as incompliant.</description></item>
+                /// <item><description>NOT_APPLICABLE: The rule did not apply to your resources.</description></item>
+                /// <item><description>INSUFFICIENT_DATA: No resource data was available.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ComplianceType { get; set; }
 
                 /// <summary>
-                /// <para>The number of resources that have the compliance evaluation result. For example, if the value of the <c>ComplianceType</c> parameter is <c>COMPLIANT</c>, this parameter value indicates the number of compliant resources.</para>
+                /// <para>The number of resources that have compliance evaluation results. For example, if the value of the <c>ComplianceType</c> parameter is <c>COMPLIANT</c>, this parameter value indicates the number of compliant resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23306AB1-34E0-468F-BD7B-68D8AEAB753d</para>
