@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                 [Validation(Required=false)]
                 public GetVideoAnalysisTaskResponseBodyDataPayloadOutput Output { get; set; }
                 public class GetVideoAnalysisTaskResponseBodyDataPayloadOutput : TeaModel {
+                    [NameInMap("resultJsonFileUrl")]
+                    [Validation(Required=false)]
+                    public string ResultJsonFileUrl { get; set; }
+
                     [NameInMap("videoAnalysisResult")]
                     [Validation(Required=false)]
                     public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoAnalysisResult VideoAnalysisResult { get; set; }
