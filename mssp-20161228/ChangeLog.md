@@ -1,3 +1,7 @@
+2025-01-15 Version: 1.3.2
+- Update API CreateServiceWorkOrder: add param IsMilestone.
+
+
 2024-12-24 Version: 1.3.1
 - Generated csharp 2016-12-28 for mssp.
 

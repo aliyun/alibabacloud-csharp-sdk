@@ -320,6 +320,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             {
                 body["IsAttachment"] = request.IsAttachment;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsMilestone))
+            {
+                body["IsMilestone"] = request.IsMilestone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsWorkOrderNotify))
             {
                 body["IsWorkOrderNotify"] = request.IsWorkOrderNotify;
@@ -425,6 +429,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAttachment))
             {
                 body["IsAttachment"] = request.IsAttachment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsMilestone))
+            {
+                body["IsMilestone"] = request.IsMilestone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsWorkOrderNotify))
             {

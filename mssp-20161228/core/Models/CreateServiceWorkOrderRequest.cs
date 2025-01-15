@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string IsAttachment { get; set; }
 
+        [NameInMap("IsMilestone")]
+        [Validation(Required=false)]
+        public string IsMilestone { get; set; }
+
         /// <summary>
         /// <para>Whether a reminder is needed.</para>
         /// <para>This parameter is required.</para>
