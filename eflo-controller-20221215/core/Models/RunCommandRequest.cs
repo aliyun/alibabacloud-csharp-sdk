@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CommandContent { get; set; }
 
         /// <summary>
+        /// <para>Command ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-e996287206324975b5fbe1d***</para>
         /// </summary>
@@ -107,6 +109,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Frequency { get; set; }
 
         /// <summary>
+        /// <para>Bootstrap for script execution. The length must not exceed 1 KB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
         /// </summary>
@@ -171,6 +175,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RepeatMode { get; set; }
 
         /// <summary>
+        /// <para>The mode when stopping a task (manually or due to execution timeout). Possible values:
+        /// Process: Stops the current script process. ProcessTree: Stops the current process tree (a collection of the script process and all its child processes).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ProcessTree</para>
         /// </summary>

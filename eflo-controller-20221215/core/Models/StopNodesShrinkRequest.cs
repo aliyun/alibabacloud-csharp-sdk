@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class ListMachineTypesRequest : TeaModel {
+    public class StopNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Machine name</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>efg1.nvga1</para>
+        /// <para>False</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("IgnoreFailedNodeTasks")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public bool? IgnoreFailedNodeTasks { get; set; }
+
+        [NameInMap("Nodes")]
+        [Validation(Required=false)]
+        public string NodesShrink { get; set; }
 
     }
 

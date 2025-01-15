@@ -1,3 +1,7 @@
+2025-01-15 Version: 2.3.0
+- Support API StopNodes.
+
+
 2025-01-06 Version: 2.2.0
 - Support API ListMachineTypes.
 - Support API ListNodeGroups.

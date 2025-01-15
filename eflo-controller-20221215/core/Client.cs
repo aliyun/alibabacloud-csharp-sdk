@@ -2327,7 +2327,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可用的机型列表</para>
+        /// <para>Query the list of machine types available to the user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2369,7 +2369,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可用的机型列表</para>
+        /// <para>Query the list of machine types available to the user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2411,7 +2411,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可用的机型列表</para>
+        /// <para>Query the list of machine types available to the user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2429,7 +2429,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可用的机型列表</para>
+        /// <para>Query the list of machine types available to the user</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3803,6 +3803,146 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopInvocationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关机节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StopNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodesResponse
+        /// </returns>
+        public StopNodesResponse StopNodesWithOptions(StopNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StopNodesShrinkRequest request = new StopNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Nodes))
+            {
+                request.NodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Nodes, "Nodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFailedNodeTasks))
+            {
+                body["IgnoreFailedNodeTasks"] = request.IgnoreFailedNodeTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodesShrink))
+            {
+                body["Nodes"] = request.NodesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopNodes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopNodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关机节点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StopNodesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodesResponse
+        /// </returns>
+        public async Task<StopNodesResponse> StopNodesWithOptionsAsync(StopNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StopNodesShrinkRequest request = new StopNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Nodes))
+            {
+                request.NodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Nodes, "Nodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFailedNodeTasks))
+            {
+                body["IgnoreFailedNodeTasks"] = request.IgnoreFailedNodeTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodesShrink))
+            {
+                body["Nodes"] = request.NodesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopNodes",
+                Version = "2022-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopNodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关机节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodesResponse
+        /// </returns>
+        public StopNodesResponse StopNodes(StopNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopNodesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关机节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopNodesResponse
+        /// </returns>
+        public async Task<StopNodesResponse> StopNodesAsync(StopNodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopNodesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
