@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
 {
     public class ResyncTableRequest : TeaModel {
+        [NameInMap("keep")]
+        [Validation(Required=false)]
+        public bool? Keep { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

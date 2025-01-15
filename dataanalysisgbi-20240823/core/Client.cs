@@ -2602,6 +2602,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
                 query["workspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keep))
+            {
+                body["keep"] = request.Keep;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
             {
                 body["tableIdKey"] = request.TableIdKey;
@@ -2654,6 +2658,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
                 query["workspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keep))
+            {
+                body["keep"] = request.Keep;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdKey))
             {
                 body["tableIdKey"] = request.TableIdKey;
@@ -3384,6 +3392,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             {
                 body["keepTableNames"] = request.KeepTableNames;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoModifiedTableNames))
+            {
+                body["noModifiedTableNames"] = request.NoModifiedTableNames;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PullSamples))
             {
                 body["pullSamples"] = request.PullSamples;
@@ -3443,6 +3455,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepTableNames))
             {
                 body["keepTableNames"] = request.KeepTableNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoModifiedTableNames))
+            {
+                body["noModifiedTableNames"] = request.NoModifiedTableNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PullSamples))
             {

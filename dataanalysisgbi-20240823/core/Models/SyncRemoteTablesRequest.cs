@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
         [Validation(Required=false)]
         public List<string> KeepTableNames { get; set; }
 
+        [NameInMap("noModifiedTableNames")]
+        [Validation(Required=false)]
+        public List<string> NoModifiedTableNames { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
