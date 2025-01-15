@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Eais20190624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将EI绑定到ECS或ECI实例上。</para>
+        /// <para>将EI绑定到ECS或ECI实例上</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Eais20190624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将EI绑定到ECS或ECI实例上。</para>
+        /// <para>将EI绑定到ECS或ECI实例上</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Eais20190624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将EI绑定到ECS或ECI实例上。</para>
+        /// <para>将EI绑定到ECS或ECI实例上</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Eais20190624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将EI绑定到ECS或ECI实例上。</para>
+        /// <para>将EI绑定到ECS或ECI实例上</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -554,6 +554,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -623,6 +627,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -736,6 +744,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -811,6 +823,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -924,6 +940,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -999,6 +1019,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -1112,6 +1136,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -1187,6 +1215,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -1290,6 +1322,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -1355,6 +1391,10 @@ namespace AlibabaCloud.SDK.Eais20190624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
