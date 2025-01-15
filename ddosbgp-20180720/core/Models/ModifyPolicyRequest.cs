@@ -90,6 +90,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
             /// <summary>
             /// <para>Specifies whether to enable port-specific mitigation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("EnableL4Defense")]
             [Validation(Required=false)]

@@ -914,7 +914,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a scheduling rule of an on-demand instance.</para>
+        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1000,7 +1000,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a scheduling rule of an on-demand instance.</para>
+        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1086,7 +1086,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a scheduling rule of an on-demand instance.</para>
+        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1104,7 +1104,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a scheduling rule of an on-demand instance.</para>
+        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1250,7 +1250,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduling rule for an on-demand instance.</para>
+        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1336,7 +1336,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduling rule for an on-demand instance.</para>
+        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1422,7 +1422,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduling rule for an on-demand instance.</para>
+        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1440,7 +1440,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduling rule for an on-demand instance.</para>
+        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3035,9 +3035,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the details of all Anti-DDoS Origin instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3132,9 +3130,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the details of all Anti-DDoS Origin instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3229,9 +3225,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the details of all Anti-DDoS Origin instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3254,9 +3248,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the details of all Anti-DDoS Origin instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5959,6 +5951,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <para>Modifies a mitigation policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a mitigation policy.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ModifyPolicyRequest
         /// </param>
@@ -6018,6 +6015,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <summary>
         /// <para>Modifies a mitigation policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a mitigation policy.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyPolicyRequest
@@ -6079,6 +6081,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <para>Modifies a mitigation policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a mitigation policy.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyPolicyRequest
         /// </param>
@@ -6096,6 +6103,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <summary>
         /// <para>Modifies a mitigation policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies a mitigation policy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPolicyRequest
@@ -6452,7 +6464,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源组</para>
+        /// <para>Changes the resource group to which a cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6506,7 +6518,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源组</para>
+        /// <para>Changes the resource group to which a cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6560,7 +6572,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源组</para>
+        /// <para>Changes the resource group to which a cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6578,7 +6590,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动资源组</para>
+        /// <para>Changes the resource group to which a cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6596,7 +6608,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduling rule of an on-demand instance.</para>
+        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6642,7 +6654,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduling rule of an on-demand instance.</para>
+        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6688,7 +6700,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduling rule of an on-demand instance.</para>
+        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6706,7 +6718,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduling rule of an on-demand instance.</para>
+        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

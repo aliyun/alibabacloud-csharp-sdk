@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the resource group to which you want to move the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource type. Set the value to <b>instance</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

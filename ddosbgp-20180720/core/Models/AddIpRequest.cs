@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses that you want to add to the Anti-DDoS Origin instance. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that includes the following field:</para>
+        /// <para>The IP addresses that you want to add to the Anti-DDoS Origin instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ip</b>: required. The IP address that you want to add. Data type: string.</para>
-        /// <para>**</para>
-        /// <para><b>Note</b> The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.</para>
-        /// </description></item>
+        /// <item><description><b>ip</b>: required. The IP address that you want to add. Data type: string.</description></item>
+        /// <item><description><b>member_uid</b>: optional. The member to which the asset belongs. Data type: string. This field is required only if the asset of a member is queried. Example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162\<em>\</em>\<em>\</em>&quot;}].</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

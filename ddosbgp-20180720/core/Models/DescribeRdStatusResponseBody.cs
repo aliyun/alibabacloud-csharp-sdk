@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The type of the Alibaba Cloud account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MasterAccount</b>: management account</description></item>
-        /// <item><description><b>DelegatedAdminAccount</b>: delegated administrator account</description></item>
-        /// <item><description><b>MasterAccount</b>: member</description></item>
+        /// <item><description><b>MasterAccount</b>: management account.</description></item>
+        /// <item><description><b>DelegatedAdminAccount</b>: delegated administrator account.</description></item>
+        /// <item><description><b>MemberAccount</b>: member.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

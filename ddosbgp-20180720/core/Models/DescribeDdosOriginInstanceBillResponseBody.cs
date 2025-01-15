@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public long? Time { get; set; }
 
+            [NameInMap("TotalBillFlow")]
+            [Validation(Required=false)]
+            public long? TotalBillFlow { get; set; }
+
             /// <summary>
             /// <para>The traffic of EIPs with Anti-DDoS (Enhanced) enabled. Unit: bytes.</para>
             /// 

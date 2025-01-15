@@ -23,8 +23,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The type of the traffic statistics to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>max</b>: the peak traffic within the specified interval</description></item>
-        /// <item><description><b>avg</b>: the average traffic within the specified interval</description></item>
+        /// <item><description><b>max</b>: the peak traffic within the specified interval.</description></item>
+        /// <item><description><b>avg</b>: the average traffic within the specified interval.</description></item>
+        /// </list>
+        /// <para>Enumerated values:</para>
+        /// <list type="bullet">
+        /// <item><description>all</description></item>
+        /// <item><description>avg</description></item>
+        /// <item><description>max</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

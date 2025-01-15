@@ -44,6 +44,29 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>3</b>: Add an IP address to the instance.</description></item>
+        /// <item><description><b>4</b>: Remove an IP address from the instance.</description></item>
+        /// <item><description><b>5</b>: Downgrade the instance.</description></item>
+        /// <item><description><b>6</b>: Deactivate blackhole filtering.</description></item>
+        /// <item><description><b>7</b>: Reset the number of times that you can deactivate blackhole filtering.</description></item>
+        /// <item><description><b>8</b>: Restore the mitigation capability.</description></item>
+        /// <item><description><b>9</b>: Add an asset group.</description></item>
+        /// <item><description><b>10</b>: Remove an asset group.</description></item>
+        /// <item><description><b>11</b>: Enable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</description></item>
+        /// <item><description><b>12</b>: Enable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</description></item>
+        /// <item><description><b>13</b>: Periodically switch between the metering methods of daily 95th percentile and monthly 95th percentile for the burstable clean bandwidth feature.</description></item>
+        /// <item><description><b>14</b>: Disable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</description></item>
+        /// <item><description><b>15</b>: Disable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</description></item>
+        /// <item><description><b>16</b>: Disable burstable clean bandwidth due to overdue payments.</description></item>
+        /// <item><description><b>17</b>: Disable burstable clean bandwidth due to instance expiration.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("OpAction")]
         [Validation(Required=false)]
         public int? OpAction { get; set; }

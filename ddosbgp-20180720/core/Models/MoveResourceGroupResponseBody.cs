@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class MoveResourceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16A78396-936F-5481-91D7-591BF7981246</para>
         /// </summary>
