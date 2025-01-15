@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>618F2626-DB27-5187-8C6C-4E61A491DF29</para>
@@ -20,19 +20,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of protected objects.</para>
+        /// <para>The protected objects.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<DescribeDefenseResourcesResponseBodyResources> Resources { get; set; }
         public class DescribeDefenseResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>跟踪cookie开关状态。</para>
+            /// <para>The status of the tracking cookie.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>：表示关闭。</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>：表示开启。</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><b>1</b>: enabled. This is the default value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,12 +41,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwCookieStatus { get; set; }
 
             /// <summary>
-            /// <para>跟踪cookie的secure属性状态。</para>
+            /// <para>The status of the secure attribute of the tracking cookie.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>：表示关闭。</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>：表示开启。</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: disabled. This is the default value.</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,12 +55,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwSecureStatus { get; set; }
 
             /// <summary>
-            /// <para>滑块cookie的secure属性状态。</para>
+            /// <para>The status of the secure attribute of the slider CAPTCHA cookie.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>：表示关闭。</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>：表示开启。</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: disabled. This is the default value.</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwV3SecureStatus { get; set; }
 
             /// <summary>
-            /// <para>An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.</para>
+            /// <para>The custom header fields that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF header fields are used as the originating IP addresses of clients.</para>
             /// </summary>
             [NameInMap("CustomHeaders")]
             [Validation(Required=false)]
@@ -119,7 +113,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>多账号统一管理场景中防护对象资产归属账号。</para>
+            /// <para>The Alibaba Cloud account to which the protected object belongs. You can specify this parameter to query protected objects that belong to a specific Alibaba Cloud account. Exact match is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>135*********46</para>

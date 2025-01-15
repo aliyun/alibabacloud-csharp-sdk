@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
         /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
@@ -47,6 +47,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The cloud service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>clb4</b>: Layer 4 CLB.</description></item>
+        /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
+        /// <item><description><b>ecs</b>: ECS.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>clb7</para>
+        /// </summary>
         [NameInMap("ResourceProduct")]
         [Validation(Required=false)]
         public string ResourceProduct { get; set; }

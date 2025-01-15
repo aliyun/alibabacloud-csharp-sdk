@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The name of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
@@ -132,6 +135,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The remarks about the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]

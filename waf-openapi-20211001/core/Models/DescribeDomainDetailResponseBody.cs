@@ -335,10 +335,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             }
 
+            /// <summary>
+            /// <para>An array of HTTPS listener ports.</para>
+            /// </summary>
             [NameInMap("BackupBackends")]
             [Validation(Required=false)]
             public List<DescribeDomainDetailResponseBodyRedirectBackupBackends> BackupBackends { get; set; }
             public class DescribeDomainDetailResponseBodyRedirectBackupBackends : TeaModel {
+                /// <summary>
+                /// <para>The back-to-origin IP address or domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[
+                ///     &quot;1.1.XX.XX&quot;,
+                ///     &quot;2.2.XX.XX&quot;
+                /// ]</para>
+                /// </summary>
                 [NameInMap("Backend")]
                 [Validation(Required=false)]
                 public string Backend { get; set; }

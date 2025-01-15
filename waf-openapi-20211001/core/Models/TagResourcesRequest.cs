@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

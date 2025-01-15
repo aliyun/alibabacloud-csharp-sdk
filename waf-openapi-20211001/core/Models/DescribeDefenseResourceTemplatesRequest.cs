@@ -82,6 +82,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demoRuleName</para>
+        /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
@@ -100,6 +106,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RuleType { get; set; }
 
+        /// <summary>
+        /// <para>The name of the protection rule template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test221</para>
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

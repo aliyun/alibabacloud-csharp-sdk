@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The name of the node.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("CustomName")]
         [Validation(Required=false)]

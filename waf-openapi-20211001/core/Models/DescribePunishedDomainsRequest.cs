@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("PunishType")]
+        [Validation(Required=false)]
+        public string PunishType { get; set; }
+
         /// <summary>
         /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">

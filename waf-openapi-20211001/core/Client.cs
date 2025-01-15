@@ -14059,6 +14059,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishType))
+            {
+                query["PunishType"] = request.PunishType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14112,6 +14116,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishType))
+            {
+                query["PunishType"] = request.PunishType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -14762,7 +14770,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14816,7 +14824,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14870,7 +14878,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14888,7 +14896,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23518,7 +23526,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23576,7 +23584,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23634,7 +23642,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23652,7 +23660,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23838,7 +23846,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组信息</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23904,7 +23912,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组信息</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23970,7 +23978,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组信息</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23988,7 +23996,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组信息</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

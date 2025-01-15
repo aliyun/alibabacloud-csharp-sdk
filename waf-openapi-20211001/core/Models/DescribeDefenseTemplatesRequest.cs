@@ -144,10 +144,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the protection templates that you want to query. Separate multiple template IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>189731,189539,189538,189531,189540,189542,189541</para>
+        /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]
         public string TemplateIds { get; set; }
 
+        /// <summary>
+        /// <para>The name of the protection template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testTemplateName</para>
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,6 +57,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string Resource { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfm***q</para>
+        /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
