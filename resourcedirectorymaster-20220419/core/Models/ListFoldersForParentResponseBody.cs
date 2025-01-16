@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListFoldersForParentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the folders.</para>
+        /// <para>The folders.</para>
         /// </summary>
         [NameInMap("Folders")]
         [Validation(Required=false)]
@@ -50,6 +50,9 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 [Validation(Required=false)]
                 public string FolderName { get; set; }
 
+                /// <summary>
+                /// <para>The tags added to the folder.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public ListFoldersForParentResponseBodyFoldersFolderTags Tags { get; set; }
@@ -58,10 +61,22 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                     [Validation(Required=false)]
                     public List<ListFoldersForParentResponseBodyFoldersFolderTagsTag> Tag { get; set; }
                     public class ListFoldersForParentResponseBodyFoldersFolderTagsTag : TeaModel {
+                        /// <summary>
+                        /// <para>The key of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>k1</para>
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// <para>The value of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>v1</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

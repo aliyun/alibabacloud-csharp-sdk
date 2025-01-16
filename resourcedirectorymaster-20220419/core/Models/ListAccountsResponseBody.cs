@@ -202,6 +202,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The page number of the returned page.</para>
         /// 
