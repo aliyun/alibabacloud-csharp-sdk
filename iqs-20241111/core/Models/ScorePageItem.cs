@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string MainText { get; set; }
 
+        [NameInMap("markdownText")]
+        [Validation(Required=false)]
+        public string MarkdownText { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>text/html</para>
