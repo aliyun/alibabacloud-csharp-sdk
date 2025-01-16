@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        [NameInMap("RealLoginUserUid")]
+        [Validation(Required=false)]
+        public string RealLoginUserUid { get; set; }
+
         /// <summary>
         /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</para>
         /// 

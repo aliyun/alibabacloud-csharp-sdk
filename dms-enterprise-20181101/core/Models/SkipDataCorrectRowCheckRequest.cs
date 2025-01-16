@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        [NameInMap("RealLoginUserUid")]
+        [Validation(Required=false)]
+        public string RealLoginUserUid { get; set; }
+
         /// <summary>
         /// <para>The reason for skipping the verification on the number of rows in the precheck for data change.</para>
         /// <para>This parameter is required.</para>

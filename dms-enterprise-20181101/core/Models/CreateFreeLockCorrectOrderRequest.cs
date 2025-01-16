@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
+        [NameInMap("RealLoginUserUid")]
+        [Validation(Required=false)]
+        public string RealLoginUserUid { get; set; }
+
         /// <summary>
         /// <para>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</para>
         /// </summary>
