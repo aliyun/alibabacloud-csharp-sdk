@@ -16,7 +16,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>drop</b>: denies the traffic.</description></item>
         /// <item><description><b>log</b>: monitors the traffic.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>accept</para>
@@ -39,6 +38,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string AclUuid { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The type of the application that the access control policy supports. Valid values:</para>
         /// <list type="bullet">
@@ -69,6 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ApplicationName { get; set; }
 
         /// <summary>
@@ -83,7 +85,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The description of the access control policy.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -134,7 +135,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description>If <b>DestinationType</b> is set to domain, the value of <b>Destination</b> is a domain name. Example: \*.aliyuncs.com.</description></item>
         /// <item><description>If <b>DestinationType</b> is set to location, the value of <b>Destination</b> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX/24</para>
@@ -151,7 +151,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>domain</b>: domain name</description></item>
         /// <item><description><b>location</b>: location</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>net</para>
@@ -166,7 +165,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>in</b>: inbound traffic</description></item>
         /// <item><description><b>out</b>: outbound traffic</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in</para>
@@ -231,7 +229,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <remarks>
         /// <para> If the traffic direction is outbound and the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP or ANY. If you set Proto to TCP, you can set ApplicationName to HTTP, HTTPS, SMTP, SMTPS, and SSL. If you set Proto to ANY, you can set ApplicationName to ANY.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -324,7 +321,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description>If <b>SourceType</b> is set to group, the value of <b>Source</b> is an address book. Example: db_group.</description></item>
         /// <item><description>If <b>SourceType</b> is set to location, the value of <b>Source</b> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX/24</para>
@@ -340,7 +336,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>group</b>: address book</description></item>
         /// <item><description><b>location</b>: location</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>net</para>

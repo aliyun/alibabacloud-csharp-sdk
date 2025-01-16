@@ -16,7 +16,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>drop</b>: denies the traffic.</description></item>
         /// <item><description><b>log</b>: monitors the traffic.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>log</para>
@@ -49,7 +48,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <remarks>
         /// <para>If you do not specify this parameter, the descriptions of all policies are queried.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -103,7 +101,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description>If <b>DestinationType</b> is set to domain, the value of <b>Destination</b> is a domain name. Example: \*.aliyuncs.com</description></item>
         /// <item><description>If <b>DestinationType</b> is set to location, the value of <b>Destination</b> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x.x.x.x/32</para>
@@ -120,7 +117,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>domain</b>: domain name</description></item>
         /// <item><description><b>location</b>: destination location</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>net</para>
@@ -209,7 +205,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <remarks>
         /// <para> If the destination address type is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP. If you set Proto to TCP, you can set application types to HTTP, HTTPS, SMTP, SMTPS, and SSL.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -301,7 +296,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description>If <b>SourceType</b> is set to <c>net</c>, the value of this parameter is a CIDR block. Example: 10.2.XX.XX/24.</description></item>
         /// <item><description>If <b>SourceType</b> is set to <c>group</c>, the value of this parameter is an address book name. Example: db_group.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.25/32</para>
@@ -316,7 +310,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>net</b>: CIDR block</description></item>
         /// <item><description><b>group</b>: address book</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>net</para>

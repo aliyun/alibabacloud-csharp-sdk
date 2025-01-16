@@ -17,7 +17,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>drop</b>: blocks the traffic.</description></item>
         /// <item><description><b>log</b>: monitors the traffic.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>accept</para>
@@ -38,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string AclUuid { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The type of the application that the access control policy supports.</para>
         /// <para>Valid values:</para>
@@ -64,6 +65,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ApplicationName { get; set; }
 
         /// <summary>
@@ -75,7 +77,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The description of the access control policy.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -131,7 +132,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>Example: \*.aliyuncs.com</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.2.X.X/XX</para>
@@ -148,7 +148,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>group</b>: address book</description></item>
         /// <item><description><b>domain</b>: domain name</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>net</para>
@@ -209,7 +208,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description>UDP</description></item>
         /// <item><description>ICMP</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -306,7 +304,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>Example: db_group</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.2.X.X/XX</para>
@@ -322,7 +319,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>net</b>: CIDR block</description></item>
         /// <item><description><b>group</b>: address book</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>net</para>

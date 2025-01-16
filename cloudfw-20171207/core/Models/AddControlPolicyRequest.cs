@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string AclAction { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The application type supported by the access control policy. Valid values:</para>
         /// <list type="bullet">
@@ -54,6 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ApplicationName { get; set; }
 
         /// <summary>
