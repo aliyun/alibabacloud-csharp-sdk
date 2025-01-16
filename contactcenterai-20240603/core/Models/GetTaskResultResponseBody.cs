@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
             }
 
+            [NameInMap("extra")]
+            [Validation(Required=false)]
+            public string Extra { get; set; }
+
             [NameInMap("taskErrorMessage")]
             [Validation(Required=false)]
             public string TaskErrorMessage { get; set; }

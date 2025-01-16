@@ -211,6 +211,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public CreateTaskRequestTranscription Transcription { get; set; }
         public class CreateTaskRequestTranscription : TeaModel {
+            [NameInMap("asrModelCode")]
+            [Validation(Required=false)]
+            public string AsrModelCode { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -236,6 +240,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [NameInMap("fileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
+
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
